@@ -6,6 +6,7 @@ project('com.github.ryonakano.case-converter',
 executable(
     meson.project_name(),
     'src/Application.vala',
+    'src/MainWindow.vala',
     dependencies: [
         dependency('granite', version: '>=5.2.3'),
         dependency('gtk+-3.0'),
