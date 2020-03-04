@@ -7,7 +7,9 @@ public class Application : Gtk.Application {
     }
 
     protected override void activate () {
-        var target_text_view = new Gtk.TextView ();
+        var target_text_buffer = new Gtk.TextBuffer (null);
+
+        var target_text_view = new Gtk.TextView.with_buffer (target_text_buffer);
         target_text_view.wrap_mode = Gtk.WrapMode.WORD_CHAR;
         target_text_view.hexpand = true;
         target_text_view.vexpand = true;
@@ -52,6 +54,14 @@ public class Application : Gtk.Application {
         window.set_titlebar (header);
         window.add (grid);
         window.show_all ();
+
+        upper_case_button.clicked.connect (() => {
+            target_text_view.buffer.text = target_text_view.buffer.text.up ();
+        });
+
+        lower_case_button.clicked.connect (() => {
+            target_text_view.buffer.text = target_text_view.buffer.text.down ();
+        });
     }
 
     public static int main (string[] args) {
