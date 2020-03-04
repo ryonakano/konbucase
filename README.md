@@ -2,13 +2,21 @@
 ![](Screenshot.png)
 
 ## Building and Installation
+### For Developers
 You'll need the following dependencies:
 
 * libgtk-3.0-dev
 * libgranite-dev (>= 5.2.3)
+* meson
 * valac
 
-Run `valac` to build, and then execute with `./Application`
+Run `meson build` to configure the build environment. Change to the build directory and run `ninja` to build
 
-    valac --pkg gtk+-3.0 --pkg granite Application.vala
-    ./Application
+    meson build --prefix=/usr
+    cd build
+    ninja
+
+To install, use `ninja install`, then execute with `com.github.ryonakano.case-converter`
+
+    sudo ninja install
+    com.github.ryonakano.case-converter
