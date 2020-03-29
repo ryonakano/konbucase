@@ -3,6 +3,13 @@ project('com.github.ryonakano.case-converter',
     version: '0.1.0'
 )
 
+i18n = import('i18n')
+
+add_project_arguments(
+    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
+    language: 'c'
+)
+
 executable(
     meson.project_name(),
     'src/Services/Buffer.vala',
@@ -16,3 +23,5 @@ executable(
     ],
     install: true
 )
+
+subdir('po')
