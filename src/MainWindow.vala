@@ -70,7 +70,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             update_header_buttons ();
         });
 
-        title_case_button.clicked.connect (() => {
+        capitalized_case_button.clicked.connect (() => {
             target_source_buffer.case_action (Gtk.SourceChangeCaseType.TITLE);
             update_header_buttons ();
         });
