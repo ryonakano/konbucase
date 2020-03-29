@@ -1,4 +1,9 @@
 public class MainWindow : Gtk.ApplicationWindow {
+    private Services.Buffer target_source_buffer;
+
+    private Gtk.ToolButton undo_button;
+    private Gtk.ToolButton redo_button;
+
     public MainWindow (Application app) {
         Object (
             application: app,
@@ -8,7 +13,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        var target_source_buffer = new Services.Buffer ();
+        target_source_buffer = new Services.Buffer ();
 
         var target_source_view = new Gtk.SourceView.with_buffer (target_source_buffer);
         target_source_view.wrap_mode = Gtk.WrapMode.WORD_CHAR;
@@ -36,12 +41,14 @@ public class MainWindow : Gtk.ApplicationWindow {
         grid.attach (title_case_button, 5, 1, 1, 1);
 
         var undo_button_icon = new Gtk.Image.from_icon_name ("edit-undo", Gtk.IconSize.SMALL_TOOLBAR);
-        var undo_button = new Gtk.ToolButton (undo_button_icon, null);
-        undo_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl>Z"}, "Undo");
+        undo_button = new Gtk.ToolButton (undo_button_icon, null);
+        undo_button.sensitive = false;
+        undo_button.tooltip_text = "Undo case change";
 
         var redo_button_icon = new Gtk.Image.from_icon_name ("edit-redo", Gtk.IconSize.SMALL_TOOLBAR);
-        var redo_button = new Gtk.ToolButton (redo_button_icon, null);
-        redo_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Ctrl><Shift>Z"}, "Redo");
+        redo_button = new Gtk.ToolButton (redo_button_icon, null);
+        redo_button.sensitive = false;
+        redo_button.tooltip_text = "Redo case change";
 
         var header = new Gtk.HeaderBar ();
         header.show_close_button = true;
@@ -55,14 +62,40 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         upper_case_button.clicked.connect (() => {
             target_source_buffer.case_action (Gtk.SourceChangeCaseType.UPPER);
+            update_header_buttons ();
         });
 
         lower_case_button.clicked.connect (() => {
             target_source_buffer.case_action (Gtk.SourceChangeCaseType.LOWER);
+            update_header_buttons ();
         });
 
         title_case_button.clicked.connect (() => {
             target_source_buffer.case_action (Gtk.SourceChangeCaseType.TITLE);
+            update_header_buttons ();
         });
+
+        undo_button.clicked.connect (() => {
+            if (!target_source_buffer.can_undo) {
+                return;
+            }
+
+            target_source_buffer.undo ();
+            update_header_buttons ();
+        });
+
+        redo_button.clicked.connect (() => {
+            if (!target_source_buffer.can_redo) {
+                return;
+            }
+
+            target_source_buffer.redo ();
+            update_header_buttons ();
+        });
+    }
+
+    private void update_header_buttons () {
+        undo_button.sensitive = target_source_buffer.can_undo;
+        redo_button.sensitive = target_source_buffer.can_redo;
     }
 }
