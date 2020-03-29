@@ -68,5 +68,13 @@ public class MainWindow  : Gtk.ApplicationWindow {
             target_source_buffer.get_iter_at_offset (out iter_end, target_source_buffer.text.length);
             target_source_buffer.change_case (Gtk.SourceChangeCaseType.LOWER, iter_start, iter_end);
         });
+
+        title_case_button.clicked.connect (() => {
+            Gtk.TextIter iter_start;
+            Gtk.TextIter iter_end;
+            target_source_buffer.get_iter_at_offset (out iter_start, 0);
+            target_source_buffer.get_iter_at_offset (out iter_end, target_source_buffer.text.length);
+            target_source_buffer.change_case (Gtk.SourceChangeCaseType.TITLE, iter_start, iter_end);
+        });
     }
 }
