@@ -8,15 +8,15 @@ public class MainWindow  : Gtk.ApplicationWindow {
     }
 
     construct {
-        var target_text_buffer = new Gtk.TextBuffer (null);
+        var target_source_buffer = new Gtk.SourceBuffer (null);
 
-        var target_text_view = new Gtk.TextView.with_buffer (target_text_buffer);
-        target_text_view.wrap_mode = Gtk.WrapMode.WORD_CHAR;
-        target_text_view.hexpand = true;
-        target_text_view.vexpand = true;
+        var target_source_view = new Gtk.SourceView.with_buffer (target_source_buffer);
+        target_source_view.wrap_mode = Gtk.WrapMode.WORD_CHAR;
+        target_source_view.hexpand = true;
+        target_source_view.vexpand = true;
 
         var scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.add (target_text_view);
+        scrolled.add (target_source_view);
 
         var sentence_case_button = new Gtk.Button.with_label ("Sentence case");
         var lower_case_button = new Gtk.Button.with_label ("lower case");
@@ -54,11 +54,19 @@ public class MainWindow  : Gtk.ApplicationWindow {
         add (grid);
 
         upper_case_button.clicked.connect (() => {
-            target_text_view.buffer.text = target_text_view.buffer.text.up ();
+            Gtk.TextIter iter_start;
+            Gtk.TextIter iter_end;
+            target_source_buffer.get_iter_at_offset (out iter_start, 0);
+            target_source_buffer.get_iter_at_offset (out iter_end, target_source_buffer.text.length);
+            target_source_buffer.change_case (Gtk.SourceChangeCaseType.UPPER, iter_start, iter_end);
         });
 
         lower_case_button.clicked.connect (() => {
-            target_text_view.buffer.text = target_text_view.buffer.text.down ();
+            Gtk.TextIter iter_start;
+            Gtk.TextIter iter_end;
+            target_source_buffer.get_iter_at_offset (out iter_start, 0);
+            target_source_buffer.get_iter_at_offset (out iter_end, target_source_buffer.text.length);
+            target_source_buffer.change_case (Gtk.SourceChangeCaseType.LOWER, iter_start, iter_end);
         });
     }
 }
