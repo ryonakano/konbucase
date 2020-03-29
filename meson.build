@@ -5,6 +5,7 @@ project('com.github.ryonakano.case-converter',
 
 executable(
     meson.project_name(),
+    'src/Services/Buffer.vala',
     'src/Application.vala',
     'src/MainWindow.vala',
     dependencies: [
