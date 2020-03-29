@@ -140,7 +140,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         copy_clipboard_button.sensitive = has_text;
         foreach (var buttons in buttons_grid.get_children ()) {
-            buttons.sensitive =  has_text;
+            buttons.sensitive = has_text;
         }
     }
 }
