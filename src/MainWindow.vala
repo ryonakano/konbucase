@@ -1,6 +1,7 @@
 public class MainWindow : Gtk.ApplicationWindow {
     private Services.Buffer target_source_buffer;
 
+    private Gtk.Grid buttons_grid;
     private Gtk.ToolButton copy_clipboard_button;
     private Gtk.ToolButton undo_button;
     private Gtk.ToolButton redo_button;
@@ -29,14 +30,18 @@ public class MainWindow : Gtk.ApplicationWindow {
         var upper_case_button = new Gtk.Button.with_label ("UPPER CASE");
         var capitalized_case_button = new Gtk.Button.with_label ("Capitalized Case");
 
+        buttons_grid = new Gtk.Grid ();
+        buttons_grid.column_spacing = 12;
+        buttons_grid.halign = Gtk.Align.CENTER;
+        buttons_grid.attach (lower_case_button, 0, 1, 1, 1);
+        buttons_grid.attach (upper_case_button, 1, 1, 1, 1);
+        buttons_grid.attach (capitalized_case_button, 2, 1, 1, 1);
+
         var grid = new Gtk.Grid ();
         grid.margin = 12;
-        grid.column_spacing = 12;
         grid.row_spacing = 12;
-        grid.attach (scrolled, 0, 0, 6, 1);
-        grid.attach (lower_case_button, 1, 1, 1, 1);
-        grid.attach (upper_case_button, 2, 1, 1, 1);
-        grid.attach (capitalized_case_button, 3, 1, 1, 1);
+        grid.attach (scrolled, 0, 0, 3, 1);
+        grid.attach (buttons_grid, 1, 1, 1, 1);
 
         var copy_clipboard_button_icon = new Gtk.Image.from_icon_name ("edit-copy", Gtk.IconSize.SMALL_TOOLBAR);
         copy_clipboard_button = new Gtk.ToolButton (copy_clipboard_button_icon, null);
@@ -64,8 +69,10 @@ public class MainWindow : Gtk.ApplicationWindow {
         set_titlebar (header);
         add (grid);
 
+        update_buttons ();
+
         target_source_buffer.notify["text"].connect (() => {
-            copy_clipboard_button.sensitive = target_source_buffer.text != "";
+            update_buttons ();
         });
 
         upper_case_button.clicked.connect (() => {
@@ -109,5 +116,14 @@ public class MainWindow : Gtk.ApplicationWindow {
     private void update_header_buttons () {
         undo_button.sensitive = target_source_buffer.can_undo;
         redo_button.sensitive = target_source_buffer.can_redo;
+    }
+
+    private void update_buttons () {
+        bool has_text = target_source_buffer.text != "";
+
+        copy_clipboard_button.sensitive = has_text;
+        foreach (var buttons in buttons_grid.get_children ()) {
+            buttons.sensitive =  has_text;
+        }
     }
 }
