@@ -23,22 +23,19 @@ public class MainWindow : Gtk.ApplicationWindow {
         var scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.add (target_source_view);
 
-        var sentence_case_button = new Gtk.Button.with_label ("Sentence case");
+        // FIXME: Support Sentence case and Title Case
         var lower_case_button = new Gtk.Button.with_label ("lower case");
         var upper_case_button = new Gtk.Button.with_label ("UPPER CASE");
         var capitalized_case_button = new Gtk.Button.with_label ("Capitalized Case");
-        var title_case_button = new Gtk.Button.with_label ("Title Case");
 
         var grid = new Gtk.Grid ();
         grid.margin = 12;
         grid.column_spacing = 12;
         grid.row_spacing = 12;
         grid.attach (scrolled, 0, 0, 6, 1);
-        grid.attach (sentence_case_button, 1, 1, 1, 1);
-        grid.attach (lower_case_button, 2, 1, 1, 1);
-        grid.attach (upper_case_button, 3, 1, 1, 1);
-        grid.attach (capitalized_case_button, 4, 1, 1, 1);
-        grid.attach (title_case_button, 5, 1, 1, 1);
+        grid.attach (lower_case_button, 1, 1, 1, 1);
+        grid.attach (upper_case_button, 2, 1, 1, 1);
+        grid.attach (capitalized_case_button, 3, 1, 1, 1);
 
         var undo_button_icon = new Gtk.Image.from_icon_name ("edit-undo", Gtk.IconSize.SMALL_TOOLBAR);
         undo_button = new Gtk.ToolButton (undo_button_icon, null);
