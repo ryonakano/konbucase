@@ -1,6 +1,7 @@
 public class MainWindow : Gtk.ApplicationWindow {
     private Services.Buffer target_source_buffer;
 
+    private Gtk.ToolButton copy_clipboard_button;
     private Gtk.ToolButton undo_button;
     private Gtk.ToolButton redo_button;
 
@@ -37,6 +38,11 @@ public class MainWindow : Gtk.ApplicationWindow {
         grid.attach (upper_case_button, 2, 1, 1, 1);
         grid.attach (capitalized_case_button, 3, 1, 1, 1);
 
+        var copy_clipboard_button_icon = new Gtk.Image.from_icon_name ("edit-copy", Gtk.IconSize.SMALL_TOOLBAR);
+        copy_clipboard_button = new Gtk.ToolButton (copy_clipboard_button_icon, null);
+        copy_clipboard_button.sensitive = false;
+        copy_clipboard_button.tooltip_text = "Copy to Clipboard";
+
         var undo_button_icon = new Gtk.Image.from_icon_name ("edit-undo", Gtk.IconSize.SMALL_TOOLBAR);
         undo_button = new Gtk.ToolButton (undo_button_icon, null);
         undo_button.sensitive = false;
@@ -51,11 +57,16 @@ public class MainWindow : Gtk.ApplicationWindow {
         header.show_close_button = true;
         header.has_subtitle = false;
         header.title = "Case Converter";
+        header.pack_start (copy_clipboard_button);
         header.pack_end (redo_button);
         header.pack_end (undo_button);
 
         set_titlebar (header);
         add (grid);
+
+        target_source_buffer.notify["text"].connect (() => {
+            copy_clipboard_button.sensitive = target_source_buffer.text != "";
+        });
 
         upper_case_button.clicked.connect (() => {
             target_source_buffer.case_action (Gtk.SourceChangeCaseType.UPPER);
@@ -70,6 +81,10 @@ public class MainWindow : Gtk.ApplicationWindow {
         capitalized_case_button.clicked.connect (() => {
             target_source_buffer.case_action (Gtk.SourceChangeCaseType.TITLE);
             update_header_buttons ();
+        });
+
+        copy_clipboard_button.clicked.connect (() => {
+            Gtk.Clipboard.get_default (Gdk.Display.get_default ()).set_text (target_source_buffer.text, -1);
         });
 
         undo_button.clicked.connect (() => {
