@@ -1,4 +1,4 @@
-public class MainWindow  : Gtk.ApplicationWindow {
+public class MainWindow : Gtk.ApplicationWindow {
     public MainWindow (Application app) {
         Object (
             application: app,
