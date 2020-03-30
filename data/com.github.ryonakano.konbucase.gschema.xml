@@ -24,5 +24,10 @@
             <summary>Window Height</summary>
             <description>The saved height of the window</description>
         </key>
+        <key name="window-maximized" type="b">
+            <default>false</default>
+            <summary>Window Maximized</summary>
+            <description>The saved value for whether the window is maximized or not</description>
+        </key>
     </schema>
 </schemalist>
