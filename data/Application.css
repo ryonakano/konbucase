@@ -1,0 +1,9 @@
+.text-view text {
+    color: #586e75;
+    background-color: #fdf6e3;
+}
+ 
+.toolbar {
+    background: @base_color;
+    border: none;
+}
