@@ -2,13 +2,13 @@
 <schemalist>
     <schema path="/com/github/ryonakano/konbucase/" id="com.github.ryonakano.konbucase">
         <key name="pos-x" type="i">
-            <default>200</default>
+            <default>-1</default>
             <summary>Horizontal Postition</summary>
             <description>The saved horizontal postion of the window</description>
         </key>
 
         <key name="pos-y" type="i">
-            <default>200</default>
+            <default>-1</default>
             <summary>Vertical Postition</summary>
             <description>The saved vertical postion of the window</description>
         </key>
