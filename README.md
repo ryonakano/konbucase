@@ -1,5 +1,5 @@
 # KonbuCase
-![](Screenshot.png)
+![](data/Screenshot.png)
 
 ## Building and Installation
 ### For Developers
