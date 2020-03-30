@@ -9,6 +9,7 @@ gnome = import('gnome')
 add_project_arguments(
     '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
     language: 'c'
+)
 
 asresources = gnome.compile_resources(
     'as-resources',
