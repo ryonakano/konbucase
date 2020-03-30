@@ -34,7 +34,11 @@ public class MainWindow : Gtk.ApplicationWindow {
         var window_pos_y = Application.settings.get_int ("pos-y");
         var window_width = Application.settings.get_int ("window-width");
         var window_height = Application.settings.get_int ("window-height");
+        var window_max = Application.settings.get_boolean ("window-maximized");
 
+        if (window_max == true) {
+            maximize ();
+        }
         if (window_pos_x != -1 || window_pos_y != -1) {
             move (window_pos_x, window_pos_y);
         } else {
@@ -155,6 +159,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     private bool before_destroy () {
         int width, height, x, y;
+        var max = is_maximized;
 
         get_size (out width, out height);
         get_position (out x, out y);
@@ -163,6 +168,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         Application.settings.set_int ("pos-y", y);
         Application.settings.set_int ("window-width", width);
         Application.settings.set_int ("window-height", height);
+        Application.settings.set_boolean ("window-maximized", max);
 
         return false;
     }
