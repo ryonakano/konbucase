@@ -1,4 +1,4 @@
-# Case Converter
+# KonbuCase
 ![](Screenshot.png)
 
 ## Building and Installation
@@ -16,7 +16,7 @@ Run `meson build` to configure the build environment. Change to the build direct
     cd build
     ninja
 
-To install, use `ninja install`, then execute with `com.github.ryonakano.case-converter`
+To install, use `ninja install`, then execute with `com.github.ryonakano.konbucase`
 
     sudo ninja install
-    com.github.ryonakano.case-converter
+    com.github.ryonakano.konbucase

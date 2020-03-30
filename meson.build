@@ -1,4 +1,4 @@
-project('com.github.ryonakano.case-converter',
+project('com.github.ryonakano.konbucase',
     'vala', 'c',
     version: '0.1.0'
 )
