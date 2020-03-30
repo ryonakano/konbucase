@@ -17,6 +17,7 @@
 
 public class Application : Gtk.Application {
     private MainWindow window;
+    public static GLib.Settings settings { get; set; }
 
     public Application () {
         Object (
@@ -30,6 +31,8 @@ public class Application : Gtk.Application {
             window.present ();
             return;
         }
+
+        settings = new GLib.Settings ("com.github.ryonakano.konbucase");
 
         window = new MainWindow (this);
         window.show_all ();

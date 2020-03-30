@@ -17,7 +17,6 @@
 
 public class MainWindow : Gtk.ApplicationWindow {
     private Services.Buffer target_source_buffer;
-    private GLib.Settings settings;
 
     private Gtk.Grid buttons_grid;
     private Gtk.ToolButton copy_clipboard_button;
@@ -26,16 +25,23 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     public MainWindow (Application app) {
         Object (
-            application: app,
-            width_request: 600,
-            height_request: 500
+            application: app
         );
     }
 
     construct {
-        settings = new GLib.Settings("com.github.ryonakano.konbucase");
-        move(settings.get_int("pos-x"), settings.get_int("pos-y"));
-        resize(settings.get_int("window-width"), settings.get_int("window-height"));
+        var window_pos_x = Application.settings.get_int ("pos-x");
+        var window_pos_y = Application.settings.get_int ("pos-y");
+        var window_width = Application.settings.get_int ("window-width");
+        var window_height = Application.settings.get_int ("window-height");
+
+        if (window_pos_x != -1 || window_pos_y != -1) {
+            move (window_pos_x, window_pos_y);
+        } else {
+            window_position = Gtk.WindowPosition.CENTER;
+        }
+
+        resize (window_width, window_height);
 
         var cssprovider = new Gtk.CssProvider ();
         cssprovider.load_from_resource ("/com/github/ryonakano/konbucase/Application.css");
@@ -142,21 +148,21 @@ public class MainWindow : Gtk.ApplicationWindow {
             update_header_buttons ();
         });
 
-        delete_event.connect(e => {
-            return before_destroy();
+        delete_event.connect (e => {
+            return before_destroy ();
         });
     }
 
-    private bool before_destroy() {
+    private bool before_destroy () {
         int width, height, x, y;
 
-        get_size(out width, out height);
-        get_position(out x, out y);
+        get_size (out width, out height);
+        get_position (out x, out y);
 
-        settings.set_int("pos-x", x);
-        settings.set_int("pos-y", y);
-        settings.set_int("window-width", width);
-        settings.set_int("window-height", height);
+        Application.settings.set_int ("pos-x", x);
+        Application.settings.set_int ("pos-y", y);
+        Application.settings.set_int ("window-width", width);
+        Application.settings.set_int ("window-height", height);
 
         return false;
     }
