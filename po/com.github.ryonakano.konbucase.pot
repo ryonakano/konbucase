@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the com.github.ryonakano.case-converter package.
+# This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.ryonakano.case-converter\n"
+"Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-29 21:36+0900\n"
+"POT-Creation-Date: 2020-03-30 10:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,30 +17,31 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.vala:46
+#. FIXME: Support Sentence case and Title Case
+#: src/MainWindow.vala:53
 msgid "lower case"
 msgstr ""
 
-#: src/MainWindow.vala:47
+#: src/MainWindow.vala:54
 msgid "UPPER CASE"
 msgstr ""
 
-#: src/MainWindow.vala:48
+#: src/MainWindow.vala:55
 msgid "Capitalized Case"
 msgstr ""
 
-#: src/MainWindow.vala:66
+#: src/MainWindow.vala:74
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:79
 msgid "Undo case change"
 msgstr ""
 
-#: src/MainWindow.vala:76
+#: src/MainWindow.vala:84
 msgid "Redo case change"
 msgstr ""
 
-#: src/MainWindow.vala:81
-msgid "Case Converter"
+#: src/MainWindow.vala:89
+msgid "KonbuCase"
 msgstr ""
