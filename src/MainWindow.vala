@@ -32,9 +32,16 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
+        var cssprovider = new Gtk.CssProvider ();
+        cssprovider.load_from_resource ("/com/github/ryonakano/konbucase/Application.css");
+        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
+                                                    cssprovider,
+                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
         target_source_buffer = new Services.Buffer ();
 
         var target_source_view = new Gtk.SourceView.with_buffer (target_source_buffer);
+        target_source_view.get_style_context ().add_class ("text-view");
         target_source_view.wrap_mode = Gtk.WrapMode.WORD_CHAR;
         target_source_view.hexpand = true;
         target_source_view.vexpand = true;
@@ -48,6 +55,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         var capitalized_case_button = new Gtk.Button.with_label ("Capitalized Case");
 
         buttons_grid = new Gtk.Grid ();
+        buttons_grid.margin = 12;
         buttons_grid.column_spacing = 12;
         buttons_grid.halign = Gtk.Align.CENTER;
         buttons_grid.attach (lower_case_button, 0, 1, 1, 1);
@@ -55,10 +63,10 @@ public class MainWindow : Gtk.ApplicationWindow {
         buttons_grid.attach (capitalized_case_button, 2, 1, 1, 1);
 
         var grid = new Gtk.Grid ();
-        grid.margin = 12;
-        grid.row_spacing = 12;
-        grid.attach (scrolled, 0, 0, 3, 1);
-        grid.attach (buttons_grid, 1, 1, 1, 1);
+        grid.get_style_context ().add_class ("toolbar");
+        grid.margin = 0;
+        grid.attach (scrolled, 0, 0, 1, 1);
+        grid.attach (buttons_grid, 0, 1, 1, 1);
 
         var copy_clipboard_button_icon = new Gtk.Image.from_icon_name ("edit-copy", Gtk.IconSize.SMALL_TOOLBAR);
         copy_clipboard_button = new Gtk.ToolButton (copy_clipboard_button_icon, null);
@@ -78,7 +86,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         var header = new Gtk.HeaderBar ();
         header.show_close_button = true;
         header.has_subtitle = false;
-        header.title = "Case Converter";
+        header.title = "KonbuCase";
         header.pack_start (copy_clipboard_button);
         header.pack_end (redo_button);
         header.pack_end (undo_button);
