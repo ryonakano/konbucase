@@ -50,9 +50,9 @@ public class MainWindow : Gtk.ApplicationWindow {
         scrolled.add (target_source_view);
 
         // FIXME: Support Sentence case and Title Case
-        var lower_case_button = new Gtk.Button.with_label ("lower case");
-        var upper_case_button = new Gtk.Button.with_label ("UPPER CASE");
-        var capitalized_case_button = new Gtk.Button.with_label ("Capitalized Case");
+        var lower_case_button = new Gtk.Button.with_label (_("lower case"));
+        var upper_case_button = new Gtk.Button.with_label (_("UPPER CASE"));
+        var capitalized_case_button = new Gtk.Button.with_label (_("Capitalized Case"));
 
         buttons_grid = new Gtk.Grid ();
         buttons_grid.margin = 12;
@@ -71,22 +71,22 @@ public class MainWindow : Gtk.ApplicationWindow {
         var copy_clipboard_button_icon = new Gtk.Image.from_icon_name ("edit-copy", Gtk.IconSize.SMALL_TOOLBAR);
         copy_clipboard_button = new Gtk.ToolButton (copy_clipboard_button_icon, null);
         copy_clipboard_button.sensitive = false;
-        copy_clipboard_button.tooltip_text = "Copy to Clipboard";
+        copy_clipboard_button.tooltip_text = _("Copy to Clipboard");
 
         var undo_button_icon = new Gtk.Image.from_icon_name ("edit-undo", Gtk.IconSize.SMALL_TOOLBAR);
         undo_button = new Gtk.ToolButton (undo_button_icon, null);
         undo_button.sensitive = false;
-        undo_button.tooltip_text = "Undo case change";
+        undo_button.tooltip_text = _("Undo case change");
 
         var redo_button_icon = new Gtk.Image.from_icon_name ("edit-redo", Gtk.IconSize.SMALL_TOOLBAR);
         redo_button = new Gtk.ToolButton (redo_button_icon, null);
         redo_button.sensitive = false;
-        redo_button.tooltip_text = "Redo case change";
+        redo_button.tooltip_text = _("Redo case change");
 
         var header = new Gtk.HeaderBar ();
         header.show_close_button = true;
         header.has_subtitle = false;
-        header.title = "KonbuCase";
+        header.title = _("KonbuCase");
         header.pack_start (copy_clipboard_button);
         header.pack_end (redo_button);
         header.pack_end (undo_button);

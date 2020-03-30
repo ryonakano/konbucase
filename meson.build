@@ -3,7 +3,13 @@ project('com.github.ryonakano.konbucase',
     version: '0.1.0'
 )
 
+i18n = import('i18n')
 gnome = import('gnome')
+
+add_project_arguments(
+    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
+    language: 'c'
+)
 
 asresources = gnome.compile_resources(
     'as-resources',
@@ -26,3 +32,5 @@ executable(
     ],
     install: true
 )
+
+subdir('po')
