@@ -5,8 +5,9 @@
 ### For Developers
 You'll need the following dependencies:
 
+* libgranite-dev
 * libgtk-3.0-dev
-* libgranite-dev (>= 5.2.3)
+* libgtksourceview-3.0-dev
 * meson
 * valac
 
