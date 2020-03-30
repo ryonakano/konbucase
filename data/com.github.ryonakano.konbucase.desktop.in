@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=KonbuCase
+GenericName=Case Converting App
+Comment=Convert between lower case and upper case in your text
+Categories=Utility;TextTools;
+Exec=com.github.ryonakano.konbucase
+Icon=com.github.ryonakano.konbucase
+Terminal=false
+Type=Application
+Keywords=Text;
