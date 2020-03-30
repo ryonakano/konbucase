@@ -33,7 +33,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     construct {
         var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_resource ("/com/github/ryonakano/case-converter/Application.css");
+        cssprovider.load_from_resource ("/com/github/ryonakano/konbucase/Application.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
                                                     cssprovider,
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
@@ -86,7 +86,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         var header = new Gtk.HeaderBar ();
         header.show_close_button = true;
         header.has_subtitle = false;
-        header.title = "Case Converter";
+        header.title = "KonbuCase";
         header.pack_start (copy_clipboard_button);
         header.pack_end (redo_button);
         header.pack_end (undo_button);

@@ -20,7 +20,7 @@ public class Application : Gtk.Application {
 
     public Application () {
         Object (
-            application_id: "com.github.ryonakano.case-converter",
+            application_id: "com.github.ryonakano.konbucase",
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
