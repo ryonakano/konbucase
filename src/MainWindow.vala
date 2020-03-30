@@ -25,13 +25,28 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     public MainWindow (Application app) {
         Object (
-            application: app,
-            width_request: 600,
-            height_request: 500
+            application: app
         );
     }
 
     construct {
+        var window_pos_x = Application.settings.get_int ("pos-x");
+        var window_pos_y = Application.settings.get_int ("pos-y");
+        var window_width = Application.settings.get_int ("window-width");
+        var window_height = Application.settings.get_int ("window-height");
+        var window_max = Application.settings.get_boolean ("window-maximized");
+
+        if (window_max == true) {
+            maximize ();
+        }
+        if (window_pos_x != -1 || window_pos_y != -1) {
+            move (window_pos_x, window_pos_y);
+        } else {
+            window_position = Gtk.WindowPosition.CENTER;
+        }
+
+        resize (window_width, window_height);
+
         var cssprovider = new Gtk.CssProvider ();
         cssprovider.load_from_resource ("/com/github/ryonakano/konbucase/Application.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
@@ -136,6 +151,26 @@ public class MainWindow : Gtk.ApplicationWindow {
             target_source_buffer.redo ();
             update_header_buttons ();
         });
+
+        delete_event.connect (e => {
+            return before_destroy ();
+        });
+    }
+
+    private bool before_destroy () {
+        int width, height, x, y;
+        var max = is_maximized;
+
+        get_size (out width, out height);
+        get_position (out x, out y);
+
+        Application.settings.set_int ("pos-x", x);
+        Application.settings.set_int ("pos-y", y);
+        Application.settings.set_int ("window-width", width);
+        Application.settings.set_int ("window-height", height);
+        Application.settings.set_boolean ("window-maximized", max);
+
+        return false;
     }
 
     private void update_header_buttons () {
