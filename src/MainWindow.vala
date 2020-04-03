@@ -19,10 +19,8 @@ public class MainWindow : Gtk.ApplicationWindow {
     private Services.Buffer target_source_buffer;
     private Services.Buffer result_source_buffer;
 
-    private Gtk.Grid buttons_grid;
-    private Gtk.ToolButton copy_clipboard_button;
-    private Gtk.ToolButton undo_button;
-    private Gtk.ToolButton redo_button;
+    private Gtk.ToolButton copy_target_clipboard_button;
+    private Gtk.ToolButton copy_result_clipboard_button;
 
     public MainWindow (Application app) {
         Object (
@@ -63,10 +61,18 @@ public class MainWindow : Gtk.ApplicationWindow {
         target_case_combo.append ("snake", "snake_case");
         target_case_combo.append ("kebab", "kebab-case");
 
-        var target_case_combo_grid = new Gtk.Grid ();
-        target_case_combo_grid.get_style_context ().add_class ("toolbar");
-        target_case_combo_grid.margin = 0;
-        target_case_combo_grid.add (target_case_combo);
+        var copy_target_clipboard_button_icon = new Gtk.Image.from_icon_name ("edit-copy", Gtk.IconSize.SMALL_TOOLBAR);
+        copy_target_clipboard_button = new Gtk.ToolButton (copy_target_clipboard_button_icon, null);
+        copy_target_clipboard_button.halign = Gtk.Align.END;
+        copy_target_clipboard_button.margin_end = 6;
+        copy_target_clipboard_button.sensitive = false;
+        copy_target_clipboard_button.tooltip_text = _("Copy to Clipboard");
+
+        var target_case_combo_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        target_case_combo_box.get_style_context ().add_class ("toolbar");
+        target_case_combo_box.margin = 0;
+        target_case_combo_box.pack_start (target_case_combo);
+        target_case_combo_box.pack_end (copy_target_clipboard_button);
 
         target_source_buffer = new Services.Buffer ();
         var target_source_view = new Gtk.SourceView.with_buffer (target_source_buffer);
@@ -87,10 +93,18 @@ public class MainWindow : Gtk.ApplicationWindow {
         result_case_combo.append ("snake", "snake_case");
         result_case_combo.append ("kebab", "kebab-case");
 
-        var result_case_combo_grid = new Gtk.Grid ();
-        result_case_combo_grid.get_style_context ().add_class ("toolbar");
-        result_case_combo_grid.margin = 0;
-        result_case_combo_grid.add (result_case_combo);
+        var copy_result_clipboard_button_icon = new Gtk.Image.from_icon_name ("edit-copy", Gtk.IconSize.SMALL_TOOLBAR);
+        copy_result_clipboard_button = new Gtk.ToolButton (copy_result_clipboard_button_icon, null);
+        copy_result_clipboard_button.halign = Gtk.Align.END;
+        copy_result_clipboard_button.margin_end = 6;
+        copy_result_clipboard_button.sensitive = false;
+        copy_result_clipboard_button.tooltip_text = _("Copy to Clipboard");
+
+        var result_case_combo_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        result_case_combo_box.get_style_context ().add_class ("toolbar");
+        result_case_combo_box.margin = 0;
+        result_case_combo_box.pack_start (result_case_combo);
+        result_case_combo_box.pack_end (copy_result_clipboard_button);
 
         result_source_buffer = new Services.Buffer ();
         var result_source_view = new Gtk.SourceView.with_buffer (result_source_buffer);
@@ -104,21 +118,15 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var grid = new Gtk.Grid ();
         grid.margin = 0;
-        grid.attach (target_case_combo_grid, 0, 0);
+        grid.attach (target_case_combo_box, 0, 0);
         grid.attach (target_scrolled, 0, 1);
-        grid.attach (result_case_combo_grid, 0, 2);
+        grid.attach (result_case_combo_box, 0, 2);
         grid.attach (result_scrolled, 0, 3);
-
-        var copy_clipboard_button_icon = new Gtk.Image.from_icon_name ("edit-copy", Gtk.IconSize.SMALL_TOOLBAR);
-        copy_clipboard_button = new Gtk.ToolButton (copy_clipboard_button_icon, null);
-        copy_clipboard_button.sensitive = false;
-        copy_clipboard_button.tooltip_text = _("Copy to Clipboard");
 
         var header = new Gtk.HeaderBar ();
         header.show_close_button = true;
         header.has_subtitle = false;
         header.title = _("KonbuCase");
-        header.pack_start (copy_clipboard_button);
 
         set_titlebar (header);
         add (grid);
@@ -129,8 +137,12 @@ public class MainWindow : Gtk.ApplicationWindow {
             update_buttons ();
         });
 
-        copy_clipboard_button.clicked.connect (() => {
+        copy_target_clipboard_button.clicked.connect (() => {
             Gtk.Clipboard.get_default (Gdk.Display.get_default ()).set_text (target_source_buffer.text, -1);
+        });
+
+        copy_result_clipboard_button.clicked.connect (() => {
+            Gtk.Clipboard.get_default (Gdk.Display.get_default ()).set_text (result_source_buffer.text, -1);
         });
 
         delete_event.connect (e => {
@@ -155,8 +167,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     private void update_buttons () {
-        bool has_text = target_source_buffer.text != "";
-
-        copy_clipboard_button.sensitive = has_text;
+        copy_target_clipboard_button.sensitive = target_source_buffer.text != "";
+        copy_result_clipboard_button.sensitive = result_source_buffer.text != "";
     }
 }
