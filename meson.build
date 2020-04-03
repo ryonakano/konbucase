@@ -22,6 +22,7 @@ executable(
     meson.project_name(),
     asresources,
     'src/Services/Buffer.vala',
+    'src/Widgets/ComboEntry.vala',
     'src/Application.vala',
     'src/MainWindow.vala',
     dependencies: [
