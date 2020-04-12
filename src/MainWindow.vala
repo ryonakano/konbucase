@@ -62,6 +62,10 @@ public class MainWindow : Gtk.ApplicationWindow {
         set_titlebar (header);
         add (grid);
 
+        target_combo_entry.convert_case.connect ((text) => {
+            result_combo_entry.source_buffer.text = Services.Converter.get_default ().convert_case (text, target_combo_entry.case_combobox.active_id, result_combo_entry.case_combobox.active_id);
+        });
+
         delete_event.connect (e => {
             return before_destroy ();
         });

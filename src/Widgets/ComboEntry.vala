@@ -16,8 +16,11 @@
 */
 
 public class Widgets.ComboEntry : Gtk.Grid {
+    public signal void convert_case (string text);
+
     public string case_label_text { get; construct; }
-    private Services.Buffer source_buffer;
+    public Gtk.ComboBoxText case_combobox { get; private set; }
+    public Gtk.SourceBuffer source_buffer { get; set; }
 
     private Gtk.ToolButton copy_clipboard_button;
 
@@ -31,7 +34,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
     construct {
         var case_label = new Gtk.Label (case_label_text);
 
-        var case_combobox = new Gtk.ComboBoxText ();
+        case_combobox = new Gtk.ComboBoxText ();
         case_combobox.halign = Gtk.Align.START;
         case_combobox.margin = 6;
         case_combobox.append ("space_separated", _("Space separated"));
@@ -59,7 +62,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         case_combobox_box.pack_start (case_grid);
         case_combobox_box.pack_end (copy_clipboard_button);
 
-        source_buffer = new Services.Buffer ();
+        source_buffer = new Gtk.SourceBuffer (null);
         var source_view = new Gtk.SourceView.with_buffer (source_buffer);
         source_view.get_style_context ().add_class ("text-view");
         source_view.wrap_mode = Gtk.WrapMode.WORD_CHAR;
@@ -76,6 +79,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
         source_buffer.notify["text"].connect (() => {
             update_buttons ();
+            convert_case (source_buffer.text);
         });
 
         copy_clipboard_button.clicked.connect (() => {
