@@ -56,7 +56,7 @@ public class Services.Converter : Object {
         return result_text;
     }
 
-    public string from_space_separated (string text, string result_case) {
+    private string from_space_separated (string text, string result_case) {
         MatchInfo match_info;
         string result_text = text;
 
@@ -101,7 +101,7 @@ public class Services.Converter : Object {
         return result_text;
     }
 
-    public string from_snake_case (string text, string result_case) {
+    private string from_snake_case (string text, string result_case) {
         MatchInfo match_info;
         string result_text = text;
 
@@ -146,7 +146,7 @@ public class Services.Converter : Object {
         return result_text;
     }
 
-    public string from_kebab_case (string text, string result_case) {
+    private string from_kebab_case (string text, string result_case) {
         MatchInfo match_info;
         string result_text = text;
 
