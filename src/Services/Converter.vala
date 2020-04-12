@@ -65,30 +65,46 @@ public class Services.Converter : Object {
                 debug ("The chosen result case is the same with target case, does nothing.");
                 break;
             case "camel":
-                var regex = new Regex (" (.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\u\\1");
+                try {
+                    var regex = new Regex (" (.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\u\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "pascal":
-                var regex = new Regex ("( |^)(.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\u\\2");
+                try {
+                    var regex = new Regex ("( |^)(.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\u\\2");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "snake":
-                var regex = new Regex (" (.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "_\\1");
+                try {
+                    var regex = new Regex (" (.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "_\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "kebab":
-                var regex = new Regex ("( )(.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "-\\2");
+                try {
+                    var regex = new Regex ("( )(.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "-\\2");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
@@ -106,9 +122,13 @@ public class Services.Converter : Object {
 
         switch (result_case) {
             case "space_separated":
-                var regex = new Regex ("(\\S)([A-Z])");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\1 \\2");
+                try {
+                    var regex = new Regex ("(\\S)([A-Z])");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\1 \\2");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
@@ -116,23 +136,35 @@ public class Services.Converter : Object {
                 debug ("The chosen result case is the same with target case, does nothing.");
                 break;
             case "pascal":
-                var regex = new Regex ("^([a-z])");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\u\\1");
+                try {
+                    var regex = new Regex ("^([a-z])");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\u\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "snake":
-                var regex = new Regex ("([A-Z])");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "_\\l\\1");
+                try {
+                    var regex = new Regex ("([A-Z])");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "_\\l\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "kebab":
-                var regex = new Regex ("([A-Z])");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "-\\l\\1");
+                try {
+                    var regex = new Regex ("([A-Z])");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "-\\l\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
@@ -151,16 +183,24 @@ public class Services.Converter : Object {
 
         switch (result_case) {
             case "space_separated":
-                var regex = new Regex ("(\\S)([A-Z])");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\1 \\2");
+                try {
+                    var regex = new Regex ("(\\S)([A-Z])");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\1 \\2");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "camel":
-                var regex = new Regex ("^([A-Z])");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\l\\1");
+                try {
+                    var regex = new Regex ("^([A-Z])");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\l\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
@@ -168,26 +208,34 @@ public class Services.Converter : Object {
                 debug ("The chosen result case is the same with target case, does nothing.");
                 break;
             case "snake":
-                var regex = new Regex ("^([A-Z])");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\l\\1");
-                }
+                try {
+                    var regex = new Regex ("^([A-Z])");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\l\\1");
+                    }
 
-                regex = new Regex ("([A-Z])");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "_\\l\\1");
+                    regex = new Regex ("([A-Z])");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "_\\l\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "kebab":
-                var regex = new Regex ("^([A-Z])");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\l\\1");
-                }
+                try {
+                    var regex = new Regex ("^([A-Z])");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\l\\1");
+                    }
 
-                regex = new Regex ("([A-Z])");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "-\\l\\1");
+                    regex = new Regex ("([A-Z])");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "-\\l\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
@@ -205,23 +253,35 @@ public class Services.Converter : Object {
 
         switch (result_case) {
             case "space_separated":
-                var regex = new Regex ("_(.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, " \\1");
+                try {
+                    var regex = new Regex ("_(.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, " \\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "camel":
-                var regex = new Regex ("_(.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\u\\1");
+                try {
+                    var regex = new Regex ("_(.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\u\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "pascal":
-                var regex = new Regex ("(_|^)(.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\u\\2");
+                try {
+                    var regex = new Regex ("(_|^)(.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\u\\2");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
@@ -229,9 +289,13 @@ public class Services.Converter : Object {
                 debug ("The chosen result case is the same with target case, does nothing.");
                 break;
             case "kebab":
-                var regex = new Regex ("(_)(.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "-\\2");
+                try {
+                    var regex = new Regex ("(_)(.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "-\\2");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
@@ -249,30 +313,46 @@ public class Services.Converter : Object {
 
         switch (result_case) {
             case "space_separated":
-                var regex = new Regex ("-(.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, " \\1");
+                try {
+                    var regex = new Regex ("-(.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, " \\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "camel":
-                var regex = new Regex ("-(.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\u\\1");
+                try {
+                    var regex = new Regex ("-(.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\u\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "pascal":
-                var regex = new Regex ("(-|^)(.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "\\u\\2");
+                try {
+                    var regex = new Regex ("(-|^)(.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "\\u\\2");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
             case "snake":
-                var regex = new Regex ("-(.)");
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, "_\\1");
+                try {
+                    var regex = new Regex ("-(.)");
+                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                        result_text = regex.replace (result_text, result_text.length, 0, "_\\1");
+                    }
+                } catch (RegexError e) {
+                    warning (e.message);
                 }
 
                 break;
