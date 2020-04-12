@@ -82,6 +82,12 @@ public class Widgets.ComboEntry : Gtk.Grid {
             convert_case (source_buffer.text);
         });
 
+        case_combobox.changed.connect (() => {
+            if (source_buffer.text != "") {
+                convert_case (source_buffer.text);
+            }
+        });
+
         copy_clipboard_button.clicked.connect (() => {
             Gtk.Clipboard.get_default (Gdk.Display.get_default ()).set_text (source_buffer.text, -1);
         });
