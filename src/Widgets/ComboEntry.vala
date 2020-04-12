@@ -42,6 +42,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         case_combobox.append ("pascal", "PascalCase");
         case_combobox.append ("snake", "snake_case");
         case_combobox.append ("kebab", "kebab-case");
+        case_combobox.active_id = "space_separated";
 
         var case_grid = new Gtk.Grid ();
         case_grid.margin_start = 6;
