@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-30 11:21+0900\n"
+"POT-Creation-Date: 2020-04-13 12:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,16 +19,16 @@ msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:7
 #: data/com.github.ryonakano.konbucase.desktop.in:3
-msgid "Reco"
+msgid "KonbuCase"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:8
 #: data/com.github.ryonakano.konbucase.desktop.in:5
-msgid "Record talks to remember the contents later"
+msgid "Convert case in your text"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:10
-msgid "An audio recording app that helps you recall things talked later."
+msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:13
@@ -37,63 +37,22 @@ msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:15
 msgid ""
-"Recording sounds from both your microphone and system at the same time. This "
-"would be useful when you record conversations with chat apps or stream "
-"videos on the Internet"
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:16
 msgid ""
-"Saving in some commonly used formats. It supports AAC, FLAC, MP3, Ogg "
-"Vorbis, Opus, and WAV"
+"Convert your text between camelCase, PascalCase, snake_case, kebab-case, and "
+"space-separated"
 msgstr ""
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:17
-msgid ""
-"Timed recording. You can set a delay before recording up to 15 seconds, and "
-"the length of recording up to 600 seconds"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:18
-msgid ""
-"Autosaving or always-ask-where-to-save workflow. You can select whether the "
-"app saves recordings automatically or you choose a destination each time on "
-"saving them"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:19
-msgid ""
-"Saving recording when the app quits. Even if you happen to quit the app "
-"while recording, the recording is saved automatically or a FileChooserDialog "
-"is shown depends on your saving setting"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:24
-msgid "Welcome screen that allows you to set recording configuration"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:28
-msgid "Recording screen"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:32
-msgid "Recording is successfully finished"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:71
-msgid "Add Turkish translation (by @safak45x)"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:72
-msgid "Add Russian translation (by @usmanovmax)"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:78
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:55
 msgid "Ryo Nakano"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.desktop.in:4
-msgid "Audio Recording App"
+msgid "Case Converting App"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.desktop.in:8
@@ -101,5 +60,5 @@ msgid "com.github.ryonakano.konbucase"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.desktop.in:11
-msgid "Record;Audio;Sound;Voice;"
+msgid "Text;"
 msgstr ""

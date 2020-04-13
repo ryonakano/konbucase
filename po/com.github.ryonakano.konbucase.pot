@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-30 10:56+0900\n"
+"POT-Creation-Date: 2020-04-13 12:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,31 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. FIXME: Support Sentence case and Title Case
-#: src/MainWindow.vala:53
-msgid "lower case"
+#: src/Services/TextType.vala:25
+msgid "Convert from:"
 msgstr ""
 
-#: src/MainWindow.vala:54
-msgid "UPPER CASE"
+#: src/Services/TextType.vala:27
+msgid "Convert to:"
 msgstr ""
 
-#: src/MainWindow.vala:55
-msgid "Capitalized Case"
+#: src/Widgets/ComboEntry.vala:36
+msgid "Space separated"
 msgstr ""
 
-#: src/MainWindow.vala:74
+#: src/Widgets/ComboEntry.vala:56
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: src/MainWindow.vala:79
-msgid "Undo case change"
-msgstr ""
-
-#: src/MainWindow.vala:84
-msgid "Redo case change"
-msgstr ""
-
-#: src/MainWindow.vala:89
+#: src/MainWindow.vala:60
 msgid "KonbuCase"
 msgstr ""
