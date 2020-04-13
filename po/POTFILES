@@ -1,1 +1,3 @@
+src/Services/TextType.vala
+src/Widgets/ComboEntry.vala
 src/MainWindow.vala

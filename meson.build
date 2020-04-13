@@ -21,7 +21,9 @@ asresources = gnome.compile_resources(
 executable(
     meson.project_name(),
     asresources,
-    'src/Services/Buffer.vala',
+    'src/Services/Converter.vala',
+    'src/Services/TextType.vala',
+    'src/Widgets/ComboEntry.vala',
     'src/Application.vala',
     'src/MainWindow.vala',
     dependencies: [

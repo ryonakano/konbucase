@@ -15,15 +15,29 @@
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-public class Services.Buffer : Gtk.SourceBuffer {
-    public Buffer () {
+public enum TextType {
+    TARGET,
+    RESULT;
+
+    public string get_case_label () {
+        switch (this) {
+            case TextType.TARGET:
+                return _("Convert from:");
+            case TextType.RESULT:
+                return _("Convert to:");
+            default:
+                assert_not_reached ();
+        }
     }
 
-    public void case_action (Gtk.SourceChangeCaseType case_type) {
-        Gtk.TextIter iter_start;
-        Gtk.TextIter iter_end;
-        get_iter_at_offset (out iter_start, 0);
-        get_iter_at_offset (out iter_end, this.text.length);
-        change_case (case_type, iter_start, iter_end);
+    public string get_identifier () {
+        switch (this) {
+            case TextType.TARGET:
+                return "target";
+            case TextType.RESULT:
+                return "result";
+            default:
+                assert_not_reached ();
+        }
     }
 }
