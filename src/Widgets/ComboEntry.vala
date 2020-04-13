@@ -38,7 +38,9 @@ public class Widgets.ComboEntry : Gtk.Grid {
         case_combobox.append ("pascal", "PascalCase");
         case_combobox.append ("snake", "snake_case");
         case_combobox.append ("kebab", "kebab-case");
-        case_combobox.active_id = Application.settings.get_string ("%s-case-combobox".printf (text_type.get_identifier ()));
+        case_combobox.active_id = Application.settings.get_string (
+            "%s-case-combobox".printf (text_type.get_identifier ())
+        );
 
         var case_grid = new Gtk.Grid ();
         case_grid.margin_start = 6;
@@ -75,7 +77,10 @@ public class Widgets.ComboEntry : Gtk.Grid {
         update_buttons ();
         convert_case ();
 
-        Application.settings.bind ("%s-text".printf (text_type.get_identifier ()), source_buffer, "text", SettingsBindFlags.DEFAULT);
+        Application.settings.bind (
+            "%s-text".printf (text_type.get_identifier ()),
+            source_buffer, "text", SettingsBindFlags.DEFAULT
+        );
 
         source_buffer.notify["text"].connect (() => {
             update_buttons ();
@@ -83,7 +88,10 @@ public class Widgets.ComboEntry : Gtk.Grid {
         });
 
         case_combobox.changed.connect (() => {
-            Application.settings.set_string ("%s-case-combobox".printf (text_type.get_identifier ()), case_combobox.active_id);
+            Application.settings.set_string (
+                "%s-case-combobox".printf (text_type.get_identifier ()),
+                case_combobox.active_id
+            );
 
             if (Application.settings.get_string ("%s-text".printf (text_type.get_identifier ())) != "") {
                 convert_case ();
