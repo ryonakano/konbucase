@@ -46,8 +46,8 @@ public class MainWindow : Gtk.ApplicationWindow {
                                                     cssprovider,
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        var target_combo_entry = new Widgets.ComboEntry (_("Convert from:"));
-        var result_combo_entry = new Widgets.ComboEntry (_("Convert to:"));
+        var target_combo_entry = new Widgets.ComboEntry (TextType.TARGET);
+        var result_combo_entry = new Widgets.ComboEntry (TextType.RESULT);
 
         var grid = new Gtk.Grid ();
         grid.margin = 0;
@@ -61,36 +61,6 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         set_titlebar (header);
         add (grid);
-
-        convert_case ();
-
-        Application.settings.bind ("target-text", target_combo_entry.source_buffer, "text", SettingsBindFlags.DEFAULT);
-        Application.settings.bind ("result-text", result_combo_entry.source_buffer, "text", SettingsBindFlags.DEFAULT);
-
-        target_combo_entry.case_combobox.active_id = Application.settings.get_string ("target-case-combobox");
-        result_combo_entry.case_combobox.active_id = Application.settings.get_string ("result-case-combobox");
-
-        target_combo_entry.source_buffer.notify["text"].connect (() => {
-            target_combo_entry.update_buttons ();
-            result_combo_entry.update_buttons ();
-            convert_case ();
-        });
-
-        target_combo_entry.case_combobox.changed.connect (() => {
-            Application.settings.set_string ("target-case-combobox", target_combo_entry.case_combobox.active_id);
-
-            if (Application.settings.get_string ("target-text") != "") {
-                convert_case ();
-            }
-        });
-
-        result_combo_entry.case_combobox.changed.connect (() => {
-            Application.settings.set_string ("result-case-combobox", result_combo_entry.case_combobox.active_id);
-
-            if (Application.settings.get_string ("target-text") != "") {
-                convert_case ();
-            }
-        });
 
         delete_event.connect (e => {
             return before_destroy ();
@@ -111,16 +81,5 @@ public class MainWindow : Gtk.ApplicationWindow {
         Application.settings.set_boolean ("window-maximized", max);
 
         return false;
-    }
-
-    private void convert_case () {
-        Application.settings.set_string (
-            "result-text",
-            Services.Converter.get_default ().convert_case (
-                Application.settings.get_string ("target-text"),
-                Application.settings.get_string ("target-case-combobox"),
-                Application.settings.get_string ("result-case-combobox")
-            )
-        );
     }
 }
