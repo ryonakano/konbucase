@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
+    <enum id="target-case-list">
+      <value value="0" nick="space_separated"/>
+      <value value="1" nick="camel"/>
+      <value value="2" nick="pascal"/>
+      <value value="3" nick="snake"/>
+      <value value="4" nick="kebab"/>
+    </enum>
+    <enum id="result-case-list">
+      <value value="0" nick="space_separated"/>
+      <value value="1" nick="camel"/>
+      <value value="2" nick="pascal"/>
+      <value value="3" nick="snake"/>
+      <value value="4" nick="kebab"/>
+    </enum>
+
     <schema path="/com/github/ryonakano/konbucase/" id="com.github.ryonakano.konbucase">
+        <key name="target-text" type="s">
+            <default>''</default>
+            <summary>Target Text</summary>
+            <description>The last target text</description>
+        </key>
+
+        <key name="result-text" type="s">
+            <default>''</default>
+            <summary>Result Text</summary>
+            <description>The last result text</description>
+        </key>
+
+        <key name="target-case-combobox" enum="target-case-list">
+            <default>'space_separated'</default>
+            <summary>Target Case Combobox</summary>
+            <description>The last value of the target case combobox</description>
+        </key>
+
+        <key name="result-case-combobox" enum="result-case-list">
+            <default>'space_separated'</default>
+            <summary>Result Case Combobox</summary>
+            <description>The last value of the result case combobox</description>
+        </key>
+
         <key name="pos-x" type="i">
             <default>-1</default>
             <summary>Horizontal Postition</summary>

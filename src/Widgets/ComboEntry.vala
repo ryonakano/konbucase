@@ -16,11 +16,9 @@
 */
 
 public class Widgets.ComboEntry : Gtk.Grid {
-    public signal void convert_case (string text);
-
     public string case_label_text { get; construct; }
-    public Gtk.ComboBoxText case_combobox { get; private set; }
-    public Gtk.SourceBuffer source_buffer { get; set; }
+    public Gtk.ComboBoxText case_combobox { get; set; }
+    public Gtk.SourceBuffer source_buffer { get; private set; }
 
     private Gtk.ToolButton copy_clipboard_button;
 
@@ -42,7 +40,6 @@ public class Widgets.ComboEntry : Gtk.Grid {
         case_combobox.append ("pascal", "PascalCase");
         case_combobox.append ("snake", "snake_case");
         case_combobox.append ("kebab", "kebab-case");
-        case_combobox.active_id = "space_separated";
 
         var case_grid = new Gtk.Grid ();
         case_grid.margin_start = 6;
@@ -78,23 +75,12 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
         update_buttons ();
 
-        source_buffer.notify["text"].connect (() => {
-            update_buttons ();
-            convert_case (source_buffer.text);
-        });
-
-        case_combobox.changed.connect (() => {
-            if (source_buffer.text != "") {
-                convert_case (source_buffer.text);
-            }
-        });
-
         copy_clipboard_button.clicked.connect (() => {
             Gtk.Clipboard.get_default (Gdk.Display.get_default ()).set_text (source_buffer.text, -1);
         });
     }
 
-    private void update_buttons () {
+    public void update_buttons () {
         copy_clipboard_button.sensitive = source_buffer.text != "";
     }
 }
