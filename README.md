@@ -42,4 +42,6 @@ We follow the [coding style of elementary OS](https://elementary.io/docs/code/re
 I accept translations through Pull Requests. If you're not sure how to do, [the guideline I made](po/README.md) might be helpful.
 
 ## The Story of the App Name
+![](data/Konbu.png)
+
 I always feel the pronunciations "Konbu" and "Conv" (Convert) sound similar (you may not feel though…). This app is a case converter, so I named this app "KonbuCase".
