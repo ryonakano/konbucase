@@ -29,9 +29,8 @@ public class Services.Converter : Object {
         return _converter;
     }
 
-    public string convert_case (string target_text, string target_case, string result_case) {
+    public string convert_case (string text, string target_case, string result_case) {
         MatchInfo match_info;
-        string result_text = target_text;
         var patterns = new GLib.Array<string> ();
         var replace_patterns = new GLib.Array<string> ();
 
@@ -63,15 +62,15 @@ public class Services.Converter : Object {
         try {
             for (int i = 0; i < patterns.length; i++) {
                 var regex = new Regex (patterns.index (i));
-                for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                    result_text = regex.replace (result_text, result_text.length, 0, replace_patterns.index (i));
+                for (regex.match (text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                    text = regex.replace (text, text.length, 0, replace_patterns.index (i));
                 }
             }
         } catch (RegexError e) {
             warning (e.message);
         }
 
-        return result_text;
+        return text;
     }
 
     private void convert_from_space_separated (ref GLib.Array<string> patterns, ref GLib.Array<string> replace_patterns, string result_case) {
