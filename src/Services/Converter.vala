@@ -17,6 +17,8 @@
 
 public class Services.Converter : Object {
     private static Converter _converter;
+    private GLib.Array<string> patterns;
+    private GLib.Array<string> replace_patterns;
 
     private Converter () {
     }
@@ -29,10 +31,9 @@ public class Services.Converter : Object {
         return _converter;
     }
 
-    public string convert_case (owned string text, string target_case, string result_case) {
-        MatchInfo match_info;
-        var patterns = new GLib.Array<string> ();
-        var replace_patterns = new GLib.Array<string> ();
+    public void set_condition (string target_case, string result_case) {
+        patterns = new GLib.Array<string> ();
+        replace_patterns = new GLib.Array<string> ();
 
         switch (target_case) {
             case "space_separated":
@@ -58,6 +59,10 @@ public class Services.Converter : Object {
         if (patterns.length != replace_patterns.length) {
             warning ("The numbers of patterns to find maching strings and ones to replace them don't match!");
         }
+    }
+
+    public string convert_case (owned string text) {
+        MatchInfo match_info;
 
         try {
             for (int i = 0; i < patterns.length; i++) {
