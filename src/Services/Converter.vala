@@ -29,7 +29,7 @@ public class Services.Converter : Object {
         return _converter;
     }
 
-    public string convert_case (string text, string target_case, string result_case) {
+    public string convert_case (owned string text, string target_case, string result_case) {
         MatchInfo match_info;
         var patterns = new GLib.Array<string> ();
         var replace_patterns = new GLib.Array<string> ();
