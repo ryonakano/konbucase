@@ -29,255 +29,180 @@ public class Services.Converter : Object {
         return _converter;
     }
 
-    public string convert_case (string text, string target_case, string result_case) {
-        string result_text = "";
+    public string convert_case (owned string text, string target_case, string result_case) {
+        MatchInfo match_info;
+        var patterns = new GLib.Array<string> ();
+        var replace_patterns = new GLib.Array<string> ();
 
         switch (target_case) {
             case "space_separated":
-                result_text = from_space_separated (text, result_case);
+                convert_from_space_separated (ref patterns, ref replace_patterns, result_case);
                 break;
             case "camel":
-                result_text = from_camel_case (text, result_case);
+                convert_from_camel_case (ref patterns, ref replace_patterns, result_case);
                 break;
             case "pascal":
-                result_text = from_pascal_case (text, result_case);
+                convert_from_pascal_case (ref patterns, ref replace_patterns, result_case);
                 break;
             case "snake":
-                result_text = from_snake_case (text, result_case);
+                convert_from_snake_case (ref patterns, ref replace_patterns, result_case);
                 break;
             case "kebab":
-                result_text = from_kebab_case (text, result_case);
+                convert_from_kebab_case (ref patterns, ref replace_patterns, result_case);
                 break;
             default:
                 warning ("Unexpected case, does nothing.");
                 break;
         }
 
-        return result_text;
-    }
-
-    private string from_space_separated (string text, string result_case) {
-        MatchInfo match_info;
-        string result_text = text;
-        string pattern = "";
-        string replace_pattern = "";
-
-        switch (result_case) {
-            case "space_separated":
-                debug ("The chosen result case is the same with target case, does nothing.");
-                break;
-            case "camel":
-                pattern = " (.)";
-                replace_pattern = "\\u\\1";
-                break;
-            case "pascal":
-                pattern = "( |^)(.)";
-                replace_pattern = "\\u\\2";
-                break;
-            case "snake":
-                pattern = " (.)";
-                replace_pattern = "_\\1";
-                break;
-            case "kebab":
-                pattern = "( )(.)";
-                replace_pattern = "-\\2";
-                break;
-            default:
-                warning ("Unexpected case, does nothing.");
-                break;
+        if (patterns.length != replace_patterns.length) {
+            warning ("The numbers of patterns to find maching strings and ones to replace them don't match!");
         }
 
         try {
-            var regex = new Regex (pattern);
-            for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                result_text = regex.replace (result_text, result_text.length, 0, replace_pattern);
+            for (int i = 0; i < patterns.length; i++) {
+                var regex = new Regex (patterns.index (i));
+                for (regex.match (text, 0, out match_info); match_info.matches (); match_info.next ()) {
+                    text = regex.replace (text, text.length, 0, replace_patterns.index (i));
+                }
             }
         } catch (RegexError e) {
             warning (e.message);
         }
 
-        return result_text;
+        return text;
     }
 
-    private string from_camel_case (string text, string result_case) {
-        MatchInfo match_info;
-        string result_text = text;
-        string pattern = "";
-        string replace_pattern = "";
-
+    private void convert_from_space_separated (ref GLib.Array<string> patterns, ref GLib.Array<string> replace_patterns, string result_case) {
         switch (result_case) {
             case "space_separated":
-                pattern = "(\\S)([A-Z])";
-                replace_pattern = "\\1 \\2";
-                break;
-            case "camel":
                 debug ("The chosen result case is the same with target case, does nothing.");
                 break;
+            case "camel":
+                patterns.append_val (" (.)");
+                replace_patterns.append_val ("\\u\\1");
+                break;
             case "pascal":
-                pattern = "^([a-z])";
-                replace_pattern = "\\u\\1";
+                patterns.append_val ("( |^)(.)");
+                replace_patterns.append_val ("\\u\\2");
                 break;
             case "snake":
-                pattern = "([A-Z])";
-                replace_pattern = "_\\l\\1";
+                patterns.append_val (" (.)");
+                replace_patterns.append_val ("_\\1");
                 break;
             case "kebab":
-                pattern = "([A-Z])";
-                replace_pattern = "-\\l\\1";
+                patterns.append_val ("( )(.)");
+                replace_patterns.append_val ("-\\2");
                 break;
             default:
                 warning ("Unexpected case, does nothing.");
                 break;
         }
-
-        try {
-            var regex = new Regex (pattern);
-            for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                result_text = regex.replace (result_text, result_text.length, 0, replace_pattern);
-            }
-        } catch (RegexError e) {
-            warning (e.message);
-        }
-
-        return result_text;
     }
 
-
-    private string from_pascal_case (string text, string result_case) {
-        MatchInfo match_info;
-        string result_text = text;
-
+    private void convert_from_camel_case (ref GLib.Array<string> patterns, ref GLib.Array<string> replace_patterns, string result_case) {
         switch (result_case) {
             case "space_separated":
-                try {
-                    var regex = new Regex ("(\\S)([A-Z])");
-                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                        result_text = regex.replace (result_text, result_text.length, 0, "\\1 \\2");
-                    }
-                } catch (RegexError e) {
-                    warning (e.message);
-                }
-
+                patterns.append_val ("(\\S)([A-Z])");
+                replace_patterns.append_val ("\\1 \\2");
                 break;
             case "camel":
-                try {
-                    var regex = new Regex ("^([A-Z])");
-                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                        result_text = regex.replace (result_text, result_text.length, 0, "\\l\\1");
-                    }
-                } catch (RegexError e) {
-                    warning (e.message);
-                }
-
-                break;
-            case "pascal":
                 debug ("The chosen result case is the same with target case, does nothing.");
                 break;
+            case "pascal":
+                patterns.append_val ("^([a-z])");
+                replace_patterns.append_val ("\\u\\1");
+                break;
             case "snake":
-                try {
-                    var regex = new Regex ("^([A-Z])");
-                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                        result_text = regex.replace (result_text, result_text.length, 0, "\\l\\1");
-                    }
-
-                    regex = new Regex ("([A-Z])");
-                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                        result_text = regex.replace (result_text, result_text.length, 0, "_\\l\\1");
-                    }
-                } catch (RegexError e) {
-                    warning (e.message);
-                }
-
+                patterns.append_val ("([A-Z])");
+                replace_patterns.append_val ("_\\l\\1");
                 break;
             case "kebab":
-                try {
-                    var regex = new Regex ("^([A-Z])");
-                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                        result_text = regex.replace (result_text, result_text.length, 0, "\\l\\1");
-                    }
-
-                    regex = new Regex ("([A-Z])");
-                    for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                        result_text = regex.replace (result_text, result_text.length, 0, "-\\l\\1");
-                    }
-                } catch (RegexError e) {
-                    warning (e.message);
-                }
-
+                patterns.append_val ("([A-Z])");
+                replace_patterns.append_val ("-\\l\\1");
                 break;
             default:
                 warning ("Unexpected case, does nothing.");
                 break;
         }
-
-        return result_text;
     }
 
-    private string from_snake_case (string text, string result_case) {
-        MatchInfo match_info;
-        string result_text = text;
-        string pattern = "";
-        string replace_pattern = "";
 
+    private void convert_from_pascal_case (ref GLib.Array<string> patterns, ref GLib.Array<string> replace_patterns, string result_case) {
         switch (result_case) {
             case "space_separated":
-                pattern = "_(.)";
-                replace_pattern = " \\1";
+                patterns.append_val ("(\\S)([A-Z])");
+                replace_patterns.append_val ("\\1 \\2");
                 break;
             case "camel":
-                pattern = "_(.)";
-                replace_pattern = "\\u\\1";
+                patterns.append_val ("^([A-Z])");
+                replace_patterns.append_val ("\\l\\1");
                 break;
             case "pascal":
-                pattern = "(_|^)(.)";
-                replace_pattern = "\\u\\2";
-                break;
-            case "snake":
                 debug ("The chosen result case is the same with target case, does nothing.");
                 break;
+            case "snake":
+                patterns.append_val ("^([A-Z])");
+                replace_patterns.append_val ("\\l\\1");
+                patterns.append_val ("([A-Z])");
+                replace_patterns.append_val ("_\\l\\1");
+                break;
             case "kebab":
-                pattern = "(_)(.)";
-                replace_pattern = "-\\2";
+                patterns.append_val ("^([A-Z])");
+                replace_patterns.append_val ("\\l\\1");
+                patterns.append_val ("([A-Z])");
+                replace_patterns.append_val ("-\\l\\1");
                 break;
             default:
                 warning ("Unexpected case, does nothing.");
                 break;
         }
-
-        try {
-            var regex = new Regex (pattern);
-            for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                result_text = regex.replace (result_text, result_text.length, 0, replace_pattern);
-            }
-        } catch (RegexError e) {
-            warning (e.message);
-        }
-
-        return result_text;
     }
 
-    private string from_kebab_case (string text, string result_case) {
-        MatchInfo match_info;
-        string result_text = text;
-        string pattern = "";
-        string replace_pattern = "";
-
+    private void convert_from_snake_case (ref GLib.Array<string> patterns, ref GLib.Array<string> replace_patterns, string result_case) {
         switch (result_case) {
             case "space_separated":
-                pattern = "-(.)";
-                replace_pattern = " \\1";
+                patterns.append_val ("_(.)");
+                replace_patterns.append_val (" \\1");
                 break;
             case "camel":
-                pattern = "-(.)";
-                replace_pattern = "\\u\\1";
+                patterns.append_val ("_(.)");
+                replace_patterns.append_val ("\\u\\1");
                 break;
             case "pascal":
-                pattern = "(-|^)(.)";
-                replace_pattern = "\\u\\2";
+                patterns.append_val ("(_|^)(.)");
+                replace_patterns.append_val ("\\u\\2");
                 break;
             case "snake":
-                pattern = "-(.)";
-                replace_pattern = "_\\1";
+                debug ("The chosen result case is the same with target case, does nothing.");
+                break;
+            case "kebab":
+                patterns.append_val ("(_)(.)");
+                replace_patterns.append_val ("-\\2");
+                break;
+            default:
+                warning ("Unexpected case, does nothing.");
+                break;
+        }
+    }
+
+    private void convert_from_kebab_case (ref GLib.Array<string> patterns, ref GLib.Array<string> replace_patterns, string result_case) {
+        switch (result_case) {
+            case "space_separated":
+                patterns.append_val ("-(.)");
+                replace_patterns.append_val (" \\1");
+                break;
+            case "camel":
+                patterns.append_val ("-(.)");
+                replace_patterns.append_val ("\\u\\1");
+                break;
+            case "pascal":
+                patterns.append_val ("(-|^)(.)");
+                replace_patterns.append_val ("\\u\\2");
+                break;
+            case "snake":
+                patterns.append_val ("-(.)");
+                replace_patterns.append_val ("_\\1");
                 break;
             case "kebab":
                 debug ("The chosen result case is the same with target case, does nothing.");
@@ -286,16 +211,5 @@ public class Services.Converter : Object {
                 warning ("Unexpected case, does nothing.");
                 break;
         }
-
-        try {
-            var regex = new Regex (pattern);
-            for (regex.match (result_text, 0, out match_info); match_info.matches (); match_info.next ()) {
-                result_text = regex.replace (result_text, result_text.length, 0, replace_pattern);
-            }
-        } catch (RegexError e) {
-            warning (e.message);
-        }
-
-        return result_text;
     }
 }

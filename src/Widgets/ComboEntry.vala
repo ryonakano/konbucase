@@ -75,7 +75,6 @@ public class Widgets.ComboEntry : Gtk.Grid {
         attach (scrolled, 0, 1);
 
         update_buttons ();
-        convert_case ();
 
         Application.settings.bind (
             "%s-text".printf (text_type.get_identifier ()),
