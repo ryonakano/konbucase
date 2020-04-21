@@ -13,4 +13,4 @@ Standards-Version: 4.1.1
 Package: com.github.ryonakano.konbucase
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Convert between lower case and upper case in your text
+Description: Convert case in your text
