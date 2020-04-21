@@ -57,9 +57,9 @@
   <url type="bugtracker">https://github.com/ryonakano/konbucase/issues</url>
   <url type="help">https://github.com/ryonakano/konbucase/issues</url>
   <url type="translate">https://github.com/ryonakano/konbucase</url>
-  
+
   <custom>
-    <value key="x-appcenter-color-primary">#57392d</value>
-    <value key="x-appcenter-color-primary-text">#ffffff</value>
+    <value key="x-appcenter-color-primary">#fafafa</value>
+    <value key="x-appcenter-color-primary-text">#000000</value>
   </custom>
 </component>
