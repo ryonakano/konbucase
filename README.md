@@ -8,7 +8,12 @@ Features include:
 * Click "Copy to Clipboard" button to copy the all texts in the text view without selecting them
 * Convert your text between camelCase, PascalCase, snake_case, kebab-case, and space-separated
 
-## Building and Installation
+## Installation
+### For Users
+On elementary OS? Click the button to get KonbuCase on AppCenter:
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.konbucase)
+
 ### For Developers
 You'll need the following dependencies:
 
