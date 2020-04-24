@@ -49,7 +49,7 @@ msgid ""
 "Convert your text between camelCase, PascalCase, snake_case, kebab-case, and "
 "space-separated"
 msgstr ""
-"Converti il tuo testo tra camelCase, PascalCase, snake_case, kebab-case e ".
+"Converti il tuo testo tra camelCase, PascalCase, snake_case, kebab-case e "
 "separati dallo spazio"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:55
