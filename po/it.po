@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.konbucase package.
+# Mirko Brombin <send@mirko.pm>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.konbucase\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-24 15:22+0000\n"
+"PO-Revision-Date: 2020-04-24 15:22+0000\n"
+"Last-Translator: Mirko Brombin <send@mirko.pm>\n"
+"Language-Team: Italian\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: src/Services/TextType.vala:25
+msgid "Convert from:"
+msgstr "Converti da:"
+
+#: src/Services/TextType.vala:27
+msgid "Convert to:"
+msgstr "Converti in"
+
+#: src/Widgets/ComboEntry.vala:36
+msgid "Space separated"
+msgstr "Spazi separati"
+
+#: src/Widgets/ComboEntry.vala:56
+msgid "Copy to Clipboard"
+msgstr "Copia nella Clipboard"
+
+#: src/MainWindow.vala:60
+msgid "KonbuCase"
+msgstr "KonbuCase"
