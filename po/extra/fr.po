@@ -1,68 +1,74 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# French translations for extra package.
+# Copyright (C) 2020 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Nathan Bonnemains (@NathanBnm), 2020.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-24 17:54+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-04-24 17:49+0200\n"
+"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
+"Language-Team: none\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:7
 #: data/com.github.ryonakano.konbucase.desktop.in:3
 msgid "KonbuCase"
-msgstr ""
+msgstr "KonbuCase"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:8
 #: data/com.github.ryonakano.konbucase.desktop.in:5
 msgid "Convert case in your text"
-msgstr ""
+msgstr "Modifiez la casse de votre texte"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:10
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
+"Une petite application pour vous permettre de modifier la casse de votre "
+"texte."
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:13
 msgid "Features include:"
-msgstr ""
+msgstr "Fonctionnalités incluses :"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:15
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
+"Cliquez sur le bouton « Copier dans le presse-papiers » pour copier tout le "
+"texte dans la vue sans avoir à le copier"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:16
 msgid ""
 "Convert your text between camelCase, PascalCase, snake_case, kebab-case, and "
 "space-separated"
 msgstr ""
+"Modifiez la casse de votre texte en camelCase, PascalCase, snake_case, kebab-"
+"case et séparé par des espaces"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:58
 msgid "Initial release"
-msgstr ""
+msgstr "Version initiale"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:65
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/com.github.ryonakano.konbucase.desktop.in:4
 msgid "Case Converting App"
-msgstr ""
+msgstr "Application de modification de casse"
 
 #: data/com.github.ryonakano.konbucase.desktop.in:8
 msgid "com.github.ryonakano.konbucase"
-msgstr ""
+msgstr "com.github.ryonakano.konbucase"
 
 #: data/com.github.ryonakano.konbucase.desktop.in:11
 msgid "Text;"
-msgstr ""
+msgstr "Texte;"
