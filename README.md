@@ -19,7 +19,7 @@ You'll need the following dependencies:
 
 * libgranite-dev
 * libgtk-3.0-dev
-* libgtksourceview-3.0-dev
+* libgtksourceview-4-dev (or libgtksourceview-3.0-dev)
 * meson
 * valac
 
