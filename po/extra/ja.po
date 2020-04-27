@@ -1,0 +1,73 @@
+# Japanese translations for extra package.
+# Copyright (C) 2020 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Automatically generated, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-27 19:12+0900\n"
+"PO-Revision-Date: 2020-04-27 19:28+0900\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.3\n"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:7
+#: data/com.github.ryonakano.konbucase.desktop.in:3
+msgid "KonbuCase"
+msgstr "KonbuCase"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:8
+#: data/com.github.ryonakano.konbucase.desktop.in:5
+msgid "Convert case in your text"
+msgstr "テキストの記法を変換します"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:10
+msgid "A small text tool app that allows you convert case in your text."
+msgstr "テキストの記法を変換できる、小さなテキストツールアプリです。"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:13
+msgid "Features include:"
+msgstr "含まれる機能:"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:15
+msgid ""
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
+msgstr ""
+"\"クリップボードにコピー\" ボタンをクリックすると、テキストビューのテキストを"
+"選択せずにコピーできます"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:16
+msgid ""
+"Convert your text between camelCase, PascalCase, snake_case, kebab-case, and "
+"space-separated"
+msgstr ""
+"テキストをキャメルケース、パスカルケース、スネークケース、ケバブケース、空白"
+"区切りのいずれにも変換できます"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:58
+msgid "Initial release"
+msgstr "最初のリリース"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:65
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/com.github.ryonakano.konbucase.desktop.in:4
+msgid "Case Converting App"
+msgstr "記法変換アプリ"
+
+#: data/com.github.ryonakano.konbucase.desktop.in:8
+msgid "com.github.ryonakano.konbucase"
+msgstr "com.github.ryonakano.konbucase"
+
+#: data/com.github.ryonakano.konbucase.desktop.in:11
+msgid "Text;"
+msgstr "Text;テキスト;"
