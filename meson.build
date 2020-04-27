@@ -18,6 +18,11 @@ asresources = gnome.compile_resources(
     c_name: 'as'
 )
 
+gtksourceview_dep = dependency('gtksourceview-4', required: false)
+if gtksourceview_dep.found() == false
+    gtksourceview_dep = dependency('gtksourceview-3.0')
+endif
+
 executable(
     meson.project_name(),
     asresources,
@@ -30,7 +35,7 @@ executable(
         dependency('granite'),
         dependency('gdk-3.0'),
         dependency('gtk+-3.0'),
-        dependency('gtksourceview-3.0'),
+        gtksourceview_dep,
     ],
     install: true
 )
