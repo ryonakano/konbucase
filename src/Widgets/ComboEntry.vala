@@ -101,6 +101,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
                     Application.settings.get_string ("target-case-combobox"),
                     Application.settings.get_string ("result-case-combobox")
                 );
+                convert_case ();
             }
         });
 
