@@ -1,3 +1,12 @@
+com.github.ryonakano.konbucase (0.1.1) bionic; urgency=low
+
+  * Add French translation (thanks to @NathanBnm)
+  * Add Italian translation (thanks to @mirkobrombin)
+  * Add Japanese translation
+  * Update result texts when changing ComboBox selection
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Fri, 01 May 2020 14:08:16 +0900
+
 com.github.ryonakano.konbucase (0.1.0) bionic; urgency=low
 
   * Initial release
