@@ -53,11 +53,14 @@
   </content_rating>
 
   <releases>
-    <release version="0.1.0" date="2020-04-21" urgency="low">
+    <release version="0.1.1" date="2020-05-01" urgency="low">
       <description>
-        <p>
-          Initial release
-        </p>
+        <ul>
+          <li>Add French translation (thanks to @NathanBnm)</li>
+          <li>Add Italian translation (thanks to @mirkobrombin)</li>
+          <li>Add Japanese translation</li>
+          <li>Update result texts when changing combobox selection</li>
+        </ul>
       </description>
     </release>
   </releases>
