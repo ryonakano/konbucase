@@ -68,6 +68,12 @@ public class Widgets.ComboEntry : Gtk.Grid {
         source_view.hexpand = true;
         source_view.vexpand = true;
 
+        // If `this` is result_combo_entry, make source_view uneditable
+        // Otherwise the app freezes
+        if (text_type == TextType.RESULT) {
+            source_view.editable = false;
+        }
+
         var scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.add (source_view);
 
