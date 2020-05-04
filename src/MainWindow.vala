@@ -65,6 +65,20 @@ public class MainWindow : Gtk.ApplicationWindow {
         delete_event.connect (e => {
             return before_destroy ();
         });
+
+        // Follow elementary OS-wide dark preference
+        var granite_settings = Granite.Settings.get_default ();
+        var gtk_settings = Gtk.Settings.get_default ();
+
+        gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+        target_combo_entry.update_color_style (granite_settings.prefers_color_scheme);
+        result_combo_entry.update_color_style (granite_settings.prefers_color_scheme);
+
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+            target_combo_entry.update_color_style (granite_settings.prefers_color_scheme);
+            result_combo_entry.update_color_style (granite_settings.prefers_color_scheme);
+        });
     }
 
     private bool before_destroy () {

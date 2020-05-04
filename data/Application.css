@@ -1,6 +1,11 @@
-.text-view text {
+.text-view-light text {
     color: #586e75;
     background-color: #fdf6e3;
+}
+ 
+.text-view-dark text {
+    color: #93a1a1;
+    background-color: #002b36;
 }
  
 .toolbar {
