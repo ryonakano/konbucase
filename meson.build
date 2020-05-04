@@ -3,6 +3,11 @@ project('com.github.ryonakano.konbucase',
     version: '0.1.1'
 )
 
+granite_dep = dependency('granite')
+if granite_dep.version() >= '5.4.0'
+    add_project_arguments(['--define', 'GRANITE_HAS_DARK_PREF'], language: 'vala')
+endif
+
 i18n = import('i18n')
 gnome = import('gnome')
 
@@ -32,7 +37,7 @@ executable(
     'src/Application.vala',
     'src/MainWindow.vala',
     dependencies: [
-        dependency('granite', version: '>=5.4.0'),
+        granite_dep,
         dependency('gdk-3.0'),
         dependency('gtk+-3.0'),
         gtksourceview_dep,
