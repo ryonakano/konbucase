@@ -32,7 +32,7 @@ executable(
     'src/Application.vala',
     'src/MainWindow.vala',
     dependencies: [
-        dependency('granite'),
+        dependency('granite', version: '>=5.4.0'),
         dependency('gdk-3.0'),
         dependency('gtk+-3.0'),
         gtksourceview_dep,

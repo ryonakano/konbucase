@@ -17,7 +17,7 @@ On elementary OS? Click the button to get KonbuCase on AppCenter:
 ### For Developers
 You'll need the following dependencies:
 
-* libgranite-dev
+* libgranite-dev (>= 5.4.0)
 * libgtk-3.0-dev
 * libgtksourceview-4-dev (or libgtksourceview-3.0-dev)
 * meson
