@@ -66,10 +66,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             return before_destroy ();
         });
 
-        var gtk_settings = Gtk.Settings.get_default ();
-
-        Pantheon.AccountsService? pantheon_act = null;
-
+        // From https://github.com/elementary/switchboard-plug-pantheon-shell/commit/6afb1f6f60a63129abeaae15013b90a72b8ba288
         string? user_path = null;
         try {
             FDO.Accounts? accounts_service = GLib.Bus.get_proxy_sync (
@@ -83,6 +80,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             critical (e.message);
         }
 
+        Pantheon.AccountsService? pantheon_act = null;
         if (user_path != null) {
             try {
                 pantheon_act = GLib.Bus.get_proxy_sync (
@@ -95,6 +93,8 @@ public class MainWindow : Gtk.ApplicationWindow {
                 warning ("Unable to get AccountsService proxy, color scheme preference may be incorrect");
             }
         }
+
+        var gtk_settings = Gtk.Settings.get_default ();
 
         if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersColorScheme") != null) {
             // Follow elementary OS-wide dark preference
