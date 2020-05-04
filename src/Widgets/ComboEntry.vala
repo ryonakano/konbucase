@@ -121,8 +121,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
         );
     }
 
-    public void update_color_style (Granite.Settings.ColorScheme color_scheme) {
-        if (color_scheme == Granite.Settings.ColorScheme.DARK) {
+    public void update_color_style (bool is_prefer_dark) {
+        if (is_prefer_dark) {
             source_view.get_style_context ().remove_class ("text-view-light");
             source_view.get_style_context ().add_class ("text-view-dark");
         } else {
