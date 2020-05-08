@@ -19,6 +19,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
     public TextType text_type { get; construct; }
 
     private Gtk.ToolButton copy_clipboard_button;
+    private Gtk.SourceView source_view;
 
     public ComboEntry (TextType text_type) {
         Object (
@@ -62,8 +63,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         case_combobox_box.pack_end (copy_clipboard_button);
 
         var source_buffer = new Gtk.SourceBuffer (null);
-        var source_view = new Gtk.SourceView.with_buffer (source_buffer);
-        source_view.get_style_context ().add_class ("text-view");
+        source_view = new Gtk.SourceView.with_buffer (source_buffer);
         source_view.wrap_mode = Gtk.WrapMode.WORD_CHAR;
         source_view.hexpand = true;
         source_view.vexpand = true;
@@ -125,5 +125,15 @@ public class Widgets.ComboEntry : Gtk.Grid {
             "result-text",
             Services.Converter.get_default ().convert_case (Application.settings.get_string ("target-text"))
         );
+    }
+
+    public void update_color_style (bool is_prefer_dark) {
+        if (is_prefer_dark) {
+            source_view.get_style_context ().remove_class ("text-view-light");
+            source_view.get_style_context ().add_class ("text-view-dark");
+        } else {
+            source_view.get_style_context ().remove_class ("text-view-dark");
+            source_view.get_style_context ().add_class ("text-view-light");
+        }
     }
 }
