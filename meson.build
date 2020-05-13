@@ -31,7 +31,6 @@ executable(
     'src/Widgets/ComboEntry.vala',
     'src/Application.vala',
     'src/MainWindow.vala',
-    'src/PantheonAccountsServicePlugin.vala',
     dependencies: [
         dependency('granite', version: '>=5.4.0'),
         dependency('gdk-3.0'),
