@@ -43,10 +43,15 @@ public class Widgets.ComboEntry : Gtk.Grid {
             "%s-case-combobox".printf (text_type.get_identifier ())
         );
 
+        var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.BUTTON);
+        case_info_button_icon.tooltip_text = set_info_button_tooltip (case_combobox.active_id);
+
         var case_grid = new Gtk.Grid ();
         case_grid.margin_start = 6;
+        case_grid.column_spacing = 6;
         case_grid.attach (case_label, 0, 0);
         case_grid.attach (case_combobox, 1, 0);
+        case_grid.attach (case_info_button_icon, 2, 0);
 
         var copy_clipboard_button_icon = new Gtk.Image.from_icon_name ("edit-copy", Gtk.IconSize.SMALL_TOOLBAR);
         copy_clipboard_button = new Gtk.ToolButton (copy_clipboard_button_icon, null);
@@ -97,6 +102,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
         });
 
         case_combobox.changed.connect (() => {
+            case_info_button_icon.tooltip_text = set_info_button_tooltip (case_combobox.active_id);
+
             Application.settings.set_string (
                 "%s-case-combobox".printf (text_type.get_identifier ()),
                 case_combobox.active_id
@@ -134,6 +141,24 @@ public class Widgets.ComboEntry : Gtk.Grid {
         } else {
             source_view.get_style_context ().remove_class ("text-view-dark");
             source_view.get_style_context ().add_class ("text-view-light");
+        }
+    }
+
+    private string set_info_button_tooltip (string active_id) {
+        switch (active_id) {
+            case "space_separated":
+                return _("Each word is separated by a space");
+            case "camel":
+                return _("The first character of compound words is in lowercase");
+            case "pascal":
+                return _("The first character of compound words is in uppercase");
+            case "snake":
+                return _("Each word is separated by an underscore");
+            case "kebab":
+                return _("Each word is separated by a hyphen");
+            default:
+                warning ("Unexpected case, no tooltip is shown.");
+                return "";
         }
     }
 }
