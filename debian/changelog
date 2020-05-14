@@ -1,3 +1,10 @@
+com.github.ryonakano.konbucase (1.0.1) bionic; urgency=medium
+
+  * Fix changing OS-wide dark style preference is not reflected
+  * Update translations
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Fri, 15 May 2020 06:23:07 +0900
+
 com.github.ryonakano.konbucase (1.0.0) bionic; urgency=medium
 
   * Fix the app freezes when trying to input texts in result_combo_entry
