@@ -59,7 +59,7 @@
           <li>Fix the app freezes when trying to input texts in result_combo_entry</li>
           <li>Respect an elementary OS-wide dark preference</li>
           <li>Add a description tooltip to each case</li>
-          <li>Allow to set per-app dark style preference</li>
+          <li>Allow settin per-app dark style preference</li>
           <li>Update translations</li>
         </ul>
       </description>
