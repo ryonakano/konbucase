@@ -62,7 +62,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         mode_switch.secondary_icon_tooltip_text = _("Dark background");
         mode_switch.valign = Gtk.Align.CENTER;
 
-        /// TRANSLATORS: Whether to follow system's dark style settings
+        //TRANSLATORS: Whether to follow system's dark style settings
         var follow_system_label = new Gtk.Label (_("Follow system style:"));
         follow_system_label.halign = Gtk.Align.END;
 
