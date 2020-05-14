@@ -53,13 +53,10 @@
   </content_rating>
 
   <releases>
-    <release version="1.0.0" date="2020-05-14" urgency="medium">
+    <release version="1.0.1" date="2020-05-15" urgency="medium">
       <description>
         <ul>
-          <li>Fix the app freezes when trying to input texts in result_combo_entry</li>
-          <li>Respect an elementary OS-wide dark preference</li>
-          <li>Add a description tooltip to each case</li>
-          <li>Allow settin per-app dark style preference</li>
+          <li>Fix changing OS-wide dark style preference is not reflected</li>
           <li>Update translations</li>
         </ul>
       </description>

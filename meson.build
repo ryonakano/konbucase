@@ -1,6 +1,6 @@
 project('com.github.ryonakano.konbucase',
     'vala', 'c',
-    version: '1.0.0'
+    version: '1.0.1'
 )
 
 i18n = import('i18n')
