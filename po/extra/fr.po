@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 17:21+0200\n"
+"POT-Creation-Date: 2020-05-14 21:28+0000\n"
 "PO-Revision-Date: 2020-04-24 17:49+0200\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
@@ -54,26 +54,14 @@ msgstr ""
 "case et séparé par des espaces"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:59
-msgid "Fix the app freezes when trying to input texts in result_combo_entry"
-msgstr "Correction du blocage de l'application lors de la saisie de textes dans result_combo_entry"
+msgid "Fix changing OS-wide dark style preference is not reflected"
+msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:60
-msgid "Respect an elementary OS-wide dark preference"
-msgstr "Respect de la préférence du thème sombre d'elementary OS"
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
-msgid "Add a description tooltip to each case"
-msgstr "Ajout d'une infobulle d'information pour chaque type de format"
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:62
-msgid "Allow settin per-app dark style preference"
-msgstr "Possibilité de définir un thème spécifique à l'application"
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:63
 msgid "Update translations"
 msgstr "Mise à jour des traductions"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:69
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:66
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -88,3 +76,17 @@ msgstr "com.github.ryonakano.konbucase"
 #: data/com.github.ryonakano.konbucase.desktop.in:11
 msgid "Text;"
 msgstr "Texte;"
+
+#~ msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+#~ msgstr ""
+#~ "Correction du blocage de l'application lors de la saisie de textes dans "
+#~ "result_combo_entry"
+
+#~ msgid "Respect an elementary OS-wide dark preference"
+#~ msgstr "Respect de la préférence du thème sombre d'elementary OS"
+
+#~ msgid "Add a description tooltip to each case"
+#~ msgstr "Ajout d'une infobulle d'information pour chaque type de format"
+
+#~ msgid "Allow settin per-app dark style preference"
+#~ msgstr "Possibilité de définir un thème spécifique à l'application"

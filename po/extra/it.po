@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 13:23+0000\n"
+"POT-Creation-Date: 2020-05-14 21:28+0000\n"
 "PO-Revision-Date: 2020-04-24 15:22+0000\n"
 "Last-Translator: Mirko Brombin <send@mirko.pm>\n"
 "Language-Team: Italian\n"
@@ -55,26 +55,14 @@ msgstr ""
 "separati dallo spazio"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:59
-msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:60
-msgid "Respect an elementary OS-wide dark preference"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
-msgid "Add a description tooltip to each case"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:62
-msgid "Allow settin per-app dark style preference"
-msgstr ""
-
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:63
 msgid "Update translations"
 msgstr ""
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:69
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:66
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 

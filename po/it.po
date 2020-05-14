@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 13:23+0000\n"
+"POT-Creation-Date: 2020-05-14 21:28+0000\n"
 "PO-Revision-Date: 2020-04-24 15:22+0000\n"
 "Last-Translator: Mirko Brombin <send@mirko.pm>\n"
 "Language-Team: Italian\n"
@@ -67,10 +67,10 @@ msgstr ""
 msgid "Follow system style:"
 msgstr ""
 
-#: src/MainWindow.vala:82
+#: src/MainWindow.vala:81
 msgid "Preferences"
 msgstr ""
 
-#: src/MainWindow.vala:94
+#: src/MainWindow.vala:93
 msgid "KonbuCase"
 msgstr "KonbuCase"

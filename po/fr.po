@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 17:21+0200\n"
+"POT-Creation-Date: 2020-05-14 21:28+0000\n"
 "PO-Revision-Date: 2020-04-24 17:49+0200\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
@@ -66,10 +66,10 @@ msgstr "Thème sombre"
 msgid "Follow system style:"
 msgstr "Suivre le thème du système :"
 
-#: src/MainWindow.vala:82
+#: src/MainWindow.vala:81
 msgid "Preferences"
 msgstr "Préférences"
 
-#: src/MainWindow.vala:94
+#: src/MainWindow.vala:93
 msgid "KonbuCase"
 msgstr "KonbuCase"
