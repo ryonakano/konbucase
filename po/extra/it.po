@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-24 15:22+0000\n"
+"POT-Creation-Date: 2020-05-14 13:10+0000\n"
 "PO-Revision-Date: 2020-04-24 15:22+0000\n"
 "Last-Translator: Mirko Brombin <send@mirko.pm>\n"
 "Language-Team: Italian\n"
@@ -30,7 +30,9 @@ msgstr "Converti le maiuscole nel tuo testo"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:10
 msgid "A small text tool app that allows you convert case in your text."
-msgstr "Un piccolo strumento che permette la conversione delle maiuscole nel tuo testo."
+msgstr ""
+"Un piccolo strumento che permette la conversione delle maiuscole nel tuo "
+"testo."
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:13
 msgid "Features include:"
@@ -41,8 +43,8 @@ msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
-"Clicca il pulsante \"Copia nella Clipboard\" per copiare tutto il testo senza  "
-"selezionarlo"
+"Clicca il pulsante \"Copia nella Clipboard\" per copiare tutto il testo "
+"senza  selezionarlo"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:16
 msgid ""
@@ -52,7 +54,27 @@ msgstr ""
 "Converti il tuo testo tra camelCase, PascalCase, snake_case, kebab-case e "
 "separati dallo spazio"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:55
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:59
+msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:60
+msgid "Respect an elementary OS-wide dark preference"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
+msgid "Add a description tooltip to each case"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:62
+msgid "Allow settin per-app dark style preference"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:63
+msgid "Update translations"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:69
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 

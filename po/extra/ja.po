@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 19:12+0900\n"
+"POT-Creation-Date: 2020-05-14 13:10+0000\n"
 "PO-Revision-Date: 2020-04-27 19:28+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -52,11 +52,27 @@ msgstr ""
 "テキストをキャメルケース、パスカルケース、スネークケース、ケバブケース、空白"
 "区切りのいずれにも変換できます"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:58
-msgid "Initial release"
-msgstr "最初のリリース"
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:59
+msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+msgstr ""
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:65
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:60
+msgid "Respect an elementary OS-wide dark preference"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
+msgid "Add a description tooltip to each case"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:62
+msgid "Allow settin per-app dark style preference"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:63
+msgid "Update translations"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:69
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -71,3 +87,6 @@ msgstr "com.github.ryonakano.konbucase"
 #: data/com.github.ryonakano.konbucase.desktop.in:11
 msgid "Text;"
 msgstr "Text;テキスト;"
+
+#~ msgid "Initial release"
+#~ msgstr "最初のリリース"

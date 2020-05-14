@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 19:12+0900\n"
+"POT-Creation-Date: 2020-05-14 13:10+0000\n"
 "PO-Revision-Date: 2020-04-27 19:24+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -26,14 +26,51 @@ msgstr "変換元の記法:"
 msgid "Convert to:"
 msgstr "変換先の記法:"
 
-#: src/Widgets/ComboEntry.vala:36
+#: src/Widgets/ComboEntry.vala:37
 msgid "Space separated"
 msgstr "スペース区切り"
 
-#: src/Widgets/ComboEntry.vala:56
+#: src/Widgets/ComboEntry.vala:62
 msgid "Copy to Clipboard"
 msgstr "クリップボードにコピー"
 
-#: src/MainWindow.vala:60
+#: src/Widgets/ComboEntry.vala:150
+msgid "Each word is separated by a space"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:152
+msgid "The first character of compound words is in lowercase"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:154
+msgid "The first character of compound words is in uppercase"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:156
+msgid "Each word is separated by an underscore"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:158
+msgid "Each word is separated by a hyphen"
+msgstr ""
+
+#: src/MainWindow.vala:61
+msgid "Light background"
+msgstr ""
+
+#: src/MainWindow.vala:62
+msgid "Dark background"
+msgstr ""
+
+#. / TRANSLATORS: Whether to follow system's dark style settings
+#: src/MainWindow.vala:66
+msgid "Follow system style:"
+msgstr ""
+
+#: src/MainWindow.vala:82
+msgid "Preferences"
+msgstr ""
+
+#: src/MainWindow.vala:94
 msgid "KonbuCase"
 msgstr "KonbuCase"
