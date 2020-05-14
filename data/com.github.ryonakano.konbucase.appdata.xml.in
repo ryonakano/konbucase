@@ -53,13 +53,14 @@
   </content_rating>
 
   <releases>
-    <release version="0.1.1" date="2020-05-01" urgency="low">
+    <release version="1.0.0" date="2020-05-14" urgency="medium">
       <description>
         <ul>
-          <li>Add French translation (thanks to @NathanBnm)</li>
-          <li>Add Italian translation (thanks to @mirkobrombin)</li>
-          <li>Add Japanese translation</li>
-          <li>Update result texts when changing ComboBox selection</li>
+          <li>Fix the app freezes when trying to input texts in result_combo_entry</li>
+          <li>Respect an elementary OS-wide dark preference</li>
+          <li>Add a description tooltip to each case</li>
+          <li>Allow to set per-app dark style preference</li>
+          <li>Update translations</li>
         </ul>
       </description>
     </release>
