@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-24 17:54+0200\n"
+"POT-Creation-Date: 2020-05-14 03:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,11 +47,23 @@ msgid ""
 "space-separated"
 msgstr ""
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:58
-msgid "Initial release"
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:59
+msgid "Add French translation (thanks to @NathanBnm)"
 msgstr ""
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:65
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:60
+msgid "Add Italian translation (thanks to @mirkobrombin)"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
+msgid "Add Japanese translation"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:62
+msgid "Update result texts when changing ComboBox selection"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:68
 msgid "Ryo Nakano"
 msgstr ""
 
