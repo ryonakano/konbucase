@@ -102,7 +102,6 @@ public class MainWindow : Gtk.ApplicationWindow {
             return before_destroy ();
         });
 
-        // Follow elementary OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
         var gtk_settings = Gtk.Settings.get_default ();
 
