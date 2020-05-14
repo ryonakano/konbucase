@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 10:23+0000\n"
+"POT-Creation-Date: 2020-05-14 10:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,22 +48,26 @@ msgid ""
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:59
-msgid "Add French translation (thanks to @NathanBnm)"
+msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:60
-msgid "Add Italian translation (thanks to @mirkobrombin)"
+msgid "Respect an elementary OS-wide dark preference"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:61
-msgid "Add Japanese translation"
+msgid "Add a description tooltip to each case"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:62
-msgid "Update result texts when changing ComboBox selection"
+msgid "Allow settin per-app dark style preference"
 msgstr ""
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:68
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:63
+msgid "Update translations"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:69
 msgid "Ryo Nakano"
 msgstr ""
 
