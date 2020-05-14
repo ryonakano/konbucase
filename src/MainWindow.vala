@@ -78,7 +78,8 @@ public class MainWindow : Gtk.ApplicationWindow {
         preferences_grid.attach (follow_system_switch, 1, 0);
 
         var preferences_button_icon = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR);
-        var preferences_button = new Gtk.ToolButton (preferences_button_icon, _("Preferences"));
+        var preferences_button = new Gtk.ToolButton (preferences_button_icon, null);
+        preferences_button.tooltip_text = _("Preferences");
 
         var preferences_popover = new Gtk.Popover (preferences_button);
         preferences_popover.add (preferences_grid);
@@ -127,9 +128,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         Application.settings.bind ("is-prefer-dark", mode_switch, "active", GLib.SettingsBindFlags.DEFAULT);
         Application.settings.bind ("is-prefer-dark", gtk_settings, "gtk-application-prefer-dark-theme", GLib.SettingsBindFlags.DEFAULT);
         Application.settings.bind ("is-follow-system-style", follow_system_switch, "active", GLib.SettingsBindFlags.DEFAULT);
-        follow_system_switch.bind_property ("active", mode_switch, "sensitive", GLib.BindingFlags.INVERT_BOOLEAN);
-
-        mode_switch.sensitive = !Application.settings.get_boolean ("is-follow-system-style");
+        Application.settings.bind ("is-follow-system-style", mode_switch, "sensitive", GLib.SettingsBindFlags.INVERT_BOOLEAN);
     }
 
     private bool before_destroy () {
