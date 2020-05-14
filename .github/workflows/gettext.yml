@@ -11,5 +11,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
       with:
-        translation_branch: 'i18n'
         regenerate_po: 'true'
