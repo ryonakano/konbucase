@@ -68,7 +68,6 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var follow_system_switch = new Gtk.Switch ();
         follow_system_switch.halign = Gtk.Align.START;
-        follow_system_switch.active = Application.settings.get_boolean ("is-follow-system-style");
 
         var preferences_grid = new Gtk.Grid ();
         preferences_grid.margin = 12;
@@ -117,10 +116,10 @@ public class MainWindow : Gtk.ApplicationWindow {
         });
 
         follow_system_switch.notify["active"].connect (() => {
-            if (Application.settings.get_boolean ("is-follow-system-style")) {
-                gtk_settings.gtk_application_prefer_dark_theme = Application.settings.get_boolean ("is-prefer-dark");
-            } else {
+            if (follow_system_switch.active) {
                 gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+            } else {
+                gtk_settings.gtk_application_prefer_dark_theme = Application.settings.get_boolean ("is-prefer-dark");
             }
         });
 
