@@ -16,6 +16,8 @@
 */
 
 public class MainWindow : Gtk.ApplicationWindow {
+    private uint configure_id;
+
     public MainWindow (Application app) {
         Object (
             application: app
@@ -23,15 +25,16 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        var window_pos_x = Application.settings.get_int ("pos-x");
-        var window_pos_y = Application.settings.get_int ("pos-y");
-        var window_width = Application.settings.get_int ("window-width");
-        var window_height = Application.settings.get_int ("window-height");
-        var window_max = Application.settings.get_boolean ("window-maximized");
+        int window_pos_x, window_pos_y;
+        Application.settings.get ("window-position", "(ii)", out window_pos_x, out window_pos_y);
 
-        if (window_max == true) {
+        int window_width, window_height;
+        Application.settings.get ("window-size", "(ii)", out window_width, out window_height);
+
+        if (Application.settings.get_boolean ("window-maximized")) {
             maximize ();
         }
+
         if (window_pos_x != -1 || window_pos_y != -1) {
             move (window_pos_x, window_pos_y);
         } else {
@@ -97,10 +100,6 @@ public class MainWindow : Gtk.ApplicationWindow {
         set_titlebar (header);
         add (grid);
 
-        delete_event.connect (e => {
-            return before_destroy ();
-        });
-
         var granite_settings = Granite.Settings.get_default ();
         var gtk_settings = Gtk.Settings.get_default ();
 
@@ -129,19 +128,24 @@ public class MainWindow : Gtk.ApplicationWindow {
         Application.settings.bind ("is-follow-system-style", mode_switch, "sensitive", GLib.SettingsBindFlags.INVERT_BOOLEAN);
     }
 
-    private bool before_destroy () {
-        int width, height, x, y;
-        var max = is_maximized;
+    protected override bool configure_event (Gdk.EventConfigure event) {
+        if (configure_id != 0) {
+            GLib.Source.remove (configure_id);
+        }
 
-        get_size (out width, out height);
-        get_position (out x, out y);
+        configure_id = GLib.Timeout.add (100, () => {
+            configure_id = 0;
+            int width, height, x, y;
+            get_size (out width, out height);
+            get_position (out x, out y);
+    
+            Application.settings.set ("window-position", "(ii)", x, y);
+            Application.settings.set ("window-size", "(ii)", width, height);
+            Application.settings.set_boolean ("window-maximized", this.is_maximized);
 
-        Application.settings.set_int ("pos-x", x);
-        Application.settings.set_int ("pos-y", y);
-        Application.settings.set_int ("window-width", width);
-        Application.settings.set_int ("window-height", height);
-        Application.settings.set_boolean ("window-maximized", max);
+            return Gdk.EVENT_PROPAGATE;
+        });
 
-        return false;
+        return base.configure_event (event);
     }
 }
