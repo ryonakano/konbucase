@@ -25,24 +25,6 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        int window_pos_x, window_pos_y;
-        Application.settings.get ("window-position", "(ii)", out window_pos_x, out window_pos_y);
-
-        int window_width, window_height;
-        Application.settings.get ("window-size", "(ii)", out window_width, out window_height);
-
-        if (Application.settings.get_boolean ("window-maximized")) {
-            maximize ();
-        }
-
-        if (window_pos_x != -1 || window_pos_y != -1) {
-            move (window_pos_x, window_pos_y);
-        } else {
-            window_position = Gtk.WindowPosition.CENTER;
-        }
-
-        resize (window_width, window_height);
-
         var cssprovider = new Gtk.CssProvider ();
         cssprovider.load_from_resource ("/com/github/ryonakano/konbucase/Application.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
