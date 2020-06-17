@@ -120,7 +120,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             int width, height, x, y;
             get_size (out width, out height);
             get_position (out x, out y);
-    
+
             Application.settings.set ("window-position", "(ii)", x, y);
             Application.settings.set ("window-size", "(ii)", width, height);
             Application.settings.set_boolean ("window-maximized", this.is_maximized);
