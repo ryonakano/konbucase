@@ -17,7 +17,7 @@
 
 public class Application : Gtk.Application {
     private MainWindow window;
-    public static GLib.Settings settings { get; set; }
+    public static GLib.Settings settings;
 
     public Application () {
         Object (
@@ -26,15 +26,35 @@ public class Application : Gtk.Application {
         );
     }
 
+    static construct {
+        settings = new GLib.Settings ("com.github.ryonakano.konbucase");
+    }
+
     protected override void activate () {
         if (window != null) {
             window.present ();
             return;
         }
 
-        settings = new GLib.Settings ("com.github.ryonakano.konbucase");
-
         window = new MainWindow (this);
+
+        int window_pos_x, window_pos_y;
+        Application.settings.get ("window-position", "(ii)", out window_pos_x, out window_pos_y);
+
+        int window_width, window_height;
+        Application.settings.get ("window-size", "(ii)", out window_width, out window_height);
+
+        if (Application.settings.get_boolean ("window-maximized")) {
+            window.maximize ();
+        }
+
+        if (window_pos_x != -1 || window_pos_y != -1) {
+            window.move (window_pos_x, window_pos_y);
+        } else {
+            window.window_position = Gtk.WindowPosition.CENTER;
+        }
+
+        window.resize (window_width, window_height);
         window.show_all ();
     }
 
