@@ -18,55 +18,47 @@
     <schema path="/com/github/ryonakano/konbucase/" id="com.github.ryonakano.konbucase">
         <key name="target-text" type="s">
             <default>''</default>
-            <summary>Target Text</summary>
-            <description>The last target text</description>
+            <summary>Target text</summary>
+            <description>The last saved target text</description>
         </key>
-
         <key name="result-text" type="s">
             <default>''</default>
-            <summary>Result Text</summary>
-            <description>The last result text</description>
+            <summary>Result text</summary>
+            <description>The last save result text</description>
         </key>
-
         <key name="target-case-combobox" enum="target-case-list">
             <default>'space_separated'</default>
-            <summary>Target Case Combobox</summary>
-            <description>The last value of the target case combobox</description>
+            <summary>Target case</summary>
+            <description>The last saved value of the target case combobox</description>
         </key>
-
         <key name="result-case-combobox" enum="result-case-list">
             <default>'space_separated'</default>
-            <summary>Result Case Combobox</summary>
-            <description>The last value of the result case combobox</description>
+            <summary>Result case</summary>
+            <description>The last saved value of the result case combobox</description>
         </key>
-
         <key name="is-prefer-dark" type="b">
             <default>false</default>
             <summary>Prefer dark</summary>
             <description>Whether to show the window in a dark style or not</description>
         </key>
-
         <key name="is-follow-system-style" type="b">
             <default>true</default>
             <summary>Follow system style</summary>
             <description>Whether to follow system's dark style settings or not</description>
         </key>
-
         <key name="window-position" type="(ii)">
             <default>(-1, -1)</default>
-            <summary>Window Postition</summary>
+            <summary>Window postition</summary>
             <description>The saved postion of the window</description>
         </key>
-
         <key name="window-size" type="(ii)">
             <default>(600, 500)</default>
-            <summary>Window Size</summary>
+            <summary>Window size</summary>
             <description>The saved size of the window</description>
         </key>
-
         <key name="window-maximized" type="b">
             <default>false</default>
-            <summary>Window Maximized</summary>
+            <summary>Window maximized</summary>
             <description>The saved value for whether the window is maximized or not</description>
         </key>
     </schema>
