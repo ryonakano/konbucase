@@ -37,7 +37,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         var grid = new Gtk.Grid ();
         grid.margin = 0;
         grid.attach (target_combo_entry, 0, 0);
-        grid.attach (result_combo_entry, 0, 1);
+        grid.attach (result_combo_entry, 1, 0);
 
         var mode_switch = new Granite.ModeSwitch.from_icon_name (
             "display-brightness-symbolic",
