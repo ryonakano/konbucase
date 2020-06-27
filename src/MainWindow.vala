@@ -32,12 +32,17 @@ public class MainWindow : Gtk.ApplicationWindow {
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         var target_combo_entry = new Widgets.ComboEntry (TextType.TARGET);
+
+        var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL);
+        separator.vexpand = true;
+
         var result_combo_entry = new Widgets.ComboEntry (TextType.RESULT);
 
         var grid = new Gtk.Grid ();
         grid.margin = 0;
         grid.attach (target_combo_entry, 0, 0);
-        grid.attach (result_combo_entry, 1, 0);
+        grid.attach (separator, 1, 0);
+        grid.attach (result_combo_entry, 2, 0);
 
         var mode_switch = new Granite.ModeSwitch.from_icon_name (
             "display-brightness-symbolic",

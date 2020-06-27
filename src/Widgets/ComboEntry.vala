@@ -15,7 +15,7 @@
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-public class Widgets.ComboEntry : Gtk.Frame {
+public class Widgets.ComboEntry : Gtk.Grid {
     public TextType text_type { get; construct; }
 
     private Gtk.ToolButton copy_clipboard_button;
@@ -82,11 +82,8 @@ public class Widgets.ComboEntry : Gtk.Frame {
         var scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.add (source_view);
 
-        var grid = new Gtk.Grid ();
-        grid.attach (case_combobox_box, 0, 0);
-        grid.attach (scrolled, 0, 1);
-
-        add (grid);
+        attach (case_combobox_box, 0, 0);
+        attach (scrolled, 0, 1);
 
         update_buttons ();
         Services.Converter.get_default ().set_condition (
