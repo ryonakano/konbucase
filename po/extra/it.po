@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 21:28+0000\n"
+"POT-Creation-Date: 2020-06-28 04:54+0000\n"
 "PO-Revision-Date: 2020-04-24 15:22+0000\n"
 "Last-Translator: Mirko Brombin <send@mirko.pm>\n"
 "Language-Team: Italian\n"
@@ -55,14 +55,18 @@ msgstr ""
 "separati dallo spazio"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:59
-msgid "Fix changing OS-wide dark style preference is not reflected"
+msgid "Save changes in the app state on time"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:60
-msgid "Update translations"
+msgid "Side-by-side view"
 msgstr ""
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:66
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
+msgid "Improve the app icon (big thanks to @Fatih20)"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:67
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 

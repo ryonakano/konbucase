@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 21:28+0000\n"
+"POT-Creation-Date: 2020-06-28 04:54+0000\n"
 "PO-Revision-Date: 2020-04-24 15:22+0000\n"
 "Last-Translator: Mirko Brombin <send@mirko.pm>\n"
 "Language-Team: Italian\n"
@@ -54,23 +54,23 @@ msgstr ""
 msgid "Each word is separated by a hyphen"
 msgstr ""
 
-#: src/MainWindow.vala:61
+#: src/MainWindow.vala:51
 msgid "Light background"
 msgstr ""
 
-#: src/MainWindow.vala:62
+#: src/MainWindow.vala:52
 msgid "Dark background"
 msgstr ""
 
 #. TRANSLATORS: Whether to follow system's dark style settings
-#: src/MainWindow.vala:66
+#: src/MainWindow.vala:56
 msgid "Follow system style:"
 msgstr ""
 
-#: src/MainWindow.vala:81
+#: src/MainWindow.vala:71
 msgid "Preferences"
 msgstr ""
 
-#: src/MainWindow.vala:93
+#: src/MainWindow.vala:83
 msgid "KonbuCase"
 msgstr "KonbuCase"

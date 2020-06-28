@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 21:28+0000\n"
+"POT-Creation-Date: 2020-06-28 04:54+0000\n"
 "PO-Revision-Date: 2020-04-24 17:49+0200\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
@@ -54,14 +54,18 @@ msgstr ""
 "case et séparé par des espaces"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:59
-msgid "Fix changing OS-wide dark style preference is not reflected"
+msgid "Save changes in the app state on time"
 msgstr ""
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:60
-msgid "Update translations"
-msgstr "Mise à jour des traductions"
+msgid "Side-by-side view"
+msgstr ""
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:66
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
+msgid "Improve the app icon (big thanks to @Fatih20)"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:67
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -76,6 +80,9 @@ msgstr "com.github.ryonakano.konbucase"
 #: data/com.github.ryonakano.konbucase.desktop.in:11
 msgid "Text;"
 msgstr "Texte;"
+
+#~ msgid "Update translations"
+#~ msgstr "Mise à jour des traductions"
 
 #~ msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 #~ msgstr ""
