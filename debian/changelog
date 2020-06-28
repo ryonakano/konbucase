@@ -1,3 +1,11 @@
+com.github.ryonakano.konbucase (2.0.0) bionic; urgency=medium
+
+  * Save changes in the app state on time
+  * Side-by-side view
+  * Improve the app icon (big thanks to @Fatih20)
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Sun, 28 Jun 2020 13:48:07 +0900
+
 com.github.ryonakano.konbucase (1.0.1) bionic; urgency=medium
 
   * Fix changing OS-wide dark style preference is not reflected
