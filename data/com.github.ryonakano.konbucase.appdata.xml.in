@@ -53,11 +53,12 @@
   </content_rating>
 
   <releases>
-    <release version="1.0.1" date="2020-05-15" urgency="medium">
+    <release version="2.0.0" date="2020-06-28" urgency="medium">
       <description>
         <ul>
-          <li>Fix changing OS-wide dark style preference is not reflected</li>
-          <li>Update translations</li>
+          <li>Save changes in the app state on time</li>
+          <li>Side-by-side view</li>
+          <li>Improve the app icon (big thanks to @Fatih20)</li>
         </ul>
       </description>
     </release>
