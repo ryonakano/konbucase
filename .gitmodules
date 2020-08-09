@@ -1,0 +1,3 @@
+[submodule "subprojects/chcase"]
+	path = subprojects/chcase
+	url = https://github.com/ryonakano/chcase
