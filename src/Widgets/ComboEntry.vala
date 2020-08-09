@@ -18,6 +18,17 @@
 public class Widgets.ComboEntry : Gtk.Grid {
     public TextType text_type { get; construct; }
 
+    private ChCase.Converter _converter;
+    public ChCase.Converter converter {
+        get {
+            if (_converter == null) {
+                _converter = new ChCase.Converter ();
+            }
+
+            return _converter;
+        }
+    }
+
     private Gtk.ToolButton copy_clipboard_button;
     private Gtk.SourceView source_view;
 
@@ -86,10 +97,9 @@ public class Widgets.ComboEntry : Gtk.Grid {
         attach (scrolled, 0, 1);
 
         update_buttons ();
-        Services.Converter.get_default ().set_condition (
-            Application.settings.get_string ("target-case-combobox"),
-            Application.settings.get_string ("result-case-combobox")
-        );
+
+        converter.target_case_name = Application.settings.get_string ("target-case-combobox");
+        converter.result_case_name = Application.settings.get_string ("result-case-combobox");
 
         Application.settings.bind (
             "%s-text".printf (text_type.get_identifier ()),
@@ -110,10 +120,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
             );
 
             if (Application.settings.get_string ("%s-text".printf (text_type.get_identifier ())) != "") {
-                Services.Converter.get_default ().set_condition (
-                    Application.settings.get_string ("target-case-combobox"),
-                    Application.settings.get_string ("result-case-combobox")
-                );
+                converter.target_case_name = Application.settings.get_string ("target-case-combobox");
+                converter.result_case_name = Application.settings.get_string ("result-case-combobox");
                 convert_case ();
             }
         });
@@ -130,7 +138,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
     private void convert_case () {
         Application.settings.set_string (
             "result-text",
-            Services.Converter.get_default ().convert_case (Application.settings.get_string ("target-text"))
+            converter.convert_case (Application.settings.get_string ("target-text"))
         );
     }
 

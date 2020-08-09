@@ -23,10 +23,12 @@ if gtksourceview_dep.found() == false
     gtksourceview_dep = dependency('gtksourceview-3.0')
 endif
 
+chcase_subproject = subproject('chcase')
+chcase_deps = chcase_subproject.get_variable('libchcase')
+
 executable(
     meson.project_name(),
     asresources,
-    'src/Services/Converter.vala',
     'src/Services/TextType.vala',
     'src/Widgets/ComboEntry.vala',
     'src/Application.vala',
@@ -35,6 +37,7 @@ executable(
         dependency('granite', version: '>=5.4.0'),
         dependency('gdk-3.0'),
         dependency('gtk+-3.0'),
+        chcase_deps,
         gtksourceview_dep,
     ],
     install: true
