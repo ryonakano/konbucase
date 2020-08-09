@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-28 04:54+0000\n"
+"POT-Creation-Date: 2020-08-09 02:53+0000\n"
 "PO-Revision-Date: 2020-05-14 22:36+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -25,31 +25,31 @@ msgstr "変換元の記法:"
 msgid "Convert to:"
 msgstr "変換先の記法:"
 
-#: src/Widgets/ComboEntry.vala:37
+#: src/Widgets/ComboEntry.vala:48
 msgid "Space separated"
 msgstr "スペース区切り"
 
-#: src/Widgets/ComboEntry.vala:62
+#: src/Widgets/ComboEntry.vala:73
 msgid "Copy to Clipboard"
 msgstr "クリップボードにコピー"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/Widgets/ComboEntry.vala:158
 msgid "Each word is separated by a space"
 msgstr "単語の区切りにスペースを使用します"
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/Widgets/ComboEntry.vala:160
 msgid "The first character of compound words is in lowercase"
 msgstr "複合語の頭文字に小文字を使用します"
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/Widgets/ComboEntry.vala:162
 msgid "The first character of compound words is in uppercase"
 msgstr "複合語の頭文字に大文字を使用します"
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/Widgets/ComboEntry.vala:164
 msgid "Each word is separated by an underscore"
 msgstr "単語の区切りにアンダースコアを使用します"
 
-#: src/Widgets/ComboEntry.vala:158
+#: src/Widgets/ComboEntry.vala:166
 msgid "Each word is separated by a hyphen"
 msgstr "単語の区切りにハイフンを使用します"
 

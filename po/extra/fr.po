@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-28 04:54+0000\n"
+"POT-Creation-Date: 2020-08-09 02:53+0000\n"
 "PO-Revision-Date: 2020-04-24 17:49+0200\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
@@ -65,7 +65,55 @@ msgstr ""
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr ""
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:67
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:68
+msgid "Fix changing OS-wide dark style preference is not reflected"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:69
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:80
+msgid "Update translations"
+msgstr "Mise à jour des traductions"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:76
+msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+msgstr ""
+"Correction du blocage de l'application lors de la saisie de textes dans "
+"result_combo_entry"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:77
+msgid "Respect an elementary OS-wide dark preference"
+msgstr "Respect de la préférence du thème sombre d'elementary OS"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:78
+msgid "Add a description tooltip to each case"
+msgstr "Ajout d'une infobulle d'information pour chaque type de format"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:79
+msgid "Allow settin per-app dark style preference"
+msgstr "Possibilité de définir un thème spécifique à l'application"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:87
+msgid "Add French translation (thanks to @NathanBnm)"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:88
+msgid "Add Italian translation (thanks to @mirkobrombin)"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:89
+#, fuzzy
+msgid "Add Japanese translation"
+msgstr "Mise à jour des traductions"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:90
+msgid "Update result texts when changing ComboBox selection"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:96
+msgid "Initial release"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:103
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -80,20 +128,3 @@ msgstr "com.github.ryonakano.konbucase"
 #: data/com.github.ryonakano.konbucase.desktop.in:11
 msgid "Text;"
 msgstr "Texte;"
-
-#~ msgid "Update translations"
-#~ msgstr "Mise à jour des traductions"
-
-#~ msgid "Fix the app freezes when trying to input texts in result_combo_entry"
-#~ msgstr ""
-#~ "Correction du blocage de l'application lors de la saisie de textes dans "
-#~ "result_combo_entry"
-
-#~ msgid "Respect an elementary OS-wide dark preference"
-#~ msgstr "Respect de la préférence du thème sombre d'elementary OS"
-
-#~ msgid "Add a description tooltip to each case"
-#~ msgstr "Ajout d'une infobulle d'information pour chaque type de format"
-
-#~ msgid "Allow settin per-app dark style preference"
-#~ msgstr "Possibilité de définir un thème spécifique à l'application"

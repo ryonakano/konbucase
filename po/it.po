@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-28 04:54+0000\n"
+"POT-Creation-Date: 2020-08-09 02:53+0000\n"
 "PO-Revision-Date: 2020-04-24 15:22+0000\n"
 "Last-Translator: Mirko Brombin <send@mirko.pm>\n"
 "Language-Team: Italian\n"
@@ -26,31 +26,31 @@ msgstr "Converti da:"
 msgid "Convert to:"
 msgstr "Converti in"
 
-#: src/Widgets/ComboEntry.vala:37
+#: src/Widgets/ComboEntry.vala:48
 msgid "Space separated"
 msgstr "Spazi separati"
 
-#: src/Widgets/ComboEntry.vala:62
+#: src/Widgets/ComboEntry.vala:73
 msgid "Copy to Clipboard"
 msgstr "Copia nella Clipboard"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/Widgets/ComboEntry.vala:158
 msgid "Each word is separated by a space"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/Widgets/ComboEntry.vala:160
 msgid "The first character of compound words is in lowercase"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/Widgets/ComboEntry.vala:162
 msgid "The first character of compound words is in uppercase"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/Widgets/ComboEntry.vala:164
 msgid "Each word is separated by an underscore"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:158
+#: src/Widgets/ComboEntry.vala:166
 msgid "Each word is separated by a hyphen"
 msgstr ""
 
