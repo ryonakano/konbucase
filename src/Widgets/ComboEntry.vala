@@ -18,8 +18,8 @@
 public class Widgets.ComboEntry : Gtk.Grid {
     public TextType text_type { get; construct; }
 
-    private ChCase.Converter _converter;
-    public ChCase.Converter converter {
+    private static ChCase.Converter _converter;
+    public static ChCase.Converter converter {
         get {
             if (_converter == null) {
                 _converter = new ChCase.Converter ();
