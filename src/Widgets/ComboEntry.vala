@@ -98,7 +98,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
         update_buttons ();
 
-        converter.target_case_name = Application.settings.get_string ("target-case-combobox");
+        converter.source_case_name = Application.settings.get_string ("source-case-combobox");
         converter.result_case_name = Application.settings.get_string ("result-case-combobox");
 
         Application.settings.bind (
@@ -120,7 +120,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
             );
 
             if (Application.settings.get_string ("%s-text".printf (text_type.get_identifier ())) != "") {
-                converter.target_case_name = Application.settings.get_string ("target-case-combobox");
+                converter.source_case_name = Application.settings.get_string ("source-case-combobox");
                 converter.result_case_name = Application.settings.get_string ("result-case-combobox");
                 convert_case ();
             }
@@ -138,7 +138,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
     private void convert_case () {
         Application.settings.set_string (
             "result-text",
-            converter.convert_case (Application.settings.get_string ("target-text"))
+            converter.convert_case (Application.settings.get_string ("source-text"))
         );
     }
 

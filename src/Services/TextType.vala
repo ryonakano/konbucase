@@ -16,12 +16,12 @@
 */
 
 public enum TextType {
-    TARGET,
+    SOURCE,
     RESULT;
 
     public string get_case_label () {
         switch (this) {
-            case TextType.TARGET:
+            case TextType.SOURCE:
                 return _("Convert from:");
             case TextType.RESULT:
                 return _("Convert to:");
@@ -32,8 +32,8 @@ public enum TextType {
 
     public string get_identifier () {
         switch (this) {
-            case TextType.TARGET:
-                return "target";
+            case TextType.SOURCE:
+                return "source";
             case TextType.RESULT:
                 return "result";
             default:

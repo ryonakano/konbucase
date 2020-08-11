@@ -31,7 +31,7 @@ public class MainWindow : Gtk.ApplicationWindow {
                                                     cssprovider,
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        var target_combo_entry = new Widgets.ComboEntry (TextType.TARGET);
+        var source_combo_entry = new Widgets.ComboEntry (TextType.SOURCE);
 
         var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL);
         separator.vexpand = true;
@@ -40,7 +40,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var grid = new Gtk.Grid ();
         grid.margin = 0;
-        grid.attach (target_combo_entry, 0, 0);
+        grid.attach (source_combo_entry, 0, 0);
         grid.attach (separator, 1, 0);
         grid.attach (result_combo_entry, 2, 0);
 
@@ -97,7 +97,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         });
 
         gtk_settings.notify["gtk-application-prefer-dark-theme"].connect (() => {
-            target_combo_entry.update_color_style (gtk_settings.gtk_application_prefer_dark_theme);
+            source_combo_entry.update_color_style (gtk_settings.gtk_application_prefer_dark_theme);
             result_combo_entry.update_color_style (gtk_settings.gtk_application_prefer_dark_theme);
         });
 
