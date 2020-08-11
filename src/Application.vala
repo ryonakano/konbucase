@@ -55,6 +55,16 @@ public class Application : Gtk.Application {
         }
 
         window.resize (window_width, window_height);
+
+        var quit_action = new GLib.SimpleAction ("quit", null);
+        add_action (quit_action);
+        set_accels_for_action ("app.quit", {"<Control>q"});
+        quit_action.activate.connect (() => {
+            if (window != null) {
+                window.destroy ();
+            }
+        });
+
         window.show_all ();
     }
 
