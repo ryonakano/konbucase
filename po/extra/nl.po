@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-09 02:53+0000\n"
+"PO-Revision-Date: 2020-08-21 19:39+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:7
+#: data/com.github.ryonakano.konbucase.desktop.in:3
+msgid "KonbuCase"
+msgstr "KonbuCase"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:8
+#: data/com.github.ryonakano.konbucase.desktop.in:5
+msgid "Convert case in your text"
+msgstr "Zet tekst met verschillende lettergroottes om naar normale tekst"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:10
+msgid "A small text tool app that allows you convert case in your text."
+msgstr "Zet tekst met verschillende lettergroottes om naar normale tekst."
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:13
+msgid "Features include:"
+msgstr "Mogelijkheden:"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:15
+msgid ""
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
+msgstr ""
+"Klik op 'Kopiëren naar klembord' om alle tekst te kopiëren zonder deze te "
+"kopiëren"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:16
+msgid ""
+"Convert your text between camelCase, PascalCase, snake_case, kebab-case, and "
+"space-separated"
+msgstr ""
+"Zet tekst met verschillende lettergroottes en opmaken om naar normale tekst, "
+"evenals spatiegescheiden tekst"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:59
+msgid "Save changes in the app state on time"
+msgstr "Sla aanpassingen op bepaalde tijden op"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:60
+msgid "Side-by-side view"
+msgstr "Zij-aan-zijweergave"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
+msgid "Improve the app icon (big thanks to @Fatih20)"
+msgstr "Pictogram verbeterd (veel dank aan @Fatih20)"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:68
+msgid "Fix changing OS-wide dark style preference is not reflected"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:69
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:80
+msgid "Update translations"
+msgstr "Vertalingen bijgewerkt"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:76
+msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:77
+msgid "Respect an elementary OS-wide dark preference"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:78
+msgid "Add a description tooltip to each case"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:79
+msgid "Allow settin per-app dark style preference"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:87
+msgid "Add French translation (thanks to @NathanBnm)"
+msgstr "Franse vertaling (met dank aan Nathan Bonnemains)"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:88
+msgid "Add Italian translation (thanks to @mirkobrombin)"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:89
+msgid "Add Japanese translation"
+msgstr "Japanse vertaling"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:90
+msgid "Update result texts when changing ComboBox selection"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:96
+msgid "Initial release"
+msgstr "Initiële uitgave"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:103
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/com.github.ryonakano.konbucase.desktop.in:4
+msgid "Case Converting App"
+msgstr "Lettergrootte-omzettoepassing"
+
+#: data/com.github.ryonakano.konbucase.desktop.in:8
+msgid "com.github.ryonakano.konbucase"
+msgstr "com.github.ryonakano.konbucase"
+
+#: data/com.github.ryonakano.konbucase.desktop.in:11
+msgid "Text;"
+msgstr "Tekst;Grootte;Letter;"
