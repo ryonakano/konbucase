@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-09 02:53+0000\n"
+"POT-Creation-Date: 2020-08-28 05:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,14 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: src/Services/TextType.vala:25
-msgid "Convert from:"
-msgstr ""
-
-#: src/Services/TextType.vala:27
-msgid "Convert to:"
-msgstr ""
 
 #: src/Widgets/ComboEntry.vala:48
 msgid "Space separated"
@@ -72,4 +64,12 @@ msgstr ""
 
 #: src/MainWindow.vala:83
 msgid "KonbuCase"
+msgstr ""
+
+#: src/TextType.vala:25
+msgid "Convert from:"
+msgstr ""
+
+#: src/TextType.vala:27
+msgid "Convert to:"
 msgstr ""

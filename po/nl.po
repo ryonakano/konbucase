@@ -7,24 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-09 02:53+0000\n"
+"POT-Creation-Date: 2020-08-28 05:32+0000\n"
 "PO-Revision-Date: 2020-08-21 19:34+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.1\n"
-"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: nl\n"
-
-#: src/Services/TextType.vala:25
-msgid "Convert from:"
-msgstr "Omzetten van:"
-
-#: src/Services/TextType.vala:27
-msgid "Convert to:"
-msgstr "Omzetten naar:"
 
 #: src/Widgets/ComboEntry.vala:48
 msgid "Space separated"
@@ -74,3 +66,11 @@ msgstr "Voorkeuren"
 #: src/MainWindow.vala:83
 msgid "KonbuCase"
 msgstr "KonbuCase"
+
+#: src/TextType.vala:25
+msgid "Convert from:"
+msgstr "Omzetten van:"
+
+#: src/TextType.vala:27
+msgid "Convert to:"
+msgstr "Omzetten naar:"
