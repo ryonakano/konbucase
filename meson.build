@@ -29,10 +29,10 @@ chcase_deps = chcase_subproject.get_variable('libchcase')
 executable(
     meson.project_name(),
     asresources,
-    'src/Services/TextType.vala',
     'src/Widgets/ComboEntry.vala',
     'src/Application.vala',
     'src/MainWindow.vala',
+    'src/TextType.vala',
     dependencies: [
         dependency('granite', version: '>=5.4.0'),
         dependency('gdk-3.0'),
