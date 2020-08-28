@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-28 05:32+0000\n"
+"POT-Creation-Date: 2020-08-28 06:34+0000\n"
 "PO-Revision-Date: 2020-08-27 14:05+0100\n"
 "Last-Translator: André Barata <andretiagob@protonmail.com>\n"
 "Language-Team: none\n"
@@ -55,68 +55,94 @@ msgstr ""
 "separar-por-espaço"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:59
+msgid "Separate the core part as an independent library"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:60
+msgid "Rename all occurrence of \"target\" to \"source\""
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
+msgid "Fix changing result case sometimes doesn't take effect"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:62
+msgid "Quit the app with Ctrl+Q"
+msgstr ""
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:63
+#, fuzzy
+msgid "Add Dutch translation (thanks to @Vistaus)"
+msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:64
+#, fuzzy
+msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
+msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:71
 msgid "Save changes in the app state on time"
 msgstr "Gravar alterações do estado da aplicação na hora"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:60
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:72
 msgid "Side-by-side view"
 msgstr "Vista de Lado-a-lado"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:73
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr "Ícone da aplicação melhorado (muito obrigado a @Fatih20)"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:68
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:80
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
 "Corrigida a alteração da preferência para o tema escuro que não era "
 "refletida pelo sistema operativo"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:69
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:80
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:81
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:92
 msgid "Update translations"
 msgstr "Atualizações de traduções"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:76
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:88
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 "Correção de uma falha da aplicação ao tentar inserir entradas de texto em "
 "result_combo_entry"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:77
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:89
 msgid "Respect an elementary OS-wide dark preference"
 msgstr "Respeitar a preferência do tema escuro no elementary OS"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:78
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:90
 msgid "Add a description tooltip to each case"
 msgstr ""
 "Adicionada uma dica de descrição para cada tipo de maiúsculas e minúsculas"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:79
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:91
 msgid "Allow settin per-app dark style preference"
 msgstr "Permite definir a preferência do estilo escuro por cada aplicação"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:87
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:99
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:88
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:100
 msgid "Add Italian translation (thanks to @mirkobrombin)"
 msgstr "Tradução Italiana adicionada (obrigado a @mirkobrombin)"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:89
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:101
 msgid "Add Japanese translation"
 msgstr "Tradução Japonesa adicionada"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:90
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:102
 msgid "Update result texts when changing ComboBox selection"
 msgstr "Atualizar o resultado de textos ao alterar a seleção da CaixaCombo"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:96
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:108
 msgid "Initial release"
 msgstr "Lançamento inicial"
 
-#: data/com.github.ryonakano.konbucase.appdata.xml.in:103
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:115
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
