@@ -53,6 +53,18 @@
   </content_rating>
 
   <releases>
+    <release version="3.0.0" date="2020-08-28" urgency="medium">
+      <description>
+        <ul>
+          <li>Separate the core part as an independent library</li>
+          <li>Rename all occurrence of "target" to "source"</li>
+          <li>Fix changing result case sometimes doesn't take effect</li>
+          <li>Quit the app with Ctrl+Q</li>
+          <li>Add Dutch translation (by @Vistaus)</li>
+          <li>Add Portuguese-Portugal translation (by @rottenpants466)</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.0.0" date="2020-06-28" urgency="medium">
       <description>
         <ul>
