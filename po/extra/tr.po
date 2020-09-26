@@ -1,0 +1,156 @@
+# Turkish translations for extra package.
+# Copyright (C) 2020 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+#
+# Safak <bjksafak45@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-28 06:34+0000\n"
+"PO-Revision-Date: 2020-09-26 08:38+0300\n"
+"Last-Translator: Safak <bjksafak45@gmail.com>\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:7
+#: data/com.github.ryonakano.konbucase.desktop.in:3
+msgid "KonbuCase"
+msgstr "KonbuCase"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:8
+#: data/com.github.ryonakano.konbucase.desktop.in:5
+msgid "Convert case in your text"
+msgstr "Metinlerdeki büyük küçük harfleri düzenleyin"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:10
+msgid "A small text tool app that allows you convert case in your text."
+msgstr ""
+"Metninizdeki harfleri büyük küçük harf ve boşlukları düzenleyip"
+" dönüştürmenize "
+" izin veren küçük bir metin aracı uygulaması."
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:13
+msgid "Features include:"
+msgstr "Özellikler şunları içerir:"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:15
+msgid ""
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
+msgstr ""
+"Metinleri seçmeden tüm metinleri kopyalamak için "
+"\"Panoya Kopyala\" düğmesini tıklayın"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:16
+msgid ""
+"Convert your text between camelCase, PascalCase, snake_case, kebab-case, and "
+"space-separated"
+msgstr ""
+"Metninizi camelCase, PascalCase, snake_case, kebab-case ve space-separated"
+"dönüştürür ve düzenler"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:59
+msgid "Separate the core part as an independent library"
+msgstr "Çekirdek bölümü bağımsız bir kitaplık olarak ayırın"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:60
+msgid "Rename all occurrence of \"target\" to \"source\""
+msgstr "Tüm \"target\" oluşumunu \"source\" olarak yeniden adlandırın"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:61
+msgid "Fix changing result case sometimes doesn't take effect"
+msgstr "Değişen sonuç durumu bazen etkili olmaması düzeltidi"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:62
+msgid "Quit the app with Ctrl+Q"
+msgstr "Ctrl+Q ile uygulamadan çıkın"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:63
+msgid "Add Dutch translation (thanks to @Vistaus)"
+msgstr "Felemenkçe çeviri (@Vistaus'a teşekkürler)"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:64
+msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
+msgstr "Portekizce-Portekiz çevirisini (teşekkürler @ rottenpants466)"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:71
+msgid "Save changes in the app state on time"
+msgstr "Uygulama durumundaki değişiklikleri zamanında kaydedin"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:72
+msgid "Side-by-side view"
+msgstr "Yan yana görünüm"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:73
+msgid "Improve the app icon (big thanks to @Fatih20)"
+msgstr "Uygulama simgesini iyileştirildi (@ Fatih20'ye çok teşekkürler)"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:80
+msgid "Fix changing OS-wide dark style preference is not reflected"
+msgstr ""
+"İşletim sistemi genelinde değişen karanlık stil tercihinin yansıtılmaması"
+" düzeltildi"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:81
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:92
+msgid "Update translations"
+msgstr "Çeviriler güncellendi"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:88
+msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+msgstr ""
+"Result_combo_entry'de metin girmeye çalışırken uygulamanın donmasını düzetildi"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:89
+msgid "Respect an elementary OS-wide dark preference"
+msgstr "İşletim sistemi genelinde karanlık temaya uygunluk sağlandı"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:90
+msgid "Add a description tooltip to each case"
+msgstr "Her araça bir açıklama ipucu ekleyin"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:91
+msgid "Allow settin per-app dark style preference"
+msgstr "Uygulama başına koyu stil tercihini ayarlamaya izin verildi"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:99
+msgid "Add French translation (thanks to @NathanBnm)"
+msgstr "Fransızca çeviri (@NathanBnm sayesinde)"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:100
+msgid "Add Italian translation (thanks to @mirkobrombin)"
+msgstr "İtalyanca çeviri (teşekkürler @mirkobrombin)"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:101
+msgid "Add Japanese translation"
+msgstr "Japonca çeviri eklendi"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:102
+msgid "Update result texts when changing ComboBox selection"
+msgstr "ComboBox seçimini değiştirirken sonuç metinleri güncellendi"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:108
+msgid "Initial release"
+msgstr "İlk sürüm"
+
+#: data/com.github.ryonakano.konbucase.appdata.xml.in:115
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/com.github.ryonakano.konbucase.desktop.in:4
+msgid "Case Converting App"
+msgstr "Metin Dönüştürme Uygulaması"
+
+#: data/com.github.ryonakano.konbucase.desktop.in:8
+msgid "com.github.ryonakano.konbucase"
+msgstr "com.github.ryonakano.konbucase"
+
+#: data/com.github.ryonakano.konbucase.desktop.in:11
+msgid "Text;"
+msgstr "Metin;"
