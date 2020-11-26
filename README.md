@@ -14,6 +14,10 @@ On elementary OS? Click the button to get KonbuCase on AppCenter:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.konbucase)
 
+Community packages are available on the following distributions:
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/konbucase.svg)](https://repology.org/project/konbucase/versions)
+
 ### For Developers
 You'll need the following dependencies:
 
