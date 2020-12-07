@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-28 06:34+0000\n"
+"POT-Creation-Date: 2020-12-07 14:28+0000\n"
 "PO-Revision-Date: 2020-09-26 08:38+0300\n"
 "Last-Translator: Safak <bjksafak45@gmail.com>\n"
 "Language-Team: Turkish\n"
@@ -31,9 +31,8 @@ msgstr "Metinlerdeki büyük küçük harfleri düzenleyin"
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:10
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
-"Metninizdeki harfleri büyük küçük harf ve boşlukları düzenleyip"
-" dönüştürmenize "
-" izin veren küçük bir metin aracı uygulaması."
+"Metninizdeki harfleri büyük küçük harf ve boşlukları düzenleyip "
+"dönüştürmenize  izin veren küçük bir metin aracı uygulaması."
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:13
 msgid "Features include:"
@@ -44,16 +43,16 @@ msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
-"Metinleri seçmeden tüm metinleri kopyalamak için "
-"\"Panoya Kopyala\" düğmesini tıklayın"
+"Metinleri seçmeden tüm metinleri kopyalamak için \"Panoya Kopyala\" "
+"düğmesini tıklayın"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:16
 msgid ""
 "Convert your text between camelCase, PascalCase, snake_case, kebab-case, and "
 "space-separated"
 msgstr ""
-"Metninizi camelCase, PascalCase, snake_case, kebab-case ve space-separated"
-"dönüştürür ve düzenler"
+"Metninizi camelCase, PascalCase, snake_case, kebab-case ve space-"
+"separateddönüştürür ve düzenler"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:59
 msgid "Separate the core part as an independent library"
@@ -94,8 +93,8 @@ msgstr "Uygulama simgesini iyileştirildi (@ Fatih20'ye çok teşekkürler)"
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:80
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
-"İşletim sistemi genelinde değişen karanlık stil tercihinin yansıtılmaması"
-" düzeltildi"
+"İşletim sistemi genelinde değişen karanlık stil tercihinin yansıtılmaması "
+"düzeltildi"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:81
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:92
@@ -105,7 +104,8 @@ msgstr "Çeviriler güncellendi"
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:88
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
-"Result_combo_entry'de metin girmeye çalışırken uygulamanın donmasını düzetildi"
+"Result_combo_entry'de metin girmeye çalışırken uygulamanın donmasını "
+"düzetildi"
 
 #: data/com.github.ryonakano.konbucase.appdata.xml.in:89
 msgid "Respect an elementary OS-wide dark preference"

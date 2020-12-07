@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-28 06:34+0000\n"
+"POT-Creation-Date: 2020-12-07 14:28+0000\n"
 "PO-Revision-Date: 2020-04-24 15:22+0000\n"
 "Last-Translator: Mirko Brombin <send@mirko.pm>\n"
 "Language-Team: Italian\n"
@@ -22,28 +22,32 @@ msgstr ""
 msgid "Space separated"
 msgstr "Spazi separati"
 
-#: src/Widgets/ComboEntry.vala:73
+#: src/Widgets/ComboEntry.vala:74
 msgid "Copy to Clipboard"
 msgstr "Copia nella Clipboard"
 
-#: src/Widgets/ComboEntry.vala:158
+#: src/Widgets/ComboEntry.vala:159
 msgid "Each word is separated by a space"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:160
+#: src/Widgets/ComboEntry.vala:161
 msgid "The first character of compound words is in lowercase"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:162
+#: src/Widgets/ComboEntry.vala:163
 msgid "The first character of compound words is in uppercase"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:164
+#: src/Widgets/ComboEntry.vala:165
 msgid "Each word is separated by an underscore"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:166
+#: src/Widgets/ComboEntry.vala:167
 msgid "Each word is separated by a hyphen"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:169
+msgid "The first character of the first word in the sentence is in uppercase"
 msgstr ""
 
 #: src/MainWindow.vala:51
