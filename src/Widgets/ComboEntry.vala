@@ -50,6 +50,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         case_combobox.append ("pascal", "PascalCase");
         case_combobox.append ("snake", "snake_case");
         case_combobox.append ("kebab", "kebab-case");
+        case_combobox.append ("sentence", "Sentence case");
         case_combobox.active_id = Application.settings.get_string (
             "%s-case-combobox".printf (text_type.get_identifier ())
         );
@@ -164,6 +165,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
                 return _("Each word is separated by an underscore");
             case "kebab":
                 return _("Each word is separated by a hyphen");
+            case "sentence":
+                return _("The first character of the first word in the sentence is in uppercase");
             default:
                 warning ("Unexpected case, no tooltip is shown.");
                 return "";

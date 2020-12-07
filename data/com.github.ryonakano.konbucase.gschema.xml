@@ -6,6 +6,7 @@
       <value value="2" nick="pascal"/>
       <value value="3" nick="snake"/>
       <value value="4" nick="kebab"/>
+      <value value="5" nick="sentence"/>
     </enum>
     <enum id="result-case-list">
       <value value="0" nick="space_separated"/>
@@ -13,6 +14,7 @@
       <value value="2" nick="pascal"/>
       <value value="3" nick="snake"/>
       <value value="4" nick="kebab"/>
+      <value value="5" nick="sentence"/>
     </enum>
 
     <schema path="/com/github/ryonakano/konbucase/" id="com.github.ryonakano.konbucase">
