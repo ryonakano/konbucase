@@ -1,5 +1,5 @@
 /*
-* Copyright 2020 Ryo Nakano
+* Copyright 2020-2021 Ryo Nakano
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -33,13 +33,15 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var source_combo_entry = new Widgets.ComboEntry (TextType.SOURCE);
 
-        var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL);
-        separator.vexpand = true;
+        var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL) {
+            vexpand = true
+        };
 
         var result_combo_entry = new Widgets.ComboEntry (TextType.RESULT);
 
-        var grid = new Gtk.Grid ();
-        grid.margin = 0;
+        var grid = new Gtk.Grid () {
+            margin = 0
+        };
         grid.attach (source_combo_entry, 0, 0);
         grid.attach (separator, 1, 0);
         grid.attach (result_combo_entry, 2, 0);
@@ -47,28 +49,33 @@ public class MainWindow : Gtk.ApplicationWindow {
         var mode_switch = new Granite.ModeSwitch.from_icon_name (
             "display-brightness-symbolic",
             "weather-clear-night-symbolic"
-        );
-        mode_switch.primary_icon_tooltip_text = _("Light background");
-        mode_switch.secondary_icon_tooltip_text = _("Dark background");
-        mode_switch.valign = Gtk.Align.CENTER;
+        ) {
+            primary_icon_tooltip_text = _("Light background"),
+            secondary_icon_tooltip_text = _("Dark background"),
+            valign = Gtk.Align.CENTER
+        };
 
         //TRANSLATORS: Whether to follow system's dark style settings
-        var follow_system_label = new Gtk.Label (_("Follow system style:"));
-        follow_system_label.halign = Gtk.Align.END;
+        var follow_system_label = new Gtk.Label (_("Follow system style:")) {
+            halign = Gtk.Align.END
+        };
 
-        var follow_system_switch = new Gtk.Switch ();
-        follow_system_switch.halign = Gtk.Align.START;
+        var follow_system_switch = new Gtk.Switch () {
+            halign = Gtk.Align.START
+        };
 
-        var preferences_grid = new Gtk.Grid ();
-        preferences_grid.margin = 12;
-        preferences_grid.column_spacing = 6;
-        preferences_grid.row_spacing = 6;
+        var preferences_grid = new Gtk.Grid () {
+            margin = 12,
+            column_spacing = 6,
+            row_spacing = 6
+        };
         preferences_grid.attach (follow_system_label, 0, 0);
         preferences_grid.attach (follow_system_switch, 1, 0);
 
         var preferences_button_icon = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR);
-        var preferences_button = new Gtk.ToolButton (preferences_button_icon, null);
-        preferences_button.tooltip_text = _("Preferences");
+        var preferences_button = new Gtk.ToolButton (preferences_button_icon, null) {
+            tooltip_text = _("Preferences")
+        };
 
         var preferences_popover = new Gtk.Popover (preferences_button);
         preferences_popover.add (preferences_grid);
@@ -77,10 +84,11 @@ public class MainWindow : Gtk.ApplicationWindow {
             preferences_popover.show_all ();
         });
 
-        var header = new Gtk.HeaderBar ();
-        header.show_close_button = true;
-        header.has_subtitle = false;
-        header.title = _("KonbuCase");
+        var header = new Gtk.HeaderBar () {
+            has_subtitle = false,
+            show_close_button = true,
+            title = _("KonbuCase")
+        };
         header.pack_end (preferences_button);
         header.pack_end (mode_switch);
 

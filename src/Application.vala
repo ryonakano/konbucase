@@ -1,5 +1,5 @@
 /*
-* Copyright 2020 Ryo Nakano
+* Copyright 2020-2021 Ryo Nakano
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -69,7 +69,6 @@ public class Application : Gtk.Application {
     }
 
     public static int main (string[] args) {
-        var app = new Application ();
-        return app.run ();
+        return new Application ().run ();
     }
 }
