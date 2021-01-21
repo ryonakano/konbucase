@@ -3,6 +3,8 @@ project('com.github.ryonakano.konbucase',
     version: '3.0.0'
 )
 
+app_nickname = 'konbucase'
+
 i18n = import('i18n')
 gnome = import('gnome')
 
@@ -13,7 +15,7 @@ add_project_arguments(
 
 asresources = gnome.compile_resources(
     'as-resources',
-    join_paths('data', meson.project_name() + '.gresource.xml'),
+    join_paths('data', app_nickname + '.gresource.xml'),
     source_dir: 'data',
     c_name: 'as'
 )
