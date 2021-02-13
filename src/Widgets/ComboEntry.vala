@@ -34,8 +34,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
     public ComboEntry (TextType text_type) {
         Object (
-            text_type: text_type,
-            margin: 0
+            text_type: text_type
         );
     }
 
@@ -77,9 +76,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
             tooltip_text = _("Copy to Clipboard")
         };
 
-        var case_combobox_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
-            margin = 0
-        };
+        var case_combobox_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
         case_combobox_box.get_style_context ().add_class ("toolbar");
         case_combobox_box.pack_start (case_grid);
         case_combobox_box.pack_end (copy_clipboard_button);
