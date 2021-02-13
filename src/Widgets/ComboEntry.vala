@@ -22,7 +22,10 @@ public class Widgets.ComboEntry : Gtk.Grid {
     public static ChCase.Converter converter {
         get {
             if (_converter == null) {
-                _converter = new ChCase.Converter ();
+                _converter = new ChCase.Converter.with_case_from_string (
+                    Application.settings.get_string ("source-case-combobox"),
+                    Application.settings.get_string ("result-case-combobox")
+                );
             }
 
             return _converter;
@@ -101,9 +104,6 @@ public class Widgets.ComboEntry : Gtk.Grid {
         attach (scrolled, 0, 1);
 
         update_buttons ();
-
-        converter.source_case_name = Application.settings.get_string ("source-case-combobox");
-        converter.result_case_name = Application.settings.get_string ("result-case-combobox");
 
         Application.settings.bind (
             "%s-text".printf (text_type.get_identifier ()),
