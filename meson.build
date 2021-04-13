@@ -1,6 +1,6 @@
 project('com.github.ryonakano.konbucase',
     'vala', 'c',
-    version: '3.0.0'
+    version: '3.1.0'
 )
 
 app_nickname = 'konbucase'
