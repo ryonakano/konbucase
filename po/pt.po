@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-07 14:28+0000\n"
+"POT-Creation-Date: 2021-04-13 04:37+0000\n"
 "PO-Revision-Date: 2020-08-27 13:07+0100\n"
 "Last-Translator: André Barata <andretiagob@protonmail.com>\n"
 "Language-Team: none\n"
@@ -18,57 +18,57 @@ msgstr ""
 "X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/Widgets/ComboEntry.vala:48
+#: src/Widgets/ComboEntry.vala:51
 msgid "Space separated"
 msgstr "Espaço separado"
 
-#: src/Widgets/ComboEntry.vala:74
+#: src/Widgets/ComboEntry.vala:79
 msgid "Copy to Clipboard"
 msgstr "Copiar para a Área de Transferência"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:162
 msgid "Each word is separated by a space"
 msgstr "Cada palavra está separada por um espaço"
 
-#: src/Widgets/ComboEntry.vala:161
+#: src/Widgets/ComboEntry.vala:164
 msgid "The first character of compound words is in lowercase"
 msgstr "O primeiro caractere de palavras compostas está em minúsculas"
 
-#: src/Widgets/ComboEntry.vala:163
+#: src/Widgets/ComboEntry.vala:166
 msgid "The first character of compound words is in uppercase"
 msgstr "O primeiro caractere de palavras compostas está em maiúsculas"
 
-#: src/Widgets/ComboEntry.vala:165
+#: src/Widgets/ComboEntry.vala:168
 msgid "Each word is separated by an underscore"
 msgstr "Cada palavra está separada por um sublinhado"
 
-#: src/Widgets/ComboEntry.vala:167
+#: src/Widgets/ComboEntry.vala:170
 msgid "Each word is separated by a hyphen"
 msgstr "Cada palavra está separada por um hífen"
 
-#: src/Widgets/ComboEntry.vala:169
+#: src/Widgets/ComboEntry.vala:172
 #, fuzzy
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "O primeiro caractere de palavras compostas está em maiúsculas"
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:53
 msgid "Light background"
 msgstr "Tema Claro"
 
-#: src/MainWindow.vala:52
+#: src/MainWindow.vala:54
 msgid "Dark background"
 msgstr "Tema Escuro"
 
 #. TRANSLATORS: Whether to follow system's dark style settings
-#: src/MainWindow.vala:56
+#: src/MainWindow.vala:59
 msgid "Follow system style:"
 msgstr "Seguir o estilo do sistema:"
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:77
 msgid "Preferences"
 msgstr "Preferências"
 
-#: src/MainWindow.vala:83
+#: src/MainWindow.vala:90
 msgid "KonbuCase"
 msgstr "KonbuCase"
 
