@@ -128,7 +128,7 @@ msgstr "Ondersteuning voor donker thema per toepassing"
 
 #: data/konbucase.appdata.xml.in:109
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Franse vertaling (met dank aan Nathan Bonnemains)"
+msgstr "Franse vertaling (met dank aan <a class=
 
 #: data/konbucase.appdata.xml.in:110
 msgid "Add Italian translation (thanks to @mirkobrombin)"
