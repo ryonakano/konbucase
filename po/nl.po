@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-13 04:37+0000\n"
-"PO-Revision-Date: 2020-08-21 19:34+0200\n"
+"PO-Revision-Date: 2021-04-13 13:08+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/Widgets/ComboEntry.vala:51
@@ -47,9 +47,8 @@ msgid "Each word is separated by a hyphen"
 msgstr "Elk woord wordt gescheiden door een streepje"
 
 #: src/Widgets/ComboEntry.vala:172
-#, fuzzy
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "De eerste letter van samengestelde woorden is een hoofdletter"
+msgstr "De eerste letter van het eerste woord in de zin is een hoofdletter"
 
 #: src/MainWindow.vala:53
 msgid "Light background"
