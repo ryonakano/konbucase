@@ -1,3 +1,12 @@
+com.github.ryonakano.konbucase (3.1.0) bionic; urgency=low
+
+  * Support Sentence case
+  * Add Turkish translation (thanks to @safak45x)
+  * Update Japanese translation
+  * Clean code
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Tue, 13 Apr 2021 13:36:01 +0900
+
 com.github.ryonakano.konbucase (3.0.0) bionic; urgency=medium
 
   * Separate the core part as an independent library
