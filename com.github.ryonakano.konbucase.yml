@@ -1,0 +1,19 @@
+app-id: com.github.ryonakano.konbucase
+runtime: io.elementary.Platform
+runtime-version: 'daily'
+sdk: io.elementary.Sdk
+command: com.github.ryonakano.konbucase
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+
+  # needed for perfers-color-scheme
+  - --system-talk-name=org.freedesktop.Accounts
+
+  - --metadata=X-DConf=migrate-path=/com/github/ryonakano/konbucase/
+modules:
+  - name: konbucase
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
