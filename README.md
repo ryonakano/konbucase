@@ -6,7 +6,7 @@ KonbuCase is a case converting app designed for elementary OS.
 Features include:
 
 * Click "Copy to Clipboard" button to copy the all texts in the text view without selecting them
-* Convert your text between camelCase, PascalCase, snake_case, kebab-case, and space-separated
+* Convert your text between camelCase, PascalCase, Sentence case, snake_case, kebab-case, and space-separated
 
 ## Installation
 ### For Users
