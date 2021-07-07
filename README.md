@@ -21,6 +21,7 @@ Community packages are available on the following distributions:
 ### For Developers
 You'll need the following dependencies:
 
+* [libchcase](https://github.com/ryonakano/chcase) (automatically downloaded on build)
 * libgranite-dev (>= 5.4.0)
 * libgtk-3.0-dev
 * libgtksourceview-4-dev (or libgtksourceview-3.0-dev)
