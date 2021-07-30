@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-30 13:01+0000\n"
+"POT-Creation-Date: 2021-07-30 23:09+0000\n"
 "PO-Revision-Date: 2020-04-24 15:22+0000\n"
 "Last-Translator: Mirko Brombin <send@mirko.pm>\n"
 "Language-Team: Italian\n"
@@ -54,116 +54,120 @@ msgstr ""
 "separati dallo spazio"
 
 #: data/konbucase.appdata.xml.in:60
+msgid "Fix building fails in Flatpak"
+msgstr ""
+
+#: data/konbucase.appdata.xml.in:67
 msgid ""
 "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
 "manifest"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:61
+#: data/konbucase.appdata.xml.in:68
 msgid "Update Dutch translation (thanks to @Vistaus)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:62
+#: data/konbucase.appdata.xml.in:69
 msgid "Update Italian translation (thanks to @Sav22999)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:63 data/konbucase.appdata.xml.in:72
+#: data/konbucase.appdata.xml.in:70 data/konbucase.appdata.xml.in:79
 msgid "Update Japanese translation"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:70
+#: data/konbucase.appdata.xml.in:77
 msgid "Support Sentence case"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:71
+#: data/konbucase.appdata.xml.in:78
 msgid "Add Turkish translation (thanks to @safak45x)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:73
+#: data/konbucase.appdata.xml.in:80
 msgid "Clean code"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:80
+#: data/konbucase.appdata.xml.in:87
 msgid "Separate the core part as an independent library"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:81
+#: data/konbucase.appdata.xml.in:88
 msgid "Rename all occurrence of \"target\" to \"source\""
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:82
+#: data/konbucase.appdata.xml.in:89
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:83
+#: data/konbucase.appdata.xml.in:90
 msgid "Quit the app with Ctrl+Q"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:84
+#: data/konbucase.appdata.xml.in:91
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:85
+#: data/konbucase.appdata.xml.in:92
 msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:92
+#: data/konbucase.appdata.xml.in:99
 msgid "Save changes in the app state on time"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:93
+#: data/konbucase.appdata.xml.in:100
 msgid "Side-by-side view"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:94
+#: data/konbucase.appdata.xml.in:101
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:101
+#: data/konbucase.appdata.xml.in:108
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:102 data/konbucase.appdata.xml.in:113
+#: data/konbucase.appdata.xml.in:109 data/konbucase.appdata.xml.in:120
 msgid "Update translations"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:109
+#: data/konbucase.appdata.xml.in:116
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:110
+#: data/konbucase.appdata.xml.in:117
 msgid "Respect an elementary OS-wide dark preference"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:111
+#: data/konbucase.appdata.xml.in:118
 msgid "Add a description tooltip to each case"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:112
+#: data/konbucase.appdata.xml.in:119
 msgid "Allow setting per-app dark style preference"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:120
+#: data/konbucase.appdata.xml.in:127
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:121
+#: data/konbucase.appdata.xml.in:128
 msgid "Add Italian translation (thanks to @mirkobrombin)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:122
+#: data/konbucase.appdata.xml.in:129
 msgid "Add Japanese translation"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:123
+#: data/konbucase.appdata.xml.in:130
 msgid "Update result texts when changing ComboBox selection"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:129
+#: data/konbucase.appdata.xml.in:136
 msgid "Initial release"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:136
+#: data/konbucase.appdata.xml.in:143
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
