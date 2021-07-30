@@ -54,6 +54,13 @@
   </content_rating>
 
   <releases>
+    <release version="3.2.1" date="2021-07-31" urgency="medium">
+      <description>
+        <ul>
+          <li>Fix building fails in Flatpak</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.2.0" date="2021-07-30" urgency="medium">
       <description>
         <ul>
