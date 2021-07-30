@@ -1,0 +1,1 @@
+option('is_native_build', type: 'boolean', value: 'true', description: 'Whether building natively or building into Flatpak')
