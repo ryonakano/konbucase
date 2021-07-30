@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-13 04:37+0000\n"
+"POT-Creation-Date: 2021-07-30 15:40+0900\n"
 "PO-Revision-Date: 2021-04-13 13:12+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
@@ -18,23 +18,23 @@ msgstr ""
 "X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/konbucase.appdata.xml.in:7 data/konbucase.desktop.in:3
+#: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
 msgstr "KonbuCase"
 
-#: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:5
+#: data/konbucase.appdata.xml.in:9 data/konbucase.desktop.in:5
 msgid "Convert case in your text"
 msgstr "Zet tekst met verschillende lettergroottes om naar normale tekst"
 
-#: data/konbucase.appdata.xml.in:10
+#: data/konbucase.appdata.xml.in:11
 msgid "A small text tool app that allows you convert case in your text."
 msgstr "Zet tekst met verschillende lettergroottes om naar normale tekst."
 
-#: data/konbucase.appdata.xml.in:13
+#: data/konbucase.appdata.xml.in:14
 msgid "Features include:"
 msgstr "Mogelijkheden:"
 
-#: data/konbucase.appdata.xml.in:15
+#: data/konbucase.appdata.xml.in:16
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
@@ -42,113 +42,115 @@ msgstr ""
 "Klik op 'Kopiëren naar klembord' om alle tekst te kopiëren zonder deze te "
 "kopiëren"
 
-#: data/konbucase.appdata.xml.in:16
+#: data/konbucase.appdata.xml.in:17
+#, fuzzy
 msgid ""
-"Convert your text between camelCase, PascalCase, snake_case, kebab-case, and "
-"space-separated"
+"Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case, and space-separated"
 msgstr ""
 "Zet tekst met verschillende lettergroottes en opmaken om naar normale tekst, "
 "evenals spatiegescheiden tekst"
 
-#: data/konbucase.appdata.xml.in:59
+#: data/konbucase.appdata.xml.in:60
 msgid "Support Sentence case"
 msgstr "Ondersteuning voor zinnen met hoofdletters"
 
-#: data/konbucase.appdata.xml.in:60
+#: data/konbucase.appdata.xml.in:61
 msgid "Add Turkish translation (thanks to @safak45x)"
 msgstr "Turkse vertaling (met dank aan @safak45x)"
 
-#: data/konbucase.appdata.xml.in:61
+#: data/konbucase.appdata.xml.in:62
 msgid "Update Japanese translation"
 msgstr "Japanse vertaling bijgewerkt"
 
-#: data/konbucase.appdata.xml.in:62
+#: data/konbucase.appdata.xml.in:63
 msgid "Clean code"
 msgstr "Code opgeruimd"
 
-#: data/konbucase.appdata.xml.in:69
+#: data/konbucase.appdata.xml.in:70
 msgid "Separate the core part as an independent library"
 msgstr "Kernonderdeel afgetakt naar onafhankelijke bibliotheek"
 
-#: data/konbucase.appdata.xml.in:70
+#: data/konbucase.appdata.xml.in:71
 msgid "Rename all occurrence of \"target\" to \"source\""
 msgstr "Alle vermeldingen van 'doel' hernoemd naar 'bron'"
 
-#: data/konbucase.appdata.xml.in:71
+#: data/konbucase.appdata.xml.in:72
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr "Opgelost: aanpassen van resultaat werkte soms niet"
 
-#: data/konbucase.appdata.xml.in:72
+#: data/konbucase.appdata.xml.in:73
 msgid "Quit the app with Ctrl+Q"
 msgstr "Sluit af met Ctrl + Q"
 
-#: data/konbucase.appdata.xml.in:73
+#: data/konbucase.appdata.xml.in:74
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "Nederlandse vertaling (met dank aan @Vistaus)"
 
-#: data/konbucase.appdata.xml.in:74
+#: data/konbucase.appdata.xml.in:75
 msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 msgstr "Portugese (Portugal) vertaling (met dank aan @rottenpants466)"
 
-#: data/konbucase.appdata.xml.in:81
+#: data/konbucase.appdata.xml.in:82
 msgid "Save changes in the app state on time"
 msgstr "Sla aanpassingen op bepaalde tijden op"
 
-#: data/konbucase.appdata.xml.in:82
+#: data/konbucase.appdata.xml.in:83
 msgid "Side-by-side view"
 msgstr "Zij-aan-zijweergave"
 
-#: data/konbucase.appdata.xml.in:83
+#: data/konbucase.appdata.xml.in:84
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr "Pictogram verbeterd (veel dank aan @Fatih20)"
 
-#: data/konbucase.appdata.xml.in:90
+#: data/konbucase.appdata.xml.in:91
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr "Opgelost: donker systeemthema werd niet overgenomen"
 
-#: data/konbucase.appdata.xml.in:91 data/konbucase.appdata.xml.in:102
+#: data/konbucase.appdata.xml.in:92 data/konbucase.appdata.xml.in:103
 msgid "Update translations"
 msgstr "Vertalingen bijgewerkt"
 
-#: data/konbucase.appdata.xml.in:98
+#: data/konbucase.appdata.xml.in:99
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr "Opgelost: vastlopen na tekstinvoer in result_combo_entry"
 
-#: data/konbucase.appdata.xml.in:99
+#: data/konbucase.appdata.xml.in:100
 msgid "Respect an elementary OS-wide dark preference"
 msgstr "Ondersteuning voor elementary OS' donkere thema"
 
-#: data/konbucase.appdata.xml.in:100
+#: data/konbucase.appdata.xml.in:101
 msgid "Add a description tooltip to each case"
 msgstr "Beschrijvingshulpballonnen toegevoegd"
 
-#: data/konbucase.appdata.xml.in:101
-msgid "Allow settin per-app dark style preference"
+#: data/konbucase.appdata.xml.in:102
+#, fuzzy
+msgid "Allow setting per-app dark style preference"
 msgstr "Ondersteuning voor donker thema per toepassing"
 
-#: data/konbucase.appdata.xml.in:109
+#: data/konbucase.appdata.xml.in:110
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Franse vertaling (met dank aan @NathanBnm)"
 
-#: data/konbucase.appdata.xml.in:110
+#: data/konbucase.appdata.xml.in:111
 msgid "Add Italian translation (thanks to @mirkobrombin)"
 msgstr "Italiaanse vertaling (met dank aan @mirkobrombin)"
 
-#: data/konbucase.appdata.xml.in:111
+#: data/konbucase.appdata.xml.in:112
 msgid "Add Japanese translation"
 msgstr "Japanse vertaling"
 
-#: data/konbucase.appdata.xml.in:112
+#: data/konbucase.appdata.xml.in:113
 msgid "Update result texts when changing ComboBox selection"
 msgstr ""
 "Resultaatteksten worden bijgewerkt na het aanpassen van selecties in het "
 "uitrolmenu"
 
-#: data/konbucase.appdata.xml.in:118
+#: data/konbucase.appdata.xml.in:119
 msgid "Initial release"
 msgstr "Initiële uitgave"
 
-#: data/konbucase.appdata.xml.in:125
+#: data/konbucase.appdata.xml.in:126
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 

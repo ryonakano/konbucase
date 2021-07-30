@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-13 04:37+0000\n"
+"POT-Creation-Date: 2021-07-30 15:40+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,131 +17,131 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/konbucase.appdata.xml.in:7 data/konbucase.desktop.in:3
+#: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:5
+#: data/konbucase.appdata.xml.in:9 data/konbucase.desktop.in:5
 msgid "Convert case in your text"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:10
+#: data/konbucase.appdata.xml.in:11
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:13
+#: data/konbucase.appdata.xml.in:14
 msgid "Features include:"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:15
+#: data/konbucase.appdata.xml.in:16
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:16
+#: data/konbucase.appdata.xml.in:17
 msgid ""
-"Convert your text between camelCase, PascalCase, snake_case, kebab-case, and "
-"space-separated"
-msgstr ""
-
-#: data/konbucase.appdata.xml.in:59
-msgid "Support Sentence case"
+"Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case, and space-separated"
 msgstr ""
 
 #: data/konbucase.appdata.xml.in:60
-msgid "Add Turkish translation (thanks to @safak45x)"
+msgid "Support Sentence case"
 msgstr ""
 
 #: data/konbucase.appdata.xml.in:61
-msgid "Update Japanese translation"
+msgid "Add Turkish translation (thanks to @safak45x)"
 msgstr ""
 
 #: data/konbucase.appdata.xml.in:62
+msgid "Update Japanese translation"
+msgstr ""
+
+#: data/konbucase.appdata.xml.in:63
 msgid "Clean code"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:69
+#: data/konbucase.appdata.xml.in:70
 msgid "Separate the core part as an independent library"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:70
+#: data/konbucase.appdata.xml.in:71
 msgid "Rename all occurrence of \"target\" to \"source\""
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:71
+#: data/konbucase.appdata.xml.in:72
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:72
+#: data/konbucase.appdata.xml.in:73
 msgid "Quit the app with Ctrl+Q"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:73
+#: data/konbucase.appdata.xml.in:74
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:74
+#: data/konbucase.appdata.xml.in:75
 msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:81
+#: data/konbucase.appdata.xml.in:82
 msgid "Save changes in the app state on time"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:82
+#: data/konbucase.appdata.xml.in:83
 msgid "Side-by-side view"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:83
+#: data/konbucase.appdata.xml.in:84
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:90
+#: data/konbucase.appdata.xml.in:91
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:91 data/konbucase.appdata.xml.in:102
+#: data/konbucase.appdata.xml.in:92 data/konbucase.appdata.xml.in:103
 msgid "Update translations"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:98
+#: data/konbucase.appdata.xml.in:99
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:99
+#: data/konbucase.appdata.xml.in:100
 msgid "Respect an elementary OS-wide dark preference"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:100
+#: data/konbucase.appdata.xml.in:101
 msgid "Add a description tooltip to each case"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:101
-msgid "Allow settin per-app dark style preference"
-msgstr ""
-
-#: data/konbucase.appdata.xml.in:109
-msgid "Add French translation (thanks to @NathanBnm)"
+#: data/konbucase.appdata.xml.in:102
+msgid "Allow setting per-app dark style preference"
 msgstr ""
 
 #: data/konbucase.appdata.xml.in:110
-msgid "Add Italian translation (thanks to @mirkobrombin)"
+msgid "Add French translation (thanks to @NathanBnm)"
 msgstr ""
 
 #: data/konbucase.appdata.xml.in:111
-msgid "Add Japanese translation"
+msgid "Add Italian translation (thanks to @mirkobrombin)"
 msgstr ""
 
 #: data/konbucase.appdata.xml.in:112
+msgid "Add Japanese translation"
+msgstr ""
+
+#: data/konbucase.appdata.xml.in:113
 msgid "Update result texts when changing ComboBox selection"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:118
+#: data/konbucase.appdata.xml.in:119
 msgid "Initial release"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:125
+#: data/konbucase.appdata.xml.in:126
 msgid "Ryo Nakano"
 msgstr ""
 
