@@ -54,6 +54,16 @@
   </content_rating>
 
   <releases>
+    <release version="3.2.0" date="2021-07-30" urgency="medium">
+      <description>
+        <ul>
+          <li>Publish the app to the new AppCenter on elementary OS 6 with the Flatpak manifest</li>
+          <li>Update Dutch translation (thanks to @Vistaus)</li>
+          <li>Update Italian translation (thanks to @Sav22999)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.1.0" date="2021-04-13" urgency="low">
       <description>
         <ul>
