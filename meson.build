@@ -1,7 +1,7 @@
 project('com.github.ryonakano.konbucase',
     'vala', 'c',
     version: '3.2.0',
-    meson_version: '>=0.49.0'
+    meson_version: '>=0.53.0'
 )
 
 app_nickname = 'konbucase'
@@ -35,8 +35,12 @@ if gtksourceview_dep.found() == false
     gtksourceview_dep = dependency('gtksourceview-3.0')
 endif
 
-chcase_subproject = subproject('chcase')
-chcase_deps = chcase_subproject.get_variable('libchcase')
+dependencies = [
+    dependency('granite', version: '>=5.4.0'),
+    dependency('gdk-3.0'),
+    dependency('gtk+-3.0'),
+    gtksourceview_dep
+]
 
 sources = files(
     'src' / 'Widgets' / 'ComboEntry.vala',
@@ -45,18 +49,20 @@ sources = files(
     'src' / 'TextType.vala'
 )
 
+if get_option('is_native_build')
+    chcase_subproject = subproject('chcase')
+    chcase_deps = chcase_subproject.get_variable('libchcase')
+    dependencies += chcase_deps
+else
+    dependencies += dependency('chcase')
+endif
+
 executable(
     meson.project_name(),
     asresources,
     config_file,
     sources,
-    dependencies: [
-        dependency('granite', version: '>=5.4.0'),
-        dependency('gdk-3.0'),
-        dependency('gtk+-3.0'),
-        chcase_deps,
-        gtksourceview_dep,
-    ],
+    dependencies: dependencies,
     install: true
 )
 

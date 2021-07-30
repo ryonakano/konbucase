@@ -13,8 +13,16 @@ finish-args:
 
   - '--metadata=X-DConf=migrate-path=/com/github/ryonakano/konbucase/'
 modules:
+  - name: chcase
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/ryonakano/chcase.git
+        tag: '2.1.0'
   - name: konbucase
     buildsystem: meson
+    config-opts:
+      - -Dis_native_build=false
     sources:
       - type: dir
         path: .
