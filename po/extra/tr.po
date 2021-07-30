@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-30 15:40+0900\n"
+"POT-Creation-Date: 2021-07-30 13:01+0000\n"
 "PO-Revision-Date: 2020-09-26 08:38+0300\n"
 "Last-Translator: Safak <bjksafak45@gmail.com>\n"
 "Language-Team: Turkish\n"
@@ -54,109 +54,125 @@ msgstr ""
 "separateddönüştürür ve düzenler"
 
 #: data/konbucase.appdata.xml.in:60
-msgid "Support Sentence case"
+msgid ""
+"Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
+"manifest"
 msgstr ""
 
 #: data/konbucase.appdata.xml.in:61
 #, fuzzy
-msgid "Add Turkish translation (thanks to @safak45x)"
+msgid "Update Dutch translation (thanks to @Vistaus)"
 msgstr "Felemenkçe çeviri (@Vistaus'a teşekkürler)"
 
 #: data/konbucase.appdata.xml.in:62
 #, fuzzy
+msgid "Update Italian translation (thanks to @Sav22999)"
+msgstr "İtalyanca çeviri (teşekkürler @mirkobrombin)"
+
+#: data/konbucase.appdata.xml.in:63 data/konbucase.appdata.xml.in:72
+#, fuzzy
 msgid "Update Japanese translation"
 msgstr "Japonca çeviri eklendi"
 
-#: data/konbucase.appdata.xml.in:63
+#: data/konbucase.appdata.xml.in:70
+msgid "Support Sentence case"
+msgstr ""
+
+#: data/konbucase.appdata.xml.in:71
+#, fuzzy
+msgid "Add Turkish translation (thanks to @safak45x)"
+msgstr "Felemenkçe çeviri (@Vistaus'a teşekkürler)"
+
+#: data/konbucase.appdata.xml.in:73
 msgid "Clean code"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:70
+#: data/konbucase.appdata.xml.in:80
 msgid "Separate the core part as an independent library"
 msgstr "Çekirdek bölümü bağımsız bir kitaplık olarak ayırın"
 
-#: data/konbucase.appdata.xml.in:71
+#: data/konbucase.appdata.xml.in:81
 msgid "Rename all occurrence of \"target\" to \"source\""
 msgstr "Tüm \"target\" oluşumunu \"source\" olarak yeniden adlandırın"
 
-#: data/konbucase.appdata.xml.in:72
+#: data/konbucase.appdata.xml.in:82
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr "Değişen sonuç durumu bazen etkili olmaması düzeltidi"
 
-#: data/konbucase.appdata.xml.in:73
+#: data/konbucase.appdata.xml.in:83
 msgid "Quit the app with Ctrl+Q"
 msgstr "Ctrl+Q ile uygulamadan çıkın"
 
-#: data/konbucase.appdata.xml.in:74
+#: data/konbucase.appdata.xml.in:84
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "Felemenkçe çeviri (@Vistaus'a teşekkürler)"
 
-#: data/konbucase.appdata.xml.in:75
+#: data/konbucase.appdata.xml.in:85
 msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 msgstr "Portekizce-Portekiz çevirisini (teşekkürler @ rottenpants466)"
 
-#: data/konbucase.appdata.xml.in:82
+#: data/konbucase.appdata.xml.in:92
 msgid "Save changes in the app state on time"
 msgstr "Uygulama durumundaki değişiklikleri zamanında kaydedin"
 
-#: data/konbucase.appdata.xml.in:83
+#: data/konbucase.appdata.xml.in:93
 msgid "Side-by-side view"
 msgstr "Yan yana görünüm"
 
-#: data/konbucase.appdata.xml.in:84
+#: data/konbucase.appdata.xml.in:94
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr "Uygulama simgesini iyileştirildi (@ Fatih20'ye çok teşekkürler)"
 
-#: data/konbucase.appdata.xml.in:91
+#: data/konbucase.appdata.xml.in:101
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
 "İşletim sistemi genelinde değişen karanlık stil tercihinin yansıtılmaması "
 "düzeltildi"
 
-#: data/konbucase.appdata.xml.in:92 data/konbucase.appdata.xml.in:103
+#: data/konbucase.appdata.xml.in:102 data/konbucase.appdata.xml.in:113
 msgid "Update translations"
 msgstr "Çeviriler güncellendi"
 
-#: data/konbucase.appdata.xml.in:99
+#: data/konbucase.appdata.xml.in:109
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 "Result_combo_entry'de metin girmeye çalışırken uygulamanın donmasını "
 "düzetildi"
 
-#: data/konbucase.appdata.xml.in:100
+#: data/konbucase.appdata.xml.in:110
 msgid "Respect an elementary OS-wide dark preference"
 msgstr "İşletim sistemi genelinde karanlık temaya uygunluk sağlandı"
 
-#: data/konbucase.appdata.xml.in:101
+#: data/konbucase.appdata.xml.in:111
 msgid "Add a description tooltip to each case"
 msgstr "Her araça bir açıklama ipucu ekleyin"
 
-#: data/konbucase.appdata.xml.in:102
+#: data/konbucase.appdata.xml.in:112
 #, fuzzy
 msgid "Allow setting per-app dark style preference"
 msgstr "Uygulama başına koyu stil tercihini ayarlamaya izin verildi"
 
-#: data/konbucase.appdata.xml.in:110
+#: data/konbucase.appdata.xml.in:120
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Fransızca çeviri (@NathanBnm sayesinde)"
 
-#: data/konbucase.appdata.xml.in:111
+#: data/konbucase.appdata.xml.in:121
 msgid "Add Italian translation (thanks to @mirkobrombin)"
 msgstr "İtalyanca çeviri (teşekkürler @mirkobrombin)"
 
-#: data/konbucase.appdata.xml.in:112
+#: data/konbucase.appdata.xml.in:122
 msgid "Add Japanese translation"
 msgstr "Japonca çeviri eklendi"
 
-#: data/konbucase.appdata.xml.in:113
+#: data/konbucase.appdata.xml.in:123
 msgid "Update result texts when changing ComboBox selection"
 msgstr "ComboBox seçimini değiştirirken sonuç metinleri güncellendi"
 
-#: data/konbucase.appdata.xml.in:119
+#: data/konbucase.appdata.xml.in:129
 msgid "Initial release"
 msgstr "İlk sürüm"
 
-#: data/konbucase.appdata.xml.in:126
+#: data/konbucase.appdata.xml.in:136
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
