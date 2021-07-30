@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-30 15:40+0900\n"
-"PO-Revision-Date: 2020-05-14 22:37+0900\n"
+"PO-Revision-Date: 2021-07-30 15:46+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -31,81 +31,79 @@ msgstr "テキストの記法を変換できる、小さなテキストツール
 
 #: data/konbucase.appdata.xml.in:14
 msgid "Features include:"
-msgstr "含まれる機能:"
+msgstr "アプリの機能:"
 
 #: data/konbucase.appdata.xml.in:16
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
-"\"クリップボードにコピー\" ボタンをクリックすると、テキストビューのテキストを"
-"選択せずにコピーできます"
+"\"クリップボードにコピー\" ボタンをクリックすると、テキストビューのテキスト"
+"を選択せずにコピーできます"
 
 #: data/konbucase.appdata.xml.in:17
-#, fuzzy
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
-"テキストをキャメルケース、パスカルケース、スネークケース、ケバブケース、空白"
-"区切りのいずれにも変換できます"
+"テキストをキャメルケース、パスカルケース、センテンスケース、スネークケース、"
+"ケバブケース、空白区切りのいずれにも変換できます"
 
 #: data/konbucase.appdata.xml.in:60
 msgid "Support Sentence case"
-msgstr ""
+msgstr "センテンスケースに対応"
 
 #: data/konbucase.appdata.xml.in:61
 msgid "Add Turkish translation (thanks to @safak45x)"
-msgstr ""
+msgstr "トルコ語翻訳を追加 (翻訳者: @safak45x)"
 
 #: data/konbucase.appdata.xml.in:62
-#, fuzzy
 msgid "Update Japanese translation"
-msgstr "翻訳を更新"
+msgstr "日本語翻訳を更新"
 
 #: data/konbucase.appdata.xml.in:63
 msgid "Clean code"
-msgstr ""
+msgstr "ソースコードの整理"
 
 #: data/konbucase.appdata.xml.in:70
 msgid "Separate the core part as an independent library"
-msgstr ""
+msgstr "アプリの中心部分を独立したライブラリとして分離"
 
 #: data/konbucase.appdata.xml.in:71
 msgid "Rename all occurrence of \"target\" to \"source\""
-msgstr ""
+msgstr "\"target\" という単語をすべて \"source\" に置き換え"
 
 #: data/konbucase.appdata.xml.in:72
 msgid "Fix changing result case sometimes doesn't take effect"
-msgstr ""
+msgstr "変換先のケースの種類を変更しても反映されない場合がある不具合を修正"
 
 #: data/konbucase.appdata.xml.in:73
 msgid "Quit the app with Ctrl+Q"
-msgstr ""
+msgstr "アプリを Ctrl+Q キーで終了できるように修正"
 
 #: data/konbucase.appdata.xml.in:74
 msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr ""
+msgstr "ドイツ語翻訳を追加 (翻訳者: @Vistaus)"
 
 #: data/konbucase.appdata.xml.in:75
 msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
-msgstr ""
+msgstr "ポルトガル語翻訳を追加 (翻訳者: @rottenpants466)"
 
 #: data/konbucase.appdata.xml.in:82
 msgid "Save changes in the app state on time"
-msgstr ""
+msgstr "アプリでの変更を即時に保存するように修正"
 
 #: data/konbucase.appdata.xml.in:83
 msgid "Side-by-side view"
-msgstr ""
+msgstr "サイドバイサイドビュー"
 
 #: data/konbucase.appdata.xml.in:84
 msgid "Improve the app icon (big thanks to @Fatih20)"
-msgstr ""
+msgstr "アプリのアイコンを改善 (@Fatih20 に大きな拍手を！)"
 
 #: data/konbucase.appdata.xml.in:91
 msgid "Fix changing OS-wide dark style preference is not reflected"
-msgstr ""
+msgstr "OS レベルのダークスタイルの設定が反映されない不具合を修正"
 
 #: data/konbucase.appdata.xml.in:92 data/konbucase.appdata.xml.in:103
 msgid "Update translations"
@@ -114,35 +112,38 @@ msgstr "翻訳を更新"
 #: data/konbucase.appdata.xml.in:99
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
+"result_combo_entry にテキストを入力しようとするとアプリがフリーズする不具合"
+"を修正"
 
 #: data/konbucase.appdata.xml.in:100
 msgid "Respect an elementary OS-wide dark preference"
-msgstr ""
+msgstr "elementary OS レベルでのダークスタイルの設定を反映"
 
 #: data/konbucase.appdata.xml.in:101
 msgid "Add a description tooltip to each case"
-msgstr ""
+msgstr "各ケースに説明のためのツールチップを追加"
 
 #: data/konbucase.appdata.xml.in:102
 msgid "Allow setting per-app dark style preference"
-msgstr ""
+msgstr "このアプリ内限定でダークスタイルを設定できる機能を追加"
 
 #: data/konbucase.appdata.xml.in:110
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "フランス語翻訳を追加 (翻訳者: @NathanBnm)"
 
 #: data/konbucase.appdata.xml.in:111
 msgid "Add Italian translation (thanks to @mirkobrombin)"
-msgstr ""
+msgstr "イタリア語翻訳を追加 (翻訳者: @mirkobrombin)"
 
 #: data/konbucase.appdata.xml.in:112
-#, fuzzy
 msgid "Add Japanese translation"
-msgstr "翻訳を更新"
+msgstr "日本語翻訳を追加"
 
 #: data/konbucase.appdata.xml.in:113
 msgid "Update result texts when changing ComboBox selection"
 msgstr ""
+"コンボボックスの選択項目を変更した場合、変換結果のテキストを更新するように修"
+"正"
 
 #: data/konbucase.appdata.xml.in:119
 msgid "Initial release"
