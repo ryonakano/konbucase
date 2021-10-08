@@ -26,6 +26,7 @@ public class MainWindow : Hdy.Window {
 
     construct {
         Hdy.init ();
+
         var cssprovider = new Gtk.CssProvider ();
         cssprovider.load_from_resource ("/com/github/ryonakano/konbucase/Application.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
