@@ -25,6 +25,7 @@ You'll need the following dependencies:
 * libgranite-dev (>= 5.4.0)
 * libgtk-3.0-dev
 * libgtksourceview-4-dev (or libgtksourceview-3.0-dev)
+* libhandy-1-dev
 * meson (>= 0.49.0)
 * valac
 
