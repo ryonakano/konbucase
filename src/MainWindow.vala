@@ -15,7 +15,7 @@
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-public class MainWindow : Gtk.ApplicationWindow {
+public class MainWindow : Hdy.Window {
     private uint configure_id;
 
     public MainWindow (Application app) {
@@ -25,6 +25,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
+        Hdy.init ();
         var cssprovider = new Gtk.CssProvider ();
         cssprovider.load_from_resource ("/com/github/ryonakano/konbucase/Application.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
@@ -84,7 +85,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             preferences_popover.show_all ();
         });
 
-        var header = new Gtk.HeaderBar () {
+        var header = new Hdy.HeaderBar () {
             has_subtitle = false,
             show_close_button = true,
             title = _("KonbuCase")
@@ -92,8 +93,11 @@ public class MainWindow : Gtk.ApplicationWindow {
         header.pack_end (preferences_button);
         header.pack_end (mode_switch);
 
-        set_titlebar (header);
-        add (grid);
+        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        main_box.add (header);
+        main_box.add (grid);
+
+        add (main_box);
 
         var granite_settings = Granite.Settings.get_default ();
         var gtk_settings = Gtk.Settings.get_default ();

@@ -39,6 +39,7 @@ dependencies = [
     dependency('granite', version: '>=5.4.0'),
     dependency('gdk-3.0'),
     dependency('gtk+-3.0'),
+    dependency('libhandy-1'),
     gtksourceview_dep
 ]
 
