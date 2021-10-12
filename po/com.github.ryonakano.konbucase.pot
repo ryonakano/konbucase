@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-30 23:09+0000\n"
+"POT-Creation-Date: 2021-10-12 05:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,63 +17,63 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Widgets/ComboEntry.vala:51
+#: src/Widgets/ComboEntry.vala:39
 msgid "Space separated"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:79
+#: src/Widgets/ComboEntry.vala:67
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:162
+#: src/Widgets/ComboEntry.vala:150
 msgid "Each word is separated by a space"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:164
+#: src/Widgets/ComboEntry.vala:152
 msgid "The first character of compound words is in lowercase"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:166
+#: src/Widgets/ComboEntry.vala:154
 msgid "The first character of compound words is in uppercase"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:168
+#: src/Widgets/ComboEntry.vala:156
 msgid "Each word is separated by an underscore"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:170
+#: src/Widgets/ComboEntry.vala:158
 msgid "Each word is separated by a hyphen"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:172
+#: src/Widgets/ComboEntry.vala:160
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr ""
 
-#: src/MainWindow.vala:53
+#: src/MainWindow.vala:42
+msgid "KonbuCase"
+msgstr ""
+
+#: src/MainWindow.vala:56
 msgid "Light background"
 msgstr ""
 
-#: src/MainWindow.vala:54
+#: src/MainWindow.vala:57
 msgid "Dark background"
 msgstr ""
 
 #. TRANSLATORS: Whether to follow system's dark style settings
-#: src/MainWindow.vala:59
+#: src/MainWindow.vala:62
 msgid "Follow system style:"
 msgstr ""
 
-#: src/MainWindow.vala:77
+#: src/MainWindow.vala:80
 msgid "Preferences"
 msgstr ""
 
-#: src/MainWindow.vala:90
-msgid "KonbuCase"
-msgstr ""
-
-#: src/TextType.vala:25
+#: src/TextType.vala:13
 msgid "Convert from:"
 msgstr ""
 
-#: src/TextType.vala:27
+#: src/TextType.vala:15
 msgid "Convert to:"
 msgstr ""
