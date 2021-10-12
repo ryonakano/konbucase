@@ -54,6 +54,19 @@
   </content_rating>
 
   <releases>
+    <release version="3.3.0" date="2021-10-12" urgency="medium">
+      <description>
+        <ul>
+          <li>Rounded window corners</li>
+          <li>Support building without Granite for other distributions</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Add Lithuanian translation (thanks to @PolPolyLingo)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.2.1" date="2021-07-31" urgency="medium">
       <description>
         <ul>
