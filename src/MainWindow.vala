@@ -36,6 +36,19 @@ public class MainWindow : Hdy.Window {
         grid.attach (separator, 1, 0);
         grid.attach (result_combo_entry, 2, 0);
 
+        var header = new Hdy.HeaderBar () {
+            has_subtitle = false,
+            show_close_button = true,
+            title = _("KonbuCase")
+        };
+
+        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        main_box.add (header);
+        main_box.add (grid);
+
+        add (main_box);
+
+#if FOR_PANTHEON
         var mode_switch = new Granite.ModeSwitch.from_icon_name (
             "display-brightness-symbolic",
             "weather-clear-night-symbolic"
@@ -74,19 +87,8 @@ public class MainWindow : Hdy.Window {
             preferences_popover.show_all ();
         });
 
-        var header = new Hdy.HeaderBar () {
-            has_subtitle = false,
-            show_close_button = true,
-            title = _("KonbuCase")
-        };
         header.pack_end (preferences_button);
         header.pack_end (mode_switch);
-
-        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        main_box.add (header);
-        main_box.add (grid);
-
-        add (main_box);
 
         var granite_settings = Granite.Settings.get_default ();
         var gtk_settings = Gtk.Settings.get_default ();
@@ -114,6 +116,10 @@ public class MainWindow : Hdy.Window {
         Application.settings.bind ("is-prefer-dark", gtk_settings, "gtk-application-prefer-dark-theme", GLib.SettingsBindFlags.DEFAULT);
         Application.settings.bind ("is-follow-system-style", follow_system_switch, "active", GLib.SettingsBindFlags.DEFAULT);
         Application.settings.bind ("is-follow-system-style", mode_switch, "sensitive", GLib.SettingsBindFlags.INVERT_BOOLEAN);
+#else
+        source_combo_entry.update_color_style (false);
+        result_combo_entry.update_color_style (false);
+#endif
     }
 
     protected override bool configure_event (Gdk.EventConfigure event) {
