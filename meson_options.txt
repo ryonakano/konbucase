@@ -1,1 +1,2 @@
 option('is_native_build', type: 'boolean', value: 'true', description: 'Whether building natively or building into Flatpak')
+option('for_pantheon', type: 'boolean', value: 'true', description: 'Whether building for Pantheon')
