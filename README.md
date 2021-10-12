@@ -1,9 +1,7 @@
 # KonbuCase
-KonbuCase is a case converting app designed for elementary OS.
-
 ![](data/Screenshot.png)
 
-Features include:
+KonbuCase is a simple case converting app. Features include:
 
 * Click "Copy to Clipboard" button to copy the all texts in the text view without selecting them
 * Convert your text between camelCase, PascalCase, Sentence case, snake_case, kebab-case, and space-separated
@@ -14,7 +12,11 @@ On elementary OS? Click the button to get KonbuCase on AppCenter:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.konbucase)
 
-Community packages are available on the following distributions:
+You can also download the app from Flathub, in case you're using another distribution. This version excludes dark style support that only works on Pantheon Desktop.
+
+[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/details/com.github.ryonakano.konbucase)
+
+Community packages maintained by volunteers are also available on some distributions:
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/konbucase.svg)](https://repology.org/project/konbucase/versions)
 
@@ -44,7 +46,7 @@ To install, use `ninja install`, then execute with `com.github.ryonakano.konbuca
 There are many ways you can contribute, even if you don't know how to code.
 
 ### Reporting Bugs or Suggesting Improvements
-Simply [create a new issue](https://github.com/ryonakano/konbucase/issues/new) describing your problem and how to reproduce or your suggestion. If you are not used to do, [this section](https://elementary.io/docs/code/reference#reporting-bugs) is for you.
+Simply [create a new issue](https://github.com/ryonakano/konbucase/issues/new) describing your problem and how to reproduce or your suggestion. If you are not used to do, [this section](https://docs.elementary.io/contributor-guide/feedback/reporting-issues) is for you.
 
 ### Writing Some Code
 We follow [the coding style of elementary OS](https://docs.elementary.io/develop/writing-apps/code-style) and [its Human Interface Guidelines](https://docs.elementary.io/hig/). Try to respect them.
@@ -55,4 +57,4 @@ I accept translations through Pull Requests. If you're not sure how to do, [the 
 ## The Story of the App Name
 ![](data/Konbu.png)
 
-I always feel the pronunciations "Konbu" and "Conv" (Convert) sound similar (you may not feel though…). This app is a case converter, so I named this app "KonbuCase".
+I always feel the pronunciations "Konbu" and "Conv" (Convert) sound similar (you may not feel though…). This app is a **case conv**erter, so I named this app "KonbuCase".
