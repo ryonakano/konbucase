@@ -120,6 +120,8 @@ public class MainWindow : Hdy.Window {
         source_combo_entry.update_color_style (false);
         result_combo_entry.update_color_style (false);
 #endif
+
+        source_combo_entry.source_view.grab_focus ();
     }
 
     protected override bool configure_event (Gdk.EventConfigure event) {

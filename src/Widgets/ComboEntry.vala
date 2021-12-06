@@ -20,8 +20,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
         }
     }
 
+    public Gtk.SourceView source_view { get; construct; }
     private Gtk.ToolButton copy_clipboard_button;
-    private Gtk.SourceView source_view;
 
     public ComboEntry (TextType text_type) {
         Object (
