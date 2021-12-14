@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-12 05:36+0000\n"
+"POT-Creation-Date: 2021-12-14 01:04+0000\n"
 "PO-Revision-Date: 2020-09-26 08:43+0300\n"
 "Last-Translator: Safak <bjksafak45@gmail.com>\n"
 "Language-Team: Turkish\n"
@@ -26,51 +26,66 @@ msgstr "Boşluk ayrıldı"
 msgid "Copy to Clipboard"
 msgstr "Panoya Kopyala"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/Widgets/ComboEntry.vala:155
 msgid "Each word is separated by a space"
 msgstr "Her kelime bir boşlukla ayrılmıştır"
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/Widgets/ComboEntry.vala:157
 msgid "The first character of compound words is in lowercase"
 msgstr "Birleşik kelimelerin ilk karakteri küçük harflidir"
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/Widgets/ComboEntry.vala:159
 msgid "The first character of compound words is in uppercase"
 msgstr "Birleşik kelimelerin ilk karakteri büyük harflidir"
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/Widgets/ComboEntry.vala:161
 msgid "Each word is separated by an underscore"
 msgstr "Her kelime bir alt çizgiyle ayrılır"
 
-#: src/Widgets/ComboEntry.vala:158
+#: src/Widgets/ComboEntry.vala:163
 msgid "Each word is separated by a hyphen"
 msgstr "Her kelime bir tire ile ayrılır"
 
-#: src/Widgets/ComboEntry.vala:160
+#: src/Widgets/ComboEntry.vala:165
 #, fuzzy
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Birleşik kelimelerin ilk karakteri büyük harflidir"
 
-#: src/MainWindow.vala:42
+#: src/MainWindow.vala:41
+msgid "Preferences"
+msgstr "Tercihler"
+
+#: src/MainWindow.vala:61
 msgid "KonbuCase"
 msgstr "KonbuCase"
 
-#: src/MainWindow.vala:56
-msgid "Light background"
-msgstr "Aydınlık arkaplan"
+#: src/StyleSwitcher.vala:27
+msgid "Style:"
+msgstr ""
 
-#: src/MainWindow.vala:57
-msgid "Dark background"
-msgstr "Koyu arkaplan"
+#: src/StyleSwitcher.vala:34
+msgid "Light"
+msgstr ""
 
-#. TRANSLATORS: Whether to follow system's dark style settings
-#: src/MainWindow.vala:62
-msgid "Follow system style:"
-msgstr "Sistem stilini:"
+#: src/StyleSwitcher.vala:37
+msgid "Light style"
+msgstr ""
 
-#: src/MainWindow.vala:80
-msgid "Preferences"
-msgstr "Tercihler"
+#: src/StyleSwitcher.vala:45
+msgid "Dark"
+msgstr ""
+
+#: src/StyleSwitcher.vala:48
+msgid "Dark style"
+msgstr ""
+
+#: src/StyleSwitcher.vala:61
+msgid "System"
+msgstr ""
+
+#: src/StyleSwitcher.vala:64
+msgid "Use the same style set in the system"
+msgstr ""
 
 #: src/TextType.vala:13
 msgid "Convert from:"
@@ -79,3 +94,12 @@ msgstr "Şuna dönüştür:"
 #: src/TextType.vala:15
 msgid "Convert to:"
 msgstr "Dönüştür:"
+
+#~ msgid "Light background"
+#~ msgstr "Aydınlık arkaplan"
+
+#~ msgid "Dark background"
+#~ msgstr "Koyu arkaplan"
+
+#~ msgid "Follow system style:"
+#~ msgstr "Sistem stilini:"
