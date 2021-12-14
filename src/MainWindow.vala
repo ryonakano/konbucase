@@ -8,7 +8,8 @@ public class MainWindow : Hdy.Window {
 
     public MainWindow (Application app) {
         Object (
-            application: app
+            application: app,
+            title: "KonbuCase"
         );
     }
 
@@ -58,7 +59,7 @@ public class MainWindow : Hdy.Window {
         var header = new Hdy.HeaderBar () {
             has_subtitle = false,
             show_close_button = true,
-            title = _("KonbuCase")
+            title = "KonbuCase"
         };
         header.pack_end (preferences_button);
 
