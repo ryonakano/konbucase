@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-14 01:04+0000\n"
+"POT-Creation-Date: 2021-12-14 01:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,12 +49,8 @@ msgstr ""
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr ""
 
-#: src/MainWindow.vala:41
+#: src/MainWindow.vala:42
 msgid "Preferences"
-msgstr ""
-
-#: src/MainWindow.vala:61
-msgid "KonbuCase"
 msgstr ""
 
 #: src/StyleSwitcher.vala:27

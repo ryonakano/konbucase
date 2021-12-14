@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-14 01:04+0000\n"
+"POT-Creation-Date: 2021-12-14 01:05+0000\n"
 "PO-Revision-Date: 2020-09-26 08:43+0300\n"
 "Last-Translator: Safak <bjksafak45@gmail.com>\n"
 "Language-Team: Turkish\n"
@@ -51,13 +51,9 @@ msgstr "Her kelime bir tire ile ayrılır"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Birleşik kelimelerin ilk karakteri büyük harflidir"
 
-#: src/MainWindow.vala:41
+#: src/MainWindow.vala:42
 msgid "Preferences"
 msgstr "Tercihler"
-
-#: src/MainWindow.vala:61
-msgid "KonbuCase"
-msgstr "KonbuCase"
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"
@@ -94,6 +90,9 @@ msgstr "Şuna dönüştür:"
 #: src/TextType.vala:15
 msgid "Convert to:"
 msgstr "Dönüştür:"
+
+#~ msgid "KonbuCase"
+#~ msgstr "KonbuCase"
 
 #~ msgid "Light background"
 #~ msgstr "Aydınlık arkaplan"

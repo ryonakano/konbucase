@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-14 01:04+0000\n"
+"POT-Creation-Date: 2021-12-14 01:05+0000\n"
 "PO-Revision-Date: 2021-04-13 13:08+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
@@ -50,13 +50,9 @@ msgstr "Elk woord wordt gescheiden door een streepje"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "De eerste letter van het eerste woord in de zin is een hoofdletter"
 
-#: src/MainWindow.vala:41
+#: src/MainWindow.vala:42
 msgid "Preferences"
 msgstr "Voorkeuren"
-
-#: src/MainWindow.vala:61
-msgid "KonbuCase"
-msgstr "KonbuCase"
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"
@@ -93,6 +89,9 @@ msgstr "Omzetten van:"
 #: src/TextType.vala:15
 msgid "Convert to:"
 msgstr "Omzetten naar:"
+
+#~ msgid "KonbuCase"
+#~ msgstr "KonbuCase"
 
 #~ msgid "Light background"
 #~ msgstr "Licht thema"

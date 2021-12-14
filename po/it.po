@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-14 01:04+0000\n"
+"POT-Creation-Date: 2021-12-14 01:05+0000\n"
 "PO-Revision-Date: 2021-07-07 14:22+0200\n"
 "Last-Translator: Saverio <saverio.morelli@outlook.it>\n"
 "Language-Team: Italian <saverio.morelli@outlook.it>\n"
@@ -51,13 +51,9 @@ msgstr "Ogni parola è separata da un hyphen (trattino alto)"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
 
-#: src/MainWindow.vala:41
+#: src/MainWindow.vala:42
 msgid "Preferences"
 msgstr "Impostazioni"
-
-#: src/MainWindow.vala:61
-msgid "KonbuCase"
-msgstr "KonbuCase"
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"
@@ -94,6 +90,9 @@ msgstr "Converti da:"
 #: src/TextType.vala:15
 msgid "Convert to:"
 msgstr "Converti in:"
+
+#~ msgid "KonbuCase"
+#~ msgstr "KonbuCase"
 
 #~ msgid "Light background"
 #~ msgstr "Sfondo chiaro"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-14 01:04+0000\n"
+"POT-Creation-Date: 2021-12-14 01:05+0000\n"
 "PO-Revision-Date: 2021-09-18 19:30+0300\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
@@ -51,13 +51,9 @@ msgstr "Kiekvienas žodis atskiriamas brūkšneliu"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Sakinyje pirmojo žodžio pirmasis rašmuo yra iš didžiosios raidės"
 
-#: src/MainWindow.vala:41
+#: src/MainWindow.vala:42
 msgid "Preferences"
 msgstr "Nustatymai"
-
-#: src/MainWindow.vala:61
-msgid "KonbuCase"
-msgstr "KonveCase"
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"
@@ -94,6 +90,9 @@ msgstr "Keisti iš:"
 #: src/TextType.vala:15
 msgid "Convert to:"
 msgstr "Keisti į:"
+
+#~ msgid "KonbuCase"
+#~ msgstr "KonveCase"
 
 #~ msgid "Light background"
 #~ msgstr "Šviesus fonas"
