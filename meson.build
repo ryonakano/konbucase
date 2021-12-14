@@ -51,6 +51,7 @@ sources = files(
     'src' / 'Widgets' / 'ComboEntry.vala',
     'src' / 'Application.vala',
     'src' / 'MainWindow.vala',
+    'src' / 'StyleSwitcher.vala',
     'src' / 'TextType.vala'
 )
 

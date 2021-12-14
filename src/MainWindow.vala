@@ -36,35 +36,9 @@ public class MainWindow : Hdy.Window {
         grid.attach (separator, 1, 0);
         grid.attach (result_combo_entry, 2, 0);
 
-        var header = new Hdy.HeaderBar () {
-            has_subtitle = false,
-            show_close_button = true,
-            title = _("KonbuCase")
-        };
-
-        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        main_box.add (header);
-        main_box.add (grid);
-
-        add (main_box);
-
-#if FOR_PANTHEON
-        var mode_switch = new Granite.ModeSwitch.from_icon_name (
-            "display-brightness-symbolic",
-            "weather-clear-night-symbolic"
-        ) {
-            primary_icon_tooltip_text = _("Light background"),
-            secondary_icon_tooltip_text = _("Dark background"),
-            valign = Gtk.Align.CENTER
-        };
-
-        //TRANSLATORS: Whether to follow system's dark style settings
-        var follow_system_label = new Gtk.Label (_("Follow system style:")) {
-            halign = Gtk.Align.END
-        };
-
-        var follow_system_switch = new Gtk.Switch () {
-            halign = Gtk.Align.START
+        var preferences_button_icon = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR);
+        var preferences_button = new Gtk.ToolButton (preferences_button_icon, null) {
+            tooltip_text = _("Preferences")
         };
 
         var preferences_grid = new Gtk.Grid () {
@@ -72,13 +46,7 @@ public class MainWindow : Hdy.Window {
             column_spacing = 6,
             row_spacing = 6
         };
-        preferences_grid.attach (follow_system_label, 0, 0);
-        preferences_grid.attach (follow_system_switch, 1, 0);
-
-        var preferences_button_icon = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR);
-        var preferences_button = new Gtk.ToolButton (preferences_button_icon, null) {
-            tooltip_text = _("Preferences")
-        };
+        preferences_grid.attach (new StyleSwitcher (), 0, 0, 1, 1);
 
         var preferences_popover = new Gtk.Popover (preferences_button);
         preferences_popover.add (preferences_grid);
@@ -87,39 +55,18 @@ public class MainWindow : Hdy.Window {
             preferences_popover.show_all ();
         });
 
+        var header = new Hdy.HeaderBar () {
+            has_subtitle = false,
+            show_close_button = true,
+            title = _("KonbuCase")
+        };
         header.pack_end (preferences_button);
-        header.pack_end (mode_switch);
 
-        var granite_settings = Granite.Settings.get_default ();
-        var gtk_settings = Gtk.Settings.get_default ();
+        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        main_box.add (header);
+        main_box.add (grid);
 
-        granite_settings.notify["prefers-color-scheme"].connect (() => {
-            if (Application.settings.get_boolean ("is-follow-system-style")) {
-                gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
-            }
-        });
-
-        gtk_settings.notify["gtk-application-prefer-dark-theme"].connect (() => {
-            source_combo_entry.update_color_style (gtk_settings.gtk_application_prefer_dark_theme);
-            result_combo_entry.update_color_style (gtk_settings.gtk_application_prefer_dark_theme);
-        });
-
-        follow_system_switch.notify["active"].connect (() => {
-            if (follow_system_switch.active) {
-                gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
-            } else {
-                gtk_settings.gtk_application_prefer_dark_theme = Application.settings.get_boolean ("is-prefer-dark");
-            }
-        });
-
-        Application.settings.bind ("is-prefer-dark", mode_switch, "active", GLib.SettingsBindFlags.DEFAULT);
-        Application.settings.bind ("is-prefer-dark", gtk_settings, "gtk-application-prefer-dark-theme", GLib.SettingsBindFlags.DEFAULT);
-        Application.settings.bind ("is-follow-system-style", follow_system_switch, "active", GLib.SettingsBindFlags.DEFAULT);
-        Application.settings.bind ("is-follow-system-style", mode_switch, "sensitive", GLib.SettingsBindFlags.INVERT_BOOLEAN);
-#else
-        source_combo_entry.update_color_style (false);
-        result_combo_entry.update_color_style (false);
-#endif
+        add (main_box);
 
         source_combo_entry.source_view.grab_focus ();
     }

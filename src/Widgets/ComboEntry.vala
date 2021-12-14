@@ -121,6 +121,11 @@ public class Widgets.ComboEntry : Gtk.Grid {
         copy_clipboard_button.clicked.connect (() => {
             Gtk.Clipboard.get_default (Gdk.Display.get_default ()).set_text (source_buffer.text, -1);
         });
+
+        var gtk_settings = Gtk.Settings.get_default ();
+        gtk_settings.notify["gtk-application-prefer-dark-theme"].connect (() => {
+            update_color_style (gtk_settings.gtk_application_prefer_dark_theme);
+        });
     }
 
     private void update_buttons () {
