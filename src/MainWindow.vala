@@ -37,20 +37,19 @@ public class MainWindow : Hdy.Window {
         grid.attach (separator, 1, 0);
         grid.attach (result_combo_entry, 2, 0);
 
-        var preferences_button_icon = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR);
-        var preferences_button = new Gtk.ToolButton (preferences_button_icon, null) {
+        var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
+            margin = 12
+        };
+        preferences_box.add (new StyleSwitcher ());
+
+        var preferences_button = new Gtk.ToolButton (
+            new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR), null
+        ) {
             tooltip_text = _("Preferences")
         };
 
-        var preferences_grid = new Gtk.Grid () {
-            margin = 12,
-            column_spacing = 6,
-            row_spacing = 6
-        };
-        preferences_grid.attach (new StyleSwitcher (), 0, 0, 1, 1);
-
         var preferences_popover = new Gtk.Popover (preferences_button);
-        preferences_popover.add (preferences_grid);
+        preferences_popover.add (preferences_box);
 
         preferences_button.clicked.connect (() => {
             preferences_popover.show_all ();

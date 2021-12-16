@@ -37,6 +37,7 @@ endif
 
 dependencies = [
     dependency('gdk-3.0'),
+    dependency('granite', version: '>=5.4.0'),
     dependency('gtk+-3.0'),
     dependency('libhandy-1'),
     gtksourceview_dep
@@ -44,7 +45,6 @@ dependencies = [
 
 if get_option('for_pantheon')
     add_project_arguments('--define=FOR_PANTHEON', language: 'vala')
-    dependencies += dependency('granite', version: '>=5.4.0')
 endif
 
 sources = files(
