@@ -10,8 +10,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-16 05:44+0000\n"
 "PO-Revision-Date: 2021-07-07 14:22+0200\n"
-"Last-Translator: Saverio <saverio.morelli@outlook.it>\n"
-"Language-Team: Italian <saverio.morelli@outlook.it>\n"
+"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian <albano_battistella@hotmail.com>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,31 +57,31 @@ msgstr "Impostazioni"
 
 #: src/StyleSwitcher.vala:25
 msgid "Style:"
-msgstr ""
+msgstr "Stile:"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light style"
-msgstr ""
+msgstr "Stile chiaro"
 
 #: src/StyleSwitcher.vala:34
 msgid "Light"
-msgstr ""
+msgstr "Chiaro"
 
 #: src/StyleSwitcher.vala:38
 msgid "Dark style"
-msgstr ""
+msgstr "Stile scuro"
 
 #: src/StyleSwitcher.vala:41
 msgid "Dark"
-msgstr ""
+msgstr "Scuro"
 
 #: src/StyleSwitcher.vala:53
 msgid "Use the same style set in the system"
-msgstr ""
+msgstr "Usa lo stesso stile impostato nel sistema"
 
 #: src/StyleSwitcher.vala:56
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: src/TextType.vala:13
 msgid "Convert from:"
