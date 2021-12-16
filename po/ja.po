@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-16 05:44+0000\n"
-"PO-Revision-Date: 2021-04-13 13:32+0900\n"
+"PO-Revision-Date: 2021-12-16 14:50+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -55,31 +55,31 @@ msgstr "設定"
 
 #: src/StyleSwitcher.vala:25
 msgid "Style:"
-msgstr ""
+msgstr "スタイル:"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light style"
-msgstr ""
+msgstr "ライトスタイル"
 
 #: src/StyleSwitcher.vala:34
 msgid "Light"
-msgstr ""
+msgstr "ライト"
 
 #: src/StyleSwitcher.vala:38
 msgid "Dark style"
-msgstr ""
+msgstr "ダークスタイル"
 
 #: src/StyleSwitcher.vala:41
 msgid "Dark"
-msgstr ""
+msgstr "ダーク"
 
 #: src/StyleSwitcher.vala:53
 msgid "Use the same style set in the system"
-msgstr ""
+msgstr "システムの設定と同じスタイルを使います"
 
 #: src/StyleSwitcher.vala:56
 msgid "System"
-msgstr ""
+msgstr "システム"
 
 #: src/TextType.vala:13
 msgid "Convert from:"
@@ -88,15 +88,3 @@ msgstr "変換元の記法:"
 #: src/TextType.vala:15
 msgid "Convert to:"
 msgstr "変換先の記法:"
-
-#~ msgid "KonbuCase"
-#~ msgstr "KonbuCase"
-
-#~ msgid "Light background"
-#~ msgstr "ライトモード"
-
-#~ msgid "Dark background"
-#~ msgstr "ダークモード"
-
-#~ msgid "Follow system style:"
-#~ msgstr "システムのスタイルに従う:"
