@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-14 01:05+0000\n"
+"POT-Creation-Date: 2021-12-16 04:52+0000\n"
 "PO-Revision-Date: 2021-04-13 13:32+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -49,36 +49,36 @@ msgstr "単語の区切りにハイフンを使用します"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "文頭の単語の頭文字に大文字を使用します"
 
-#: src/MainWindow.vala:42
+#: src/MainWindow.vala:48
 msgid "Preferences"
 msgstr "設定"
 
-#: src/StyleSwitcher.vala:27
+#: src/StyleSwitcher.vala:25
 msgid "Style:"
+msgstr ""
+
+#: src/StyleSwitcher.vala:31
+msgid "Light style"
 msgstr ""
 
 #: src/StyleSwitcher.vala:34
 msgid "Light"
 msgstr ""
 
-#: src/StyleSwitcher.vala:37
-msgid "Light style"
-msgstr ""
-
-#: src/StyleSwitcher.vala:45
-msgid "Dark"
-msgstr ""
-
-#: src/StyleSwitcher.vala:48
+#: src/StyleSwitcher.vala:38
 msgid "Dark style"
 msgstr ""
 
-#: src/StyleSwitcher.vala:61
-msgid "System"
+#: src/StyleSwitcher.vala:41
+msgid "Dark"
 msgstr ""
 
-#: src/StyleSwitcher.vala:64
+#: src/StyleSwitcher.vala:53
 msgid "Use the same style set in the system"
+msgstr ""
+
+#: src/StyleSwitcher.vala:56
+msgid "System"
 msgstr ""
 
 #: src/TextType.vala:13
