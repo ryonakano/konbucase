@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Mirko Brombin <send@mirko.pm>, 2020.
 # Saverio <saverio.morelli@outlook.it>, 2021.
+# Albano Battistella <albano_battistella@hotmail.com>, 2021.
 #
 msgid ""
 msgstr ""
