@@ -24,7 +24,7 @@ Community packages maintained by volunteers are also available on some distribut
 You'll need the following dependencies:
 
 * [libchcase](https://github.com/ryonakano/chcase) (automatically downloaded on build)
-* libgranite-dev (>= 5.4.0, use `-Dfor_pantheon=false` to build without this)
+* libgranite-dev (>= 5.4.0)
 * libgtk-3.0-dev
 * libgtksourceview-4-dev (or libgtksourceview-3.0-dev)
 * libhandy-1-dev
