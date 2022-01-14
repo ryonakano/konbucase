@@ -43,10 +43,6 @@ dependencies = [
     gtksourceview_dep
 ]
 
-if get_option('for_pantheon')
-    add_project_arguments('--define=FOR_PANTHEON', language: 'vala')
-endif
-
 sources = files(
     'src' / 'Widgets' / 'ComboEntry.vala',
     'src' / 'Application.vala',
