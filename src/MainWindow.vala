@@ -37,7 +37,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             margin_start = 12,
             margin_end = 12
         };
-        //  preferences_box.append (new StyleSwitcher ());
+        preferences_box.append (new StyleSwitcher ());
 
         var preferences_popover = new Gtk.Popover ();
         preferences_popover.child = preferences_box;
