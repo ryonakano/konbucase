@@ -65,7 +65,7 @@ public class StyleSwitcher : Gtk.Box {
             granite_settings.notify["prefers-color-scheme"].connect (() => {
                 construct_app_style ();
             });
- 
+
             system_style_button.toggled.connect (() => {
                 set_app_style (
                     granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK,
