@@ -49,7 +49,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
             "%s-case-combobox".printf (text_type.get_identifier ())
         );
 
-        var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.BUTTON) {
+        var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic") {
             tooltip_text = set_info_button_tooltip (case_combobox.active_id)
         };
 
@@ -71,8 +71,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
         var case_combobox_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
         case_combobox_box.get_style_context ().add_class ("toolbar");
-        case_combobox_box.pack_start (case_grid);
-        case_combobox_box.pack_end (copy_clipboard_button);
+        case_combobox_box.append (case_grid);
+        case_combobox_box.prepend (copy_clipboard_button);
 
         var buffer = new GtkSource.Buffer (null);
         source_view = new GtkSource.View.with_buffer (buffer) {
@@ -121,7 +121,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         });
 
         copy_clipboard_button.clicked.connect (() => {
-            Gtk.Clipboard.get_default (Gdk.Display.get_default ()).set_text (buffer.text, -1);
+            Gdk.Display.get_default ().get_clipboard ().set_text (buffer.text);
         });
 
         var gtk_settings = Gtk.Settings.get_default ();

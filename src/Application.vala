@@ -50,7 +50,7 @@ public class Application : Gtk.Application {
         }
 
         if (window_pos_x != -1 || window_pos_y != -1) {
-            window.move (window_pos_x, window_pos_y);
+            //  window.move (window_pos_x, window_pos_y);
         }
 
         window.default_width = window_width;

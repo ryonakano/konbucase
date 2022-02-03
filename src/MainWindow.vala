@@ -4,8 +4,6 @@
  */
 
 public class MainWindow : Gtk.ApplicationWindow {
-    private uint configure_id;
-
     public MainWindow (Application app) {
         Object (
             application: app,
@@ -28,10 +26,10 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var result_combo_entry = new Widgets.ComboEntry (TextType.RESULT);
 
-        var grid = new Gtk.Grid ();
-        grid.attach (source_combo_entry, 0, 0);
-        grid.attach (separator, 1, 0);
-        grid.attach (result_combo_entry, 2, 0);
+        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        box.append (source_combo_entry);
+        box.append (separator);
+        box.append (result_combo_entry);
 
         var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
             margin_top = 12,
@@ -39,32 +37,22 @@ public class MainWindow : Gtk.ApplicationWindow {
             margin_start = 12,
             margin_end = 12
         };
-        //  preferences_box.add (new StyleSwitcher ());
-
-        var preferences_button = new Gtk.ToolButton (
-            new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR), null
-        ) {
-            tooltip_text = _("Preferences")
-        };
+        //  preferences_box.append (new StyleSwitcher ());
 
         var preferences_popover = new Gtk.Popover ();
-        preferences_popover.child = preferences_button;
-        preferences_popover.default_widget = preferences_box;
+        preferences_popover.child = preferences_box;
 
-        preferences_button.clicked.connect (() => {
-            preferences_popover.show_all ();
-        });
-
-        var header = new Gtk.HeaderBar () {
-            title_widget = new Gtk.Label ("KonbuCase")
+        var preferences_button = new Gtk.MenuButton () {
+            tooltip_text = _("Preferences"),
+            icon_name = "open-menu",
+            popover = preferences_popover
         };
+
+        var header = new Gtk.HeaderBar ();
         header.pack_end (preferences_button);
+        set_titlebar (header);
 
-        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        main_box.append (header);
-        main_box.append (grid);
-
-        child = main_box;
+        child = box;
 
         source_combo_entry.source_view.grab_focus ();
 
@@ -76,8 +64,8 @@ public class MainWindow : Gtk.ApplicationWindow {
             save_window_size ();
         });
 
-        notify["fullscreened"].connect (() => {
-            Application.settings.set_boolean ("window-maximized", fullscreened);
+        notify["maximized"].connect (() => {
+            Application.settings.set_boolean ("window-maximized", maximized);
         });
     }
 
