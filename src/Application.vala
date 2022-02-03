@@ -51,11 +51,10 @@ public class Application : Gtk.Application {
 
         if (window_pos_x != -1 || window_pos_y != -1) {
             window.move (window_pos_x, window_pos_y);
-        } else {
-            window.window_position = Gtk.WindowPosition.CENTER;
         }
 
-        window.resize (window_width, window_height);
+        window.default_width = window_width;
+        window.default_height = window_height;
 
         var quit_action = new GLib.SimpleAction ("quit", null);
         add_action (quit_action);
@@ -66,7 +65,7 @@ public class Application : Gtk.Application {
             }
         });
 
-        window.show_all ();
+        window.present ();
     }
 
     public static int main (string[] args) {

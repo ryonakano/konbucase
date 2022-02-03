@@ -20,8 +20,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
         }
     }
 
-    public Gtk.SourceView source_view { get; construct; }
-    private Gtk.ToolButton copy_clipboard_button;
+    public GtkSource.View source_view { get; construct; }
+    private Gtk.Button copy_clipboard_button;
 
     public ComboEntry (TextType text_type) {
         Object (
@@ -34,7 +34,10 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
         var case_combobox = new Gtk.ComboBoxText () {
             halign = Gtk.Align.START,
-            margin = 6
+            margin_top = 6,
+            margin_bottom = 6,
+            margin_start = 6,
+            margin_end = 6
         };
         case_combobox.append ("space_separated", _("Space separated"));
         case_combobox.append ("camel", "camelCase");
@@ -58,8 +61,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         case_grid.attach (case_combobox, 1, 0);
         case_grid.attach (case_info_button_icon, 2, 0);
 
-        var copy_clipboard_button_icon = new Gtk.Image.from_icon_name ("edit-copy", Gtk.IconSize.SMALL_TOOLBAR);
-        copy_clipboard_button = new Gtk.ToolButton (copy_clipboard_button_icon, null) {
+        copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
             halign = Gtk.Align.END,
             hexpand = false,
             margin_end = 6,
@@ -72,8 +74,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
         case_combobox_box.pack_start (case_grid);
         case_combobox_box.pack_end (copy_clipboard_button);
 
-        var source_buffer = new Gtk.SourceBuffer (null);
-        source_view = new Gtk.SourceView.with_buffer (source_buffer) {
+        var buffer = new GtkSource.Buffer (null);
+        source_view = new GtkSource.View.with_buffer (buffer) {
             wrap_mode = Gtk.WrapMode.WORD_CHAR,
             hexpand = true,
             vexpand = true
@@ -85,8 +87,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
             source_view.editable = false;
         }
 
-        var scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.add (source_view);
+        var scrolled = new Gtk.ScrolledWindow ();
+        scrolled.child = source_view;
 
         attach (case_combobox_box, 0, 0);
         attach (scrolled, 0, 1);
@@ -95,10 +97,10 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
         Application.settings.bind (
             "%s-text".printf (text_type.get_identifier ()),
-            source_buffer, "text", SettingsBindFlags.DEFAULT
+            buffer, "text", SettingsBindFlags.DEFAULT
         );
 
-        source_buffer.notify["text"].connect (() => {
+        buffer.notify["text"].connect (() => {
             update_buttons ();
             convert_case ();
         });
@@ -119,7 +121,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         });
 
         copy_clipboard_button.clicked.connect (() => {
-            Gtk.Clipboard.get_default (Gdk.Display.get_default ()).set_text (source_buffer.text, -1);
+            Gtk.Clipboard.get_default (Gdk.Display.get_default ()).set_text (buffer.text, -1);
         });
 
         var gtk_settings = Gtk.Settings.get_default ();

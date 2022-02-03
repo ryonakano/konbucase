@@ -9,7 +9,7 @@ public class StyleSwitcher : Gtk.Box {
     private Gtk.Settings gtk_settings;
     private Granite.Settings granite_settings;
 
-    private Granite.Widgets.ModeButton style_mode_button;
+    private Gtk.CheckButton style_mode_button;
 
     public StyleSwitcher () {
         Object (
@@ -39,7 +39,7 @@ public class StyleSwitcher : Gtk.Box {
         dark_style_box.add (dark_style_image);
         dark_style_box.add (new Gtk.Label (_("Dark")));
 
-        style_mode_button = new Granite.Widgets.ModeButton ();
+        style_mode_button = new Gtk.CheckButton ();
         style_mode_button.append (light_style_box);
         style_mode_button.append (dark_style_box);
 
