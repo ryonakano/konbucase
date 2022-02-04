@@ -9,9 +9,9 @@ public class StyleSwitcher : Gtk.Box {
     private Gtk.Settings gtk_settings;
     private Granite.Settings granite_settings;
 
-    private Gtk.ToggleButton light_style_button;
-    private Gtk.ToggleButton dark_style_button;
-    private Gtk.ToggleButton system_style_button;
+    private StyleButton light_style_button;
+    private StyleButton dark_style_button;
+    private StyleButton system_style_button;
 
     public StyleSwitcher () {
         Object (
@@ -27,22 +27,8 @@ public class StyleSwitcher : Gtk.Box {
             halign = Gtk.Align.START
         };
 
-        var light_style_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
-        light_style_box.append (new Gtk.Image.from_icon_name ("display-brightness-symbolic"));
-        light_style_box.append (new Gtk.Label (_("Light")));
-        light_style_button = new Gtk.ToggleButton () {
-            child = light_style_box,
-            can_focus = false
-        };
-
-        var dark_style_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
-        dark_style_box.append (new Gtk.Image.from_icon_name ("weather-clear-night-symbolic"));
-        dark_style_box.append (new Gtk.Label (_("Dark")));
-        dark_style_button = new Gtk.ToggleButton () {
-            child = dark_style_box,
-            can_focus = false,
-            group = light_style_button
-        };
+        light_style_button = new StyleButton ("display-brightness-symbolic", _("Light"));
+        dark_style_button = new StyleButton ("weather-clear-night-symbolic", _("Dark"), light_style_button);
 
         var buttons_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         buttons_box.append (light_style_button);
@@ -51,14 +37,7 @@ public class StyleSwitcher : Gtk.Box {
         if (Application.IS_ON_PANTHEON) {
             granite_settings = Granite.Settings.get_default ();
 
-            var system_style_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
-            system_style_box.append (new Gtk.Image.from_icon_name ("emblem-system-symbolic"));
-            system_style_box.append (new Gtk.Label (_("System")));
-            system_style_button = new Gtk.ToggleButton () {
-                child = system_style_box,
-                can_focus = false,
-                group = light_style_button
-            };
+            system_style_button = new StyleButton ("emblem-system-symbolic", _("System"), light_style_button);
 
             buttons_box.append (system_style_button);
 
@@ -106,6 +85,28 @@ public class StyleSwitcher : Gtk.Box {
             } else {
                 light_style_button.active = true;
             }
+        }
+    }
+
+    private class StyleButton : Gtk.ToggleButton {
+        public new string icon_name { get; construct; }
+        public string label_text { get; construct; }
+
+        public StyleButton (string icon_name, string label_text, Gtk.ToggleButton? group = null) {
+            Object (
+                icon_name: icon_name,
+                label_text: label_text,
+                group: group
+            );
+        }
+
+        construct {
+            var button_content = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
+            button_content.append (new Gtk.Image.from_icon_name (icon_name));
+            button_content.append (new Gtk.Label (label_text));
+
+            child = button_content;
+            can_focus = false;
         }
     }
 }
