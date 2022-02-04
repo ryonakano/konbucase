@@ -70,7 +70,6 @@ public class Widgets.ComboEntry : Gtk.Grid {
         };
 
         var case_combobox_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        case_combobox_box.get_style_context ().add_class ("toolbar");
         case_combobox_box.append (case_grid);
         case_combobox_box.prepend (copy_clipboard_button);
 
