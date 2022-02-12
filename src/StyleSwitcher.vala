@@ -16,11 +16,7 @@ public class StyleSwitcher : Gtk.Box {
     public StyleSwitcher () {
         Object (
             orientation: Gtk.Orientation.VERTICAL,
-            spacing: 6,
-            margin_top: 8,
-            margin_bottom: 12,
-            margin_start: 12,
-            margin_end: 12
+            spacing: 6
         );
     }
 

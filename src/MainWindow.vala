@@ -26,14 +26,21 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var result_combo_entry = new Widgets.ComboEntry (TextType.RESULT);
 
-        var main_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        main_box.append (source_combo_entry);
-        main_box.append (separator);
-        main_box.append (result_combo_entry);
+        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        box.append (source_combo_entry);
+        box.append (separator);
+        box.append (result_combo_entry);
 
-        var preferences_popover = new Gtk.Popover () {
-            child = new StyleSwitcher ()
+        var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
         };
+        preferences_box.append (new StyleSwitcher ());
+
+        var preferences_popover = new Gtk.Popover ();
+        preferences_popover.child = preferences_box;
 
         var preferences_button = new Gtk.MenuButton () {
             tooltip_text = _("Preferences"),
@@ -45,7 +52,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         header.pack_end (preferences_button);
         set_titlebar (header);
 
-        child = main_box;
+        child = box;
 
         source_combo_entry.source_view.grab_focus ();
 
