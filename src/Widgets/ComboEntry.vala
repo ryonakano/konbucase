@@ -86,8 +86,9 @@ public class Widgets.ComboEntry : Gtk.Grid {
             source_view.editable = false;
         }
 
-        var scrolled = new Gtk.ScrolledWindow ();
-        scrolled.child = source_view;
+        var scrolled = new Gtk.ScrolledWindow () {
+            child = source_view
+        };
 
         attach (case_combobox_box, 0, 0);
         attach (scrolled, 0, 1);
