@@ -27,18 +27,18 @@ public class StyleSwitcher : Gtk.Box {
             halign = Gtk.Align.START
         };
 
-        light_style_button = new StyleButton ("display-brightness-symbolic", _("Light"));
-        dark_style_button = new StyleButton ("weather-clear-night-symbolic", _("Dark"), light_style_button);
-
         var buttons_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+
+        light_style_button = new StyleButton ("display-brightness-symbolic", _("Light"));
         buttons_box.append (light_style_button);
+
+        dark_style_button = new StyleButton ("weather-clear-night-symbolic", _("Dark"), light_style_button);
         buttons_box.append (dark_style_button);
 
         if (Application.IS_ON_PANTHEON) {
             granite_settings = Granite.Settings.get_default ();
 
             system_style_button = new StyleButton ("emblem-system-symbolic", _("System"), light_style_button);
-
             buttons_box.append (system_style_button);
 
             granite_settings.notify["prefers-color-scheme"].connect (() => {
