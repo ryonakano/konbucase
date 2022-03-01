@@ -69,9 +69,11 @@ public class Widgets.ComboEntry : Gtk.Grid {
             tooltip_text = _("Copy to Clipboard")
         };
 
-        var case_combobox_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        var case_combobox_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+            homogeneous = true
+        };
         case_combobox_box.append (case_grid);
-        case_combobox_box.prepend (copy_clipboard_button);
+        case_combobox_box.append (copy_clipboard_button);
 
         var buffer = new GtkSource.Buffer (null);
         source_view = new GtkSource.View.with_buffer (buffer) {
