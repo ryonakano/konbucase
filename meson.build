@@ -1,7 +1,7 @@
 project('com.github.ryonakano.konbucase',
     'vala', 'c',
     version: '3.4.0',
-    meson_version: '>=0.53.0'
+    meson_version: '>=0.57.0'
 )
 
 app_nickname = 'konbucase'
@@ -71,4 +71,7 @@ executable(
 subdir('data')
 subdir('po')
 
-meson.add_install_script('meson' / 'post_install.py')
+gnome.post_install(
+    glib_compile_schemas: true,
+    gtk_update_icon_cache: true
+)
