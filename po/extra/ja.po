@@ -38,8 +38,8 @@ msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
-"\"クリップボードにコピー\" ボタンをクリックすると、テキストビューのテキスト"
-"を選択せずにコピーできます"
+"\"クリップボードにコピー\" ボタンをクリックすると、テキストビューのテキストを"
+"選択せずにコピーできます"
 
 #: data/konbucase.appdata.xml.in:17
 msgid ""
@@ -159,8 +159,8 @@ msgstr "翻訳を更新"
 #: data/konbucase.appdata.xml.in:113
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
-"result_combo_entry にテキストを入力しようとするとアプリがフリーズする不具合"
-"を修正"
+"result_combo_entry にテキストを入力しようとするとアプリがフリーズする不具合を"
+"修正"
 
 #: data/konbucase.appdata.xml.in:114
 msgid "Respect an elementary OS-wide dark preference"
