@@ -3,19 +3,22 @@
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Nathan Bonnemains (@NathanBnm), 2020.
 #
+# J. Lavoie <j.lavoie@net-c.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-16 05:44+0000\n"
-"PO-Revision-Date: 2020-04-24 17:49+0200\n"
-"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-04-17 02:59+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/"
+"konbucase-main/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: src/Widgets/ComboEntry.vala:39
 msgid "Space separated"
@@ -46,9 +49,8 @@ msgid "Each word is separated by a hyphen"
 msgstr "Chaque mot est séparé par un tiret"
 
 #: src/Widgets/ComboEntry.vala:165
-#, fuzzy
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Le premier caractère des mots composés est en majuscules"
+msgstr "Le premier caractère du premier mot de la phrase est en majuscule"
 
 #: src/MainWindow.vala:48
 msgid "Preferences"
@@ -56,31 +58,31 @@ msgstr "Préférences"
 
 #: src/StyleSwitcher.vala:25
 msgid "Style:"
-msgstr ""
+msgstr "Style :"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light style"
-msgstr ""
+msgstr "Style clair"
 
 #: src/StyleSwitcher.vala:34
 msgid "Light"
-msgstr ""
+msgstr "Clair"
 
 #: src/StyleSwitcher.vala:38
 msgid "Dark style"
-msgstr ""
+msgstr "Style sombre"
 
 #: src/StyleSwitcher.vala:41
 msgid "Dark"
-msgstr ""
+msgstr "Sombre"
 
 #: src/StyleSwitcher.vala:53
 msgid "Use the same style set in the system"
-msgstr ""
+msgstr "Utiliser le même ensemble de styles dans le système"
 
 #: src/StyleSwitcher.vala:56
 msgid "System"
-msgstr ""
+msgstr "Système"
 
 #: src/TextType.vala:13
 msgid "Convert from:"
