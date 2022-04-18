@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.konbucase package.
+# Allan Nordhøy <epost@anotheragency.no>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.konbucase\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-16 05:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Widgets/ComboEntry.vala:39
+msgid "Space separated"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:67
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:155
+msgid "Each word is separated by a space"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:157
+msgid "The first character of compound words is in lowercase"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:159
+msgid "The first character of compound words is in uppercase"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:161
+msgid "Each word is separated by an underscore"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:163
+msgid "Each word is separated by a hyphen"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:165
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr ""
+
+#: src/MainWindow.vala:48
+msgid "Preferences"
+msgstr ""
+
+#: src/StyleSwitcher.vala:25
+msgid "Style:"
+msgstr ""
+
+#: src/StyleSwitcher.vala:31
+msgid "Light style"
+msgstr ""
+
+#: src/StyleSwitcher.vala:34
+msgid "Light"
+msgstr ""
+
+#: src/StyleSwitcher.vala:38
+msgid "Dark style"
+msgstr ""
+
+#: src/StyleSwitcher.vala:41
+msgid "Dark"
+msgstr ""
+
+#: src/StyleSwitcher.vala:53
+msgid "Use the same style set in the system"
+msgstr ""
+
+#: src/StyleSwitcher.vala:56
+msgid "System"
+msgstr ""
+
+#: src/TextType.vala:13
+msgid "Convert from:"
+msgstr ""
+
+#: src/TextType.vala:15
+msgid "Convert to:"
+msgstr ""
