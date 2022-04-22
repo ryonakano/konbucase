@@ -2,87 +2,91 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
+# JohnDumpling <john_dumpling@protonmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-16 05:44+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-04-23 17:09+0000\n"
+"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
+"konbucase-main/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.12.1-dev\n"
 
 #: src/Widgets/ComboEntry.vala:39
 msgid "Space separated"
-msgstr ""
+msgstr "Oddelený medzerami"
 
 #: src/Widgets/ComboEntry.vala:67
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopírovať do schránky"
 
 #: src/Widgets/ComboEntry.vala:155
 msgid "Each word is separated by a space"
-msgstr ""
+msgstr "Každé slovo je oddelené medzerou"
 
 #: src/Widgets/ComboEntry.vala:157
 msgid "The first character of compound words is in lowercase"
-msgstr ""
+msgstr "Prvý znak zo zhluku slov je napísaný malým písmenom"
 
 #: src/Widgets/ComboEntry.vala:159
 msgid "The first character of compound words is in uppercase"
-msgstr ""
+msgstr "Prvý znak zo zhluku slov je napísaný veľkým písmenom"
 
 #: src/Widgets/ComboEntry.vala:161
 msgid "Each word is separated by an underscore"
-msgstr ""
+msgstr "Každé slovo je oddelené podčiarkovníkom"
 
 #: src/Widgets/ComboEntry.vala:163
 msgid "Each word is separated by a hyphen"
-msgstr ""
+msgstr "Každé slovo je oddelené spojovníkom"
 
 #: src/Widgets/ComboEntry.vala:165
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr ""
+msgstr "Prvý znak prvého slova vo vete je napísaný veľkým písmenom"
 
 #: src/MainWindow.vala:48
 msgid "Preferences"
-msgstr ""
+msgstr "Predvoľby"
 
 #: src/StyleSwitcher.vala:25
 msgid "Style:"
-msgstr ""
+msgstr "Štýl:"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light style"
-msgstr ""
+msgstr "Svetlý štýl"
 
 #: src/StyleSwitcher.vala:34
 msgid "Light"
-msgstr ""
+msgstr "Svetlý"
 
 #: src/StyleSwitcher.vala:38
 msgid "Dark style"
-msgstr ""
+msgstr "Tmavý štýl"
 
 #: src/StyleSwitcher.vala:41
 msgid "Dark"
-msgstr ""
+msgstr "Tmavý"
 
 #: src/StyleSwitcher.vala:53
 msgid "Use the same style set in the system"
-msgstr ""
+msgstr "Použiť rovnaký štýl ako v systéme"
 
 #: src/StyleSwitcher.vala:56
 msgid "System"
-msgstr ""
+msgstr "Systém"
 
 #: src/TextType.vala:13
 msgid "Convert from:"
-msgstr ""
+msgstr "Previesť z:"
 
 #: src/TextType.vala:15
 msgid "Convert to:"
-msgstr ""
+msgstr "Previesť na:"
