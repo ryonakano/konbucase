@@ -4,21 +4,22 @@
 # Mirko Brombin <send@mirko.pm>, 2020.
 # Saverio <saverio.morelli@outlook.it>, 2021.
 # Albano Battistella <albano_battistella@hotmail.com>, 2021.
-#
+# J. Lavoie <j.lavoie@net-c.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-16 05:44+0000\n"
-"PO-Revision-Date: 2021-07-07 14:22+0200\n"
-"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
-"Language-Team: Italian <albano_battistella@hotmail.com>\n"
+"PO-Revision-Date: 2022-04-17 02:59+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/rosp/"
+"konbucase-main/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 40.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: src/Widgets/ComboEntry.vala:39
 msgid "Space separated"
@@ -54,7 +55,7 @@ msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
 
 #: src/MainWindow.vala:48
 msgid "Preferences"
-msgstr "Impostazioni"
+msgstr "Preferenze"
 
 #: src/StyleSwitcher.vala:25
 msgid "Style:"

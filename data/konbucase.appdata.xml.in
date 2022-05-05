@@ -26,6 +26,17 @@
   <content_rating type="oars-1.1" />
 
   <releases>
+    <release version="3.4.1" date="2022-04-04" urgency="low">
+      <description>
+        <ul>
+          <li>Check desktop environment on runtime</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update Italian translation (thanks to @albanobattistella)</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.4.0" date="2021-12-16" urgency="low">
       <description>
         <ul>
@@ -141,7 +152,7 @@
   <url type="homepage">https://github.com/ryonakano/konbucase</url>
   <url type="bugtracker">https://github.com/ryonakano/konbucase/issues</url>
   <url type="help">https://github.com/ryonakano/konbucase/discussions</url>
-  <url type="translate">https://github.com/ryonakano/konbucase</url>
+  <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <custom>
     <value key="x-appcenter-color-primary">#fafafa</value>
