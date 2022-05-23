@@ -7,82 +7,86 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-16 05:44+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-05-24 21:17+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
+"konbucase-main/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: src/Widgets/ComboEntry.vala:39
 msgid "Space separated"
-msgstr ""
+msgstr "Розділено пробілами"
 
 #: src/Widgets/ComboEntry.vala:67
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Копіювати до буфера обміну"
 
 #: src/Widgets/ComboEntry.vala:155
 msgid "Each word is separated by a space"
-msgstr ""
+msgstr "Кожне слово відокремлено пробілом"
 
 #: src/Widgets/ComboEntry.vala:157
 msgid "The first character of compound words is in lowercase"
-msgstr ""
+msgstr "Перший символ сполучених слів пишеться з маленької букви"
 
 #: src/Widgets/ComboEntry.vala:159
 msgid "The first character of compound words is in uppercase"
-msgstr ""
+msgstr "Перший символ сполучених слів пишеться з великої букви"
 
 #: src/Widgets/ComboEntry.vala:161
 msgid "Each word is separated by an underscore"
-msgstr ""
+msgstr "Кожне слово розділене символом підкреслення"
 
 #: src/Widgets/ComboEntry.vala:163
 msgid "Each word is separated by a hyphen"
-msgstr ""
+msgstr "Кожне слово розділяється дефісом"
 
 #: src/Widgets/ComboEntry.vala:165
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr ""
+msgstr "Перший символ першого слова в реченні пишеться з великої букви"
 
 #: src/MainWindow.vala:48
 msgid "Preferences"
-msgstr ""
+msgstr "Налаштування"
 
 #: src/StyleSwitcher.vala:25
 msgid "Style:"
-msgstr ""
+msgstr "Стиль:"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light style"
-msgstr ""
+msgstr "Світлий стиль"
 
 #: src/StyleSwitcher.vala:34
 msgid "Light"
-msgstr ""
+msgstr "Світлий"
 
 #: src/StyleSwitcher.vala:38
 msgid "Dark style"
-msgstr ""
+msgstr "Темний стиль"
 
 #: src/StyleSwitcher.vala:41
 msgid "Dark"
-msgstr ""
+msgstr "Темний"
 
 #: src/StyleSwitcher.vala:53
 msgid "Use the same style set in the system"
-msgstr ""
+msgstr "Використовувати набір стилів системи"
 
 #: src/StyleSwitcher.vala:56
 msgid "System"
-msgstr ""
+msgstr "Системи"
 
 #: src/TextType.vala:13
 msgid "Convert from:"
-msgstr ""
+msgstr "Перетворити з:"
 
 #: src/TextType.vala:15
 msgid "Convert to:"
-msgstr ""
+msgstr "Перетворити в:"
