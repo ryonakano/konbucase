@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-16 05:44+0000\n"
-"PO-Revision-Date: 2022-05-24 21:17+0000\n"
+"PO-Revision-Date: 2022-05-27 13:18+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
 "konbucase-extra/uk/>\n"
@@ -33,7 +33,7 @@ msgstr "Невеликий інструмент, який дає змогу ко
 
 #: data/konbucase.appdata.xml.in:14
 msgid "Features include:"
-msgstr "Включені функції:"
+msgstr "Особливості включають:"
 
 #: data/konbucase.appdata.xml.in:16
 msgid ""
