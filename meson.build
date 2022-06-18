@@ -1,6 +1,6 @@
 project('com.github.ryonakano.konbucase',
     'vala', 'c',
-    version: '3.4.1',
+    version: '3.4.2',
     meson_version: '>=0.57.0'
 )
 
