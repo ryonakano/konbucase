@@ -19,7 +19,12 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/Screenshot.png</image>
+      <caption>Light mode</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/screenshot-light.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Dark mode</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 

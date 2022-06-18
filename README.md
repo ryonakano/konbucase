@@ -1,5 +1,5 @@
 # KonbuCase
-![](data/Screenshot.png)
+![](data/screenshot-light.png)
 
 KonbuCase is a simple case converting app. Features include:
 
