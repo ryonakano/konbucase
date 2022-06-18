@@ -56,21 +56,5 @@ public class MainWindow : Gtk.ApplicationWindow {
         child = main_box;
 
         source_combo_entry.source_view.grab_focus ();
-
-        notify["default-width"].connect (() => {
-            save_window_size ();
-        });
-
-        notify["default-height"].connect (() => {
-            save_window_size ();
-        });
-
-        notify["maximized"].connect (() => {
-            Application.settings.set_boolean ("window-maximized", maximized);
-        });
-    }
-
-    private void save_window_size () {
-        Application.settings.set ("window-size", "(ii)", default_width, default_height);
     }
 }
