@@ -49,14 +49,14 @@
             <description>Whether to follow system's dark style settings or not</description>
         </key>
         <key name="window-width" type="i">
-          <default>600</default>
-          <summary>Most recent window width</summary>
-          <description>The saved width of the window last open</description>
+            <default>600</default>
+            <summary>Most recent window width</summary>
+            <description>The saved width of the window last open</description>
         </key>
         <key name="window-height" type="i">
-          <default>500</default>
-          <summary>Most recent window height</summary>
-          <description>The saved height of the window last open</description>
+            <default>500</default>
+            <summary>Most recent window height</summary>
+            <description>The saved height of the window last open</description>
         </key>
         <key name="window-maximized" type="b">
             <default>false</default>
