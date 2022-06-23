@@ -20,8 +20,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
         }
     }
 
-    public Gtk.SourceView source_view { get; construct; }
-    private Gtk.ToolButton copy_clipboard_button;
+    public GtkSource.View source_view { get; construct; }
+    private Gtk.Button copy_clipboard_button;
 
     public ComboEntry (TextType text_type) {
         Object (
@@ -34,7 +34,10 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
         var case_combobox = new Gtk.ComboBoxText () {
             halign = Gtk.Align.START,
-            margin = 6
+            margin_top = 6,
+            margin_bottom = 6,
+            margin_start = 6,
+            margin_end = 6
         };
         case_combobox.append ("space_separated", _("Space separated"));
         case_combobox.append ("camel", "camelCase");
@@ -46,34 +49,27 @@ public class Widgets.ComboEntry : Gtk.Grid {
             "%s-case-combobox".printf (text_type.get_identifier ())
         );
 
-        var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.BUTTON) {
+        var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic") {
             tooltip_text = set_info_button_tooltip (case_combobox.active_id)
         };
 
-        var case_grid = new Gtk.Grid () {
-            margin_start = 6,
-            column_spacing = 6
-        };
-        case_grid.attach (case_label, 0, 0);
-        case_grid.attach (case_combobox, 1, 0);
-        case_grid.attach (case_info_button_icon, 2, 0);
-
-        var copy_clipboard_button_icon = new Gtk.Image.from_icon_name ("edit-copy", Gtk.IconSize.SMALL_TOOLBAR);
-        copy_clipboard_button = new Gtk.ToolButton (copy_clipboard_button_icon, null) {
-            halign = Gtk.Align.END,
-            hexpand = false,
+        copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
             margin_end = 6,
             sensitive = false,
             tooltip_text = _("Copy to Clipboard")
         };
 
-        var case_combobox_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        case_combobox_box.get_style_context ().add_class ("toolbar");
-        case_combobox_box.pack_start (case_grid);
-        case_combobox_box.pack_end (copy_clipboard_button);
+        var toolbar_grid = new Gtk.Grid () {
+            margin_start = 6,
+            column_spacing = 6
+        };
+        toolbar_grid.attach (case_label, 0, 0);
+        toolbar_grid.attach (case_combobox, 1, 0);
+        toolbar_grid.attach (case_info_button_icon, 2, 0);
+        toolbar_grid.attach (copy_clipboard_button, 3, 0);
 
-        var source_buffer = new Gtk.SourceBuffer (null);
-        source_view = new Gtk.SourceView.with_buffer (source_buffer) {
+        var source_buffer = new GtkSource.Buffer (null);
+        source_view = new GtkSource.View.with_buffer (source_buffer) {
             wrap_mode = Gtk.WrapMode.WORD_CHAR,
             hexpand = true,
             vexpand = true
@@ -85,10 +81,11 @@ public class Widgets.ComboEntry : Gtk.Grid {
             source_view.editable = false;
         }
 
-        var scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.add (source_view);
+        var scrolled = new Gtk.ScrolledWindow () {
+            child = source_view
+        };
 
-        attach (case_combobox_box, 0, 0);
+        attach (toolbar_grid, 0, 0);
         attach (scrolled, 0, 1);
 
         update_buttons ();
@@ -119,7 +116,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         });
 
         copy_clipboard_button.clicked.connect (() => {
-            Gtk.Clipboard.get_default (Gdk.Display.get_default ()).set_text (source_buffer.text, -1);
+            Gdk.Display.get_default ().get_clipboard ().set_text (source_buffer.text);
         });
 
         var gtk_settings = Gtk.Settings.get_default ();
