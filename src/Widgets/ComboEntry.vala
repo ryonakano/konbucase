@@ -68,8 +68,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
         toolbar_grid.attach (case_info_button_icon, 2, 0);
         toolbar_grid.attach (copy_clipboard_button, 3, 0);
 
-        var buffer = new GtkSource.Buffer (null);
-        source_view = new GtkSource.View.with_buffer (buffer) {
+        var source_buffer = new GtkSource.Buffer (null);
+        source_view = new GtkSource.View.with_buffer (source_buffer) {
             wrap_mode = Gtk.WrapMode.WORD_CHAR,
             hexpand = true,
             vexpand = true
@@ -92,10 +92,10 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
         Application.settings.bind (
             "%s-text".printf (text_type.get_identifier ()),
-            buffer, "text", SettingsBindFlags.DEFAULT
+            source_buffer, "text", SettingsBindFlags.DEFAULT
         );
 
-        buffer.notify["text"].connect (() => {
+        source_buffer.notify["text"].connect (() => {
             update_buttons ();
             convert_case ();
         });
@@ -116,7 +116,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         });
 
         copy_clipboard_button.clicked.connect (() => {
-            Gdk.Display.get_default ().get_clipboard ().set_text (buffer.text);
+            Gdk.Display.get_default ().get_clipboard ().set_text (source_buffer.text);
         });
 
         var gtk_settings = Gtk.Settings.get_default ();
