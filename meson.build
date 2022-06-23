@@ -34,17 +34,10 @@ asresources = gnome.compile_resources(
     c_name: 'as'
 )
 
-gtksourceview_dep = dependency('gtksourceview-4', required: false)
-if gtksourceview_dep.found() == false
-    gtksourceview_dep = dependency('gtksourceview-3.0')
-endif
-
 dependencies = [
-    dependency('gdk-3.0'),
-    dependency('granite', version: '>=5.4.0'),
-    dependency('gtk+-3.0'),
-    dependency('libhandy-1'),
-    gtksourceview_dep
+    dependency('granite-7'),
+    dependency('gtk4'),
+    dependency('gtksourceview-5')
 ]
 
 sources = files(

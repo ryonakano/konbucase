@@ -7,6 +7,7 @@ finish-args:
   - '--share=ipc'
   - '--socket=wayland'
   - '--socket=fallback-x11'
+  - '--device=dri'
   - '--metadata=X-DConf=migrate-path=/com/github/ryonakano/konbucase/'
 modules:
   - name: chcase

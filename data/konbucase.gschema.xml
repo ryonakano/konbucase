@@ -48,15 +48,15 @@
             <summary>Follow system style</summary>
             <description>Whether to follow system's dark style settings or not</description>
         </key>
-        <key name="window-position" type="(ii)">
-            <default>(-1, -1)</default>
-            <summary>Window postition</summary>
-            <description>The saved postion of the window</description>
+        <key name="window-width" type="i">
+            <default>300</default>
+            <summary>Most recent window width</summary>
+            <description>The saved width of the window last open</description>
         </key>
-        <key name="window-size" type="(ii)">
-            <default>(600, 500)</default>
-            <summary>Window size</summary>
-            <description>The saved size of the window</description>
+        <key name="window-height" type="i">
+            <default>500</default>
+            <summary>Most recent window height</summary>
+            <description>The saved height of the window last open</description>
         </key>
         <key name="window-maximized" type="b">
             <default>false</default>

@@ -1,15 +1,15 @@
-.text-view-light text {
+.text-view-light {
     color: #586e75;
+}
+
+.text-view-light text {
     background-color: #fdf6e3;
 }
  
-.text-view-dark text {
+.text-view-dark {
     color: #93a1a1;
-    background-color: #002b36;
 }
  
-.toolbar {
-    background: @base_color;
-    border-left: none;
-    border-right: none;
+.text-view-dark text {
+    background-color: #002b36;
 }

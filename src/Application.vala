@@ -38,24 +38,21 @@ public class Application : Gtk.Application {
         }
 
         window = new MainWindow (this);
+        // The window seems to need showing before restoring its size in Gtk4
+        window.present ();
 
-        int window_pos_x, window_pos_y;
-        Application.settings.get ("window-position", "(ii)", out window_pos_x, out window_pos_y);
+        settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
 
-        int window_width, window_height;
-        Application.settings.get ("window-size", "(ii)", out window_width, out window_height);
-
+        /*
+         * Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
+         * So we use the prepared binding only for setting
+         */
         if (Application.settings.get_boolean ("window-maximized")) {
             window.maximize ();
         }
 
-        if (window_pos_x != -1 || window_pos_y != -1) {
-            window.move (window_pos_x, window_pos_y);
-        } else {
-            window.window_position = Gtk.WindowPosition.CENTER;
-        }
-
-        window.resize (window_width, window_height);
+        settings.bind ("window-maximized", window, "maximized", SettingsBindFlags.SET);
 
         var quit_action = new GLib.SimpleAction ("quit", null);
         add_action (quit_action);
@@ -65,8 +62,6 @@ public class Application : Gtk.Application {
                 window.destroy ();
             }
         });
-
-        window.show_all ();
     }
 
     public static int main (string[] args) {
