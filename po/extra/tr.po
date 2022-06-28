@@ -3,20 +3,22 @@
 # This file is distributed under the same license as the extra package.
 #
 # Safak <bjksafak45@gmail.com>, 2020.
+# Sabri Ünal <libreajans@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-16 05:44+0000\n"
-"PO-Revision-Date: 2020-09-26 08:38+0300\n"
-"Last-Translator: Safak <bjksafak45@gmail.com>\n"
-"Language-Team: Turkish\n"
+"PO-Revision-Date: 2022-06-29 21:19+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/"
+"konbucase-extra/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1-dev\n"
 
 #: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -45,13 +47,12 @@ msgstr ""
 "düğmesini tıklayın"
 
 #: data/konbucase.appdata.xml.in:17
-#, fuzzy
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
-"Metninizi camelCase, PascalCase, snake_case, kebab-case ve space-"
-"separateddönüştürür ve düzenler"
+"Metninizi camelCase, PascalCase, Tümce düzeni, snake_case, kebab-case ve "
+"space-separated arasında dönüştürün"
 
 #: data/konbucase.appdata.xml.in:32
 msgid "Focus the source view by default"
@@ -115,7 +116,7 @@ msgstr "Felemenkçe çeviri (@Vistaus'a teşekkürler)"
 
 #: data/konbucase.appdata.xml.in:77
 msgid "Clean code"
-msgstr ""
+msgstr "Temiz kod"
 
 #: data/konbucase.appdata.xml.in:84
 msgid "Separate the core part as an independent library"
