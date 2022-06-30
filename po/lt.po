@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-16 05:44+0000\n"
+"POT-Creation-Date: 2022-07-01 07:12+0900\n"
 "PO-Revision-Date: 2021-09-18 19:30+0300\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
@@ -19,67 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: src/Widgets/ComboEntry.vala:39
+#: src/Widgets/ComboEntry.vala:42
 msgid "Space separated"
 msgstr "Atskirti tarpo ženklu"
 
-#: src/Widgets/ComboEntry.vala:67
+#: src/Widgets/ComboEntry.vala:59
 msgid "Copy to Clipboard"
 msgstr "Išsaugoti į Iškarpinę"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by a space"
 msgstr "Kiekvienas žodis atskiriamas tarpo ženklu"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:154
 msgid "The first character of compound words is in lowercase"
 msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš mažosios raidės"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:156
 msgid "The first character of compound words is in uppercase"
 msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš didžiosios raidės"
 
-#: src/Widgets/ComboEntry.vala:161
+#: src/Widgets/ComboEntry.vala:158
 msgid "Each word is separated by an underscore"
 msgstr "Kiekvienas žodis atskiriamas pabraukimo brūkšniu"
 
-#: src/Widgets/ComboEntry.vala:163
+#: src/Widgets/ComboEntry.vala:160
 msgid "Each word is separated by a hyphen"
 msgstr "Kiekvienas žodis atskiriamas brūkšneliu"
 
-#: src/Widgets/ComboEntry.vala:165
+#: src/Widgets/ComboEntry.vala:162
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Sakinyje pirmojo žodžio pirmasis rašmuo yra iš didžiosios raidės"
 
-#: src/MainWindow.vala:48
+#: src/MainWindow.vala:47
 msgid "Preferences"
 msgstr "Nustatymai"
 
-#: src/StyleSwitcher.vala:25
+#: src/StyleSwitcher.vala:26
 msgid "Style:"
 msgstr ""
 
-#: src/StyleSwitcher.vala:31
-msgid "Light style"
-msgstr ""
-
-#: src/StyleSwitcher.vala:34
+#: src/StyleSwitcher.vala:32
 msgid "Light"
 msgstr ""
 
-#: src/StyleSwitcher.vala:38
-msgid "Dark style"
-msgstr ""
-
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:35
 msgid "Dark"
 msgstr ""
 
-#: src/StyleSwitcher.vala:53
-msgid "Use the same style set in the system"
-msgstr ""
-
-#: src/StyleSwitcher.vala:56
+#: src/StyleSwitcher.vala:41
 msgid "System"
 msgstr ""
 

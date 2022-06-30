@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-16 05:44+0000\n"
+"POT-Creation-Date: 2022-07-01 07:12+0900\n"
 "PO-Revision-Date: 2022-04-17 02:59+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/"
-"konbucase-main/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/konbucase-"
+"main/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,67 +20,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.12-dev\n"
 
-#: src/Widgets/ComboEntry.vala:39
+#: src/Widgets/ComboEntry.vala:42
 msgid "Space separated"
 msgstr "Séparé par des espaces"
 
-#: src/Widgets/ComboEntry.vala:67
+#: src/Widgets/ComboEntry.vala:59
 msgid "Copy to Clipboard"
 msgstr "Copier dans le presse-papiers"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by a space"
 msgstr "Chaque mot est séparé par un espace"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:154
 msgid "The first character of compound words is in lowercase"
 msgstr "Le premier caractère des mots composés est en minuscules"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:156
 msgid "The first character of compound words is in uppercase"
 msgstr "Le premier caractère des mots composés est en majuscules"
 
-#: src/Widgets/ComboEntry.vala:161
+#: src/Widgets/ComboEntry.vala:158
 msgid "Each word is separated by an underscore"
 msgstr "Chaque mot est séparé par un tiret bas"
 
-#: src/Widgets/ComboEntry.vala:163
+#: src/Widgets/ComboEntry.vala:160
 msgid "Each word is separated by a hyphen"
 msgstr "Chaque mot est séparé par un tiret"
 
-#: src/Widgets/ComboEntry.vala:165
+#: src/Widgets/ComboEntry.vala:162
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Le premier caractère du premier mot de la phrase est en majuscule"
 
-#: src/MainWindow.vala:48
+#: src/MainWindow.vala:47
 msgid "Preferences"
 msgstr "Préférences"
 
-#: src/StyleSwitcher.vala:25
+#: src/StyleSwitcher.vala:26
 msgid "Style:"
 msgstr "Style :"
 
-#: src/StyleSwitcher.vala:31
-msgid "Light style"
-msgstr "Style clair"
-
-#: src/StyleSwitcher.vala:34
+#: src/StyleSwitcher.vala:32
 msgid "Light"
 msgstr "Clair"
 
-#: src/StyleSwitcher.vala:38
-msgid "Dark style"
-msgstr "Style sombre"
-
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:35
 msgid "Dark"
 msgstr "Sombre"
 
-#: src/StyleSwitcher.vala:53
-msgid "Use the same style set in the system"
-msgstr "Utiliser le même ensemble de styles dans le système"
-
-#: src/StyleSwitcher.vala:56
+#: src/StyleSwitcher.vala:41
 msgid "System"
 msgstr "Système"
 
@@ -91,6 +79,15 @@ msgstr "Convertir depuis :"
 #: src/TextType.vala:15
 msgid "Convert to:"
 msgstr "Convertir en :"
+
+#~ msgid "Light style"
+#~ msgstr "Style clair"
+
+#~ msgid "Dark style"
+#~ msgstr "Style sombre"
+
+#~ msgid "Use the same style set in the system"
+#~ msgstr "Utiliser le même ensemble de styles dans le système"
 
 #~ msgid "KonbuCase"
 #~ msgstr "KonbuCase"

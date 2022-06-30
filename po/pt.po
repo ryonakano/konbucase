@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-16 05:44+0000\n"
+"POT-Creation-Date: 2022-07-01 07:12+0900\n"
 "PO-Revision-Date: 2022-06-21 12:16+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
@@ -19,67 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1-dev\n"
 
-#: src/Widgets/ComboEntry.vala:39
+#: src/Widgets/ComboEntry.vala:42
 msgid "Space separated"
 msgstr "Espaço separado"
 
-#: src/Widgets/ComboEntry.vala:67
+#: src/Widgets/ComboEntry.vala:59
 msgid "Copy to Clipboard"
 msgstr "Copiar para a Área de transferência"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by a space"
 msgstr "Cada palavra está separada por um espaço"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:154
 msgid "The first character of compound words is in lowercase"
 msgstr "O primeiro carácter de palavras compostas está em minúsculas"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:156
 msgid "The first character of compound words is in uppercase"
 msgstr "O primeiro carácter de palavras compostas está em maiúsculas"
 
-#: src/Widgets/ComboEntry.vala:161
+#: src/Widgets/ComboEntry.vala:158
 msgid "Each word is separated by an underscore"
 msgstr "Cada palavra está separada por um sublinhado"
 
-#: src/Widgets/ComboEntry.vala:163
+#: src/Widgets/ComboEntry.vala:160
 msgid "Each word is separated by a hyphen"
 msgstr "Cada palavra está separada por um hífen"
 
-#: src/Widgets/ComboEntry.vala:165
+#: src/Widgets/ComboEntry.vala:162
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "O primeiro carácter da primeira palavra da frase está em maiúsculas"
 
-#: src/MainWindow.vala:48
+#: src/MainWindow.vala:47
 msgid "Preferences"
 msgstr "Preferências"
 
-#: src/StyleSwitcher.vala:25
+#: src/StyleSwitcher.vala:26
 msgid "Style:"
 msgstr "Estilo:"
 
-#: src/StyleSwitcher.vala:31
-msgid "Light style"
-msgstr "Estilo claro"
-
-#: src/StyleSwitcher.vala:34
+#: src/StyleSwitcher.vala:32
 msgid "Light"
 msgstr "Claro"
 
-#: src/StyleSwitcher.vala:38
-msgid "Dark style"
-msgstr "Estilo escuro"
-
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:35
 msgid "Dark"
 msgstr "Escuro"
 
-#: src/StyleSwitcher.vala:53
-msgid "Use the same style set in the system"
-msgstr "Usar o mesmo estilo definido no sistema"
-
-#: src/StyleSwitcher.vala:56
+#: src/StyleSwitcher.vala:41
 msgid "System"
 msgstr "Sistema"
 
@@ -90,6 +78,15 @@ msgstr "Converter de:"
 #: src/TextType.vala:15
 msgid "Convert to:"
 msgstr "Converter para:"
+
+#~ msgid "Light style"
+#~ msgstr "Estilo claro"
+
+#~ msgid "Dark style"
+#~ msgstr "Estilo escuro"
+
+#~ msgid "Use the same style set in the system"
+#~ msgstr "Usar o mesmo estilo definido no sistema"
 
 #~ msgid "KonbuCase"
 #~ msgstr "KonbuCase"

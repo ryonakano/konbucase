@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-16 05:44+0000\n"
+"POT-Creation-Date: 2022-07-01 07:12+0900\n"
 "PO-Revision-Date: 2022-04-19 03:07+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -18,67 +18,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.12-dev\n"
 
-#: src/Widgets/ComboEntry.vala:39
+#: src/Widgets/ComboEntry.vala:42
 msgid "Space separated"
 msgstr "Mellomromsinndelt"
 
-#: src/Widgets/ComboEntry.vala:67
+#: src/Widgets/ComboEntry.vala:59
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavlen"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by a space"
 msgstr "Hvert ord inndeles av mellomrom"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:154
 msgid "The first character of compound words is in lowercase"
 msgstr "Første tegn i et flerdelt ord har liten forbokstav"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:156
 msgid "The first character of compound words is in uppercase"
 msgstr "Første tegn i et flerdelt ord har stor forbokstav"
 
-#: src/Widgets/ComboEntry.vala:161
+#: src/Widgets/ComboEntry.vala:158
 msgid "Each word is separated by an underscore"
 msgstr "Hvert ord inndeles av understrek"
 
-#: src/Widgets/ComboEntry.vala:163
+#: src/Widgets/ComboEntry.vala:160
 msgid "Each word is separated by a hyphen"
 msgstr "Hvert ord inndeles av bindestrek"
 
-#: src/Widgets/ComboEntry.vala:165
+#: src/Widgets/ComboEntry.vala:162
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Første tegn i første ord i setningen har stor forbokstav"
 
-#: src/MainWindow.vala:48
+#: src/MainWindow.vala:47
 msgid "Preferences"
 msgstr "Innstillinger"
 
-#: src/StyleSwitcher.vala:25
+#: src/StyleSwitcher.vala:26
 msgid "Style:"
 msgstr "Stil:"
 
-#: src/StyleSwitcher.vala:31
-msgid "Light style"
-msgstr "Lys stil"
-
-#: src/StyleSwitcher.vala:34
+#: src/StyleSwitcher.vala:32
 msgid "Light"
 msgstr "Lys"
 
-#: src/StyleSwitcher.vala:38
-msgid "Dark style"
-msgstr "Mørk stil"
-
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:35
 msgid "Dark"
 msgstr "Mørk"
 
-#: src/StyleSwitcher.vala:53
-msgid "Use the same style set in the system"
-msgstr "Bruk samme stil valgt i systemet"
-
-#: src/StyleSwitcher.vala:56
+#: src/StyleSwitcher.vala:41
 msgid "System"
 msgstr "Systemet"
 
@@ -89,3 +77,12 @@ msgstr "Konverter fra:"
 #: src/TextType.vala:15
 msgid "Convert to:"
 msgstr "Konverter til:"
+
+#~ msgid "Light style"
+#~ msgstr "Lys stil"
+
+#~ msgid "Dark style"
+#~ msgstr "Mørk stil"
+
+#~ msgid "Use the same style set in the system"
+#~ msgstr "Bruk samme stil valgt i systemet"

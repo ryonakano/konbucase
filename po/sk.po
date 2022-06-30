@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-16 05:44+0000\n"
+"POT-Creation-Date: 2022-07-01 07:12+0900\n"
 "PO-Revision-Date: 2022-04-23 17:09+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
-"konbucase-main/sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/konbucase-"
+"main/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,67 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.12.1-dev\n"
 
-#: src/Widgets/ComboEntry.vala:39
+#: src/Widgets/ComboEntry.vala:42
 msgid "Space separated"
 msgstr "Oddelený medzerami"
 
-#: src/Widgets/ComboEntry.vala:67
+#: src/Widgets/ComboEntry.vala:59
 msgid "Copy to Clipboard"
 msgstr "Kopírovať do schránky"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by a space"
 msgstr "Každé slovo je oddelené medzerou"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:154
 msgid "The first character of compound words is in lowercase"
 msgstr "Prvý znak zo zhluku slov je napísaný malým písmenom"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:156
 msgid "The first character of compound words is in uppercase"
 msgstr "Prvý znak zo zhluku slov je napísaný veľkým písmenom"
 
-#: src/Widgets/ComboEntry.vala:161
+#: src/Widgets/ComboEntry.vala:158
 msgid "Each word is separated by an underscore"
 msgstr "Každé slovo je oddelené podčiarkovníkom"
 
-#: src/Widgets/ComboEntry.vala:163
+#: src/Widgets/ComboEntry.vala:160
 msgid "Each word is separated by a hyphen"
 msgstr "Každé slovo je oddelené spojovníkom"
 
-#: src/Widgets/ComboEntry.vala:165
+#: src/Widgets/ComboEntry.vala:162
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Prvý znak prvého slova vo vete je napísaný veľkým písmenom"
 
-#: src/MainWindow.vala:48
+#: src/MainWindow.vala:47
 msgid "Preferences"
 msgstr "Predvoľby"
 
-#: src/StyleSwitcher.vala:25
+#: src/StyleSwitcher.vala:26
 msgid "Style:"
 msgstr "Štýl:"
 
-#: src/StyleSwitcher.vala:31
-msgid "Light style"
-msgstr "Svetlý štýl"
-
-#: src/StyleSwitcher.vala:34
+#: src/StyleSwitcher.vala:32
 msgid "Light"
 msgstr "Svetlý"
 
-#: src/StyleSwitcher.vala:38
-msgid "Dark style"
-msgstr "Tmavý štýl"
-
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:35
 msgid "Dark"
 msgstr "Tmavý"
 
-#: src/StyleSwitcher.vala:53
-msgid "Use the same style set in the system"
-msgstr "Použiť rovnaký štýl ako v systéme"
-
-#: src/StyleSwitcher.vala:56
+#: src/StyleSwitcher.vala:41
 msgid "System"
 msgstr "Systém"
 
@@ -90,3 +78,12 @@ msgstr "Previesť z:"
 #: src/TextType.vala:15
 msgid "Convert to:"
 msgstr "Previesť na:"
+
+#~ msgid "Light style"
+#~ msgstr "Svetlý štýl"
+
+#~ msgid "Dark style"
+#~ msgstr "Tmavý štýl"
+
+#~ msgid "Use the same style set in the system"
+#~ msgstr "Použiť rovnaký štýl ako v systéme"
