@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-16 05:44+0000\n"
+"POT-Creation-Date: 2022-07-01 07:12+0900\n"
 "PO-Revision-Date: 2022-04-17 02:59+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/"
-"konbucase-extra/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/konbucase-"
+"extra/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,151 +55,178 @@ msgstr ""
 "Modifiez la casse de votre texte en camelCase, PascalCase, snake_case, kebab-"
 "case et séparé par des espaces"
 
-#: data/konbucase.appdata.xml.in:32
-msgid "Focus the source view by default"
-msgstr "Focaliser la vue source par défaut"
-
-#: data/konbucase.appdata.xml.in:33
-msgid "Redesign the style switcher"
+#: data/konbucase.appdata.xml.in:22
+msgid "Light mode"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:35 data/konbucase.appdata.xml.in:47
+#: data/konbucase.appdata.xml.in:26
+msgid "Dark mode"
+msgstr ""
+
+#: data/konbucase.appdata.xml.in:37
+msgid "Migrate to GTK 4"
+msgstr ""
+
+#: data/konbucase.appdata.xml.in:38 data/konbucase.appdata.xml.in:46
+#: data/konbucase.appdata.xml.in:138 data/konbucase.appdata.xml.in:149
+msgid "Update translations"
+msgstr "Mise à jour des traductions"
+
+#: data/konbucase.appdata.xml.in:45
+#, fuzzy
+msgid "Update Flatpak runtime version"
+msgstr "Mise à jour des traductions"
+
+#: data/konbucase.appdata.xml.in:53
+msgid "Check desktop environment on runtime"
+msgstr ""
+
+#: data/konbucase.appdata.xml.in:55 data/konbucase.appdata.xml.in:67
+#: data/konbucase.appdata.xml.in:79
 msgid "Translation updates:"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:37 data/konbucase.appdata.xml.in:50
-#: data/konbucase.appdata.xml.in:67 data/konbucase.appdata.xml.in:76
+#: data/konbucase.appdata.xml.in:57
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr ""
+
+#: data/konbucase.appdata.xml.in:64
+msgid "Focus the source view by default"
+msgstr "Focaliser la vue source par défaut"
+
+#: data/konbucase.appdata.xml.in:65
+msgid "Redesign the style switcher"
+msgstr ""
+
+#: data/konbucase.appdata.xml.in:69 data/konbucase.appdata.xml.in:82
+#: data/konbucase.appdata.xml.in:99 data/konbucase.appdata.xml.in:108
 #, fuzzy
 msgid "Update Japanese translation"
 msgstr "Mise à jour des traductions"
 
-#: data/konbucase.appdata.xml.in:44
+#: data/konbucase.appdata.xml.in:76
 msgid "Rounded window corners"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:45
+#: data/konbucase.appdata.xml.in:77
 msgid "Support building without Granite for other distributions"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:49
+#: data/konbucase.appdata.xml.in:81
 msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:57
+#: data/konbucase.appdata.xml.in:89
 msgid "Fix building fails in Flatpak"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:64
+#: data/konbucase.appdata.xml.in:96
 msgid ""
 "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
 "manifest"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:65
+#: data/konbucase.appdata.xml.in:97
 msgid "Update Dutch translation (thanks to @Vistaus)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:66
+#: data/konbucase.appdata.xml.in:98
 msgid "Update Italian translation (thanks to @Sav22999)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:74
+#: data/konbucase.appdata.xml.in:106
 msgid "Support Sentence case"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:75
+#: data/konbucase.appdata.xml.in:107
 msgid "Add Turkish translation (thanks to @safak45x)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:77
+#: data/konbucase.appdata.xml.in:109
 msgid "Clean code"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:84
+#: data/konbucase.appdata.xml.in:116
 msgid "Separate the core part as an independent library"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:85
+#: data/konbucase.appdata.xml.in:117
 msgid "Rename all occurrence of \"target\" to \"source\""
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:86
+#: data/konbucase.appdata.xml.in:118
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:87
+#: data/konbucase.appdata.xml.in:119
 msgid "Quit the app with Ctrl+Q"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:88
+#: data/konbucase.appdata.xml.in:120
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:89
+#: data/konbucase.appdata.xml.in:121
 msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:96
+#: data/konbucase.appdata.xml.in:128
 msgid "Save changes in the app state on time"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:97
+#: data/konbucase.appdata.xml.in:129
 msgid "Side-by-side view"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:98
+#: data/konbucase.appdata.xml.in:130
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:105
+#: data/konbucase.appdata.xml.in:137
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:106 data/konbucase.appdata.xml.in:117
-msgid "Update translations"
-msgstr "Mise à jour des traductions"
-
-#: data/konbucase.appdata.xml.in:113
+#: data/konbucase.appdata.xml.in:145
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 "Correction du blocage de l'application lors de la saisie de textes dans "
 "result_combo_entry"
 
-#: data/konbucase.appdata.xml.in:114
+#: data/konbucase.appdata.xml.in:146
 msgid "Respect an elementary OS-wide dark preference"
 msgstr "Respect de la préférence du thème sombre d'elementary OS"
 
-#: data/konbucase.appdata.xml.in:115
+#: data/konbucase.appdata.xml.in:147
 msgid "Add a description tooltip to each case"
 msgstr "Ajout d'une infobulle d'information pour chaque type de format"
 
-#: data/konbucase.appdata.xml.in:116
+#: data/konbucase.appdata.xml.in:148
 #, fuzzy
 msgid "Allow setting per-app dark style preference"
 msgstr "Possibilité de définir un thème spécifique à l'application"
 
-#: data/konbucase.appdata.xml.in:124
+#: data/konbucase.appdata.xml.in:156
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:125
+#: data/konbucase.appdata.xml.in:157
 msgid "Add Italian translation (thanks to @mirkobrombin)"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:126
+#: data/konbucase.appdata.xml.in:158
 #, fuzzy
 msgid "Add Japanese translation"
 msgstr "Mise à jour des traductions"
 
-#: data/konbucase.appdata.xml.in:127
+#: data/konbucase.appdata.xml.in:159
 msgid "Update result texts when changing ComboBox selection"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:133
+#: data/konbucase.appdata.xml.in:165
 msgid "Initial release"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:140
+#: data/konbucase.appdata.xml.in:172
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -207,10 +234,9 @@ msgstr "Ryo Nakano"
 msgid "Case Converting App"
 msgstr "Application de modification de casse"
 
-#: data/konbucase.desktop.in:8
-msgid "com.github.ryonakano.konbucase"
-msgstr "com.github.ryonakano.konbucase"
-
 #: data/konbucase.desktop.in:11
 msgid "Text;"
 msgstr "Texte;"
+
+#~ msgid "com.github.ryonakano.konbucase"
+#~ msgstr "com.github.ryonakano.konbucase"
