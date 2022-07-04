@@ -34,7 +34,7 @@
             <description>The last saved value of the source case combobox</description>
         </key>
         <key name="result-case-combobox" enum="result-case-list">
-            <default>'space_separated'</default>
+            <default>'kebab'</default>
             <summary>Result case</summary>
             <description>The last saved value of the result case combobox</description>
         </key>
