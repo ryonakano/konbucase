@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-01 07:12+0900\n"
-"PO-Revision-Date: 2022-07-01 23:21+0000\n"
+"PO-Revision-Date: 2022-07-10 11:20+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
 "konbucase-extra/uk/>\n"
@@ -71,7 +71,7 @@ msgstr "Оновлення перекладів"
 
 #: data/konbucase.appdata.xml.in:45
 msgid "Update Flatpak runtime version"
-msgstr "Оновлення версії середовища виконання Flatpak"
+msgstr "Оновлено версію середовища виконання Flatpak"
 
 #: data/konbucase.appdata.xml.in:53
 msgid "Check desktop environment on runtime"
