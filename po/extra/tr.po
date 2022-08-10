@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-01 07:12+0900\n"
-"PO-Revision-Date: 2022-08-01 20:21+0000\n"
+"PO-Revision-Date: 2022-08-11 06:27+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/"
 "konbucase-extra/tr/>\n"
@@ -31,8 +31,8 @@ msgstr "Metinlerdeki büyük küçük harfleri düzenleyin"
 #: data/konbucase.appdata.xml.in:11
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
-"Metninizdeki harfleri büyük küçük harf ve boşlukları düzenleyip "
-"dönüştürmenize  izin veren küçük bir metin aracı uygulaması."
+"Metninizdeki harflerin düzenini değiştirmenize izin veren küçük bir metin "
+"aracı uygulaması."
 
 #: data/konbucase.appdata.xml.in:14
 msgid "Features include:"
@@ -69,12 +69,11 @@ msgstr "GTK 4'e geçiş"
 #: data/konbucase.appdata.xml.in:38 data/konbucase.appdata.xml.in:46
 #: data/konbucase.appdata.xml.in:138 data/konbucase.appdata.xml.in:149
 msgid "Update translations"
-msgstr "Çeviriler güncellendi"
+msgstr "Çeviri güncellemeleri"
 
 #: data/konbucase.appdata.xml.in:45
-#, fuzzy
 msgid "Update Flatpak runtime version"
-msgstr "Japonca çeviri eklendi"
+msgstr "Flatpak çalışma zamanı sürümü güncellendi"
 
 #: data/konbucase.appdata.xml.in:53
 msgid "Check desktop environment on runtime"
@@ -86,9 +85,8 @@ msgid "Translation updates:"
 msgstr "Çeviri güncellemeleri:"
 
 #: data/konbucase.appdata.xml.in:57
-#, fuzzy
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "İtalyanca çeviri (teşekkürler @mirkobrombin)"
+msgstr "İtalyanca çeviri güncellendi (@albanobattistella'ya teşekkürler)"
 
 #: data/konbucase.appdata.xml.in:64
 msgid "Focus the source view by default"
@@ -100,9 +98,8 @@ msgstr "Stil değiştirici yeniden tasarlandı"
 
 #: data/konbucase.appdata.xml.in:69 data/konbucase.appdata.xml.in:82
 #: data/konbucase.appdata.xml.in:99 data/konbucase.appdata.xml.in:108
-#, fuzzy
 msgid "Update Japanese translation"
-msgstr "Japonca çeviri eklendi"
+msgstr "Japonca çeviri güncellendi"
 
 #: data/konbucase.appdata.xml.in:76
 msgid "Rounded window corners"
@@ -110,41 +107,39 @@ msgstr "Yuvarlatılmış pencere köşeleri"
 
 #: data/konbucase.appdata.xml.in:77
 msgid "Support building without Granite for other distributions"
-msgstr ""
+msgstr "Diğer dağıtımlar için Granit olmadan inşa desteği"
 
 #: data/konbucase.appdata.xml.in:81
-#, fuzzy
 msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
-msgstr "İtalyanca çeviri (teşekkürler @mirkobrombin)"
+msgstr "Litvanca çeviri eklendi (@PolPolyLingo'ya teşekkürler)"
 
 #: data/konbucase.appdata.xml.in:89
 msgid "Fix building fails in Flatpak"
-msgstr ""
+msgstr "Flatpak'ta inşa hataları düzeltildi"
 
 #: data/konbucase.appdata.xml.in:96
 msgid ""
 "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
 "manifest"
 msgstr ""
+"Uygulama Flatpak manifestosuyla elementary OS 6'daki yeni AppCenter'da "
+"yayınlandı"
 
 #: data/konbucase.appdata.xml.in:97
-#, fuzzy
 msgid "Update Dutch translation (thanks to @Vistaus)"
-msgstr "Felemenkçe çeviri (@Vistaus'a teşekkürler)"
+msgstr "Hollandaca çeviri güncellendi (@Vistaus'a teşekkürler)"
 
 #: data/konbucase.appdata.xml.in:98
-#, fuzzy
 msgid "Update Italian translation (thanks to @Sav22999)"
-msgstr "İtalyanca çeviri (teşekkürler @mirkobrombin)"
+msgstr "İtalyanca çeviri güncellendi (@Sav22999'a teşekkürler)"
 
 #: data/konbucase.appdata.xml.in:106
 msgid "Support Sentence case"
-msgstr ""
+msgstr "Cümle düzeni desteği eklendi"
 
 #: data/konbucase.appdata.xml.in:107
-#, fuzzy
 msgid "Add Turkish translation (thanks to @safak45x)"
-msgstr "Felemenkçe çeviri (@Vistaus'a teşekkürler)"
+msgstr "Türkçe çeviri eklendi (@safak45x'e teşekkürler)"
 
 #: data/konbucase.appdata.xml.in:109
 msgid "Clean code"
@@ -207,13 +202,12 @@ msgid "Add a description tooltip to each case"
 msgstr "Her araça bir açıklama ipucu ekleyin"
 
 #: data/konbucase.appdata.xml.in:148
-#, fuzzy
 msgid "Allow setting per-app dark style preference"
 msgstr "Uygulama başına koyu stil tercihini ayarlamaya izin verildi"
 
 #: data/konbucase.appdata.xml.in:156
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Fransızca çeviri (@NathanBnm sayesinde)"
+msgstr "Fransızca çeviri güncellendi (@NathanBnm'ye teşekkürler)"
 
 #: data/konbucase.appdata.xml.in:157
 msgid "Add Italian translation (thanks to @mirkobrombin)"
