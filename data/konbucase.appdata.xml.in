@@ -31,10 +31,11 @@
   <content_rating type="oars-1.1" />
 
   <releases>
-    <release version="3.5.0" date="2022-06-23" urgency="medium">
+    <release version="4.0.0" date="2022-06-23" urgency="medium">
       <description>
         <ul>
-          <li>Migrate to GTK 4</li>
+          <li>Migrate to GTK 4, the latest version of GTK</li>
+          <li>Set kebab-case as a default case for the result view, so that users can understand what they can do with the app more intuitively</li>
           <li>Update translations</li>
         </ul>
       </description>
