@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-11 15:27+0900\n"
-"PO-Revision-Date: 2022-06-30 22:19+0000\n"
+"PO-Revision-Date: 2022-08-13 01:20+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase-"
-"extra/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
+"konbucase-extra/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.13.1-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -60,13 +60,14 @@ msgstr "ダークモード"
 
 #: data/konbucase.appdata.xml.in:37
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "GTK の最新バージョンである、GTK 4 に移行"
 
 #: data/konbucase.appdata.xml.in:38
 msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
-msgstr ""
+msgstr "ユーザーがアプリの機能をより直感的に理解できるよう、結果画面で使用されるデフ"
+"ォルトのケースをケバブケースに変更"
 
 #: data/konbucase.appdata.xml.in:39 data/konbucase.appdata.xml.in:47
 #: data/konbucase.appdata.xml.in:139 data/konbucase.appdata.xml.in:150
