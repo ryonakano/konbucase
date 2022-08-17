@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-11 15:27+0900\n"
-"PO-Revision-Date: 2022-06-21 12:16+0000\n"
+"PO-Revision-Date: 2022-08-18 16:21+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
 "konbucase-extra/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: data/konbucase.appdata.xml.in:14
 msgid "Features include:"
-msgstr "Inclui funcionalidades:"
+msgstr "As funcionalidades incluem:"
 
 #: data/konbucase.appdata.xml.in:16
 msgid ""
@@ -85,7 +85,7 @@ msgstr "Tradução Japonesa atualizada"
 
 #: data/konbucase.appdata.xml.in:54
 msgid "Check desktop environment on runtime"
-msgstr ""
+msgstr "Verificar o ambiente de trabalho em tempo de execução"
 
 #: data/konbucase.appdata.xml.in:56 data/konbucase.appdata.xml.in:68
 #: data/konbucase.appdata.xml.in:80
@@ -93,9 +93,8 @@ msgid "Translation updates:"
 msgstr "Atualizações de tradução:"
 
 #: data/konbucase.appdata.xml.in:58
-#, fuzzy
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Tradução Italiana adicionada (obrigado a @mirkobrombin)"
+msgstr "Atualização da tradução italiana (obrigado a @albanobattistella)"
 
 #: data/konbucase.appdata.xml.in:65
 msgid "Focus the source view by default"
@@ -119,29 +118,28 @@ msgid "Support building without Granite for other distributions"
 msgstr ""
 
 #: data/konbucase.appdata.xml.in:82
-#, fuzzy
 msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
-msgstr "Tradução Italiana adicionada (obrigado a @mirkobrombin)"
+msgstr "Tradução Lituana adicionada (obrigado a @PolPolyLingo)"
 
 #: data/konbucase.appdata.xml.in:90
 msgid "Fix building fails in Flatpak"
-msgstr ""
+msgstr "Corrige falhas de compilação em Flatpak"
 
 #: data/konbucase.appdata.xml.in:97
 msgid ""
 "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
 "manifest"
 msgstr ""
+"Publica a aplicação para o novo Centro de Aplicações no elementary OS 6 com "
+"o manifesto Flatpak"
 
 #: data/konbucase.appdata.xml.in:98
-#, fuzzy
 msgid "Update Dutch translation (thanks to @Vistaus)"
-msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
+msgstr "Atualização da tradução Neerlandesa (obrigado a @Vistaus)"
 
 #: data/konbucase.appdata.xml.in:99
-#, fuzzy
 msgid "Update Italian translation (thanks to @Sav22999)"
-msgstr "Tradução Italiana adicionada (obrigado a @mirkobrombin)"
+msgstr "Atualização da tradução Italiana (obrigado a @Sav22999)"
 
 #: data/konbucase.appdata.xml.in:107
 msgid "Support Sentence case"
