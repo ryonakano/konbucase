@@ -9,10 +9,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-11 15:27+0900\n"
-"PO-Revision-Date: 2022-08-11 06:27+0000\n"
+"PO-Revision-Date: 2022-08-21 10:21+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase-"
-"extra/tr/>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/"
+"konbucase-extra/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,13 +64,16 @@ msgstr "Koyu kip"
 
 #: data/konbucase.appdata.xml.in:37
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "GTK'nın en son sürümü olan GTK 4'e geçiş yapıldı"
 
 #: data/konbucase.appdata.xml.in:38
 msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
 msgstr ""
+"Kullanıcıların uygulamayla neler yapabileceklerini daha sezgisel bir şekilde "
+"anlayabilmeleri için sonuç görünümü için kebab-case'i varsayılan durum "
+"olarak ayarla"
 
 #: data/konbucase.appdata.xml.in:39 data/konbucase.appdata.xml.in:47
 #: data/konbucase.appdata.xml.in:139 data/konbucase.appdata.xml.in:150
