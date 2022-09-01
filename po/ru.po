@@ -7,70 +7,74 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-11 15:27+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-09-03 04:18+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/"
+"konbucase-main/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: src/Widgets/ComboEntry.vala:42
 msgid "Space separated"
-msgstr ""
+msgstr "Разделённые пробелом"
 
 #: src/Widgets/ComboEntry.vala:59
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Копировать"
 
 #: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by a space"
-msgstr ""
+msgstr "Каждое слово разделено пробелом"
 
 #: src/Widgets/ComboEntry.vala:154
 msgid "The first character of compound words is in lowercase"
-msgstr ""
+msgstr "Первый символ совмещённых слов пишется с маленькой буквы"
 
 #: src/Widgets/ComboEntry.vala:156
 msgid "The first character of compound words is in uppercase"
-msgstr ""
+msgstr "Первый символ совмещённых слов пишется с заглавной буквы"
 
 #: src/Widgets/ComboEntry.vala:158
 msgid "Each word is separated by an underscore"
-msgstr ""
+msgstr "Каждое слово отделяется нижним подчёркиванием"
 
 #: src/Widgets/ComboEntry.vala:160
 msgid "Each word is separated by a hyphen"
-msgstr ""
+msgstr "Каждое слово отделяется дефисом"
 
 #: src/Widgets/ComboEntry.vala:162
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr ""
+msgstr "Первый символ первого слова в предложении пишется с заглавной буквы"
 
 #: src/MainWindow.vala:47
 msgid "Preferences"
-msgstr ""
+msgstr "Параметры"
 
 #: src/StyleSwitcher.vala:26
 msgid "Style:"
-msgstr ""
+msgstr "Стиль:"
 
 #: src/StyleSwitcher.vala:32
 msgid "Light"
-msgstr ""
+msgstr "Светлый"
 
 #: src/StyleSwitcher.vala:35
 msgid "Dark"
-msgstr ""
+msgstr "Тёмный"
 
 #: src/StyleSwitcher.vala:41
 msgid "System"
-msgstr ""
+msgstr "Система"
 
 #: src/TextType.vala:13
 msgid "Convert from:"
-msgstr ""
+msgstr "Конвертировать из:"
 
 #: src/TextType.vala:15
 msgid "Convert to:"
-msgstr ""
+msgstr "Конвертировать в:"
