@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-24 09:43+0900\n"
+"POT-Creation-Date: 2022-09-24 10:06+0900\n"
 "PO-Revision-Date: 2022-08-21 10:21+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -68,18 +68,18 @@ msgstr "GTK'nın en son sürümü olan GTK 4'e geçiş yapıldı"
 
 #: data/konbucase.appdata.xml.in:38
 msgid ""
-"Fix no style button selected on non-Pantheon desktop environments when first "
-"launch"
-msgstr ""
-
-#: data/konbucase.appdata.xml.in:39
-msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
 msgstr ""
 "Kullanıcıların uygulamayla neler yapabileceklerini daha sezgisel bir şekilde "
 "anlayabilmeleri için sonuç görünümü için kebab-case'i varsayılan durum "
 "olarak ayarla"
+
+#: data/konbucase.appdata.xml.in:39
+msgid ""
+"Fix no style button selected on non-Pantheon desktop environments when first "
+"launch"
+msgstr ""
 
 #: data/konbucase.appdata.xml.in:40 data/konbucase.appdata.xml.in:48
 #: data/konbucase.appdata.xml.in:140 data/konbucase.appdata.xml.in:151

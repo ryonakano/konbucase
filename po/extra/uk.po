@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-24 09:43+0900\n"
+"POT-Creation-Date: 2022-09-24 10:06+0900\n"
 "PO-Revision-Date: 2022-09-24 01:07+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
-"konbucase-extra/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/konbucase-"
+"extra/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,19 +66,19 @@ msgstr "Перехід на GTK 4, найновішу версію GTK"
 
 #: data/konbucase.appdata.xml.in:38
 msgid ""
-"Fix no style button selected on non-Pantheon desktop environments when first "
-"launch"
-msgstr ""
-"Виправлено відсутність кнопки вибору стилю у стільничних середовищах, інших "
-"ніж Pantheon, під час першого запуску"
-
-#: data/konbucase.appdata.xml.in:39
-msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
 msgstr ""
 "Kebab-case встановлено стандартним для перегляду результатів, щоб "
 "користувачі інтуїтивніше розуміли, що вони можуть робити з застосунком"
+
+#: data/konbucase.appdata.xml.in:39
+msgid ""
+"Fix no style button selected on non-Pantheon desktop environments when first "
+"launch"
+msgstr ""
+"Виправлено відсутність кнопки вибору стилю у стільничних середовищах, інших "
+"ніж Pantheon, під час першого запуску"
 
 #: data/konbucase.appdata.xml.in:40 data/konbucase.appdata.xml.in:48
 #: data/konbucase.appdata.xml.in:140 data/konbucase.appdata.xml.in:151

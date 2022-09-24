@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-24 09:43+0900\n"
+"POT-Creation-Date: 2022-09-24 10:06+0900\n"
 "PO-Revision-Date: 2021-04-13 13:12+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
@@ -65,14 +65,14 @@ msgstr ""
 
 #: data/konbucase.appdata.xml.in:38
 msgid ""
-"Fix no style button selected on non-Pantheon desktop environments when first "
-"launch"
+"Set kebab-case as a default case for the result view, so that users can "
+"understand what they can do with the app more intuitively"
 msgstr ""
 
 #: data/konbucase.appdata.xml.in:39
 msgid ""
-"Set kebab-case as a default case for the result view, so that users can "
-"understand what they can do with the app more intuitively"
+"Fix no style button selected on non-Pantheon desktop environments when first "
+"launch"
 msgstr ""
 
 #: data/konbucase.appdata.xml.in:40 data/konbucase.appdata.xml.in:48
