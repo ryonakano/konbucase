@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-11 15:27+0900\n"
+"POT-Creation-Date: 2022-09-24 09:43+0900\n"
 "PO-Revision-Date: 2022-04-23 17:09+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -68,66 +68,72 @@ msgstr ""
 
 #: data/konbucase.appdata.xml.in:38
 msgid ""
+"Fix no style button selected on non-Pantheon desktop environments when first "
+"launch"
+msgstr ""
+
+#: data/konbucase.appdata.xml.in:39
+msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:39 data/konbucase.appdata.xml.in:47
-#: data/konbucase.appdata.xml.in:139 data/konbucase.appdata.xml.in:150
+#: data/konbucase.appdata.xml.in:40 data/konbucase.appdata.xml.in:48
+#: data/konbucase.appdata.xml.in:140 data/konbucase.appdata.xml.in:151
 msgid "Update translations"
 msgstr "Aktualizované preklady"
 
-#: data/konbucase.appdata.xml.in:46
+#: data/konbucase.appdata.xml.in:47
 #, fuzzy
 #| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
 msgstr "Aktualizácia prekladu do japončiny"
 
-#: data/konbucase.appdata.xml.in:54
+#: data/konbucase.appdata.xml.in:55
 msgid "Check desktop environment on runtime"
 msgstr ""
 
-#: data/konbucase.appdata.xml.in:56 data/konbucase.appdata.xml.in:68
-#: data/konbucase.appdata.xml.in:80
+#: data/konbucase.appdata.xml.in:57 data/konbucase.appdata.xml.in:69
+#: data/konbucase.appdata.xml.in:81
 msgid "Translation updates:"
 msgstr "Aktualizácie prekladov:"
 
-#: data/konbucase.appdata.xml.in:58
+#: data/konbucase.appdata.xml.in:59
 #, fuzzy
 #| msgid "Update Italian translation (thanks to @Sav22999)"
 msgid "Update Italian translation (thanks to @albanobattistella)"
 msgstr "Aktualizovaný preklad do taliančiny (vďaka @Sav22999)"
 
-#: data/konbucase.appdata.xml.in:65
+#: data/konbucase.appdata.xml.in:66
 msgid "Focus the source view by default"
 msgstr "Predvolene označovať zobrazenie zdroja"
 
-#: data/konbucase.appdata.xml.in:66
+#: data/konbucase.appdata.xml.in:67
 msgid "Redesign the style switcher"
 msgstr "Prerobený prepínač štýlov"
 
-#: data/konbucase.appdata.xml.in:70 data/konbucase.appdata.xml.in:83
-#: data/konbucase.appdata.xml.in:100 data/konbucase.appdata.xml.in:109
+#: data/konbucase.appdata.xml.in:71 data/konbucase.appdata.xml.in:84
+#: data/konbucase.appdata.xml.in:101 data/konbucase.appdata.xml.in:110
 msgid "Update Japanese translation"
 msgstr "Aktualizácia prekladu do japončiny"
 
-#: data/konbucase.appdata.xml.in:77
+#: data/konbucase.appdata.xml.in:78
 msgid "Rounded window corners"
 msgstr "Zaoblenie rohov okna"
 
-#: data/konbucase.appdata.xml.in:78
+#: data/konbucase.appdata.xml.in:79
 msgid "Support building without Granite for other distributions"
 msgstr "Podpora kompilácie bez Granite pre ostatné distribúcie"
 
-#: data/konbucase.appdata.xml.in:82
+#: data/konbucase.appdata.xml.in:83
 msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
 msgstr "Pridaný preklad do litovčiny (vďaka @PolPolyLingo)"
 
-#: data/konbucase.appdata.xml.in:90
+#: data/konbucase.appdata.xml.in:91
 msgid "Fix building fails in Flatpak"
 msgstr "Opravené problémy s kompiláciou Flatpak verzie"
 
-#: data/konbucase.appdata.xml.in:97
+#: data/konbucase.appdata.xml.in:98
 msgid ""
 "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
 "manifest"
@@ -135,110 +141,110 @@ msgstr ""
 "Uverejnenie aplikácie do nového AppCentra na elementary OS 6 s Flatpak "
 "manifestom"
 
-#: data/konbucase.appdata.xml.in:98
+#: data/konbucase.appdata.xml.in:99
 msgid "Update Dutch translation (thanks to @Vistaus)"
 msgstr "Aktualizácia prekladu do holandčiny (vďaka @Vistaus)"
 
-#: data/konbucase.appdata.xml.in:99
+#: data/konbucase.appdata.xml.in:100
 msgid "Update Italian translation (thanks to @Sav22999)"
 msgstr "Aktualizovaný preklad do taliančiny (vďaka @Sav22999)"
 
-#: data/konbucase.appdata.xml.in:107
+#: data/konbucase.appdata.xml.in:108
 msgid "Support Sentence case"
 msgstr "Pridaná podpora Sentence case (Vetného textu)"
 
-#: data/konbucase.appdata.xml.in:108
+#: data/konbucase.appdata.xml.in:109
 msgid "Add Turkish translation (thanks to @safak45x)"
 msgstr "Pridaný preklad do turečtiny (vďaka @safak45x)"
 
-#: data/konbucase.appdata.xml.in:110
+#: data/konbucase.appdata.xml.in:111
 msgid "Clean code"
 msgstr "Upratanie kódu"
 
-#: data/konbucase.appdata.xml.in:117
+#: data/konbucase.appdata.xml.in:118
 msgid "Separate the core part as an independent library"
 msgstr "Oddelenie jadra aplikácie na nezávislú knižnicu"
 
-#: data/konbucase.appdata.xml.in:118
+#: data/konbucase.appdata.xml.in:119
 msgid "Rename all occurrence of \"target\" to \"source\""
 msgstr "Premenované všetky výskyty slov „target“ na „source“"
 
-#: data/konbucase.appdata.xml.in:119
+#: data/konbucase.appdata.xml.in:120
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr ""
 "Oprava stavu, keď sa zmena veľkosti výsledného textu niekedy neaplikuje"
 
-#: data/konbucase.appdata.xml.in:120
+#: data/konbucase.appdata.xml.in:121
 msgid "Quit the app with Ctrl+Q"
 msgstr "Ukončenie aplikácie pomocou Ctrl+Q"
 
-#: data/konbucase.appdata.xml.in:121
+#: data/konbucase.appdata.xml.in:122
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "Pridaný preklad do holandčiny (vďaka @Vistaus)"
 
-#: data/konbucase.appdata.xml.in:122
+#: data/konbucase.appdata.xml.in:123
 msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 msgstr "Pridaný preklad do portugalčiny (vďaka @rottenpants466)"
 
-#: data/konbucase.appdata.xml.in:129
+#: data/konbucase.appdata.xml.in:130
 msgid "Save changes in the app state on time"
 msgstr "Ukladať zmeny v stave aplikácie včas"
 
-#: data/konbucase.appdata.xml.in:130
+#: data/konbucase.appdata.xml.in:131
 msgid "Side-by-side view"
 msgstr "Zobrazenie vstupu a výstupu vedľa seba"
 
-#: data/konbucase.appdata.xml.in:131
+#: data/konbucase.appdata.xml.in:132
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr "Vylepšenie ikonky aplikácie (veľká vďaka @Fatih20)"
 
-#: data/konbucase.appdata.xml.in:138
+#: data/konbucase.appdata.xml.in:139
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
 "Oprava problému, keď sa zmena globálneho štýlu operačného systému "
 "neaplikovala v aplikácii"
 
-#: data/konbucase.appdata.xml.in:146
+#: data/konbucase.appdata.xml.in:147
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 "Opravené zamrznutia aplikácie pri pokuse o vloženie textu do "
 "result_combo_entry"
 
-#: data/konbucase.appdata.xml.in:147
+#: data/konbucase.appdata.xml.in:148
 msgid "Respect an elementary OS-wide dark preference"
 msgstr "Rešpektovať globálnu preferenciu tmavého štýlu v elementary OS"
 
-#: data/konbucase.appdata.xml.in:148
+#: data/konbucase.appdata.xml.in:149
 msgid "Add a description tooltip to each case"
 msgstr "Pridaný popis ku každému formátu textu v zozname"
 
-#: data/konbucase.appdata.xml.in:149
+#: data/konbucase.appdata.xml.in:150
 msgid "Allow setting per-app dark style preference"
 msgstr ""
 "Umožnenie zmeny predvoľby tmavého štýlu v aplikácii nezávisle od systémového "
 "nastavenia"
 
-#: data/konbucase.appdata.xml.in:157
+#: data/konbucase.appdata.xml.in:158
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
 
-#: data/konbucase.appdata.xml.in:158
+#: data/konbucase.appdata.xml.in:159
 msgid "Add Italian translation (thanks to @mirkobrombin)"
 msgstr "Pridaný preklad do taliančiny (vďaka @mirkobrombin)"
 
-#: data/konbucase.appdata.xml.in:159
+#: data/konbucase.appdata.xml.in:160
 msgid "Add Japanese translation"
 msgstr "Pridaný preklad do japončiny"
 
-#: data/konbucase.appdata.xml.in:160
+#: data/konbucase.appdata.xml.in:161
 msgid "Update result texts when changing ComboBox selection"
 msgstr "Aktualizovať výsledný text pri zmene formátu v kontextovom menu"
 
-#: data/konbucase.appdata.xml.in:166
+#: data/konbucase.appdata.xml.in:167
 msgid "Initial release"
 msgstr "Prvé vydanie"
 
-#: data/konbucase.appdata.xml.in:173
+#: data/konbucase.appdata.xml.in:174
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
