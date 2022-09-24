@@ -20,11 +20,11 @@
   <screenshots>
     <screenshot type="default">
       <caption>Light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/screenshot-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/screenshots/pantheon/screenshot-light.png</image>
     </screenshot>
     <screenshot>
       <caption>Dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/screenshot-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/screenshots/pantheon/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -35,6 +35,7 @@
       <description>
         <ul>
           <li>Migrate to GTK 4, the latest version of GTK</li>
+          <li>Fix no style button selected on non-Pantheon desktop environments when first launch</li>
           <li>Set kebab-case as a default case for the result view, so that users can understand what they can do with the app more intuitively</li>
           <li>Update translations</li>
         </ul>
