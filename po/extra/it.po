@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-24 09:43+0900\n"
+"POT-Creation-Date: 2022-09-24 10:06+0900\n"
 "PO-Revision-Date: 2022-09-03 04:18+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -67,18 +67,18 @@ msgstr "Migrato a GTK 4, l'ultima versione di GTK"
 
 #: data/konbucase.appdata.xml.in:38
 msgid ""
-"Fix no style button selected on non-Pantheon desktop environments when first "
-"launch"
-msgstr ""
-
-#: data/konbucase.appdata.xml.in:39
-msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
 msgstr ""
 "Imposta kebab-case come caso predefinito per la visualizzazione dei "
 "risultati, in modo che gli utenti possano capire cosa possono fare con l'app "
 "in modo più intuitivo"
+
+#: data/konbucase.appdata.xml.in:39
+msgid ""
+"Fix no style button selected on non-Pantheon desktop environments when first "
+"launch"
+msgstr ""
 
 #: data/konbucase.appdata.xml.in:40 data/konbucase.appdata.xml.in:48
 #: data/konbucase.appdata.xml.in:140 data/konbucase.appdata.xml.in:151
