@@ -35,8 +35,8 @@
       <description>
         <ul>
           <li>Migrate to GTK 4, the latest version of GTK</li>
-          <li>Fix no style button selected on non-Pantheon desktop environments when first launch</li>
           <li>Set kebab-case as a default case for the result view, so that users can understand what they can do with the app more intuitively</li>
+          <li>Fix no style button selected on non-Pantheon desktop environments when first launch</li>
           <li>Update translations</li>
         </ul>
       </description>
