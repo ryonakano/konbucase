@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Heimen Stoffels <vistausss@fastmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-24 10:06+0900\n"
-"PO-Revision-Date: 2021-04-13 13:12+0200\n"
-"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2022-09-26 16:21+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/"
+"konbucase-extra/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -43,7 +43,6 @@ msgstr ""
 "kopiëren"
 
 #: data/konbucase.appdata.xml.in:17
-#, fuzzy
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
@@ -53,15 +52,15 @@ msgstr ""
 
 #: data/konbucase.appdata.xml.in:22
 msgid "Light mode"
-msgstr ""
+msgstr "Licht thema"
 
 #: data/konbucase.appdata.xml.in:26
 msgid "Dark mode"
-msgstr ""
+msgstr "Donker thema"
 
 #: data/konbucase.appdata.xml.in:37
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "Migratie naar GTK4, de nieuwste GTK-versie"
 
 #: data/konbucase.appdata.xml.in:38
 msgid ""
