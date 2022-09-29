@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-24 10:06+0900\n"
-"PO-Revision-Date: 2022-08-18 16:21+0000\n"
+"PO-Revision-Date: 2022-09-30 16:17+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
 "konbucase-extra/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -81,13 +81,11 @@ msgstr ""
 #: data/konbucase.appdata.xml.in:40 data/konbucase.appdata.xml.in:48
 #: data/konbucase.appdata.xml.in:140 data/konbucase.appdata.xml.in:151
 msgid "Update translations"
-msgstr "Atualizações de traduções"
+msgstr "Atualização de traduções"
 
 #: data/konbucase.appdata.xml.in:47
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
-msgstr "Tradução Japonesa atualizada"
+msgstr "Atualização da versão em tempo de execução Flatpak"
 
 #: data/konbucase.appdata.xml.in:55
 msgid "Check desktop environment on runtime"
@@ -158,7 +156,7 @@ msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
 
 #: data/konbucase.appdata.xml.in:111
 msgid "Clean code"
-msgstr ""
+msgstr "Limpeza de código"
 
 #: data/konbucase.appdata.xml.in:118
 msgid "Separate the core part as an independent library"
@@ -220,7 +218,6 @@ msgstr ""
 "Adicionada uma dica de descrição para cada tipo de maiúsculas e minúsculas"
 
 #: data/konbucase.appdata.xml.in:150
-#, fuzzy
 msgid "Allow setting per-app dark style preference"
 msgstr "Permite definir a preferência do estilo escuro por cada aplicação"
 
