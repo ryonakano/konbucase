@@ -4,21 +4,22 @@
 #
 # Safak <bjksafak45@gmail.com>, 2020.
 # Sabri Ünal <libreajans@gmail.com>, 2022.
+# Oğuz Ersen <oguz@ersen.moe>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-24 10:06+0900\n"
-"PO-Revision-Date: 2022-08-21 10:21+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase-"
-"extra/tr/>\n"
+"PO-Revision-Date: 2022-10-11 15:17+0000\n"
+"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/"
+"konbucase-extra/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -36,7 +37,7 @@ msgstr ""
 
 #: data/konbucase.appdata.xml.in:14
 msgid "Features include:"
-msgstr "Özellikler şunları içerir:"
+msgstr "Özellikler:"
 
 #: data/konbucase.appdata.xml.in:16
 msgid ""
@@ -80,11 +81,13 @@ msgid ""
 "Fix no style button selected on non-Pantheon desktop environments when first "
 "launch"
 msgstr ""
+"Pantheon dışındaki masaüstü ortamlarında ilk başlatıldığında seçili biçim "
+"düğmesinin olmaması düzeltildi"
 
 #: data/konbucase.appdata.xml.in:40 data/konbucase.appdata.xml.in:48
 #: data/konbucase.appdata.xml.in:140 data/konbucase.appdata.xml.in:151
 msgid "Update translations"
-msgstr "Çeviri güncellemeleri"
+msgstr "Çeviriler güncellendi"
 
 #: data/konbucase.appdata.xml.in:47
 msgid "Update Flatpak runtime version"
@@ -222,7 +225,7 @@ msgstr "Uygulama başına koyu stil tercihini ayarlamaya izin verildi"
 
 #: data/konbucase.appdata.xml.in:158
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Fransızca çeviri güncellendi (@NathanBnm'ye teşekkürler)"
+msgstr "Fransızca çeviri eklendi (teşekkürler @NathanBnm)"
 
 #: data/konbucase.appdata.xml.in:159
 msgid "Add Italian translation (thanks to @mirkobrombin)"
