@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-24 10:06+0900\n"
-"PO-Revision-Date: 2022-09-25 10:22+0000\n"
+"PO-Revision-Date: 2022-10-11 15:17+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/"
 "konbucase-extra/fr/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -81,8 +81,8 @@ msgid ""
 "Fix no style button selected on non-Pantheon desktop environments when first "
 "launch"
 msgstr ""
-"Correction du bouton « aucun style » sur les autres environnements de bureau "
-"que Panthéon lors du premier lancement"
+"Correction du bouton sans style sélectionné sur les environnements de bureau "
+"non-Pantheon lors du premier lancement"
 
 #: data/konbucase.appdata.xml.in:40 data/konbucase.appdata.xml.in:48
 #: data/konbucase.appdata.xml.in:140 data/konbucase.appdata.xml.in:151
@@ -91,7 +91,7 @@ msgstr "Mise à jour des traductions"
 
 #: data/konbucase.appdata.xml.in:47
 msgid "Update Flatpak runtime version"
-msgstr "Mise à jour de la version de l’environnement d’exécution Flatpak"
+msgstr "Mise à jour de l’environnement d’exécution Flatpak"
 
 #: data/konbucase.appdata.xml.in:55
 msgid "Check desktop environment on runtime"
