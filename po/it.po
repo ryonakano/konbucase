@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-24 10:06+0900\n"
+"POT-Creation-Date: 2022-10-15 20:08+0900\n"
 "PO-Revision-Date: 2022-04-17 02:59+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -20,6 +20,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.12-dev\n"
+
+#: src/MainWindow.vala:47
+msgid "Preferences"
+msgstr "Preferenze"
+
+#: src/StyleSwitcher.vala:26
+msgid "Style:"
+msgstr "Stile:"
+
+#: src/StyleSwitcher.vala:32
+msgid "Light"
+msgstr "Chiaro"
+
+#: src/StyleSwitcher.vala:35
+msgid "Dark"
+msgstr "Scuro"
+
+#: src/StyleSwitcher.vala:41
+msgid "System"
+msgstr "Sistema"
+
+#: src/TextType.vala:13
+msgid "Convert from:"
+msgstr "Converti da:"
+
+#: src/TextType.vala:15
+msgid "Convert to:"
+msgstr "Converti in:"
 
 #: src/Widgets/ComboEntry.vala:42
 msgid "Space separated"
@@ -52,34 +80,6 @@ msgstr "Ogni parola è separata da un hyphen (trattino alto)"
 #: src/Widgets/ComboEntry.vala:162
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
-
-#: src/MainWindow.vala:47
-msgid "Preferences"
-msgstr "Preferenze"
-
-#: src/StyleSwitcher.vala:26
-msgid "Style:"
-msgstr "Stile:"
-
-#: src/StyleSwitcher.vala:32
-msgid "Light"
-msgstr "Chiaro"
-
-#: src/StyleSwitcher.vala:35
-msgid "Dark"
-msgstr "Scuro"
-
-#: src/StyleSwitcher.vala:41
-msgid "System"
-msgstr "Sistema"
-
-#: src/TextType.vala:13
-msgid "Convert from:"
-msgstr "Converti da:"
-
-#: src/TextType.vala:15
-msgid "Convert to:"
-msgstr "Converti in:"
 
 #~ msgid "Light style"
 #~ msgstr "Stile chiaro"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-24 10:06+0900\n"
+"POT-Creation-Date: 2022-10-15 20:08+0900\n"
 "PO-Revision-Date: 2022-08-01 20:21+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -19,6 +19,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.14-dev\n"
+
+#: src/MainWindow.vala:47
+msgid "Preferences"
+msgstr "Tercihler"
+
+#: src/StyleSwitcher.vala:26
+msgid "Style:"
+msgstr "Biçim:"
+
+#: src/StyleSwitcher.vala:32
+msgid "Light"
+msgstr "Açık"
+
+#: src/StyleSwitcher.vala:35
+msgid "Dark"
+msgstr "Koyu"
+
+#: src/StyleSwitcher.vala:41
+msgid "System"
+msgstr "Sistem"
+
+#: src/TextType.vala:13
+msgid "Convert from:"
+msgstr "Şuna dönüştür:"
+
+#: src/TextType.vala:15
+msgid "Convert to:"
+msgstr "Dönüştür:"
 
 #: src/Widgets/ComboEntry.vala:42
 msgid "Space separated"
@@ -51,34 +79,6 @@ msgstr "Her kelime bir tire ile ayrılır"
 #: src/Widgets/ComboEntry.vala:162
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Cümledeki ilk kelimenin ilk karakteri büyük harftir"
-
-#: src/MainWindow.vala:47
-msgid "Preferences"
-msgstr "Tercihler"
-
-#: src/StyleSwitcher.vala:26
-msgid "Style:"
-msgstr "Biçim:"
-
-#: src/StyleSwitcher.vala:32
-msgid "Light"
-msgstr "Açık"
-
-#: src/StyleSwitcher.vala:35
-msgid "Dark"
-msgstr "Koyu"
-
-#: src/StyleSwitcher.vala:41
-msgid "System"
-msgstr "Sistem"
-
-#: src/TextType.vala:13
-msgid "Convert from:"
-msgstr "Şuna dönüştür:"
-
-#: src/TextType.vala:15
-msgid "Convert to:"
-msgstr "Dönüştür:"
 
 #~ msgid "Light style"
 #~ msgstr "Açık biçim"

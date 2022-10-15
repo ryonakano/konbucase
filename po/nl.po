@@ -6,17 +6,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-24 10:06+0900\n"
+"POT-Creation-Date: 2022-10-15 20:08+0900\n"
 "PO-Revision-Date: 2022-09-26 16:21+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/"
-"konbucase-main/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/konbucase-"
+"main/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.14.1\n"
+
+#: src/MainWindow.vala:47
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: src/StyleSwitcher.vala:26
+msgid "Style:"
+msgstr "Thema:"
+
+#: src/StyleSwitcher.vala:32
+msgid "Light"
+msgstr "Licht"
+
+#: src/StyleSwitcher.vala:35
+msgid "Dark"
+msgstr "Donker"
+
+#: src/StyleSwitcher.vala:41
+msgid "System"
+msgstr "Systeemthema"
+
+#: src/TextType.vala:13
+msgid "Convert from:"
+msgstr "Omzetten van:"
+
+#: src/TextType.vala:15
+msgid "Convert to:"
+msgstr "Omzetten naar:"
 
 #: src/Widgets/ComboEntry.vala:42
 msgid "Space separated"
@@ -49,34 +77,6 @@ msgstr "Elk woord wordt gescheiden door een streepje"
 #: src/Widgets/ComboEntry.vala:162
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "De eerste letter van het eerste woord in de zin is een hoofdletter"
-
-#: src/MainWindow.vala:47
-msgid "Preferences"
-msgstr "Voorkeuren"
-
-#: src/StyleSwitcher.vala:26
-msgid "Style:"
-msgstr "Thema:"
-
-#: src/StyleSwitcher.vala:32
-msgid "Light"
-msgstr "Licht"
-
-#: src/StyleSwitcher.vala:35
-msgid "Dark"
-msgstr "Donker"
-
-#: src/StyleSwitcher.vala:41
-msgid "System"
-msgstr "Systeemthema"
-
-#: src/TextType.vala:13
-msgid "Convert from:"
-msgstr "Omzetten van:"
-
-#: src/TextType.vala:15
-msgid "Convert to:"
-msgstr "Omzetten naar:"
 
 #~ msgid "KonbuCase"
 #~ msgstr "KonbuCase"
