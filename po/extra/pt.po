@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 20:08+0900\n"
-"PO-Revision-Date: 2022-09-30 16:17+0000\n"
+"PO-Revision-Date: 2022-10-20 14:05+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
 "konbucase-extra/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.14.2-dev\n"
 
 #: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -46,37 +46,41 @@ msgstr ""
 "textos na vista de texto sem ter que os selecionar"
 
 #: data/konbucase.appdata.xml.in:17
-#, fuzzy
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
-"Converta o seu texto entre camelCase, PascalCase, snake_case, kebab-case e "
-"separar-por-espaço"
+"Converta o seu texto entre camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case, e separar-por-espaço"
 
 #: data/konbucase.appdata.xml.in:22
 msgid "Light mode"
-msgstr ""
+msgstr "Modo claro"
 
 #: data/konbucase.appdata.xml.in:26
 msgid "Dark mode"
-msgstr ""
+msgstr "Modo escuro"
 
 #: data/konbucase.appdata.xml.in:37
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "Migração para GTK 4, a última versão do GTK"
 
 #: data/konbucase.appdata.xml.in:38
 msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
 msgstr ""
+"Definir kebab-case como padrão para a visualização de resultados, para que "
+"os utilizadores possam compreender o que podem fazer com a aplicação de "
+"forma mais intuitiva"
 
 #: data/konbucase.appdata.xml.in:39
 msgid ""
 "Fix no style button selected on non-Pantheon desktop environments when first "
 "launch"
 msgstr ""
+"Correção de \"nenhum botão de estilo selecionado\" em ambientes de trabalho "
+"não-Pantheon quando do primeiro lançamento"
 
 #: data/konbucase.appdata.xml.in:40 data/konbucase.appdata.xml.in:48
 #: data/konbucase.appdata.xml.in:140 data/konbucase.appdata.xml.in:151
@@ -85,7 +89,7 @@ msgstr "Atualização de traduções"
 
 #: data/konbucase.appdata.xml.in:47
 msgid "Update Flatpak runtime version"
-msgstr "Atualização da versão em tempo de execução Flatpak"
+msgstr "Atualização da versão Flatpak runtime"
 
 #: data/konbucase.appdata.xml.in:55
 msgid "Check desktop environment on runtime"
@@ -102,11 +106,11 @@ msgstr "Atualização da tradução italiana (obrigado a @albanobattistella)"
 
 #: data/konbucase.appdata.xml.in:66
 msgid "Focus the source view by default"
-msgstr ""
+msgstr "Focar a visualização da fonte por padrão"
 
 #: data/konbucase.appdata.xml.in:67
 msgid "Redesign the style switcher"
-msgstr ""
+msgstr "Redesenha o comutador de estilos"
 
 #: data/konbucase.appdata.xml.in:71 data/konbucase.appdata.xml.in:84
 #: data/konbucase.appdata.xml.in:101 data/konbucase.appdata.xml.in:110
@@ -119,7 +123,7 @@ msgstr "Cantos de janelas arredondados"
 
 #: data/konbucase.appdata.xml.in:79
 msgid "Support building without Granite for other distributions"
-msgstr ""
+msgstr "Suporta a criação sem Granite para outras distribuições"
 
 #: data/konbucase.appdata.xml.in:83
 msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
@@ -147,12 +151,11 @@ msgstr "Atualização da tradução Italiana (obrigado a @Sav22999)"
 
 #: data/konbucase.appdata.xml.in:108
 msgid "Support Sentence case"
-msgstr ""
+msgstr "Suporta frases em maiúsculas/minúsculas"
 
 #: data/konbucase.appdata.xml.in:109
-#, fuzzy
 msgid "Add Turkish translation (thanks to @safak45x)"
-msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
+msgstr "Tradução Turca adicionada (obrigado a @@safak45x)"
 
 #: data/konbucase.appdata.xml.in:111
 msgid "Clean code"
@@ -160,29 +163,29 @@ msgstr "Limpeza de código"
 
 #: data/konbucase.appdata.xml.in:118
 msgid "Separate the core part as an independent library"
-msgstr ""
+msgstr "Separa a parte do núcleo como uma biblioteca independente"
 
 #: data/konbucase.appdata.xml.in:119
 msgid "Rename all occurrence of \"target\" to \"source\""
-msgstr ""
+msgstr "Renomeia todas as ocorrências de \"destino\" para \"fonte\""
 
 #: data/konbucase.appdata.xml.in:120
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr ""
+"Correção da alteração do resultado de maiúsculas/minúsculas por vezes não "
+"tem efeito"
 
 #: data/konbucase.appdata.xml.in:121
 msgid "Quit the app with Ctrl+Q"
-msgstr ""
+msgstr "Sair da aplicação com Ctrl+Q"
 
 #: data/konbucase.appdata.xml.in:122
-#, fuzzy
 msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
+msgstr "Tradução Neerlandesa adicionada (obrigado a @Vistaus)"
 
 #: data/konbucase.appdata.xml.in:123
-#, fuzzy
 msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
-msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
+msgstr "Tradução Portuguesa adicionada (obrigado a @hugok)"
 
 #: data/konbucase.appdata.xml.in:130
 msgid "Save changes in the app state on time"
