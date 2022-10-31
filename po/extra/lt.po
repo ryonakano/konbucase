@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-15 20:08+0900\n"
-"PO-Revision-Date: 2022-09-03 04:18+0000\n"
+"PO-Revision-Date: 2022-10-30 23:40+0200\n"
 "Last-Translator: dzes483 <jban@sdf.org>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/rosp/"
 "konbucase-extra/lt/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: data/konbucase.appdata.xml.in:8 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -32,7 +32,7 @@ msgstr "Keisti atvejį tekste"
 #: data/konbucase.appdata.xml.in:11
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
-"Minimalus teksto įrankis programėlė leidžianti keisti tarp atvejų tekste. "
+"Minimalus teksto įrankis programėlė leidžianti keisti tarp atvejų tekste."
 
 #: data/konbucase.appdata.xml.in:14
 msgid "Features include:"
@@ -56,7 +56,7 @@ msgstr ""
 
 #: data/konbucase.appdata.xml.in:22
 msgid "Light mode"
-msgstr ""
+msgstr "Šviesus režimas"
 
 #: data/konbucase.appdata.xml.in:26
 msgid "Dark mode"
@@ -64,19 +64,23 @@ msgstr "Tamsusis režimas"
 
 #: data/konbucase.appdata.xml.in:37
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "Keltis į GTK 4, paskiausią GTK versiją"
 
 #: data/konbucase.appdata.xml.in:38
 msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
 msgstr ""
+"Nustatyti rezultatų rodinio atvejį kaip numatytąjį, kad naudotojai labiau "
+"intuityviai susiprotėtų tuo ką jie geba daryti"
 
 #: data/konbucase.appdata.xml.in:39
 msgid ""
 "Fix no style button selected on non-Pantheon desktop environments when first "
 "launch"
 msgstr ""
+"Taisyti be stiliaus esančio mygtuko parinktį kuomet pirmą kartą paleidžiama "
+"ne Pantheon darbalaukio aplinka"
 
 #: data/konbucase.appdata.xml.in:40 data/konbucase.appdata.xml.in:48
 #: data/konbucase.appdata.xml.in:140 data/konbucase.appdata.xml.in:151
@@ -84,51 +88,46 @@ msgid "Update translations"
 msgstr "Atnaujinti vertimus"
 
 #: data/konbucase.appdata.xml.in:47
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
-msgstr "Atnaujinti japonišką vertimą"
+msgstr "Atnaujinti Flatpak vykdomąją versiją"
 
 #: data/konbucase.appdata.xml.in:55
 msgid "Check desktop environment on runtime"
-msgstr ""
+msgstr "Paleisties metu patikrinti darbalaukio aplinką"
 
 #: data/konbucase.appdata.xml.in:57 data/konbucase.appdata.xml.in:69
 #: data/konbucase.appdata.xml.in:81
 msgid "Translation updates:"
-msgstr ""
+msgstr "Išvertimo naujiniai:"
 
 #: data/konbucase.appdata.xml.in:59
-#, fuzzy
-#| msgid "Update Italian translation (thanks to @Sav22999)"
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Update Italian translation (thanks to @Sav22999)"
+msgstr "Update Italian translation (thanks to @albanobattistella)"
 
 #: data/konbucase.appdata.xml.in:66
 msgid "Focus the source view by default"
-msgstr ""
+msgstr "Pagal nutylėjimą sukoncentruoti ties išeities kodo rodiniu"
 
 #: data/konbucase.appdata.xml.in:67
 msgid "Redesign the style switcher"
-msgstr ""
+msgstr "Perprojektuoti stiliaus jungiklį"
 
 #: data/konbucase.appdata.xml.in:71 data/konbucase.appdata.xml.in:84
 #: data/konbucase.appdata.xml.in:101 data/konbucase.appdata.xml.in:110
 msgid "Update Japanese translation"
-msgstr "Atnaujinti japonišką vertimą"
+msgstr "Atnaujinti japonišką išvertimą"
 
 #: data/konbucase.appdata.xml.in:78
 msgid "Rounded window corners"
-msgstr ""
+msgstr "Suapvalinti langelio kampai"
 
 #: data/konbucase.appdata.xml.in:79
 msgid "Support building without Granite for other distributions"
-msgstr ""
+msgstr "Likusioms platinamosioms programoms užtikrinti vyksmą be Granite"
 
 #: data/konbucase.appdata.xml.in:83
-#, fuzzy
 msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
-msgstr "Add Italian translation (thanks to @mirkobrombin)"
+msgstr "Add Lithuanian translation (thanks to @PolPolyLingo)"
 
 #: data/konbucase.appdata.xml.in:91
 msgid "Fix building fails in Flatpak"
@@ -174,7 +173,7 @@ msgstr "Visus \"target\" atitikmenis pervadinti į \"source\""
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr ""
 "Sutaisytas funkcionalumas kuomet keičiamas rezultato atvejis tam tikru "
-"atveju nesuveikdavo  "
+"atveju nesuveikdavo"
 
 #: data/konbucase.appdata.xml.in:121
 msgid "Quit the app with Ctrl+Q"
@@ -210,7 +209,7 @@ msgstr ""
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 "Sutaisytas funkcionalumas kuomet programėlė sustingsta kuomet įvedamas "
-"tekstas į result_combo_entry "
+"tekstas į result_combo_entry"
 
 #: data/konbucase.appdata.xml.in:148
 msgid "Respect an elementary OS-wide dark preference"
