@@ -30,13 +30,13 @@
      inkscape:window-height="1019"
      id="namedview48"
      showgrid="true"
-     inkscape:zoom="256"
-     inkscape:cx="15.523438"
-     inkscape:cy="20.271484"
+     inkscape:zoom="34.041667"
+     inkscape:cx="11.397797"
+     inkscape:cy="12.058751"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      inkscape:snap-to-guides="false"
      inkscape:snap-grids="false"
@@ -47,12 +47,6 @@
      inkscape:showpageshadow="2"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1">
-    <inkscape:grid
-       type="xygrid"
-       id="grid858"
-       empspacing="4"
-       originx="0"
-       originy="0" />
     <inkscape:grid
        type="xygrid"
        id="grid860"
@@ -581,7 +575,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -618,8 +611,7 @@
      id="layer2"
      inkscape:label="Layer 2"
      style="display:inline"
-     transform="translate(0,-104)"
-     sodipodi:insensitive="true">
+     transform="translate(0,-104)">
     <rect
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient891);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.999997;marker:none;enable-background:accumulate"
        id="rect5505-21-3"
@@ -649,7 +641,7 @@
        x="2.5006387"
        y="106.50098"
        id="rect1009"
-       style="color:#000000;font-variation-settings:normal;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:none;fill-opacity:1;stroke:url(#linearGradient3965);stroke-width:1.00012;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate;stop-color:#000000;stop-opacity:1" />
+       style="color:#000000;font-variation-settings:normal;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:none;fill-opacity:1;stroke:url(#linearGradient3965);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate;stop-color:#000000;stop-opacity:1" />
   </g>
   <g
      inkscape:groupmode="layer"

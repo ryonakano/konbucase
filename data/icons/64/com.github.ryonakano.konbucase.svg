@@ -25,12 +25,12 @@
      inkscape:snap-grids="false"
      inkscape:snap-to-guides="false"
      inkscape:document-rotation="0"
-     inkscape:current-layer="svg3049"
+     inkscape:current-layer="layer2"
      inkscape:window-maximized="1"
      inkscape:window-y="30"
      inkscape:window-x="0"
      inkscape:cy="32.963855"
-     inkscape:cx="27.604819"
+     inkscape:cx="22.746988"
      inkscape:zoom="12.96875"
      showgrid="true"
      id="namedview48"
@@ -47,12 +47,6 @@
      inkscape:showpageshadow="2"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1">
-    <inkscape:grid
-       originy="0"
-       originx="0"
-       empspacing="4"
-       id="grid858"
-       type="xygrid" />
     <inkscape:grid
        originy="0"
        originx="0"
@@ -546,7 +540,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -587,10 +580,10 @@
        transform="matrix(1.0873786,0,0,1.0873786,-2.7961103,-10.020396)"
        d="m 12.227653,71.7509 h 39.544683 c 3.311622,0 5.977658,2.666056 5.977658,5.977705 V 117.2732 c 0,3.31164 -2.666036,5.9777 -5.977658,5.9777 H 12.227653 c -3.3116229,0 -5.9776587,-2.66606 -5.9776587,-5.9777 V 77.728605 c 0,-3.311649 2.6660358,-5.977705 5.9776587,-5.977705 z" />
     <path
-       style="color:#000000;fill:#ad5f00;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;opacity:0.5"
+       style="color:#000000;opacity:0.5;fill:#ad5f00;stroke-width:0.9363665;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
        d="m 11.869141,71.283203 c -3.3637445,0 -6.087891,2.722174 -6.087891,6.085938 v 40.263669 c 0,3.36377 2.7241465,6.08594 6.087891,6.08594 h 40.261718 c 3.363745,0 6.087891,-2.72217 6.087891,-6.08594 V 77.369141 c 0,-3.363764 -2.724146,-6.085938 -6.087891,-6.085938 z m 0,0.935547 h 40.261718 c 2.861193,0 5.150391,2.289171 5.150391,5.150391 v 40.263669 c 0,2.86122 -2.289198,5.15039 -5.150391,5.15039 H 11.869141 c -2.8611927,0 -5.150391,-2.28917 -5.150391,-5.15039 V 77.369141 c 0,-2.86122 2.2891983,-5.150391 5.150391,-5.150391 z"
        id="rect5505-21-3-1"
-       transform="matrix(1.0679612,0,0,1.0679612,-2.1747512,-8.1271744)" />
+       transform="matrix(1.067938,0,0,1.0679778,-2.1740166,-8.1288783)" />
     <path
        id="rect998"
        transform="matrix(1.067926,0,0,1.067926,-2.1736326,-8.1227857)"
