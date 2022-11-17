@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-17 21:27+0900\n"
-"PO-Revision-Date: 2022-10-11 15:17+0000\n"
+"PO-Revision-Date: 2022-11-19 18:48+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/konbucase-"
-"extra/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/"
+"konbucase-metadata/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,11 +55,11 @@ msgstr ""
 
 #: data/konbucase.metainfo.xml.in:24
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Окно приложения в светлом режиме"
 
 #: data/konbucase.metainfo.xml.in:29
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Окно приложения в тёмном режиме"
 
 #: data/konbucase.metainfo.xml.in:52
 msgid "Ryo Nakano"
@@ -185,8 +185,6 @@ msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "Добавлен голландский перевод (спасибо @Vistaus)"
 
 #: data/konbucase.metainfo.xml.in:152
-#, fuzzy
-#| msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 msgid "Add Portuguese translation (thanks to @rottenpants466)"
 msgstr "Добавлен португальский перевод (спасибо @rottenpants466)"
 
