@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-17 21:27+0900\n"
-"PO-Revision-Date: 2022-09-26 16:21+0000\n"
+"PO-Revision-Date: 2022-11-24 17:48+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/konbucase-"
-"extra/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/"
+"konbucase-metadata/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: data/konbucase.metainfo.xml.in:9 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -52,11 +52,11 @@ msgstr ""
 
 #: data/konbucase.metainfo.xml.in:24
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Venster met licht thema"
 
 #: data/konbucase.metainfo.xml.in:29
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Venster met donker thema"
 
 #: data/konbucase.metainfo.xml.in:52
 msgid "Ryo Nakano"
@@ -81,13 +81,11 @@ msgstr ""
 #: data/konbucase.metainfo.xml.in:61 data/konbucase.metainfo.xml.in:70
 #: data/konbucase.metainfo.xml.in:171 data/konbucase.metainfo.xml.in:183
 msgid "Update translations"
-msgstr "Vertalingen bijgewerkt"
+msgstr "Bijgewerkt: vertalingen"
 
 #: data/konbucase.metainfo.xml.in:69
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
-msgstr "Japanse vertaling bijgewerkt"
+msgstr "Bijgewerkt: Flatpak-runtimeversie"
 
 #: data/konbucase.metainfo.xml.in:78
 msgid "Check desktop environment on runtime"
@@ -96,7 +94,7 @@ msgstr ""
 #: data/konbucase.metainfo.xml.in:80 data/konbucase.metainfo.xml.in:93
 #: data/konbucase.metainfo.xml.in:106
 msgid "Translation updates:"
-msgstr ""
+msgstr "Vertaalupdates:"
 
 #: data/konbucase.metainfo.xml.in:82
 #, fuzzy
@@ -114,7 +112,7 @@ msgstr ""
 #: data/konbucase.metainfo.xml.in:95 data/konbucase.metainfo.xml.in:109
 #: data/konbucase.metainfo.xml.in:128 data/konbucase.metainfo.xml.in:138
 msgid "Update Japanese translation"
-msgstr "Japanse vertaling bijgewerkt"
+msgstr "Bijgewerkt: Japanse vertaling"
 
 #: data/konbucase.metainfo.xml.in:103
 msgid "Rounded window corners"
@@ -222,7 +220,7 @@ msgstr "Ondersteuning voor donker thema per toepassing"
 
 #: data/konbucase.metainfo.xml.in:191
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Franse vertaling (met dank aan @NathanBnm)"
+msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
 
 #: data/konbucase.metainfo.xml.in:192
 msgid "Add Italian translation (thanks to @mirkobrombin)"
@@ -240,7 +238,7 @@ msgstr ""
 
 #: data/konbucase.metainfo.xml.in:201
 msgid "Initial release"
-msgstr "Initiële uitgave"
+msgstr "Eerste versie"
 
 #: data/konbucase.desktop.in:4
 msgid "Case Converting App"
