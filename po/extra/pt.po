@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the extra package.
 # André Barata <andretiagob@protonmail.com>, 2020.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2022.
+# ssantos <ssantos@web.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-17 21:27+0900\n"
-"PO-Revision-Date: 2022-11-19 18:48+0000\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"PO-Revision-Date: 2022-12-14 22:49+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
 "konbucase-metadata/pt/>\n"
 "Language: pt\n"
@@ -55,11 +56,11 @@ msgstr ""
 
 #: data/konbucase.metainfo.xml.in:24
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Janela da app no modo leve"
 
 #: data/konbucase.metainfo.xml.in:29
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Janela da app no modo escuro"
 
 #: data/konbucase.metainfo.xml.in:52
 msgid "Ryo Nakano"
