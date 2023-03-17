@@ -14,10 +14,6 @@ add_project_arguments(
     language: 'c'
 )
 
-if get_option('debug_build')
-    add_project_arguments('-g', language: 'vala')
-endif
-
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
