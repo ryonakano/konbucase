@@ -14,8 +14,8 @@ add_project_arguments(
     language: 'c'
 )
 
-if get_option('enable_debug')
-    add_project_arguments('--debug', language: 'vala')
+if get_option('debug')
+    add_project_arguments('-g', language: 'vala')
 endif
 
 config_data = configuration_data()

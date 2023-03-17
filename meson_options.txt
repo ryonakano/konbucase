@@ -1,2 +1,2 @@
-option('enable_debug', type: 'boolean', value: 'false', description: 'Enable this when debugging in Visual Studio Code using GDB')
+option('debug', type: 'boolean', value: 'false', description: 'Produce debug symbol')
 option('is_native_build', type: 'boolean', value: 'true', description: 'Whether building natively or building into Flatpak')
