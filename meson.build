@@ -14,7 +14,7 @@ add_project_arguments(
     language: 'c'
 )
 
-if get_option('debug')
+if get_option('debug_build')
     add_project_arguments('-g', language: 'vala')
 endif
 
@@ -48,7 +48,7 @@ sources = files(
     'src' / 'TextType.vala'
 )
 
-if get_option('is_native_build')
+if get_option('native_build')
     chcase_subproject = subproject('chcase')
     chcase_deps = chcase_subproject.get_variable('libchcase')
     dependencies += chcase_deps

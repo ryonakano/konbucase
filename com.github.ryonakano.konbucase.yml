@@ -19,7 +19,7 @@ modules:
   - name: konbucase
     buildsystem: meson
     config-opts:
-      - -Dis_native_build=false
+      - -Dnative_build=false
     sources:
       - type: dir
         path: .

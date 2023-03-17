@@ -1,2 +1,2 @@
-option('debug', type: 'boolean', value: 'false', description: 'Produce debug symbol')
-option('is_native_build', type: 'boolean', value: 'true', description: 'Whether building natively or building into Flatpak')
+option('debug_build', type: 'boolean', value: 'false', description: 'Produce debug symbol')
+option('native_build', type: 'boolean', value: 'true', description: 'Whether building natively or building into Flatpak')
