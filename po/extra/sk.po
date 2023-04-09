@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-17 21:27+0900\n"
+"POT-Creation-Date: 2023-04-09 09:23+0000\n"
 "PO-Revision-Date: 2022-04-23 17:09+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -19,25 +19,25 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.12.1-dev\n"
 
-#: data/konbucase.metainfo.xml.in:9 data/konbucase.desktop.in:3
+#: data/konbucase.metainfo.xml.in:10 data/konbucase.desktop.in:3
 msgid "KonbuCase"
 msgstr "KonbuCase"
 
-#: data/konbucase.metainfo.xml.in:10 data/konbucase.desktop.in:5
+#: data/konbucase.metainfo.xml.in:11 data/konbucase.desktop.in:5
 msgid "Convert case in your text"
 msgstr "Upravte veľkosti jednotlivých písmen v texte"
 
-#: data/konbucase.metainfo.xml.in:12
+#: data/konbucase.metainfo.xml.in:13
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
 "Malý nástroj na úpravu textu, ktorý vám umožňuje zmeniť jednotlivé písmená v "
 "texte na veľké/malé podľa prednastavených možností."
 
-#: data/konbucase.metainfo.xml.in:15
+#: data/konbucase.metainfo.xml.in:16
 msgid "Features include:"
 msgstr "Funkcie zahŕňajú:"
 
-#: data/konbucase.metainfo.xml.in:17
+#: data/konbucase.metainfo.xml.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
@@ -45,7 +45,7 @@ msgstr ""
 "Stlačte tlačidlo „Kopírovať do schránky“ na skopírovanie celého textu v "
 "zobrazení textu bez predošlého výberu"
 
-#: data/konbucase.metainfo.xml.in:18
+#: data/konbucase.metainfo.xml.in:19
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
@@ -54,90 +54,99 @@ msgstr ""
 "Sentence case (Vetný text), snake_case (hadí_text), kebab-case (kebabový-"
 "text), and space-separated (oddelený medzerami)"
 
-#: data/konbucase.metainfo.xml.in:24
+#: data/konbucase.metainfo.xml.in:25
 msgid "App window in the light mode"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:29
+#: data/konbucase.metainfo.xml.in:30
 msgid "App window in the dark mode"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:52
+#: data/konbucase.metainfo.xml.in:53
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/konbucase.metainfo.xml.in:58
-msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
-
 #: data/konbucase.metainfo.xml.in:59
-msgid ""
-"Set kebab-case as a default case for the result view, so that users can "
-"understand what they can do with the app more intuitively"
+msgid "New icon shape (big thanks to @lenemter)"
 msgstr ""
 
 #: data/konbucase.metainfo.xml.in:60
-msgid ""
-"Fix no style button selected on non-Pantheon desktop environments when first "
-"launch"
+msgid "Improve app metainfo"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:61 data/konbucase.metainfo.xml.in:70
-#: data/konbucase.metainfo.xml.in:171 data/konbucase.metainfo.xml.in:183
-msgid "Update translations"
-msgstr "Aktualizované preklady"
-
-#: data/konbucase.metainfo.xml.in:69
+#: data/konbucase.metainfo.xml.in:61 data/konbucase.metainfo.xml.in:81
 #, fuzzy
 #| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
 msgstr "Aktualizácia prekladu do japončiny"
 
-#: data/konbucase.metainfo.xml.in:78
+#: data/konbucase.metainfo.xml.in:62 data/konbucase.metainfo.xml.in:73
+#: data/konbucase.metainfo.xml.in:82 data/konbucase.metainfo.xml.in:183
+#: data/konbucase.metainfo.xml.in:195
+msgid "Update translations"
+msgstr "Aktualizované preklady"
+
+#: data/konbucase.metainfo.xml.in:70
+msgid "Migrate to GTK 4, the latest version of GTK"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:71
+msgid ""
+"Set kebab-case as a default case for the result view, so that users can "
+"understand what they can do with the app more intuitively"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:72
+msgid ""
+"Fix no style button selected on non-Pantheon desktop environments when first "
+"launch"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:90
 msgid "Check desktop environment on runtime"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:80 data/konbucase.metainfo.xml.in:93
-#: data/konbucase.metainfo.xml.in:106
+#: data/konbucase.metainfo.xml.in:92 data/konbucase.metainfo.xml.in:105
+#: data/konbucase.metainfo.xml.in:118
 msgid "Translation updates:"
 msgstr "Aktualizácie prekladov:"
 
-#: data/konbucase.metainfo.xml.in:82
+#: data/konbucase.metainfo.xml.in:94
 #, fuzzy
 #| msgid "Update Italian translation (thanks to @Sav22999)"
 msgid "Update Italian translation (thanks to @albanobattistella)"
 msgstr "Aktualizovaný preklad do taliančiny (vďaka @Sav22999)"
 
-#: data/konbucase.metainfo.xml.in:90
+#: data/konbucase.metainfo.xml.in:102
 msgid "Focus the source view by default"
 msgstr "Predvolene označovať zobrazenie zdroja"
 
-#: data/konbucase.metainfo.xml.in:91
+#: data/konbucase.metainfo.xml.in:103
 msgid "Redesign the style switcher"
 msgstr "Prerobený prepínač štýlov"
 
-#: data/konbucase.metainfo.xml.in:95 data/konbucase.metainfo.xml.in:109
-#: data/konbucase.metainfo.xml.in:128 data/konbucase.metainfo.xml.in:138
+#: data/konbucase.metainfo.xml.in:107 data/konbucase.metainfo.xml.in:121
+#: data/konbucase.metainfo.xml.in:140 data/konbucase.metainfo.xml.in:150
 msgid "Update Japanese translation"
 msgstr "Aktualizácia prekladu do japončiny"
 
-#: data/konbucase.metainfo.xml.in:103
+#: data/konbucase.metainfo.xml.in:115
 msgid "Rounded window corners"
 msgstr "Zaoblenie rohov okna"
 
-#: data/konbucase.metainfo.xml.in:104
+#: data/konbucase.metainfo.xml.in:116
 msgid "Support building without Granite for other distributions"
 msgstr "Podpora kompilácie bez Granite pre ostatné distribúcie"
 
-#: data/konbucase.metainfo.xml.in:108
+#: data/konbucase.metainfo.xml.in:120
 msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
 msgstr "Pridaný preklad do litovčiny (vďaka @PolPolyLingo)"
 
-#: data/konbucase.metainfo.xml.in:117
+#: data/konbucase.metainfo.xml.in:129
 msgid "Fix building fails in Flatpak"
 msgstr "Opravené problémy s kompiláciou Flatpak verzie"
 
-#: data/konbucase.metainfo.xml.in:125
+#: data/konbucase.metainfo.xml.in:137
 msgid ""
 "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
 "manifest"
@@ -145,108 +154,108 @@ msgstr ""
 "Uverejnenie aplikácie do nového AppCentra na elementary OS 6 s Flatpak "
 "manifestom"
 
-#: data/konbucase.metainfo.xml.in:126
+#: data/konbucase.metainfo.xml.in:138
 msgid "Update Dutch translation (thanks to @Vistaus)"
 msgstr "Aktualizácia prekladu do holandčiny (vďaka @Vistaus)"
 
-#: data/konbucase.metainfo.xml.in:127
+#: data/konbucase.metainfo.xml.in:139
 msgid "Update Italian translation (thanks to @Sav22999)"
 msgstr "Aktualizovaný preklad do taliančiny (vďaka @Sav22999)"
 
-#: data/konbucase.metainfo.xml.in:136
+#: data/konbucase.metainfo.xml.in:148
 msgid "Support Sentence case"
 msgstr "Pridaná podpora Sentence case (Vetného textu)"
 
-#: data/konbucase.metainfo.xml.in:137
+#: data/konbucase.metainfo.xml.in:149
 msgid "Add Turkish translation (thanks to @safak45x)"
 msgstr "Pridaný preklad do turečtiny (vďaka @safak45x)"
 
-#: data/konbucase.metainfo.xml.in:139
+#: data/konbucase.metainfo.xml.in:151
 msgid "Clean code"
 msgstr "Upratanie kódu"
 
-#: data/konbucase.metainfo.xml.in:147
+#: data/konbucase.metainfo.xml.in:159
 msgid "Separate the core part as an independent library"
 msgstr "Oddelenie jadra aplikácie na nezávislú knižnicu"
 
-#: data/konbucase.metainfo.xml.in:148
+#: data/konbucase.metainfo.xml.in:160
 msgid "Rename all occurrence of \"target\" to \"source\""
 msgstr "Premenované všetky výskyty slov „target“ na „source“"
 
-#: data/konbucase.metainfo.xml.in:149
+#: data/konbucase.metainfo.xml.in:161
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr ""
 "Oprava stavu, keď sa zmena veľkosti výsledného textu niekedy neaplikuje"
 
-#: data/konbucase.metainfo.xml.in:150
+#: data/konbucase.metainfo.xml.in:162
 msgid "Quit the app with Ctrl+Q"
 msgstr "Ukončenie aplikácie pomocou Ctrl+Q"
 
-#: data/konbucase.metainfo.xml.in:151
+#: data/konbucase.metainfo.xml.in:163
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "Pridaný preklad do holandčiny (vďaka @Vistaus)"
 
-#: data/konbucase.metainfo.xml.in:152
+#: data/konbucase.metainfo.xml.in:164
 #, fuzzy
 #| msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 msgid "Add Portuguese translation (thanks to @rottenpants466)"
 msgstr "Pridaný preklad do portugalčiny (vďaka @rottenpants466)"
 
-#: data/konbucase.metainfo.xml.in:160
+#: data/konbucase.metainfo.xml.in:172
 msgid "Save changes in the app state on time"
 msgstr "Ukladať zmeny v stave aplikácie včas"
 
-#: data/konbucase.metainfo.xml.in:161
+#: data/konbucase.metainfo.xml.in:173
 msgid "Side-by-side view"
 msgstr "Zobrazenie vstupu a výstupu vedľa seba"
 
-#: data/konbucase.metainfo.xml.in:162
+#: data/konbucase.metainfo.xml.in:174
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr "Vylepšenie ikonky aplikácie (veľká vďaka @Fatih20)"
 
-#: data/konbucase.metainfo.xml.in:170
+#: data/konbucase.metainfo.xml.in:182
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
 "Oprava problému, keď sa zmena globálneho štýlu operačného systému "
 "neaplikovala v aplikácii"
 
-#: data/konbucase.metainfo.xml.in:179
+#: data/konbucase.metainfo.xml.in:191
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 "Opravené zamrznutia aplikácie pri pokuse o vloženie textu do "
 "result_combo_entry"
 
-#: data/konbucase.metainfo.xml.in:180
+#: data/konbucase.metainfo.xml.in:192
 msgid "Respect an elementary OS-wide dark preference"
 msgstr "Rešpektovať globálnu preferenciu tmavého štýlu v elementary OS"
 
-#: data/konbucase.metainfo.xml.in:181
+#: data/konbucase.metainfo.xml.in:193
 msgid "Add a description tooltip to each case"
 msgstr "Pridaný popis ku každému formátu textu v zozname"
 
-#: data/konbucase.metainfo.xml.in:182
+#: data/konbucase.metainfo.xml.in:194
 msgid "Allow setting per-app dark style preference"
 msgstr ""
 "Umožnenie zmeny predvoľby tmavého štýlu v aplikácii nezávisle od systémového "
 "nastavenia"
 
-#: data/konbucase.metainfo.xml.in:191
+#: data/konbucase.metainfo.xml.in:203
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
 
-#: data/konbucase.metainfo.xml.in:192
+#: data/konbucase.metainfo.xml.in:204
 msgid "Add Italian translation (thanks to @mirkobrombin)"
 msgstr "Pridaný preklad do taliančiny (vďaka @mirkobrombin)"
 
-#: data/konbucase.metainfo.xml.in:193
+#: data/konbucase.metainfo.xml.in:205
 msgid "Add Japanese translation"
 msgstr "Pridaný preklad do japončiny"
 
-#: data/konbucase.metainfo.xml.in:194
+#: data/konbucase.metainfo.xml.in:206
 msgid "Update result texts when changing ComboBox selection"
 msgstr "Aktualizovať výsledný text pri zmene formátu v kontextovom menu"
 
-#: data/konbucase.metainfo.xml.in:201
+#: data/konbucase.metainfo.xml.in:213
 msgid "Initial release"
 msgstr "Prvé vydanie"
 

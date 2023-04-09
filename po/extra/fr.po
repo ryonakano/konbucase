@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-17 21:27+0900\n"
+"POT-Creation-Date: 2023-04-09 09:23+0000\n"
 "PO-Revision-Date: 2023-01-13 18:50+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/"
-"konbucase-metadata/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/konbucase-"
+"metadata/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,25 +21,25 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.15.1-dev\n"
 
-#: data/konbucase.metainfo.xml.in:9 data/konbucase.desktop.in:3
+#: data/konbucase.metainfo.xml.in:10 data/konbucase.desktop.in:3
 msgid "KonbuCase"
 msgstr "KonbuCase"
 
-#: data/konbucase.metainfo.xml.in:10 data/konbucase.desktop.in:5
+#: data/konbucase.metainfo.xml.in:11 data/konbucase.desktop.in:5
 msgid "Convert case in your text"
 msgstr "Modifiez la casse de votre texte"
 
-#: data/konbucase.metainfo.xml.in:12
+#: data/konbucase.metainfo.xml.in:13
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
 "Une petite application pour vous permettre de modifier la casse de votre "
 "texte."
 
-#: data/konbucase.metainfo.xml.in:15
+#: data/konbucase.metainfo.xml.in:16
 msgid "Features include:"
 msgstr "Fonctionnalités incluses :"
 
-#: data/konbucase.metainfo.xml.in:17
+#: data/konbucase.metainfo.xml.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
@@ -47,7 +47,7 @@ msgstr ""
 "Cliquez sur le bouton « Copier dans le presse-papiers » pour copier tout le "
 "texte dans la vue sans avoir à le copier"
 
-#: data/konbucase.metainfo.xml.in:18
+#: data/konbucase.metainfo.xml.in:19
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
@@ -55,23 +55,41 @@ msgstr ""
 "Modifiez la casse de votre texte en camelCase, PascalCase, Sentence case, "
 "snake_case, kebab-case et séparé par des espaces"
 
-#: data/konbucase.metainfo.xml.in:24
+#: data/konbucase.metainfo.xml.in:25
 msgid "App window in the light mode"
 msgstr "Fenêtre de l’application en mode clair"
 
-#: data/konbucase.metainfo.xml.in:29
+#: data/konbucase.metainfo.xml.in:30
 msgid "App window in the dark mode"
 msgstr "Fenêtre de l’application en mode sombre"
 
-#: data/konbucase.metainfo.xml.in:52
+#: data/konbucase.metainfo.xml.in:53
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/konbucase.metainfo.xml.in:58
+#: data/konbucase.metainfo.xml.in:59
+msgid "New icon shape (big thanks to @lenemter)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:60
+msgid "Improve app metainfo"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:61 data/konbucase.metainfo.xml.in:81
+msgid "Update Flatpak runtime version"
+msgstr "Mise à jour de l’environnement d’exécution Flatpak"
+
+#: data/konbucase.metainfo.xml.in:62 data/konbucase.metainfo.xml.in:73
+#: data/konbucase.metainfo.xml.in:82 data/konbucase.metainfo.xml.in:183
+#: data/konbucase.metainfo.xml.in:195
+msgid "Update translations"
+msgstr "Mise à jour des traductions"
+
+#: data/konbucase.metainfo.xml.in:70
 msgid "Migrate to GTK 4, the latest version of GTK"
 msgstr "Migration vers GTK 4, la dernière version de GTK"
 
-#: data/konbucase.metainfo.xml.in:59
+#: data/konbucase.metainfo.xml.in:71
 msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
@@ -80,7 +98,7 @@ msgstr ""
 "pour que les utilisateurs puissent comprendre ce qu’ils peuvent faire avec "
 "l’application plus intuitivement"
 
-#: data/konbucase.metainfo.xml.in:60
+#: data/konbucase.metainfo.xml.in:72
 msgid ""
 "Fix no style button selected on non-Pantheon desktop environments when first "
 "launch"
@@ -88,60 +106,51 @@ msgstr ""
 "Correction du bouton sans style sélectionné sur les environnements de bureau "
 "non-Pantheon lors du premier lancement"
 
-#: data/konbucase.metainfo.xml.in:61 data/konbucase.metainfo.xml.in:70
-#: data/konbucase.metainfo.xml.in:171 data/konbucase.metainfo.xml.in:183
-msgid "Update translations"
-msgstr "Mise à jour des traductions"
-
-#: data/konbucase.metainfo.xml.in:69
-msgid "Update Flatpak runtime version"
-msgstr "Mise à jour de l’environnement d’exécution Flatpak"
-
-#: data/konbucase.metainfo.xml.in:78
+#: data/konbucase.metainfo.xml.in:90
 msgid "Check desktop environment on runtime"
 msgstr ""
 "Vérification de l’environnement de bureau dans l’environnement d’exécution"
 
-#: data/konbucase.metainfo.xml.in:80 data/konbucase.metainfo.xml.in:93
-#: data/konbucase.metainfo.xml.in:106
+#: data/konbucase.metainfo.xml.in:92 data/konbucase.metainfo.xml.in:105
+#: data/konbucase.metainfo.xml.in:118
 msgid "Translation updates:"
 msgstr "Mise à jour des traductions :"
 
-#: data/konbucase.metainfo.xml.in:82
+#: data/konbucase.metainfo.xml.in:94
 msgid "Update Italian translation (thanks to @albanobattistella)"
 msgstr "Mise à jour des traductions italiennes (grâce à @albanobattistella)"
 
-#: data/konbucase.metainfo.xml.in:90
+#: data/konbucase.metainfo.xml.in:102
 msgid "Focus the source view by default"
 msgstr "Focaliser la vue source par défaut"
 
-#: data/konbucase.metainfo.xml.in:91
+#: data/konbucase.metainfo.xml.in:103
 msgid "Redesign the style switcher"
 msgstr "Nouveau design du bouton pour changer le style"
 
-#: data/konbucase.metainfo.xml.in:95 data/konbucase.metainfo.xml.in:109
-#: data/konbucase.metainfo.xml.in:128 data/konbucase.metainfo.xml.in:138
+#: data/konbucase.metainfo.xml.in:107 data/konbucase.metainfo.xml.in:121
+#: data/konbucase.metainfo.xml.in:140 data/konbucase.metainfo.xml.in:150
 msgid "Update Japanese translation"
 msgstr "Mise à jour de la traduction japonaise"
 
-#: data/konbucase.metainfo.xml.in:103
+#: data/konbucase.metainfo.xml.in:115
 msgid "Rounded window corners"
 msgstr "Bords de fenêtre arrondis"
 
-#: data/konbucase.metainfo.xml.in:104
+#: data/konbucase.metainfo.xml.in:116
 msgid "Support building without Granite for other distributions"
 msgstr ""
 "Prise en charge de la construction sans Granite pour les autres distributions"
 
-#: data/konbucase.metainfo.xml.in:108
+#: data/konbucase.metainfo.xml.in:120
 msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
 msgstr "Ajout d’une traduction lituanienne (grâce à @PolPolyLingo)"
 
-#: data/konbucase.metainfo.xml.in:117
+#: data/konbucase.metainfo.xml.in:129
 msgid "Fix building fails in Flatpak"
 msgstr "Correction des échecs de construction dans Flatpak"
 
-#: data/konbucase.metainfo.xml.in:125
+#: data/konbucase.metainfo.xml.in:137
 msgid ""
 "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
 "manifest"
@@ -149,107 +158,107 @@ msgstr ""
 "Publication de l’application sur le nouvel AppCenter dans elementary OS 6 "
 "avec le manifeste Flatpak"
 
-#: data/konbucase.metainfo.xml.in:126
+#: data/konbucase.metainfo.xml.in:138
 msgid "Update Dutch translation (thanks to @Vistaus)"
 msgstr "Mise à jour de la traduction néerlandaise (grâce à @Vistaus)"
 
-#: data/konbucase.metainfo.xml.in:127
+#: data/konbucase.metainfo.xml.in:139
 msgid "Update Italian translation (thanks to @Sav22999)"
 msgstr "Mise à jour de la traduction italienne (grâce à @Sav22999)"
 
-#: data/konbucase.metainfo.xml.in:136
+#: data/konbucase.metainfo.xml.in:148
 msgid "Support Sentence case"
 msgstr "Prise en charge de la casse Sentence"
 
-#: data/konbucase.metainfo.xml.in:137
+#: data/konbucase.metainfo.xml.in:149
 msgid "Add Turkish translation (thanks to @safak45x)"
 msgstr "Ajout d’une traduction turque (grâce à @safak45x)"
 
-#: data/konbucase.metainfo.xml.in:139
+#: data/konbucase.metainfo.xml.in:151
 msgid "Clean code"
 msgstr "Nettoyage du code"
 
-#: data/konbucase.metainfo.xml.in:147
+#: data/konbucase.metainfo.xml.in:159
 msgid "Separate the core part as an independent library"
 msgstr ""
 "Séparation du cœur de l’application en tant que bibliothèque indépendante"
 
-#: data/konbucase.metainfo.xml.in:148
+#: data/konbucase.metainfo.xml.in:160
 msgid "Rename all occurrence of \"target\" to \"source\""
 msgstr "Renommage des occurrences de « cible » en « source »"
 
-#: data/konbucase.metainfo.xml.in:149
+#: data/konbucase.metainfo.xml.in:161
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr ""
 "Correction du changement du résultat de casse qui ne prenait parfois pas "
 "effet"
 
-#: data/konbucase.metainfo.xml.in:150
+#: data/konbucase.metainfo.xml.in:162
 msgid "Quit the app with Ctrl+Q"
 msgstr "Quitter l’application avec Ctrl+Q"
 
-#: data/konbucase.metainfo.xml.in:151
+#: data/konbucase.metainfo.xml.in:163
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "Ajout d’une traduction néerlandaise (grâce à @Vistaus)"
 
-#: data/konbucase.metainfo.xml.in:152
+#: data/konbucase.metainfo.xml.in:164
 msgid "Add Portuguese translation (thanks to @rottenpants466)"
 msgstr "Ajout d’une traduction en portugais (grâce à @rottenpants466)"
 
-#: data/konbucase.metainfo.xml.in:160
+#: data/konbucase.metainfo.xml.in:172
 msgid "Save changes in the app state on time"
 msgstr "Sauvegarde des changements dans l’état de l'application à temps"
 
-#: data/konbucase.metainfo.xml.in:161
+#: data/konbucase.metainfo.xml.in:173
 msgid "Side-by-side view"
 msgstr "Vue côte à côte"
 
-#: data/konbucase.metainfo.xml.in:162
+#: data/konbucase.metainfo.xml.in:174
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr "Amélioration de l’icône d’application (remerciements à @Fatih20)"
 
-#: data/konbucase.metainfo.xml.in:170
+#: data/konbucase.metainfo.xml.in:182
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
 "Correction de la modification de la préférence de style sombre du système "
 "d'exploitation n’étant pas reflétée"
 
-#: data/konbucase.metainfo.xml.in:179
+#: data/konbucase.metainfo.xml.in:191
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 "Correction du blocage de l'application lors de la saisie de textes dans "
 "result_combo_entry"
 
-#: data/konbucase.metainfo.xml.in:180
+#: data/konbucase.metainfo.xml.in:192
 msgid "Respect an elementary OS-wide dark preference"
 msgstr "Respect de la préférence du thème sombre d'elementary OS"
 
-#: data/konbucase.metainfo.xml.in:181
+#: data/konbucase.metainfo.xml.in:193
 msgid "Add a description tooltip to each case"
 msgstr "Ajout d'une infobulle d'information pour chaque type de format"
 
-#: data/konbucase.metainfo.xml.in:182
+#: data/konbucase.metainfo.xml.in:194
 msgid "Allow setting per-app dark style preference"
 msgstr "Possibilité de définir un thème sombre spécifique à l'application"
 
-#: data/konbucase.metainfo.xml.in:191
+#: data/konbucase.metainfo.xml.in:203
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Ajout d’une traduction française (grâce à @NathanBnm)"
 
-#: data/konbucase.metainfo.xml.in:192
+#: data/konbucase.metainfo.xml.in:204
 msgid "Add Italian translation (thanks to @mirkobrombin)"
 msgstr "Ajout d’une traduction italienne (grâce à @mirkobrombin)"
 
-#: data/konbucase.metainfo.xml.in:193
+#: data/konbucase.metainfo.xml.in:205
 msgid "Add Japanese translation"
 msgstr "Ajout d’une traduction japonaise"
 
-#: data/konbucase.metainfo.xml.in:194
+#: data/konbucase.metainfo.xml.in:206
 msgid "Update result texts when changing ComboBox selection"
 msgstr ""
 "Mise à jour du résultat des textes quand la sélection ComboBox est changée"
 
-#: data/konbucase.metainfo.xml.in:201
+#: data/konbucase.metainfo.xml.in:213
 msgid "Initial release"
 msgstr "Version initiale"
 
