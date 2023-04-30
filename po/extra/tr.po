@@ -3,23 +3,23 @@
 # This file is distributed under the same license as the extra package.
 #
 # Safak <bjksafak45@gmail.com>, 2020.
-# Sabri Ünal <libreajans@gmail.com>, 2022.
+# Sabri Ünal <libreajans@gmail.com>, 2022, 2023.
 # Oğuz Ersen <oguz@ersen.moe>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-09 09:23+0000\n"
-"PO-Revision-Date: 2022-11-19 18:48+0000\n"
-"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase-"
-"metadata/tr/>\n"
+"PO-Revision-Date: 2023-05-01 02:51+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/"
+"konbucase-metadata/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: data/konbucase.metainfo.xml.in:10 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -69,11 +69,11 @@ msgstr "Ryo Nakano"
 
 #: data/konbucase.metainfo.xml.in:59
 msgid "New icon shape (big thanks to @lenemter)"
-msgstr ""
+msgstr "Yeni simge şekli (@lenemter'e büyük teşekkürler)"
 
 #: data/konbucase.metainfo.xml.in:60
 msgid "Improve app metainfo"
-msgstr ""
+msgstr "Uygulama üst bilgileri iyileştirildi"
 
 #: data/konbucase.metainfo.xml.in:61 data/konbucase.metainfo.xml.in:81
 msgid "Update Flatpak runtime version"
