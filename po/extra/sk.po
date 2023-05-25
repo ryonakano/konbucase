@@ -2,22 +2,22 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
-# JohnDumpling <john_dumpling@protonmail.com>, 2022.
+# JohnDumpling <john_dumpling@protonmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-09 09:23+0000\n"
-"PO-Revision-Date: 2022-04-23 17:09+0000\n"
+"PO-Revision-Date: 2023-05-26 12:51+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/konbucase-"
-"extra/sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
+"konbucase-metadata/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.12.1-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: data/konbucase.metainfo.xml.in:10 data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -56,11 +56,11 @@ msgstr ""
 
 #: data/konbucase.metainfo.xml.in:25
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Okno aplikácie v svetlom režime"
 
 #: data/konbucase.metainfo.xml.in:30
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Okno aplikácie v tmavom režime"
 
 #: data/konbucase.metainfo.xml.in:53
 msgid "Ryo Nakano"
@@ -68,17 +68,15 @@ msgstr "Ryo Nakano"
 
 #: data/konbucase.metainfo.xml.in:59
 msgid "New icon shape (big thanks to @lenemter)"
-msgstr ""
+msgstr "Nový tvar ikonky (veľká vďaka patrí @lenemter)"
 
 #: data/konbucase.metainfo.xml.in:60
 msgid "Improve app metainfo"
-msgstr ""
+msgstr "Zlepšenie metainformácií aplikácie"
 
 #: data/konbucase.metainfo.xml.in:61 data/konbucase.metainfo.xml.in:81
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
-msgstr "Aktualizácia prekladu do japončiny"
+msgstr "Aktualizácia verzie behového prostredia Flatpak"
 
 #: data/konbucase.metainfo.xml.in:62 data/konbucase.metainfo.xml.in:73
 #: data/konbucase.metainfo.xml.in:82 data/konbucase.metainfo.xml.in:183
@@ -88,23 +86,27 @@ msgstr "Aktualizované preklady"
 
 #: data/konbucase.metainfo.xml.in:70
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "Migrácia na GTK 4, čo je najnovšia verzia GTK"
 
 #: data/konbucase.metainfo.xml.in:71
 msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
 msgstr ""
+"Nastavenie kebab-case na predvolený formát textu aby používatelia "
+"intuitívnejšie pochopili, čo môžu s aplikáciou robiť"
 
 #: data/konbucase.metainfo.xml.in:72
 msgid ""
 "Fix no style button selected on non-Pantheon desktop environments when first "
 "launch"
 msgstr ""
+"Opraviť tlačidlo bez štýlu vybraté pri prvom spustení v ne-Pantheonových "
+"pracovných prostrediach"
 
 #: data/konbucase.metainfo.xml.in:90
 msgid "Check desktop environment on runtime"
-msgstr ""
+msgstr "Zistiť pracovné prostredie pri spustení aplikácie"
 
 #: data/konbucase.metainfo.xml.in:92 data/konbucase.metainfo.xml.in:105
 #: data/konbucase.metainfo.xml.in:118
@@ -112,10 +114,8 @@ msgid "Translation updates:"
 msgstr "Aktualizácie prekladov:"
 
 #: data/konbucase.metainfo.xml.in:94
-#, fuzzy
-#| msgid "Update Italian translation (thanks to @Sav22999)"
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Aktualizovaný preklad do taliančiny (vďaka @Sav22999)"
+msgstr "Aktualizovaný preklad do taliančiny (vďaka @albanobattistella)"
 
 #: data/konbucase.metainfo.xml.in:102
 msgid "Focus the source view by default"
@@ -196,8 +196,6 @@ msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "Pridaný preklad do holandčiny (vďaka @Vistaus)"
 
 #: data/konbucase.metainfo.xml.in:164
-#, fuzzy
-#| msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 msgid "Add Portuguese translation (thanks to @rottenpants466)"
 msgstr "Pridaný preklad do portugalčiny (vďaka @rottenpants466)"
 
