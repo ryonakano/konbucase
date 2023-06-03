@@ -138,11 +138,11 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
     public void update_color_style (bool is_prefer_dark) {
         if (is_prefer_dark) {
-            source_view.get_style_context ().remove_class ("text-view-light");
-            source_view.get_style_context ().add_class ("text-view-dark");
+            source_view.remove_css_class ("text-view-light");
+            source_view.add_css_class ("text-view-dark");
         } else {
-            source_view.get_style_context ().remove_class ("text-view-dark");
-            source_view.get_style_context ().add_class ("text-view-light");
+            source_view.remove_css_class ("text-view-dark");
+            source_view.add_css_class ("text-view-light");
         }
     }
 
