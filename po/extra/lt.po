@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Paulius NarkeviÄius <paulius.narkevicius@vilniustech.lt>, 2021.
 # dzes483 <jban@sdf.org>, 2022.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-09 09:23+0000\n"
-"PO-Revision-Date: 2022-10-30 23:40+0200\n"
-"Last-Translator: dzes483 <jban@sdf.org>\n"
+"PO-Revision-Date: 2023-07-10 02:25+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/rosp/"
-"konbucase-extra/lt/>\n"
+"konbucase-metadata/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +20,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: data/konbucase.metainfo.xml.in:10 data/konbucase.desktop.in:3
 msgid "KonbuCase"
-msgstr "KonveCase"
+msgstr "KonbuCase"
 
 #: data/konbucase.metainfo.xml.in:11 data/konbucase.desktop.in:5
 msgid "Convert case in your text"
