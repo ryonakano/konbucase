@@ -32,7 +32,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
     construct {
         var case_label = new Gtk.Label (text_type.get_case_label ());
 
-        var case_combobox = new Gtk.ComboBoxText () {
+        var case_combobox = new DropDownText () {
             halign = Gtk.Align.START,
             margin_top = 6,
             margin_bottom = 6,
@@ -100,7 +100,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
             convert_case ();
         });
 
-        case_combobox.changed.connect (() => {
+        case_combobox.notify["active-id"].connect (() => {
             case_info_button_icon.tooltip_text = set_info_button_tooltip (case_combobox.active_id);
 
             Application.settings.set_string (

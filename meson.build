@@ -37,6 +37,7 @@ dependencies = [
 ]
 
 sources = files(
+    'src' / 'Widgets' / 'DropDownText.vala',
     'src' / 'Widgets' / 'ComboEntry.vala',
     'src' / 'Application.vala',
     'src' / 'MainWindow.vala',
