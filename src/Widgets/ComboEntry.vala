@@ -100,7 +100,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
             convert_case ();
         });
 
-        case_combobox.notify["active-id"].connect (() => {
+        case_combobox.changed.connect (() => {
             case_info_button_icon.tooltip_text = set_info_button_tooltip (case_combobox.active_id);
 
             Application.settings.set_string (

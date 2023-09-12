@@ -4,6 +4,8 @@
  */
 
 public class DropDownText : Gtk.Grid {
+    public signal void changed ();
+
     public string? active_id { get; set; }
 
     private class ListStoreItem : Object {
@@ -82,6 +84,8 @@ public class DropDownText : Gtk.Grid {
                                     return true;
                                 }
         );
+
+        notify["active-id"].connect (() => { changed(); });
     }
 
     public new void append (string id, string text) {
