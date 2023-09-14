@@ -1,12 +1,14 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2020-2023 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2023 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class DropDownText : Gtk.Grid {
+public sealed class DropDownText : Gtk.Grid {
     public signal void changed ();
 
     public string? active_id { get; set; }
+
+    public Gtk.DropDown dropdown { get; set; }
 
     private class ListStoreItem : Object {
         public string id { get; construct; }
@@ -21,7 +23,7 @@ public class DropDownText : Gtk.Grid {
     }
 
     private class DropDownRow : Gtk.Grid {
-        public Gtk.Label label;
+        public Gtk.Label label { get; set; }
 
         public DropDownRow () {
         }
@@ -29,7 +31,7 @@ public class DropDownText : Gtk.Grid {
         construct {
             label = new Gtk.Label (null);
 
-            attach (label, 0, 0, 1, 1);
+            attach (label, 0, 0);
         }
     }
 
@@ -56,7 +58,7 @@ public class DropDownText : Gtk.Grid {
             row.label.label = item.text;
         });
 
-        var dropdown = new Gtk.DropDown (liststore, null) {
+        dropdown = new Gtk.DropDown (liststore, null) {
             factory = factory
         };
 
@@ -97,6 +99,15 @@ public class DropDownText : Gtk.Grid {
 
     public new void append (string id, string text) {
         liststore.append (new ListStoreItem (id, text));
+    }
+
+    public string? get_active_text () {
+        Object? selected_item = dropdown.selected_item;
+        if (selected_item == null) {
+            return null;
+        }
+
+        return ((ListStoreItem) selected_item).text;
     }
 
     public void insert (int position, string id, string text) {
