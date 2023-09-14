@@ -100,33 +100,4 @@ public sealed class DropDownText : Gtk.Grid {
     public new void append (string id, string text) {
         liststore.append (new ListStoreItem (id, text));
     }
-
-    public string? get_active_text () {
-        Object? selected_item = dropdown.selected_item;
-        if (selected_item == null) {
-            return null;
-        }
-
-        return ((ListStoreItem) selected_item).text;
-    }
-
-    public void insert (int position, string id, string text) {
-        if (position < 0) {
-            append (id, text);
-        } else {
-            liststore.insert (position, new ListStoreItem (id, text));
-        }
-    }
-
-    public void prepend (string id, string text) {
-        insert (0, id, text);
-    }
-
-    public new void remove (int position) {
-        liststore.remove (position);
-    }
-
-    public void remove_all () {
-        liststore.remove_all ();
-    }
 }
