@@ -33,7 +33,7 @@ asresources = gnome.compile_resources(
 dependencies = [
     dependency('granite-7'),
     dependency('gtk4'),
-    dependency('gtksourceview-5'),
+    dependency('gtksourceview-5')
 ]
 
 sources = files(
