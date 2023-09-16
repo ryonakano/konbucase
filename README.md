@@ -23,12 +23,14 @@ Community packages maintained by volunteers are also available on some distribut
 ### For Developers
 You'll need the following dependencies:
 
-* [libchcase](https://github.com/ryonakano/chcase) (automatically downloaded on build)
+* [libchcase](https://github.com/ryonakano/chcase)
+    * automatically downloaded on build
 * libgranite-7-dev
 * libgtk4-dev
 * libgtksourceview-5-dev
 * meson (>= 0.57.0)
-* [libryokucha](https://github.com/ryonakano/ryokucha) (automatically downloaded on build)
+* [libryokucha](https://github.com/ryonakano/ryokucha)
+    * automatically downloaded on build
 * valac
 
 Run `meson setup` to configure the build environment and run `ninja` to build
