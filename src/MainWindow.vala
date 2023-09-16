@@ -12,12 +12,6 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_resource ("/com/github/ryonakano/konbucase/Application.css");
-        Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (),
-                                                    cssprovider,
-                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
         var source_combo_entry = new Widgets.ComboEntry (TextType.SOURCE);
 
         var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL) {

@@ -23,13 +23,6 @@ config_file = configure_file(
     configuration: config_data
 )
 
-asresources = gnome.compile_resources(
-    'as-resources',
-    'data' / app_nickname + '.gresource.xml',
-    source_dir: 'data',
-    c_name: 'as'
-)
-
 dependencies = [
     dependency('granite-7'),
     dependency('gtk4'),
@@ -59,7 +52,6 @@ endif
 
 executable(
     meson.project_name(),
-    asresources,
     config_file,
     sources,
     dependencies: dependencies,

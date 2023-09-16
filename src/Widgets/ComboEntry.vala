@@ -5,6 +5,7 @@
 
 public class Widgets.ComboEntry : Gtk.Grid {
     public TextType text_type { get; construct; }
+    public GtkSource.View source_view { get; construct; }
 
     private static ChCase.Converter _converter;
     public static ChCase.Converter converter {
@@ -20,7 +21,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         }
     }
 
-    public GtkSource.View source_view { get; construct; }
+    private GtkSource.Buffer source_buffer;
     private Gtk.Button copy_clipboard_button;
 
     public ComboEntry (TextType text_type) {
@@ -68,7 +69,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         toolbar_grid.attach (case_info_button_icon, 2, 0);
         toolbar_grid.attach (copy_clipboard_button, 3, 0);
 
-        var source_buffer = new GtkSource.Buffer (null);
+        source_buffer = new GtkSource.Buffer (null);
         source_view = new GtkSource.View.with_buffer (source_buffer) {
             wrap_mode = Gtk.WrapMode.WORD_CHAR,
             hexpand = true,
@@ -138,11 +139,9 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
     public void update_color_style (bool is_prefer_dark) {
         if (is_prefer_dark) {
-            source_view.remove_css_class ("text-view-light");
-            source_view.add_css_class ("text-view-dark");
+            source_buffer.style_scheme = new GtkSource.StyleSchemeManager ().get_scheme ("solarized-dark");
         } else {
-            source_view.remove_css_class ("text-view-dark");
-            source_view.add_css_class ("text-view-light");
+            source_buffer.style_scheme = new GtkSource.StyleSchemeManager ().get_scheme ("solarized-light");
         }
     }
 
