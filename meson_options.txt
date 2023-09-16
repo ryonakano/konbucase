@@ -1,1 +1,1 @@
-option('native_build', type: 'boolean', value: 'true', description: 'Whether building natively or building into Flatpak')
+option('use_submodule', type: 'boolean', value: 'true', description: 'Whether to build using git submodule')

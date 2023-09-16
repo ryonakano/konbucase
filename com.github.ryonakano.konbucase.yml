@@ -27,7 +27,7 @@ modules:
   - name: konbucase
     buildsystem: meson
     config-opts:
-      - -Dnative_build=false
+      - '-Duse_submodule=false'
     sources:
       - type: dir
         path: .

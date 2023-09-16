@@ -44,7 +44,7 @@ sources = files(
     'src' / 'TextType.vala'
 )
 
-if get_option('native_build')
+if get_option('use_submodule')
     chcase_subproject = subproject('chcase')
     chcase_deps = chcase_subproject.get_variable('libchcase')
     dependencies += chcase_deps
