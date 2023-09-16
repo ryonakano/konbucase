@@ -32,7 +32,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
     construct {
         var case_label = new Gtk.Label (text_type.get_case_label ());
 
-        var case_combobox = new DropDownText () {
+        var case_combobox = new Ryokucha.DropDownText () {
             halign = Gtk.Align.START,
             margin_top = 6,
             margin_bottom = 6,

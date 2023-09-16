@@ -28,6 +28,7 @@ You'll need the following dependencies:
 * libgtk4-dev
 * libgtksourceview-5-dev
 * meson (>= 0.57.0)
+* [libryokucha](https://github.com/ryonakano/ryokucha) (automatically downloaded on build)
 * valac
 
 Run `meson setup` to configure the build environment and run `ninja` to build
