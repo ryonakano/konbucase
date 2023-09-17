@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:23+0000\n"
+"POT-Creation-Date: 2023-09-17 15:32+0900\n"
 "PO-Revision-Date: 2023-07-10 02:25+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/rosp/"
@@ -68,28 +68,37 @@ msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
 #: data/konbucase.metainfo.xml.in:59
-msgid "New icon shape (big thanks to @lenemter)"
+msgid ""
+"StyleSwitcher: Let system-synced color preference available on any platforms"
 msgstr ""
 
 #: data/konbucase.metainfo.xml.in:60
-msgid "Improve app metainfo"
+msgid "Update submodules"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:61 data/konbucase.metainfo.xml.in:81
-msgid "Update Flatpak runtime version"
-msgstr "Atnaujinti Flatpak vykdomąją versiją"
-
-#: data/konbucase.metainfo.xml.in:62 data/konbucase.metainfo.xml.in:73
-#: data/konbucase.metainfo.xml.in:82 data/konbucase.metainfo.xml.in:183
-#: data/konbucase.metainfo.xml.in:195
+#: data/konbucase.metainfo.xml.in:61 data/konbucase.metainfo.xml.in:72
+#: data/konbucase.metainfo.xml.in:83 data/konbucase.metainfo.xml.in:92
+#: data/konbucase.metainfo.xml.in:193 data/konbucase.metainfo.xml.in:205
 msgid "Update translations"
 msgstr "Atnaujinti vertimus"
 
+#: data/konbucase.metainfo.xml.in:69
+msgid "New icon shape (big thanks to @lenemter)"
+msgstr ""
+
 #: data/konbucase.metainfo.xml.in:70
+msgid "Improve app metainfo"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:71 data/konbucase.metainfo.xml.in:91
+msgid "Update Flatpak runtime version"
+msgstr "Atnaujinti Flatpak vykdomąją versiją"
+
+#: data/konbucase.metainfo.xml.in:80
 msgid "Migrate to GTK 4, the latest version of GTK"
 msgstr "Keltis į GTK 4, paskiausią GTK versiją"
 
-#: data/konbucase.metainfo.xml.in:71
+#: data/konbucase.metainfo.xml.in:81
 msgid ""
 "Set kebab-case as a default case for the result view, so that users can "
 "understand what they can do with the app more intuitively"
@@ -97,7 +106,7 @@ msgstr ""
 "Nustatyti rezultatų rodinio atvejį kaip numatytąjį, kad naudotojai labiau "
 "intuityviai susiprotėtų tuo ką jie geba daryti"
 
-#: data/konbucase.metainfo.xml.in:72
+#: data/konbucase.metainfo.xml.in:82
 msgid ""
 "Fix no style button selected on non-Pantheon desktop environments when first "
 "launch"
@@ -105,49 +114,49 @@ msgstr ""
 "Taisyti be stiliaus esančio mygtuko parinktį kuomet pirmą kartą paleidžiama "
 "ne Pantheon darbalaukio aplinka"
 
-#: data/konbucase.metainfo.xml.in:90
+#: data/konbucase.metainfo.xml.in:100
 msgid "Check desktop environment on runtime"
 msgstr "Paleisties metu patikrinti darbalaukio aplinką"
 
-#: data/konbucase.metainfo.xml.in:92 data/konbucase.metainfo.xml.in:105
-#: data/konbucase.metainfo.xml.in:118
+#: data/konbucase.metainfo.xml.in:102 data/konbucase.metainfo.xml.in:115
+#: data/konbucase.metainfo.xml.in:128
 msgid "Translation updates:"
 msgstr "Išvertimo naujiniai:"
 
-#: data/konbucase.metainfo.xml.in:94
+#: data/konbucase.metainfo.xml.in:104
 msgid "Update Italian translation (thanks to @albanobattistella)"
 msgstr "Update Italian translation (thanks to @albanobattistella)"
 
-#: data/konbucase.metainfo.xml.in:102
+#: data/konbucase.metainfo.xml.in:112
 msgid "Focus the source view by default"
 msgstr "Pagal nutylėjimą sukoncentruoti ties išeities kodo rodiniu"
 
-#: data/konbucase.metainfo.xml.in:103
+#: data/konbucase.metainfo.xml.in:113
 msgid "Redesign the style switcher"
 msgstr "Perprojektuoti stiliaus jungiklį"
 
-#: data/konbucase.metainfo.xml.in:107 data/konbucase.metainfo.xml.in:121
-#: data/konbucase.metainfo.xml.in:140 data/konbucase.metainfo.xml.in:150
+#: data/konbucase.metainfo.xml.in:117 data/konbucase.metainfo.xml.in:131
+#: data/konbucase.metainfo.xml.in:150 data/konbucase.metainfo.xml.in:160
 msgid "Update Japanese translation"
 msgstr "Atnaujinti japonišką išvertimą"
 
-#: data/konbucase.metainfo.xml.in:115
+#: data/konbucase.metainfo.xml.in:125
 msgid "Rounded window corners"
 msgstr "Suapvalinti langelio kampai"
 
-#: data/konbucase.metainfo.xml.in:116
+#: data/konbucase.metainfo.xml.in:126
 msgid "Support building without Granite for other distributions"
 msgstr "Likusioms platinamosioms programoms užtikrinti vyksmą be Granite"
 
-#: data/konbucase.metainfo.xml.in:120
+#: data/konbucase.metainfo.xml.in:130
 msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
 msgstr "Add Lithuanian translation (thanks to @PolPolyLingo)"
 
-#: data/konbucase.metainfo.xml.in:129
+#: data/konbucase.metainfo.xml.in:139
 msgid "Fix building fails in Flatpak"
 msgstr "Sutaisytas nesėkmingas Flatpak darinio kūrimas"
 
-#: data/konbucase.metainfo.xml.in:137
+#: data/konbucase.metainfo.xml.in:147
 msgid ""
 "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
 "manifest"
@@ -155,107 +164,107 @@ msgstr ""
 "Publikuoti programėlę naujajame elementary OS 6 AppCenter pagal Flatpak "
 "manifest taisykles"
 
-#: data/konbucase.metainfo.xml.in:138
+#: data/konbucase.metainfo.xml.in:148
 msgid "Update Dutch translation (thanks to @Vistaus)"
 msgstr "Update Dutch translation (thanks to @Vistaus)"
 
-#: data/konbucase.metainfo.xml.in:139
+#: data/konbucase.metainfo.xml.in:149
 msgid "Update Italian translation (thanks to @Sav22999)"
 msgstr "Update Italian translation (thanks to @Sav22999)"
 
-#: data/konbucase.metainfo.xml.in:148
+#: data/konbucase.metainfo.xml.in:158
 msgid "Support Sentence case"
 msgstr "Pritaikyti sakinio atvejį"
 
-#: data/konbucase.metainfo.xml.in:149
+#: data/konbucase.metainfo.xml.in:159
 msgid "Add Turkish translation (thanks to @safak45x)"
 msgstr "Add Turkish translation (thanks to @safak45x)"
 
-#: data/konbucase.metainfo.xml.in:151
+#: data/konbucase.metainfo.xml.in:161
 msgid "Clean code"
 msgstr "Tvarkingas išeities kodas"
 
-#: data/konbucase.metainfo.xml.in:159
+#: data/konbucase.metainfo.xml.in:169
 msgid "Separate the core part as an independent library"
 msgstr "Išskirti vidinį pagrindą kaip nepriklausomą biblioteką"
 
-#: data/konbucase.metainfo.xml.in:160
+#: data/konbucase.metainfo.xml.in:170
 msgid "Rename all occurrence of \"target\" to \"source\""
 msgstr "Visus \"target\" atitikmenis pervadinti į \"source\""
 
-#: data/konbucase.metainfo.xml.in:161
+#: data/konbucase.metainfo.xml.in:171
 msgid "Fix changing result case sometimes doesn't take effect"
 msgstr ""
 "Sutaisytas funkcionalumas kuomet keičiamas rezultato atvejis tam tikru "
 "atveju nesuveikdavo"
 
-#: data/konbucase.metainfo.xml.in:162
+#: data/konbucase.metainfo.xml.in:172
 msgid "Quit the app with Ctrl+Q"
 msgstr "Programėlės išjungimui naudoti Ctrl+Q"
 
-#: data/konbucase.metainfo.xml.in:163
+#: data/konbucase.metainfo.xml.in:173
 msgid "Add Dutch translation (thanks to @Vistaus)"
 msgstr "Add Dutch translation (thanks to @Vistaus)"
 
-#: data/konbucase.metainfo.xml.in:164
+#: data/konbucase.metainfo.xml.in:174
 #, fuzzy
 #| msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 msgid "Add Portuguese translation (thanks to @rottenpants466)"
 msgstr "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
 
-#: data/konbucase.metainfo.xml.in:172
+#: data/konbucase.metainfo.xml.in:182
 msgid "Save changes in the app state on time"
 msgstr "Laiku išsaugoti programėlės būsenų pakyčius"
 
-#: data/konbucase.metainfo.xml.in:173
+#: data/konbucase.metainfo.xml.in:183
 msgid "Side-by-side view"
 msgstr "Vaizdas šalia vienas kito"
 
-#: data/konbucase.metainfo.xml.in:174
+#: data/konbucase.metainfo.xml.in:184
 msgid "Improve the app icon (big thanks to @Fatih20)"
 msgstr "Improve the app icon (big thanks to @Fatih20)"
 
-#: data/konbucase.metainfo.xml.in:182
+#: data/konbucase.metainfo.xml.in:192
 msgid "Fix changing OS-wide dark style preference is not reflected"
 msgstr ""
 "Sutaisytas funkcionalumas kuomet keičiamo plačiojo elementary OS tamsaus "
 "stiliaus pirmumas neatsiskleidžia"
 
-#: data/konbucase.metainfo.xml.in:191
+#: data/konbucase.metainfo.xml.in:201
 msgid "Fix the app freezes when trying to input texts in result_combo_entry"
 msgstr ""
 "Sutaisytas funkcionalumas kuomet programėlė sustingsta kuomet įvedamas "
 "tekstas į result_combo_entry"
 
-#: data/konbucase.metainfo.xml.in:192
+#: data/konbucase.metainfo.xml.in:202
 msgid "Respect an elementary OS-wide dark preference"
 msgstr "Pagarbiai plačiai pirmumą taikyti elementary OS tamsiam stiliui"
 
-#: data/konbucase.metainfo.xml.in:193
+#: data/konbucase.metainfo.xml.in:203
 msgid "Add a description tooltip to each case"
 msgstr "Įtraukti patariamąjį įrankio aprašą kiekvienam atvejui"
 
-#: data/konbucase.metainfo.xml.in:194
+#: data/konbucase.metainfo.xml.in:204
 msgid "Allow setting per-app dark style preference"
 msgstr "Leisti tamsaus stiliau pirmumą programėlės nustatymuose"
 
-#: data/konbucase.metainfo.xml.in:203
+#: data/konbucase.metainfo.xml.in:213
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Add French translation (thanks to @NathanBnm)"
 
-#: data/konbucase.metainfo.xml.in:204
+#: data/konbucase.metainfo.xml.in:214
 msgid "Add Italian translation (thanks to @mirkobrombin)"
 msgstr "Add Italian translation (thanks to @mirkobrombin)"
 
-#: data/konbucase.metainfo.xml.in:205
+#: data/konbucase.metainfo.xml.in:215
 msgid "Add Japanese translation"
 msgstr "Pridėti Japonų vertimą"
 
-#: data/konbucase.metainfo.xml.in:206
+#: data/konbucase.metainfo.xml.in:216
 msgid "Update result texts when changing ComboBox selection"
 msgstr "Atnaujinti rezultatų tekstus kuomet keičiamas ComboBox pasirinkimas"
 
-#: data/konbucase.metainfo.xml.in:213
+#: data/konbucase.metainfo.xml.in:223
 msgid "Initial release"
 msgstr "Pradinė laida"
 
