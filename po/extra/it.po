@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-17 15:32+0900\n"
+"POT-Creation-Date: 2023-09-18 08:52+0900\n"
 "PO-Revision-Date: 2023-04-11 08:51+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -67,7 +67,7 @@ msgstr "Ryo Nakano"
 
 #: data/konbucase.metainfo.xml.in:59
 msgid ""
-"StyleSwitcher: Let system-synced color preference available on any platforms"
+"StyleSwitcher: Let system-synced style preference available on any platforms"
 msgstr ""
 
 #: data/konbucase.metainfo.xml.in:60
