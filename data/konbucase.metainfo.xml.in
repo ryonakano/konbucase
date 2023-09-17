@@ -53,6 +53,16 @@
   <developer_name>Ryo Nakano</developer_name>
 
   <releases>
+    <release version="4.1.1" date="2023-09-17" urgency="low">
+      <description>
+        <ul>
+          <li>StyleSwitcher: Let system-synced color preference available on any platforms</li>
+          <li>Update submodules</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="4.1.0" date="2023-04-15" urgency="low">
       <description>
         <ul>
