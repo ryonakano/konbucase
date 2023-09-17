@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:23+0000\n"
+"POT-Creation-Date: 2023-09-17 15:32+0900\n"
 "PO-Revision-Date: 2022-10-30 23:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
@@ -15,27 +15,27 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: src/MainWindow.vala:47
+#: src/MainWindow.vala:41
 msgid "Preferences"
 msgstr "Nustatymai"
 
-#: src/StyleSwitcher.vala:26
+#: src/StyleSwitcher.vala:27
 msgid "Style:"
 msgstr "Stilius:"
 
-#: src/StyleSwitcher.vala:32
+#: src/StyleSwitcher.vala:31
 msgid "Light"
 msgstr "Šviesus"
 
-#: src/StyleSwitcher.vala:35
+#: src/StyleSwitcher.vala:32
 msgid "Dark"
 msgstr "Tamsus"
 
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "Sistema"
 
@@ -47,35 +47,35 @@ msgstr "Keisti iš:"
 msgid "Convert to:"
 msgstr "Keisti į:"
 
-#: src/Widgets/ComboEntry.vala:42
+#: src/Widgets/ComboEntry.vala:43
 msgid "Space separated"
 msgstr "Atskirti tarpo ženklu"
 
-#: src/Widgets/ComboEntry.vala:59
+#: src/Widgets/ComboEntry.vala:60
 msgid "Copy to Clipboard"
 msgstr "Išsaugoti į Iškarpinę"
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/Widgets/ComboEntry.vala:151
 msgid "Each word is separated by a space"
 msgstr "Kiekvienas žodis atskiriamas tarpo ženklu"
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/Widgets/ComboEntry.vala:153
 msgid "The first character of compound words is in lowercase"
 msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš mažosios raidės"
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/Widgets/ComboEntry.vala:155
 msgid "The first character of compound words is in uppercase"
 msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš didžiosios raidės"
 
-#: src/Widgets/ComboEntry.vala:158
+#: src/Widgets/ComboEntry.vala:157
 msgid "Each word is separated by an underscore"
 msgstr "Kiekvienas žodis atskiriamas pabraukimo brūkšniu"
 
-#: src/Widgets/ComboEntry.vala:160
+#: src/Widgets/ComboEntry.vala:159
 msgid "Each word is separated by a hyphen"
 msgstr "Kiekvienas žodis atskiriamas brūkšneliu"
 
-#: src/Widgets/ComboEntry.vala:162
+#: src/Widgets/ComboEntry.vala:161
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Sakinyje pirmojo žodžio pirmasis rašmuo yra iš didžiosios raidės"
 

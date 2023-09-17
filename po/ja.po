@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:23+0000\n"
+"POT-Creation-Date: 2023-09-17 15:32+0900\n"
 "PO-Revision-Date: 2021-12-16 14:50+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/MainWindow.vala:47
+#: src/MainWindow.vala:41
 msgid "Preferences"
 msgstr "設定"
 
-#: src/StyleSwitcher.vala:26
+#: src/StyleSwitcher.vala:27
 msgid "Style:"
 msgstr "スタイル:"
 
-#: src/StyleSwitcher.vala:32
+#: src/StyleSwitcher.vala:31
 msgid "Light"
 msgstr "ライト"
 
-#: src/StyleSwitcher.vala:35
+#: src/StyleSwitcher.vala:32
 msgid "Dark"
 msgstr "ダーク"
 
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "システム"
 
@@ -45,35 +45,35 @@ msgstr "変換元の記法:"
 msgid "Convert to:"
 msgstr "変換先の記法:"
 
-#: src/Widgets/ComboEntry.vala:42
+#: src/Widgets/ComboEntry.vala:43
 msgid "Space separated"
 msgstr "スペース区切り"
 
-#: src/Widgets/ComboEntry.vala:59
+#: src/Widgets/ComboEntry.vala:60
 msgid "Copy to Clipboard"
 msgstr "クリップボードにコピー"
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/Widgets/ComboEntry.vala:151
 msgid "Each word is separated by a space"
 msgstr "単語の区切りにスペースを使用します"
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/Widgets/ComboEntry.vala:153
 msgid "The first character of compound words is in lowercase"
 msgstr "複合語の頭文字に小文字を使用します"
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/Widgets/ComboEntry.vala:155
 msgid "The first character of compound words is in uppercase"
 msgstr "複合語の頭文字に大文字を使用します"
 
-#: src/Widgets/ComboEntry.vala:158
+#: src/Widgets/ComboEntry.vala:157
 msgid "Each word is separated by an underscore"
 msgstr "単語の区切りにアンダースコアを使用します"
 
-#: src/Widgets/ComboEntry.vala:160
+#: src/Widgets/ComboEntry.vala:159
 msgid "Each word is separated by a hyphen"
 msgstr "単語の区切りにハイフンを使用します"
 
-#: src/Widgets/ComboEntry.vala:162
+#: src/Widgets/ComboEntry.vala:161
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "文頭の単語の頭文字に大文字を使用します"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:23+0000\n"
+"POT-Creation-Date: 2023-09-17 15:32+0900\n"
 "PO-Revision-Date: 2022-04-23 17:09+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -19,23 +19,23 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.12.1-dev\n"
 
-#: src/MainWindow.vala:47
+#: src/MainWindow.vala:41
 msgid "Preferences"
 msgstr "Predvoľby"
 
-#: src/StyleSwitcher.vala:26
+#: src/StyleSwitcher.vala:27
 msgid "Style:"
 msgstr "Štýl:"
 
-#: src/StyleSwitcher.vala:32
+#: src/StyleSwitcher.vala:31
 msgid "Light"
 msgstr "Svetlý"
 
-#: src/StyleSwitcher.vala:35
+#: src/StyleSwitcher.vala:32
 msgid "Dark"
 msgstr "Tmavý"
 
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "Systém"
 
@@ -47,35 +47,35 @@ msgstr "Previesť z:"
 msgid "Convert to:"
 msgstr "Previesť na:"
 
-#: src/Widgets/ComboEntry.vala:42
+#: src/Widgets/ComboEntry.vala:43
 msgid "Space separated"
 msgstr "Oddelený medzerami"
 
-#: src/Widgets/ComboEntry.vala:59
+#: src/Widgets/ComboEntry.vala:60
 msgid "Copy to Clipboard"
 msgstr "Kopírovať do schránky"
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/Widgets/ComboEntry.vala:151
 msgid "Each word is separated by a space"
 msgstr "Každé slovo je oddelené medzerou"
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/Widgets/ComboEntry.vala:153
 msgid "The first character of compound words is in lowercase"
 msgstr "Prvý znak zo zhluku slov je napísaný malým písmenom"
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/Widgets/ComboEntry.vala:155
 msgid "The first character of compound words is in uppercase"
 msgstr "Prvý znak zo zhluku slov je napísaný veľkým písmenom"
 
-#: src/Widgets/ComboEntry.vala:158
+#: src/Widgets/ComboEntry.vala:157
 msgid "Each word is separated by an underscore"
 msgstr "Každé slovo je oddelené podčiarkovníkom"
 
-#: src/Widgets/ComboEntry.vala:160
+#: src/Widgets/ComboEntry.vala:159
 msgid "Each word is separated by a hyphen"
 msgstr "Každé slovo je oddelené spojovníkom"
 
-#: src/Widgets/ComboEntry.vala:162
+#: src/Widgets/ComboEntry.vala:161
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Prvý znak prvého slova vo vete je napísaný veľkým písmenom"
 
