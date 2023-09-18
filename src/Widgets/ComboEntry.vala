@@ -31,7 +31,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
     }
 
     construct {
-        var case_label = new Gtk.Label (text_type.get_case_label ());
+        var case_label = new Gtk.Label (text_type.display_label);
 
         var case_combobox = new Ryokucha.DropDownText () {
             halign = Gtk.Align.START,
@@ -47,7 +47,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         case_combobox.append ("kebab", "kebab-case");
         case_combobox.append ("sentence", "Sentence case");
         case_combobox.active_id = Application.settings.get_string (
-            "%s-case-combobox".printf (text_type.get_identifier ())
+            "%s-case-combobox".printf (text_type.id)
         );
 
         var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic") {
@@ -73,14 +73,9 @@ public class Widgets.ComboEntry : Gtk.Grid {
         source_view = new GtkSource.View.with_buffer (source_buffer) {
             wrap_mode = Gtk.WrapMode.WORD_CHAR,
             hexpand = true,
-            vexpand = true
+            vexpand = true,
+            editable = text_type.editable
         };
-
-        // If `this` is result_combo_entry, make source_view uneditable
-        // Otherwise the app freezes
-        if (text_type == TextType.RESULT) {
-            source_view.editable = false;
-        }
 
         var scrolled = new Gtk.ScrolledWindow () {
             child = source_view
@@ -91,10 +86,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
         update_buttons ();
 
-        Application.settings.bind (
-            "%s-text".printf (text_type.get_identifier ()),
-            source_buffer, "text", SettingsBindFlags.DEFAULT
-        );
+        Application.settings.bind ("%s-text".printf (text_type.id), source_buffer, "text", SettingsBindFlags.DEFAULT);
 
         source_buffer.notify["text"].connect (() => {
             update_buttons ();
@@ -104,12 +96,9 @@ public class Widgets.ComboEntry : Gtk.Grid {
         case_combobox.changed.connect (() => {
             case_info_button_icon.tooltip_text = set_info_button_tooltip (case_combobox.active_id);
 
-            Application.settings.set_string (
-                "%s-case-combobox".printf (text_type.get_identifier ()),
-                case_combobox.active_id
-            );
+            Application.settings.set_string ("%s-case-combobox".printf (text_type.id), case_combobox.active_id);
 
-            if (Application.settings.get_string ("%s-text".printf (text_type.get_identifier ())) != "") {
+            if (Application.settings.get_string ("%s-text".printf (text_type.id)) != "") {
                 converter.source_case_name = Application.settings.get_string ("source-case-combobox");
                 converter.result_case_name = Application.settings.get_string ("result-case-combobox");
                 convert_case ();
@@ -127,7 +116,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
     }
 
     private void update_buttons () {
-        copy_clipboard_button.sensitive = Application.settings.get_string ("%s-text".printf (text_type.get_identifier ())) != "";
+        copy_clipboard_button.sensitive = Application.settings.get_string ("%s-text".printf (text_type.id)) != "";
     }
 
     private void convert_case () {
