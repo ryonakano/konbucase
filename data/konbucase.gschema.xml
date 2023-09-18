@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-    <enum id="source-case-list">
-      <value value="0" nick="space_separated"/>
-      <value value="1" nick="camel"/>
-      <value value="2" nick="pascal"/>
-      <value value="3" nick="snake"/>
-      <value value="4" nick="kebab"/>
-      <value value="5" nick="sentence"/>
-    </enum>
-    <enum id="result-case-list">
-      <value value="0" nick="space_separated"/>
-      <value value="1" nick="camel"/>
-      <value value="2" nick="pascal"/>
-      <value value="3" nick="snake"/>
-      <value value="4" nick="kebab"/>
-      <value value="5" nick="sentence"/>
-    </enum>
+  <enum id="source-case-list">
+    <value value="0" nick="space_separated"/>
+    <value value="1" nick="camel"/>
+    <value value="2" nick="pascal"/>
+    <value value="3" nick="snake"/>
+    <value value="4" nick="kebab"/>
+    <value value="5" nick="sentence"/>
+  </enum>
+  <enum id="result-case-list">
+    <value value="0" nick="space_separated"/>
+    <value value="1" nick="camel"/>
+    <value value="2" nick="pascal"/>
+    <value value="3" nick="snake"/>
+    <value value="4" nick="kebab"/>
+    <value value="5" nick="sentence"/>
+  </enum>
 
-    <schema path="/com/github/ryonakano/konbucase/" id="com.github.ryonakano.konbucase">
-        <key name="source-text" type="s">
-            <default>''</default>
-            <summary>Source text</summary>
-            <description>The last saved source text</description>
-        </key>
-        <key name="result-text" type="s">
-            <default>''</default>
-            <summary>Result text</summary>
-            <description>The last save result text</description>
-        </key>
-        <key name="source-case-combobox" enum="source-case-list">
-            <default>'space_separated'</default>
-            <summary>Source case</summary>
-            <description>The last saved value of the source case combobox</description>
-        </key>
-        <key name="result-case-combobox" enum="result-case-list">
-            <default>'kebab'</default>
-            <summary>Result case</summary>
-            <description>The last saved value of the result case combobox</description>
-        </key>
-        <key name="is-prefer-dark" type="b">
-            <default>false</default>
-            <summary>Prefer dark</summary>
-            <description>Whether to show the window in a dark style or not</description>
-        </key>
-        <key name="is-follow-system-style" type="b">
-            <default>true</default>
-            <summary>Follow system style</summary>
-            <description>Whether to follow system's dark style settings or not</description>
-        </key>
-        <key name="window-width" type="i">
-            <default>300</default>
-            <summary>Most recent window width</summary>
-            <description>The saved width of the window last open</description>
-        </key>
-        <key name="window-height" type="i">
-            <default>500</default>
-            <summary>Most recent window height</summary>
-            <description>The saved height of the window last open</description>
-        </key>
-        <key name="window-maximized" type="b">
-            <default>false</default>
-            <summary>Window maximized</summary>
-            <description>The saved value for whether the window is maximized or not</description>
-        </key>
-    </schema>
+  <schema path="/com/github/ryonakano/konbucase/" id="com.github.ryonakano.konbucase">
+    <key name="source-text" type="s">
+      <default>''</default>
+      <summary>Source text</summary>
+      <description>The last saved source text</description>
+    </key>
+    <key name="result-text" type="s">
+      <default>''</default>
+      <summary>Result text</summary>
+      <description>The last save result text</description>
+    </key>
+    <key name="source-case-combobox" enum="source-case-list">
+      <default>'space_separated'</default>
+      <summary>Source case</summary>
+      <description>The last saved value of the source case combobox</description>
+    </key>
+    <key name="result-case-combobox" enum="result-case-list">
+      <default>'kebab'</default>
+      <summary>Result case</summary>
+      <description>The last saved value of the result case combobox</description>
+    </key>
+    <key name="is-prefer-dark" type="b">
+      <default>false</default>
+      <summary>Prefer dark</summary>
+      <description>Whether to show the window in a dark style or not</description>
+    </key>
+    <key name="is-follow-system-style" type="b">
+      <default>true</default>
+      <summary>Follow system style</summary>
+      <description>Whether to follow system's dark style settings or not</description>
+    </key>
+    <key name="window-width" type="i">
+      <default>300</default>
+      <summary>Most recent window width</summary>
+      <description>The saved width of the window last open</description>
+    </key>
+    <key name="window-height" type="i">
+      <default>500</default>
+      <summary>Most recent window height</summary>
+      <description>The saved height of the window last open</description>
+    </key>
+    <key name="window-maximized" type="b">
+      <default>false</default>
+      <summary>Window maximized</summary>
+      <description>The saved value for whether the window is maximized or not</description>
+    </key>
+  </schema>
 </schemalist>
