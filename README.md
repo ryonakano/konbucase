@@ -1,5 +1,5 @@
 # KonbuCase
-![Light mode](data/screenshots/pantheon/screenshot-light.png)
+![Screenshot of KonbuCase](data/screenshots/pantheon/screenshot-light.png)
 
 KonbuCase is a simple case converting app. Features include:
 
@@ -61,11 +61,11 @@ We accept translations of this project through [Weblate](https://weblate.org/). 
 
 Click the following graphs to get started:
 
-| Main: Texts in the app itself | Extra: Texts in the desktop entry and the software center |
+| App: Texts in the app itself | Metainfo: Texts in the desktop entry and the software center |
 | --- | --- |
-| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/konbucase-main/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/konbucase-main) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/konbucase-extra/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/konbucase-extra) |
+| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/konbucase-app/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/konbucase-app) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/konbucase-metainfo/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/konbucase-metainfo) |
 
 ## The Story of the App Name
-![](data/Konbu.png)
+![Drawing of Konbu](data/Konbu.png)
 
 I always feel the pronunciations "Konbu" and "Conv" (Convert) sound similar (you may not feel though…). This app is a **case conv**erter, so I named this app "KonbuCase".
