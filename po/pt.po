@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-18 08:53+0900\n"
+"POT-Creation-Date: 2023-10-03 22:15+0900\n"
 "PO-Revision-Date: 2022-06-21 12:16+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
@@ -19,7 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1-dev\n"
 
-#: src/MainWindow.vala:41
+#: src/MainWindow.vala:17
+msgid "Convert from:"
+msgstr "Converter de:"
+
+#: src/MainWindow.vala:28
+msgid "Convert to:"
+msgstr "Converter para:"
+
+#: src/MainWindow.vala:52
 msgid "Preferences"
 msgstr "Preferências"
 
@@ -39,14 +47,6 @@ msgstr "Escuro"
 msgid "System"
 msgstr "Sistema"
 
-#: src/TextType.vala:13
-msgid "Convert from:"
-msgstr "Converter de:"
-
-#: src/TextType.vala:15
-msgid "Convert to:"
-msgstr "Converter para:"
-
 #: src/Widgets/ComboEntry.vala:43
 msgid "Space separated"
 msgstr "Espaço separado"
@@ -55,27 +55,27 @@ msgstr "Espaço separado"
 msgid "Copy to Clipboard"
 msgstr "Copiar para a Área de transferência"
 
-#: src/Widgets/ComboEntry.vala:151
+#: src/Widgets/ComboEntry.vala:140
 msgid "Each word is separated by a space"
 msgstr "Cada palavra está separada por um espaço"
 
-#: src/Widgets/ComboEntry.vala:153
+#: src/Widgets/ComboEntry.vala:142
 msgid "The first character of compound words is in lowercase"
 msgstr "O primeiro carácter de palavras compostas está em minúsculas"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:144
 msgid "The first character of compound words is in uppercase"
 msgstr "O primeiro carácter de palavras compostas está em maiúsculas"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:146
 msgid "Each word is separated by an underscore"
 msgstr "Cada palavra está separada por um sublinhado"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:148
 msgid "Each word is separated by a hyphen"
 msgstr "Cada palavra está separada por um hífen"
 
-#: src/Widgets/ComboEntry.vala:161
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "O primeiro carácter da primeira palavra da frase está em maiúsculas"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-18 08:53+0900\n"
+"POT-Creation-Date: 2023-10-03 22:15+0900\n"
 "PO-Revision-Date: 2022-04-17 02:59+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -20,7 +20,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.12-dev\n"
 
-#: src/MainWindow.vala:41
+#: src/MainWindow.vala:17
+msgid "Convert from:"
+msgstr "Convertir depuis :"
+
+#: src/MainWindow.vala:28
+msgid "Convert to:"
+msgstr "Convertir en :"
+
+#: src/MainWindow.vala:52
 msgid "Preferences"
 msgstr "Préférences"
 
@@ -40,14 +48,6 @@ msgstr "Sombre"
 msgid "System"
 msgstr "Système"
 
-#: src/TextType.vala:13
-msgid "Convert from:"
-msgstr "Convertir depuis :"
-
-#: src/TextType.vala:15
-msgid "Convert to:"
-msgstr "Convertir en :"
-
 #: src/Widgets/ComboEntry.vala:43
 msgid "Space separated"
 msgstr "Séparé par des espaces"
@@ -56,27 +56,27 @@ msgstr "Séparé par des espaces"
 msgid "Copy to Clipboard"
 msgstr "Copier dans le presse-papiers"
 
-#: src/Widgets/ComboEntry.vala:151
+#: src/Widgets/ComboEntry.vala:140
 msgid "Each word is separated by a space"
 msgstr "Chaque mot est séparé par un espace"
 
-#: src/Widgets/ComboEntry.vala:153
+#: src/Widgets/ComboEntry.vala:142
 msgid "The first character of compound words is in lowercase"
 msgstr "Le premier caractère des mots composés est en minuscules"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:144
 msgid "The first character of compound words is in uppercase"
 msgstr "Le premier caractère des mots composés est en majuscules"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:146
 msgid "Each word is separated by an underscore"
 msgstr "Chaque mot est séparé par un tiret bas"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:148
 msgid "Each word is separated by a hyphen"
 msgstr "Chaque mot est séparé par un tiret"
 
-#: src/Widgets/ComboEntry.vala:161
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Le premier caractère du premier mot de la phrase est en majuscule"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-18 08:53+0900\n"
+"POT-Creation-Date: 2023-10-03 22:15+0900\n"
 "PO-Revision-Date: 2022-04-17 02:59+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -21,7 +21,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.12-dev\n"
 
-#: src/MainWindow.vala:41
+#: src/MainWindow.vala:17
+msgid "Convert from:"
+msgstr "Converti da:"
+
+#: src/MainWindow.vala:28
+msgid "Convert to:"
+msgstr "Converti in:"
+
+#: src/MainWindow.vala:52
 msgid "Preferences"
 msgstr "Preferenze"
 
@@ -41,14 +49,6 @@ msgstr "Scuro"
 msgid "System"
 msgstr "Sistema"
 
-#: src/TextType.vala:13
-msgid "Convert from:"
-msgstr "Converti da:"
-
-#: src/TextType.vala:15
-msgid "Convert to:"
-msgstr "Converti in:"
-
 #: src/Widgets/ComboEntry.vala:43
 msgid "Space separated"
 msgstr "Spazi separati"
@@ -57,27 +57,27 @@ msgstr "Spazi separati"
 msgid "Copy to Clipboard"
 msgstr "Copia negli appunti"
 
-#: src/Widgets/ComboEntry.vala:151
+#: src/Widgets/ComboEntry.vala:140
 msgid "Each word is separated by a space"
 msgstr "Ogni parola è separata da uno spazio"
 
-#: src/Widgets/ComboEntry.vala:153
+#: src/Widgets/ComboEntry.vala:142
 msgid "The first character of compound words is in lowercase"
 msgstr "Il primo carattere delle parole composte è minuscolo"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:144
 msgid "The first character of compound words is in uppercase"
 msgstr "Il primo carattere delle parole composte è maiuscolo"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:146
 msgid "Each word is separated by an underscore"
 msgstr "Ogni parola è separata da un underscore (trattino basso)"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:148
 msgid "Each word is separated by a hyphen"
 msgstr "Ogni parola è separata da un hyphen (trattino alto)"
 
-#: src/Widgets/ComboEntry.vala:161
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
 
