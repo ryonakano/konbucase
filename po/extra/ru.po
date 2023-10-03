@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-18 08:52+0900\n"
+"POT-Creation-Date: 2023-10-03 22:15+0900\n"
 "PO-Revision-Date: 2023-09-26 20:00+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/"
-"konbucase-metainfo/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/konbucase-"
+"metainfo/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,203 +65,6 @@ msgstr "Окно приложения в тёмном режиме"
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/konbucase.metainfo.xml.in:59
-msgid ""
-"StyleSwitcher: Let system-synced style preference available on any platforms"
-msgstr ""
-"StyleSwitcher: Поддержка синхронизации стиля приложения со стилем системы на "
-"любой платформе"
-
-#: data/konbucase.metainfo.xml.in:60
-msgid "Update submodules"
-msgstr "Обновлены подмодули"
-
-#: data/konbucase.metainfo.xml.in:61 data/konbucase.metainfo.xml.in:72
-#: data/konbucase.metainfo.xml.in:83 data/konbucase.metainfo.xml.in:92
-#: data/konbucase.metainfo.xml.in:193 data/konbucase.metainfo.xml.in:205
-msgid "Update translations"
-msgstr "Обновлены переводы"
-
-#: data/konbucase.metainfo.xml.in:69
-msgid "New icon shape (big thanks to @lenemter)"
-msgstr "Новая форма иконки (большое спасибо @lenemter)"
-
-#: data/konbucase.metainfo.xml.in:70
-msgid "Improve app metainfo"
-msgstr "Улучшены метаданные приложения"
-
-#: data/konbucase.metainfo.xml.in:71 data/konbucase.metainfo.xml.in:91
-msgid "Update Flatpak runtime version"
-msgstr "Обновлена версия Flatpak runtime"
-
-#: data/konbucase.metainfo.xml.in:80
-msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr "Переход на GTK4, последнюю версию GTK"
-
-#: data/konbucase.metainfo.xml.in:81
-msgid ""
-"Set kebab-case as a default case for the result view, so that users can "
-"understand what they can do with the app more intuitively"
-msgstr ""
-"Kebab-case стал регистром по умолчанию для окна результата, чтобы "
-"пользователи могли более интуитивно понять что они могут делать с этим "
-"приложением"
-
-#: data/konbucase.metainfo.xml.in:82
-msgid ""
-"Fix no style button selected on non-Pantheon desktop environments when first "
-"launch"
-msgstr "Исправлена кнопка выбора стиля при первом запуске вне среды Pantheon"
-
-#: data/konbucase.metainfo.xml.in:100
-msgid "Check desktop environment on runtime"
-msgstr "Проверка окружения рабочего стола во время выполнения"
-
-#: data/konbucase.metainfo.xml.in:102 data/konbucase.metainfo.xml.in:115
-#: data/konbucase.metainfo.xml.in:128
-msgid "Translation updates:"
-msgstr "Обновления переводов:"
-
-#: data/konbucase.metainfo.xml.in:104
-msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Обновлён итальянский перевод (спасибо @albanobattistella)"
-
-#: data/konbucase.metainfo.xml.in:112
-msgid "Focus the source view by default"
-msgstr "Теперь по умолчанию сфокусировано поле ввода"
-
-#: data/konbucase.metainfo.xml.in:113
-msgid "Redesign the style switcher"
-msgstr "Переработан переключатель стиля"
-
-#: data/konbucase.metainfo.xml.in:117 data/konbucase.metainfo.xml.in:131
-#: data/konbucase.metainfo.xml.in:150 data/konbucase.metainfo.xml.in:160
-msgid "Update Japanese translation"
-msgstr "Обновлён японский перевод"
-
-#: data/konbucase.metainfo.xml.in:125
-msgid "Rounded window corners"
-msgstr "Закруглены углы окна"
-
-#: data/konbucase.metainfo.xml.in:126
-msgid "Support building without Granite for other distributions"
-msgstr "Поддержка сборки без Granite для других дистрибутивов"
-
-#: data/konbucase.metainfo.xml.in:130
-msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
-msgstr "Добавлен литовский перевод (спасибо @PolPolyLingo)"
-
-#: data/konbucase.metainfo.xml.in:139
-msgid "Fix building fails in Flatpak"
-msgstr "Исправление сборки в Flatpak"
-
-#: data/konbucase.metainfo.xml.in:147
-msgid ""
-"Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
-"manifest"
-msgstr ""
-"Приложение опубликовано в новом AppCenter в elementary OS 6 с манифестом "
-"Flatpak"
-
-#: data/konbucase.metainfo.xml.in:148
-msgid "Update Dutch translation (thanks to @Vistaus)"
-msgstr "Обновлён голландский перевод (спасибо @Vistaus)"
-
-#: data/konbucase.metainfo.xml.in:149
-msgid "Update Italian translation (thanks to @Sav22999)"
-msgstr "Обновлён итальянский перевод (спасибо @Sav22999)"
-
-#: data/konbucase.metainfo.xml.in:158
-msgid "Support Sentence case"
-msgstr "Поддержка Sentence case"
-
-#: data/konbucase.metainfo.xml.in:159
-msgid "Add Turkish translation (thanks to @safak45x)"
-msgstr "Добавлен турецкий перевод (спасибо @safak45x)"
-
-#: data/konbucase.metainfo.xml.in:161
-msgid "Clean code"
-msgstr "Код почищен"
-
-#: data/konbucase.metainfo.xml.in:169
-msgid "Separate the core part as an independent library"
-msgstr "Выделение ядра программы в независимую библиотеку"
-
-#: data/konbucase.metainfo.xml.in:170
-msgid "Rename all occurrence of \"target\" to \"source\""
-msgstr "Все вхождения «цель» переименованы в «источник»"
-
-#: data/konbucase.metainfo.xml.in:171
-msgid "Fix changing result case sometimes doesn't take effect"
-msgstr ""
-"Исправлена проблема, при которое изменение регистра иногда не применялось"
-
-#: data/konbucase.metainfo.xml.in:172
-msgid "Quit the app with Ctrl+Q"
-msgstr "Выход из приложения на Ctrl+Q"
-
-#: data/konbucase.metainfo.xml.in:173
-msgid "Add Dutch translation (thanks to @Vistaus)"
-msgstr "Добавлен голландский перевод (спасибо @Vistaus)"
-
-#: data/konbucase.metainfo.xml.in:174
-msgid "Add Portuguese translation (thanks to @rottenpants466)"
-msgstr "Добавлен португальский перевод (спасибо @rottenpants466)"
-
-#: data/konbucase.metainfo.xml.in:182
-msgid "Save changes in the app state on time"
-msgstr "Своевременное сохранение состояния приложения"
-
-#: data/konbucase.metainfo.xml.in:183
-msgid "Side-by-side view"
-msgstr "Параллельное представление"
-
-#: data/konbucase.metainfo.xml.in:184
-msgid "Improve the app icon (big thanks to @Fatih20)"
-msgstr "Улучшена иконка приложения (большое спасибо @Fatih20)"
-
-#: data/konbucase.metainfo.xml.in:192
-msgid "Fix changing OS-wide dark style preference is not reflected"
-msgstr ""
-"Исправлена ошибка, из-за которой изменение тёмного стиля ОС не отражалось"
-
-#: data/konbucase.metainfo.xml.in:201
-msgid "Fix the app freezes when trying to input texts in result_combo_entry"
-msgstr ""
-"Исправлено зависание приложения при попытке ввода текста в result_combo_entry"
-
-#: data/konbucase.metainfo.xml.in:202
-msgid "Respect an elementary OS-wide dark preference"
-msgstr "Соблюдение тёмного стиля elementary OS"
-
-#: data/konbucase.metainfo.xml.in:203
-msgid "Add a description tooltip to each case"
-msgstr "Добавлена всплывающая подсказка с описанием для каждого регистра"
-
-#: data/konbucase.metainfo.xml.in:204
-msgid "Allow setting per-app dark style preference"
-msgstr "Возможность использования тёмного стиля для приложения отдельно"
-
-#: data/konbucase.metainfo.xml.in:213
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Добавлен перевод на французский язык (спасибо @NathanBnm)"
-
-#: data/konbucase.metainfo.xml.in:214
-msgid "Add Italian translation (thanks to @mirkobrombin)"
-msgstr "Добавлен итальянский перевод (спасибо @mirkobrombin)"
-
-#: data/konbucase.metainfo.xml.in:215
-msgid "Add Japanese translation"
-msgstr "Добавлен японский перевод"
-
-#: data/konbucase.metainfo.xml.in:216
-msgid "Update result texts when changing ComboBox selection"
-msgstr "Результат теперь обновляется при изменении выбора в меню"
-
-#: data/konbucase.metainfo.xml.in:223
-msgid "Initial release"
-msgstr "Начальный выпуск"
-
 #: data/konbucase.desktop.in:4
 msgid "Case Converting App"
 msgstr "Приложение для конвертации регистра"
@@ -269,6 +72,158 @@ msgstr "Приложение для конвертации регистра"
 #: data/konbucase.desktop.in:11
 msgid "Text;"
 msgstr "Текст;"
+
+#~ msgid ""
+#~ "StyleSwitcher: Let system-synced style preference available on any "
+#~ "platforms"
+#~ msgstr ""
+#~ "StyleSwitcher: Поддержка синхронизации стиля приложения со стилем системы "
+#~ "на любой платформе"
+
+#~ msgid "Update submodules"
+#~ msgstr "Обновлены подмодули"
+
+#~ msgid "Update translations"
+#~ msgstr "Обновлены переводы"
+
+#~ msgid "New icon shape (big thanks to @lenemter)"
+#~ msgstr "Новая форма иконки (большое спасибо @lenemter)"
+
+#~ msgid "Improve app metainfo"
+#~ msgstr "Улучшены метаданные приложения"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Обновлена версия Flatpak runtime"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Переход на GTK4, последнюю версию GTK"
+
+#~ msgid ""
+#~ "Set kebab-case as a default case for the result view, so that users can "
+#~ "understand what they can do with the app more intuitively"
+#~ msgstr ""
+#~ "Kebab-case стал регистром по умолчанию для окна результата, чтобы "
+#~ "пользователи могли более интуитивно понять что они могут делать с этим "
+#~ "приложением"
+
+#~ msgid ""
+#~ "Fix no style button selected on non-Pantheon desktop environments when "
+#~ "first launch"
+#~ msgstr ""
+#~ "Исправлена кнопка выбора стиля при первом запуске вне среды Pantheon"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "Проверка окружения рабочего стола во время выполнения"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Обновления переводов:"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Обновлён итальянский перевод (спасибо @albanobattistella)"
+
+#~ msgid "Focus the source view by default"
+#~ msgstr "Теперь по умолчанию сфокусировано поле ввода"
+
+#~ msgid "Redesign the style switcher"
+#~ msgstr "Переработан переключатель стиля"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Обновлён японский перевод"
+
+#~ msgid "Rounded window corners"
+#~ msgstr "Закруглены углы окна"
+
+#~ msgid "Support building without Granite for other distributions"
+#~ msgstr "Поддержка сборки без Granite для других дистрибутивов"
+
+#~ msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
+#~ msgstr "Добавлен литовский перевод (спасибо @PolPolyLingo)"
+
+#~ msgid "Fix building fails in Flatpak"
+#~ msgstr "Исправление сборки в Flatpak"
+
+#~ msgid ""
+#~ "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
+#~ "manifest"
+#~ msgstr ""
+#~ "Приложение опубликовано в новом AppCenter в elementary OS 6 с манифестом "
+#~ "Flatpak"
+
+#~ msgid "Update Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Обновлён голландский перевод (спасибо @Vistaus)"
+
+#~ msgid "Update Italian translation (thanks to @Sav22999)"
+#~ msgstr "Обновлён итальянский перевод (спасибо @Sav22999)"
+
+#~ msgid "Support Sentence case"
+#~ msgstr "Поддержка Sentence case"
+
+#~ msgid "Add Turkish translation (thanks to @safak45x)"
+#~ msgstr "Добавлен турецкий перевод (спасибо @safak45x)"
+
+#~ msgid "Clean code"
+#~ msgstr "Код почищен"
+
+#~ msgid "Separate the core part as an independent library"
+#~ msgstr "Выделение ядра программы в независимую библиотеку"
+
+#~ msgid "Rename all occurrence of \"target\" to \"source\""
+#~ msgstr "Все вхождения «цель» переименованы в «источник»"
+
+#~ msgid "Fix changing result case sometimes doesn't take effect"
+#~ msgstr ""
+#~ "Исправлена проблема, при которое изменение регистра иногда не применялось"
+
+#~ msgid "Quit the app with Ctrl+Q"
+#~ msgstr "Выход из приложения на Ctrl+Q"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Добавлен голландский перевод (спасибо @Vistaus)"
+
+#~ msgid "Add Portuguese translation (thanks to @rottenpants466)"
+#~ msgstr "Добавлен португальский перевод (спасибо @rottenpants466)"
+
+#~ msgid "Save changes in the app state on time"
+#~ msgstr "Своевременное сохранение состояния приложения"
+
+#~ msgid "Side-by-side view"
+#~ msgstr "Параллельное представление"
+
+#~ msgid "Improve the app icon (big thanks to @Fatih20)"
+#~ msgstr "Улучшена иконка приложения (большое спасибо @Fatih20)"
+
+#~ msgid "Fix changing OS-wide dark style preference is not reflected"
+#~ msgstr ""
+#~ "Исправлена ошибка, из-за которой изменение тёмного стиля ОС не отражалось"
+
+#~ msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+#~ msgstr ""
+#~ "Исправлено зависание приложения при попытке ввода текста в "
+#~ "result_combo_entry"
+
+#~ msgid "Respect an elementary OS-wide dark preference"
+#~ msgstr "Соблюдение тёмного стиля elementary OS"
+
+#~ msgid "Add a description tooltip to each case"
+#~ msgstr "Добавлена всплывающая подсказка с описанием для каждого регистра"
+
+#~ msgid "Allow setting per-app dark style preference"
+#~ msgstr "Возможность использования тёмного стиля для приложения отдельно"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Добавлен перевод на французский язык (спасибо @NathanBnm)"
+
+#~ msgid "Add Italian translation (thanks to @mirkobrombin)"
+#~ msgstr "Добавлен итальянский перевод (спасибо @mirkobrombin)"
+
+#~ msgid "Add Japanese translation"
+#~ msgstr "Добавлен японский перевод"
+
+#~ msgid "Update result texts when changing ComboBox selection"
+#~ msgstr "Результат теперь обновляется при изменении выбора в меню"
+
+#~ msgid "Initial release"
+#~ msgstr "Начальный выпуск"
 
 #~ msgid "Light mode"
 #~ msgstr "Светлый режим"
