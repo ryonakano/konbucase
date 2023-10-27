@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.konbucase package.
+# Eryk Michalak <gnu.ewm@protonmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.konbucase\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-03 22:15+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWindow.vala:17
+msgid "Convert from:"
+msgstr ""
+
+#: src/MainWindow.vala:28
+msgid "Convert to:"
+msgstr ""
+
+#: src/MainWindow.vala:52
+msgid "Preferences"
+msgstr ""
+
+#: src/StyleSwitcher.vala:27
+msgid "Style:"
+msgstr ""
+
+#: src/StyleSwitcher.vala:31
+msgid "Light"
+msgstr ""
+
+#: src/StyleSwitcher.vala:32
+msgid "Dark"
+msgstr ""
+
+#: src/StyleSwitcher.vala:33
+msgid "System"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:43
+msgid "Space separated"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:60
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:140
+msgid "Each word is separated by a space"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:142
+msgid "The first character of compound words is in lowercase"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:144
+msgid "The first character of compound words is in uppercase"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:146
+msgid "Each word is separated by an underscore"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:148
+msgid "Each word is separated by a hyphen"
+msgstr ""
+
+#: src/Widgets/ComboEntry.vala:150
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr ""
