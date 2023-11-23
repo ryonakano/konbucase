@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 22:15+0900\n"
+"POT-Creation-Date: 2023-11-23 11:43+0900\n"
 "PO-Revision-Date: 2022-10-30 23:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
@@ -19,15 +19,19 @@ msgstr ""
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: src/MainWindow.vala:17
+#: src/MainWindow.vala:19
 msgid "Convert from:"
 msgstr "Keisti iš:"
 
-#: src/MainWindow.vala:28
+#: src/MainWindow.vala:29
 msgid "Convert to:"
 msgstr "Keisti į:"
 
-#: src/MainWindow.vala:52
+#: src/MainWindow.vala:39
+msgid "Text copied!"
+msgstr ""
+
+#: src/MainWindow.vala:58
 msgid "Preferences"
 msgstr "Nustatymai"
 
@@ -47,35 +51,35 @@ msgstr "Tamsus"
 msgid "System"
 msgstr "Sistema"
 
-#: src/Widgets/ComboEntry.vala:43
+#: src/Widgets/ComboEntry.vala:50
 msgid "Space separated"
 msgstr "Atskirti tarpo ženklu"
 
-#: src/Widgets/ComboEntry.vala:60
+#: src/Widgets/ComboEntry.vala:67
 msgid "Copy to Clipboard"
 msgstr "Išsaugoti į Iškarpinę"
 
-#: src/Widgets/ComboEntry.vala:140
+#: src/Widgets/ComboEntry.vala:148
 msgid "Each word is separated by a space"
 msgstr "Kiekvienas žodis atskiriamas tarpo ženklu"
 
-#: src/Widgets/ComboEntry.vala:142
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of compound words is in lowercase"
 msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš mažosios raidės"
 
-#: src/Widgets/ComboEntry.vala:144
+#: src/Widgets/ComboEntry.vala:152
 msgid "The first character of compound words is in uppercase"
 msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš didžiosios raidės"
 
-#: src/Widgets/ComboEntry.vala:146
+#: src/Widgets/ComboEntry.vala:154
 msgid "Each word is separated by an underscore"
 msgstr "Kiekvienas žodis atskiriamas pabraukimo brūkšniu"
 
-#: src/Widgets/ComboEntry.vala:148
+#: src/Widgets/ComboEntry.vala:156
 msgid "Each word is separated by a hyphen"
 msgstr "Kiekvienas žodis atskiriamas brūkšneliu"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/Widgets/ComboEntry.vala:158
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Sakinyje pirmojo žodžio pirmasis rašmuo yra iš didžiosios raidės"
 

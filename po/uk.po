@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 22:15+0900\n"
+"POT-Creation-Date: 2023-11-23 11:43+0900\n"
 "PO-Revision-Date: 2022-05-24 21:17+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -19,15 +19,19 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13-dev\n"
 
-#: src/MainWindow.vala:17
+#: src/MainWindow.vala:19
 msgid "Convert from:"
 msgstr "Перетворити з:"
 
-#: src/MainWindow.vala:28
+#: src/MainWindow.vala:29
 msgid "Convert to:"
 msgstr "Перетворити в:"
 
-#: src/MainWindow.vala:52
+#: src/MainWindow.vala:39
+msgid "Text copied!"
+msgstr ""
+
+#: src/MainWindow.vala:58
 msgid "Preferences"
 msgstr "Налаштування"
 
@@ -47,35 +51,35 @@ msgstr "Темний"
 msgid "System"
 msgstr "Системи"
 
-#: src/Widgets/ComboEntry.vala:43
+#: src/Widgets/ComboEntry.vala:50
 msgid "Space separated"
 msgstr "Розділено пробілами"
 
-#: src/Widgets/ComboEntry.vala:60
+#: src/Widgets/ComboEntry.vala:67
 msgid "Copy to Clipboard"
 msgstr "Копіювати до буфера обміну"
 
-#: src/Widgets/ComboEntry.vala:140
+#: src/Widgets/ComboEntry.vala:148
 msgid "Each word is separated by a space"
 msgstr "Кожне слово відокремлено пробілом"
 
-#: src/Widgets/ComboEntry.vala:142
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of compound words is in lowercase"
 msgstr "Перший символ сполучених слів пишеться з маленької букви"
 
-#: src/Widgets/ComboEntry.vala:144
+#: src/Widgets/ComboEntry.vala:152
 msgid "The first character of compound words is in uppercase"
 msgstr "Перший символ сполучених слів пишеться з великої букви"
 
-#: src/Widgets/ComboEntry.vala:146
+#: src/Widgets/ComboEntry.vala:154
 msgid "Each word is separated by an underscore"
 msgstr "Кожне слово розділене символом підкреслення"
 
-#: src/Widgets/ComboEntry.vala:148
+#: src/Widgets/ComboEntry.vala:156
 msgid "Each word is separated by a hyphen"
 msgstr "Кожне слово розділяється дефісом"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/Widgets/ComboEntry.vala:158
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Перший символ першого слова в реченні пишеться з великої букви"
 

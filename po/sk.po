@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 22:15+0900\n"
+"POT-Creation-Date: 2023-11-23 11:43+0900\n"
 "PO-Revision-Date: 2022-04-23 17:09+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -19,15 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.12.1-dev\n"
 
-#: src/MainWindow.vala:17
+#: src/MainWindow.vala:19
 msgid "Convert from:"
 msgstr "Previesť z:"
 
-#: src/MainWindow.vala:28
+#: src/MainWindow.vala:29
 msgid "Convert to:"
 msgstr "Previesť na:"
 
-#: src/MainWindow.vala:52
+#: src/MainWindow.vala:39
+msgid "Text copied!"
+msgstr ""
+
+#: src/MainWindow.vala:58
 msgid "Preferences"
 msgstr "Predvoľby"
 
@@ -47,35 +51,35 @@ msgstr "Tmavý"
 msgid "System"
 msgstr "Systém"
 
-#: src/Widgets/ComboEntry.vala:43
+#: src/Widgets/ComboEntry.vala:50
 msgid "Space separated"
 msgstr "Oddelený medzerami"
 
-#: src/Widgets/ComboEntry.vala:60
+#: src/Widgets/ComboEntry.vala:67
 msgid "Copy to Clipboard"
 msgstr "Kopírovať do schránky"
 
-#: src/Widgets/ComboEntry.vala:140
+#: src/Widgets/ComboEntry.vala:148
 msgid "Each word is separated by a space"
 msgstr "Každé slovo je oddelené medzerou"
 
-#: src/Widgets/ComboEntry.vala:142
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of compound words is in lowercase"
 msgstr "Prvý znak zo zhluku slov je napísaný malým písmenom"
 
-#: src/Widgets/ComboEntry.vala:144
+#: src/Widgets/ComboEntry.vala:152
 msgid "The first character of compound words is in uppercase"
 msgstr "Prvý znak zo zhluku slov je napísaný veľkým písmenom"
 
-#: src/Widgets/ComboEntry.vala:146
+#: src/Widgets/ComboEntry.vala:154
 msgid "Each word is separated by an underscore"
 msgstr "Každé slovo je oddelené podčiarkovníkom"
 
-#: src/Widgets/ComboEntry.vala:148
+#: src/Widgets/ComboEntry.vala:156
 msgid "Each word is separated by a hyphen"
 msgstr "Každé slovo je oddelené spojovníkom"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/Widgets/ComboEntry.vala:158
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Prvý znak prvého slova vo vete je napísaný veľkým písmenom"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 22:15+0900\n"
+"POT-Creation-Date: 2023-11-23 11:43+0900\n"
 "PO-Revision-Date: 2021-12-16 14:50+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -17,15 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/MainWindow.vala:17
+#: src/MainWindow.vala:19
 msgid "Convert from:"
 msgstr "変換元の記法:"
 
-#: src/MainWindow.vala:28
+#: src/MainWindow.vala:29
 msgid "Convert to:"
 msgstr "変換先の記法:"
 
-#: src/MainWindow.vala:52
+#: src/MainWindow.vala:39
+msgid "Text copied!"
+msgstr ""
+
+#: src/MainWindow.vala:58
 msgid "Preferences"
 msgstr "設定"
 
@@ -45,35 +49,35 @@ msgstr "ダーク"
 msgid "System"
 msgstr "システム"
 
-#: src/Widgets/ComboEntry.vala:43
+#: src/Widgets/ComboEntry.vala:50
 msgid "Space separated"
 msgstr "スペース区切り"
 
-#: src/Widgets/ComboEntry.vala:60
+#: src/Widgets/ComboEntry.vala:67
 msgid "Copy to Clipboard"
 msgstr "クリップボードにコピー"
 
-#: src/Widgets/ComboEntry.vala:140
+#: src/Widgets/ComboEntry.vala:148
 msgid "Each word is separated by a space"
 msgstr "単語の区切りにスペースを使用します"
 
-#: src/Widgets/ComboEntry.vala:142
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of compound words is in lowercase"
 msgstr "複合語の頭文字に小文字を使用します"
 
-#: src/Widgets/ComboEntry.vala:144
+#: src/Widgets/ComboEntry.vala:152
 msgid "The first character of compound words is in uppercase"
 msgstr "複合語の頭文字に大文字を使用します"
 
-#: src/Widgets/ComboEntry.vala:146
+#: src/Widgets/ComboEntry.vala:154
 msgid "Each word is separated by an underscore"
 msgstr "単語の区切りにアンダースコアを使用します"
 
-#: src/Widgets/ComboEntry.vala:148
+#: src/Widgets/ComboEntry.vala:156
 msgid "Each word is separated by a hyphen"
 msgstr "単語の区切りにハイフンを使用します"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/Widgets/ComboEntry.vala:158
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "文頭の単語の頭文字に大文字を使用します"
 
