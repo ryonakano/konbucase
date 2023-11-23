@@ -12,24 +12,22 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        var source = TextType () {
-            id = "source",
-            display_label = _("Convert from:"),
-            editable = true
-        };
-        var source_combo_entry = new Widgets.ComboEntry (source);
+        var source_combo_entry = new Widgets.ComboEntry (
+            "source",
+            _("Convert from:"),
+            true
+        );
 
         var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL) {
             vexpand = true
         };
 
-        var result = TextType () {
-            id = "result",
-            display_label = _("Convert to:"),
+        var result_combo_entry = new Widgets.ComboEntry (
+            "result",
+            _("Convert to:"),
             // Make the text view uneditable, otherwise the app freezes
-            editable = false
-        };
-        var result_combo_entry = new Widgets.ComboEntry (result);
+            false
+        );
 
         var main_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         main_box.append (source_combo_entry);
