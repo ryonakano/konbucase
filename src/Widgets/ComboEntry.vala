@@ -111,7 +111,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         });
 
         copy_clipboard_button.clicked.connect (() => {
-            Gdk.Display.get_default ().get_clipboard ().set_text (source_buffer.text);
+            get_clipboard ().set_text (source_buffer.text);
         });
 
         var gtk_settings = Gtk.Settings.get_default ();
