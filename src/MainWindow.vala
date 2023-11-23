@@ -4,6 +4,8 @@
  */
 
 public class MainWindow : Gtk.ApplicationWindow {
+    private Granite.Toast toast;
+
     public MainWindow (Application app) {
         Object (
             application: app,
@@ -34,6 +36,12 @@ public class MainWindow : Gtk.ApplicationWindow {
         main_box.append (separator);
         main_box.append (result_combo_entry);
 
+        toast = new Granite.Toast (_("Text copied!"));
+
+        var overlay = new Gtk.Overlay ();
+        overlay.add_overlay (main_box);
+        overlay.add_overlay (toast);
+
         var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
             margin_top = 12,
             margin_bottom = 12,
@@ -56,8 +64,15 @@ public class MainWindow : Gtk.ApplicationWindow {
         header.pack_end (preferences_button);
         set_titlebar (header);
 
-        child = main_box;
+        child = overlay;
 
         source_combo_entry.source_view.grab_focus ();
+
+        source_combo_entry.text_copied.connect (show_toast);
+        result_combo_entry.text_copied.connect (show_toast);
+    }
+
+    private void show_toast () {
+        toast.send_notification ();
     }
 }

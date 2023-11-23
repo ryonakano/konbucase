@@ -4,6 +4,8 @@
  */
 
 public class Widgets.ComboEntry : Gtk.Grid {
+    public signal void text_copied ();
+
     public string id { get; construct; }
     public string description { get; construct; }
     public bool editable { get; construct; }
@@ -112,6 +114,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
 
         copy_clipboard_button.clicked.connect (() => {
             get_clipboard ().set_text (source_buffer.text);
+            text_copied ();
         });
 
         var gtk_settings = Gtk.Settings.get_default ();
