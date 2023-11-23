@@ -23,12 +23,12 @@
   <screenshots>
     <screenshot type="default">
       <caption>App window in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.1.1/data/screenshots/pantheon/screenshot-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.1.2/data/screenshots/pantheon/screenshot-light.png</image>
     </screenshot>
 
     <screenshot>
       <caption>App window in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.1.1/data/screenshots/pantheon/screenshot-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.1.2/data/screenshots/pantheon/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -53,6 +53,17 @@
   <developer_name>Ryo Nakano</developer_name>
 
   <releases>
+    <release version="4.1.2" date="2023-12-01" urgency="low">
+      <description translatable="no">
+        <ul>
+          <li>Send toast when text copied</li>
+          <li>Update Flatpak platform version to 7.3</li>
+          <li>Metainfo: Mark release descriptions as untranslatable</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="4.1.1" date="2023-09-23" urgency="low">
       <description translatable="no">
         <ul>
