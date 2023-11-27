@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
 # JohnDumpling <john_dumpling@protonmail.com>, 2022.
+# Milan Šalka <salka.milan@googlemail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-23 11:43+0900\n"
-"PO-Revision-Date: 2022-04-23 17:09+0000\n"
-"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/konbucase-"
-"main/sk/>\n"
+"PO-Revision-Date: 2023-11-28 22:07+0000\n"
+"Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
+"konbucase-app/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.12.1-dev\n"
+"X-Generator: Weblate 5.3-dev\n"
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -29,7 +30,7 @@ msgstr "Previesť na:"
 
 #: src/MainWindow.vala:39
 msgid "Text copied!"
-msgstr ""
+msgstr "Text skopírovaný!"
 
 #: src/MainWindow.vala:58
 msgid "Preferences"
