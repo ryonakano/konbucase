@@ -57,7 +57,7 @@
       <description translatable="no">
         <ul>
           <li>Send toast when text copied</li>
-          <li>Update Flatpak platform version to 7.3</li>
+          <li>Flatpak: Update platform version</li>
           <li>Metainfo: Mark release descriptions as untranslatable</li>
           <li>Update translations</li>
         </ul>
