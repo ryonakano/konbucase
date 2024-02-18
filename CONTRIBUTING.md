@@ -75,7 +75,7 @@ We follow [the coding style of elementary OS](https://docs.elementary.io/develop
 #### Works in AppCenter Review repository
 
 - Repository URL: https://github.com/elementary/appcenter-reviews
-- Fork the repository if you have write access to it
+- Fork the repository if you don't have write access to it
 - Create a new branch named `com.github.ryonakano.konbucase-X.Y.Z`
 - Perform changes
     - Change `commit` and `version` in the `applications/<rdnn>.json`
