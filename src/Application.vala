@@ -10,8 +10,13 @@ public class Application : Gtk.Application {
         }
     }
 
-    private MainWindow window;
     public static GLib.Settings settings;
+
+    private const ActionEntry[] ACTION_ENTRIES = {
+        { "quit", on_quit_activate },
+    };
+
+    private MainWindow window;
 
     public Application () {
         Object (
@@ -20,15 +25,20 @@ public class Application : Gtk.Application {
         );
     }
 
-    construct {
+    static construct {
+        settings = new GLib.Settings ("com.github.ryonakano.konbucase");
+    }
+
+    protected override void startup () {
+        base.startup ();
+
         Intl.setlocale (LocaleCategory.ALL, "");
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
-    }
 
-    static construct {
-        settings = new GLib.Settings ("com.github.ryonakano.konbucase");
+        add_action_entries (ACTION_ENTRIES, this);
+        set_accels_for_action ("app.quit", { "<Control>q" });
     }
 
     protected override void activate () {
@@ -53,15 +63,12 @@ public class Application : Gtk.Application {
         }
 
         settings.bind ("window-maximized", window, "maximized", SettingsBindFlags.SET);
+    }
 
-        var quit_action = new GLib.SimpleAction ("quit", null);
-        add_action (quit_action);
-        set_accels_for_action ("app.quit", {"<Control>q"});
-        quit_action.activate.connect (() => {
-            if (window != null) {
-                window.destroy ();
-            }
-        });
+    private void on_quit_activate () {
+        if (window != null) {
+            window.destroy ();
+        }
     }
 
     public static int main (string[] args) {
