@@ -65,6 +65,8 @@ public class MainWindow : Gtk.ApplicationWindow {
         set_titlebar (header);
 
         child = overlay;
+        width_request = 700;
+        height_request = 500;
 
         source_combo_entry.source_view.grab_focus ();
 
