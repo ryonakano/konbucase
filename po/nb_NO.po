@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-23 11:43+0900\n"
+"POT-Creation-Date: 2024-02-18 17:01+0900\n"
 "PO-Revision-Date: 2024-01-27 13:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -30,25 +30,27 @@ msgstr "Konverter til:"
 msgid "Text copied!"
 msgstr "Tekst kopiert"
 
-#: src/MainWindow.vala:58
-msgid "Preferences"
-msgstr "Innstillinger"
-
-#: src/StyleSwitcher.vala:27
-msgid "Style:"
-msgstr "Drakt"
-
-#: src/StyleSwitcher.vala:31
+#: src/MainWindow.vala:46
 msgid "Light"
 msgstr "Lys"
 
-#: src/StyleSwitcher.vala:32
+#: src/MainWindow.vala:47
 msgid "Dark"
 msgstr "Mørk"
 
-#: src/StyleSwitcher.vala:33
+#: src/MainWindow.vala:48
 msgid "System"
 msgstr "System"
+
+#: src/MainWindow.vala:51
+#, fuzzy
+#| msgid "Style:"
+msgid "Style"
+msgstr "Drakt"
+
+#: src/MainWindow.vala:54
+msgid "Main Menu"
+msgstr ""
 
 #: src/Widgets/ComboEntry.vala:50
 msgid "Space separated"
@@ -58,29 +60,32 @@ msgstr "Mellomromsinndelt"
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavlen"
 
-#: src/Widgets/ComboEntry.vala:148
+#: src/Widgets/ComboEntry.vala:149
 msgid "Each word is separated by a space"
 msgstr "Hvert ord inndeles av mellomrom"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/Widgets/ComboEntry.vala:151
 msgid "The first character of compound words is in lowercase"
 msgstr "Første tegn i et flerdelt ord har liten forbokstav"
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/Widgets/ComboEntry.vala:153
 msgid "The first character of compound words is in uppercase"
 msgstr "Første tegn i et flerdelt ord har stor forbokstav"
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/Widgets/ComboEntry.vala:155
 msgid "Each word is separated by an underscore"
 msgstr "Hvert ord inndeles av understrek"
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/Widgets/ComboEntry.vala:157
 msgid "Each word is separated by a hyphen"
 msgstr "Hvert ord inndeles av bindestrek"
 
-#: src/Widgets/ComboEntry.vala:158
+#: src/Widgets/ComboEntry.vala:159
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Første tegn i første ord i setningen har stor forbokstav"
+
+#~ msgid "Preferences"
+#~ msgstr "Innstillinger"
 
 #~ msgid "Light style"
 #~ msgstr "Lys stil"

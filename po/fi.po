@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-23 11:43+0900\n"
+"POT-Creation-Date: 2024-02-18 17:01+0900\n"
 "PO-Revision-Date: 2024-01-21 13:01+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/"
-"konbucase-app/fi/>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/konbucase-"
+"app/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,25 +30,27 @@ msgstr "Muunna muotoon:"
 msgid "Text copied!"
 msgstr "Teksti kopioitu!"
 
-#: src/MainWindow.vala:58
-msgid "Preferences"
-msgstr "Asetukset"
-
-#: src/StyleSwitcher.vala:27
-msgid "Style:"
-msgstr "Tyyli:"
-
-#: src/StyleSwitcher.vala:31
+#: src/MainWindow.vala:46
 msgid "Light"
 msgstr "Vaalea"
 
-#: src/StyleSwitcher.vala:32
+#: src/MainWindow.vala:47
 msgid "Dark"
 msgstr "Tumma"
 
-#: src/StyleSwitcher.vala:33
+#: src/MainWindow.vala:48
 msgid "System"
 msgstr "Järjestelmä"
+
+#: src/MainWindow.vala:51
+#, fuzzy
+#| msgid "Style:"
+msgid "Style"
+msgstr "Tyyli:"
+
+#: src/MainWindow.vala:54
+msgid "Main Menu"
+msgstr ""
 
 #: src/Widgets/ComboEntry.vala:50
 msgid "Space separated"
@@ -58,26 +60,29 @@ msgstr "Välilyönnein erotettu"
 msgid "Copy to Clipboard"
 msgstr "Kopioi leikepöydälle"
 
-#: src/Widgets/ComboEntry.vala:148
+#: src/Widgets/ComboEntry.vala:149
 msgid "Each word is separated by a space"
 msgstr "Jokainen sana on erotettu välilyönnillä"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/Widgets/ComboEntry.vala:151
 msgid "The first character of compound words is in lowercase"
 msgstr "Yhdyssanojen ensimmäinen merkki on pienellä"
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/Widgets/ComboEntry.vala:153
 msgid "The first character of compound words is in uppercase"
 msgstr "Yhdyssanojen ensimmäinen merkki on isolla"
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/Widgets/ComboEntry.vala:155
 msgid "Each word is separated by an underscore"
 msgstr "Jokaisen sanan erottaa alaviiva"
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/Widgets/ComboEntry.vala:157
 msgid "Each word is separated by a hyphen"
 msgstr "Jokaisen sanan erottaa tavuviiva"
 
-#: src/Widgets/ComboEntry.vala:158
+#: src/Widgets/ComboEntry.vala:159
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Jokaisen lauseen sanan ensimmäinen sana on isolla"
+
+#~ msgid "Preferences"
+#~ msgstr "Asetukset"
