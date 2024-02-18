@@ -10,7 +10,7 @@ public class Application : Gtk.Application {
         }
     }
 
-    public static GLib.Settings settings;
+    public static GLib.Settings settings { get; private set; }
 
     private const ActionEntry[] ACTION_ENTRIES = {
         { "quit", on_quit_activate },
