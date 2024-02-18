@@ -121,6 +121,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         gtk_settings.notify["gtk-application-prefer-dark-theme"].connect (() => {
             update_color_style (gtk_settings.gtk_application_prefer_dark_theme);
         });
+        update_color_style (gtk_settings.gtk_application_prefer_dark_theme);
     }
 
     private void update_buttons () {
