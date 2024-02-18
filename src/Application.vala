@@ -6,11 +6,11 @@
 public class Application : Gtk.Application {
     public static bool IS_ON_PANTHEON {
         get {
-            return GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
+            return Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
         }
     }
 
-    public static GLib.Settings settings { get; private set; }
+    public static Settings settings { get; private set; }
 
     private const ActionEntry[] ACTION_ENTRIES = {
         { "quit", on_quit_activate },
@@ -26,7 +26,7 @@ public class Application : Gtk.Application {
     }
 
     static construct {
-        settings = new GLib.Settings ("com.github.ryonakano.konbucase");
+        settings = new Settings ("com.github.ryonakano.konbucase");
     }
 
     protected override void startup () {
