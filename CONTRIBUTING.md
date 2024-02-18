@@ -78,7 +78,7 @@ We follow [the coding style of elementary OS](https://docs.elementary.io/develop
 - Fork the repository if you don't have write access to it
 - Create a new branch named `com.github.ryonakano.konbucase-X.Y.Z`
 - Perform changes
-    - Change `commit` and `version` in the `applications/<rdnn>.json`
+    - Change `commit` and `version` in the `applications/com.github.ryonakano.konbucase.json`
         - `commit` should be the release commit just we published on the project repository
         - `version` for the relase version
 - Create a pull request with the above changes
