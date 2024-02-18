@@ -1,3 +1,2 @@
 src/MainWindow.vala
-src/StyleSwitcher.vala
 src/Widgets/ComboEntry.vala

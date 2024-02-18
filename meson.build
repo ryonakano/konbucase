@@ -32,8 +32,9 @@ dependencies = [
 sources = files(
     'src' / 'Widgets' / 'ComboEntry.vala',
     'src' / 'Application.vala',
+    'src' / 'Define.vala',
     'src' / 'MainWindow.vala',
-    'src' / 'StyleSwitcher.vala'
+    'src' / 'StyleManager.vala'
 )
 
 if get_option('use_submodule')

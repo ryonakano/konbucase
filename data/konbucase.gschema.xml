@@ -16,6 +16,11 @@
     <value value="4" nick="kebab"/>
     <value value="5" nick="sentence"/>
   </enum>
+  <enum id="style">
+    <value value="0" nick="default"/>
+    <value value="1" nick="light"/>
+    <value value="2" nick="dark"/>
+  </enum>
 
   <schema path="/com/github/ryonakano/konbucase/" id="com.github.ryonakano.konbucase">
     <key name="source-text" type="s">
@@ -38,15 +43,10 @@
       <summary>Result case</summary>
       <description>The last saved value of the result case combobox</description>
     </key>
-    <key name="is-prefer-dark" type="b">
-      <default>false</default>
-      <summary>Prefer dark</summary>
+    <key name="color-scheme" enum="style">
+      <default>'default'</default>
+      <summary>Color scheme</summary>
       <description>Whether to show the window in a dark style or not</description>
-    </key>
-    <key name="is-follow-system-style" type="b">
-      <default>true</default>
-      <summary>Follow system style</summary>
-      <description>Whether to follow system's dark style settings or not</description>
     </key>
     <key name="window-width" type="i">
       <default>700</default>
