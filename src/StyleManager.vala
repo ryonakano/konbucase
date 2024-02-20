@@ -2,6 +2,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: 2021-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
+
 public class StyleManager : Object {
     public enum ColorScheme {
         DEFAULT,
