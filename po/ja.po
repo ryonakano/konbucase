@@ -1,22 +1,22 @@
 # Japanese translations for com.github.ryonakano.konbucase package.
 # Copyright (C) 2020 THE com.github.ryonakano.konbucase'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2020-2021, 2023.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2020-2021, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-18 17:01+0900\n"
-"PO-Revision-Date: 2023-11-27 13:04+0000\n"
+"PO-Revision-Date: 2024-03-02 01:49+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase-"
-"app/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
+"konbucase-app/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.3-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -43,14 +43,12 @@ msgid "System"
 msgstr "システム"
 
 #: src/MainWindow.vala:51
-#, fuzzy
-#| msgid "Style:"
 msgid "Style"
-msgstr "スタイル:"
+msgstr "スタイル"
 
 #: src/MainWindow.vala:54
 msgid "Main Menu"
-msgstr ""
+msgstr "メインメニュー"
 
 #: src/Widgets/ComboEntry.vala:50
 msgid "Space separated"
