@@ -40,13 +40,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
     construct {
         var case_label = new Gtk.Label (description);
 
-        var case_combobox = new Ryokucha.DropDownText () {
-            halign = Gtk.Align.START,
-            margin_top = 6,
-            margin_bottom = 6,
-            margin_start = 6,
-            margin_end = 6
-        };
+        var case_combobox = new Ryokucha.DropDownText ();
         case_combobox.append ("space_separated", _("Space separated"));
         case_combobox.append ("camel", "camelCase");
         case_combobox.append ("pascal", "PascalCase");
@@ -62,14 +56,17 @@ public class Widgets.ComboEntry : Gtk.Grid {
         };
 
         copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
-            margin_end = 6,
             sensitive = false,
             tooltip_text = _("Copy to Clipboard")
         };
 
         var toolbar_grid = new Gtk.Grid () {
+            valign = Gtk.Align.CENTER,
+            margin_top = 6,
+            margin_bottom = 6,
             margin_start = 6,
-            column_spacing = 6
+            margin_end = 6,
+            column_spacing = 12
         };
         toolbar_grid.attach (case_label, 0, 0);
         toolbar_grid.attach (case_combobox, 1, 0);
@@ -121,6 +118,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         gtk_settings.notify["gtk-application-prefer-dark-theme"].connect (() => {
             update_color_style (gtk_settings.gtk_application_prefer_dark_theme);
         });
+        update_color_style (gtk_settings.gtk_application_prefer_dark_theme);
     }
 
     private void update_buttons () {
