@@ -53,7 +53,7 @@
   <developer_name>Ryo Nakano</developer_name>
 
   <releases>
-    <release version="4.1.2" date="2024-03-31" urgency="low">
+    <release version="4.1.2" date="2024-03-02" urgency="low">
       <description translatable="no">
         <ul>
           <li>Set minimum window size to prevent it from being cut off</li>
