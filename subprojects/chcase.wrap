@@ -1,0 +1,4 @@
+[wrap-git]
+url = https://github.com/ryonakano/chcase.git
+revision = 2.2.0
+depth = 1
