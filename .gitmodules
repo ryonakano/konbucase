@@ -1,6 +1,0 @@
-[submodule "subprojects/chcase"]
-	path = subprojects/chcase
-	url = https://github.com/ryonakano/chcase
-[submodule "subprojects/ryokucha"]
-	path = subprojects/ryokucha
-	url = https://github.com/ryonakano/ryokucha

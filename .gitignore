@@ -6,3 +6,7 @@ build*
 *.swp
 *~
 *.un~
+
+# subprojects
+subprojects/chcase
+subprojects/ryokucha
