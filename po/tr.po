@@ -5,25 +5,26 @@
 # Safak <bjksafak45@gmail.com>, 2020.
 # Sabri Ünal <libreajans@gmail.com>, 2022, 2023.
 # Oğuz Ersen <oguz@ersen.moe>, 2023.
+# Sabri Ünal <yakushabb@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-18 17:01+0900\n"
-"PO-Revision-Date: 2023-12-10 12:05+0000\n"
-"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase-"
-"app/tr/>\n"
+"PO-Revision-Date: 2024-03-20 22:50+0000\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/"
+"konbucase-app/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.3-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
-msgstr "Şuna dönüştür:"
+msgstr "Şundan dönüştür:"
 
 #: src/MainWindow.vala:29
 msgid "Convert to:"
@@ -46,18 +47,16 @@ msgid "System"
 msgstr "Sistem"
 
 #: src/MainWindow.vala:51
-#, fuzzy
-#| msgid "Style:"
 msgid "Style"
-msgstr "Biçem:"
+msgstr "Biçem"
 
 #: src/MainWindow.vala:54
 msgid "Main Menu"
-msgstr ""
+msgstr "Ana Menü"
 
 #: src/Widgets/ComboEntry.vala:50
 msgid "Space separated"
-msgstr "Boşluk ayrıldı"
+msgstr "Boşlukla ayrılmış"
 
 #: src/Widgets/ComboEntry.vala:67
 msgid "Copy to Clipboard"
@@ -65,27 +64,27 @@ msgstr "Panoya Kopyala"
 
 #: src/Widgets/ComboEntry.vala:149
 msgid "Each word is separated by a space"
-msgstr "Her kelime bir boşlukla ayrılmıştır"
+msgstr "Her kelime boşlukla ayrılmış"
 
 #: src/Widgets/ComboEntry.vala:151
 msgid "The first character of compound words is in lowercase"
-msgstr "Birleşik kelimelerin ilk karakteri küçük harflidir"
+msgstr "Birleşik kelimelerin ilk karakteri küçük harfli"
 
 #: src/Widgets/ComboEntry.vala:153
 msgid "The first character of compound words is in uppercase"
-msgstr "Birleşik kelimelerin ilk karakteri büyük harflidir"
+msgstr "Birleşik kelimelerin ilk karakteri büyük harfli"
 
 #: src/Widgets/ComboEntry.vala:155
 msgid "Each word is separated by an underscore"
-msgstr "Her kelime bir alt çizgiyle ayrılır"
+msgstr "Her kelime alt çizgiyle ayrılmış"
 
 #: src/Widgets/ComboEntry.vala:157
 msgid "Each word is separated by a hyphen"
-msgstr "Her kelime bir tire ile ayrılır"
+msgstr "Her kelime tire ile ayrılmış"
 
 #: src/Widgets/ComboEntry.vala:159
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Cümledeki ilk kelimenin ilk karakteri büyük harftir"
+msgstr "Cümledeki ilk kelimenin ilk karakteri büyük harfli"
 
 #~ msgid "Preferences"
 #~ msgstr "Tercihler"
