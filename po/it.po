@@ -5,22 +5,21 @@
 # Saverio <saverio.morelli@outlook.it>, 2021.
 # Albano Battistella <albano_battistella@hotmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
-# albanobattistella <albano_battistella@hotmail.com>, 2023.
+# albanobattistella <albano_battistella@hotmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-22 20:50+0900\n"
-"PO-Revision-Date: 2023-11-25 15:00+0000\n"
+"POT-Creation-Date: 2024-03-22 20:56+0900\n"
+"PO-Revision-Date: 2023-09-22 23:50+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase-"
-"app/it/>\n"
+"Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.2.1-rc\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/konbucase.desktop.in:3 data/konbucase.metainfo.xml.in:10
 msgid "KonbuCase"
@@ -28,47 +27,53 @@ msgstr "KonbuCase"
 
 #: data/konbucase.desktop.in:4
 msgid "Case Converting App"
-msgstr ""
+msgstr "Applicazione per la conversione delle maiuscole"
 
 #: data/konbucase.desktop.in:5 data/konbucase.metainfo.xml.in:11
 msgid "Convert case in your text"
-msgstr ""
+msgstr "Converti le maiuscole nel tuo testo"
 
 #: data/konbucase.desktop.in:11
 msgid "Text;"
-msgstr ""
+msgstr "Testo;"
 
 #: data/konbucase.metainfo.xml.in:13
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
+"Un piccolo strumento che permette la conversione delle maiuscole nel tuo "
+"testo."
 
 #: data/konbucase.metainfo.xml.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "Funzionalità incluse:"
 
 #: data/konbucase.metainfo.xml.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
+"Clicca il pulsante \"Copia nella Clipboard\" per copiare tutto il testo "
+"senza  selezionarlo"
 
 #: data/konbucase.metainfo.xml.in:19
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
+"Converti il tuo testo tra camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case e spazi separati"
 
 #: data/konbucase.metainfo.xml.in:25
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Finestra dell'app in modalità chiara"
 
 #: data/konbucase.metainfo.xml.in:30
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Finestra dell'app in modalità scura"
 
 #: data/konbucase.metainfo.xml.in:53
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -155,3 +160,173 @@ msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
 
 #~ msgid "Follow system style:"
 #~ msgstr "Segui lo stile del sistema:"
+
+#~ msgid ""
+#~ "StyleSwitcher: Let system-synced style preference available on any "
+#~ "platforms"
+#~ msgstr ""
+#~ "StyleSwitcher: lascia che le preferenze di stile sincronizzate dal "
+#~ "sistema siano disponibili su qualsiasi piattaforma"
+
+#~ msgid "Update submodules"
+#~ msgstr "Aggiornato sottomoduli"
+
+#~ msgid "Update translations"
+#~ msgstr "Traduzioni aggiornate"
+
+#~ msgid "New icon shape (big thanks to @lenemter)"
+#~ msgstr "Nuova forma dell'icona (grazie mille a @lenemter)"
+
+#~ msgid "Improve app metainfo"
+#~ msgstr "Migliorate metainfo app"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Aggiornata la versione runtime di Flatpak"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Migrato a GTK 4, l'ultima versione di GTK"
+
+#~ msgid ""
+#~ "Set kebab-case as a default case for the result view, so that users can "
+#~ "understand what they can do with the app more intuitively"
+#~ msgstr ""
+#~ "Imposta kebab-case come caso predefinito per la visualizzazione dei "
+#~ "risultati, in modo che gli utenti possano capire cosa possono fare con "
+#~ "l'app in modo più intuitivo"
+
+#~ msgid ""
+#~ "Fix no style button selected on non-Pantheon desktop environments when "
+#~ "first launch"
+#~ msgstr ""
+#~ "Non corretto il pulsante di stile selezionato su ambienti desktop non "
+#~ "Pantheon al primo avvio"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "Controlla l'ambiente desktop in runtime"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Aggiornamenti di traduzione:"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Aggiornata traduzione italiana (grazie a @albanobattistella)"
+
+#~ msgid "Focus the source view by default"
+#~ msgstr "Metti a fuoco la vista di origine per impostazione predefinita"
+
+#~ msgid "Redesign the style switcher"
+#~ msgstr "Ridisegnato il selettore di stile"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Aggiornata la traduzione giapponese"
+
+#~ msgid "Rounded window corners"
+#~ msgstr "Angoli delle finestre arrotondati"
+
+#~ msgid "Support building without Granite for other distributions"
+#~ msgstr "Supporta la costruzione senza Granite per altre distribuzioni"
+
+#~ msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
+#~ msgstr "Aggiunta la traduzione in lituano (grazie a @PolPolyLingo)"
+
+#~ msgid "Fix building fails in Flatpak"
+#~ msgstr "Risolto il problema con la costruzione in Flatpak"
+
+#~ msgid ""
+#~ "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
+#~ "manifest"
+#~ msgstr ""
+#~ "Pubblicato l'app nel nuovo AppCenter su elementary OS 6 con il manifesto "
+#~ "Flatpak"
+
+#~ msgid "Update Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Aggiornata la traduzione in olandese (grazie a @Vistaus)"
+
+#~ msgid "Update Italian translation (thanks to @Sav22999)"
+#~ msgstr "Aggiornata traduzione italiana (grazie a @Sav22999)"
+
+#~ msgid "Support Sentence case"
+#~ msgstr "Supporto in caso di Frase"
+
+#~ msgid "Add Turkish translation (thanks to @safak45x)"
+#~ msgstr "Aggiunta la traduzione in turco (grazie a @safak45x)"
+
+#~ msgid "Clean code"
+#~ msgstr "Pulizia di codice"
+
+#~ msgid "Separate the core part as an independent library"
+#~ msgstr "Separata la parte principale come una libreria indipendente"
+
+#~ msgid "Rename all occurrence of \"target\" to \"source\""
+#~ msgstr "Rinomina tutte le occorrenze di \"target\" in \"source\""
+
+#~ msgid "Fix changing result case sometimes doesn't take effect"
+#~ msgstr ""
+#~ "Correzione della modifica delle maiuscole nei risultati  che a volte non "
+#~ "aveva effetto"
+
+#~ msgid "Quit the app with Ctrl+Q"
+#~ msgstr "Esci dall'app con Ctrl+Q"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Aggiunta la traduzione in olandese (grazie a @Vistaus)"
+
+#~ msgid "Add Portuguese translation (thanks to @rottenpants466)"
+#~ msgstr "Aggiunta traduzione portoghese (grazie a @rottenpants466)"
+
+#~ msgid "Save changes in the app state on time"
+#~ msgstr "Salvataggio delle modifiche dell'app in tempo reale"
+
+#~ msgid "Side-by-side view"
+#~ msgstr "Vista affiancata"
+
+#~ msgid "Improve the app icon (big thanks to @Fatih20)"
+#~ msgstr "Migliorata l'icona dell'app (grazie a @Fatih20)"
+
+#~ msgid "Fix changing OS-wide dark style preference is not reflected"
+#~ msgstr ""
+#~ "Risolto il problema con la modifica della preferenza di stile scuro a "
+#~ "livello di sistema operativo non riflessa"
+
+#~ msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+#~ msgstr ""
+#~ "Risolvi i blocchi dell'app quando si tenta di inserire testi in "
+#~ "result_combo_entry"
+
+#~ msgid "Respect an elementary OS-wide dark preference"
+#~ msgstr ""
+#~ "Rispetta una preferenza scura su elementary OS a livello di sistema "
+#~ "operativo"
+
+#~ msgid "Add a description tooltip to each case"
+#~ msgstr "Aggiunta una descrizione del comando per ciascun caso"
+
+#~ msgid "Allow setting per-app dark style preference"
+#~ msgstr "Consenti l'impostazione della preferenza di stile scuro per-app"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Aggiunta la traduzione in francese (grazie a @NathanBnm)"
+
+#~ msgid "Add Italian translation (thanks to @mirkobrombin)"
+#~ msgstr "Aggiunta traduzione italiana (grazie a @mirkobrombin)"
+
+#~ msgid "Add Japanese translation"
+#~ msgstr "Aggiunta traduzione giapponese"
+
+#~ msgid "Update result texts when changing ComboBox selection"
+#~ msgstr ""
+#~ "Aggiornato i testi dei risultati quando modifichi la selezione ComboBox"
+
+#~ msgid "Initial release"
+#~ msgstr "Versione iniziale"
+
+#~ msgid "Light mode"
+#~ msgstr "Modalità chiara"
+
+#~ msgid "Dark mode"
+#~ msgstr "Modalità scura"
+
+#~ msgid "Migrate to GTK 4"
+#~ msgstr "Migrazione a GTK 4"
+
+#~ msgid "com.github.ryonakano.konbucase"
+#~ msgstr "com.github.ryonakano.konbucase"
