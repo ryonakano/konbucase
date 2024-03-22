@@ -1,2 +1,4 @@
+data/konbucase.desktop.in
+data/konbucase.metainfo.xml.in
 src/MainWindow.vala
 src/Widgets/ComboEntry.vala

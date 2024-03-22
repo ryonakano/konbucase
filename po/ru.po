@@ -1,16 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Russian translations for com.github.ryonakano.konbucase package.
+# Copyright (C) 2020 THE com.github.ryonakano.konbucase'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
-# lenemter <lenemter@gmail.com>, 2022, 2024.
+# lenemter <lenemter@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-18 17:01+0900\n"
+"POT-Creation-Date: 2024-03-22 21:13+0900\n"
 "PO-Revision-Date: 2024-01-21 13:01+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/konbucase-"
-"app/ru/>\n"
+"Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,6 +17,60 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.4-dev\n"
+
+#: data/konbucase.desktop.in:3 data/konbucase.metainfo.xml.in:10
+msgid "KonbuCase"
+msgstr "KonbuCase"
+
+#: data/konbucase.desktop.in:4
+msgid "Case Converting App"
+msgstr "Приложение для конвертации регистра"
+
+#: data/konbucase.desktop.in:5 data/konbucase.metainfo.xml.in:11
+msgid "Convert case in your text"
+msgstr "Конвертируйте регистр вашего текста"
+
+#: data/konbucase.desktop.in:11
+msgid "Text;"
+msgstr "Текст;"
+
+#: data/konbucase.metainfo.xml.in:13
+msgid "A small text tool app that allows you convert case in your text."
+msgstr ""
+"Маленькое приложение, которое позволяет конвертировать регистр в вашем "
+"тексте."
+
+#: data/konbucase.metainfo.xml.in:16
+msgid "Features include:"
+msgstr "Функции:"
+
+#: data/konbucase.metainfo.xml.in:18
+msgid ""
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
+msgstr ""
+"Нажмите на кнопку «Копировать», чтобы скопировать весь текст из поля ввода, "
+"не выделяя его"
+
+#: data/konbucase.metainfo.xml.in:19
+msgid ""
+"Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case, and space-separated"
+msgstr ""
+"Конвертируйте ваш текст между camelCase, PascalCase, Sentence case, "
+"snake_case, kebab-case и space-separated"
+
+#: data/konbucase.metainfo.xml.in:25
+msgid "App window in the light mode"
+msgstr "Окно приложения в светлом режиме"
+
+#: data/konbucase.metainfo.xml.in:30
+msgid "App window in the dark mode"
+msgstr "Окно приложения в тёмном режиме"
+
+#: data/konbucase.metainfo.xml.in:53
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -45,7 +98,6 @@ msgstr "Система"
 
 #: src/MainWindow.vala:51
 #, fuzzy
-#| msgid "Style:"
 msgid "Style"
 msgstr "Стиль:"
 
@@ -53,37 +105,195 @@ msgstr "Стиль:"
 msgid "Main Menu"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:50
+#: src/Widgets/ComboEntry.vala:44
 msgid "Space separated"
 msgstr "Разделённые пробелом"
 
-#: src/Widgets/ComboEntry.vala:67
+#: src/Widgets/ComboEntry.vala:60
 msgid "Copy to Clipboard"
 msgstr "Копировать"
 
-#: src/Widgets/ComboEntry.vala:149
+#: src/Widgets/ComboEntry.vala:146
 msgid "Each word is separated by a space"
 msgstr "Каждое слово разделено пробелом"
 
-#: src/Widgets/ComboEntry.vala:151
+#: src/Widgets/ComboEntry.vala:148
 msgid "The first character of compound words is in lowercase"
 msgstr "Первый символ совмещённых слов пишется с маленькой буквы"
 
-#: src/Widgets/ComboEntry.vala:153
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of compound words is in uppercase"
 msgstr "Первый символ совмещённых слов пишется с заглавной буквы"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by an underscore"
 msgstr "Каждое слово отделяется нижним подчёркиванием"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:154
 msgid "Each word is separated by a hyphen"
 msgstr "Каждое слово отделяется дефисом"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:156
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Первый символ первого слова в предложении пишется с заглавной буквы"
 
 #~ msgid "Preferences"
 #~ msgstr "Параметры"
+
+#~ msgid ""
+#~ "StyleSwitcher: Let system-synced style preference available on any "
+#~ "platforms"
+#~ msgstr ""
+#~ "StyleSwitcher: Поддержка синхронизации стиля приложения со стилем системы "
+#~ "на любой платформе"
+
+#~ msgid "Update submodules"
+#~ msgstr "Обновлены подмодули"
+
+#~ msgid "Update translations"
+#~ msgstr "Обновлены переводы"
+
+#~ msgid "New icon shape (big thanks to @lenemter)"
+#~ msgstr "Новая форма иконки (большое спасибо @lenemter)"
+
+#~ msgid "Improve app metainfo"
+#~ msgstr "Улучшены метаданные приложения"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Обновлена версия Flatpak runtime"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Переход на GTK4, последнюю версию GTK"
+
+#~ msgid ""
+#~ "Set kebab-case as a default case for the result view, so that users can "
+#~ "understand what they can do with the app more intuitively"
+#~ msgstr ""
+#~ "Kebab-case стал регистром по умолчанию для окна результата, чтобы "
+#~ "пользователи могли более интуитивно понять что они могут делать с этим "
+#~ "приложением"
+
+#~ msgid ""
+#~ "Fix no style button selected on non-Pantheon desktop environments when "
+#~ "first launch"
+#~ msgstr ""
+#~ "Исправлена кнопка выбора стиля при первом запуске вне среды Pantheon"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "Проверка окружения рабочего стола во время выполнения"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Обновления переводов:"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Обновлён итальянский перевод (спасибо @albanobattistella)"
+
+#~ msgid "Focus the source view by default"
+#~ msgstr "Теперь по умолчанию сфокусировано поле ввода"
+
+#~ msgid "Redesign the style switcher"
+#~ msgstr "Переработан переключатель стиля"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Обновлён японский перевод"
+
+#~ msgid "Rounded window corners"
+#~ msgstr "Закруглены углы окна"
+
+#~ msgid "Support building without Granite for other distributions"
+#~ msgstr "Поддержка сборки без Granite для других дистрибутивов"
+
+#~ msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
+#~ msgstr "Добавлен литовский перевод (спасибо @PolPolyLingo)"
+
+#~ msgid "Fix building fails in Flatpak"
+#~ msgstr "Исправление сборки в Flatpak"
+
+#~ msgid ""
+#~ "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
+#~ "manifest"
+#~ msgstr ""
+#~ "Приложение опубликовано в новом AppCenter в elementary OS 6 с манифестом "
+#~ "Flatpak"
+
+#~ msgid "Update Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Обновлён голландский перевод (спасибо @Vistaus)"
+
+#~ msgid "Update Italian translation (thanks to @Sav22999)"
+#~ msgstr "Обновлён итальянский перевод (спасибо @Sav22999)"
+
+#~ msgid "Support Sentence case"
+#~ msgstr "Поддержка Sentence case"
+
+#~ msgid "Add Turkish translation (thanks to @safak45x)"
+#~ msgstr "Добавлен турецкий перевод (спасибо @safak45x)"
+
+#~ msgid "Clean code"
+#~ msgstr "Код почищен"
+
+#~ msgid "Separate the core part as an independent library"
+#~ msgstr "Выделение ядра программы в независимую библиотеку"
+
+#~ msgid "Rename all occurrence of \"target\" to \"source\""
+#~ msgstr "Все вхождения «цель» переименованы в «источник»"
+
+#~ msgid "Fix changing result case sometimes doesn't take effect"
+#~ msgstr ""
+#~ "Исправлена проблема, при которое изменение регистра иногда не применялось"
+
+#~ msgid "Quit the app with Ctrl+Q"
+#~ msgstr "Выход из приложения на Ctrl+Q"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Добавлен голландский перевод (спасибо @Vistaus)"
+
+#~ msgid "Add Portuguese translation (thanks to @rottenpants466)"
+#~ msgstr "Добавлен португальский перевод (спасибо @rottenpants466)"
+
+#~ msgid "Save changes in the app state on time"
+#~ msgstr "Своевременное сохранение состояния приложения"
+
+#~ msgid "Side-by-side view"
+#~ msgstr "Параллельное представление"
+
+#~ msgid "Improve the app icon (big thanks to @Fatih20)"
+#~ msgstr "Улучшена иконка приложения (большое спасибо @Fatih20)"
+
+#~ msgid "Fix changing OS-wide dark style preference is not reflected"
+#~ msgstr ""
+#~ "Исправлена ошибка, из-за которой изменение тёмного стиля ОС не отражалось"
+
+#~ msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+#~ msgstr ""
+#~ "Исправлено зависание приложения при попытке ввода текста в "
+#~ "result_combo_entry"
+
+#~ msgid "Respect an elementary OS-wide dark preference"
+#~ msgstr "Соблюдение тёмного стиля elementary OS"
+
+#~ msgid "Add a description tooltip to each case"
+#~ msgstr "Добавлена всплывающая подсказка с описанием для каждого регистра"
+
+#~ msgid "Allow setting per-app dark style preference"
+#~ msgstr "Возможность использования тёмного стиля для приложения отдельно"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Добавлен перевод на французский язык (спасибо @NathanBnm)"
+
+#~ msgid "Add Italian translation (thanks to @mirkobrombin)"
+#~ msgstr "Добавлен итальянский перевод (спасибо @mirkobrombin)"
+
+#~ msgid "Add Japanese translation"
+#~ msgstr "Добавлен японский перевод"
+
+#~ msgid "Update result texts when changing ComboBox selection"
+#~ msgstr "Результат теперь обновляется при изменении выбора в меню"
+
+#~ msgid "Initial release"
+#~ msgstr "Начальный выпуск"
+
+#~ msgid "Light mode"
+#~ msgstr "Светлый режим"
+
+#~ msgid "Dark mode"
+#~ msgstr "Тёмный режим"

@@ -1,5 +1,5 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Dutch translations for com.github.ryonakano.konbucase package.
+# Copyright (C) 2020 THE com.github.ryonakano.konbucase'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Heimen Stoffels <vistausss@fastmail.com>, 2022.
 # Philip Goto <philip.goto@gmail.com>, 2023.
@@ -7,17 +7,68 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-18 17:01+0900\n"
+"POT-Creation-Date: 2024-03-22 21:13+0900\n"
 "PO-Revision-Date: 2023-03-19 14:40+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/konbucase-app/"
-"nl/>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.16.2-dev\n"
+
+#: data/konbucase.desktop.in:3 data/konbucase.metainfo.xml.in:10
+msgid "KonbuCase"
+msgstr "KonbuCase"
+
+#: data/konbucase.desktop.in:4
+msgid "Case Converting App"
+msgstr "Lettergrootte-omzettoepassing"
+
+#: data/konbucase.desktop.in:5 data/konbucase.metainfo.xml.in:11
+msgid "Convert case in your text"
+msgstr "Zet tekst met verschillende lettergroottes om naar normale tekst"
+
+#: data/konbucase.desktop.in:11
+msgid "Text;"
+msgstr "Tekst;Grootte;Letter;"
+
+#: data/konbucase.metainfo.xml.in:13
+msgid "A small text tool app that allows you convert case in your text."
+msgstr "Zet tekst met verschillende lettergroottes om naar normale tekst."
+
+#: data/konbucase.metainfo.xml.in:16
+msgid "Features include:"
+msgstr "Kenmerken:"
+
+#: data/konbucase.metainfo.xml.in:18
+msgid ""
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
+msgstr ""
+"Klik op 'Kopiëren naar klembord' om alle tekst te kopiëren zonder deze te "
+"kopiëren"
+
+#: data/konbucase.metainfo.xml.in:19
+msgid ""
+"Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case, and space-separated"
+msgstr ""
+"Zet tekst met verschillende lettergroottes en opmaken om naar normale tekst, "
+"evenals spatiegescheiden tekst"
+
+#: data/konbucase.metainfo.xml.in:25
+msgid "App window in the light mode"
+msgstr "Venster met licht thema"
+
+#: data/konbucase.metainfo.xml.in:30
+msgid "App window in the dark mode"
+msgstr "Venster met donker thema"
+
+#: data/konbucase.metainfo.xml.in:53
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -45,7 +96,6 @@ msgstr "Systeem"
 
 #: src/MainWindow.vala:51
 #, fuzzy
-#| msgid "Style:"
 msgid "Style"
 msgstr "Thema:"
 
@@ -53,43 +103,40 @@ msgstr "Thema:"
 msgid "Main Menu"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:50
+#: src/Widgets/ComboEntry.vala:44
 msgid "Space separated"
 msgstr "Spatiegescheiden"
 
-#: src/Widgets/ComboEntry.vala:67
+#: src/Widgets/ComboEntry.vala:60
 msgid "Copy to Clipboard"
 msgstr "Kopiëren naar klembord"
 
-#: src/Widgets/ComboEntry.vala:149
+#: src/Widgets/ComboEntry.vala:146
 msgid "Each word is separated by a space"
 msgstr "Elk woord wordt gescheiden door een komma"
 
-#: src/Widgets/ComboEntry.vala:151
+#: src/Widgets/ComboEntry.vala:148
 msgid "The first character of compound words is in lowercase"
 msgstr "De eerste letter van samengestelde woorden is een kleine letter"
 
-#: src/Widgets/ComboEntry.vala:153
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of compound words is in uppercase"
 msgstr "De eerste letter van samengestelde woorden is een hoofdletter"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by an underscore"
 msgstr "Elk woord wordt gescheiden door een onderliggend streepje"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:154
 msgid "Each word is separated by a hyphen"
 msgstr "Elk woord wordt gescheiden door een streepje"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:156
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "De eerste letter van het eerste woord in de zin is een hoofdletter"
 
 #~ msgid "Preferences"
 #~ msgstr "Voorkeuren"
-
-#~ msgid "KonbuCase"
-#~ msgstr "KonbuCase"
 
 #~ msgid "Light background"
 #~ msgstr "Licht thema"
@@ -99,3 +146,114 @@ msgstr "De eerste letter van het eerste woord in de zin is een hoofdletter"
 
 #~ msgid "Follow system style:"
 #~ msgstr "Systeeminstelling gebruiken:"
+
+#~ msgid "Update translations"
+#~ msgstr "Vertalingen bijgewerkt"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Bijgewerkt: Flatpak-runtimeversie"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Migratie naar GTK4, de nieuwste GTK-versie"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Vertaalupdates:"
+
+#, fuzzy
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Italiaanse vertaling (met dank aan @mirkobrombin)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Bijgewerkt: Japanse vertaling"
+
+#, fuzzy
+#~ msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
+#~ msgstr "Italiaanse vertaling (met dank aan @mirkobrombin)"
+
+#, fuzzy
+#~ msgid "Update Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Nederlandse vertaling (met dank aan @Vistaus)"
+
+#, fuzzy
+#~ msgid "Update Italian translation (thanks to @Sav22999)"
+#~ msgstr "Italiaanse vertaling (met dank aan @mirkobrombin)"
+
+#~ msgid "Support Sentence case"
+#~ msgstr "Ondersteuning voor zinnen met hoofdletters"
+
+#~ msgid "Add Turkish translation (thanks to @safak45x)"
+#~ msgstr "Turkse vertaling (met dank aan @safak45x)"
+
+#~ msgid "Clean code"
+#~ msgstr "Code opgeruimd"
+
+#~ msgid "Separate the core part as an independent library"
+#~ msgstr "Kernonderdeel afgetakt naar onafhankelijke bibliotheek"
+
+#~ msgid "Rename all occurrence of \"target\" to \"source\""
+#~ msgstr "Alle vermeldingen van 'doel' hernoemd naar 'bron'"
+
+#~ msgid "Fix changing result case sometimes doesn't take effect"
+#~ msgstr "Opgelost: aanpassen van resultaat werkte soms niet"
+
+#~ msgid "Quit the app with Ctrl+Q"
+#~ msgstr "Sluit af met Ctrl + Q"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Nederlandse vertaling (met dank aan @Vistaus)"
+
+#, fuzzy
+#~| msgid "Add Portuguese-Portugal translation (thanks to @rottenpants466)"
+#~ msgid "Add Portuguese translation (thanks to @rottenpants466)"
+#~ msgstr "Portugese (Portugal) vertaling (met dank aan @rottenpants466)"
+
+#~ msgid "Save changes in the app state on time"
+#~ msgstr "Sla aanpassingen op bepaalde tijden op"
+
+#~ msgid "Side-by-side view"
+#~ msgstr "Zij-aan-zijweergave"
+
+#~ msgid "Improve the app icon (big thanks to @Fatih20)"
+#~ msgstr "Pictogram verbeterd (veel dank aan @Fatih20)"
+
+#~ msgid "Fix changing OS-wide dark style preference is not reflected"
+#~ msgstr "Opgelost: donker systeemthema werd niet overgenomen"
+
+#~ msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+#~ msgstr "Opgelost: vastlopen na tekstinvoer in result_combo_entry"
+
+#~ msgid "Respect an elementary OS-wide dark preference"
+#~ msgstr "Ondersteuning voor elementary OS' donkere thema"
+
+#~ msgid "Add a description tooltip to each case"
+#~ msgstr "Beschrijvingshulpballonnen toegevoegd"
+
+#, fuzzy
+#~ msgid "Allow setting per-app dark style preference"
+#~ msgstr "Ondersteuning voor donker thema per toepassing"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
+
+#~ msgid "Add Italian translation (thanks to @mirkobrombin)"
+#~ msgstr "Italiaanse vertaling (met dank aan @mirkobrombin)"
+
+#~ msgid "Add Japanese translation"
+#~ msgstr "Japanse vertaling"
+
+#~ msgid "Update result texts when changing ComboBox selection"
+#~ msgstr ""
+#~ "Resultaatteksten worden bijgewerkt na het aanpassen van selecties in het "
+#~ "uitrolmenu"
+
+#~ msgid "Initial release"
+#~ msgstr "Eerste versie"
+
+#~ msgid "Light mode"
+#~ msgstr "Licht thema"
+
+#~ msgid "Dark mode"
+#~ msgstr "Donker thema"
+
+#~ msgid "com.github.ryonakano.konbucase"
+#~ msgstr "com.github.ryonakano.konbucase"
