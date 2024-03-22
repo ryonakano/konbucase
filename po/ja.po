@@ -7,15 +7,16 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-22 21:13+0900\n"
-"PO-Revision-Date: 2023-09-19 20:00+0000\n"
+"PO-Revision-Date: 2024-03-22 12:42+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
+"ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/konbucase.desktop.in:3 data/konbucase.metainfo.xml.in:10
 msgid "KonbuCase"
@@ -79,7 +80,7 @@ msgstr "変換先の記法:"
 
 #: src/MainWindow.vala:39
 msgid "Text copied!"
-msgstr "テキストをコピーしました！"
+msgstr "テキストをコピーしました!"
 
 #: src/MainWindow.vala:46
 msgid "Light"
