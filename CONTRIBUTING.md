@@ -21,10 +21,7 @@ Thank you for getting interested in contribution to this project! We really appr
 
 ## Translate the Project
 
-We accept translations through Weblate:
-
-- [konbucase-app](https://hosted.weblate.org/projects/rosp/konbucase-app/): Texts in the app itself
-- [konbucase-metainfo](https://hosted.weblate.org/projects/rosp/konbucase-metainfo/): Texts in the desktop entry and the software center
+We accept translations through [Weblate](https://hosted.weblate.org/projects/rosp/konbucase/).
 
 Alternatively, you can fork this repository, edit the `*.po` files directly, and submit changes through pull requests.
 
