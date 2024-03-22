@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-18 17:01+0900\n"
+"POT-Creation-Date: 2024-03-22 20:50+0900\n"
 "PO-Revision-Date: 2023-12-27 01:10+0000\n"
 "Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/konbucase-"
@@ -18,6 +18,54 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.4-dev\n"
+
+#: data/konbucase.desktop.in:3 data/konbucase.metainfo.xml.in:10
+msgid "KonbuCase"
+msgstr ""
+
+#: data/konbucase.desktop.in:4
+msgid "Case Converting App"
+msgstr ""
+
+#: data/konbucase.desktop.in:5 data/konbucase.metainfo.xml.in:11
+msgid "Convert case in your text"
+msgstr ""
+
+#: data/konbucase.desktop.in:11
+msgid "Text;"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:13
+msgid "A small text tool app that allows you convert case in your text."
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:16
+msgid "Features include:"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:18
+msgid ""
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:19
+msgid ""
+"Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case, and space-separated"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:25
+msgid "App window in the light mode"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:30
+msgid "App window in the dark mode"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:53
+msgid "Ryo Nakano"
+msgstr ""
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -45,7 +93,6 @@ msgstr "System"
 
 #: src/MainWindow.vala:51
 #, fuzzy
-#| msgid "Style:"
 msgid "Style"
 msgstr "Styl:"
 
@@ -53,35 +100,35 @@ msgstr "Styl:"
 msgid "Main Menu"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:50
+#: src/Widgets/ComboEntry.vala:44
 msgid "Space separated"
 msgstr "Oddzielone spacją"
 
-#: src/Widgets/ComboEntry.vala:67
+#: src/Widgets/ComboEntry.vala:60
 msgid "Copy to Clipboard"
 msgstr "Kopiuj do schowka"
 
-#: src/Widgets/ComboEntry.vala:149
+#: src/Widgets/ComboEntry.vala:146
 msgid "Each word is separated by a space"
 msgstr "Każde słowo jest oddzielone spacją"
 
-#: src/Widgets/ComboEntry.vala:151
+#: src/Widgets/ComboEntry.vala:148
 msgid "The first character of compound words is in lowercase"
 msgstr "Pierwszy znak słów złożonych jest pisany małą literą"
 
-#: src/Widgets/ComboEntry.vala:153
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of compound words is in uppercase"
 msgstr "Pierwszy znak słów złożonych jest pisany wielką literą"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by an underscore"
 msgstr "Każde słowo jest oddzielone podkreśleniem"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:154
 msgid "Each word is separated by a hyphen"
 msgstr "Każde słowo jest oddzielone myślnikiem"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:156
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Pierwszy znak pierwszego słowa w zdaniu jest pisany wielką literą"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-18 17:01+0900\n"
+"POT-Creation-Date: 2024-03-22 20:50+0900\n"
 "PO-Revision-Date: 2024-01-27 13:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -17,6 +17,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.4-dev\n"
+
+#: data/konbucase.desktop.in:3 data/konbucase.metainfo.xml.in:10
+msgid "KonbuCase"
+msgstr ""
+
+#: data/konbucase.desktop.in:4
+msgid "Case Converting App"
+msgstr ""
+
+#: data/konbucase.desktop.in:5 data/konbucase.metainfo.xml.in:11
+msgid "Convert case in your text"
+msgstr ""
+
+#: data/konbucase.desktop.in:11
+msgid "Text;"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:13
+msgid "A small text tool app that allows you convert case in your text."
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:16
+msgid "Features include:"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:18
+msgid ""
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:19
+msgid ""
+"Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case, and space-separated"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:25
+msgid "App window in the light mode"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:30
+msgid "App window in the dark mode"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:53
+msgid "Ryo Nakano"
+msgstr ""
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -44,7 +92,6 @@ msgstr "System"
 
 #: src/MainWindow.vala:51
 #, fuzzy
-#| msgid "Style:"
 msgid "Style"
 msgstr "Drakt"
 
@@ -52,35 +99,35 @@ msgstr "Drakt"
 msgid "Main Menu"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:50
+#: src/Widgets/ComboEntry.vala:44
 msgid "Space separated"
 msgstr "Mellomromsinndelt"
 
-#: src/Widgets/ComboEntry.vala:67
+#: src/Widgets/ComboEntry.vala:60
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavlen"
 
-#: src/Widgets/ComboEntry.vala:149
+#: src/Widgets/ComboEntry.vala:146
 msgid "Each word is separated by a space"
 msgstr "Hvert ord inndeles av mellomrom"
 
-#: src/Widgets/ComboEntry.vala:151
+#: src/Widgets/ComboEntry.vala:148
 msgid "The first character of compound words is in lowercase"
 msgstr "Første tegn i et flerdelt ord har liten forbokstav"
 
-#: src/Widgets/ComboEntry.vala:153
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of compound words is in uppercase"
 msgstr "Første tegn i et flerdelt ord har stor forbokstav"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by an underscore"
 msgstr "Hvert ord inndeles av understrek"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:154
 msgid "Each word is separated by a hyphen"
 msgstr "Hvert ord inndeles av bindestrek"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:156
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Første tegn i første ord i setningen har stor forbokstav"
 

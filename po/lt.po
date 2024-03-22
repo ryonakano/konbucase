@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-18 17:01+0900\n"
+"POT-Creation-Date: 2024-03-22 20:50+0900\n"
 "PO-Revision-Date: 2022-10-30 23:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
@@ -18,6 +18,54 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.1.1\n"
+
+#: data/konbucase.desktop.in:3 data/konbucase.metainfo.xml.in:10
+msgid "KonbuCase"
+msgstr "KonveCase"
+
+#: data/konbucase.desktop.in:4
+msgid "Case Converting App"
+msgstr ""
+
+#: data/konbucase.desktop.in:5 data/konbucase.metainfo.xml.in:11
+msgid "Convert case in your text"
+msgstr ""
+
+#: data/konbucase.desktop.in:11
+msgid "Text;"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:13
+msgid "A small text tool app that allows you convert case in your text."
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:16
+msgid "Features include:"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:18
+msgid ""
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:19
+msgid ""
+"Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case, and space-separated"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:25
+msgid "App window in the light mode"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:30
+msgid "App window in the dark mode"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:53
+msgid "Ryo Nakano"
+msgstr ""
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -45,7 +93,6 @@ msgstr "Sistema"
 
 #: src/MainWindow.vala:51
 #, fuzzy
-#| msgid "Style:"
 msgid "Style"
 msgstr "Stilius:"
 
@@ -53,43 +100,40 @@ msgstr "Stilius:"
 msgid "Main Menu"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:50
+#: src/Widgets/ComboEntry.vala:44
 msgid "Space separated"
 msgstr "Atskirti tarpo ženklu"
 
-#: src/Widgets/ComboEntry.vala:67
+#: src/Widgets/ComboEntry.vala:60
 msgid "Copy to Clipboard"
 msgstr "Išsaugoti į Iškarpinę"
 
-#: src/Widgets/ComboEntry.vala:149
+#: src/Widgets/ComboEntry.vala:146
 msgid "Each word is separated by a space"
 msgstr "Kiekvienas žodis atskiriamas tarpo ženklu"
 
-#: src/Widgets/ComboEntry.vala:151
+#: src/Widgets/ComboEntry.vala:148
 msgid "The first character of compound words is in lowercase"
 msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš mažosios raidės"
 
-#: src/Widgets/ComboEntry.vala:153
+#: src/Widgets/ComboEntry.vala:150
 msgid "The first character of compound words is in uppercase"
 msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš didžiosios raidės"
 
-#: src/Widgets/ComboEntry.vala:155
+#: src/Widgets/ComboEntry.vala:152
 msgid "Each word is separated by an underscore"
 msgstr "Kiekvienas žodis atskiriamas pabraukimo brūkšniu"
 
-#: src/Widgets/ComboEntry.vala:157
+#: src/Widgets/ComboEntry.vala:154
 msgid "Each word is separated by a hyphen"
 msgstr "Kiekvienas žodis atskiriamas brūkšneliu"
 
-#: src/Widgets/ComboEntry.vala:159
+#: src/Widgets/ComboEntry.vala:156
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Sakinyje pirmojo žodžio pirmasis rašmuo yra iš didžiosios raidės"
 
 #~ msgid "Preferences"
 #~ msgstr "Nustatymai"
-
-#~ msgid "KonbuCase"
-#~ msgstr "KonveCase"
 
 #~ msgid "Light background"
 #~ msgstr "Šviesus fonas"
