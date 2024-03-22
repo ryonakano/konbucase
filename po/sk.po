@@ -2,17 +2,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
-# JohnDumpling <john_dumpling@protonmail.com>, 2022.
+# JohnDumpling <john_dumpling@protonmail.com>, 2022, 2023.
 # Milan Šalka <salka.milan@googlemail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-22 20:50+0900\n"
+"POT-Creation-Date: 2024-03-22 21:07+0900\n"
 "PO-Revision-Date: 2023-11-28 22:07+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/konbucase-"
-"app/sk/>\n"
+"Language-Team: \n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,51 +21,58 @@ msgstr ""
 
 #: data/konbucase.desktop.in:3 data/konbucase.metainfo.xml.in:10
 msgid "KonbuCase"
-msgstr ""
+msgstr "KonbuCase"
 
 #: data/konbucase.desktop.in:4
 msgid "Case Converting App"
-msgstr ""
+msgstr "Aplikácia na premenu veľkosti písmen v texte"
 
 #: data/konbucase.desktop.in:5 data/konbucase.metainfo.xml.in:11
 msgid "Convert case in your text"
-msgstr ""
+msgstr "Upravte veľkosti jednotlivých písmen v texte"
 
 #: data/konbucase.desktop.in:11
 msgid "Text;"
-msgstr ""
+msgstr "Text;"
 
 #: data/konbucase.metainfo.xml.in:13
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
+"Malý nástroj na úpravu textu, ktorý vám umožňuje zmeniť jednotlivé písmená v "
+"texte na veľké/malé podľa prednastavených možností."
 
 #: data/konbucase.metainfo.xml.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "Funkcie zahŕňajú:"
 
 #: data/konbucase.metainfo.xml.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
+"Stlačte tlačidlo „Kopírovať do schránky“ na skopírovanie celého textu v "
+"zobrazení textu bez predošlého výberu"
 
 #: data/konbucase.metainfo.xml.in:19
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
+"Preveďte váš text medzi camelCase (ťavíText), PascalCase (PascalovýText), "
+"Sentence case (Vetný text), snake_case (hadí_text), kebab-case (kebabový-"
+"text), and space-separated (oddelený medzerami)"
 
 #: data/konbucase.metainfo.xml.in:25
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Okno aplikácie v svetlom režime"
 
 #: data/konbucase.metainfo.xml.in:30
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Okno aplikácie v tmavom režime"
 
 #: data/konbucase.metainfo.xml.in:53
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -144,3 +150,161 @@ msgstr "Prvý znak prvého slova vo vete je napísaný veľkým písmenom"
 
 #~ msgid "Use the same style set in the system"
 #~ msgstr "Použiť rovnaký štýl ako v systéme"
+
+#~ msgid ""
+#~ "StyleSwitcher: Let system-synced style preference available on any "
+#~ "platforms"
+#~ msgstr ""
+#~ "Prepínač štýlov: Preferencia systémového štýlu je dostupná na všetkých "
+#~ "platformách"
+
+#~ msgid "Update submodules"
+#~ msgstr "Aktualizácia submodulov"
+
+#~ msgid "Update translations"
+#~ msgstr "Aktualizované preklady"
+
+#~ msgid "New icon shape (big thanks to @lenemter)"
+#~ msgstr "Nový tvar ikonky (veľká vďaka patrí @lenemter)"
+
+#~ msgid "Improve app metainfo"
+#~ msgstr "Zlepšenie metainformácií aplikácie"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Aktualizovať verziu Flatpak runtime"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Migrácia na GTK 4, čo je najnovšia verzia GTK"
+
+#~ msgid ""
+#~ "Set kebab-case as a default case for the result view, so that users can "
+#~ "understand what they can do with the app more intuitively"
+#~ msgstr ""
+#~ "Nastavenie kebab-case na predvolený formát textu aby používatelia "
+#~ "intuitívnejšie pochopili, čo môžu s aplikáciou robiť"
+
+#~ msgid ""
+#~ "Fix no style button selected on non-Pantheon desktop environments when "
+#~ "first launch"
+#~ msgstr ""
+#~ "Opraviť tlačidlo bez štýlu vybraté pri prvom spustení v ne-Pantheonových "
+#~ "pracovných prostrediach"
+
+#~ msgid "Check desktop environment on runtime"
+#~ msgstr "Zistiť pracovné prostredie pri spustení aplikácie"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Aktualizácie prekladov:"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Aktualizovaný preklad do taliančiny (vďaka @albanobattistella)"
+
+#~ msgid "Focus the source view by default"
+#~ msgstr "Predvolene označovať zobrazenie zdroja"
+
+#~ msgid "Redesign the style switcher"
+#~ msgstr "Prerobený prepínač štýlov"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Aktualizácia prekladu do japončiny"
+
+#~ msgid "Rounded window corners"
+#~ msgstr "Zaoblenie rohov okna"
+
+#~ msgid "Support building without Granite for other distributions"
+#~ msgstr "Podpora kompilácie bez Granite pre ostatné distribúcie"
+
+#~ msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
+#~ msgstr "Pridaný preklad do litovčiny (vďaka @PolPolyLingo)"
+
+#~ msgid "Fix building fails in Flatpak"
+#~ msgstr "Opravené problémy s kompiláciou Flatpak verzie"
+
+#~ msgid ""
+#~ "Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
+#~ "manifest"
+#~ msgstr ""
+#~ "Uverejnenie aplikácie do nového AppCentra na elementary OS 6 s Flatpak "
+#~ "manifestom"
+
+#~ msgid "Update Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Aktualizácia prekladu do holandčiny (vďaka @Vistaus)"
+
+#~ msgid "Update Italian translation (thanks to @Sav22999)"
+#~ msgstr "Aktualizovaný preklad do taliančiny (vďaka @Sav22999)"
+
+#~ msgid "Support Sentence case"
+#~ msgstr "Pridaná podpora Sentence case (Vetného textu)"
+
+#~ msgid "Add Turkish translation (thanks to @safak45x)"
+#~ msgstr "Pridaný preklad do turečtiny (vďaka @safak45x)"
+
+#~ msgid "Clean code"
+#~ msgstr "Upratanie kódu"
+
+#~ msgid "Separate the core part as an independent library"
+#~ msgstr "Oddelenie jadra aplikácie na nezávislú knižnicu"
+
+#~ msgid "Rename all occurrence of \"target\" to \"source\""
+#~ msgstr "Premenované všetky výskyty slov „target“ na „source“"
+
+#~ msgid "Fix changing result case sometimes doesn't take effect"
+#~ msgstr ""
+#~ "Oprava stavu, keď sa zmena veľkosti výsledného textu niekedy neaplikuje"
+
+#~ msgid "Quit the app with Ctrl+Q"
+#~ msgstr "Ukončenie aplikácie pomocou Ctrl+Q"
+
+#~ msgid "Add Dutch translation (thanks to @Vistaus)"
+#~ msgstr "Pridaný preklad do holandčiny (vďaka @Vistaus)"
+
+#~ msgid "Add Portuguese translation (thanks to @rottenpants466)"
+#~ msgstr "Pridaný preklad do portugalčiny (vďaka @rottenpants466)"
+
+#~ msgid "Save changes in the app state on time"
+#~ msgstr "Ukladať zmeny v stave aplikácie včas"
+
+#~ msgid "Side-by-side view"
+#~ msgstr "Zobrazenie vstupu a výstupu vedľa seba"
+
+#~ msgid "Improve the app icon (big thanks to @Fatih20)"
+#~ msgstr "Vylepšenie ikonky aplikácie (veľká vďaka @Fatih20)"
+
+#~ msgid "Fix changing OS-wide dark style preference is not reflected"
+#~ msgstr ""
+#~ "Oprava problému, keď sa zmena globálneho štýlu operačného systému "
+#~ "neaplikovala v aplikácii"
+
+#~ msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+#~ msgstr ""
+#~ "Opravené zamrznutia aplikácie pri pokuse o vloženie textu do "
+#~ "result_combo_entry"
+
+#~ msgid "Respect an elementary OS-wide dark preference"
+#~ msgstr "Rešpektovať globálnu preferenciu tmavého štýlu v elementary OS"
+
+#~ msgid "Add a description tooltip to each case"
+#~ msgstr "Pridaný popis ku každému formátu textu v zozname"
+
+#~ msgid "Allow setting per-app dark style preference"
+#~ msgstr ""
+#~ "Umožnenie zmeny predvoľby tmavého štýlu v aplikácii nezávisle od "
+#~ "systémového nastavenia"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
+
+#~ msgid "Add Italian translation (thanks to @mirkobrombin)"
+#~ msgstr "Pridaný preklad do taliančiny (vďaka @mirkobrombin)"
+
+#~ msgid "Add Japanese translation"
+#~ msgstr "Pridaný preklad do japončiny"
+
+#~ msgid "Update result texts when changing ComboBox selection"
+#~ msgstr "Aktualizovať výsledný text pri zmene formátu v kontextovom menu"
+
+#~ msgid "Initial release"
+#~ msgstr "Prvé vydanie"
+
+#~ msgid "com.github.ryonakano.konbucase"
+#~ msgstr "com.github.ryonakano.konbucase"
