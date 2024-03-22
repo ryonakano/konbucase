@@ -129,6 +129,3 @@ msgstr "Jokaisen sanan erottaa tavuviiva"
 #: src/Widgets/ComboEntry.vala:156
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Jokaisen lauseen sanan ensimmäinen sana on isolla"
-
-#~ msgid "Preferences"
-#~ msgstr "Asetukset"

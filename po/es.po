@@ -136,6 +136,3 @@ msgstr "Cada palabra está separada por un guión"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr ""
 "El primer carácter de la primera palabra de la frase está en mayúsculas"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferencias"
