@@ -1,5 +1,5 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Dutch translations for com.github.ryonakano.konbucase package.
+# Copyright (C) 2020 THE com.github.ryonakano.konbucase'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Heimen Stoffels <vistausss@fastmail.com>, 2022.
 # Philip Goto <philip.goto@gmail.com>, 2023.
