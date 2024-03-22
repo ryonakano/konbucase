@@ -135,24 +135,3 @@ msgstr "Hvert ord inndeles av bindestrek"
 #: src/Widgets/ComboEntry.vala:156
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Første tegn i første ord i setningen har stor forbokstav"
-
-#~ msgid "Preferences"
-#~ msgstr "Innstillinger"
-
-#~ msgid "Light style"
-#~ msgstr "Lys stil"
-
-#~ msgid "Dark style"
-#~ msgstr "Mørk stil"
-
-#~ msgid "Use the same style set in the system"
-#~ msgstr "Bruk samme stil valgt i systemet"
-
-#~ msgid "Initial release"
-#~ msgstr "Opprinnelig utgave"
-
-#~ msgid "Light mode"
-#~ msgstr "Lys drakt"
-
-#~ msgid "Dark mode"
-#~ msgstr "Mørk drakt"

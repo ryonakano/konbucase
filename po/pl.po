@@ -130,6 +130,3 @@ msgstr "Każde słowo jest oddzielone myślnikiem"
 #: src/Widgets/ComboEntry.vala:156
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Pierwszy znak pierwszego słowa w zdaniu jest pisany wielką literą"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferencje"
