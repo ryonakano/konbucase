@@ -50,7 +50,11 @@
   <url type="help">https://github.com/ryonakano/konbucase/discussions</url>
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
+  <!-- developer_name has deprecated since AppStream 1.0 -->
   <developer_name>Ryo Nakano</developer_name>
+  <developer id="com.github.ryonakano">
+    <name>Ryo Nakano</name>
+  </developer>
 
   <releases>
     <release version="4.1.2" date="2024-03-02" urgency="low">
