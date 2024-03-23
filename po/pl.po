@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-22 21:13+0900\n"
+"POT-Creation-Date: 2024-03-23 06:32+0000\n"
 "PO-Revision-Date: 2024-03-22 12:51+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/konbucase/pl/"
@@ -20,7 +20,7 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/konbucase.desktop.in:3 data/konbucase.metainfo.xml.in:10
+#: data/konbucase.desktop.in:3
 msgid "KonbuCase"
 msgstr "KonbuCase"
 
@@ -63,10 +63,6 @@ msgstr ""
 #: data/konbucase.metainfo.xml.in:30
 msgid "App window in the dark mode"
 msgstr ""
-
-#: data/konbucase.metainfo.xml.in:53
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -132,3 +128,6 @@ msgstr "Każde słowo jest oddzielone myślnikiem"
 #: src/Widgets/ComboEntry.vala:156
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Pierwszy znak pierwszego słowa w zdaniu jest pisany wielką literą"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
