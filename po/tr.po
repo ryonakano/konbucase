@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:32+0000\n"
+"POT-Creation-Date: 2024-03-30 02:05+0000\n"
 "PO-Revision-Date: 2024-03-20 22:50+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/konbucase.desktop.in:3
+#: data/konbucase.desktop.in:3 data/konbucase.metainfo.xml.in:10
 msgid "KonbuCase"
 msgstr "KonbuCase"
 
@@ -69,6 +69,215 @@ msgstr "Açık modda uygulama penceresi"
 #: data/konbucase.metainfo.xml.in:30
 msgid "App window in the dark mode"
 msgstr "Koyu modda uygulama penceresi"
+
+#. developer_name has deprecated since AppStream 1.0
+#: data/konbucase.metainfo.xml.in:55
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/konbucase.metainfo.xml.in:64
+msgid "Set minimum window size to prevent it from being cut off"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:65
+msgid "Send toast when text copied"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:66
+msgid "Flatpak: Update platform version"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:67
+msgid "Metainfo: Mark release descriptions as untranslatable"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:68 data/konbucase.metainfo.xml.in:78
+#: data/konbucase.metainfo.xml.in:89 data/konbucase.metainfo.xml.in:100
+#: data/konbucase.metainfo.xml.in:109 data/konbucase.metainfo.xml.in:210
+#: data/konbucase.metainfo.xml.in:222
+msgid "Update translations"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:76
+msgid ""
+"StyleSwitcher: Let system-synced style preference available on any platforms"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:77
+msgid "Update submodules"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:86
+msgid "New icon shape (big thanks to @lenemter)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:87
+msgid "Improve app metainfo"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:88 data/konbucase.metainfo.xml.in:108
+msgid "Update Flatpak runtime version"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:97
+msgid "Migrate to GTK 4, the latest version of GTK"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:98
+msgid ""
+"Set kebab-case as a default case for the result view, so that users can "
+"understand what they can do with the app more intuitively"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:99
+msgid ""
+"Fix no style button selected on non-Pantheon desktop environments when first "
+"launch"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:117
+msgid "Check desktop environment on runtime"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:119 data/konbucase.metainfo.xml.in:132
+#: data/konbucase.metainfo.xml.in:145
+msgid "Translation updates:"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:121
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:129
+msgid "Focus the source view by default"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:130
+msgid "Redesign the style switcher"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:134 data/konbucase.metainfo.xml.in:148
+#: data/konbucase.metainfo.xml.in:167 data/konbucase.metainfo.xml.in:177
+msgid "Update Japanese translation"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:142
+msgid "Rounded window corners"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:143
+msgid "Support building without Granite for other distributions"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:147
+msgid "Add Lithuanian translation (thanks to @PolPolyLingo)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:156
+msgid "Fix building fails in Flatpak"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:164
+msgid ""
+"Publish the app to the new AppCenter on elementary OS 6 with the Flatpak "
+"manifest"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:165
+msgid "Update Dutch translation (thanks to @Vistaus)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:166
+msgid "Update Italian translation (thanks to @Sav22999)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:175
+msgid "Support Sentence case"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:176
+msgid "Add Turkish translation (thanks to @safak45x)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:178
+msgid "Clean code"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:186
+msgid "Separate the core part as an independent library"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:187
+msgid "Rename all occurrence of \"target\" to \"source\""
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:188
+msgid "Fix changing result case sometimes doesn't take effect"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:189
+msgid "Quit the app with Ctrl+Q"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:190
+msgid "Add Dutch translation (thanks to @Vistaus)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:191
+msgid "Add Portuguese translation (thanks to @rottenpants466)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:199
+msgid "Save changes in the app state on time"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:200
+msgid "Side-by-side view"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:201
+msgid "Improve the app icon (big thanks to @Fatih20)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:209
+msgid "Fix changing OS-wide dark style preference is not reflected"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:218
+msgid "Fix the app freezes when trying to input texts in result_combo_entry"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:219
+msgid "Respect an elementary OS-wide dark preference"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:220
+msgid "Add a description tooltip to each case"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:221
+msgid "Allow setting per-app dark style preference"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:230
+msgid "Add French translation (thanks to @NathanBnm)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:231
+msgid "Add Italian translation (thanks to @mirkobrombin)"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:232
+msgid "Add Japanese translation"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:233
+msgid "Update result texts when changing ComboBox selection"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in:240
+msgid "Initial release"
+msgstr ""
 
 #: src/MainWindow.vala:19
 msgid "Convert from:"
@@ -133,6 +342,3 @@ msgstr "Her kelime tire ile ayrılmış"
 #: src/Widgets/ComboEntry.vala:156
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Cümledeki ilk kelimenin ilk karakteri büyük harfli"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"
