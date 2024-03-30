@@ -64,7 +64,7 @@
           <li>Set minimum window size to prevent it from being cut off</li>
           <li>Send toast when text copied</li>
           <li>Flatpak: Update platform version</li>
-          <li>Metainfo: Mark release descriptions as untranslate</li>
+          <li>Metainfo: Mark release descriptions as untranslatable</li>
           <li>Update translations</li>
         </ul>
       </description>
