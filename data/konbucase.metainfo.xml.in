@@ -7,7 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
 
-  <name translatable="no">KonbuCase</name>
+  <name translate="no">KonbuCase</name>
   <summary>Convert case in your text</summary>
   <description>
     <p>
@@ -52,14 +52,14 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <!-- developer_name has deprecated since AppStream 1.0 -->
-  <developer_name translatable="no">Ryo Nakano</developer_name>
+  <developer_name translate="no">Ryo Nakano</developer_name>
   <developer id="com.github.ryonakano">
-    <name translatable="no">Ryo Nakano</name>
+    <name translate="no">Ryo Nakano</name>
   </developer>
 
   <releases>
     <release version="4.1.2" date="2024-03-02" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Set minimum window size to prevent it from being cut off</li>
           <li>Send toast when text copied</li>
@@ -71,7 +71,7 @@
     </release>
 
     <release version="4.1.1" date="2023-09-23" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>StyleSwitcher: Let system-synced style preference available on any platforms</li>
           <li>Update submodules</li>
@@ -81,7 +81,7 @@
     </release>
 
     <release version="4.1.0" date="2023-04-15" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>New icon shape (big thanks to @lenemter)</li>
           <li>Improve app metainfo</li>
@@ -92,7 +92,7 @@
     </release>
 
     <release version="4.0.0" date="2022-09-24" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Migrate to GTK 4, the latest version of GTK</li>
           <li>Set kebab-case as a default case for the result view, so that users can understand what they can do with the app more intuitively</li>
@@ -103,7 +103,7 @@
     </release>
 
     <release version="3.4.2" date="2022-06-18" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Update Flatpak runtime version</li>
           <li>Update translations</li>
@@ -112,7 +112,7 @@
     </release>
 
     <release version="3.4.1" date="2022-04-04" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Check desktop environment on runtime</li>
         </ul>
@@ -124,7 +124,7 @@
     </release>
 
     <release version="3.4.0" date="2021-12-16" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Focus the source view by default</li>
           <li>Redesign the style switcher</li>
@@ -137,7 +137,7 @@
     </release>
 
     <release version="3.3.0" date="2021-10-12" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Rounded window corners</li>
           <li>Support building without Granite for other distributions</li>
@@ -151,7 +151,7 @@
     </release>
 
     <release version="3.2.1" date="2021-07-31" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Fix building fails in Flatpak</li>
         </ul>
@@ -159,7 +159,7 @@
     </release>
 
     <release version="3.2.0" date="2021-07-30" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Publish the app to the new AppCenter on elementary OS 6 with the Flatpak manifest</li>
           <li>Update Dutch translation (thanks to @Vistaus)</li>
@@ -170,7 +170,7 @@
     </release>
 
     <release version="3.1.0" date="2021-04-13" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Support Sentence case</li>
           <li>Add Turkish translation (thanks to @safak45x)</li>
@@ -181,7 +181,7 @@
     </release>
 
     <release version="3.0.0" date="2020-08-28" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Separate the core part as an independent library</li>
           <li>Rename all occurrence of "target" to "source"</li>
@@ -194,7 +194,7 @@
     </release>
 
     <release version="2.0.0" date="2020-06-28" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Save changes in the app state on time</li>
           <li>Side-by-side view</li>
@@ -204,7 +204,7 @@
     </release>
 
     <release version="1.0.1" date="2020-05-15" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Fix changing OS-wide dark style preference is not reflected</li>
           <li>Update translations</li>
@@ -213,7 +213,7 @@
     </release>
 
     <release version="1.0.0" date="2020-05-14" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Fix the app freezes when trying to input texts in result_combo_entry</li>
           <li>Respect an elementary OS-wide dark preference</li>
@@ -225,7 +225,7 @@
     </release>
 
     <release version="0.1.1" date="2020-05-01" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Add French translation (thanks to @NathanBnm)</li>
           <li>Add Italian translation (thanks to @mirkobrombin)</li>
@@ -236,7 +236,7 @@
     </release>
 
     <release version="0.1.0" date="2020-04-21" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <p>
           Initial release
         </p>
