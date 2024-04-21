@@ -1,0 +1,53 @@
+using Gtk 4.0;
+using GtkSource 5;
+using Granite 7.0;
+
+Gtk.StringList case_list {
+  strings [
+    _("Space separated"),
+    "camelCase",
+    "PascalCase",
+    "snake_case",
+    "kebab-case",
+    "Sentence case",
+  ]
+}
+
+template $ComboEntry : Gtk.Box {
+  orientation: vertical;
+  spacing: 0;
+
+  Gtk.Box {
+    orientation: horizontal;
+    spacing: 12;
+    valign: center;
+    margin-top: 6;
+    margin-bottom: 6;
+    margin-start: 6;
+    margin-end: 6;
+
+    Label case_label {
+      label: bind template.description;
+    }
+
+    Gtk.DropDown case_dropdown {
+      model: case_list;
+    }
+
+    Gtk.Image case_info_button_icon {
+      icon-name: "dialog-information-symbolic";
+    }
+
+    Gtk.Button copy_clipboard_button {
+      icon-name: "edit-copy";
+      tooltip-text: _("Copy to Clipboard");
+    }
+  }
+
+  GtkSource.View source_view {
+    wrap-mode: word_char;
+    hexpand: true;
+    vexpand: true;
+    editable: bind template.editable;
+  }
+}

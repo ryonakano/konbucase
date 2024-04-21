@@ -3,14 +3,13 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Widgets.ComboEntry : Gtk.Grid {
+[GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/combo-entry.ui")]
+public class ComboEntry : Gtk.Box {
     public signal void text_copied ();
 
     public string id { get; construct; }
     public string description { get; construct; }
     public bool editable { get; construct; }
-
-    public GtkSource.View source_view { get; construct; }
 
     private static ChCase.Converter _converter;
     public static ChCase.Converter converter {
@@ -26,8 +25,16 @@ public class Widgets.ComboEntry : Gtk.Grid {
         }
     }
 
+    [GtkChild]
+    private unowned Gtk.DropDown case_dropdown;
+    [GtkChild]
+    private unowned GtkSource.View source_view;
+    [GtkChild]
+    private unowned Gtk.Image case_info_button_icon;
+    [GtkChild]
+    private unowned Gtk.Button copy_clipboard_button;
+
     private GtkSource.Buffer source_buffer;
-    private Gtk.Button copy_clipboard_button;
 
     public ComboEntry (string id, string description, bool editable) {
         Object (
@@ -38,55 +45,12 @@ public class Widgets.ComboEntry : Gtk.Grid {
     }
 
     construct {
-        var case_label = new Gtk.Label (description);
+        case_dropdown.selected = Application.settings.get_enum ("%s-case-combobox".printf (id));
 
-        var case_combobox = new Ryokucha.DropDownText ();
-        case_combobox.append ("space_separated", _("Space separated"));
-        case_combobox.append ("camel", "camelCase");
-        case_combobox.append ("pascal", "PascalCase");
-        case_combobox.append ("snake", "snake_case");
-        case_combobox.append ("kebab", "kebab-case");
-        case_combobox.append ("sentence", "Sentence case");
-        case_combobox.active_id = Application.settings.get_string (
-            "%s-case-combobox".printf (id)
-        );
-
-        var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic") {
-            tooltip_text = set_info_button_tooltip (case_combobox.active_id)
-        };
-
-        copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
-            sensitive = false,
-            tooltip_text = _("Copy to Clipboard")
-        };
-
-        var toolbar_grid = new Gtk.Grid () {
-            valign = Gtk.Align.CENTER,
-            margin_top = 6,
-            margin_bottom = 6,
-            margin_start = 6,
-            margin_end = 6,
-            column_spacing = 12
-        };
-        toolbar_grid.attach (case_label, 0, 0);
-        toolbar_grid.attach (case_combobox, 1, 0);
-        toolbar_grid.attach (case_info_button_icon, 2, 0);
-        toolbar_grid.attach (copy_clipboard_button, 3, 0);
+        case_info_button_icon.tooltip_text = set_info_button_tooltip ((ChCase.Case) case_dropdown.selected);
 
         source_buffer = new GtkSource.Buffer (null);
-        source_view = new GtkSource.View.with_buffer (source_buffer) {
-            wrap_mode = Gtk.WrapMode.WORD_CHAR,
-            hexpand = true,
-            vexpand = true,
-            editable = editable
-        };
-
-        var scrolled = new Gtk.ScrolledWindow () {
-            child = source_view
-        };
-
-        attach (toolbar_grid, 0, 0);
-        attach (scrolled, 0, 1);
+        source_view.buffer = source_buffer;
 
         update_buttons ();
 
@@ -97,10 +61,10 @@ public class Widgets.ComboEntry : Gtk.Grid {
             convert_case ();
         });
 
-        case_combobox.changed.connect (() => {
-            case_info_button_icon.tooltip_text = set_info_button_tooltip (case_combobox.active_id);
+        case_dropdown.notify["selected"].connect (() => {
+            case_info_button_icon.tooltip_text = set_info_button_tooltip ((ChCase.Case) case_dropdown.selected);
 
-            Application.settings.set_string ("%s-case-combobox".printf (id), case_combobox.active_id);
+            Application.settings.set_enum ("%s-case-combobox".printf (id), (ChCase.Case) case_dropdown.selected);
 
             if (Application.settings.get_string ("%s-text".printf (id)) != "") {
                 converter.source_case_name = Application.settings.get_string ("source-case-combobox");
@@ -140,23 +104,27 @@ public class Widgets.ComboEntry : Gtk.Grid {
         }
     }
 
-    private string set_info_button_tooltip (string active_id) {
-        switch (active_id) {
-            case "space_separated":
+    private string set_info_button_tooltip (ChCase.Case case_type) {
+        switch (case_type) {
+            case ChCase.Case.SPACE_SEPARATED:
                 return _("Each word is separated by a space");
-            case "camel":
+            case ChCase.Case.CAMEL:
                 return _("The first character of compound words is in lowercase");
-            case "pascal":
+            case ChCase.Case.PASCAL:
                 return _("The first character of compound words is in uppercase");
-            case "snake":
+            case ChCase.Case.SNAKE:
                 return _("Each word is separated by an underscore");
-            case "kebab":
+            case ChCase.Case.KEBAB:
                 return _("Each word is separated by a hyphen");
-            case "sentence":
+            case ChCase.Case.SENTENCE:
                 return _("The first character of the first word in the sentence is in uppercase");
             default:
                 warning ("Unexpected case, no tooltip is shown.");
                 return "";
         }
+    }
+
+    public unowned GtkSource.View get_source_view () {
+        return source_view;
     }
 }

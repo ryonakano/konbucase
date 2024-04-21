@@ -8,5 +8,6 @@ build*
 *.un~
 
 # subprojects
+subprojects/blueprint-compiler
 subprojects/chcase
 subprojects/ryokucha
