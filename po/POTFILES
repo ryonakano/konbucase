@@ -1,4 +1,5 @@
 data/konbucase.desktop.in
 data/konbucase.metainfo.xml.in
-src/MainWindow.vala
+data/resources/ui/combo-entry.blp
+data/resources/ui/main-window.blp
 src/Widgets/ComboEntry.vala

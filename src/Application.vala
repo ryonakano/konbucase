@@ -36,17 +36,9 @@ public class Application : Gtk.Application {
             return false;
         }
 
-        var val = (StyleManager.ColorScheme) variant.get_int32 ();
-        switch (val) {
-            case StyleManager.ColorScheme.DEFAULT:
-            case StyleManager.ColorScheme.FORCE_LIGHT:
-            case StyleManager.ColorScheme.FORCE_DARK:
-                to_value.set_enum (val);
-                break;
-            default:
-                warning ("style_action_transform_to_cb: Invalid ColorScheme: %d", val);
-                return false;
-        }
+        var val = variant.get_string ();
+        StyleManager.ColorScheme color_scheme = StyleManager.color_scheme_table[val];
+        to_value.set_enum (color_scheme);
 
         return true;
     }
@@ -55,9 +47,13 @@ public class Application : Gtk.Application {
         var val = (StyleManager.ColorScheme) from_value;
         switch (val) {
             case StyleManager.ColorScheme.DEFAULT:
+                to_value.set_variant (new Variant.string (StyleManager.COLOR_SCHEME_DEFAULT));
+                break;
             case StyleManager.ColorScheme.FORCE_LIGHT:
+                to_value.set_variant (new Variant.string (StyleManager.COLOR_SCHEME_FORCE_LIGHT));
+                break;
             case StyleManager.ColorScheme.FORCE_DARK:
-                to_value.set_variant (new Variant.int32 (val));
+                to_value.set_variant (new Variant.string (StyleManager.COLOR_SCHEME_FORCE_DARK));
                 break;
             default:
                 warning ("style_action_transform_from_cb: Invalid ColorScheme: %d", val);
@@ -117,7 +113,7 @@ public class Application : Gtk.Application {
         style_manager = StyleManager.get_default ();
 
         var style_action = new SimpleAction.stateful (
-            "color-scheme", VariantType.INT32, new Variant.int32 (StyleManager.ColorScheme.DEFAULT)
+            "color-scheme", VariantType.STRING, new Variant.string (StyleManager.COLOR_SCHEME_DEFAULT)
         );
         style_action.bind_property ("state", style_manager, "color-scheme",
                                     BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
