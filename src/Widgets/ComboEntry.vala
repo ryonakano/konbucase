@@ -26,6 +26,7 @@ public class Widgets.ComboEntry : Gtk.Grid {
         }
     }
 
+    // Make sure to match with source-type enum in the gschema
     private enum CaseType {
         SPACE_SEPARATED = ChCase.Case.SPACE_SEPARATED,
         CAMEL = ChCase.Case.CAMEL,
