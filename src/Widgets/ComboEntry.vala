@@ -26,6 +26,15 @@ public class Widgets.ComboEntry : Gtk.Grid {
         }
     }
 
+    private enum CaseType {
+        SPACE_SEPARATED = ChCase.Case.SPACE_SEPARATED,
+        CAMEL = ChCase.Case.CAMEL,
+        PASCAL = ChCase.Case.PASCAL,
+        SNAKE = ChCase.Case.SNAKE,
+        KEBAB = ChCase.Case.KEBAB,
+        SENTENCE = ChCase.Case.SENTENCE,
+    }
+
     private GtkSource.Buffer source_buffer;
     private Gtk.Button copy_clipboard_button;
 
@@ -40,19 +49,18 @@ public class Widgets.ComboEntry : Gtk.Grid {
     construct {
         var case_label = new Gtk.Label (description);
 
-        var case_combobox = new Ryokucha.DropDownText ();
-        case_combobox.append ("space_separated", _("Space separated"));
-        case_combobox.append ("camel", "camelCase");
-        case_combobox.append ("pascal", "PascalCase");
-        case_combobox.append ("snake", "snake_case");
-        case_combobox.append ("kebab", "kebab-case");
-        case_combobox.append ("sentence", "Sentence case");
-        case_combobox.active_id = Application.settings.get_string (
-            "%s-case-combobox".printf (id)
-        );
+        var case_combobox = new Gtk.DropDown.from_strings ({
+            _("Space separated"),
+            "camelCase",
+            "PascalCase",
+            "snake_case",
+            "kebab-case",
+            "Sentence case",
+        });
+        case_combobox.selected = Application.settings.get_enum ("%s-case-combobox".printf (id));
 
         var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic") {
-            tooltip_text = set_info_button_tooltip (case_combobox.active_id)
+            tooltip_text = set_info_button_tooltip ((CaseType) case_combobox.selected)
         };
 
         copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
@@ -97,10 +105,10 @@ public class Widgets.ComboEntry : Gtk.Grid {
             convert_case ();
         });
 
-        case_combobox.changed.connect (() => {
-            case_info_button_icon.tooltip_text = set_info_button_tooltip (case_combobox.active_id);
+        case_combobox.notify["selected"].connect (() => {
+            case_info_button_icon.tooltip_text = set_info_button_tooltip ((CaseType) case_combobox.selected);
 
-            Application.settings.set_string ("%s-case-combobox".printf (id), case_combobox.active_id);
+            Application.settings.set_enum ("%s-case-combobox".printf (id), (CaseType) case_combobox.selected);
 
             if (Application.settings.get_string ("%s-text".printf (id)) != "") {
                 converter.source_case_name = Application.settings.get_string ("source-case-combobox");
@@ -140,19 +148,19 @@ public class Widgets.ComboEntry : Gtk.Grid {
         }
     }
 
-    private string set_info_button_tooltip (string active_id) {
-        switch (active_id) {
-            case "space_separated":
+    private string set_info_button_tooltip (CaseType case_type) {
+        switch (case_type) {
+            case CaseType.SPACE_SEPARATED:
                 return _("Each word is separated by a space");
-            case "camel":
+            case CaseType.CAMEL:
                 return _("The first character of compound words is in lowercase");
-            case "pascal":
+            case CaseType.PASCAL:
                 return _("The first character of compound words is in uppercase");
-            case "snake":
+            case CaseType.SNAKE:
                 return _("Each word is separated by an underscore");
-            case "kebab":
+            case CaseType.KEBAB:
                 return _("Each word is separated by a hyphen");
-            case "sentence":
+            case CaseType.SENTENCE:
                 return _("The first character of the first word in the sentence is in uppercase");
             default:
                 warning ("Unexpected case, no tooltip is shown.");
