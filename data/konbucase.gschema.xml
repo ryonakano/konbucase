@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <enum id="source-case-list">
-    <value value="0" nick="space_separated"/>
-    <value value="1" nick="camel"/>
-    <value value="2" nick="pascal"/>
-    <value value="3" nick="snake"/>
-    <value value="4" nick="kebab"/>
-    <value value="5" nick="sentence"/>
-  </enum>
-  <enum id="result-case-list">
+  <enum id="case-type">
     <value value="0" nick="space_separated"/>
     <value value="1" nick="camel"/>
     <value value="2" nick="pascal"/>
@@ -33,12 +25,12 @@
       <summary>Result text</summary>
       <description>The last save result text</description>
     </key>
-    <key name="source-case-combobox" enum="source-case-list">
+    <key name="source-case-combobox" enum="case-type">
       <default>'space_separated'</default>
       <summary>Source case</summary>
       <description>The last saved value of the source case combobox</description>
     </key>
-    <key name="result-case-combobox" enum="result-case-list">
+    <key name="result-case-combobox" enum="case-type">
       <default>'kebab'</default>
       <summary>Result case</summary>
       <description>The last saved value of the result case combobox</description>
