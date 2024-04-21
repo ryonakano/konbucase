@@ -17,13 +17,6 @@ modules:
         url: https://github.com/ryonakano/chcase/archive/refs/tags/2.2.0.tar.gz
         sha256: a27c36c5b257fcfb1279c5128cf213b941b2cb76cfba9646b9d819fc369b6297
 
-  - name: ryokucha
-    buildsystem: meson
-    sources:
-      - type: archive
-        url: https://github.com/ryonakano/ryokucha/archive/refs/tags/0.2.0.tar.gz
-        sha256: 40c038798cafd6f8f2de00b19a27b89042197a301b256b2afa8da35fcc21a2f6
-
   - name: konbucase
     buildsystem: meson
     config-opts:
