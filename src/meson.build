@@ -25,13 +25,8 @@ if get_option('use_submodule')
     chcase_subproject = subproject('chcase')
     chcase_deps = chcase_subproject.get_variable('libchcase')
     dependencies += chcase_deps
-
-    ryokucha_subproject = subproject('ryokucha')
-    ryokucha_deps = ryokucha_subproject.get_variable('libryokucha')
-    dependencies += ryokucha_deps
 else
     dependencies += dependency('chcase')
-    dependencies += dependency('ryokucha')
 endif
 
 executable(

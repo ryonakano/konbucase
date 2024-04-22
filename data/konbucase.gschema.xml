@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
+  <!-- Make sure to match with Widgets.ComboEntry.CaseType -->
   <enum id="case-type">
     <value value="0" nick="space_separated"/>
     <value value="1" nick="camel"/>
