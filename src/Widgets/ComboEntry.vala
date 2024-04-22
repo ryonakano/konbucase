@@ -17,8 +17,8 @@ public class Widgets.ComboEntry : Gtk.Box {
         get {
             if (_converter == null) {
                 _converter = new ChCase.Converter.with_case_from_string (
-                    Application.settings.get_string ("source-case-combobox"),
-                    Application.settings.get_string ("result-case-combobox")
+                    Application.settings.get_string ("source-case-type"),
+                    Application.settings.get_string ("result-case-type")
                 );
             }
 
@@ -53,7 +53,7 @@ public class Widgets.ComboEntry : Gtk.Box {
 
         var case_label = new Gtk.Label (description);
 
-        var case_combobox = new Gtk.DropDown.from_strings ({
+        var case_dropdown = new Gtk.DropDown.from_strings ({
             _("Space separated"),
             "camelCase",
             "PascalCase",
@@ -61,10 +61,10 @@ public class Widgets.ComboEntry : Gtk.Box {
             "kebab-case",
             "Sentence case",
         });
-        case_combobox.selected = Application.settings.get_enum ("%s-case-combobox".printf (id));
+        case_dropdown.selected = Application.settings.get_enum ("%s-case-type".printf (id));
 
         var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic") {
-            tooltip_text = set_info_button_tooltip ((CaseType) case_combobox.selected)
+            tooltip_text = set_info_button_tooltip ((CaseType) case_dropdown.selected)
         };
 
         copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
@@ -80,7 +80,7 @@ public class Widgets.ComboEntry : Gtk.Box {
             margin_end = 6
         };
         toolbar.append (case_label);
-        toolbar.append (case_combobox);
+        toolbar.append (case_dropdown);
         toolbar.append (case_info_button_icon);
         toolbar.append (copy_clipboard_button);
 
@@ -108,14 +108,14 @@ public class Widgets.ComboEntry : Gtk.Box {
             convert_case ();
         });
 
-        case_combobox.notify["selected"].connect (() => {
-            case_info_button_icon.tooltip_text = set_info_button_tooltip ((CaseType) case_combobox.selected);
+        case_dropdown.notify["selected"].connect (() => {
+            case_info_button_icon.tooltip_text = set_info_button_tooltip ((CaseType) case_dropdown.selected);
 
-            Application.settings.set_enum ("%s-case-combobox".printf (id), (CaseType) case_combobox.selected);
+            Application.settings.set_enum ("%s-case-type".printf (id), (CaseType) case_dropdown.selected);
 
             if (Application.settings.get_string ("%s-text".printf (id)) != "") {
-                converter.source_case_name = Application.settings.get_string ("source-case-combobox");
-                converter.result_case_name = Application.settings.get_string ("result-case-combobox");
+                converter.source_case_name = Application.settings.get_string ("source-case-type");
+                converter.result_case_name = Application.settings.get_string ("result-case-type");
                 convert_case ();
             }
         });

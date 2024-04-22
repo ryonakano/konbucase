@@ -26,15 +26,15 @@
       <summary>Result text</summary>
       <description>The last save result text</description>
     </key>
-    <key name="source-case-combobox" enum="case-type">
+    <key name="source-case-type" enum="case-type">
       <default>'space_separated'</default>
       <summary>Source case</summary>
-      <description>The last saved value of the source case combobox</description>
+      <description>The last choice of the source case type</description>
     </key>
-    <key name="result-case-combobox" enum="case-type">
+    <key name="result-case-type" enum="case-type">
       <default>'kebab'</default>
       <summary>Result case</summary>
-      <description>The last saved value of the result case combobox</description>
+      <description>The last choice of the result case type</description>
     </key>
     <key name="color-scheme" enum="style">
       <default>'default'</default>
