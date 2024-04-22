@@ -18,9 +18,9 @@ public class Application : Gtk.Application {
     private MainWindow window;
     private StyleManager style_manager;
 
-    public const string COLOR_SCHEME_DEFAULT = "default";
-    public const string COLOR_SCHEME_FORCE_LIGHT = "force-light";
-    public const string COLOR_SCHEME_FORCE_DARK = "force-dark";
+    private const string COLOR_SCHEME_DEFAULT = "default";
+    private const string COLOR_SCHEME_FORCE_LIGHT = "force-light";
+    private const string COLOR_SCHEME_FORCE_DARK = "force-dark";
 
     private Gee.HashMap<string, StyleManager.ColorScheme> style_action_transform_to_tbl;
     private Gee.HashMap<StyleManager.ColorScheme, string> style_action_transform_from_tbl;

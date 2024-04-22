@@ -1,0 +1,81 @@
+using Gtk 4.0;
+using Granite 7.0;
+
+// Main menu model
+menu main_menu {
+  submenu {
+    label: _("Style");
+
+    item {
+      label: _("Light");
+      action: "app.color-scheme";
+      target: "force-light";
+    }
+
+    item {
+      label: _("Dark");
+      action: "app.color-scheme";
+      target: "force-dark";
+    }
+
+    item {
+      label: _("System");
+      action: "app.color-scheme";
+      target: "default";
+    }
+  }
+}
+
+/**
+ * MainWindow: The app window
+ */
+template $MainWindow : Gtk.ApplicationWindow {
+  width-request: 700;
+  height-request: 500;
+  title: "KonbuCase";
+
+  [titlebar]
+  Gtk.HeaderBar {
+    [end]
+    Gtk.MenuButton {
+      tooltip-text: _("Main Menu");
+      icon-name: "open-menu";
+      menu-model: main_menu;
+      primary: true;
+    }
+  }
+
+  // Use overlay for the toast
+  Gtk.Overlay {
+    [overlay]
+    Gtk.Box {
+      orientation: horizontal;
+      spacing: 0;
+
+      // Left pane for input text
+      $ComboEntry source_combo_entry {
+        id: "source";
+        description: _("Convert from:");
+        editable: true;
+      }
+
+      Gtk.Separator {
+        orientation: vertical;
+        vexpand: true;
+      }
+
+      // Right pane for output text
+      $ComboEntry result_combo_entry {
+        id: "result";
+        description: _("Convert to:");
+        // Make the text view uneditable, otherwise the app freezes
+        editable: false;
+      }
+    }
+
+    [overlay]
+    Granite.Toast toast {
+      title: _("Text copied!");
+    }
+  }
+}

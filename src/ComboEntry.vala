@@ -3,14 +3,13 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+[GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/combo-entry.ui")]
 public class ComboEntry : Gtk.Box {
     public signal void text_copied ();
 
     public string id { get; construct; }
     public string description { get; construct; }
     public bool editable { get; construct; }
-
-    public GtkSource.View source_view { get; construct; }
 
     private static ChCase.Converter _converter;
     public static ChCase.Converter converter {
@@ -36,8 +35,16 @@ public class ComboEntry : Gtk.Box {
         SENTENCE = ChCase.Case.SENTENCE,
     }
 
+    [GtkChild]
+    private unowned Gtk.DropDown case_dropdown;
+    [GtkChild]
+    private unowned Gtk.Image case_info_button_icon;
+    [GtkChild]
+    private unowned Gtk.Button copy_clipboard_button;
+    [GtkChild]
+    private unowned GtkSource.View source_view;
+
     private GtkSource.Buffer source_buffer;
-    private Gtk.Button copy_clipboard_button;
 
     public ComboEntry (string id, string description, bool editable) {
         Object (
@@ -48,56 +55,12 @@ public class ComboEntry : Gtk.Box {
     }
 
     construct {
-        orientation = Gtk.Orientation.VERTICAL;
-        spacing = 0;
-
-        var case_label = new Gtk.Label (description);
-
-        var case_dropdown = new Gtk.DropDown.from_strings ({
-            _("Space separated"),
-            "camelCase",
-            "PascalCase",
-            "snake_case",
-            "kebab-case",
-            "Sentence case",
-        });
         case_dropdown.selected = Application.settings.get_enum ("%s-case-type".printf (id));
 
-        var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic") {
-            tooltip_text = set_info_button_tooltip ((CaseType) case_dropdown.selected)
-        };
-
-        copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
-            sensitive = false,
-            tooltip_text = _("Copy to Clipboard")
-        };
-
-        var toolbar = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
-            valign = Gtk.Align.CENTER,
-            margin_top = 6,
-            margin_bottom = 6,
-            margin_start = 6,
-            margin_end = 6
-        };
-        toolbar.append (case_label);
-        toolbar.append (case_dropdown);
-        toolbar.append (case_info_button_icon);
-        toolbar.append (copy_clipboard_button);
+        case_info_button_icon.tooltip_text = set_info_button_tooltip ((CaseType) case_dropdown.selected);
 
         source_buffer = new GtkSource.Buffer (null);
-        source_view = new GtkSource.View.with_buffer (source_buffer) {
-            wrap_mode = Gtk.WrapMode.WORD_CHAR,
-            hexpand = true,
-            vexpand = true,
-            editable = editable
-        };
-
-        var scrolled = new Gtk.ScrolledWindow () {
-            child = source_view
-        };
-
-        append (toolbar);
-        append (scrolled);
+        source_view.buffer = source_buffer;
 
         update_buttons ();
 
@@ -169,5 +132,9 @@ public class ComboEntry : Gtk.Box {
                 warning ("Unexpected case, no tooltip is shown.");
                 return "";
         }
+    }
+
+    public unowned GtkSource.View get_source_view () {
+        return source_view;
     }
 }

@@ -23,6 +23,7 @@ Community packages maintained by volunteers are also available on some distribut
 ### For Developers
 You'll need the following dependencies:
 
+* blueprint-compiler
 * [libchcase](https://github.com/ryonakano/chcase)
     * automatically downloaded on build
 * libgranite-7-dev
