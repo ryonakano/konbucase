@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:32+0000\n"
+"POT-Creation-Date: 2024-04-22 21:50+0900\n"
 "PO-Revision-Date: 2024-03-22 12:42+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -66,6 +66,38 @@ msgstr "ライトモードのアプリウィンドウ"
 msgid "App window in the dark mode"
 msgstr "ダークモードのアプリウィンドウ"
 
+#: src/ComboEntry.vala:57
+msgid "Space separated"
+msgstr "スペース区切り"
+
+#: src/ComboEntry.vala:72
+msgid "Copy to Clipboard"
+msgstr "クリップボードにコピー"
+
+#: src/ComboEntry.vala:157
+msgid "Each word is separated by a space"
+msgstr "単語の区切りにスペースを使用します"
+
+#: src/ComboEntry.vala:159
+msgid "The first character of compound words is in lowercase"
+msgstr "複合語の頭文字に小文字を使用します"
+
+#: src/ComboEntry.vala:161
+msgid "The first character of compound words is in uppercase"
+msgstr "複合語の頭文字に大文字を使用します"
+
+#: src/ComboEntry.vala:163
+msgid "Each word is separated by an underscore"
+msgstr "単語の区切りにアンダースコアを使用します"
+
+#: src/ComboEntry.vala:165
+msgid "Each word is separated by a hyphen"
+msgstr "単語の区切りにハイフンを使用します"
+
+#: src/ComboEntry.vala:167
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "文頭の単語の頭文字に大文字を使用します"
+
 #: src/MainWindow.vala:19
 msgid "Convert from:"
 msgstr "変換元の記法:"
@@ -97,38 +129,6 @@ msgstr "スタイル"
 #: src/MainWindow.vala:54
 msgid "Main Menu"
 msgstr "メインメニュー"
-
-#: src/Widgets/ComboEntry.vala:44
-msgid "Space separated"
-msgstr "スペース区切り"
-
-#: src/Widgets/ComboEntry.vala:60
-msgid "Copy to Clipboard"
-msgstr "クリップボードにコピー"
-
-#: src/Widgets/ComboEntry.vala:146
-msgid "Each word is separated by a space"
-msgstr "単語の区切りにスペースを使用します"
-
-#: src/Widgets/ComboEntry.vala:148
-msgid "The first character of compound words is in lowercase"
-msgstr "複合語の頭文字に小文字を使用します"
-
-#: src/Widgets/ComboEntry.vala:150
-msgid "The first character of compound words is in uppercase"
-msgstr "複合語の頭文字に大文字を使用します"
-
-#: src/Widgets/ComboEntry.vala:152
-msgid "Each word is separated by an underscore"
-msgstr "単語の区切りにアンダースコアを使用します"
-
-#: src/Widgets/ComboEntry.vala:154
-msgid "Each word is separated by a hyphen"
-msgstr "単語の区切りにハイフンを使用します"
-
-#: src/Widgets/ComboEntry.vala:156
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "文頭の単語の頭文字に大文字を使用します"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

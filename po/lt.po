@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:32+0000\n"
+"POT-Creation-Date: 2024-04-22 21:50+0900\n"
 "PO-Revision-Date: 2023-07-10 02:25+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -70,6 +70,38 @@ msgstr ""
 msgid "App window in the dark mode"
 msgstr ""
 
+#: src/ComboEntry.vala:57
+msgid "Space separated"
+msgstr "Atskirti tarpo ženklu"
+
+#: src/ComboEntry.vala:72
+msgid "Copy to Clipboard"
+msgstr "Išsaugoti į Iškarpinę"
+
+#: src/ComboEntry.vala:157
+msgid "Each word is separated by a space"
+msgstr "Kiekvienas žodis atskiriamas tarpo ženklu"
+
+#: src/ComboEntry.vala:159
+msgid "The first character of compound words is in lowercase"
+msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš mažosios raidės"
+
+#: src/ComboEntry.vala:161
+msgid "The first character of compound words is in uppercase"
+msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš didžiosios raidės"
+
+#: src/ComboEntry.vala:163
+msgid "Each word is separated by an underscore"
+msgstr "Kiekvienas žodis atskiriamas pabraukimo brūkšniu"
+
+#: src/ComboEntry.vala:165
+msgid "Each word is separated by a hyphen"
+msgstr "Kiekvienas žodis atskiriamas brūkšneliu"
+
+#: src/ComboEntry.vala:167
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Sakinyje pirmojo žodžio pirmasis rašmuo yra iš didžiosios raidės"
+
 #: src/MainWindow.vala:19
 msgid "Convert from:"
 msgstr "Keisti iš:"
@@ -102,38 +134,6 @@ msgstr "Stilius:"
 #: src/MainWindow.vala:54
 msgid "Main Menu"
 msgstr ""
-
-#: src/Widgets/ComboEntry.vala:44
-msgid "Space separated"
-msgstr "Atskirti tarpo ženklu"
-
-#: src/Widgets/ComboEntry.vala:60
-msgid "Copy to Clipboard"
-msgstr "Išsaugoti į Iškarpinę"
-
-#: src/Widgets/ComboEntry.vala:146
-msgid "Each word is separated by a space"
-msgstr "Kiekvienas žodis atskiriamas tarpo ženklu"
-
-#: src/Widgets/ComboEntry.vala:148
-msgid "The first character of compound words is in lowercase"
-msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš mažosios raidės"
-
-#: src/Widgets/ComboEntry.vala:150
-msgid "The first character of compound words is in uppercase"
-msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš didžiosios raidės"
-
-#: src/Widgets/ComboEntry.vala:152
-msgid "Each word is separated by an underscore"
-msgstr "Kiekvienas žodis atskiriamas pabraukimo brūkšniu"
-
-#: src/Widgets/ComboEntry.vala:154
-msgid "Each word is separated by a hyphen"
-msgstr "Kiekvienas žodis atskiriamas brūkšneliu"
-
-#: src/Widgets/ComboEntry.vala:156
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Sakinyje pirmojo žodžio pirmasis rašmuo yra iš didžiosios raidės"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

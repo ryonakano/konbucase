@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:32+0000\n"
+"POT-Creation-Date: 2024-04-22 21:50+0900\n"
 "PO-Revision-Date: 2023-03-19 14:40+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: \n"
@@ -66,6 +66,38 @@ msgstr "Venster met licht thema"
 msgid "App window in the dark mode"
 msgstr "Venster met donker thema"
 
+#: src/ComboEntry.vala:57
+msgid "Space separated"
+msgstr "Spatiegescheiden"
+
+#: src/ComboEntry.vala:72
+msgid "Copy to Clipboard"
+msgstr "Kopiëren naar klembord"
+
+#: src/ComboEntry.vala:157
+msgid "Each word is separated by a space"
+msgstr "Elk woord wordt gescheiden door een komma"
+
+#: src/ComboEntry.vala:159
+msgid "The first character of compound words is in lowercase"
+msgstr "De eerste letter van samengestelde woorden is een kleine letter"
+
+#: src/ComboEntry.vala:161
+msgid "The first character of compound words is in uppercase"
+msgstr "De eerste letter van samengestelde woorden is een hoofdletter"
+
+#: src/ComboEntry.vala:163
+msgid "Each word is separated by an underscore"
+msgstr "Elk woord wordt gescheiden door een onderliggend streepje"
+
+#: src/ComboEntry.vala:165
+msgid "Each word is separated by a hyphen"
+msgstr "Elk woord wordt gescheiden door een streepje"
+
+#: src/ComboEntry.vala:167
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "De eerste letter van het eerste woord in de zin is een hoofdletter"
+
 #: src/MainWindow.vala:19
 msgid "Convert from:"
 msgstr "Omzetten van:"
@@ -98,38 +130,6 @@ msgstr "Thema:"
 #: src/MainWindow.vala:54
 msgid "Main Menu"
 msgstr ""
-
-#: src/Widgets/ComboEntry.vala:44
-msgid "Space separated"
-msgstr "Spatiegescheiden"
-
-#: src/Widgets/ComboEntry.vala:60
-msgid "Copy to Clipboard"
-msgstr "Kopiëren naar klembord"
-
-#: src/Widgets/ComboEntry.vala:146
-msgid "Each word is separated by a space"
-msgstr "Elk woord wordt gescheiden door een komma"
-
-#: src/Widgets/ComboEntry.vala:148
-msgid "The first character of compound words is in lowercase"
-msgstr "De eerste letter van samengestelde woorden is een kleine letter"
-
-#: src/Widgets/ComboEntry.vala:150
-msgid "The first character of compound words is in uppercase"
-msgstr "De eerste letter van samengestelde woorden is een hoofdletter"
-
-#: src/Widgets/ComboEntry.vala:152
-msgid "Each word is separated by an underscore"
-msgstr "Elk woord wordt gescheiden door een onderliggend streepje"
-
-#: src/Widgets/ComboEntry.vala:154
-msgid "Each word is separated by a hyphen"
-msgstr "Elk woord wordt gescheiden door een streepje"
-
-#: src/Widgets/ComboEntry.vala:156
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "De eerste letter van het eerste woord in de zin is een hoofdletter"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
