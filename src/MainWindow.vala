@@ -14,7 +14,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        var source_combo_entry = new Widgets.ComboEntry (
+        var source_combo_entry = new ComboEntry (
             "source",
             _("Convert from:"),
             true
@@ -24,7 +24,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             vexpand = true
         };
 
-        var result_combo_entry = new Widgets.ComboEntry (
+        var result_combo_entry = new ComboEntry (
             "result",
             _("Convert to:"),
             // Make the text view uneditable, otherwise the app freezes

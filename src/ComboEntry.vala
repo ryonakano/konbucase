@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Widgets.ComboEntry : Gtk.Box {
+public class ComboEntry : Gtk.Box {
     public signal void text_copied ();
 
     public string id { get; construct; }
