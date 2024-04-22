@@ -18,6 +18,13 @@ public class Application : Gtk.Application {
     private MainWindow window;
     private StyleManager style_manager;
 
+    private static string COLOR_SCHEME_DEFAULT = "default";
+    private static string COLOR_SCHEME_FORCE_LIGHT = "force-light";
+    private static string COLOR_SCHEME_FORCE_DARK = "force-dark";
+
+    private static Gee.HashMap<string, StyleManager.ColorScheme> style_action_transform_to_tbl;
+    private static Gee.HashMap<StyleManager.ColorScheme, string> style_action_transform_from_tbl;
+
     public Application () {
         Object (
             application_id: "com.github.ryonakano.konbucase",
@@ -27,6 +34,16 @@ public class Application : Gtk.Application {
 
     static construct {
         settings = new Settings ("com.github.ryonakano.konbucase");
+
+        style_action_transform_to_tbl = new Gee.HashMap<string, StyleManager.ColorScheme> ();
+        style_action_transform_to_tbl[COLOR_SCHEME_DEFAULT] = StyleManager.ColorScheme.DEFAULT;
+        style_action_transform_to_tbl[COLOR_SCHEME_FORCE_LIGHT] = StyleManager.ColorScheme.FORCE_LIGHT;
+        style_action_transform_to_tbl[COLOR_SCHEME_FORCE_DARK] = StyleManager.ColorScheme.FORCE_DARK;
+
+        style_action_transform_from_tbl = new Gee.HashMap<StyleManager.ColorScheme, string> ();
+        style_action_transform_from_tbl[StyleManager.ColorScheme.DEFAULT] = COLOR_SCHEME_DEFAULT;
+        style_action_transform_from_tbl[StyleManager.ColorScheme.FORCE_LIGHT] = COLOR_SCHEME_FORCE_LIGHT;
+        style_action_transform_from_tbl[StyleManager.ColorScheme.FORCE_DARK] = COLOR_SCHEME_FORCE_DARK;
     }
 
     private bool style_action_transform_to_cb (Binding binding, Value from_value, ref Value to_value) {
@@ -37,7 +54,7 @@ public class Application : Gtk.Application {
         }
 
         var val = variant.get_string ();
-        StyleManager.ColorScheme color_scheme = StyleManager.color_scheme_table[val];
+        StyleManager.ColorScheme color_scheme = style_action_transform_to_tbl[val];
         to_value.set_enum (color_scheme);
 
         return true;
@@ -45,20 +62,8 @@ public class Application : Gtk.Application {
 
     private bool style_action_transform_from_cb (Binding binding, Value from_value, ref Value to_value) {
         var val = (StyleManager.ColorScheme) from_value;
-        switch (val) {
-            case StyleManager.ColorScheme.DEFAULT:
-                to_value.set_variant (new Variant.string (StyleManager.COLOR_SCHEME_DEFAULT));
-                break;
-            case StyleManager.ColorScheme.FORCE_LIGHT:
-                to_value.set_variant (new Variant.string (StyleManager.COLOR_SCHEME_FORCE_LIGHT));
-                break;
-            case StyleManager.ColorScheme.FORCE_DARK:
-                to_value.set_variant (new Variant.string (StyleManager.COLOR_SCHEME_FORCE_DARK));
-                break;
-            default:
-                warning ("style_action_transform_from_cb: Invalid ColorScheme: %d", val);
-                return false;
-        }
+        string color_scheme = style_action_transform_from_tbl[val];
+        to_value.set_variant (new Variant.string (color_scheme));
 
         return true;
     }
@@ -113,7 +118,7 @@ public class Application : Gtk.Application {
         style_manager = StyleManager.get_default ();
 
         var style_action = new SimpleAction.stateful (
-            "color-scheme", VariantType.STRING, new Variant.string (StyleManager.COLOR_SCHEME_DEFAULT)
+            "color-scheme", VariantType.STRING, new Variant.string (COLOR_SCHEME_DEFAULT)
         );
         style_action.bind_property ("state", style_manager, "color-scheme",
                                     BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,

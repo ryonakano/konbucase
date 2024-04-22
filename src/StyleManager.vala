@@ -10,12 +10,6 @@ public class StyleManager : Object {
         FORCE_DARK,
     }
 
-    public static string COLOR_SCHEME_DEFAULT = "default";
-    public static string COLOR_SCHEME_FORCE_LIGHT = "force-light";
-    public static string COLOR_SCHEME_FORCE_DARK = "force-dark";
-
-    public static Gee.HashMap<string, ColorScheme> color_scheme_table { get; private set; }
-
     public ColorScheme color_scheme { get; set; }
 
     public static unowned StyleManager get_default () {
@@ -31,13 +25,6 @@ public class StyleManager : Object {
     private Granite.Settings granite_settings;
 
     private StyleManager () {
-    }
-
-    static construct {
-        color_scheme_table = new Gee.HashMap<string, ColorScheme> ();
-        color_scheme_table[COLOR_SCHEME_DEFAULT] = ColorScheme.DEFAULT;
-        color_scheme_table[COLOR_SCHEME_FORCE_LIGHT] = ColorScheme.FORCE_LIGHT;
-        color_scheme_table[COLOR_SCHEME_FORCE_DARK] = ColorScheme.FORCE_DARK;
     }
 
     construct {
