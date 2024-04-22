@@ -16,13 +16,23 @@ public class ComboEntry : Gtk.Box {
         get {
             if (_converter == null) {
                 _converter = new ChCase.Converter.with_case_from_string (
-                    Application.settings.get_string ("source-case-combobox"),
-                    Application.settings.get_string ("result-case-combobox")
+                    Application.settings.get_string ("source-case-type"),
+                    Application.settings.get_string ("result-case-type")
                 );
             }
 
             return _converter;
         }
+    }
+
+    // Make sure to match with source-type enum in the gschema
+    private enum CaseType {
+        SPACE_SEPARATED = ChCase.Case.SPACE_SEPARATED,
+        CAMEL = ChCase.Case.CAMEL,
+        PASCAL = ChCase.Case.PASCAL,
+        SNAKE = ChCase.Case.SNAKE,
+        KEBAB = ChCase.Case.KEBAB,
+        SENTENCE = ChCase.Case.SENTENCE,
     }
 
     [GtkChild]
@@ -33,7 +43,6 @@ public class ComboEntry : Gtk.Box {
     private unowned Gtk.Image case_info_button_icon;
     [GtkChild]
     private unowned Gtk.Button copy_clipboard_button;
-
     private GtkSource.Buffer source_buffer;
 
     public ComboEntry (string id, string description, bool editable) {
@@ -45,9 +54,9 @@ public class ComboEntry : Gtk.Box {
     }
 
     construct {
-        case_dropdown.selected = Application.settings.get_enum ("%s-case-combobox".printf (id));
+        case_dropdown.selected = Application.settings.get_enum ("%s-case-type".printf (id));
 
-        case_info_button_icon.tooltip_text = set_info_button_tooltip ((ChCase.Case) case_dropdown.selected);
+        case_info_button_icon.tooltip_text = set_info_button_tooltip ((CaseType) case_dropdown.selected);
 
         source_buffer = new GtkSource.Buffer (null);
         source_view.buffer = source_buffer;
@@ -62,13 +71,13 @@ public class ComboEntry : Gtk.Box {
         });
 
         case_dropdown.notify["selected"].connect (() => {
-            case_info_button_icon.tooltip_text = set_info_button_tooltip ((ChCase.Case) case_dropdown.selected);
+            case_info_button_icon.tooltip_text = set_info_button_tooltip ((CaseType) case_dropdown.selected);
 
-            Application.settings.set_enum ("%s-case-combobox".printf (id), (ChCase.Case) case_dropdown.selected);
+            Application.settings.set_enum ("%s-case-type".printf (id), (CaseType) case_dropdown.selected);
 
             if (Application.settings.get_string ("%s-text".printf (id)) != "") {
-                converter.source_case_name = Application.settings.get_string ("source-case-combobox");
-                converter.result_case_name = Application.settings.get_string ("result-case-combobox");
+                converter.source_case_name = Application.settings.get_string ("source-case-type");
+                converter.result_case_name = Application.settings.get_string ("result-case-type");
                 convert_case ();
             }
         });
@@ -104,19 +113,19 @@ public class ComboEntry : Gtk.Box {
         }
     }
 
-    private string set_info_button_tooltip (ChCase.Case case_type) {
+    private string set_info_button_tooltip (CaseType case_type) {
         switch (case_type) {
-            case ChCase.Case.SPACE_SEPARATED:
+            case CaseType.SPACE_SEPARATED:
                 return _("Each word is separated by a space");
-            case ChCase.Case.CAMEL:
+            case CaseType.CAMEL:
                 return _("The first character of compound words is in lowercase");
-            case ChCase.Case.PASCAL:
+            case CaseType.PASCAL:
                 return _("The first character of compound words is in uppercase");
-            case ChCase.Case.SNAKE:
+            case CaseType.SNAKE:
                 return _("Each word is separated by an underscore");
-            case ChCase.Case.KEBAB:
+            case CaseType.KEBAB:
                 return _("Each word is separated by a hyphen");
-            case ChCase.Case.SENTENCE:
+            case CaseType.SENTENCE:
                 return _("The first character of the first word in the sentence is in uppercase");
             default:
                 warning ("Unexpected case, no tooltip is shown.");
