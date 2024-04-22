@@ -38,11 +38,12 @@ public class ComboEntry : Gtk.Box {
     [GtkChild]
     private unowned Gtk.DropDown case_dropdown;
     [GtkChild]
-    private unowned GtkSource.View source_view;
-    [GtkChild]
     private unowned Gtk.Image case_info_button_icon;
     [GtkChild]
     private unowned Gtk.Button copy_clipboard_button;
+    [GtkChild]
+    private unowned GtkSource.View source_view;
+
     private GtkSource.Buffer source_buffer;
 
     public ComboEntry (string id, string description, bool editable) {

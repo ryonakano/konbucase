@@ -44,10 +44,12 @@ template $ComboEntry : Gtk.Box {
     }
   }
 
-  GtkSource.View source_view {
-    wrap-mode: word_char;
-    hexpand: true;
-    vexpand: true;
-    editable: bind template.editable;
+  Gtk.ScrolledWindow {
+    GtkSource.View source_view {
+      wrap-mode: word_char;
+      hexpand: true;
+      vexpand: true;
+      editable: bind template.editable;
+    }
   }
 }
