@@ -18,9 +18,9 @@ public class Application : Gtk.Application {
     private MainWindow window;
     private StyleManager style_manager;
 
-    private static string COLOR_SCHEME_DEFAULT = "default";
-    private static string COLOR_SCHEME_FORCE_LIGHT = "force-light";
-    private static string COLOR_SCHEME_FORCE_DARK = "force-dark";
+    private static string COLOR_SCHEME_DEFAULT = "default"; // vala-lint=naming-convention
+    private static string COLOR_SCHEME_FORCE_LIGHT = "force-light"; // vala-lint=naming-convention
+    private static string COLOR_SCHEME_FORCE_DARK = "force-dark"; // vala-lint=naming-convention
 
     private static Gee.HashMap<string, StyleManager.ColorScheme> style_action_transform_to_tbl;
     private static Gee.HashMap<StyleManager.ColorScheme, string> style_action_transform_from_tbl;
