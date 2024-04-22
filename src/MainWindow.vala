@@ -43,9 +43,9 @@ public class MainWindow : Gtk.ApplicationWindow {
         overlay.add_overlay (toast);
 
         var style_submenu = new Menu ();
-        style_submenu.append (_("Light"), "app.color-scheme(%d)".printf (StyleManager.ColorScheme.FORCE_LIGHT));
-        style_submenu.append (_("Dark"), "app.color-scheme(%d)".printf (StyleManager.ColorScheme.FORCE_DARK));
-        style_submenu.append (_("System"), "app.color-scheme(%d)".printf (StyleManager.ColorScheme.DEFAULT));
+        style_submenu.append (_("Light"), "app.color-scheme(\"%s\")".printf (Application.COLOR_SCHEME_FORCE_LIGHT));
+        style_submenu.append (_("Dark"), "app.color-scheme(\"%s\")".printf (Application.COLOR_SCHEME_FORCE_DARK));
+        style_submenu.append (_("System"), "app.color-scheme(\"%s\")".printf (Application.COLOR_SCHEME_DEFAULT));
 
         var menu = new Menu ();
         menu.append_submenu (_("Style"), style_submenu);
