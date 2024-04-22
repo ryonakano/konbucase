@@ -22,8 +22,8 @@ public class Application : Gtk.Application {
     private const string COLOR_SCHEME_FORCE_LIGHT = "force-light";
     private const string COLOR_SCHEME_FORCE_DARK = "force-dark";
 
-    private static Gee.HashMap<string, StyleManager.ColorScheme> style_action_transform_to_tbl;
-    private static Gee.HashMap<StyleManager.ColorScheme, string> style_action_transform_from_tbl;
+    private Gee.HashMap<string, StyleManager.ColorScheme> style_action_transform_to_tbl;
+    private Gee.HashMap<StyleManager.ColorScheme, string> style_action_transform_from_tbl;
 
     public Application () {
         Object (
@@ -34,7 +34,9 @@ public class Application : Gtk.Application {
 
     static construct {
         settings = new Settings ("com.github.ryonakano.konbucase");
+    }
 
+    construct {
         style_action_transform_to_tbl = new Gee.HashMap<string, StyleManager.ColorScheme> ();
         style_action_transform_to_tbl[COLOR_SCHEME_DEFAULT] = StyleManager.ColorScheme.DEFAULT;
         style_action_transform_to_tbl[COLOR_SCHEME_FORCE_LIGHT] = StyleManager.ColorScheme.FORCE_LIGHT;
