@@ -2,6 +2,7 @@ using Gtk 4.0;
 using GtkSource 5;
 using Granite 7.0;
 
+// Choices of case types
 Gtk.StringList case_list {
   strings [
     _("Space separated"),
@@ -13,10 +14,14 @@ Gtk.StringList case_list {
   ]
 }
 
+/**
+ * ComboEntry: Common pane for input/output texts
+ */
 template $ComboEntry : Gtk.Box {
   orientation: vertical;
   spacing: 0;
 
+  // Toolbar
   Gtk.Box {
     orientation: horizontal;
     spacing: 12;
@@ -26,24 +31,29 @@ template $ComboEntry : Gtk.Box {
     margin-start: 6;
     margin-end: 6;
 
+    // Description text for the DropDown
     Label case_label {
       label: bind template.description;
     }
 
+    // DropDown to choose case type
     Gtk.DropDown case_dropdown {
       model: case_list;
     }
 
+    // Info about current choice of case type
     Gtk.Image case_info_button_icon {
       icon-name: "dialog-information-symbolic";
     }
 
+    // Button to copy text in the text view
     Gtk.Button copy_clipboard_button {
       icon-name: "edit-copy";
       tooltip-text: _("Copy to Clipboard");
     }
   }
 
+  // Text area
   Gtk.ScrolledWindow {
     GtkSource.View source_view {
       wrap-mode: word_char;

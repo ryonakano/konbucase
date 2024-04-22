@@ -1,6 +1,7 @@
 using Gtk 4.0;
 using Granite 7.0;
 
+// Main menu model
 menu main_menu {
   submenu {
     label: _("Style");
@@ -25,6 +26,9 @@ menu main_menu {
   }
 }
 
+/**
+ * MainWindow: The app window
+ */
 template $MainWindow : Gtk.ApplicationWindow {
   width-request: 700;
   height-request: 500;
@@ -41,12 +45,14 @@ template $MainWindow : Gtk.ApplicationWindow {
     }
   }
 
+  // Use overlay for the toast
   Gtk.Overlay {
     [overlay]
     Gtk.Box {
       orientation: horizontal;
       spacing: 0;
 
+      // Left pane for input text
       $ComboEntry source_combo_entry {
         id: "source";
         description: _("Convert from:");
@@ -58,6 +64,7 @@ template $MainWindow : Gtk.ApplicationWindow {
         vexpand: true;
       }
 
+      // Right pane for output text
       $ComboEntry result_combo_entry {
         id: "result";
         description: _("Convert to:");
