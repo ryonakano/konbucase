@@ -4,16 +4,19 @@ using Granite 7.0;
 menu main_menu {
   submenu {
     label: _("Style");
+
     item {
       label: _("Light");
       action: "app.color-scheme";
       target: "force-light";
     }
+
     item {
       label: _("Dark");
       action: "app.color-scheme";
       target: "force-dark";
     }
+
     item {
       label: _("System");
       action: "app.color-scheme";
