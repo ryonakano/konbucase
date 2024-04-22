@@ -6,12 +6,11 @@
 [GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/main-window.ui")]
 public class MainWindow : Gtk.ApplicationWindow {
     [GtkChild]
-    private unowned Granite.Toast toast;
-
-    [GtkChild]
     private unowned ComboEntry source_combo_entry;
     [GtkChild]
     private unowned ComboEntry result_combo_entry;
+    [GtkChild]
+    private unowned Granite.Toast toast;
 
     public MainWindow (Application app) {
         Object (
