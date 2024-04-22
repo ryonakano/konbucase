@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-22 21:50+0900\n"
+"POT-Creation-Date: 2024-04-23 07:47+0900\n"
 "PO-Revision-Date: 2024-03-22 12:51+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -63,70 +63,70 @@ msgstr ""
 msgid "App window in the dark mode"
 msgstr ""
 
-#: src/ComboEntry.vala:57
+#: data/resources/ui/combo-entry.blp:8
 msgid "Space separated"
 msgstr "Välilyönnein erotettu"
 
-#: src/ComboEntry.vala:72
+#: data/resources/ui/combo-entry.blp:52
 msgid "Copy to Clipboard"
 msgstr "Kopioi leikepöydälle"
 
-#: src/ComboEntry.vala:157
-msgid "Each word is separated by a space"
-msgstr "Jokainen sana on erotettu välilyönnillä"
-
-#: src/ComboEntry.vala:159
-msgid "The first character of compound words is in lowercase"
-msgstr "Yhdyssanojen ensimmäinen merkki on pienellä"
-
-#: src/ComboEntry.vala:161
-msgid "The first character of compound words is in uppercase"
-msgstr "Yhdyssanojen ensimmäinen merkki on isolla"
-
-#: src/ComboEntry.vala:163
-msgid "Each word is separated by an underscore"
-msgstr "Jokaisen sanan erottaa alaviiva"
-
-#: src/ComboEntry.vala:165
-msgid "Each word is separated by a hyphen"
-msgstr "Jokaisen sanan erottaa tavuviiva"
-
-#: src/ComboEntry.vala:167
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Jokaisen lauseen sanan ensimmäinen sana on isolla"
-
-#: src/MainWindow.vala:19
-msgid "Convert from:"
-msgstr "Muunna muodosta:"
-
-#: src/MainWindow.vala:29
-msgid "Convert to:"
-msgstr "Muunna muotoon:"
-
-#: src/MainWindow.vala:39
-msgid "Text copied!"
-msgstr "Teksti kopioitu!"
-
-#: src/MainWindow.vala:46
-msgid "Light"
-msgstr "Vaalea"
-
-#: src/MainWindow.vala:47
-msgid "Dark"
-msgstr "Tumma"
-
-#: src/MainWindow.vala:48
-msgid "System"
-msgstr "Järjestelmä"
-
-#: src/MainWindow.vala:51
+#: data/resources/ui/main-window.blp:7
 #, fuzzy
 msgid "Style"
 msgstr "Tyyli:"
 
-#: src/MainWindow.vala:54
+#: data/resources/ui/main-window.blp:10
+msgid "Light"
+msgstr "Vaalea"
+
+#: data/resources/ui/main-window.blp:16
+msgid "Dark"
+msgstr "Tumma"
+
+#: data/resources/ui/main-window.blp:22
+msgid "System"
+msgstr "Järjestelmä"
+
+#: data/resources/ui/main-window.blp:41
 msgid "Main Menu"
 msgstr ""
+
+#: data/resources/ui/main-window.blp:58
+msgid "Convert from:"
+msgstr "Muunna muodosta:"
+
+#: data/resources/ui/main-window.blp:70
+msgid "Convert to:"
+msgstr "Muunna muotoon:"
+
+#: data/resources/ui/main-window.blp:78
+msgid "Text copied!"
+msgstr "Teksti kopioitu!"
+
+#: src/ComboEntry.vala:120
+msgid "Each word is separated by a space"
+msgstr "Jokainen sana on erotettu välilyönnillä"
+
+#: src/ComboEntry.vala:122
+msgid "The first character of compound words is in lowercase"
+msgstr "Yhdyssanojen ensimmäinen merkki on pienellä"
+
+#: src/ComboEntry.vala:124
+msgid "The first character of compound words is in uppercase"
+msgstr "Yhdyssanojen ensimmäinen merkki on isolla"
+
+#: src/ComboEntry.vala:126
+msgid "Each word is separated by an underscore"
+msgstr "Jokaisen sanan erottaa alaviiva"
+
+#: src/ComboEntry.vala:128
+msgid "Each word is separated by a hyphen"
+msgstr "Jokaisen sanan erottaa tavuviiva"
+
+#: src/ComboEntry.vala:130
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Jokaisen lauseen sanan ensimmäinen sana on isolla"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

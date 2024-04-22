@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-22 21:50+0900\n"
+"POT-Creation-Date: 2024-04-23 07:47+0900\n"
 "PO-Revision-Date: 2024-04-04 04:08+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -68,70 +68,70 @@ msgstr "Programvindu i lys drakt"
 msgid "App window in the dark mode"
 msgstr "Programvindu i mørk drakt"
 
-#: src/ComboEntry.vala:57
+#: data/resources/ui/combo-entry.blp:8
 msgid "Space separated"
 msgstr "Mellomromsinndelt"
 
-#: src/ComboEntry.vala:72
+#: data/resources/ui/combo-entry.blp:52
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavlen"
 
-#: src/ComboEntry.vala:157
-msgid "Each word is separated by a space"
-msgstr "Hvert ord inndeles av mellomrom"
-
-#: src/ComboEntry.vala:159
-msgid "The first character of compound words is in lowercase"
-msgstr "Første tegn i et flerdelt ord har liten forbokstav"
-
-#: src/ComboEntry.vala:161
-msgid "The first character of compound words is in uppercase"
-msgstr "Første tegn i et flerdelt ord har stor forbokstav"
-
-#: src/ComboEntry.vala:163
-msgid "Each word is separated by an underscore"
-msgstr "Hvert ord inndeles av understrek"
-
-#: src/ComboEntry.vala:165
-msgid "Each word is separated by a hyphen"
-msgstr "Hvert ord inndeles av bindestrek"
-
-#: src/ComboEntry.vala:167
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Første tegn i første ord i setningen har stor forbokstav"
-
-#: src/MainWindow.vala:19
-msgid "Convert from:"
-msgstr "Konverter fra:"
-
-#: src/MainWindow.vala:29
-msgid "Convert to:"
-msgstr "Konverter til:"
-
-#: src/MainWindow.vala:39
-msgid "Text copied!"
-msgstr "Tekst kopiert"
-
-#: src/MainWindow.vala:46
-msgid "Light"
-msgstr "Lys"
-
-#: src/MainWindow.vala:47
-msgid "Dark"
-msgstr "Mørk"
-
-#: src/MainWindow.vala:48
-msgid "System"
-msgstr "System"
-
-#: src/MainWindow.vala:51
+#: data/resources/ui/main-window.blp:7
 #, fuzzy
 msgid "Style"
 msgstr "Drakt"
 
-#: src/MainWindow.vala:54
+#: data/resources/ui/main-window.blp:10
+msgid "Light"
+msgstr "Lys"
+
+#: data/resources/ui/main-window.blp:16
+msgid "Dark"
+msgstr "Mørk"
+
+#: data/resources/ui/main-window.blp:22
+msgid "System"
+msgstr "System"
+
+#: data/resources/ui/main-window.blp:41
 msgid "Main Menu"
 msgstr "Hovedmeny"
+
+#: data/resources/ui/main-window.blp:58
+msgid "Convert from:"
+msgstr "Konverter fra:"
+
+#: data/resources/ui/main-window.blp:70
+msgid "Convert to:"
+msgstr "Konverter til:"
+
+#: data/resources/ui/main-window.blp:78
+msgid "Text copied!"
+msgstr "Tekst kopiert"
+
+#: src/ComboEntry.vala:120
+msgid "Each word is separated by a space"
+msgstr "Hvert ord inndeles av mellomrom"
+
+#: src/ComboEntry.vala:122
+msgid "The first character of compound words is in lowercase"
+msgstr "Første tegn i et flerdelt ord har liten forbokstav"
+
+#: src/ComboEntry.vala:124
+msgid "The first character of compound words is in uppercase"
+msgstr "Første tegn i et flerdelt ord har stor forbokstav"
+
+#: src/ComboEntry.vala:126
+msgid "Each word is separated by an underscore"
+msgstr "Hvert ord inndeles av understrek"
+
+#: src/ComboEntry.vala:128
+msgid "Each word is separated by a hyphen"
+msgstr "Hvert ord inndeles av bindestrek"
+
+#: src/ComboEntry.vala:130
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Første tegn i første ord i setningen har stor forbokstav"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

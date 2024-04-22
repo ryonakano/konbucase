@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-22 21:50+0900\n"
+"POT-Creation-Date: 2024-04-23 07:47+0900\n"
 "PO-Revision-Date: 2023-07-10 02:25+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -70,70 +70,70 @@ msgstr ""
 msgid "App window in the dark mode"
 msgstr ""
 
-#: src/ComboEntry.vala:57
+#: data/resources/ui/combo-entry.blp:8
 msgid "Space separated"
 msgstr "Atskirti tarpo ženklu"
 
-#: src/ComboEntry.vala:72
+#: data/resources/ui/combo-entry.blp:52
 msgid "Copy to Clipboard"
 msgstr "Išsaugoti į Iškarpinę"
 
-#: src/ComboEntry.vala:157
-msgid "Each word is separated by a space"
-msgstr "Kiekvienas žodis atskiriamas tarpo ženklu"
-
-#: src/ComboEntry.vala:159
-msgid "The first character of compound words is in lowercase"
-msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš mažosios raidės"
-
-#: src/ComboEntry.vala:161
-msgid "The first character of compound words is in uppercase"
-msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš didžiosios raidės"
-
-#: src/ComboEntry.vala:163
-msgid "Each word is separated by an underscore"
-msgstr "Kiekvienas žodis atskiriamas pabraukimo brūkšniu"
-
-#: src/ComboEntry.vala:165
-msgid "Each word is separated by a hyphen"
-msgstr "Kiekvienas žodis atskiriamas brūkšneliu"
-
-#: src/ComboEntry.vala:167
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Sakinyje pirmojo žodžio pirmasis rašmuo yra iš didžiosios raidės"
-
-#: src/MainWindow.vala:19
-msgid "Convert from:"
-msgstr "Keisti iš:"
-
-#: src/MainWindow.vala:29
-msgid "Convert to:"
-msgstr "Keisti į:"
-
-#: src/MainWindow.vala:39
-msgid "Text copied!"
-msgstr ""
-
-#: src/MainWindow.vala:46
-msgid "Light"
-msgstr "Šviesus"
-
-#: src/MainWindow.vala:47
-msgid "Dark"
-msgstr "Tamsus"
-
-#: src/MainWindow.vala:48
-msgid "System"
-msgstr "Sistema"
-
-#: src/MainWindow.vala:51
+#: data/resources/ui/main-window.blp:7
 #, fuzzy
 msgid "Style"
 msgstr "Stilius:"
 
-#: src/MainWindow.vala:54
+#: data/resources/ui/main-window.blp:10
+msgid "Light"
+msgstr "Šviesus"
+
+#: data/resources/ui/main-window.blp:16
+msgid "Dark"
+msgstr "Tamsus"
+
+#: data/resources/ui/main-window.blp:22
+msgid "System"
+msgstr "Sistema"
+
+#: data/resources/ui/main-window.blp:41
 msgid "Main Menu"
 msgstr ""
+
+#: data/resources/ui/main-window.blp:58
+msgid "Convert from:"
+msgstr "Keisti iš:"
+
+#: data/resources/ui/main-window.blp:70
+msgid "Convert to:"
+msgstr "Keisti į:"
+
+#: data/resources/ui/main-window.blp:78
+msgid "Text copied!"
+msgstr ""
+
+#: src/ComboEntry.vala:120
+msgid "Each word is separated by a space"
+msgstr "Kiekvienas žodis atskiriamas tarpo ženklu"
+
+#: src/ComboEntry.vala:122
+msgid "The first character of compound words is in lowercase"
+msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš mažosios raidės"
+
+#: src/ComboEntry.vala:124
+msgid "The first character of compound words is in uppercase"
+msgstr "Sudėtinių žodžių pirmasis rašmuo yra iš didžiosios raidės"
+
+#: src/ComboEntry.vala:126
+msgid "Each word is separated by an underscore"
+msgstr "Kiekvienas žodis atskiriamas pabraukimo brūkšniu"
+
+#: src/ComboEntry.vala:128
+msgid "Each word is separated by a hyphen"
+msgstr "Kiekvienas žodis atskiriamas brūkšneliu"
+
+#: src/ComboEntry.vala:130
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Sakinyje pirmojo žodžio pirmasis rašmuo yra iš didžiosios raidės"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

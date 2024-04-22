@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-22 21:50+0900\n"
+"POT-Creation-Date: 2024-04-23 07:47+0900\n"
 "PO-Revision-Date: 2024-03-20 22:50+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: \n"
@@ -68,70 +68,70 @@ msgstr "Ventana de la aplicación en modo claro"
 msgid "App window in the dark mode"
 msgstr "Ventana de la aplicación en modo oscuro"
 
-#: src/ComboEntry.vala:57
+#: data/resources/ui/combo-entry.blp:8
 msgid "Space separated"
 msgstr "Separación de espacios"
 
-#: src/ComboEntry.vala:72
+#: data/resources/ui/combo-entry.blp:52
 msgid "Copy to Clipboard"
 msgstr "Copiar al portapapeles"
 
-#: src/ComboEntry.vala:157
-msgid "Each word is separated by a space"
-msgstr "Cada palabra se separa con un espacio"
-
-#: src/ComboEntry.vala:159
-msgid "The first character of compound words is in lowercase"
-msgstr "El primer carácter de las palabras compuestas está en minúsculas"
-
-#: src/ComboEntry.vala:161
-msgid "The first character of compound words is in uppercase"
-msgstr "El primer carácter de las palabras compuestas está en mayúsculas"
-
-#: src/ComboEntry.vala:163
-msgid "Each word is separated by an underscore"
-msgstr "Cada palabra está separada por un guión bajo"
-
-#: src/ComboEntry.vala:165
-msgid "Each word is separated by a hyphen"
-msgstr "Cada palabra está separada por un guión"
-
-#: src/ComboEntry.vala:167
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr ""
-"El primer carácter de la primera palabra de la frase está en mayúsculas"
-
-#: src/MainWindow.vala:19
-msgid "Convert from:"
-msgstr "Convertir de:"
-
-#: src/MainWindow.vala:29
-msgid "Convert to:"
-msgstr "Convertir a:"
-
-#: src/MainWindow.vala:39
-msgid "Text copied!"
-msgstr "¡Texto copiado!"
-
-#: src/MainWindow.vala:46
-msgid "Light"
-msgstr "Claro"
-
-#: src/MainWindow.vala:47
-msgid "Dark"
-msgstr "Oscuro"
-
-#: src/MainWindow.vala:48
-msgid "System"
-msgstr "Sistema"
-
-#: src/MainWindow.vala:51
+#: data/resources/ui/main-window.blp:7
 msgid "Style"
 msgstr "Estilo"
 
-#: src/MainWindow.vala:54
+#: data/resources/ui/main-window.blp:10
+msgid "Light"
+msgstr "Claro"
+
+#: data/resources/ui/main-window.blp:16
+msgid "Dark"
+msgstr "Oscuro"
+
+#: data/resources/ui/main-window.blp:22
+msgid "System"
+msgstr "Sistema"
+
+#: data/resources/ui/main-window.blp:41
 msgid "Main Menu"
 msgstr "Menú principal"
+
+#: data/resources/ui/main-window.blp:58
+msgid "Convert from:"
+msgstr "Convertir de:"
+
+#: data/resources/ui/main-window.blp:70
+msgid "Convert to:"
+msgstr "Convertir a:"
+
+#: data/resources/ui/main-window.blp:78
+msgid "Text copied!"
+msgstr "¡Texto copiado!"
+
+#: src/ComboEntry.vala:120
+msgid "Each word is separated by a space"
+msgstr "Cada palabra se separa con un espacio"
+
+#: src/ComboEntry.vala:122
+msgid "The first character of compound words is in lowercase"
+msgstr "El primer carácter de las palabras compuestas está en minúsculas"
+
+#: src/ComboEntry.vala:124
+msgid "The first character of compound words is in uppercase"
+msgstr "El primer carácter de las palabras compuestas está en mayúsculas"
+
+#: src/ComboEntry.vala:126
+msgid "Each word is separated by an underscore"
+msgstr "Cada palabra está separada por un guión bajo"
+
+#: src/ComboEntry.vala:128
+msgid "Each word is separated by a hyphen"
+msgstr "Cada palabra está separada por un guión"
+
+#: src/ComboEntry.vala:130
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr ""
+"El primer carácter de la primera palabra de la frase está en mayúsculas"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
