@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Widgets.ComboEntry : Gtk.Grid {
+public class Widgets.ComboEntry : Gtk.Box {
     public signal void text_copied ();
 
     public string id { get; construct; }
@@ -48,6 +48,9 @@ public class Widgets.ComboEntry : Gtk.Grid {
     }
 
     construct {
+        orientation = Gtk.Orientation.VERTICAL;
+        spacing = 0;
+
         var case_label = new Gtk.Label (description);
 
         var case_combobox = new Gtk.DropDown.from_strings ({
@@ -69,18 +72,17 @@ public class Widgets.ComboEntry : Gtk.Grid {
             tooltip_text = _("Copy to Clipboard")
         };
 
-        var toolbar_grid = new Gtk.Grid () {
+        var toolbar = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             valign = Gtk.Align.CENTER,
             margin_top = 6,
             margin_bottom = 6,
             margin_start = 6,
-            margin_end = 6,
-            column_spacing = 12
+            margin_end = 6
         };
-        toolbar_grid.attach (case_label, 0, 0);
-        toolbar_grid.attach (case_combobox, 1, 0);
-        toolbar_grid.attach (case_info_button_icon, 2, 0);
-        toolbar_grid.attach (copy_clipboard_button, 3, 0);
+        toolbar.append (case_label);
+        toolbar.append (case_combobox);
+        toolbar.append (case_info_button_icon);
+        toolbar.append (copy_clipboard_button);
 
         source_buffer = new GtkSource.Buffer (null);
         source_view = new GtkSource.View.with_buffer (source_buffer) {
@@ -94,8 +96,8 @@ public class Widgets.ComboEntry : Gtk.Grid {
             child = source_view
         };
 
-        attach (toolbar_grid, 0, 0);
-        attach (scrolled, 0, 1);
+        append (toolbar);
+        append (scrolled);
 
         update_buttons ();
 
