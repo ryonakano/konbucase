@@ -15,4 +15,14 @@ namespace Define {
         /** Always use dark appearance. */
         public const string DARK = "dark";
     }
+
+    // Make sure to match with source-type enum in the gschema
+    public enum CaseType {
+        SPACE_SEPARATED = ChCase.Case.SPACE_SEPARATED,
+        CAMEL = ChCase.Case.CAMEL,
+        PASCAL = ChCase.Case.PASCAL,
+        SNAKE = ChCase.Case.SNAKE,
+        KEBAB = ChCase.Case.KEBAB,
+        SENTENCE = ChCase.Case.SENTENCE,
+    }
 }
