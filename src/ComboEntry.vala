@@ -14,25 +14,18 @@ public class ComboEntry : Gtk.Box {
     private static ChCase.Converter _converter;
     public static ChCase.Converter converter {
         get {
+            var source_case_type = (Define.CaseType) Application.settings.get_enum ("source-case-type");
+            var result_case_type = (Define.CaseType) Application.settings.get_enum ("result-case-type");
+
             if (_converter == null) {
-                _converter = new ChCase.Converter.with_case_from_string (
-                    Application.settings.get_string ("source-case-type"),
-                    Application.settings.get_string ("result-case-type")
+                _converter = new ChCase.Converter.with_case (
+                    Util.Convert.to_chcase_case (source_case_type),
+                    Util.Convert.to_chcase_case (result_case_type)
                 );
             }
 
             return _converter;
         }
-    }
-
-    // Make sure to match with source-type enum in the gschema
-    private enum CaseType {
-        SPACE_SEPARATED = ChCase.Case.SPACE_SEPARATED,
-        CAMEL = ChCase.Case.CAMEL,
-        PASCAL = ChCase.Case.PASCAL,
-        SNAKE = ChCase.Case.SNAKE,
-        KEBAB = ChCase.Case.KEBAB,
-        SENTENCE = ChCase.Case.SENTENCE,
     }
 
     [GtkChild]
@@ -57,7 +50,7 @@ public class ComboEntry : Gtk.Box {
     construct {
         case_dropdown.selected = Application.settings.get_enum ("%s-case-type".printf (id));
 
-        case_info_button_icon.tooltip_text = set_info_button_tooltip ((CaseType) case_dropdown.selected);
+        case_info_button_icon.tooltip_text = set_info_button_tooltip ((Define.CaseType) case_dropdown.selected);
 
         source_buffer = new GtkSource.Buffer (null);
         source_view.buffer = source_buffer;
@@ -72,13 +65,16 @@ public class ComboEntry : Gtk.Box {
         });
 
         case_dropdown.notify["selected"].connect (() => {
-            case_info_button_icon.tooltip_text = set_info_button_tooltip ((CaseType) case_dropdown.selected);
+            case_info_button_icon.tooltip_text = set_info_button_tooltip ((Define.CaseType) case_dropdown.selected);
 
-            Application.settings.set_enum ("%s-case-type".printf (id), (CaseType) case_dropdown.selected);
+            Application.settings.set_enum ("%s-case-type".printf (id), (Define.CaseType) case_dropdown.selected);
 
             if (Application.settings.get_string ("%s-text".printf (id)) != "") {
-                converter.source_case_name = Application.settings.get_string ("source-case-type");
-                converter.result_case_name = Application.settings.get_string ("result-case-type");
+                var source_case_type = (Define.CaseType) Application.settings.get_enum ("source-case-type");
+                var result_case_type = (Define.CaseType) Application.settings.get_enum ("result-case-type");
+
+                converter.source_case = Util.Convert.to_chcase_case (source_case_type);
+                converter.result_case = Util.Convert.to_chcase_case (result_case_type);
                 convert_case ();
             }
         });
@@ -114,19 +110,19 @@ public class ComboEntry : Gtk.Box {
         }
     }
 
-    private string set_info_button_tooltip (CaseType case_type) {
+    private string set_info_button_tooltip (Define.CaseType case_type) {
         switch (case_type) {
-            case CaseType.SPACE_SEPARATED:
+            case Define.CaseType.SPACE_SEPARATED:
                 return _("Each word is separated by a space");
-            case CaseType.CAMEL:
+            case Define.CaseType.CAMEL:
                 return _("The first character of compound words is in lowercase");
-            case CaseType.PASCAL:
+            case Define.CaseType.PASCAL:
                 return _("The first character of compound words is in uppercase");
-            case CaseType.SNAKE:
+            case Define.CaseType.SNAKE:
                 return _("Each word is separated by an underscore");
-            case CaseType.KEBAB:
+            case Define.CaseType.KEBAB:
                 return _("Each word is separated by a hyphen");
-            case CaseType.SENTENCE:
+            case Define.CaseType.SENTENCE:
                 return _("The first character of the first word in the sentence is in uppercase");
             default:
                 warning ("Unexpected case, no tooltip is shown.");

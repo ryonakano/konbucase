@@ -15,6 +15,7 @@ dependencies = [
 
 sources = files(
     'ComboEntry.vala',
+    'Convert.vala',
     'Application.vala',
     'Define.vala',
     'MainWindow.vala',
