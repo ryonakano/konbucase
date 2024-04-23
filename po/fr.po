@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:32+0000\n"
+"POT-Creation-Date: 2024-04-23 07:47+0900\n"
 "PO-Revision-Date: 2023-01-13 18:50+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: \n"
@@ -69,68 +69,68 @@ msgstr "Fenêtre de l’application en mode clair"
 msgid "App window in the dark mode"
 msgstr "Fenêtre de l’application en mode sombre"
 
-#: src/MainWindow.vala:19
-msgid "Convert from:"
-msgstr "Convertir depuis :"
+#: data/resources/ui/combo-entry.blp:8
+msgid "Space separated"
+msgstr "Séparé par des espaces"
 
-#: src/MainWindow.vala:29
-msgid "Convert to:"
-msgstr "Convertir en :"
+#: data/resources/ui/combo-entry.blp:52
+msgid "Copy to Clipboard"
+msgstr "Copier dans le presse-papiers"
 
-#: src/MainWindow.vala:39
-msgid "Text copied!"
-msgstr ""
-
-#: src/MainWindow.vala:46
-msgid "Light"
-msgstr "Clair"
-
-#: src/MainWindow.vala:47
-msgid "Dark"
-msgstr "Sombre"
-
-#: src/MainWindow.vala:48
-msgid "System"
-msgstr "Système"
-
-#: src/MainWindow.vala:51
+#: data/resources/ui/main-window.blp:7
 #, fuzzy
 msgid "Style"
 msgstr "Style :"
 
-#: src/MainWindow.vala:54
+#: data/resources/ui/main-window.blp:10
+msgid "Light"
+msgstr "Clair"
+
+#: data/resources/ui/main-window.blp:16
+msgid "Dark"
+msgstr "Sombre"
+
+#: data/resources/ui/main-window.blp:22
+msgid "System"
+msgstr "Système"
+
+#: data/resources/ui/main-window.blp:41
 msgid "Main Menu"
 msgstr ""
 
-#: src/Widgets/ComboEntry.vala:44
-msgid "Space separated"
-msgstr "Séparé par des espaces"
+#: data/resources/ui/main-window.blp:58
+msgid "Convert from:"
+msgstr "Convertir depuis :"
 
-#: src/Widgets/ComboEntry.vala:60
-msgid "Copy to Clipboard"
-msgstr "Copier dans le presse-papiers"
+#: data/resources/ui/main-window.blp:70
+msgid "Convert to:"
+msgstr "Convertir en :"
 
-#: src/Widgets/ComboEntry.vala:146
+#: data/resources/ui/main-window.blp:78
+msgid "Text copied!"
+msgstr ""
+
+#: src/ComboEntry.vala:120
 msgid "Each word is separated by a space"
 msgstr "Chaque mot est séparé par un espace"
 
-#: src/Widgets/ComboEntry.vala:148
+#: src/ComboEntry.vala:122
 msgid "The first character of compound words is in lowercase"
 msgstr "Le premier caractère des mots composés est en minuscules"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/ComboEntry.vala:124
 msgid "The first character of compound words is in uppercase"
 msgstr "Le premier caractère des mots composés est en majuscules"
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/ComboEntry.vala:126
 msgid "Each word is separated by an underscore"
 msgstr "Chaque mot est séparé par un tiret bas"
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/ComboEntry.vala:128
 msgid "Each word is separated by a hyphen"
 msgstr "Chaque mot est séparé par un tiret"
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/ComboEntry.vala:130
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Le premier caractère du premier mot de la phrase est en majuscule"
 

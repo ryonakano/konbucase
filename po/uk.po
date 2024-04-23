@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:32+0000\n"
+"POT-Creation-Date: 2024-04-23 07:47+0900\n"
 "PO-Revision-Date: 2024-02-20 02:02+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: \n"
@@ -67,67 +67,67 @@ msgstr "Вікно застосунку у світловому режимі"
 msgid "App window in the dark mode"
 msgstr "Вікно застосунку в темному режимі"
 
-#: src/MainWindow.vala:19
-msgid "Convert from:"
-msgstr "Перетворити з:"
-
-#: src/MainWindow.vala:29
-msgid "Convert to:"
-msgstr "Перетворити в:"
-
-#: src/MainWindow.vala:39
-msgid "Text copied!"
-msgstr "Текст скопійовано!"
-
-#: src/MainWindow.vala:46
-msgid "Light"
-msgstr "Світлий"
-
-#: src/MainWindow.vala:47
-msgid "Dark"
-msgstr "Темний"
-
-#: src/MainWindow.vala:48
-msgid "System"
-msgstr "Системи"
-
-#: src/MainWindow.vala:51
-msgid "Style"
-msgstr "Стиль"
-
-#: src/MainWindow.vala:54
-msgid "Main Menu"
-msgstr "Головне меню"
-
-#: src/Widgets/ComboEntry.vala:44
+#: data/resources/ui/combo-entry.blp:8
 msgid "Space separated"
 msgstr "Розділено пробілами"
 
-#: src/Widgets/ComboEntry.vala:60
+#: data/resources/ui/combo-entry.blp:52
 msgid "Copy to Clipboard"
 msgstr "Копіювати до буфера обміну"
 
-#: src/Widgets/ComboEntry.vala:146
+#: data/resources/ui/main-window.blp:7
+msgid "Style"
+msgstr "Стиль"
+
+#: data/resources/ui/main-window.blp:10
+msgid "Light"
+msgstr "Світлий"
+
+#: data/resources/ui/main-window.blp:16
+msgid "Dark"
+msgstr "Темний"
+
+#: data/resources/ui/main-window.blp:22
+msgid "System"
+msgstr "Системи"
+
+#: data/resources/ui/main-window.blp:41
+msgid "Main Menu"
+msgstr "Головне меню"
+
+#: data/resources/ui/main-window.blp:58
+msgid "Convert from:"
+msgstr "Перетворити з:"
+
+#: data/resources/ui/main-window.blp:70
+msgid "Convert to:"
+msgstr "Перетворити в:"
+
+#: data/resources/ui/main-window.blp:78
+msgid "Text copied!"
+msgstr "Текст скопійовано!"
+
+#: src/ComboEntry.vala:120
 msgid "Each word is separated by a space"
 msgstr "Кожне слово відокремлено пробілом"
 
-#: src/Widgets/ComboEntry.vala:148
+#: src/ComboEntry.vala:122
 msgid "The first character of compound words is in lowercase"
 msgstr "Перший символ сполучених слів пишеться з маленької букви"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/ComboEntry.vala:124
 msgid "The first character of compound words is in uppercase"
 msgstr "Перший символ сполучених слів пишеться з великої букви"
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/ComboEntry.vala:126
 msgid "Each word is separated by an underscore"
 msgstr "Кожне слово розділене символом підкреслення"
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/ComboEntry.vala:128
 msgid "Each word is separated by a hyphen"
 msgstr "Кожне слово розділяється дефісом"
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/ComboEntry.vala:130
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Перший символ першого слова в реченні пишеться з великої букви"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:32+0000\n"
+"POT-Creation-Date: 2024-04-23 07:47+0900\n"
 "PO-Revision-Date: 2024-03-20 22:50+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: \n"
@@ -70,67 +70,67 @@ msgstr "Açık modda uygulama penceresi"
 msgid "App window in the dark mode"
 msgstr "Koyu modda uygulama penceresi"
 
-#: src/MainWindow.vala:19
-msgid "Convert from:"
-msgstr "Şundan dönüştür:"
-
-#: src/MainWindow.vala:29
-msgid "Convert to:"
-msgstr "Dönüştür:"
-
-#: src/MainWindow.vala:39
-msgid "Text copied!"
-msgstr "Metin kopyalandı!"
-
-#: src/MainWindow.vala:46
-msgid "Light"
-msgstr "Açık"
-
-#: src/MainWindow.vala:47
-msgid "Dark"
-msgstr "Koyu"
-
-#: src/MainWindow.vala:48
-msgid "System"
-msgstr "Sistem"
-
-#: src/MainWindow.vala:51
-msgid "Style"
-msgstr "Biçem"
-
-#: src/MainWindow.vala:54
-msgid "Main Menu"
-msgstr "Ana Menü"
-
-#: src/Widgets/ComboEntry.vala:44
+#: data/resources/ui/combo-entry.blp:8
 msgid "Space separated"
 msgstr "Boşlukla ayrılmış"
 
-#: src/Widgets/ComboEntry.vala:60
+#: data/resources/ui/combo-entry.blp:52
 msgid "Copy to Clipboard"
 msgstr "Panoya Kopyala"
 
-#: src/Widgets/ComboEntry.vala:146
+#: data/resources/ui/main-window.blp:7
+msgid "Style"
+msgstr "Biçem"
+
+#: data/resources/ui/main-window.blp:10
+msgid "Light"
+msgstr "Açık"
+
+#: data/resources/ui/main-window.blp:16
+msgid "Dark"
+msgstr "Koyu"
+
+#: data/resources/ui/main-window.blp:22
+msgid "System"
+msgstr "Sistem"
+
+#: data/resources/ui/main-window.blp:41
+msgid "Main Menu"
+msgstr "Ana Menü"
+
+#: data/resources/ui/main-window.blp:58
+msgid "Convert from:"
+msgstr "Şundan dönüştür:"
+
+#: data/resources/ui/main-window.blp:70
+msgid "Convert to:"
+msgstr "Dönüştür:"
+
+#: data/resources/ui/main-window.blp:78
+msgid "Text copied!"
+msgstr "Metin kopyalandı!"
+
+#: src/ComboEntry.vala:120
 msgid "Each word is separated by a space"
 msgstr "Her kelime boşlukla ayrılmış"
 
-#: src/Widgets/ComboEntry.vala:148
+#: src/ComboEntry.vala:122
 msgid "The first character of compound words is in lowercase"
 msgstr "Birleşik kelimelerin ilk karakteri küçük harfli"
 
-#: src/Widgets/ComboEntry.vala:150
+#: src/ComboEntry.vala:124
 msgid "The first character of compound words is in uppercase"
 msgstr "Birleşik kelimelerin ilk karakteri büyük harfli"
 
-#: src/Widgets/ComboEntry.vala:152
+#: src/ComboEntry.vala:126
 msgid "Each word is separated by an underscore"
 msgstr "Her kelime alt çizgiyle ayrılmış"
 
-#: src/Widgets/ComboEntry.vala:154
+#: src/ComboEntry.vala:128
 msgid "Each word is separated by a hyphen"
 msgstr "Her kelime tire ile ayrılmış"
 
-#: src/Widgets/ComboEntry.vala:156
+#: src/ComboEntry.vala:130
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Cümledeki ilk kelimenin ilk karakteri büyük harfli"
 
