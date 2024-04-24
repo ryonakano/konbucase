@@ -16,6 +16,11 @@ namespace Define {
         public const string DARK = "dark";
     }
 
+    public enum TextType {
+        SOURCE,
+        RESULT,
+    }
+
     // Make sure to match with source-type enum in the gschema
     public enum CaseType {
         SPACE_SEPARATED = ChCase.Case.SPACE_SEPARATED,

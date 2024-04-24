@@ -54,7 +54,7 @@ template $MainWindow : Gtk.ApplicationWindow {
 
       // Left pane for input text
       $ComboEntry source_combo_entry {
-        id: "source";
+        text-type: source;
         description: _("Convert from:");
         editable: true;
       }
@@ -66,7 +66,7 @@ template $MainWindow : Gtk.ApplicationWindow {
 
       // Right pane for output text
       $ComboEntry result_combo_entry {
-        id: "result";
+        text-type: result;
         description: _("Convert to:");
         // Make the text view uneditable, otherwise the app freezes
         editable: false;

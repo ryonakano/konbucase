@@ -14,10 +14,12 @@ dependencies = [
 ]
 
 sources = files(
+    'Model/ComboEntryModel.vala',
+    'Model/MainWindowModel.vala',
+    'View/ComboEntry.vala',
+    'View/MainWindow.vala',
     'Application.vala',
-    'ComboEntry.vala',
     'Define.vala',
-    'MainWindow.vala',
     'StyleManager.vala',
     'Util.vala',
 )
