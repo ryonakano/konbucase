@@ -13,6 +13,36 @@ dependencies = [
     dependency('gtksourceview-5'),
 ]
 
+if get_option('use_submodule')
+    chcase_subproject = subproject('chcase')
+    chcase_deps = chcase_subproject.get_variable('libchcase')
+    dependencies += chcase_deps
+else
+    dependencies += dependency('chcase')
+endif
+
+blueprints = custom_target('blueprints',
+    input: files(
+        'View/ComboEntry.blp',
+        'View/MainWindow.blp',
+    ),
+    output: '.',
+    command: [
+        find_program('blueprint-compiler'),
+        'batch-compile',
+        '@OUTPUT@',
+        '@CURRENT_SOURCE_DIR@',
+        '@INPUT@'
+    ]
+)
+
+asresources = gnome.compile_resources(
+    'as-resources',
+    'konbucase.gresource.xml',
+    dependencies: blueprints,
+    c_name: 'as'
+)
+
 sources = files(
     'Model/ComboEntryModel.vala',
     'Model/MainWindowModel.vala',
@@ -24,14 +54,6 @@ sources = files(
     'Util.vala',
 )
 
-if get_option('use_submodule')
-    chcase_subproject = subproject('chcase')
-    chcase_deps = chcase_subproject.get_variable('libchcase')
-    dependencies += chcase_deps
-else
-    dependencies += dependency('chcase')
-endif
-
 executable(
     meson.project_name(),
     asresources,
@@ -41,7 +63,7 @@ executable(
     # https://gitlab.gnome.org/jwestman/blueprint-compiler/-/issues/18
     # https://github.com/mesonbuild/meson/commit/ae857e841b0a6b9b595583e74f5e21676bb83f9d
     vala_args: [
-        '--gresourcesdir=data/resources'
+        '--gresourcesdir=src'
     ],
     dependencies: dependencies,
     install: true

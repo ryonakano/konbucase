@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-[GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/main-window.ui")]
+[GtkTemplate (ui = "/com/github/ryonakano/konbucase/View/MainWindow.ui")]
 public class MainWindow : Gtk.ApplicationWindow {
     [GtkChild]
     private unowned ComboEntry source_combo_entry;
@@ -25,14 +25,14 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         source_combo_entry.get_source_view ().grab_focus ();
 
-        source_combo_entry.text_changed.connect (() => {
-            do_convert ();
-        });
-
         source_combo_entry.dropdown_changed.connect (() => {
             do_convert ();
         });
         result_combo_entry.dropdown_changed.connect (() => {
+            do_convert ();
+        });
+
+        source_combo_entry.text_changed.connect (() => {
             do_convert ();
         });
 
