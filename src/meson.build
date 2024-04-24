@@ -10,16 +10,16 @@ config_file = configure_file(
 dependencies = [
     dependency('granite-7'),
     dependency('gtk4'),
-    dependency('gtksourceview-5')
+    dependency('gtksourceview-5'),
 ]
 
 sources = files(
-    'ComboEntry.vala',
-    'Convert.vala',
     'Application.vala',
+    'ComboEntry.vala',
     'Define.vala',
     'MainWindow.vala',
-    'StyleManager.vala'
+    'StyleManager.vala',
+    'Util.vala',
 )
 
 if get_option('use_submodule')

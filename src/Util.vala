@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-namespace Util.Convert {
+namespace Util {
     public static Define.CaseType to_case_type (ChCase.Case chcase_case) {
         switch (chcase_case) {
             case ChCase.Case.SPACE_SEPARATED:

@@ -19,8 +19,8 @@ public class ComboEntry : Gtk.Box {
 
             if (_converter == null) {
                 _converter = new ChCase.Converter.with_case (
-                    Util.Convert.to_chcase_case (source_case_type),
-                    Util.Convert.to_chcase_case (result_case_type)
+                    Util.to_chcase_case (source_case_type),
+                    Util.to_chcase_case (result_case_type)
                 );
             }
 
@@ -73,8 +73,8 @@ public class ComboEntry : Gtk.Box {
                 var source_case_type = (Define.CaseType) Application.settings.get_enum ("source-case-type");
                 var result_case_type = (Define.CaseType) Application.settings.get_enum ("result-case-type");
 
-                converter.source_case = Util.Convert.to_chcase_case (source_case_type);
-                converter.result_case = Util.Convert.to_chcase_case (result_case_type);
+                converter.source_case = Util.to_chcase_case (source_case_type);
+                converter.result_case = Util.to_chcase_case (result_case_type);
                 convert_case ();
             }
         });
