@@ -4,8 +4,6 @@ project('com.github.ryonakano.konbucase',
     meson_version: '>=0.57.0'
 )
 
-app_nickname = 'konbucase'
-
 i18n = import('i18n')
 gnome = import('gnome')
 
