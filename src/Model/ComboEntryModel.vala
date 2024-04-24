@@ -14,12 +14,14 @@ public class ComboEntryModel : Object {
     private Gtk.Settings gtk_settings;
 
     private struct ComboEntryCtx {
+        /** GSettings key name that stores last case type. */
         string key_case_type;
+        /** GSettings key name that stores last text. */
         string key_text;
     }
     private const ComboEntryCtx[] CTX_TABLE = {
-        { "source-case-type", "source-text" },
-        { "result-case-type", "result-text" },
+        { "source-case-type", "source-text" }, // Define.TextType.SOURCE
+        { "result-case-type", "result-text" }, // Define.TextType.RESULT
     };
 
     public ComboEntryModel (Define.TextType text_type) {
@@ -29,15 +31,14 @@ public class ComboEntryModel : Object {
     }
 
     construct {
-        case_type = (Define.CaseType) Application.settings.get_enum (CTX_TABLE[text_type].key_case_type);
-
         buffer = new GtkSource.Buffer (null);
         style_scheme_manager = new GtkSource.StyleSchemeManager ();
         gtk_settings = Gtk.Settings.get_default ();
 
-        Application.settings.bind (CTX_TABLE[text_type].key_text, buffer, "text", SettingsBindFlags.DEFAULT);
+        // Sync with buffer text
         buffer.bind_property ("text", this, "text", BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE);
 
+        // Apply theme changes to the source view
         gtk_settings.bind_property ("gtk-application-prefer-dark-theme", buffer, "style-scheme",
                                     BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
                                     (binding, from_value, ref to_value) => {
@@ -51,6 +52,10 @@ public class ComboEntryModel : Object {
                                         return true;
                                     });
 
+        // Sync with GSettings
+        Application.settings.bind (CTX_TABLE[text_type].key_text, buffer, "text", SettingsBindFlags.DEFAULT);
+        // We can't use Settings.bind here because it seems to expose the data in string instead of enum
+        case_type = (Define.CaseType) Application.settings.get_enum (CTX_TABLE[text_type].key_case_type);
         notify["case-type"].connect (() => {
             Application.settings.set_enum (CTX_TABLE[text_type].key_case_type, case_type);
         });

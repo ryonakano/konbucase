@@ -5,8 +5,11 @@
 
 [GtkTemplate (ui = "/com/github/ryonakano/konbucase/View/ComboEntry.ui")]
 public class ComboEntry : Gtk.Box {
+    /** Notify change of currently selected item in {@link case_dropdown}. */
     public signal void dropdown_changed ();
+    /** Notify change of text in {@link source_view}. */
     public signal void text_changed ();
+    /** Notify that text in {@link source_view} is copied. */
     public signal void text_copied ();
 
     public Define.TextType text_type { get; construct; }
@@ -36,15 +39,16 @@ public class ComboEntry : Gtk.Box {
     private unowned GtkSource.View source_view;
 
     private struct CaseInfo {
+        /** Tooltip text for {@link case_info_button_icon}. */
         string info_text;
     }
     private const CaseInfo[] CASE_INFO_TBL = {
-        { N_("Each word is separated by a space") },
-        { N_("The first character of compound words is in lowercase") },
-        { N_("The first character of compound words is in uppercase") },
-        { N_("Each word is separated by an underscore") },
-        { N_("Each word is separated by a hyphen") },
-        { N_("The first character of the first word in the sentence is in uppercase") },
+        { N_("Each word is separated by a space") }, // Define.CaseType.SPACE_SEPARATED
+        { N_("The first character of compound words is in lowercase") }, // Define.CaseType.CAMEL
+        { N_("The first character of compound words is in uppercase") }, // Define.CaseType.PASCAL
+        { N_("Each word is separated by an underscore") }, // Define.CaseType.SNAKE
+        { N_("Each word is separated by a hyphen") }, // Define.CaseType.KEBAB
+        { N_("The first character of the first word in the sentence is in uppercase") }, // Define.CaseType.SENTENCE
     };
 
     private ComboEntryModel model;
@@ -96,6 +100,7 @@ public class ComboEntry : Gtk.Box {
         });
     }
 
+    // UI elements defined in .ui files can't be a property, so defines a getter method instead
     public unowned GtkSource.View get_source_view () {
         return source_view;
     }

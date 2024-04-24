@@ -16,8 +16,13 @@ namespace Define {
         public const string DARK = "dark";
     }
 
+    /**
+     * Type of the text.
+     */
     public enum TextType {
+        /** Text that is converted. */
         SOURCE,
+        /** Text after conversion. */
         RESULT,
     }
 
