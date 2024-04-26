@@ -23,8 +23,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/ryonakano/chcase/archive/refs/tags/2.2.0.tar.gz
-        sha256: a27c36c5b257fcfb1279c5128cf213b941b2cb76cfba9646b9d819fc369b6297
+        url: https://github.com/ryonakano/chcase/archive/refs/tags/2.3.0.tar.gz
+        sha256: c1bdc394bdf8f782882d311f3c66a1ed768c7f1345eabc049e548ff9ae69ad37
 
   - name: konbucase
     buildsystem: meson
