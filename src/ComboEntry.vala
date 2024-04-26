@@ -34,15 +34,6 @@ public class ComboEntry : Gtk.Box {
         { "result-case-type", "result-text" }, // Define.TextType.RESULT
     };
 
-    [GtkChild]
-    private unowned Gtk.DropDown case_dropdown;
-    [GtkChild]
-    private unowned Gtk.Image case_info_button_icon;
-    [GtkChild]
-    private unowned Gtk.Button copy_clipboard_button;
-    [GtkChild]
-    private unowned GtkSource.View source_view;
-
     private struct CaseInfo {
         /** Tooltip text for {@link case_info_button_icon}. */
         string info_text;
@@ -56,6 +47,15 @@ public class ComboEntry : Gtk.Box {
         { N_("The first character of the first word in the sentence is in uppercase") }, // Define.CaseType.SENTENCE
     };
 
+    [GtkChild]
+    private unowned Gtk.DropDown case_dropdown;
+    [GtkChild]
+    private unowned Gtk.Image case_info_button_icon;
+    [GtkChild]
+    private unowned Gtk.Button copy_clipboard_button;
+    [GtkChild]
+    private unowned GtkSource.View source_view;
+
     public ComboEntry (Define.TextType text_type, string description, bool editable) {
         Object (
             text_type: text_type,
@@ -65,13 +65,14 @@ public class ComboEntry : Gtk.Box {
     }
 
     construct {
-        buffer = new GtkSource.Buffer (null);
-        style_scheme_manager = new GtkSource.StyleSchemeManager ();
-        gtk_settings = Gtk.Settings.get_default ();
-
+        case_type = (Define.CaseType) Application.settings.get_enum (CTX_TABLE[text_type].key_case_type);
         case_dropdown.selected = case_type;
 
+        buffer = new GtkSource.Buffer (null);
         source_view.buffer = buffer;
+
+        style_scheme_manager = new GtkSource.StyleSchemeManager ();
+        gtk_settings = Gtk.Settings.get_default ();
 
         // Sync with buffer text
         buffer.bind_property ("text", this, "text", BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE);
@@ -90,10 +91,8 @@ public class ComboEntry : Gtk.Box {
                                         return true;
                                     });
 
-        // Sync with GSettings
-        Application.settings.bind (CTX_TABLE[text_type].key_text, buffer, "text", SettingsBindFlags.DEFAULT);
-        // We can't use Settings.bind here because it seems to expose the data in string instead of enum
-        case_type = (Define.CaseType) Application.settings.get_enum (CTX_TABLE[text_type].key_case_type);
+        Application.settings.bind (CTX_TABLE[text_type].key_text, this, "text", SettingsBindFlags.DEFAULT);
+
         notify["case-type"].connect (() => {
             Application.settings.set_enum (CTX_TABLE[text_type].key_case_type, case_type);
         });
@@ -106,10 +105,10 @@ public class ComboEntry : Gtk.Box {
 
         copy_clipboard_button.clicked.connect (() => {
             get_clipboard ().set_text (text);
-
             text_copied ();
         });
 
+        // Make copy button insensitive when text is blank
         bind_property ("text", copy_clipboard_button, "sensitive",
                              BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
                              (binding, from_value, ref to_value) => {
@@ -118,6 +117,7 @@ public class ComboEntry : Gtk.Box {
                                  return true;
                              });
 
+        // Set tooltip text of info button depending on selected case type
         bind_property ("case-type", case_info_button_icon, "tooltip-text",
                              BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
                              (binding, from_value, ref to_value) => {
@@ -126,7 +126,7 @@ public class ComboEntry : Gtk.Box {
                                  return true;
                              });
 
-        buffer.changed.connect (() => {
+        notify["text"].connect (() => {
             text_changed ();
         });
     }
