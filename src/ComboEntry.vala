@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-[GtkTemplate (ui = "/com/github/ryonakano/konbucase/View/ComboEntry.ui")]
+[GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/combo-entry.ui")]
 public class ComboEntry : Gtk.Box {
     /** Notify change of currently selected item in {@link case_dropdown}. */
     public signal void dropdown_changed ();
@@ -15,19 +15,24 @@ public class ComboEntry : Gtk.Box {
     public Define.TextType text_type { get; construct; }
     public string description { get; construct; }
     public bool editable { get; construct; }
-    public string text {
-        get {
-            return model.text;
-        }
-        set {
-            model.text = value;
-        }
+
+    public Define.CaseType case_type { get; set; }
+    public GtkSource.Buffer buffer { get; private set; }
+    public string text { get; set; }
+
+    private GtkSource.StyleSchemeManager style_scheme_manager;
+    private Gtk.Settings gtk_settings;
+
+    private struct ComboEntryCtx {
+        /** GSettings key name that stores last case type. */
+        string key_case_type;
+        /** GSettings key name that stores last text. */
+        string key_text;
     }
-    public Define.CaseType case_type {
-        get {
-            return model.case_type;
-        }
-    }
+    private const ComboEntryCtx[] CTX_TABLE = {
+        { "source-case-type", "source-text" }, // Define.TextType.SOURCE
+        { "result-case-type", "result-text" }, // Define.TextType.RESULT
+    };
 
     [GtkChild]
     private unowned Gtk.DropDown case_dropdown;
@@ -51,8 +56,6 @@ public class ComboEntry : Gtk.Box {
         { N_("The first character of the first word in the sentence is in uppercase") }, // Define.CaseType.SENTENCE
     };
 
-    private ComboEntryModel model;
-
     public ComboEntry (Define.TextType text_type, string description, bool editable) {
         Object (
             text_type: text_type,
@@ -62,24 +65,52 @@ public class ComboEntry : Gtk.Box {
     }
 
     construct {
-        model = new ComboEntryModel (text_type);
+        buffer = new GtkSource.Buffer (null);
+        style_scheme_manager = new GtkSource.StyleSchemeManager ();
+        gtk_settings = Gtk.Settings.get_default ();
 
-        case_dropdown.selected = model.case_type;
+        case_dropdown.selected = case_type;
 
-        source_view.buffer = model.buffer;
+        source_view.buffer = buffer;
+
+        // Sync with buffer text
+        buffer.bind_property ("text", this, "text", BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE);
+
+        // Apply theme changes to the source view
+        gtk_settings.bind_property ("gtk-application-prefer-dark-theme", buffer, "style-scheme",
+                                    BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+                                    (binding, from_value, ref to_value) => {
+                                        var prefer_dark = (bool) from_value;
+                                        if (prefer_dark) {
+                                            to_value.set_object (style_scheme_manager.get_scheme ("solarized-dark"));
+                                        } else {
+                                            to_value.set_object (style_scheme_manager.get_scheme ("solarized-light"));
+                                        }
+
+                                        return true;
+                                    });
+
+        // Sync with GSettings
+        Application.settings.bind (CTX_TABLE[text_type].key_text, buffer, "text", SettingsBindFlags.DEFAULT);
+        // We can't use Settings.bind here because it seems to expose the data in string instead of enum
+        case_type = (Define.CaseType) Application.settings.get_enum (CTX_TABLE[text_type].key_case_type);
+        notify["case-type"].connect (() => {
+            Application.settings.set_enum (CTX_TABLE[text_type].key_case_type, case_type);
+        });
 
         case_dropdown.notify["selected"].connect (() => {
-            model.case_type = (Define.CaseType) case_dropdown.selected;
+            case_type = (Define.CaseType) case_dropdown.selected;
 
             dropdown_changed ();
         });
 
         copy_clipboard_button.clicked.connect (() => {
-            get_clipboard ().set_text (model.text);
+            get_clipboard ().set_text (text);
+
             text_copied ();
         });
 
-        model.bind_property ("text", copy_clipboard_button, "sensitive",
+        bind_property ("text", copy_clipboard_button, "sensitive",
                              BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
                              (binding, from_value, ref to_value) => {
                                  var text = (string) from_value;
@@ -87,7 +118,7 @@ public class ComboEntry : Gtk.Box {
                                  return true;
                              });
 
-        model.bind_property ("case-type", case_info_button_icon, "tooltip-text",
+        bind_property ("case-type", case_info_button_icon, "tooltip-text",
                              BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
                              (binding, from_value, ref to_value) => {
                                  var case_type = (Define.CaseType) from_value;
@@ -95,7 +126,7 @@ public class ComboEntry : Gtk.Box {
                                  return true;
                              });
 
-        model.notify["text"].connect (() => {
+        buffer.changed.connect (() => {
             text_changed ();
         });
     }
