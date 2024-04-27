@@ -33,8 +33,7 @@
   </screenshots>
 
   <branding>
-    <color type="primary">#f9c440</color>
-    <color type="primary" scheme_preference="light">#d48e15</color>
+    <color type="primary" scheme_preference="light">#fff394</color>
     <color type="primary" scheme_preference="dark">#ffe16b</color>
   </branding>
 
