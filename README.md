@@ -26,13 +26,18 @@ Community packages maintained by volunteers are also available on some distribut
 [![Packaging status](https://repology.org/badge/vertical-allrepos/konbucase.svg)](https://repology.org/project/konbucase/versions)
 
 ### From Source Code (Flatpak)
-If you would like to test latest source code, clone the repository and then run the following command:
+You'll need `flatpak` and `flatpak-builder` commands to be installed on your system.
+
+Add AppCenter remote for dependencies:
 
 ```
 flatpak remote-add --user --if-not-exists appcenter https://flatpak.elementary.io/repo.flatpakrepo
-flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y --user flathub org.flatpak.Builder
-flatpak run org.flatpak.Builder builddir-flatpak --user --install --force-clean --install-deps-from=appcenter com.github.ryonakano.konbucase.yml
+```
+
+Then use `flatpak-builder` command to build and install:
+
+```
+flatpak-builder builddir --user --install --force-clean --install-deps-from=appcenter com.github.ryonakano.konbucase.yml
 ```
 
 ### From Source Code (Native)
