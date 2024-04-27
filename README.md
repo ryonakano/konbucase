@@ -42,7 +42,7 @@ flatpak run com.github.ryonakano.konbucase
 ```
 
 ### From Source Code (Native)
-You'll need the following dependencies to build:
+You'll need the following dependencies:
 
 * blueprint-compiler
 * [libchcase](https://github.com/ryonakano/chcase)
