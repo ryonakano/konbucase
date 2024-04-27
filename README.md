@@ -26,7 +26,7 @@ Community packages maintained by volunteers are also available on some distribut
 [![Packaging status](https://repology.org/badge/vertical-allrepos/konbucase.svg)](https://repology.org/project/konbucase/versions)
 
 ### From Source Code (Flatpak)
-You'll need `flatpak` and `flatpak-builder` commands to be installed on your system.
+You'll need `flatpak` and `flatpak-builder` commands installed on your system.
 
 Add AppCenter remote for dependencies:
 
