@@ -22,6 +22,8 @@ else
 endif
 
 sources = files(
+    'Model/ComboEntryModel.vala',
+    'Model/MainWindowModel.vala',
     'Application.vala',
     'ComboEntry.vala',
     'Define.vala',

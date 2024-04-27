@@ -12,7 +12,12 @@ public class MainWindow : Gtk.ApplicationWindow {
     [GtkChild]
     private unowned Granite.Toast toast;
 
-    private ChCase.Converter converter;
+    [GtkChild]
+    private unowned ComboEntryModel source_model;
+    [GtkChild]
+    private unowned ComboEntryModel result_model;
+    [GtkChild]
+    private unowned MainWindowModel window_model;
 
     public MainWindow (Application app) {
         Object (
@@ -21,52 +26,30 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        converter = new ChCase.Converter ();
-
         source_combo_entry.get_source_view ().grab_focus ();
 
         source_combo_entry.dropdown_changed.connect (() => {
-            do_convert ();
+            window_model.do_convert ();
         });
         result_combo_entry.dropdown_changed.connect (() => {
-            do_convert ();
+            window_model.do_convert ();
         });
 
-        source_combo_entry.text_changed.connect (() => {
-            do_convert ();
+        source_model.notify["text"].connect (() => {
+            window_model.do_convert ();
         });
 
-        source_combo_entry.text_copied.connect (show_toast);
-        result_combo_entry.text_copied.connect (show_toast);
+        source_combo_entry.copy_button_clicked.connect (() => {
+            get_clipboard ().set_text (source_model.text);
+            show_toast ();
+        });
+        result_combo_entry.copy_button_clicked.connect (() => {
+            get_clipboard ().set_text (result_model.text);
+            show_toast ();
+        });
     }
 
     private void show_toast () {
         toast.send_notification ();
-    }
-
-    private void do_convert () {
-        set_case_type (source_combo_entry.case_type, result_combo_entry.case_type);
-        result_combo_entry.text = convert_case (source_combo_entry.text);
-    }
-
-    /**
-     * Set case type of source and result texts.
-     *
-     * @param source_case case type of source text
-     * @param result_case case type of result text
-     */
-    private void set_case_type (Define.CaseType source_case, Define.CaseType result_case) {
-        converter.source_case = Util.to_chcase_case (source_case);
-        converter.result_case = Util.to_chcase_case (result_case);
-    }
-
-    /**
-     * Convert case of source_text to the case set with {@link set_case_type}.
-     *
-     * @param source_text text that is converted
-     * @return text after conversion
-     */
-    private string convert_case (string source_text) {
-        return converter.convert_case (source_text);
     }
 }
