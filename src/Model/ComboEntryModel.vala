@@ -6,7 +6,7 @@
 public class ComboEntryModel : Object {
     public Define.TextType text_type { get; construct; }
     public Define.CaseType case_type { get; set; }
-    public string case_type_description { get; set; }
+    public string case_description { get; set; }
     public GtkSource.Buffer buffer { get; private set; }
     public string text { get; set; }
 
@@ -69,7 +69,7 @@ public class ComboEntryModel : Object {
 
         Application.settings.bind (TEXT_TYPE_DATA_TABLE[text_type].key_text, this, "text", SettingsBindFlags.DEFAULT);
 
-        bind_property ("case-type", this, "case-type-description",
+        bind_property ("case-type", this, "case-description",
                        BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
                        (binding, from_value, ref to_value) => {
                            var case_type = (Define.CaseType) from_value;
