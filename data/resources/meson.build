@@ -1,6 +1,6 @@
 blueprints = custom_target('blueprints',
     input: files(
-        'ui/combo-entry.blp',
+        'ui/text-pane.blp',
         'ui/main-window.blp',
     ),
     output: '.',

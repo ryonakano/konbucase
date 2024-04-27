@@ -26,11 +26,11 @@ menu main_menu {
   }
 }
 
-$ComboEntryModel source_model {
+$TextPaneModel source_model {
   text-type: source;
 }
 
-$ComboEntryModel result_model {
+$TextPaneModel result_model {
   text-type: result;
 }
 
@@ -66,7 +66,7 @@ template $MainWindow : Gtk.ApplicationWindow {
       spacing: 0;
 
       // Left pane for input text
-      $ComboEntry source_combo_entry {
+      $TextPane source_pane {
         model: source_model;
         description: _("Convert from:");
         editable: true;
@@ -78,7 +78,7 @@ template $MainWindow : Gtk.ApplicationWindow {
       }
 
       // Right pane for output text
-      $ComboEntry result_combo_entry {
+      $TextPane result_pane {
         model: result_model;
         description: _("Convert to:");
         // Make the text view uneditable, otherwise the app freezes
