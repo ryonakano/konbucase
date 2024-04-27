@@ -40,7 +40,6 @@ You'll need the following dependencies to build:
 
 * blueprint-compiler
 * [libchcase](https://github.com/ryonakano/chcase)
-    * automatically downloaded on build
 * libgranite-7-dev
 * libgtk4-dev
 * libgtksourceview-5-dev
