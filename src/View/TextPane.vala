@@ -8,8 +8,8 @@ public class TextPane : Gtk.Box {
     public signal void dropdown_changed ();
     public signal void copy_button_clicked ();
 
-    public TextPaneModel model { get; set construct; }
-    public string description { get; construct; }
+    public TextPaneModel model { get; construct; }
+    public string header_label { get; construct; }
     public bool editable { get; construct; }
 
     [GtkChild]
@@ -19,10 +19,10 @@ public class TextPane : Gtk.Box {
     [GtkChild]
     private unowned GtkSource.View source_view;
 
-    public TextPane (TextPaneModel model, string description, bool editable) {
+    public TextPane (TextPaneModel model, string header_label, bool editable) {
         Object (
             model: model,
-            description: description,
+            header_label: header_label,
             editable: editable
         );
     }
