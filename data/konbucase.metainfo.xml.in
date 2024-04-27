@@ -23,12 +23,12 @@
   <screenshots>
     <screenshot type="default">
       <caption>App window in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.1.2/data/screenshots/pantheon/screenshot-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.2.0/data/screenshots/pantheon/screenshot-light.png</image>
     </screenshot>
 
     <screenshot>
       <caption>App window in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.1.2/data/screenshots/pantheon/screenshot-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.2.0/data/screenshots/pantheon/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -57,6 +57,24 @@
   </developer>
 
   <releases>
+    <release version="4.2.0" date="2024-04-28" urgency="low">
+      <description translate="no">
+        <p>
+          This release has few user-facing changes:
+        </p>
+        <ul>
+          <li>Update submodules and fix a bug that case conversion not working properly</li>
+          <li>Update translations</li>
+        </ul>
+        <p>
+          However, there are many under-the-hood improvements, like code refactoring, Blueprint porting, and so on.
+        </p>
+        <p>
+          Thank you for contribution of @yakushabb, @razzeee, and all translators!
+        </p>
+      </description>
+    </release>
+
     <release version="4.1.2" date="2024-03-02" urgency="low">
       <description translate="no">
         <ul>
