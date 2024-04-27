@@ -67,7 +67,6 @@ com.github.ryonakano.konbucase
 ```
 
 ## Contributing
-
 Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like to:
 
 - submit bug reports / feature requests
@@ -75,7 +74,6 @@ Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like 
 - translate the project
 
 ## Get Support
-
 Need help in use of the app? Refer to [the discussions page](https://github.com/ryonakano/konbucase/discussions) to search for existing discussions or [start a new discussion](https://github.com/ryonakano/konbucase/discussions/new/choose) if none is relevant.
 
 ## The Story of the App Name
