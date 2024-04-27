@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-23 07:47+0900\n"
+"POT-Creation-Date: 2024-04-27 19:33+0900\n"
 "PO-Revision-Date: 2024-01-21 13:01+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: \n"
@@ -68,14 +68,6 @@ msgstr "Окно приложения в светлом режиме"
 msgid "App window in the dark mode"
 msgstr "Окно приложения в тёмном режиме"
 
-#: data/resources/ui/combo-entry.blp:8
-msgid "Space separated"
-msgstr "Разделённые пробелом"
-
-#: data/resources/ui/combo-entry.blp:52
-msgid "Copy to Clipboard"
-msgstr "Копировать"
-
 #: data/resources/ui/main-window.blp:7
 #, fuzzy
 msgid "Style"
@@ -93,43 +85,51 @@ msgstr "Тёмный"
 msgid "System"
 msgstr "Система"
 
-#: data/resources/ui/main-window.blp:41
+#: data/resources/ui/main-window.blp:54
 msgid "Main Menu"
 msgstr ""
 
-#: data/resources/ui/main-window.blp:58
+#: data/resources/ui/main-window.blp:71
 msgid "Convert from:"
 msgstr "Конвертировать из:"
 
-#: data/resources/ui/main-window.blp:70
+#: data/resources/ui/main-window.blp:83
 msgid "Convert to:"
 msgstr "Конвертировать в:"
 
-#: data/resources/ui/main-window.blp:78
+#: data/resources/ui/main-window.blp:91
 msgid "Text copied!"
 msgstr "Текст скопирован!"
 
-#: src/ComboEntry.vala:120
+#: data/resources/ui/text-pane.blp:7
+msgid "Space separated"
+msgstr "Разделённые пробелом"
+
+#: data/resources/ui/text-pane.blp:52
+msgid "Copy to Clipboard"
+msgstr "Копировать"
+
+#: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
 msgstr "Каждое слово разделено пробелом"
 
-#: src/ComboEntry.vala:122
+#: src/Model/TextPaneModel.vala:32
 msgid "The first character of compound words is in lowercase"
 msgstr "Первый символ совмещённых слов пишется с маленькой буквы"
 
-#: src/ComboEntry.vala:124
+#: src/Model/TextPaneModel.vala:33
 msgid "The first character of compound words is in uppercase"
 msgstr "Первый символ совмещённых слов пишется с заглавной буквы"
 
-#: src/ComboEntry.vala:126
+#: src/Model/TextPaneModel.vala:34
 msgid "Each word is separated by an underscore"
 msgstr "Каждое слово отделяется нижним подчёркиванием"
 
-#: src/ComboEntry.vala:128
+#: src/Model/TextPaneModel.vala:35
 msgid "Each word is separated by a hyphen"
 msgstr "Каждое слово отделяется дефисом"
 
-#: src/ComboEntry.vala:130
+#: src/Model/TextPaneModel.vala:36
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Первый символ первого слова в предложении пишется с заглавной буквы"
 

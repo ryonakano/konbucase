@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-23 07:47+0900\n"
+"POT-Creation-Date: 2024-04-27 19:33+0900\n"
 "PO-Revision-Date: 2024-04-01 13:01+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -72,14 +72,6 @@ msgstr "Finestra dell'app in modalità chiara"
 msgid "App window in the dark mode"
 msgstr "Finestra dell'app in modalità scura"
 
-#: data/resources/ui/combo-entry.blp:8
-msgid "Space separated"
-msgstr "Spazi separati"
-
-#: data/resources/ui/combo-entry.blp:52
-msgid "Copy to Clipboard"
-msgstr "Copia negli appunti"
-
 #: data/resources/ui/main-window.blp:7
 msgid "Style"
 msgstr "Stile"
@@ -96,43 +88,51 @@ msgstr "Scuro"
 msgid "System"
 msgstr "Sistema"
 
-#: data/resources/ui/main-window.blp:41
+#: data/resources/ui/main-window.blp:54
 msgid "Main Menu"
 msgstr "Menù principale"
 
-#: data/resources/ui/main-window.blp:58
+#: data/resources/ui/main-window.blp:71
 msgid "Convert from:"
 msgstr "Converti da:"
 
-#: data/resources/ui/main-window.blp:70
+#: data/resources/ui/main-window.blp:83
 msgid "Convert to:"
 msgstr "Converti in:"
 
-#: data/resources/ui/main-window.blp:78
+#: data/resources/ui/main-window.blp:91
 msgid "Text copied!"
 msgstr "Testo copiato!"
 
-#: src/ComboEntry.vala:120
+#: data/resources/ui/text-pane.blp:7
+msgid "Space separated"
+msgstr "Spazi separati"
+
+#: data/resources/ui/text-pane.blp:52
+msgid "Copy to Clipboard"
+msgstr "Copia negli appunti"
+
+#: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
 msgstr "Ogni parola è separata da uno spazio"
 
-#: src/ComboEntry.vala:122
+#: src/Model/TextPaneModel.vala:32
 msgid "The first character of compound words is in lowercase"
 msgstr "Il primo carattere delle parole composte è minuscolo"
 
-#: src/ComboEntry.vala:124
+#: src/Model/TextPaneModel.vala:33
 msgid "The first character of compound words is in uppercase"
 msgstr "Il primo carattere delle parole composte è maiuscolo"
 
-#: src/ComboEntry.vala:126
+#: src/Model/TextPaneModel.vala:34
 msgid "Each word is separated by an underscore"
 msgstr "Ogni parola è separata da un underscore (trattino basso)"
 
-#: src/ComboEntry.vala:128
+#: src/Model/TextPaneModel.vala:35
 msgid "Each word is separated by a hyphen"
 msgstr "Ogni parola è separata da un hyphen (trattino alto)"
 
-#: src/ComboEntry.vala:130
+#: src/Model/TextPaneModel.vala:36
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
 

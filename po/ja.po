@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-23 07:47+0900\n"
+"POT-Creation-Date: 2024-04-27 19:33+0900\n"
 "PO-Revision-Date: 2024-03-22 12:42+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -66,14 +66,6 @@ msgstr "ライトモードのアプリウィンドウ"
 msgid "App window in the dark mode"
 msgstr "ダークモードのアプリウィンドウ"
 
-#: data/resources/ui/combo-entry.blp:8
-msgid "Space separated"
-msgstr "スペース区切り"
-
-#: data/resources/ui/combo-entry.blp:52
-msgid "Copy to Clipboard"
-msgstr "クリップボードにコピー"
-
 #: data/resources/ui/main-window.blp:7
 msgid "Style"
 msgstr "スタイル"
@@ -90,43 +82,51 @@ msgstr "ダーク"
 msgid "System"
 msgstr "システム"
 
-#: data/resources/ui/main-window.blp:41
+#: data/resources/ui/main-window.blp:54
 msgid "Main Menu"
 msgstr "メインメニュー"
 
-#: data/resources/ui/main-window.blp:58
+#: data/resources/ui/main-window.blp:71
 msgid "Convert from:"
 msgstr "変換元の記法:"
 
-#: data/resources/ui/main-window.blp:70
+#: data/resources/ui/main-window.blp:83
 msgid "Convert to:"
 msgstr "変換先の記法:"
 
-#: data/resources/ui/main-window.blp:78
+#: data/resources/ui/main-window.blp:91
 msgid "Text copied!"
 msgstr "テキストをコピーしました!"
 
-#: src/ComboEntry.vala:120
+#: data/resources/ui/text-pane.blp:7
+msgid "Space separated"
+msgstr "スペース区切り"
+
+#: data/resources/ui/text-pane.blp:52
+msgid "Copy to Clipboard"
+msgstr "クリップボードにコピー"
+
+#: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
 msgstr "単語の区切りにスペースを使用します"
 
-#: src/ComboEntry.vala:122
+#: src/Model/TextPaneModel.vala:32
 msgid "The first character of compound words is in lowercase"
 msgstr "複合語の頭文字に小文字を使用します"
 
-#: src/ComboEntry.vala:124
+#: src/Model/TextPaneModel.vala:33
 msgid "The first character of compound words is in uppercase"
 msgstr "複合語の頭文字に大文字を使用します"
 
-#: src/ComboEntry.vala:126
+#: src/Model/TextPaneModel.vala:34
 msgid "Each word is separated by an underscore"
 msgstr "単語の区切りにアンダースコアを使用します"
 
-#: src/ComboEntry.vala:128
+#: src/Model/TextPaneModel.vala:35
 msgid "Each word is separated by a hyphen"
 msgstr "単語の区切りにハイフンを使用します"
 
-#: src/ComboEntry.vala:130
+#: src/Model/TextPaneModel.vala:36
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "文頭の単語の頭文字に大文字を使用します"
 

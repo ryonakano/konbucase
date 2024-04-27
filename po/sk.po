@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-23 07:47+0900\n"
+"POT-Creation-Date: 2024-04-27 19:33+0900\n"
 "PO-Revision-Date: 2023-11-28 22:07+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: \n"
@@ -70,14 +70,6 @@ msgstr "Okno aplikácie v svetlom režime"
 msgid "App window in the dark mode"
 msgstr "Okno aplikácie v tmavom režime"
 
-#: data/resources/ui/combo-entry.blp:8
-msgid "Space separated"
-msgstr "Oddelený medzerami"
-
-#: data/resources/ui/combo-entry.blp:52
-msgid "Copy to Clipboard"
-msgstr "Kopírovať do schránky"
-
 #: data/resources/ui/main-window.blp:7
 #, fuzzy
 msgid "Style"
@@ -95,43 +87,51 @@ msgstr "Tmavý"
 msgid "System"
 msgstr "Systém"
 
-#: data/resources/ui/main-window.blp:41
+#: data/resources/ui/main-window.blp:54
 msgid "Main Menu"
 msgstr ""
 
-#: data/resources/ui/main-window.blp:58
+#: data/resources/ui/main-window.blp:71
 msgid "Convert from:"
 msgstr "Previesť z:"
 
-#: data/resources/ui/main-window.blp:70
+#: data/resources/ui/main-window.blp:83
 msgid "Convert to:"
 msgstr "Previesť na:"
 
-#: data/resources/ui/main-window.blp:78
+#: data/resources/ui/main-window.blp:91
 msgid "Text copied!"
 msgstr "Text skopírovaný!"
 
-#: src/ComboEntry.vala:120
+#: data/resources/ui/text-pane.blp:7
+msgid "Space separated"
+msgstr "Oddelený medzerami"
+
+#: data/resources/ui/text-pane.blp:52
+msgid "Copy to Clipboard"
+msgstr "Kopírovať do schránky"
+
+#: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
 msgstr "Každé slovo je oddelené medzerou"
 
-#: src/ComboEntry.vala:122
+#: src/Model/TextPaneModel.vala:32
 msgid "The first character of compound words is in lowercase"
 msgstr "Prvý znak zo zhluku slov je napísaný malým písmenom"
 
-#: src/ComboEntry.vala:124
+#: src/Model/TextPaneModel.vala:33
 msgid "The first character of compound words is in uppercase"
 msgstr "Prvý znak zo zhluku slov je napísaný veľkým písmenom"
 
-#: src/ComboEntry.vala:126
+#: src/Model/TextPaneModel.vala:34
 msgid "Each word is separated by an underscore"
 msgstr "Každé slovo je oddelené podčiarkovníkom"
 
-#: src/ComboEntry.vala:128
+#: src/Model/TextPaneModel.vala:35
 msgid "Each word is separated by a hyphen"
 msgstr "Každé slovo je oddelené spojovníkom"
 
-#: src/ComboEntry.vala:130
+#: src/Model/TextPaneModel.vala:36
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Prvý znak prvého slova vo vete je napísaný veľkým písmenom"
 
