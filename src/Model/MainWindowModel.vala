@@ -4,12 +4,12 @@
  */
 
 public class MainWindowModel : Object {
-    public ComboEntryModel source_model { get; construct; }
-    public ComboEntryModel result_model { get; construct; }
+    public TextPaneModel source_model { get; construct; }
+    public TextPaneModel result_model { get; construct; }
 
     private ChCase.Converter converter;
 
-    public MainWindowModel (ComboEntryModel source_model, ComboEntryModel result_model) {
+    public MainWindowModel (TextPaneModel source_model, TextPaneModel result_model) {
         Object (
             source_model: source_model,
             result_model: result_model

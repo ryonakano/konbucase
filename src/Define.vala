@@ -26,7 +26,7 @@ namespace Define {
         RESULT,
     }
 
-    // Make sure to match with source-type enum in the gschema
+    // Make sure to match with case-type enum in the gschema
     public enum CaseType {
         SPACE_SEPARATED = ChCase.Case.SPACE_SEPARATED,
         CAMEL = ChCase.Case.CAMEL,

@@ -6,16 +6,16 @@
 [GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/main-window.ui")]
 public class MainWindow : Gtk.ApplicationWindow {
     [GtkChild]
-    private unowned ComboEntry source_combo_entry;
+    private unowned TextPane source_pane;
     [GtkChild]
-    private unowned ComboEntry result_combo_entry;
+    private unowned TextPane result_pane;
     [GtkChild]
     private unowned Granite.Toast toast;
 
     [GtkChild]
-    private unowned ComboEntryModel source_model;
+    private unowned TextPaneModel source_model;
     [GtkChild]
-    private unowned ComboEntryModel result_model;
+    private unowned TextPaneModel result_model;
     [GtkChild]
     private unowned MainWindowModel window_model;
 
@@ -26,12 +26,12 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        source_combo_entry.get_source_view ().grab_focus ();
+        source_pane.get_source_view ().grab_focus ();
 
-        source_combo_entry.dropdown_changed.connect (() => {
+        source_pane.dropdown_changed.connect (() => {
             window_model.do_convert ();
         });
-        result_combo_entry.dropdown_changed.connect (() => {
+        result_pane.dropdown_changed.connect (() => {
             window_model.do_convert ();
         });
 
@@ -39,11 +39,11 @@ public class MainWindow : Gtk.ApplicationWindow {
             window_model.do_convert ();
         });
 
-        source_combo_entry.copy_button_clicked.connect (() => {
+        source_pane.copy_button_clicked.connect (() => {
             get_clipboard ().set_text (source_model.text);
             show_toast ();
         });
-        result_combo_entry.copy_button_clicked.connect (() => {
+        result_pane.copy_button_clicked.connect (() => {
             get_clipboard ().set_text (result_model.text);
             show_toast ();
         });

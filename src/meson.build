@@ -22,10 +22,10 @@ else
 endif
 
 sources = files(
-    'Model/ComboEntryModel.vala',
     'Model/MainWindowModel.vala',
-    'View/ComboEntry.vala',
+    'Model/TextPaneModel.vala',
     'View/MainWindow.vala',
+    'View/TextPane.vala',
     'Application.vala',
     'Define.vala',
     'StyleManager.vala',

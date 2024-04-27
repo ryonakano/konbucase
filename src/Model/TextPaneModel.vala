@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class ComboEntryModel : Object {
+public class TextPaneModel : Object {
     public Define.TextType text_type { get; construct; }
     public Define.CaseType case_type { get; set; }
     public string case_description { get; set; }
@@ -36,7 +36,7 @@ public class ComboEntryModel : Object {
         { N_("The first character of the first word in the sentence is in uppercase") }, // Define.CaseType.SENTENCE
     };
 
-    public ComboEntryModel (Define.TextType text_type) {
+    public TextPaneModel (Define.TextType text_type) {
         Object (
             text_type: text_type
         );

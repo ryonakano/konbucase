@@ -14,9 +14,9 @@ Gtk.StringList case_list {
 }
 
 /**
- * ComboEntry: Common pane for input/output texts
+ * TextPane: Common pane for input/output texts
  */
-template $ComboEntry : Gtk.Box {
+template $TextPane : Gtk.Box {
   orientation: vertical;
   spacing: 0;
 
@@ -43,7 +43,7 @@ template $ComboEntry : Gtk.Box {
     // Info about current choice of case type
     Gtk.Image case_info_button_icon {
       icon-name: "dialog-information-symbolic";
-      tooltip-text: bind template.model as <$ComboEntryModel>.case-description;
+      tooltip-text: bind template.model as <$TextPaneModel>.case-description;
     }
 
     // Button to copy text in the text view
@@ -56,7 +56,7 @@ template $ComboEntry : Gtk.Box {
   // Text area
   Gtk.ScrolledWindow {
     GtkSource.View source_view {
-      buffer: bind template.model as <$ComboEntryModel>.buffer;
+      buffer: bind template.model as <$TextPaneModel>.buffer;
       wrap-mode: word_char;
       hexpand: true;
       vexpand: true;

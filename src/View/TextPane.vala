@@ -3,12 +3,12 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-[GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/combo-entry.ui")]
-public class ComboEntry : Gtk.Box {
+[GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/text-pane.ui")]
+public class TextPane : Gtk.Box {
     public signal void dropdown_changed ();
     public signal void copy_button_clicked ();
 
-    public ComboEntryModel model { get; set construct; }
+    public TextPaneModel model { get; set construct; }
     public string description { get; construct; }
     public bool editable { get; construct; }
 
@@ -19,7 +19,7 @@ public class ComboEntry : Gtk.Box {
     [GtkChild]
     private unowned GtkSource.View source_view;
 
-    public ComboEntry (ComboEntryModel model, string description, bool editable) {
+    public TextPane (TextPaneModel model, string description, bool editable) {
         Object (
             model: model,
             description: description,
