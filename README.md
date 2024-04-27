@@ -28,16 +28,17 @@ Community packages maintained by volunteers are also available on some distribut
 ### From Source Code (Flatpak)
 You'll need `flatpak` and `flatpak-builder` commands installed on your system.
 
-Add AppCenter remote for dependencies:
+Run `flatpak remote-add` to add AppCenter remote for dependencies:
 
 ```
 flatpak remote-add --user --if-not-exists appcenter https://flatpak.elementary.io/repo.flatpakrepo
 ```
 
-Then use `flatpak-builder` command to build and install:
+To build and install, use `flatpak-builder`, then execute with `flatpak run`:
 
 ```
 flatpak-builder builddir --user --install --force-clean --install-deps-from=appcenter com.github.ryonakano.konbucase.yml
+flatpak run com.github.ryonakano.konbucase
 ```
 
 ### From Source Code (Native)
@@ -58,7 +59,7 @@ meson setup builddir --prefix=/usr
 meson compile -C builddir
 ```
 
-To install, use `meson install`, then execute with `com.github.ryonakano.konbucase`
+To install, use `meson install`, then execute with `com.github.ryonakano.konbucase`:
 
 ```bash
 meson install -C builddir
