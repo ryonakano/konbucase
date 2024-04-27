@@ -1,6 +1,5 @@
 using Gtk 4.0;
 using GtkSource 5;
-using Granite 7.0;
 
 // Choices of case types
 Gtk.StringList case_list {
@@ -44,6 +43,7 @@ template $ComboEntry : Gtk.Box {
     // Info about current choice of case type
     Gtk.Image case_info_button_icon {
       icon-name: "dialog-information-symbolic";
+      tooltip-text: bind template.model as <$ComboEntryModel>.case-description;
     }
 
     // Button to copy text in the text view
@@ -56,6 +56,7 @@ template $ComboEntry : Gtk.Box {
   // Text area
   Gtk.ScrolledWindow {
     GtkSource.View source_view {
+      buffer: bind template.model as <$ComboEntryModel>.buffer;
       wrap-mode: word_char;
       hexpand: true;
       vexpand: true;

@@ -13,15 +13,6 @@ dependencies = [
     dependency('gtksourceview-5'),
 ]
 
-sources = files(
-    'Application.vala',
-    'ComboEntry.vala',
-    'Define.vala',
-    'MainWindow.vala',
-    'StyleManager.vala',
-    'Util.vala',
-)
-
 if get_option('use_submodule')
     chcase_subproject = subproject('chcase')
     chcase_deps = chcase_subproject.get_variable('libchcase')
@@ -29,6 +20,17 @@ if get_option('use_submodule')
 else
     dependencies += dependency('chcase')
 endif
+
+sources = files(
+    'Model/ComboEntryModel.vala',
+    'Model/MainWindowModel.vala',
+    'View/ComboEntry.vala',
+    'View/MainWindow.vala',
+    'Application.vala',
+    'Define.vala',
+    'StyleManager.vala',
+    'Util.vala',
+)
 
 executable(
     meson.project_name(),
