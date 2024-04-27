@@ -28,7 +28,11 @@ public class ComboEntry : Gtk.Box {
     }
 
     construct {
+        case_dropdown.selected = model.case_type;
+
         case_dropdown.notify["selected"].connect (() => {
+            model.case_type = (Define.CaseType) case_dropdown.selected;
+
             dropdown_changed ();
         });
 
@@ -44,9 +48,6 @@ public class ComboEntry : Gtk.Box {
                                  to_value.set_boolean (text != "");
                                  return true;
                              });
-
-        model.bind_property ("case-type", case_dropdown, "selected",
-                             BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE);
     }
 
     // UI elements defined in .ui files can't be a property, so defines a getter method instead
