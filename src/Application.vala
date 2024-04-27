@@ -22,9 +22,6 @@ public class Application : Gtk.Application {
     private const string COLOR_SCHEME_FORCE_LIGHT = "force-light";
     private const string COLOR_SCHEME_FORCE_DARK = "force-dark";
 
-    private Gee.HashMap<string, StyleManager.ColorScheme> style_action_transform_to_tbl;
-    private Gee.HashMap<StyleManager.ColorScheme, string> style_action_transform_from_tbl;
-
     public Application () {
         Object (
             application_id: "com.github.ryonakano.konbucase",
@@ -36,18 +33,6 @@ public class Application : Gtk.Application {
         settings = new Settings ("com.github.ryonakano.konbucase");
     }
 
-    construct {
-        style_action_transform_to_tbl = new Gee.HashMap<string, StyleManager.ColorScheme> ();
-        style_action_transform_to_tbl[COLOR_SCHEME_DEFAULT] = StyleManager.ColorScheme.DEFAULT;
-        style_action_transform_to_tbl[COLOR_SCHEME_FORCE_LIGHT] = StyleManager.ColorScheme.FORCE_LIGHT;
-        style_action_transform_to_tbl[COLOR_SCHEME_FORCE_DARK] = StyleManager.ColorScheme.FORCE_DARK;
-
-        style_action_transform_from_tbl = new Gee.HashMap<StyleManager.ColorScheme, string> ();
-        style_action_transform_from_tbl[StyleManager.ColorScheme.DEFAULT] = COLOR_SCHEME_DEFAULT;
-        style_action_transform_from_tbl[StyleManager.ColorScheme.FORCE_LIGHT] = COLOR_SCHEME_FORCE_LIGHT;
-        style_action_transform_from_tbl[StyleManager.ColorScheme.FORCE_DARK] = COLOR_SCHEME_FORCE_DARK;
-    }
-
     private bool style_action_transform_to_cb (Binding binding, Value from_value, ref Value to_value) {
         Variant? variant = from_value.dup_variant ();
         if (variant == null) {
@@ -56,16 +41,40 @@ public class Application : Gtk.Application {
         }
 
         var val = variant.get_string ();
-        StyleManager.ColorScheme color_scheme = style_action_transform_to_tbl[val];
-        to_value.set_enum (color_scheme);
+        switch (val) {
+            case COLOR_SCHEME_DEFAULT:
+                to_value.set_enum (StyleManager.ColorScheme.DEFAULT);
+                break;
+            case COLOR_SCHEME_FORCE_LIGHT:
+                to_value.set_enum (StyleManager.ColorScheme.FORCE_LIGHT);
+                break;
+            case COLOR_SCHEME_FORCE_DARK:
+                to_value.set_enum (StyleManager.ColorScheme.FORCE_DARK);
+                break;
+            default:
+                warning ("style_action_transform_to_cb: Invalid color scheme: %s", val);
+                return false;
+        }
 
         return true;
     }
 
     private bool style_action_transform_from_cb (Binding binding, Value from_value, ref Value to_value) {
         var val = (StyleManager.ColorScheme) from_value;
-        string color_scheme = style_action_transform_from_tbl[val];
-        to_value.set_variant (new Variant.string (color_scheme));
+        switch (val) {
+            case StyleManager.ColorScheme.DEFAULT:
+                to_value.set_variant (new Variant.string (COLOR_SCHEME_DEFAULT));
+                break;
+            case StyleManager.ColorScheme.FORCE_LIGHT:
+                to_value.set_variant (new Variant.string (COLOR_SCHEME_FORCE_LIGHT));
+                break;
+            case StyleManager.ColorScheme.FORCE_DARK:
+                to_value.set_variant (new Variant.string (COLOR_SCHEME_FORCE_DARK));
+                break;
+            default:
+                warning ("style_action_transform_from_cb : Invalid ColorScheme: %d", val);
+                return false;
+        }
 
         return true;
     }
@@ -107,7 +116,7 @@ public class Application : Gtk.Application {
                 color_scheme = Define.Style.DARK;
                 break;
             default:
-                warning ("color_scheme_set_mapping_cb: Invalid StyleManager.ColorScheme: %d", val);
+                warning ("color_scheme_set_mapping_cb: Invalid ColorScheme: %d", val);
                 // fallback to default
                 color_scheme = Define.Style.DEFAULT;
                 break;
