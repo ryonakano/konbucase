@@ -5,18 +5,6 @@
 
 namespace Define {
     /**
-     * Constants for the "style" enum in the gschema.
-     */
-    namespace Style {
-        /** Inherit the system style. */
-        public const string DEFAULT = "default";
-        /** Always use light appearance. */
-        public const string LIGHT = "light";
-        /** Always use dark appearance. */
-        public const string DARK = "dark";
-    }
-
-    /**
      * Type of the text.
      */
     public enum TextType {

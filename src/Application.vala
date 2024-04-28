@@ -43,13 +43,9 @@ public class Application : Gtk.Application {
         var val = variant.get_string ();
         switch (val) {
             case COLOR_SCHEME_DEFAULT:
-                to_value.set_enum (StyleManager.ColorScheme.DEFAULT);
-                break;
             case COLOR_SCHEME_FORCE_LIGHT:
-                to_value.set_enum (StyleManager.ColorScheme.FORCE_LIGHT);
-                break;
             case COLOR_SCHEME_FORCE_DARK:
-                to_value.set_enum (StyleManager.ColorScheme.FORCE_DARK);
+                to_value.set_string (val);
                 break;
             default:
                 warning ("style_action_transform_to_cb: Invalid color scheme: %s", val);
@@ -60,69 +56,19 @@ public class Application : Gtk.Application {
     }
 
     private bool style_action_transform_from_cb (Binding binding, Value from_value, ref Value to_value) {
-        var val = (StyleManager.ColorScheme) from_value;
+        var val = (string) from_value;
         switch (val) {
-            case StyleManager.ColorScheme.DEFAULT:
-                to_value.set_variant (new Variant.string (COLOR_SCHEME_DEFAULT));
-                break;
-            case StyleManager.ColorScheme.FORCE_LIGHT:
-                to_value.set_variant (new Variant.string (COLOR_SCHEME_FORCE_LIGHT));
-                break;
-            case StyleManager.ColorScheme.FORCE_DARK:
-                to_value.set_variant (new Variant.string (COLOR_SCHEME_FORCE_DARK));
+            case StyleManager.COLOR_SCHEME_DEFAULT:
+            case StyleManager.COLOR_SCHEME_FORCE_LIGHT:
+            case StyleManager.COLOR_SCHEME_FORCE_DARK:
+                to_value.set_variant (new Variant.string (val));
                 break;
             default:
-                warning ("style_action_transform_from_cb : Invalid ColorScheme: %d", val);
+                warning ("style_action_transform_from_cb: Invalid color scheme: %s", val);
                 return false;
         }
 
         return true;
-    }
-
-    private static bool color_scheme_get_mapping_cb (Value value, Variant variant, void* user_data) {
-        // Convert from the "style" enum defined in the gschema to StyleManager.ColorScheme
-        var val = variant.get_string ();
-        switch (val) {
-            case Define.Style.DEFAULT:
-                value.set_enum (StyleManager.ColorScheme.DEFAULT);
-                break;
-            case Define.Style.LIGHT:
-                value.set_enum (StyleManager.ColorScheme.FORCE_LIGHT);
-                break;
-            case Define.Style.DARK:
-                value.set_enum (StyleManager.ColorScheme.FORCE_DARK);
-                break;
-            default:
-                warning ("color_scheme_get_mapping_cb: Invalid style: %s", val);
-                return false;
-        }
-
-        return true;
-    }
-
-    private static Variant color_scheme_set_mapping_cb (Value value, VariantType expected_type, void* user_data) {
-        string color_scheme;
-
-        // Convert from StyleManager.ColorScheme to the "style" enum defined in the gschema
-        var val = (StyleManager.ColorScheme) value;
-        switch (val) {
-            case StyleManager.ColorScheme.DEFAULT:
-                color_scheme = Define.Style.DEFAULT;
-                break;
-            case StyleManager.ColorScheme.FORCE_LIGHT:
-                color_scheme = Define.Style.LIGHT;
-                break;
-            case StyleManager.ColorScheme.FORCE_DARK:
-                color_scheme = Define.Style.DARK;
-                break;
-            default:
-                warning ("color_scheme_set_mapping_cb: Invalid ColorScheme: %d", val);
-                // fallback to default
-                color_scheme = Define.Style.DEFAULT;
-                break;
-        }
-
-        return new Variant.string (color_scheme);
     }
 
     private void setup_style () {
@@ -135,10 +81,7 @@ public class Application : Gtk.Application {
                                     BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
                                     style_action_transform_to_cb,
                                     style_action_transform_from_cb);
-        settings.bind_with_mapping ("color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
-                                    color_scheme_get_mapping_cb,
-                                    color_scheme_set_mapping_cb,
-                                    null, null);
+        settings.bind ("color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT);
         add_action (style_action);
     }
 
