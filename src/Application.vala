@@ -18,10 +18,6 @@ public class Application : Gtk.Application {
     private MainWindow window;
     private StyleManager style_manager;
 
-    private const string COLOR_SCHEME_DEFAULT = "default";
-    private const string COLOR_SCHEME_FORCE_LIGHT = "force-light";
-    private const string COLOR_SCHEME_FORCE_DARK = "force-dark";
-
     public Application () {
         Object (
             application_id: "com.github.ryonakano.konbucase",
@@ -42,9 +38,9 @@ public class Application : Gtk.Application {
 
         var val = variant.get_string ();
         switch (val) {
-            case COLOR_SCHEME_DEFAULT:
-            case COLOR_SCHEME_FORCE_LIGHT:
-            case COLOR_SCHEME_FORCE_DARK:
+            case StyleManager.COLOR_SCHEME_DEFAULT:
+            case StyleManager.COLOR_SCHEME_FORCE_LIGHT:
+            case StyleManager.COLOR_SCHEME_FORCE_DARK:
                 to_value.set_string (val);
                 break;
             default:
@@ -75,7 +71,7 @@ public class Application : Gtk.Application {
         style_manager = StyleManager.get_default ();
 
         var style_action = new SimpleAction.stateful (
-            "color-scheme", VariantType.STRING, new Variant.string (COLOR_SCHEME_DEFAULT)
+            "color-scheme", VariantType.STRING, new Variant.string (StyleManager.COLOR_SCHEME_DEFAULT)
         );
         style_action.bind_property ("state", style_manager, "color-scheme",
                                     BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
