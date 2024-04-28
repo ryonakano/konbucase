@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-27 19:33+0900\n"
-"PO-Revision-Date: 2024-03-22 12:42+0000\n"
+"PO-Revision-Date: 2024-04-27 23:32+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
 "ja/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.1\n"
 
 #: data/konbucase.desktop.in:3
 msgid "KonbuCase"
@@ -88,11 +88,11 @@ msgstr "メインメニュー"
 
 #: data/resources/ui/main-window.blp:71
 msgid "Convert from:"
-msgstr "変換元の記法:"
+msgstr "変換元:"
 
 #: data/resources/ui/main-window.blp:83
 msgid "Convert to:"
-msgstr "変換先の記法:"
+msgstr "変換先:"
 
 #: data/resources/ui/main-window.blp:91
 msgid "Text copied!"
