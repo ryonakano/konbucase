@@ -4,13 +4,11 @@
  */
 
 public class StyleManager : Object {
-    public enum ColorScheme {
-        DEFAULT,
-        FORCE_LIGHT,
-        FORCE_DARK,
-    }
+    public const string COLOR_SCHEME_DEFAULT = "default";
+    public const string COLOR_SCHEME_FORCE_LIGHT = "force-light";
+    public const string COLOR_SCHEME_FORCE_DARK = "force-dark";
 
-    public ColorScheme color_scheme { get; set; }
+    public string color_scheme { get; set; }
 
     public static unowned StyleManager get_default () {
         if (instance == null) {
@@ -39,17 +37,17 @@ public class StyleManager : Object {
         bool is_prefer_dark;
 
         switch (color_scheme) {
-            case ColorScheme.FORCE_LIGHT:
+            case COLOR_SCHEME_FORCE_LIGHT:
                 is_prefer_dark = false;
                 break;
-            case ColorScheme.FORCE_DARK:
+            case COLOR_SCHEME_FORCE_DARK:
                 is_prefer_dark = true;
                 break;
-            case ColorScheme.DEFAULT:
+            case COLOR_SCHEME_DEFAULT:
                 is_prefer_dark = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
                 break;
             default:
-                warning ("Invalid ColorScheme: %d", color_scheme);
+                warning ("Invalid color_scheme: %s", color_scheme);
                 return;
         }
 
