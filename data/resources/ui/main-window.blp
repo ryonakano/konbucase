@@ -1,5 +1,5 @@
 using Gtk 4.0;
-using Granite 7.0;
+using Adw 1;
 
 // Main menu model
 menu main_menu {
@@ -42,53 +42,49 @@ $MainWindowModel window_model {
 /**
  * MainWindow: The app window
  */
-template $MainWindow : Gtk.ApplicationWindow {
+template $MainWindow : Adw.ApplicationWindow {
   width-request: 700;
   height-request: 500;
   title: "KonbuCase";
 
-  [titlebar]
-  Gtk.HeaderBar {
-    [end]
-    Gtk.MenuButton {
-      tooltip-text: _("Main Menu");
-      icon-name: "open-menu";
-      menu-model: main_menu;
-      primary: true;
-    }
-  }
-
-  // Use overlay for the toast
-  Gtk.Overlay {
-    [overlay]
-    Gtk.Box {
-      orientation: horizontal;
-      spacing: 0;
-
-      // Left pane for input text
-      $TextPane source_pane {
-        model: source_model;
-        header-label: _("Convert from:");
-        editable: true;
-      }
-
-      Gtk.Separator {
-        orientation: vertical;
-        vexpand: true;
-      }
-
-      // Right pane for output text
-      $TextPane result_pane {
-        model: result_model;
-        header-label: _("Convert to:");
-        // Make the text view uneditable, otherwise the app freezes
-        editable: false;
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {
+      [end]
+      Gtk.MenuButton {
+        tooltip-text: _("Main Menu");
+        icon-name: "open-menu";
+        menu-model: main_menu;
+        primary: true;
       }
     }
 
-    [overlay]
-    Granite.Toast toast {
-      title: _("Text copied!");
-    }
+    // Use overlay for the toast
+    content: Adw.ToastOverlay overlay {
+      Gtk.Box {
+        orientation: horizontal;
+        spacing: 0;
+
+        // Left pane for input text
+        $TextPane source_pane {
+          model: source_model;
+          header-label: _("Convert from:");
+          editable: true;
+        }
+
+        Gtk.Separator {
+          orientation: vertical;
+          vexpand: true;
+        }
+
+        // Right pane for output text
+        $TextPane result_pane {
+          model: result_model;
+          header-label: _("Convert to:");
+          // Make the text view uneditable, otherwise the app freezes
+          editable: false;
+        }
+      }
+    };
   }
 }

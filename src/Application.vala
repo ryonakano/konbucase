@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Application : Gtk.Application {
+public class Application : Adw.Application {
     public static bool IS_ON_PANTHEON {
         get {
             return Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
@@ -12,11 +12,14 @@ public class Application : Gtk.Application {
 
     public static Settings settings { get; private set; }
 
+    private const string COLOR_SCHEME_DEFAULT = "default";
+    private const string COLOR_SCHEME_FORCE_LIGHT = "force-light";
+    private const string COLOR_SCHEME_FORCE_DARK = "force-dark";
+
     private const ActionEntry[] ACTION_ENTRIES = {
         { "quit", on_quit_activate },
     };
     private MainWindow window;
-    private StyleManager style_manager;
 
     public Application () {
         Object (
@@ -38,10 +41,14 @@ public class Application : Gtk.Application {
 
         var val = variant.get_string ();
         switch (val) {
-            case StyleManager.COLOR_SCHEME_DEFAULT:
-            case StyleManager.COLOR_SCHEME_FORCE_LIGHT:
-            case StyleManager.COLOR_SCHEME_FORCE_DARK:
-                to_value.set_string (val);
+            case COLOR_SCHEME_DEFAULT:
+                to_value.set_enum (Adw.ColorScheme.DEFAULT);
+                break;
+            case COLOR_SCHEME_FORCE_LIGHT:
+                to_value.set_enum (Adw.ColorScheme.FORCE_LIGHT);
+                break;
+            case COLOR_SCHEME_FORCE_DARK:
+                to_value.set_enum (Adw.ColorScheme.FORCE_DARK);
                 break;
             default:
                 warning ("style_action_transform_to_cb: Invalid color scheme: %s", val);
@@ -52,36 +59,91 @@ public class Application : Gtk.Application {
     }
 
     private bool style_action_transform_from_cb (Binding binding, Value from_value, ref Value to_value) {
-        var val = (string) from_value;
+        var val = (Adw.ColorScheme) from_value;
         switch (val) {
-            case StyleManager.COLOR_SCHEME_DEFAULT:
-            case StyleManager.COLOR_SCHEME_FORCE_LIGHT:
-            case StyleManager.COLOR_SCHEME_FORCE_DARK:
-                to_value.set_variant (new Variant.string (val));
+            case Adw.ColorScheme.DEFAULT:
+                to_value.set_variant (new Variant.string (COLOR_SCHEME_DEFAULT));
+                break;
+            case Adw.ColorScheme.FORCE_LIGHT:
+                to_value.set_variant (new Variant.string (COLOR_SCHEME_FORCE_LIGHT));
+                break;
+            case Adw.ColorScheme.FORCE_DARK:
+                to_value.set_variant (new Variant.string (COLOR_SCHEME_FORCE_DARK));
                 break;
             default:
-                warning ("style_action_transform_from_cb: Invalid color scheme: %s", val);
+                warning ("style_action_transform_from_cb: Invalid color scheme: %d", val);
                 return false;
         }
 
         return true;
     }
 
-    private void setup_style () {
-        style_manager = StyleManager.get_default ();
+    private static bool color_scheme_get_mapping_cb (Value value, Variant variant, void* user_data) {
+        var val = variant.get_string ();
+        switch (val) {
+            case COLOR_SCHEME_DEFAULT:
+                value.set_enum (Adw.ColorScheme.DEFAULT);
+                break;
+            case COLOR_SCHEME_FORCE_LIGHT:
+                value.set_enum (Adw.ColorScheme.FORCE_LIGHT);
+                break;
+            case COLOR_SCHEME_FORCE_DARK:
+                value.set_enum (Adw.ColorScheme.FORCE_DARK);
+                break;
+            default:
+                warning ("color_scheme_get_mapping_cb: Invalid style: %s", val);
+                return false;
+        }
 
+        return true;
+    }
+
+    private static Variant color_scheme_set_mapping_cb (Value value, VariantType expected_type, void* user_data) {
+        string color_scheme;
+
+        var val = (Adw.ColorScheme) value;
+        switch (val) {
+            case Adw.ColorScheme.DEFAULT:
+                color_scheme = COLOR_SCHEME_DEFAULT;
+                break;
+            case Adw.ColorScheme.FORCE_LIGHT:
+                color_scheme = COLOR_SCHEME_FORCE_LIGHT;
+                break;
+            case Adw.ColorScheme.FORCE_DARK:
+                color_scheme = COLOR_SCHEME_FORCE_DARK;
+                break;
+            default:
+                warning ("color_scheme_set_mapping_cb: Invalid Adw.ColorScheme: %d", val);
+                // fallback to default
+                color_scheme = COLOR_SCHEME_DEFAULT;
+                break;
+        }
+
+        return new Variant.string (color_scheme);
+    }
+
+    private void setup_style () {
         var style_action = new SimpleAction.stateful (
-            "color-scheme", VariantType.STRING, new Variant.string (StyleManager.COLOR_SCHEME_DEFAULT)
+            "color-scheme", VariantType.STRING, new Variant.string (COLOR_SCHEME_DEFAULT)
         );
         style_action.bind_property ("state", style_manager, "color-scheme",
                                     BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
                                     style_action_transform_to_cb,
                                     style_action_transform_from_cb);
-        settings.bind ("color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT);
+        settings.bind_with_mapping ("color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
+                                    color_scheme_get_mapping_cb,
+                                    color_scheme_set_mapping_cb,
+                                    null, null);
         add_action (style_action);
     }
 
     protected override void startup () {
+#if USE_GRANITE
+        if (IS_ON_PANTHEON) {
+            Granite.init ();
+        }
+#endif
+
         base.startup ();
 
         Intl.setlocale (LocaleCategory.ALL, "");
