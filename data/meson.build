@@ -47,14 +47,14 @@ i18n.merge_file(
 
 gschema_conf = configuration_data()
 gschema_conf.set('APP_ID', app_id)
-gschema_file_in = configure_file(
+gschema_file = configure_file(
     input: 'konbucase.gschema.xml.in',
     output: '@0@.gschema.xml'.format(app_id),
     configuration: gschema_conf
 )
 
 install_data(
-    gschema_file_in,
+    gschema_file,
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
 )
 
