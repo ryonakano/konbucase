@@ -28,17 +28,17 @@ Community packages maintained by volunteers are also available on some distribut
 ### From Source Code (Flatpak)
 You'll need `flatpak` and `flatpak-builder` commands installed on your system.
 
-Run `flatpak remote-add` to add AppCenter remote for dependencies:
+Run `flatpak remote-add` to add Flathub remote for dependencies:
 
 ```
-flatpak remote-add --user --if-not-exists appcenter https://flatpak.elementary.io/repo.flatpakrepo
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
 To build and install, use `flatpak-builder`, then execute with `flatpak run`:
 
 ```
-flatpak-builder builddir --user --install --force-clean --install-deps-from=appcenter com.github.ryonakano.konbucase.yml
-flatpak run com.github.ryonakano.konbucase
+flatpak-builder builddir --user --install --force-clean --install-deps-from=flathub build-aux/flathub/com.github.ryonakano.konbucase.Devel.yml
+flatpak run com.github.ryonakano.konbucase.Devel
 ```
 
 ### From Source Code (Native)
