@@ -12,10 +12,6 @@ public class Application : Adw.Application {
 
     public static Settings settings { get; private set; }
 
-    private const string COLOR_SCHEME_DEFAULT = "default";
-    private const string COLOR_SCHEME_FORCE_LIGHT = "force-light";
-    private const string COLOR_SCHEME_FORCE_DARK = "force-dark";
-
     private const ActionEntry[] ACTION_ENTRIES = {
         { "quit", on_quit_activate },
     };
@@ -32,107 +28,17 @@ public class Application : Adw.Application {
         settings = new Settings ("com.github.ryonakano.konbucase");
     }
 
-    private bool style_action_transform_to_cb (Binding binding, Value from_value, ref Value to_value) {
-        Variant? variant = from_value.dup_variant ();
-        if (variant == null) {
-            warning ("Failed to Variant.dup_variant");
-            return false;
-        }
-
-        var val = variant.get_string ();
-        switch (val) {
-            case COLOR_SCHEME_DEFAULT:
-                to_value.set_enum (Adw.ColorScheme.DEFAULT);
-                break;
-            case COLOR_SCHEME_FORCE_LIGHT:
-                to_value.set_enum (Adw.ColorScheme.FORCE_LIGHT);
-                break;
-            case COLOR_SCHEME_FORCE_DARK:
-                to_value.set_enum (Adw.ColorScheme.FORCE_DARK);
-                break;
-            default:
-                warning ("style_action_transform_to_cb: Invalid color scheme: %s", val);
-                return false;
-        }
-
-        return true;
-    }
-
-    private bool style_action_transform_from_cb (Binding binding, Value from_value, ref Value to_value) {
-        var val = (Adw.ColorScheme) from_value;
-        switch (val) {
-            case Adw.ColorScheme.DEFAULT:
-                to_value.set_variant (new Variant.string (COLOR_SCHEME_DEFAULT));
-                break;
-            case Adw.ColorScheme.FORCE_LIGHT:
-                to_value.set_variant (new Variant.string (COLOR_SCHEME_FORCE_LIGHT));
-                break;
-            case Adw.ColorScheme.FORCE_DARK:
-                to_value.set_variant (new Variant.string (COLOR_SCHEME_FORCE_DARK));
-                break;
-            default:
-                warning ("style_action_transform_from_cb: Invalid color scheme: %d", val);
-                return false;
-        }
-
-        return true;
-    }
-
-    private static bool color_scheme_get_mapping_cb (Value value, Variant variant, void* user_data) {
-        var val = variant.get_string ();
-        switch (val) {
-            case COLOR_SCHEME_DEFAULT:
-                value.set_enum (Adw.ColorScheme.DEFAULT);
-                break;
-            case COLOR_SCHEME_FORCE_LIGHT:
-                value.set_enum (Adw.ColorScheme.FORCE_LIGHT);
-                break;
-            case COLOR_SCHEME_FORCE_DARK:
-                value.set_enum (Adw.ColorScheme.FORCE_DARK);
-                break;
-            default:
-                warning ("color_scheme_get_mapping_cb: Invalid style: %s", val);
-                return false;
-        }
-
-        return true;
-    }
-
-    private static Variant color_scheme_set_mapping_cb (Value value, VariantType expected_type, void* user_data) {
-        string color_scheme;
-
-        var val = (Adw.ColorScheme) value;
-        switch (val) {
-            case Adw.ColorScheme.DEFAULT:
-                color_scheme = COLOR_SCHEME_DEFAULT;
-                break;
-            case Adw.ColorScheme.FORCE_LIGHT:
-                color_scheme = COLOR_SCHEME_FORCE_LIGHT;
-                break;
-            case Adw.ColorScheme.FORCE_DARK:
-                color_scheme = COLOR_SCHEME_FORCE_DARK;
-                break;
-            default:
-                warning ("color_scheme_set_mapping_cb: Invalid Adw.ColorScheme: %d", val);
-                // fallback to default
-                color_scheme = COLOR_SCHEME_DEFAULT;
-                break;
-        }
-
-        return new Variant.string (color_scheme);
-    }
-
     private void setup_style () {
         var style_action = new SimpleAction.stateful (
-            "color-scheme", VariantType.STRING, new Variant.string (COLOR_SCHEME_DEFAULT)
+            "color-scheme", VariantType.STRING, new Variant.string (Define.ColorScheme.DEFAULT)
         );
         style_action.bind_property ("state", style_manager, "color-scheme",
                                     BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
-                                    style_action_transform_to_cb,
-                                    style_action_transform_from_cb);
+                                    Util.style_action_transform_to_cb,
+                                    Util.style_action_transform_from_cb);
         settings.bind_with_mapping ("color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
-                                    color_scheme_get_mapping_cb,
-                                    color_scheme_set_mapping_cb,
+                                    Util.color_scheme_get_mapping_cb,
+                                    Util.color_scheme_set_mapping_cb,
                                     null, null);
         add_action (style_action);
     }
