@@ -33,4 +33,4 @@ modules:
       - '-Ddevelopment=true'
     sources:
       - type: dir
-        path: ../
+        path: ../../
