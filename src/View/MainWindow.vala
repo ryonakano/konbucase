@@ -4,13 +4,13 @@
  */
 
 [GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/main-window.ui")]
-public class MainWindow : Gtk.ApplicationWindow {
+public class MainWindow : Adw.ApplicationWindow {
+    [GtkChild]
+    private unowned Adw.ToastOverlay overlay;
     [GtkChild]
     private unowned TextPane source_pane;
     [GtkChild]
     private unowned TextPane result_pane;
-    [GtkChild]
-    private unowned Granite.Toast toast;
 
     [GtkChild]
     private unowned TextPaneModel source_model;
@@ -50,6 +50,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     private void show_toast () {
-        toast.send_notification ();
+        var toast = new Adw.Toast (_("Text copied!"));
+        overlay.add_toast (toast);
     }
 }

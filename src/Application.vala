@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Application : Gtk.Application {
+public class Application : Adw.Application {
     public static bool IS_ON_PANTHEON {
         get {
             return Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
@@ -16,7 +16,6 @@ public class Application : Gtk.Application {
         { "quit", on_quit_activate },
     };
     private MainWindow window;
-    private StyleManager style_manager;
 
     public Application () {
         Object (
@@ -30,20 +29,34 @@ public class Application : Gtk.Application {
     }
 
     private void setup_style () {
-        style_manager = StyleManager.get_default ();
-
         var style_action = new SimpleAction.stateful (
-            "color-scheme", VariantType.STRING, new Variant.string (StyleManager.COLOR_SCHEME_DEFAULT)
+            "color-scheme", VariantType.STRING, new Variant.string (Define.ColorScheme.DEFAULT)
         );
         style_action.bind_property ("state", style_manager, "color-scheme",
                                     BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
                                     Util.style_action_transform_to_cb,
                                     Util.style_action_transform_from_cb);
-        settings.bind ("color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT);
+        settings.bind_with_mapping ("color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
+                                    Util.color_scheme_get_mapping_cb,
+                                    Util.color_scheme_set_mapping_cb,
+                                    null, null);
         add_action (style_action);
     }
 
     protected override void startup () {
+#if USE_GRANITE
+        /*
+         * Use both compile-time and runtime conditions to:
+         *
+         *  * make Granite optional dependency
+         *  * make sure to respect currently running DE
+         */
+        if (IS_ON_PANTHEON) {
+            // Apply elementary stylesheet instead of default Adwaita stylesheet
+            Granite.init ();
+        }
+#endif
+
         base.startup ();
 
         Intl.setlocale (LocaleCategory.ALL, "");

@@ -1,1 +1,2 @@
 option('use_submodule', type: 'boolean', value: true, description: 'Whether to build using git submodule')
+option('granite', type: 'feature', value: 'disabled', description: 'Enable elementary OS integration. Requires Granite')

@@ -7,8 +7,14 @@ config_file = configure_file(
     configuration: config_data
 )
 
+granite_dep = dependency('granite-7', version: '>= 7.2.0', required: get_option('granite'))
+if granite_dep.found()
+    add_project_arguments('--define=USE_GRANITE', language: 'vala')
+endif
+
 dependencies = [
-    dependency('granite-7'),
+    granite_dep,
+    dependency('libadwaita-1', version: '>= 1.4'),
     dependency('gtk4'),
     dependency('gtksourceview-5'),
 ]
@@ -28,7 +34,6 @@ sources = files(
     'View/TextPane.vala',
     'Application.vala',
     'Define.vala',
-    'StyleManager.vala',
     'Util.vala',
 )
 
