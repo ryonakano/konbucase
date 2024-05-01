@@ -26,6 +26,11 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
+        // Distinct development build visually
+        if (".Devel" in Config.APP_ID) {
+            add_css_class ("devel");
+        }
+
         source_pane.get_source_view ().grab_focus ();
 
         source_pane.dropdown_changed.connect (() => {
