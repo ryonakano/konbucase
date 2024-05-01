@@ -4,6 +4,13 @@ project('com.github.ryonakano.konbucase',
     meson_version: '>=0.57.0'
 )
 
+app_name = 'KonbuCase'
+app_id = meson.project_name()
+if get_option('development')
+    app_name += ' (Development)'
+    app_id += '.Devel'
+endif
+
 i18n = import('i18n')
 gnome = import('gnome')
 

@@ -19,13 +19,13 @@ public class Application : Adw.Application {
 
     public Application () {
         Object (
-            application_id: "com.github.ryonakano.konbucase",
+            application_id: Config.APP_ID,
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
 
     static construct {
-        settings = new Settings ("com.github.ryonakano.konbucase");
+        settings = new Settings (Config.APP_ID);
     }
 
     private void setup_style () {

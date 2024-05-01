@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=KonbuCase
+Name=@APP_NAME@
 GenericName=Case Converting App
 Comment=Convert case in your text
 Categories=Utility;TextTools;
-Exec=com.github.ryonakano.konbucase
-Icon=com.github.ryonakano.konbucase
+Exec=@APP_ID@
+Icon=@APP_ID@
 Terminal=false
 Type=Application
 Keywords=Text;

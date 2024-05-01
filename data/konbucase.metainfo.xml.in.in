@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2020-2024 Ryo Nakano -->
 <component type="desktop-application">
-  <id>com.github.ryonakano.konbucase</id>
-  <launchable type="desktop-id">com.github.ryonakano.konbucase.desktop</launchable>
-  <translation type="gettext">com.github.ryonakano.konbucase</translation>
+  <id>@APP_ID@</id>
+  <launchable type="desktop-id">@APP_ID@.desktop</launchable>
+  <translation type="gettext">@GETTEXT_PACKAGE@</translation>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
 
-  <name translate="no">KonbuCase</name>
+  <name translate="no">@APP_NAME@</name>
   <summary>Convert case in your text</summary>
   <description>
     <p>

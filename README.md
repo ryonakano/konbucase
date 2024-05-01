@@ -37,8 +37,8 @@ flatpak remote-add --user --if-not-exists appcenter https://flatpak.elementary.i
 To build and install, use `flatpak-builder`, then execute with `flatpak run`:
 
 ```
-flatpak-builder builddir --user --install --force-clean --install-deps-from=appcenter com.github.ryonakano.konbucase.yml
-flatpak run com.github.ryonakano.konbucase
+flatpak-builder builddir --user --install --force-clean --install-deps-from=appcenter build-aux/appcenter/com.github.ryonakano.konbucase.Devel.yml
+flatpak run com.github.ryonakano.konbucase.Devel
 ```
 
 ### From Source Code (Native)
