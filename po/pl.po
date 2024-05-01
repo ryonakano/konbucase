@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-27 19:33+0900\n"
+"POT-Creation-Date: 2024-05-01 18:06+0900\n"
 "PO-Revision-Date: 2024-03-22 12:51+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/konbucase/pl/"
@@ -20,47 +20,47 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/konbucase.desktop.in:3
-msgid "KonbuCase"
-msgstr "KonbuCase"
+#: data/konbucase.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr ""
 
-#: data/konbucase.desktop.in:4
+#: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
 msgstr ""
 
-#: data/konbucase.desktop.in:5 data/konbucase.metainfo.xml.in:11
+#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr ""
 
-#: data/konbucase.desktop.in:11
+#: data/konbucase.desktop.in.in:11
 msgid "Text;"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:13
+#: data/konbucase.metainfo.xml.in.in:13
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:16
+#: data/konbucase.metainfo.xml.in.in:16
 msgid "Features include:"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:18
+#: data/konbucase.metainfo.xml.in.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:19
+#: data/konbucase.metainfo.xml.in.in:19
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:25
+#: data/konbucase.metainfo.xml.in.in:25
 msgid "App window in the light mode"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in:30
+#: data/konbucase.metainfo.xml.in.in:30
 msgid "App window in the dark mode"
 msgstr ""
 
@@ -81,7 +81,7 @@ msgstr "Ciemny"
 msgid "System"
 msgstr "System"
 
-#: data/resources/ui/main-window.blp:54
+#: data/resources/ui/main-window.blp:55
 msgid "Main Menu"
 msgstr ""
 
@@ -92,10 +92,6 @@ msgstr "Konwertuj z:"
 #: data/resources/ui/main-window.blp:83
 msgid "Convert to:"
 msgstr "Konwertuj do:"
-
-#: data/resources/ui/main-window.blp:91
-msgid "Text copied!"
-msgstr "Skopiowano tekst!"
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"
@@ -128,6 +124,13 @@ msgstr "Każde słowo jest oddzielone myślnikiem"
 #: src/Model/TextPaneModel.vala:36
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Pierwszy znak pierwszego słowa w zdaniu jest pisany wielką literą"
+
+#: src/View/MainWindow.vala:58
+msgid "Text copied!"
+msgstr "Skopiowano tekst!"
+
+#~ msgid "KonbuCase"
+#~ msgstr "KonbuCase"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

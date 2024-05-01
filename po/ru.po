@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-27 19:33+0900\n"
+"POT-Creation-Date: 2024-05-01 18:06+0900\n"
 "PO-Revision-Date: 2024-01-21 13:01+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: \n"
@@ -18,33 +18,33 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.4-dev\n"
 
-#: data/konbucase.desktop.in:3
-msgid "KonbuCase"
-msgstr "KonbuCase"
+#: data/konbucase.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr ""
 
-#: data/konbucase.desktop.in:4
+#: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
 msgstr "Приложение для конвертации регистра"
 
-#: data/konbucase.desktop.in:5 data/konbucase.metainfo.xml.in:11
+#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "Конвертируйте регистр вашего текста"
 
-#: data/konbucase.desktop.in:11
+#: data/konbucase.desktop.in.in:11
 msgid "Text;"
 msgstr "Текст;"
 
-#: data/konbucase.metainfo.xml.in:13
+#: data/konbucase.metainfo.xml.in.in:13
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
 "Маленькое приложение, которое позволяет конвертировать регистр в вашем "
 "тексте."
 
-#: data/konbucase.metainfo.xml.in:16
+#: data/konbucase.metainfo.xml.in.in:16
 msgid "Features include:"
 msgstr "Функции:"
 
-#: data/konbucase.metainfo.xml.in:18
+#: data/konbucase.metainfo.xml.in.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
@@ -52,7 +52,7 @@ msgstr ""
 "Нажмите на кнопку «Копировать», чтобы скопировать весь текст из поля ввода, "
 "не выделяя его"
 
-#: data/konbucase.metainfo.xml.in:19
+#: data/konbucase.metainfo.xml.in.in:19
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
@@ -60,11 +60,11 @@ msgstr ""
 "Конвертируйте ваш текст между camelCase, PascalCase, Sentence case, "
 "snake_case, kebab-case и space-separated"
 
-#: data/konbucase.metainfo.xml.in:25
+#: data/konbucase.metainfo.xml.in.in:25
 msgid "App window in the light mode"
 msgstr "Окно приложения в светлом режиме"
 
-#: data/konbucase.metainfo.xml.in:30
+#: data/konbucase.metainfo.xml.in.in:30
 msgid "App window in the dark mode"
 msgstr "Окно приложения в тёмном режиме"
 
@@ -85,7 +85,7 @@ msgstr "Тёмный"
 msgid "System"
 msgstr "Система"
 
-#: data/resources/ui/main-window.blp:54
+#: data/resources/ui/main-window.blp:55
 msgid "Main Menu"
 msgstr ""
 
@@ -96,10 +96,6 @@ msgstr "Конвертировать из:"
 #: data/resources/ui/main-window.blp:83
 msgid "Convert to:"
 msgstr "Конвертировать в:"
-
-#: data/resources/ui/main-window.blp:91
-msgid "Text copied!"
-msgstr "Текст скопирован!"
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"
@@ -132,6 +128,13 @@ msgstr "Каждое слово отделяется дефисом"
 #: src/Model/TextPaneModel.vala:36
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Первый символ первого слова в предложении пишется с заглавной буквы"
+
+#: src/View/MainWindow.vala:58
+msgid "Text copied!"
+msgstr "Текст скопирован!"
+
+#~ msgid "KonbuCase"
+#~ msgstr "KonbuCase"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
