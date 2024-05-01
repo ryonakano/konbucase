@@ -18,7 +18,7 @@ desktop_file_in = configure_file(
     configuration: desktop_conf
 )
 
-i18n.merge_file(
+desktop_file = i18n.merge_file(
     input: desktop_file_in,
     output: '@0@.desktop'.format(app_id),
     po_dir: meson.project_source_root() / 'po',
@@ -37,7 +37,7 @@ metainfo_file_in = configure_file(
     configuration: metainfo_conf
 )
 
-i18n.merge_file(
+metainfo_file = i18n.merge_file(
     input: metainfo_file_in,
     output: '@0@.metainfo.xml'.format(app_id),
     po_dir: meson.project_source_root() / 'po',
@@ -57,5 +57,20 @@ install_data(
     gschema_file,
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
 )
+
+# Test definitions
+desktop_utils = find_program('desktop-file-validate', required: false)
+if desktop_utils.found()
+    test('Validate desktop file', desktop_utils, args: [desktop_file])
+endif
+
+appstreamcli = find_program('appstreamcli', required: false, disabler: true)
+test('Validate appstream file', appstreamcli,
+    args: ['validate', '--no-net', '--explain', metainfo_file])
+
+compile_schemas = find_program('glib-compile-schemas', required: false, disabler: true)
+test('Validate schema file',
+    compile_schemas,
+    args: ['--strict', '--dry-run', meson.current_source_dir()])
 
 subdir('resources')
