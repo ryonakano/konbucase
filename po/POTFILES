@@ -3,3 +3,4 @@ data/konbucase.metainfo.xml.in.in
 data/resources/ui/main-window.blp
 data/resources/ui/text-pane.blp
 src/Model/TextPaneModel.vala
+src/View/MainWindow.vala
