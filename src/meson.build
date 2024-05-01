@@ -39,7 +39,7 @@ sources = files(
 )
 
 executable(
-    meson.project_name(),
+    app_id,
     asresources,
     config_file,
     sources,

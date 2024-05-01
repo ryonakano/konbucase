@@ -2,7 +2,7 @@ app-id: com.github.ryonakano.konbucase.Devel
 runtime: org.gnome.Platform
 runtime-version: '46'
 sdk: org.gnome.Sdk
-command: com.github.ryonakano.konbucase
+command: com.github.ryonakano.konbucase.Devel
 finish-args:
   - '--share=ipc'
   - '--socket=wayland'

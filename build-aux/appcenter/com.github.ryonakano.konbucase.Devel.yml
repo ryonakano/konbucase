@@ -1,8 +1,8 @@
-app-id: com.github.ryonakano.konbucase
+app-id: com.github.ryonakano.konbucase.Devel
 runtime: io.elementary.Platform
 runtime-version: '7.3'
 sdk: io.elementary.Sdk
-command: com.github.ryonakano.konbucase
+command: com.github.ryonakano.konbucase.Devel
 finish-args:
   - '--share=ipc'
   - '--socket=wayland'
