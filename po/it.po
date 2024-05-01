@@ -6,13 +6,14 @@
 # Albano Battistella <albano_battistella@hotmail.com>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
 # albanobattistella <albano_battistella@hotmail.com>, 2022, 2023, 2024.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-01 18:06+0900\n"
-"PO-Revision-Date: 2024-04-01 13:01+0000\n"
-"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
+"PO-Revision-Date: 2024-05-01 09:45+0000\n"
+"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "it/>\n"
 "Language: it\n"
@@ -20,11 +21,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.3-dev\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
-msgstr ""
+msgstr "@APP_NAME@"
 
 #: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
