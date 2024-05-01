@@ -2,13 +2,14 @@
 # Copyright (C) 2020-2024 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2020-2024.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-01 18:06+0900\n"
-"PO-Revision-Date: 2024-04-27 23:32+0000\n"
-"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"PO-Revision-Date: 2024-05-01 09:45+0000\n"
+"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
 "ja/>\n"
 "Language: ja\n"
@@ -16,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.1\n"
+"X-Generator: Weblate 5.5.3-dev\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
-msgstr ""
+msgstr "@APP_NAME@"
 
 #: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
