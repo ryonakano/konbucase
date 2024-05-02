@@ -7,6 +7,12 @@ menu main_menu {
     label: _("_Style");
 
     item {
+      label: _("S_ystem");
+      action: "app.color-scheme";
+      target: "default";
+    }
+
+    item {
       label: _("_Light");
       action: "app.color-scheme";
       target: "force-light";
@@ -16,12 +22,6 @@ menu main_menu {
       label: _("_Dark");
       action: "app.color-scheme";
       target: "force-dark";
-    }
-
-    item {
-      label: _("S_ystem");
-      action: "app.color-scheme";
-      target: "default";
     }
   }
 }
