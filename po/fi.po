@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-01 18:06+0900\n"
+"POT-Creation-Date: 2024-05-02 12:35+0900\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -65,38 +65,48 @@ msgstr ""
 
 #: data/resources/ui/main-window.blp:7
 #, fuzzy
-msgid "Style"
+msgid "_Style"
 msgstr "Tyyli:"
 
 #: data/resources/ui/main-window.blp:10
-msgid "Light"
-msgstr "Vaalea"
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
+msgstr "Järjestelmä"
 
 #: data/resources/ui/main-window.blp:16
-msgid "Dark"
-msgstr "Tumma"
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
+msgstr "Vaalea"
 
 #: data/resources/ui/main-window.blp:22
-msgid "System"
-msgstr "Järjestelmä"
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
+msgstr "Tumma"
 
 #: data/resources/ui/main-window.blp:55
 msgid "Main Menu"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:71
-msgid "Convert from:"
+#, fuzzy
+#| msgid "Convert from:"
+msgid "Convert _From:"
 msgstr "Muunna muodosta:"
 
 #: data/resources/ui/main-window.blp:83
-msgid "Convert to:"
+#, fuzzy
+#| msgid "Convert to:"
+msgid "Convert _To:"
 msgstr "Muunna muotoon:"
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"
 msgstr "Välilyönnein erotettu"
 
-#: data/resources/ui/text-pane.blp:52
+#: data/resources/ui/text-pane.blp:54
 msgid "Copy to Clipboard"
 msgstr "Kopioi leikepöydälle"
 

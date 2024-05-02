@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-01 18:06+0900\n"
+"POT-Creation-Date: 2024-05-02 12:35+0900\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/konbucase/sk/"
@@ -74,38 +74,48 @@ msgstr "Okno aplikácie v tmavom režime"
 
 #: data/resources/ui/main-window.blp:7
 #, fuzzy
-msgid "Style"
+msgid "_Style"
 msgstr "Štýl:"
 
 #: data/resources/ui/main-window.blp:10
-msgid "Light"
-msgstr "Svetlý"
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
+msgstr "Systém"
 
 #: data/resources/ui/main-window.blp:16
-msgid "Dark"
-msgstr "Tmavý"
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
+msgstr "Svetlý"
 
 #: data/resources/ui/main-window.blp:22
-msgid "System"
-msgstr "Systém"
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
+msgstr "Tmavý"
 
 #: data/resources/ui/main-window.blp:55
 msgid "Main Menu"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:71
-msgid "Convert from:"
+#, fuzzy
+#| msgid "Convert from:"
+msgid "Convert _From:"
 msgstr "Previesť z:"
 
 #: data/resources/ui/main-window.blp:83
-msgid "Convert to:"
+#, fuzzy
+#| msgid "Convert to:"
+msgid "Convert _To:"
 msgstr "Previesť na:"
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"
 msgstr "Oddelený medzerami"
 
-#: data/resources/ui/text-pane.blp:52
+#: data/resources/ui/text-pane.blp:54
 msgid "Copy to Clipboard"
 msgstr "Kopírovať do schránky"
 
