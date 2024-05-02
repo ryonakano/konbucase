@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-02 12:32+0900\n"
+"POT-Creation-Date: 2024-05-02 12:35+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,15 +66,15 @@ msgid "_Style"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:10
-msgid "_Light"
+msgid "S_ystem"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:16
-msgid "_Dark"
+msgid "_Light"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:22
-msgid "S_ystem"
+msgid "_Dark"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:55
