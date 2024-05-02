@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-01 18:06+0900\n"
+"POT-Creation-Date: 2024-05-02 12:35+0900\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/konbucase/nl/>"
-"\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/konbucase/nl/"
+">\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,38 +70,48 @@ msgstr "Venster met donker thema"
 
 #: data/resources/ui/main-window.blp:7
 #, fuzzy
-msgid "Style"
+msgid "_Style"
 msgstr "Thema:"
 
 #: data/resources/ui/main-window.blp:10
-msgid "Light"
-msgstr "Licht"
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
+msgstr "Systeem"
 
 #: data/resources/ui/main-window.blp:16
-msgid "Dark"
-msgstr "Donker"
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
+msgstr "Licht"
 
 #: data/resources/ui/main-window.blp:22
-msgid "System"
-msgstr "Systeem"
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
+msgstr "Donker"
 
 #: data/resources/ui/main-window.blp:55
 msgid "Main Menu"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:71
-msgid "Convert from:"
+#, fuzzy
+#| msgid "Convert from:"
+msgid "Convert _From:"
 msgstr "Omzetten van:"
 
 #: data/resources/ui/main-window.blp:83
-msgid "Convert to:"
+#, fuzzy
+#| msgid "Convert to:"
+msgid "Convert _To:"
 msgstr "Omzetten naar:"
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"
 msgstr "Spatiegescheiden"
 
-#: data/resources/ui/text-pane.blp:52
+#: data/resources/ui/text-pane.blp:54
 msgid "Copy to Clipboard"
 msgstr "Kopiëren naar klembord"
 
