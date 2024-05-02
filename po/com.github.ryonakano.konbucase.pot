@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-01 18:06+0900\n"
+"POT-Creation-Date: 2024-05-02 12:32+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,19 +62,19 @@ msgid "App window in the dark mode"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:7
-msgid "Style"
+msgid "_Style"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:10
-msgid "Light"
+msgid "_Light"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:16
-msgid "Dark"
+msgid "_Dark"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:22
-msgid "System"
+msgid "S_ystem"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:55
@@ -82,18 +82,18 @@ msgid "Main Menu"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:71
-msgid "Convert from:"
+msgid "Convert _From:"
 msgstr ""
 
 #: data/resources/ui/main-window.blp:83
-msgid "Convert to:"
+msgid "Convert _To:"
 msgstr ""
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"
 msgstr ""
 
-#: data/resources/ui/text-pane.blp:52
+#: data/resources/ui/text-pane.blp:54
 msgid "Copy to Clipboard"
 msgstr ""
 
