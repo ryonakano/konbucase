@@ -28,7 +28,11 @@ namespace Define {
         RESULT,
     }
 
-    // Make sure to match with case-type enum in the gschema
+    /**
+     * Type of the case of the text.
+     *
+     * Note: Make sure to match with case-type enum in the gschema
+     */
     public enum CaseType {
         SPACE_SEPARATED = ChCase.Case.SPACE_SEPARATED,
         CAMEL = ChCase.Case.CAMEL,

@@ -20,6 +20,9 @@ public class MainWindowModel : Object {
         converter = new ChCase.Converter ();
     }
 
+    /**
+     * Perform conversion of {@link source_model.text} and set the result to {@link result_model.text}.
+     */
     public void do_convert () {
         set_case_type (source_model.case_type, result_model.case_type);
         result_model.text = convert_case (source_model.text);

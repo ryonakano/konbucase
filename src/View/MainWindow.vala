@@ -31,15 +31,21 @@ public class MainWindow : Adw.ApplicationWindow {
             add_css_class ("devel");
         }
 
+        // The action users most frequently take is to input the source text.
+        // So, forcus to the source view by default.
         source_pane.get_source_view ().grab_focus ();
 
+        // Perform conversion when:
+        //
+        //  * case type of the source text is changed
+        //  * case type of the result text is changed
+        //  * the source text is changed
         source_pane.dropdown_changed.connect (() => {
             window_model.do_convert ();
         });
         result_pane.dropdown_changed.connect (() => {
             window_model.do_convert ();
         });
-
         source_model.notify["text"].connect (() => {
             window_model.do_convert ();
         });

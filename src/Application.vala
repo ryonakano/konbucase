@@ -45,12 +45,10 @@ public class Application : Adw.Application {
 
     protected override void startup () {
 #if USE_GRANITE
-        /*
-         * Use both compile-time and runtime conditions to:
-         *
-         *  * make Granite optional dependency
-         *  * make sure to respect currently running DE
-         */
+        // Use both compile-time and runtime conditions to:
+        //
+        //  * make Granite optional dependency
+        //  * make sure to respect currently running DE
         if (IS_ON_PANTHEON) {
             // Apply elementary stylesheet instead of default Adwaita stylesheet
             Granite.init ();
@@ -83,10 +81,8 @@ public class Application : Adw.Application {
         settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
         settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
 
-        /*
-         * Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
-         * So we use the prepared binding only for setting
-         */
+        // Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
+        // So we use the prepared binding only for setting.
         if (Application.settings.get_boolean ("window-maximized")) {
             window.maximize ();
         }
