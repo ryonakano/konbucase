@@ -33,6 +33,8 @@ template $TextPane : Gtk.Box {
     // Header label for the DropDown
     Label {
       label: bind template.header-label;
+      use-underline: true;
+      mnemonic-widget: case_dropdown;
     }
 
     // DropDown to choose case type

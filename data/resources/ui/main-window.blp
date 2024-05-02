@@ -4,22 +4,22 @@ using Adw 1;
 // Main menu model
 menu main_menu {
   submenu {
-    label: _("Style");
+    label: _("_Style");
 
     item {
-      label: _("Light");
+      label: _("_Light");
       action: "app.color-scheme";
       target: "force-light";
     }
 
     item {
-      label: _("Dark");
+      label: _("_Dark");
       action: "app.color-scheme";
       target: "force-dark";
     }
 
     item {
-      label: _("System");
+      label: _("S_ystem");
       action: "app.color-scheme";
       target: "default";
     }
@@ -68,7 +68,7 @@ template $MainWindow : Adw.ApplicationWindow {
         // Left pane for input text
         $TextPane source_pane {
           model: source_model;
-          header-label: _("Convert from:");
+          header-label: _("Convert _From:");
           editable: true;
         }
 
@@ -80,7 +80,7 @@ template $MainWindow : Adw.ApplicationWindow {
         // Right pane for output text
         $TextPane result_pane {
           model: result_model;
-          header-label: _("Convert to:");
+          header-label: _("Convert _To:");
           // Make the text view uneditable, otherwise the app freezes
           editable: false;
         }
