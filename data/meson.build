@@ -27,18 +27,18 @@ desktop_file = i18n.merge_file(
     install_dir: get_option('datadir') / 'applications'
 )
 
-metainfo_conf = configuration_data()
-metainfo_conf.set('APP_NAME', app_name)
-metainfo_conf.set('APP_ID', app_id)
-metainfo_conf.set('GETTEXT_PACKAGE', meson.project_name())
-metainfo_file_in = configure_file(
+appstream_conf = configuration_data()
+appstream_conf.set('APP_NAME', app_name)
+appstream_conf.set('APP_ID', app_id)
+appstream_conf.set('GETTEXT_PACKAGE', meson.project_name())
+appstream_file_in = configure_file(
     input: 'konbucase.metainfo.xml.in.in',
     output: '@0@.metainfo.xml.in'.format(app_id),
-    configuration: metainfo_conf
+    configuration: appstream_conf
 )
 
-metainfo_file = i18n.merge_file(
-    input: metainfo_file_in,
+appstream_file = i18n.merge_file(
+    input: appstream_file_in,
     output: '@0@.metainfo.xml'.format(app_id),
     po_dir: meson.project_source_root() / 'po',
     install: true,
@@ -66,7 +66,7 @@ endif
 
 appstreamcli = find_program('appstreamcli', required: false, disabler: true)
 test('Validate appstream file', appstreamcli,
-    args: ['validate', '--no-net', '--explain', metainfo_file])
+    args: ['validate', '--no-net', '--explain', appstream_file])
 
 compile_schemas = find_program('glib-compile-schemas', required: false, disabler: true)
 test('Validate schema file',
