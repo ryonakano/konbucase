@@ -109,10 +109,13 @@ public class Application : Adw.Application {
             "Leo https://github.com/lenemter",
         };
 
-        var about_dialog = new Adw.AboutDialog.from_appdata (
+        var about_window = new Adw.AboutWindow.from_appdata (
             "%s/%s.metainfo.xml".printf (Config.RESOURCE_PREFIX, Config.APP_ID),
             null
         ) {
+            transient_for = get_active_window (),
+            modal = true,
+            version = Config.APP_VERSION,
             copyright = "© 2020-2024 Ryo Nakano",
             developers = DEVELOPERS,
             artists = ARTISTS,
@@ -121,7 +124,7 @@ public class Application : Adw.Application {
             ///John Doe <john-doe@example.com>
             translator_credits = _("translator-credits")
         };
-        about_dialog.present (get_active_window ());
+        about_window.present ();
     }
 
     public static int main (string[] args) {
