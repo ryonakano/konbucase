@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-02 12:35+0900\n"
+"POT-Creation-Date: 2024-05-04 23:59+0900\n"
 "PO-Revision-Date: 2024-05-04 13:07+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -86,15 +86,22 @@ msgstr "Светлый"
 msgid "_Dark"
 msgstr "Тёмный"
 
-#: data/resources/ui/main-window.blp:55
+#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#: data/resources/ui/main-window.blp:30
+#, fuzzy
+#| msgid "KonbuCase"
+msgid "_About KonbuCase"
+msgstr "KonbuCase"
+
+#: data/resources/ui/main-window.blp:61
 msgid "Main Menu"
 msgstr "Главное меню"
 
-#: data/resources/ui/main-window.blp:71
+#: data/resources/ui/main-window.blp:77
 msgid "Convert _From:"
 msgstr "Конвертировать из:"
 
-#: data/resources/ui/main-window.blp:83
+#: data/resources/ui/main-window.blp:89
 msgid "Convert _To:"
 msgstr "Конвертировать в:"
 
@@ -105,6 +112,16 @@ msgstr "Разделённые пробелом"
 #: data/resources/ui/text-pane.blp:54
 msgid "Copy to Clipboard"
 msgstr "Копировать"
+
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:128
+msgid "translator-credits"
+msgstr ""
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
@@ -130,12 +147,9 @@ msgstr "Каждое слово отделяется дефисом"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Первый символ первого слова в предложении пишется с заглавной буквы"
 
-#: src/View/MainWindow.vala:58
+#: src/View/MainWindow.vala:64
 msgid "Text copied!"
 msgstr "Текст скопирован!"
-
-#~ msgid "KonbuCase"
-#~ msgstr "KonbuCase"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

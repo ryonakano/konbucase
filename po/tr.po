@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-02 12:35+0900\n"
+"POT-Creation-Date: 2024-05-04 23:59+0900\n"
 "PO-Revision-Date: 2024-05-04 13:07+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -88,15 +88,22 @@ msgstr "_Açık"
 msgid "_Dark"
 msgstr "_Koyu"
 
-#: data/resources/ui/main-window.blp:55
+#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#: data/resources/ui/main-window.blp:30
+#, fuzzy
+#| msgid "KonbuCase"
+msgid "_About KonbuCase"
+msgstr "KonbuCase"
+
+#: data/resources/ui/main-window.blp:61
 msgid "Main Menu"
 msgstr "Ana Menü"
 
-#: data/resources/ui/main-window.blp:71
+#: data/resources/ui/main-window.blp:77
 msgid "Convert _From:"
 msgstr "Şundan _Dönüştür:"
 
-#: data/resources/ui/main-window.blp:83
+#: data/resources/ui/main-window.blp:89
 msgid "Convert _To:"
 msgstr "_Dönüştür:"
 
@@ -107,6 +114,16 @@ msgstr "Boşlukla ayrılmış"
 #: data/resources/ui/text-pane.blp:54
 msgid "Copy to Clipboard"
 msgstr "Panoya Kopyala"
+
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:128
+msgid "translator-credits"
+msgstr ""
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
@@ -132,12 +149,9 @@ msgstr "Her kelime tire ile ayrılmış"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Cümledeki ilk kelimenin ilk karakteri büyük harfli"
 
-#: src/View/MainWindow.vala:58
+#: src/View/MainWindow.vala:64
 msgid "Text copied!"
 msgstr "Metin kopyalandı!"
-
-#~ msgid "KonbuCase"
-#~ msgstr "KonbuCase"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

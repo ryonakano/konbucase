@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-02 12:35+0900\n"
+"POT-Creation-Date: 2024-05-04 23:59+0900\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
@@ -94,17 +94,24 @@ msgstr "Claro"
 msgid "_Dark"
 msgstr "Escuro"
 
-#: data/resources/ui/main-window.blp:55
+#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#: data/resources/ui/main-window.blp:30
+#, fuzzy
+#| msgid "KonbuCase"
+msgid "_About KonbuCase"
+msgstr "KonbuCase"
+
+#: data/resources/ui/main-window.blp:61
 msgid "Main Menu"
 msgstr ""
 
-#: data/resources/ui/main-window.blp:71
+#: data/resources/ui/main-window.blp:77
 #, fuzzy
 #| msgid "Convert from:"
 msgid "Convert _From:"
 msgstr "Converter de:"
 
-#: data/resources/ui/main-window.blp:83
+#: data/resources/ui/main-window.blp:89
 #, fuzzy
 #| msgid "Convert to:"
 msgid "Convert _To:"
@@ -117,6 +124,16 @@ msgstr "Espaço separado"
 #: data/resources/ui/text-pane.blp:54
 msgid "Copy to Clipboard"
 msgstr "Copiar para a Área de transferência"
+
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:128
+msgid "translator-credits"
+msgstr ""
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
@@ -142,12 +159,9 @@ msgstr "Cada palavra está separada por um hífen"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "O primeiro carácter da primeira palavra da frase está em maiúsculas"
 
-#: src/View/MainWindow.vala:58
+#: src/View/MainWindow.vala:64
 msgid "Text copied!"
 msgstr ""
-
-#~ msgid "KonbuCase"
-#~ msgstr "KonbuCase"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
