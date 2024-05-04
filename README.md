@@ -1,7 +1,7 @@
 # KonbuCase
-![App window in the light mode](data/screenshots/pantheon/screenshot-light.png#gh-light-mode-only)
+![App window in the light mode](data/screenshots/gnome/screenshot-light.png#gh-light-mode-only)
 
-![App window in the dark mode](data/screenshots/pantheon/screenshot-dark.png#gh-dark-mode-only)
+![App window in the dark mode](data/screenshots/gnome/screenshot-dark.png#gh-dark-mode-only)
 
 KonbuCase is a small text tool app that allows you convert case in your text.
 
@@ -11,14 +11,14 @@ Features include:
 * Convert your text between camelCase, PascalCase, Sentence case, snake_case, kebab-case, and space-separated
 
 ## Installation
-### From AppCenter or Flathub (Recommended)
-Click the button to get KonbuCase on AppCenter if you're on elementary OS:
-
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.konbucase)
-
-You can install KonbuCase from Flathub if you're on another distribution:
+### From Flathub or AppCenter (Recommended)
+You can install KonbuCase from Flathub:
 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/com.github.ryonakano.konbucase)
+
+You should install KonbuCase from AppCenter if you're on elementary OS. This build is optimized for elementary OS:
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.konbucase)
 
 ### From Community Packages
 Community packages maintained by volunteers are also available on some distributions:
