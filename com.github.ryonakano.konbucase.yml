@@ -34,3 +34,5 @@ modules:
     sources:
       - type: dir
         path: .
+      - type: patch
+        path: patches/0001-chore-metainfo-Use-screenshots-taken-on-Pantheon.patch
