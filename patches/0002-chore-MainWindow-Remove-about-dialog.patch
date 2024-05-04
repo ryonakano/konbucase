@@ -1,0 +1,32 @@
+From 5d53c63427f6daf9930e48a8ff8466979a66b891 Mon Sep 17 00:00:00 2001
+From: Ryo Nakano <ryonakaknock3@gmail.com>
+Date: Sat, 4 May 2024 23:15:42 +0900
+Subject: [PATCH] chore: MainWindow: Remove about dialog
+
+A patch for Pantheon build. Pantheon prefers AppCenter instead of
+an about dialog to show app details. So, apply this patch and prevent
+it from being shown on Pantheon in case of build for Pantheon.
+---
+ data/resources/ui/main-window.blp | 6 ------
+ 1 file changed, 6 deletions(-)
+
+diff --git a/data/resources/ui/main-window.blp b/data/resources/ui/main-window.blp
+index a181172..2248e8c 100644
+--- a/data/resources/ui/main-window.blp
++++ b/data/resources/ui/main-window.blp
+@@ -24,12 +24,6 @@ menu main_menu {
+       target: "force-dark";
+     }
+   }
+-
+-  item {
+-    ///TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+-    label: _("_About KonbuCase");
+-    action: "app.about";
+-  }
+ }
+ 
+ $TextPaneModel source_model {
+-- 
+2.45.0
+

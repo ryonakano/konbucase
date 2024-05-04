@@ -14,6 +14,7 @@ public class Application : Adw.Application {
 
     private const ActionEntry[] ACTION_ENTRIES = {
         { "quit", on_quit_activate },
+        { "about", on_about_activate },
     };
     private MainWindow window;
 
@@ -94,6 +95,39 @@ public class Application : Adw.Application {
         if (window != null) {
             window.destroy ();
         }
+    }
+
+    private void on_about_activate () {
+        // List of maintainers
+        const string[] DEVELOPERS = {
+            "Ryo Nakano https://github.com/ryonakano",
+        };
+        // List of icon authors
+        const string[] ARTISTS = {
+            "Ryo Nakano https://github.com/ryonakano",
+            "Nararyans R.I. https://github.com/Fatih20",
+            "Leo https://github.com/lenemter",
+        };
+
+        var about_window = new Adw.AboutWindow.from_appdata (
+            "%s/%s.metainfo.xml".printf (Config.RESOURCE_PREFIX, Config.APP_ID),
+            null
+        ) {
+            transient_for = get_active_window (),
+            modal = true,
+            version = Config.APP_VERSION,
+            copyright = "© 2020-2024 Ryo Nakano",
+            developers = DEVELOPERS,
+            artists = ARTISTS,
+            ///TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+            ///You can optionally add your name if you want, plus you may add your email address or website.
+            ///e.g.:
+            ///John Doe
+            ///John Doe <john-doe@example.com>
+            ///John Doe https://example.com
+            translator_credits = _("translator-credits")
+        };
+        about_window.present ();
     }
 
     public static int main (string[] args) {
