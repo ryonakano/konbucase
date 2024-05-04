@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-02 12:35+0900\n"
-"PO-Revision-Date: 2024-05-01 09:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-04 13:07+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/konbucase/"
 "es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -70,44 +70,32 @@ msgid "App window in the dark mode"
 msgstr "Ventana de la aplicación en modo oscuro"
 
 #: data/resources/ui/main-window.blp:7
-#, fuzzy
-#| msgid "Style"
 msgid "_Style"
-msgstr "Estilo"
+msgstr "_Estilo"
 
 #: data/resources/ui/main-window.blp:10
-#, fuzzy
-#| msgid "System"
 msgid "S_ystem"
-msgstr "Sistema"
+msgstr "S_istema"
 
 #: data/resources/ui/main-window.blp:16
-#, fuzzy
-#| msgid "Light"
 msgid "_Light"
-msgstr "Claro"
+msgstr "_Claro"
 
 #: data/resources/ui/main-window.blp:22
-#, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
-msgstr "Oscuro"
+msgstr "_Oscuro"
 
 #: data/resources/ui/main-window.blp:55
 msgid "Main Menu"
 msgstr "Menú principal"
 
 #: data/resources/ui/main-window.blp:71
-#, fuzzy
-#| msgid "Convert from:"
 msgid "Convert _From:"
-msgstr "Convertir de:"
+msgstr "Convertir _desde:"
 
 #: data/resources/ui/main-window.blp:83
-#, fuzzy
-#| msgid "Convert to:"
 msgid "Convert _To:"
-msgstr "Convertir a:"
+msgstr "Convertir _a:"
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"

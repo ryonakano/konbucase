@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-02 12:35+0900\n"
-"PO-Revision-Date: 2024-05-01 09:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-03 06:44+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
 "ja/>\n"
 "Language: ja\n"
@@ -68,44 +68,32 @@ msgid "App window in the dark mode"
 msgstr "ダークモードのアプリウィンドウ"
 
 #: data/resources/ui/main-window.blp:7
-#, fuzzy
-#| msgid "Style"
 msgid "_Style"
-msgstr "スタイル"
+msgstr "スタイル(_S)"
 
 #: data/resources/ui/main-window.blp:10
-#, fuzzy
-#| msgid "System"
 msgid "S_ystem"
-msgstr "システム"
+msgstr "システム(_Y)"
 
 #: data/resources/ui/main-window.blp:16
-#, fuzzy
-#| msgid "Light"
 msgid "_Light"
-msgstr "ライト"
+msgstr "ライト(_L)"
 
 #: data/resources/ui/main-window.blp:22
-#, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
-msgstr "ダーク"
+msgstr "ダーク(_D)"
 
 #: data/resources/ui/main-window.blp:55
 msgid "Main Menu"
 msgstr "メインメニュー"
 
 #: data/resources/ui/main-window.blp:71
-#, fuzzy
-#| msgid "Convert from:"
 msgid "Convert _From:"
-msgstr "変換元:"
+msgstr "変換元(_F):"
 
 #: data/resources/ui/main-window.blp:83
-#, fuzzy
-#| msgid "Convert to:"
 msgid "Convert _To:"
-msgstr "変換先:"
+msgstr "変換先(_T):"
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"
