@@ -1,7 +1,7 @@
 # KonbuCase
-![App window in the light mode](data/screenshots/pantheon/screenshot-light.png#gh-light-mode-only)
+![App window in the light mode](data/screenshots/gnome/screenshot-light.png#gh-light-mode-only)
 
-![App window in the dark mode](data/screenshots/pantheon/screenshot-dark.png#gh-dark-mode-only)
+![App window in the dark mode](data/screenshots/gnome/screenshot-dark.png#gh-dark-mode-only)
 
 KonbuCase is a small text tool app that allows you convert case in your text.
 
