@@ -120,8 +120,11 @@ public class Application : Adw.Application {
             developers = DEVELOPERS,
             artists = ARTISTS,
             ///TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-            ///You may add your name and your email address if you want, e.g.:
+            ///You can optionally add your name if you want, plus you may add your email address or website.
+            ///e.g.:
+            ///John Doe
             ///John Doe <john-doe@example.com>
+            ///John Doe https://example.com
             translator_credits = _("translator-credits")
         };
         about_window.present ();
