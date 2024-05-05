@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-04 23:59+0900\n"
-"PO-Revision-Date: 2024-05-03 06:44+0000\n"
+"PO-Revision-Date: 2024-05-05 16:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
 "ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.3-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -85,10 +85,8 @@ msgstr "ダーク(_D)"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: data/resources/ui/main-window.blp:30
-#, fuzzy
-#| msgid "KonbuCase"
 msgid "_About KonbuCase"
-msgstr "KonbuCase"
+msgstr "KonbuCase について(_A)"
 
 #: data/resources/ui/main-window.blp:61
 msgid "Main Menu"
@@ -118,7 +116,7 @@ msgstr "クリップボードにコピー"
 #. John Doe https://example.com
 #: src/Application.vala:128
 msgid "translator-credits"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
