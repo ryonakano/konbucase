@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-04 23:59+0900\n"
-"PO-Revision-Date: 2024-05-04 13:07+0000\n"
+"PO-Revision-Date: 2024-05-07 01:07+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase/"
 "tr/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.5.4-dev\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -66,11 +66,11 @@ msgstr ""
 
 #: data/konbucase.metainfo.xml.in.in:25
 msgid "App window in the light mode"
-msgstr "Uygulama penceresi, açık tema görünümünde"
+msgstr "Uygulama penceresi açık kipte"
 
 #: data/konbucase.metainfo.xml.in.in:30
 msgid "App window in the dark mode"
-msgstr "Uygulama penceresi, koyu tema görünümünde"
+msgstr "Uygulama penceresi koyu kipte"
 
 #: data/resources/ui/main-window.blp:7
 msgid "_Style"
@@ -90,10 +90,8 @@ msgstr "_Koyu"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: data/resources/ui/main-window.blp:30
-#, fuzzy
-#| msgid "KonbuCase"
 msgid "_About KonbuCase"
-msgstr "KonbuCase"
+msgstr "KonbuCase _Hakkında"
 
 #: data/resources/ui/main-window.blp:61
 msgid "Main Menu"
@@ -123,7 +121,7 @@ msgstr "Panoya Kopyala"
 #. John Doe https://example.com
 #: src/Application.vala:128
 msgid "translator-credits"
-msgstr ""
+msgstr "Sabri Ünal <yakushabb@gmail.com>"
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
