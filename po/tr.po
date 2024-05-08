@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:59+0900\n"
+"POT-Creation-Date: 2024-05-08 22:49+0900\n"
 "PO-Revision-Date: 2024-05-07 01:07+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -72,36 +72,15 @@ msgstr "Uygulama penceresi açık kipte"
 msgid "App window in the dark mode"
 msgstr "Uygulama penceresi koyu kipte"
 
-#: data/resources/ui/main-window.blp:7
-msgid "_Style"
-msgstr "_Biçem"
-
-#: data/resources/ui/main-window.blp:10
-msgid "S_ystem"
-msgstr "_Sistem"
-
-#: data/resources/ui/main-window.blp:16
-msgid "_Light"
-msgstr "_Açık"
-
-#: data/resources/ui/main-window.blp:22
-msgid "_Dark"
-msgstr "_Koyu"
-
-#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: data/resources/ui/main-window.blp:30
-msgid "_About KonbuCase"
-msgstr "KonbuCase _Hakkında"
-
-#: data/resources/ui/main-window.blp:61
 msgid "Main Menu"
 msgstr "Ana Menü"
 
-#: data/resources/ui/main-window.blp:77
+#: data/resources/ui/main-window.blp:46
 msgid "Convert _From:"
 msgstr "Şundan _Dönüştür:"
 
-#: data/resources/ui/main-window.blp:89
+#: data/resources/ui/main-window.blp:58
 msgid "Convert _To:"
 msgstr "_Dönüştür:"
 
@@ -147,7 +126,28 @@ msgstr "Her kelime tire ile ayrılmış"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Cümledeki ilk kelimenin ilk karakteri büyük harfli"
 
-#: src/View/MainWindow.vala:64
+#: src/View/MainWindow.vala:38
+msgid "S_ystem"
+msgstr "_Sistem"
+
+#: src/View/MainWindow.vala:39
+msgid "_Light"
+msgstr "_Açık"
+
+#: src/View/MainWindow.vala:40
+msgid "_Dark"
+msgstr "_Koyu"
+
+#: src/View/MainWindow.vala:43
+msgid "_Style"
+msgstr "_Biçem"
+
+#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#: src/View/MainWindow.vala:47
+msgid "_About KonbuCase"
+msgstr "KonbuCase _Hakkında"
+
+#: src/View/MainWindow.vala:80
 msgid "Text copied!"
 msgstr "Metin kopyalandı!"
 
