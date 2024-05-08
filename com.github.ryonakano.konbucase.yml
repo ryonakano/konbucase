@@ -36,5 +36,3 @@ modules:
         path: .
       - type: patch
         path: patches/0001-chore-metainfo-Use-screenshots-taken-on-Pantheon.patch
-      - type: patch
-        path: patches/0002-chore-MainWindow-Remove-about-dialog.patch

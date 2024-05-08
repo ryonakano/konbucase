@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:59+0900\n"
-"PO-Revision-Date: 2024-05-04 13:07+0000\n"
+"POT-Creation-Date: 2024-05-08 22:49+0900\n"
+"PO-Revision-Date: 2024-05-08 13:49+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "ru/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -70,38 +70,15 @@ msgstr "Окно приложения в светлом режиме"
 msgid "App window in the dark mode"
 msgstr "Окно приложения в тёмном режиме"
 
-#: data/resources/ui/main-window.blp:7
-msgid "_Style"
-msgstr "Стиль"
-
-#: data/resources/ui/main-window.blp:10
-msgid "S_ystem"
-msgstr "Система"
-
-#: data/resources/ui/main-window.blp:16
-msgid "_Light"
-msgstr "Светлый"
-
-#: data/resources/ui/main-window.blp:22
-msgid "_Dark"
-msgstr "Тёмный"
-
-#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: data/resources/ui/main-window.blp:30
-#, fuzzy
-#| msgid "KonbuCase"
-msgid "_About KonbuCase"
-msgstr "KonbuCase"
-
-#: data/resources/ui/main-window.blp:61
 msgid "Main Menu"
 msgstr "Главное меню"
 
-#: data/resources/ui/main-window.blp:77
+#: data/resources/ui/main-window.blp:46
 msgid "Convert _From:"
 msgstr "Конвертировать из:"
 
-#: data/resources/ui/main-window.blp:89
+#: data/resources/ui/main-window.blp:58
 msgid "Convert _To:"
 msgstr "Конвертировать в:"
 
@@ -121,7 +98,7 @@ msgstr "Копировать"
 #. John Doe https://example.com
 #: src/Application.vala:128
 msgid "translator-credits"
-msgstr ""
+msgstr "lenemter"
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
@@ -147,7 +124,28 @@ msgstr "Каждое слово отделяется дефисом"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Первый символ первого слова в предложении пишется с заглавной буквы"
 
-#: src/View/MainWindow.vala:64
+#: src/View/MainWindow.vala:38
+msgid "S_ystem"
+msgstr "Система"
+
+#: src/View/MainWindow.vala:39
+msgid "_Light"
+msgstr "Светлый"
+
+#: src/View/MainWindow.vala:40
+msgid "_Dark"
+msgstr "Тёмный"
+
+#: src/View/MainWindow.vala:43
+msgid "_Style"
+msgstr "Стиль"
+
+#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#: src/View/MainWindow.vala:47
+msgid "_About KonbuCase"
+msgstr "О KonbuCase"
+
+#: src/View/MainWindow.vala:80
 msgid "Text copied!"
 msgstr "Текст скопирован!"
 
