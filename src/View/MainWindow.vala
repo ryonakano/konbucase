@@ -5,6 +5,9 @@
 
 [GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/main-window.ui")]
 public class MainWindow : Adw.ApplicationWindow {
+    // Main menu model
+    public Menu main_menu { get; private set; }
+
     [GtkChild]
     private unowned Adw.ToastOverlay overlay;
     [GtkChild]
@@ -29,6 +32,19 @@ public class MainWindow : Adw.ApplicationWindow {
         // Distinct development build visually
         if (".Devel" in Config.APP_ID) {
             add_css_class ("devel");
+        }
+
+        var style_submenu = new Menu ();
+        style_submenu.append (_("S_ystem"), "app.color-scheme(\"default\")");
+        style_submenu.append (_("_Light"), "app.color-scheme(\"force-light\")");
+        style_submenu.append (_("_Dark"), "app.color-scheme(\"force-dark\")");
+
+        main_menu = new Menu ();
+        main_menu.append_submenu (_("_Style"), style_submenu);
+        // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
+        if (!Application.IS_ON_PANTHEON) {
+            ///TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+            main_menu.append (_("_About KonbuCase"), "app.about");
         }
 
         // The action users most frequently take is to input the source text.

@@ -1,37 +1,6 @@
 using Gtk 4.0;
 using Adw 1;
 
-// Main menu model
-menu main_menu {
-  submenu {
-    label: _("_Style");
-
-    item {
-      label: _("S_ystem");
-      action: "app.color-scheme";
-      target: "default";
-    }
-
-    item {
-      label: _("_Light");
-      action: "app.color-scheme";
-      target: "force-light";
-    }
-
-    item {
-      label: _("_Dark");
-      action: "app.color-scheme";
-      target: "force-dark";
-    }
-  }
-
-  item {
-    ///TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
-    label: _("_About KonbuCase");
-    action: "app.about";
-  }
-}
-
 $TextPaneModel source_model {
   text-type: source;
 }
@@ -60,7 +29,7 @@ template $MainWindow : Adw.ApplicationWindow {
       Gtk.MenuButton {
         tooltip-text: _("Main Menu");
         icon-name: "open-menu";
-        menu-model: main_menu;
+        menu-model: bind template.main_menu;
         primary: true;
       }
     }
