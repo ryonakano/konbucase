@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:59+0900\n"
+"POT-Creation-Date: 2024-05-08 22:49+0900\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/konbucase/pl/"
@@ -64,47 +64,17 @@ msgstr ""
 msgid "App window in the dark mode"
 msgstr ""
 
-#: data/resources/ui/main-window.blp:7
-#, fuzzy
-msgid "_Style"
-msgstr "Styl:"
-
-#: data/resources/ui/main-window.blp:10
-#, fuzzy
-#| msgid "System"
-msgid "S_ystem"
-msgstr "System"
-
-#: data/resources/ui/main-window.blp:16
-#, fuzzy
-#| msgid "Light"
-msgid "_Light"
-msgstr "Jasny"
-
-#: data/resources/ui/main-window.blp:22
-#, fuzzy
-#| msgid "Dark"
-msgid "_Dark"
-msgstr "Ciemny"
-
-#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: data/resources/ui/main-window.blp:30
-#, fuzzy
-#| msgid "KonbuCase"
-msgid "_About KonbuCase"
-msgstr "KonbuCase"
-
-#: data/resources/ui/main-window.blp:61
 msgid "Main Menu"
 msgstr ""
 
-#: data/resources/ui/main-window.blp:77
+#: data/resources/ui/main-window.blp:46
 #, fuzzy
 #| msgid "Convert from:"
 msgid "Convert _From:"
 msgstr "Konwertuj z:"
 
-#: data/resources/ui/main-window.blp:89
+#: data/resources/ui/main-window.blp:58
 #, fuzzy
 #| msgid "Convert to:"
 msgid "Convert _To:"
@@ -152,7 +122,37 @@ msgstr "Każde słowo jest oddzielone myślnikiem"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Pierwszy znak pierwszego słowa w zdaniu jest pisany wielką literą"
 
-#: src/View/MainWindow.vala:64
+#: src/View/MainWindow.vala:38
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
+msgstr "System"
+
+#: src/View/MainWindow.vala:39
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
+msgstr "Jasny"
+
+#: src/View/MainWindow.vala:40
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
+msgstr "Ciemny"
+
+#: src/View/MainWindow.vala:43
+#, fuzzy
+msgid "_Style"
+msgstr "Styl:"
+
+#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#: src/View/MainWindow.vala:47
+#, fuzzy
+#| msgid "KonbuCase"
+msgid "_About KonbuCase"
+msgstr "KonbuCase"
+
+#: src/View/MainWindow.vala:80
 msgid "Text copied!"
 msgstr "Skopiowano tekst!"
 

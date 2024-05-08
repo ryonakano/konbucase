@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 23:59+0900\n"
+"POT-Creation-Date: 2024-05-08 22:49+0900\n"
 "PO-Revision-Date: 2024-05-05 16:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -67,36 +67,15 @@ msgstr "ライトモードのアプリウィンドウ"
 msgid "App window in the dark mode"
 msgstr "ダークモードのアプリウィンドウ"
 
-#: data/resources/ui/main-window.blp:7
-msgid "_Style"
-msgstr "スタイル(_S)"
-
-#: data/resources/ui/main-window.blp:10
-msgid "S_ystem"
-msgstr "システム(_Y)"
-
-#: data/resources/ui/main-window.blp:16
-msgid "_Light"
-msgstr "ライト(_L)"
-
-#: data/resources/ui/main-window.blp:22
-msgid "_Dark"
-msgstr "ダーク(_D)"
-
-#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: data/resources/ui/main-window.blp:30
-msgid "_About KonbuCase"
-msgstr "KonbuCase について(_A)"
-
-#: data/resources/ui/main-window.blp:61
 msgid "Main Menu"
 msgstr "メインメニュー"
 
-#: data/resources/ui/main-window.blp:77
+#: data/resources/ui/main-window.blp:46
 msgid "Convert _From:"
 msgstr "変換元(_F):"
 
-#: data/resources/ui/main-window.blp:89
+#: data/resources/ui/main-window.blp:58
 msgid "Convert _To:"
 msgstr "変換先(_T):"
 
@@ -142,7 +121,28 @@ msgstr "単語の区切りにハイフンを使用します"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "文頭の単語の頭文字に大文字を使用します"
 
-#: src/View/MainWindow.vala:64
+#: src/View/MainWindow.vala:38
+msgid "S_ystem"
+msgstr "システム(_Y)"
+
+#: src/View/MainWindow.vala:39
+msgid "_Light"
+msgstr "ライト(_L)"
+
+#: src/View/MainWindow.vala:40
+msgid "_Dark"
+msgstr "ダーク(_D)"
+
+#: src/View/MainWindow.vala:43
+msgid "_Style"
+msgstr "スタイル(_S)"
+
+#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#: src/View/MainWindow.vala:47
+msgid "_About KonbuCase"
+msgstr "KonbuCase について(_A)"
+
+#: src/View/MainWindow.vala:80
 msgid "Text copied!"
 msgstr "テキストをコピーしました!"
 
