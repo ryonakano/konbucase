@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 22:49+0900\n"
-"PO-Revision-Date: 2024-05-01 09:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-09 12:48+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "it/>\n"
 "Language: it\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5.3-dev\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -78,16 +78,12 @@ msgid "Main Menu"
 msgstr "Menù principale"
 
 #: data/resources/ui/main-window.blp:46
-#, fuzzy
-#| msgid "Convert from:"
 msgid "Convert _From:"
-msgstr "Converti da:"
+msgstr "Converti _da:"
 
 #: data/resources/ui/main-window.blp:58
-#, fuzzy
-#| msgid "Convert to:"
 msgid "Convert _To:"
-msgstr "Converti in:"
+msgstr "Converti _in:"
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"
@@ -105,7 +101,7 @@ msgstr "Copia negli appunti"
 #. John Doe https://example.com
 #: src/Application.vala:128
 msgid "translator-credits"
-msgstr ""
+msgstr "Albano Battistella <albanobattistella@gmail.com>"
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
@@ -132,35 +128,25 @@ msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
 
 #: src/View/MainWindow.vala:38
-#, fuzzy
-#| msgid "System"
 msgid "S_ystem"
-msgstr "Sistema"
+msgstr "S_istema"
 
 #: src/View/MainWindow.vala:39
-#, fuzzy
-#| msgid "Light"
 msgid "_Light"
-msgstr "Chiaro"
+msgstr "_Chiaro"
 
 #: src/View/MainWindow.vala:40
-#, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
-msgstr "Scuro"
+msgstr "_Scuro"
 
 #: src/View/MainWindow.vala:43
-#, fuzzy
-#| msgid "Style"
 msgid "_Style"
-msgstr "Stile"
+msgstr "_Stile"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: src/View/MainWindow.vala:47
-#, fuzzy
-#| msgid "KonbuCase"
 msgid "_About KonbuCase"
-msgstr "KonbuCase"
+msgstr "_Informazioni su KonbuCase"
 
 #: src/View/MainWindow.vala:80
 msgid "Text copied!"
