@@ -57,6 +57,27 @@
   </developer>
 
   <releases>
+    <release version="4.3.0" date="2024-05-11" urgency="medium">
+      <description translate="no">
+        <p>
+          Visual and usability improvements.
+        </p>
+        <ul>
+          <li>Port to libadwaita</li>
+          <li>Better keyboard navigation with mnemonics</li>
+          <li>Show the default style at the top of style preferences menu</li>
+          <li>Add about dialog (not available on Pantheon)</li>
+          <li>Update translations</li>
+        </ul>
+        <p>
+          Changes made only for AppCenter build:
+        </p>
+        <ul>
+          <li>Update elementary Flatpak platform to 8</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="4.2.0" date="2024-04-28" urgency="low">
       <description translate="no">
         <p>
