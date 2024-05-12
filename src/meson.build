@@ -16,10 +16,11 @@ if granite_dep.found()
 endif
 
 dependencies = [
+    dependency('glib-2.0', version: '>= 2.74'),
     granite_dep,
-    dependency('libadwaita-1', version: '>= 1.5'),
     dependency('gtk4'),
     dependency('gtksourceview-5'),
+    dependency('libadwaita-1', version: '>= 1.5'),
 ]
 
 if get_option('use_submodule')

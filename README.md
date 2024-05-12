@@ -47,6 +47,7 @@ You'll need the following dependencies:
 * blueprint-compiler
 * [libchcase](https://github.com/ryonakano/chcase)
 * libadwaita-1-dev (>= 1.5)
+* libglib2.0-dev (>= 2.74)
 * libgranite-7-dev (>= 7.2.0, required only when you build with `granite` feature enabled)
 * libgtk4-dev
 * libgtksourceview-5-dev
