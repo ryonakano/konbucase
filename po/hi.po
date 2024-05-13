@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 22:49+0900\n"
-"PO-Revision-Date: 2024-05-13 06:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-14 01:56+0000\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/konbucase/hi/>"
 "\n"
 "Language: hi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5.4\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -25,63 +25,68 @@ msgstr "@APP_NAME@"
 
 #: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
-msgstr ""
+msgstr "अक्षर परिवर्तन ऐप"
 
 #: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
-msgstr ""
+msgstr "अपने पाठ में अक्षर को परिवर्तित करें"
 
 #: data/konbucase.desktop.in.in:11
 msgid "Text;"
-msgstr ""
+msgstr "पाठ;"
 
 #: data/konbucase.metainfo.xml.in.in:13
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
+"एक छोटा पाठ उपकरण ऐप जो आपको अपने पाठ में अक्षर बदलने की सुविधा देता है।"
 
 #: data/konbucase.metainfo.xml.in.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "शामिल विशेषताएं:"
 
 #: data/konbucase.metainfo.xml.in.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
+"पाठ दृश्य में सभी पाठों को बिना चुने उन्हें कॉपी करने के लिए \"क्लिपबोर्ड पर "
+"कॉपी करें\" बटन पर क्लिक करें"
 
 #: data/konbucase.metainfo.xml.in.in:19
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
+"अपने पाठ को camelCase, PascalCase, Sentence case, snake_case, kebab-case, और "
+"space-separated के बीच परिवर्तित करें"
 
 #: data/konbucase.metainfo.xml.in.in:25
 msgid "App window in the light mode"
-msgstr ""
+msgstr "ऐप खिड़की हल्के मोड में"
 
 #: data/konbucase.metainfo.xml.in.in:30
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "ऐप खिड़की गहरे मोड में"
 
 #: data/resources/ui/main-window.blp:30
 msgid "Main Menu"
-msgstr ""
+msgstr "मुख्य मेनू"
 
 #: data/resources/ui/main-window.blp:46
 msgid "Convert _From:"
-msgstr ""
+msgstr "इससे परिवर्तित (_F):"
 
 #: data/resources/ui/main-window.blp:58
 msgid "Convert _To:"
-msgstr ""
+msgstr "इसमें परिवर्तित (_T):"
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"
-msgstr ""
+msgstr "रिक्ति से अलग"
 
 #: data/resources/ui/text-pane.blp:54
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "क्लिपबोर्ड पर कॉपी करें"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -91,53 +96,53 @@ msgstr ""
 #. John Doe https://example.com
 #: src/Application.vala:128
 msgid "translator-credits"
-msgstr ""
+msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
-msgstr ""
+msgstr "प्रत्येक शब्द को एक रिक्त स्थान द्वारा अलग किया गया है"
 
 #: src/Model/TextPaneModel.vala:32
 msgid "The first character of compound words is in lowercase"
-msgstr ""
+msgstr "संयुक्त शब्दों का पहला अक्षर छोटे अक्षरों में होता है"
 
 #: src/Model/TextPaneModel.vala:33
 msgid "The first character of compound words is in uppercase"
-msgstr ""
+msgstr "संयुक्त शब्दों का पहला अक्षर बड़े अक्षरों में होता है"
 
 #: src/Model/TextPaneModel.vala:34
 msgid "Each word is separated by an underscore"
-msgstr ""
+msgstr "प्रत्येक शब्द को एक अधोरेखा द्वारा अलग किया गया है"
 
 #: src/Model/TextPaneModel.vala:35
 msgid "Each word is separated by a hyphen"
-msgstr ""
+msgstr "प्रत्येक शब्द को समास-चिह्न द्वारा अलग किया गया है"
 
 #: src/Model/TextPaneModel.vala:36
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr ""
+msgstr "वाक्य में पहले शब्द का पहला अक्षर बड़े अक्षरों में है"
 
 #: src/View/MainWindow.vala:38
 msgid "S_ystem"
-msgstr ""
+msgstr "सिस्टम (_y)"
 
 #: src/View/MainWindow.vala:39
 msgid "_Light"
-msgstr ""
+msgstr "हल्की (_L)"
 
 #: src/View/MainWindow.vala:40
 msgid "_Dark"
-msgstr ""
+msgstr "गहरी (_D)"
 
 #: src/View/MainWindow.vala:43
 msgid "_Style"
-msgstr ""
+msgstr "शैली (_S)"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: src/View/MainWindow.vala:47
 msgid "_About KonbuCase"
-msgstr ""
+msgstr "KonbuCase के बारे में (_A)"
 
 #: src/View/MainWindow.vala:80
 msgid "Text copied!"
-msgstr ""
+msgstr "पाठ कॉपी किया गया!"
