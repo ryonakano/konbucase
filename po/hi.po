@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2024-05-08 22:49+0900\n"
 "PO-Revision-Date: 2024-05-14 01:56+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
-"Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/konbucase/hi/>"
-"\n"
+"Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/konbucase/hi/"
+">\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,8 +37,7 @@ msgstr "पाठ;"
 
 #: data/konbucase.metainfo.xml.in.in:13
 msgid "A small text tool app that allows you convert case in your text."
-msgstr ""
-"एक छोटा पाठ उपकरण ऐप जो आपको अपने पाठ में अक्षर बदलने की सुविधा देता है।"
+msgstr "एक छोटा पाठ उपकरण ऐप जो आपको अपने पाठ में अक्षर बदलने की सुविधा देता है।"
 
 #: data/konbucase.metainfo.xml.in.in:16
 msgid "Features include:"
@@ -49,8 +48,8 @@ msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
-"पाठ दृश्य में सभी पाठों को बिना चुने उन्हें कॉपी करने के लिए \"क्लिपबोर्ड पर "
-"कॉपी करें\" बटन पर क्लिक करें"
+"पाठ दृश्य में सभी पाठों को बिना चुने उन्हें कॉपी करने के लिए \"क्लिपबोर्ड पर कॉपी करें\" बटन "
+"पर क्लिक करें"
 
 #: data/konbucase.metainfo.xml.in.in:19
 msgid ""
