@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 22:49+0900\n"
-"PO-Revision-Date: 2024-05-01 09:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-07-07 20:09+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "uk/>\n"
 "Language: uk\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5.3-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -67,23 +67,19 @@ msgstr "Вікно застосунку у світловому режимі"
 
 #: data/konbucase.metainfo.xml.in.in:30
 msgid "App window in the dark mode"
-msgstr "Вікно застосунку в темному режимі"
+msgstr "Вікно застосунку у темному режимі"
 
 #: data/resources/ui/main-window.blp:30
 msgid "Main Menu"
 msgstr "Головне меню"
 
 #: data/resources/ui/main-window.blp:46
-#, fuzzy
-#| msgid "Convert from:"
 msgid "Convert _From:"
-msgstr "Перетворити з:"
+msgstr "Конвертувати _з:"
 
 #: data/resources/ui/main-window.blp:58
-#, fuzzy
-#| msgid "Convert to:"
 msgid "Convert _To:"
-msgstr "Перетворити в:"
+msgstr "Конвертувати _в:"
 
 #: data/resources/ui/text-pane.blp:7
 msgid "Space separated"
@@ -101,7 +97,7 @@ msgstr "Копіювати до буфера обміну"
 #. John Doe https://example.com
 #: src/Application.vala:128
 msgid "translator-credits"
-msgstr ""
+msgstr "Ihor Hordiichuk"
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
@@ -128,35 +124,25 @@ msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Перший символ першого слова в реченні пишеться з великої букви"
 
 #: src/View/MainWindow.vala:38
-#, fuzzy
-#| msgid "System"
 msgid "S_ystem"
-msgstr "Системи"
+msgstr "С_истеми"
 
 #: src/View/MainWindow.vala:39
-#, fuzzy
-#| msgid "Light"
 msgid "_Light"
-msgstr "Світлий"
+msgstr "_Світлий"
 
 #: src/View/MainWindow.vala:40
-#, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
-msgstr "Темний"
+msgstr "_Темний"
 
 #: src/View/MainWindow.vala:43
-#, fuzzy
-#| msgid "Style"
 msgid "_Style"
-msgstr "Стиль"
+msgstr "_Стиль"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: src/View/MainWindow.vala:47
-#, fuzzy
-#| msgid "KonbuCase"
 msgid "_About KonbuCase"
-msgstr "KonbuCase"
+msgstr "_Про KonbuCase"
 
 #: src/View/MainWindow.vala:80
 msgid "Text copied!"
