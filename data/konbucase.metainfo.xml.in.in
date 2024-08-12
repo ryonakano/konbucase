@@ -57,6 +57,14 @@
   </developer>
 
   <releases>
+    <release version="4.3.1" date="2024-08-12" urgency="low">
+      <description translate="no">
+        <ul>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="4.3.0" date="2024-05-11" urgency="medium">
       <description translate="no">
         <p>
