@@ -54,28 +54,32 @@ public class TextPaneModel : Object {
         buffer.bind_property ("text", this, "text", BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE);
 
         // Apply theme changes to the source view
-        gtk_settings.bind_property ("gtk-application-prefer-dark-theme", buffer, "style-scheme",
-                                    BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-                                    (binding, from_value, ref to_value) => {
-                                        var prefer_dark = (bool) from_value;
-                                        if (prefer_dark) {
-                                            to_value.set_object (style_scheme_manager.get_scheme ("solarized-dark"));
-                                        } else {
-                                            to_value.set_object (style_scheme_manager.get_scheme ("solarized-light"));
-                                        }
+        gtk_settings.bind_property (
+            "gtk-application-prefer-dark-theme", buffer, "style-scheme",
+            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+            (binding, from_value, ref to_value) => {
+                var prefer_dark = (bool) from_value;
+                if (prefer_dark) {
+                    to_value.set_object (style_scheme_manager.get_scheme ("solarized-dark"));
+                } else {
+                    to_value.set_object (style_scheme_manager.get_scheme ("solarized-light"));
+                }
 
-                                        return true;
-                                    });
+                return true;
+            }
+        );
 
         Application.settings.bind (TEXT_TYPE_DATA_TABLE[text_type].key_text, this, "text", SettingsBindFlags.DEFAULT);
 
-        bind_property ("case-type", this, "case-description",
-                       BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-                       (binding, from_value, ref to_value) => {
-                           var case_type = (Define.CaseType) from_value;
-                           to_value.set_string (_(CASE_TYPE_DATA_TBL[case_type].description));
-                           return true;
-                       });
+        bind_property (
+            "case-type", this, "case-description",
+            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+            (binding, from_value, ref to_value) => {
+                var case_type = (Define.CaseType) from_value;
+                to_value.set_string (_(CASE_TYPE_DATA_TBL[case_type].description));
+                return true;
+            }
+        );
 
         notify["case-type"].connect (() => {
             Application.settings.set_enum (TEXT_TYPE_DATA_TABLE[text_type].key_case_type, case_type);

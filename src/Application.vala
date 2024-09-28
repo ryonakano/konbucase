@@ -33,14 +33,18 @@ public class Application : Adw.Application {
         var style_action = new SimpleAction.stateful (
             "color-scheme", VariantType.STRING, new Variant.string (Define.ColorScheme.DEFAULT)
         );
-        style_action.bind_property ("state", style_manager, "color-scheme",
-                                    BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
-                                    Util.style_action_transform_to_cb,
-                                    Util.style_action_transform_from_cb);
-        settings.bind_with_mapping ("color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
-                                    Util.color_scheme_get_mapping_cb,
-                                    Util.color_scheme_set_mapping_cb,
-                                    null, null);
+        style_action.bind_property (
+            "state", style_manager, "color-scheme",
+            BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
+            Util.style_action_transform_to_cb,
+            Util.style_action_transform_from_cb
+        );
+        settings.bind_with_mapping (
+            "color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
+            Util.color_scheme_get_mapping_cb,
+            Util.color_scheme_set_mapping_cb,
+            null, null
+        );
         add_action (style_action);
     }
 

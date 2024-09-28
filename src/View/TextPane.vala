@@ -41,13 +41,15 @@ public class TextPane : Gtk.Box {
         });
 
         // Make copy button insensitive when text is blank
-        model.bind_property ("text", copy_clipboard_button, "sensitive",
-                             BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-                             (binding, from_value, ref to_value) => {
-                                 var text = (string) from_value;
-                                 to_value.set_boolean (text != "");
-                                 return true;
-                             });
+        model.bind_property (
+            "text", copy_clipboard_button, "sensitive",
+            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+            (binding, from_value, ref to_value) => {
+                var text = (string) from_value;
+                to_value.set_boolean (text != "");
+                return true;
+            }
+        );
     }
 
     // UI elements defined in .ui files can't be a property, so defines a getter method instead
