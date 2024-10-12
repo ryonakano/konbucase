@@ -3,7 +3,6 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-[GtkTemplate (ui = "/com/github/ryonakano/konbucase/ui/text-pane.ui")]
 public class TextPane : Gtk.Box {
     public signal void dropdown_changed ();
     public signal void copy_button_clicked ();
@@ -12,12 +11,7 @@ public class TextPane : Gtk.Box {
     public string header_label { get; construct; }
     public bool editable { get; construct; }
 
-    [GtkChild]
-    private unowned Gtk.DropDown case_dropdown;
-    [GtkChild]
-    private unowned Gtk.Button copy_clipboard_button;
-    [GtkChild]
-    private unowned GtkSource.View source_view;
+    private GtkSource.View source_view;
 
     public TextPane (TextPaneModel model, string header_label, bool editable) {
         Object (
@@ -28,7 +22,57 @@ public class TextPane : Gtk.Box {
     }
 
     construct {
+        orientation = Gtk.Orientation.VERTICAL;
+        spacing = 0;
+
+        var case_dropdown = new Gtk.DropDown.from_strings ({
+            _("Space separated"),
+            "camelCase",
+            "PascalCase",
+            "snake_case",
+            "kebab-case",
+            "Sentence case",
+        });
         case_dropdown.selected = model.case_type;
+
+        var case_label = new Gtk.Label (header_label) {
+            use_underline = true,
+            mnemonic_widget = case_dropdown
+        };
+
+        var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic") {
+            tooltip_text = model.case_description
+        };
+
+        var copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
+            tooltip_text = _("Copy to Clipboard")
+        };
+
+        var toolbar = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
+            valign = Gtk.Align.CENTER,
+            margin_top = 6,
+            margin_bottom = 6,
+            margin_start = 6,
+            margin_end = 6
+        };
+        toolbar.append (case_label);
+        toolbar.append (case_dropdown);
+        toolbar.append (case_info_button_icon);
+        toolbar.append (copy_clipboard_button);
+
+        source_view = new GtkSource.View.with_buffer (model.buffer) {
+            wrap_mode = Gtk.WrapMode.WORD_CHAR,
+            hexpand = true,
+            vexpand = true,
+            editable = editable
+        };
+
+        var scrolled = new Gtk.ScrolledWindow () {
+            child = source_view
+        };
+
+        append (toolbar);
+        append (scrolled);
 
         case_dropdown.notify["selected"].connect (() => {
             model.case_type = (Define.CaseType) case_dropdown.selected;
@@ -52,8 +96,7 @@ public class TextPane : Gtk.Box {
         );
     }
 
-    // UI elements defined in .ui files can't be a property, so defines a getter method instead
-    public unowned GtkSource.View get_source_view () {
-        return source_view;
+    public void focus_source_view () {
+        source_view.grab_focus ();
     }
 }
