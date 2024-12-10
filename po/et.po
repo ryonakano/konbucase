@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.konbucase package.
+# Priit Jõerüüt <hwlate@joeruut.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.konbucase\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-08 22:49+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/konbucase.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr ""
+
+#: data/konbucase.desktop.in.in:4
+msgid "Case Converting App"
+msgstr ""
+
+#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+msgid "Convert case in your text"
+msgstr ""
+
+#: data/konbucase.desktop.in.in:11
+msgid "Text;"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:13
+msgid "A small text tool app that allows you convert case in your text."
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:16
+msgid "Features include:"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:18
+msgid ""
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:19
+msgid ""
+"Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case, and space-separated"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:25
+msgid "App window in the light mode"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:30
+msgid "App window in the dark mode"
+msgstr ""
+
+#: data/resources/ui/main-window.blp:30
+msgid "Main Menu"
+msgstr ""
+
+#: data/resources/ui/main-window.blp:46
+msgid "Convert _From:"
+msgstr ""
+
+#: data/resources/ui/main-window.blp:58
+msgid "Convert _To:"
+msgstr ""
+
+#: data/resources/ui/text-pane.blp:7
+msgid "Space separated"
+msgstr ""
+
+#: data/resources/ui/text-pane.blp:54
+msgid "Copy to Clipboard"
+msgstr ""
+
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:128
+msgid "translator-credits"
+msgstr ""
+
+#: src/Model/TextPaneModel.vala:31
+msgid "Each word is separated by a space"
+msgstr ""
+
+#: src/Model/TextPaneModel.vala:32
+msgid "The first character of compound words is in lowercase"
+msgstr ""
+
+#: src/Model/TextPaneModel.vala:33
+msgid "The first character of compound words is in uppercase"
+msgstr ""
+
+#: src/Model/TextPaneModel.vala:34
+msgid "Each word is separated by an underscore"
+msgstr ""
+
+#: src/Model/TextPaneModel.vala:35
+msgid "Each word is separated by a hyphen"
+msgstr ""
+
+#: src/Model/TextPaneModel.vala:36
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr ""
+
+#: src/View/MainWindow.vala:38
+msgid "S_ystem"
+msgstr ""
+
+#: src/View/MainWindow.vala:39
+msgid "_Light"
+msgstr ""
+
+#: src/View/MainWindow.vala:40
+msgid "_Dark"
+msgstr ""
+
+#: src/View/MainWindow.vala:43
+msgid "_Style"
+msgstr ""
+
+#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#: src/View/MainWindow.vala:47
+msgid "_About KonbuCase"
+msgstr ""
+
+#: src/View/MainWindow.vala:80
+msgid "Text copied!"
+msgstr ""
