@@ -21,7 +21,8 @@ public class Application : Adw.Application {
     public Application () {
         Object (
             application_id: Config.APP_ID,
-            flags: ApplicationFlags.DEFAULT_FLAGS
+            flags: ApplicationFlags.DEFAULT_FLAGS,
+            resource_base_path: Config.RESOURCE_PREFIX
         );
     }
 

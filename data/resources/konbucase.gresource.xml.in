@@ -3,6 +3,7 @@
   <gresource prefix="/com/github/ryonakano/konbucase">
     <file preprocess="xml-stripblanks">ui/text-pane.ui</file>
     <file preprocess="xml-stripblanks">ui/main-window.ui</file>
+    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
 
     <file preprocess="xml-stripblanks" alias="@APP_ID@.metainfo.xml">../@APP_ID@.metainfo.xml</file>
   </gresource>
