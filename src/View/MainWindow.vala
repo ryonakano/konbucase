@@ -41,6 +41,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         main_menu = new Menu ();
         main_menu.append_submenu (_("_Style"), style_submenu);
+        main_menu.append (_("Keyboard Shortcuts"), "win.show-help-overlay");
         // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
         if (!Application.IS_ON_PANTHEON) {
             ///TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
