@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-14 23:08+0900\n"
+"POT-Creation-Date: 2024-12-14 23:12+0900\n"
 "PO-Revision-Date: 2024-12-14 14:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -133,8 +133,11 @@ msgid "_Style"
 msgstr "スタイル(_S)"
 
 #: src/View/MainWindow.vala:29
-msgid "Keyboard Shortcuts"
-msgstr ""
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "Keyboard Shortcuts"
+msgid "_Keyboard Shortcuts"
+msgstr "キーボードショートカット"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: src/View/MainWindow.vala:33

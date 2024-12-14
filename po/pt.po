@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-14 23:08+0900\n"
+"POT-Creation-Date: 2024-12-14 23:12+0900\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
@@ -144,7 +144,7 @@ msgid "_Style"
 msgstr "Estilo:"
 
 #: src/View/MainWindow.vala:29
-msgid "Keyboard Shortcuts"
+msgid "_Keyboard Shortcuts"
 msgstr ""
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
