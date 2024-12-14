@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 22:49+0900\n"
+"POT-Creation-Date: 2024-12-14 23:08+0900\n"
 "PO-Revision-Date: 2024-07-07 20:09+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -20,6 +20,21 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.7-dev\n"
+
+#: data/resources/gtk/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -69,33 +84,13 @@ msgstr "Вікно застосунку у світловому режимі"
 msgid "App window in the dark mode"
 msgstr "Вікно застосунку у темному режимі"
 
-#: data/resources/ui/main-window.blp:30
-msgid "Main Menu"
-msgstr "Головне меню"
-
-#: data/resources/ui/main-window.blp:46
-msgid "Convert _From:"
-msgstr "Конвертувати _з:"
-
-#: data/resources/ui/main-window.blp:58
-msgid "Convert _To:"
-msgstr "Конвертувати _в:"
-
-#: data/resources/ui/text-pane.blp:7
-msgid "Space separated"
-msgstr "Розділено пробілами"
-
-#: data/resources/ui/text-pane.blp:54
-msgid "Copy to Clipboard"
-msgstr "Копіювати до буфера обміну"
-
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:128
+#: src/Application.vala:131
 msgid "translator-credits"
 msgstr "Ihor Hordiichuk"
 
@@ -123,30 +118,52 @@ msgstr "Кожне слово розділяється дефісом"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Перший символ першого слова в реченні пишеться з великої букви"
 
-#: src/View/MainWindow.vala:38
+#: src/View/MainWindow.vala:23
 msgid "S_ystem"
 msgstr "С_истеми"
 
-#: src/View/MainWindow.vala:39
+#: src/View/MainWindow.vala:24
 msgid "_Light"
 msgstr "_Світлий"
 
-#: src/View/MainWindow.vala:40
+#: src/View/MainWindow.vala:25
 msgid "_Dark"
 msgstr "_Темний"
 
-#: src/View/MainWindow.vala:43
+#: src/View/MainWindow.vala:28
 msgid "_Style"
 msgstr "_Стиль"
 
+#: src/View/MainWindow.vala:29
+msgid "Keyboard Shortcuts"
+msgstr ""
+
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
-#: src/View/MainWindow.vala:47
+#: src/View/MainWindow.vala:33
 msgid "_About KonbuCase"
 msgstr "_Про KonbuCase"
 
-#: src/View/MainWindow.vala:80
+#: src/View/MainWindow.vala:37
+msgid "Main Menu"
+msgstr "Головне меню"
+
+#: src/View/MainWindow.vala:52
+msgid "Convert _From:"
+msgstr "Конвертувати _з:"
+
+#: src/View/MainWindow.vala:62
+msgid "Convert _To:"
+msgstr "Конвертувати _в:"
+
+#: src/View/MainWindow.vala:114
 msgid "Text copied!"
 msgstr "Текст скопійовано!"
+
+#~ msgid "Space separated"
+#~ msgstr "Розділено пробілами"
+
+#~ msgid "Copy to Clipboard"
+#~ msgstr "Копіювати до буфера обміну"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

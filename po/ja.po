@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 22:49+0900\n"
+"POT-Creation-Date: 2024-12-14 23:08+0900\n"
 "PO-Revision-Date: 2024-05-05 16:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -18,6 +18,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.5.3\n"
+
+#: data/resources/gtk/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -67,33 +82,13 @@ msgstr "ライトモードのアプリウィンドウ"
 msgid "App window in the dark mode"
 msgstr "ダークモードのアプリウィンドウ"
 
-#: data/resources/ui/main-window.blp:30
-msgid "Main Menu"
-msgstr "メインメニュー"
-
-#: data/resources/ui/main-window.blp:46
-msgid "Convert _From:"
-msgstr "変換元(_F):"
-
-#: data/resources/ui/main-window.blp:58
-msgid "Convert _To:"
-msgstr "変換先(_T):"
-
-#: data/resources/ui/text-pane.blp:7
-msgid "Space separated"
-msgstr "スペース区切り"
-
-#: data/resources/ui/text-pane.blp:54
-msgid "Copy to Clipboard"
-msgstr "クリップボードにコピー"
-
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:128
+#: src/Application.vala:131
 msgid "translator-credits"
 msgstr "Ryo Nakano"
 
@@ -121,30 +116,52 @@ msgstr "単語の区切りにハイフンを使用します"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "文頭の単語の頭文字に大文字を使用します"
 
-#: src/View/MainWindow.vala:38
+#: src/View/MainWindow.vala:23
 msgid "S_ystem"
 msgstr "システム(_Y)"
 
-#: src/View/MainWindow.vala:39
+#: src/View/MainWindow.vala:24
 msgid "_Light"
 msgstr "ライト(_L)"
 
-#: src/View/MainWindow.vala:40
+#: src/View/MainWindow.vala:25
 msgid "_Dark"
 msgstr "ダーク(_D)"
 
-#: src/View/MainWindow.vala:43
+#: src/View/MainWindow.vala:28
 msgid "_Style"
 msgstr "スタイル(_S)"
 
+#: src/View/MainWindow.vala:29
+msgid "Keyboard Shortcuts"
+msgstr ""
+
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
-#: src/View/MainWindow.vala:47
+#: src/View/MainWindow.vala:33
 msgid "_About KonbuCase"
 msgstr "KonbuCase について(_A)"
 
-#: src/View/MainWindow.vala:80
+#: src/View/MainWindow.vala:37
+msgid "Main Menu"
+msgstr "メインメニュー"
+
+#: src/View/MainWindow.vala:52
+msgid "Convert _From:"
+msgstr "変換元(_F):"
+
+#: src/View/MainWindow.vala:62
+msgid "Convert _To:"
+msgstr "変換先(_T):"
+
+#: src/View/MainWindow.vala:114
 msgid "Text copied!"
 msgstr "テキストをコピーしました!"
+
+#~ msgid "Space separated"
+#~ msgstr "スペース区切り"
+
+#~ msgid "Copy to Clipboard"
+#~ msgstr "クリップボードにコピー"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

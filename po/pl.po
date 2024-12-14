@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 22:49+0900\n"
+"POT-Creation-Date: 2024-12-14 23:08+0900\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/konbucase/pl/"
@@ -19,6 +19,21 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5.3-dev\n"
+
+#: data/resources/gtk/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -64,37 +79,13 @@ msgstr ""
 msgid "App window in the dark mode"
 msgstr ""
 
-#: data/resources/ui/main-window.blp:30
-msgid "Main Menu"
-msgstr ""
-
-#: data/resources/ui/main-window.blp:46
-#, fuzzy
-#| msgid "Convert from:"
-msgid "Convert _From:"
-msgstr "Konwertuj z:"
-
-#: data/resources/ui/main-window.blp:58
-#, fuzzy
-#| msgid "Convert to:"
-msgid "Convert _To:"
-msgstr "Konwertuj do:"
-
-#: data/resources/ui/text-pane.blp:7
-msgid "Space separated"
-msgstr "Oddzielone spacją"
-
-#: data/resources/ui/text-pane.blp:54
-msgid "Copy to Clipboard"
-msgstr "Kopiuj do schowka"
-
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:128
+#: src/Application.vala:131
 msgid "translator-credits"
 msgstr ""
 
@@ -122,39 +113,65 @@ msgstr "Każde słowo jest oddzielone myślnikiem"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Pierwszy znak pierwszego słowa w zdaniu jest pisany wielką literą"
 
-#: src/View/MainWindow.vala:38
+#: src/View/MainWindow.vala:23
 #, fuzzy
 #| msgid "System"
 msgid "S_ystem"
 msgstr "System"
 
-#: src/View/MainWindow.vala:39
+#: src/View/MainWindow.vala:24
 #, fuzzy
 #| msgid "Light"
 msgid "_Light"
 msgstr "Jasny"
 
-#: src/View/MainWindow.vala:40
+#: src/View/MainWindow.vala:25
 #, fuzzy
 #| msgid "Dark"
 msgid "_Dark"
 msgstr "Ciemny"
 
-#: src/View/MainWindow.vala:43
+#: src/View/MainWindow.vala:28
 #, fuzzy
 msgid "_Style"
 msgstr "Styl:"
 
+#: src/View/MainWindow.vala:29
+msgid "Keyboard Shortcuts"
+msgstr ""
+
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
-#: src/View/MainWindow.vala:47
+#: src/View/MainWindow.vala:33
 #, fuzzy
 #| msgid "KonbuCase"
 msgid "_About KonbuCase"
 msgstr "KonbuCase"
 
-#: src/View/MainWindow.vala:80
+#: src/View/MainWindow.vala:37
+msgid "Main Menu"
+msgstr ""
+
+#: src/View/MainWindow.vala:52
+#, fuzzy
+#| msgid "Convert from:"
+msgid "Convert _From:"
+msgstr "Konwertuj z:"
+
+#: src/View/MainWindow.vala:62
+#, fuzzy
+#| msgid "Convert to:"
+msgid "Convert _To:"
+msgstr "Konwertuj do:"
+
+#: src/View/MainWindow.vala:114
 msgid "Text copied!"
 msgstr "Skopiowano tekst!"
+
+#~ msgid "Space separated"
+#~ msgstr "Oddzielone spacją"
+
+#~ msgid "Copy to Clipboard"
+#~ msgstr "Kopiuj do schowka"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

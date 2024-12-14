@@ -7,17 +7,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 22:49+0900\n"
+"POT-Creation-Date: 2024-12-14 23:08+0900\n"
 "PO-Revision-Date: 2024-05-16 15:01+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
-"Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/konbucase/hi/>"
-"\n"
+"Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/konbucase/hi/"
+">\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
+
+#: data/resources/gtk/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -67,33 +82,13 @@ msgstr "ऐप खिड़की हल्के मोड में"
 msgid "App window in the dark mode"
 msgstr "ऐप खिड़की गहरे मोड में"
 
-#: data/resources/ui/main-window.blp:30
-msgid "Main Menu"
-msgstr "मुख्य मेनू"
-
-#: data/resources/ui/main-window.blp:46
-msgid "Convert _From:"
-msgstr "इससे परिवर्तित (_F):"
-
-#: data/resources/ui/main-window.blp:58
-msgid "Convert _To:"
-msgstr "इसमें परिवर्तित (_T):"
-
-#: data/resources/ui/text-pane.blp:7
-msgid "Space separated"
-msgstr "रिक्ति से अलग"
-
-#: data/resources/ui/text-pane.blp:54
-msgid "Copy to Clipboard"
-msgstr "क्लिपबोर्ड पर कॉपी करें"
-
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:128
+#: src/Application.vala:131
 msgid "translator-credits"
 msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
 
@@ -121,27 +116,49 @@ msgstr "प्रत्येक शब्द को समास-चिह्�
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "वाक्य में पहले शब्द का पहला अक्षर बड़े अक्षरों में है"
 
-#: src/View/MainWindow.vala:38
+#: src/View/MainWindow.vala:23
 msgid "S_ystem"
 msgstr "सिस्टम (_y)"
 
-#: src/View/MainWindow.vala:39
+#: src/View/MainWindow.vala:24
 msgid "_Light"
 msgstr "हल्की (_L)"
 
-#: src/View/MainWindow.vala:40
+#: src/View/MainWindow.vala:25
 msgid "_Dark"
 msgstr "गहरी (_D)"
 
-#: src/View/MainWindow.vala:43
+#: src/View/MainWindow.vala:28
 msgid "_Style"
 msgstr "शैली (_S)"
 
+#: src/View/MainWindow.vala:29
+msgid "Keyboard Shortcuts"
+msgstr ""
+
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
-#: src/View/MainWindow.vala:47
+#: src/View/MainWindow.vala:33
 msgid "_About KonbuCase"
 msgstr "KonbuCase के बारे में (_A)"
 
-#: src/View/MainWindow.vala:80
+#: src/View/MainWindow.vala:37
+msgid "Main Menu"
+msgstr "मुख्य मेनू"
+
+#: src/View/MainWindow.vala:52
+msgid "Convert _From:"
+msgstr "इससे परिवर्तित (_F):"
+
+#: src/View/MainWindow.vala:62
+msgid "Convert _To:"
+msgstr "इसमें परिवर्तित (_T):"
+
+#: src/View/MainWindow.vala:114
 msgid "Text copied!"
 msgstr "पाठ कॉपी किया गया!"
+
+#~ msgid "Space separated"
+#~ msgstr "रिक्ति से अलग"
+
+#~ msgid "Copy to Clipboard"
+#~ msgstr "क्लिपबोर्ड पर कॉपी करें"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 22:49+0900\n"
+"POT-Creation-Date: 2024-12-14 23:08+0900\n"
 "PO-Revision-Date: 2024-05-09 12:48+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -22,6 +22,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.5.4-rc\n"
+
+#: data/resources/gtk/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -73,33 +88,13 @@ msgstr "Finestra dell'app in modalità chiara"
 msgid "App window in the dark mode"
 msgstr "Finestra dell'app in modalità scura"
 
-#: data/resources/ui/main-window.blp:30
-msgid "Main Menu"
-msgstr "Menù principale"
-
-#: data/resources/ui/main-window.blp:46
-msgid "Convert _From:"
-msgstr "Converti _da:"
-
-#: data/resources/ui/main-window.blp:58
-msgid "Convert _To:"
-msgstr "Converti _in:"
-
-#: data/resources/ui/text-pane.blp:7
-msgid "Space separated"
-msgstr "Spazi separati"
-
-#: data/resources/ui/text-pane.blp:54
-msgid "Copy to Clipboard"
-msgstr "Copia negli appunti"
-
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:128
+#: src/Application.vala:131
 msgid "translator-credits"
 msgstr "Albano Battistella <albanobattistella@gmail.com>"
 
@@ -127,30 +122,52 @@ msgstr "Ogni parola è separata da un hyphen (trattino alto)"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
 
-#: src/View/MainWindow.vala:38
+#: src/View/MainWindow.vala:23
 msgid "S_ystem"
 msgstr "S_istema"
 
-#: src/View/MainWindow.vala:39
+#: src/View/MainWindow.vala:24
 msgid "_Light"
 msgstr "_Chiaro"
 
-#: src/View/MainWindow.vala:40
+#: src/View/MainWindow.vala:25
 msgid "_Dark"
 msgstr "_Scuro"
 
-#: src/View/MainWindow.vala:43
+#: src/View/MainWindow.vala:28
 msgid "_Style"
 msgstr "_Stile"
 
+#: src/View/MainWindow.vala:29
+msgid "Keyboard Shortcuts"
+msgstr ""
+
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
-#: src/View/MainWindow.vala:47
+#: src/View/MainWindow.vala:33
 msgid "_About KonbuCase"
 msgstr "_Informazioni su KonbuCase"
 
-#: src/View/MainWindow.vala:80
+#: src/View/MainWindow.vala:37
+msgid "Main Menu"
+msgstr "Menù principale"
+
+#: src/View/MainWindow.vala:52
+msgid "Convert _From:"
+msgstr "Converti _da:"
+
+#: src/View/MainWindow.vala:62
+msgid "Convert _To:"
+msgstr "Converti _in:"
+
+#: src/View/MainWindow.vala:114
 msgid "Text copied!"
 msgstr "Testo copiato!"
+
+#~ msgid "Space separated"
+#~ msgstr "Spazi separati"
+
+#~ msgid "Copy to Clipboard"
+#~ msgstr "Copia negli appunti"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

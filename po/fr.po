@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 22:49+0900\n"
+"POT-Creation-Date: 2024-12-14 23:08+0900\n"
 "PO-Revision-Date: 2024-07-13 15:09+0000\n"
 "Last-Translator: Lilian THOMAS <lilian.thomas@zaclys.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/konbucase/fr/"
@@ -21,6 +21,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.7-dev\n"
+
+#: data/resources/gtk/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/gtk/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -72,37 +87,13 @@ msgstr "Vue des application en mode clair"
 msgid "App window in the dark mode"
 msgstr "Vue des applications en mode sombre"
 
-#: data/resources/ui/main-window.blp:30
-msgid "Main Menu"
-msgstr "Menu principal"
-
-#: data/resources/ui/main-window.blp:46
-#, fuzzy
-#| msgid "Convert from:"
-msgid "Convert _From:"
-msgstr "Convertir depuis :"
-
-#: data/resources/ui/main-window.blp:58
-#, fuzzy
-#| msgid "Convert to:"
-msgid "Convert _To:"
-msgstr "Convertir en :"
-
-#: data/resources/ui/text-pane.blp:7
-msgid "Space separated"
-msgstr "Séparé par des espaces"
-
-#: data/resources/ui/text-pane.blp:54
-msgid "Copy to Clipboard"
-msgstr "Copier dans le presse-papiers"
-
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:128
+#: src/Application.vala:131
 msgid "translator-credits"
 msgstr ""
 
@@ -130,32 +121,58 @@ msgstr "Chaque mot est séparé par un tiret"
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Le premier caractère du premier mot de la phrase est en majuscule"
 
-#: src/View/MainWindow.vala:38
+#: src/View/MainWindow.vala:23
 msgid "S_ystem"
 msgstr "S_ystème"
 
-#: src/View/MainWindow.vala:39
+#: src/View/MainWindow.vala:24
 msgid "_Light"
 msgstr "_Clair"
 
-#: src/View/MainWindow.vala:40
+#: src/View/MainWindow.vala:25
 msgid "_Dark"
 msgstr "_Sombre"
 
-#: src/View/MainWindow.vala:43
+#: src/View/MainWindow.vala:28
 msgid "_Style"
 msgstr "_Style"
 
+#: src/View/MainWindow.vala:29
+msgid "Keyboard Shortcuts"
+msgstr ""
+
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
-#: src/View/MainWindow.vala:47
+#: src/View/MainWindow.vala:33
 #, fuzzy
 #| msgid "KonbuCase"
 msgid "_About KonbuCase"
 msgstr "KonbuCase"
 
-#: src/View/MainWindow.vala:80
+#: src/View/MainWindow.vala:37
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: src/View/MainWindow.vala:52
+#, fuzzy
+#| msgid "Convert from:"
+msgid "Convert _From:"
+msgstr "Convertir depuis :"
+
+#: src/View/MainWindow.vala:62
+#, fuzzy
+#| msgid "Convert to:"
+msgid "Convert _To:"
+msgstr "Convertir en :"
+
+#: src/View/MainWindow.vala:114
 msgid "Text copied!"
 msgstr ""
+
+#~ msgid "Space separated"
+#~ msgstr "Séparé par des espaces"
+
+#~ msgid "Copy to Clipboard"
+#~ msgstr "Copier dans le presse-papiers"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
