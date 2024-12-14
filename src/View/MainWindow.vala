@@ -40,7 +40,7 @@ public class MainWindow : Adw.ApplicationWindow {
             primary = true
         };
 
-        var header = new Gtk.HeaderBar ();
+        var header = new Adw.HeaderBar ();
         header.pack_end (menu_button);
 
         var source_model = new TextPaneModel (Define.TextType.SOURCE);
@@ -64,20 +64,20 @@ public class MainWindow : Adw.ApplicationWindow {
             false
         );
 
-        var contnet_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        contnet_box.append (source_pane);
-        contnet_box.append (separator);
-        contnet_box.append (result_pane);
-
-        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        main_box.append (header);
-        main_box.append (contnet_box);
+        var content_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        content_box.append (source_pane);
+        content_box.append (separator);
+        content_box.append (result_pane);
 
         overlay = new Adw.ToastOverlay () {
-            child = main_box
+            child = content_box
         };
 
-        content = overlay;
+        var toolbar_view = new Adw.ToolbarView ();
+        toolbar_view.add_top_bar (header);
+        toolbar_view.set_content (overlay);
+
+        content = toolbar_view;
         width_request = 700;
         height_request = 500;
 
