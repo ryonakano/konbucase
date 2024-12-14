@@ -21,12 +21,12 @@
   </description>
 
   <screenshots>
-    <screenshot type="default">
+    <screenshot type="default" environment="@DE@">
       <caption>App window in the light mode</caption>
       <image>https://raw.githubusercontent.com/ryonakano/konbucase/@VERSION@/data/screenshots/@DE@/screenshot-light.png</image>
     </screenshot>
 
-    <screenshot>
+    <screenshot environment="@DE@:dark">
       <caption>App window in the dark mode</caption>
       <image>https://raw.githubusercontent.com/ryonakano/konbucase/@VERSION@/data/screenshots/@DE@/screenshot-dark.png</image>
     </screenshot>
