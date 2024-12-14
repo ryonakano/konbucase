@@ -1,4 +1,4 @@
-data/resources/gtk/help-overlay.ui
+data/resources/gtk/help-overlay.blp
 data/konbucase.desktop.in.in
 data/konbucase.metainfo.xml.in.in
 src/Application.vala
