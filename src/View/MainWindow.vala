@@ -20,9 +20,9 @@ public class MainWindow : Adw.ApplicationWindow {
         }
 
         var style_submenu = new Menu ();
-        style_submenu.append (_("S_ystem"), "app.color-scheme(\"default\")");
-        style_submenu.append (_("_Light"), "app.color-scheme(\"force-light\")");
-        style_submenu.append (_("_Dark"), "app.color-scheme(\"force-dark\")");
+        style_submenu.append (_("S_ystem"), "app.color-scheme('default')");
+        style_submenu.append (_("_Light"), "app.color-scheme('force-light')");
+        style_submenu.append (_("_Dark"), "app.color-scheme('force-dark')");
 
         var main_menu = new Menu ();
         main_menu.append_submenu (_("_Style"), style_submenu);
