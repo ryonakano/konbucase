@@ -1,8 +1,6 @@
 data/resources/gtk/help-overlay.ui
 data/konbucase.desktop.in.in
 data/konbucase.metainfo.xml.in.in
-data/resources/ui/main-window.blp
-data/resources/ui/text-pane.blp
 src/Application.vala
 src/Model/TextPaneModel.vala
 src/View/MainWindow.vala

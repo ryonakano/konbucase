@@ -1,7 +1,5 @@
 blueprints = custom_target('blueprints',
     input: files(
-        'ui/text-pane.blp',
-        'ui/main-window.blp',
         'gtk/help-overlay.blp',
     ),
     output: '.',
