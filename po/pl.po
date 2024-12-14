@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-14 23:12+0900\n"
+"POT-Creation-Date: 2024-12-14 23:16+0900\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/konbucase/pl/"
@@ -167,11 +167,13 @@ msgstr "Konwertuj do:"
 msgid "Text copied!"
 msgstr "Skopiowano tekst!"
 
-#~ msgid "Space separated"
-#~ msgstr "Oddzielone spacją"
+#: src/View/TextPane.vala:29
+msgid "Space separated"
+msgstr "Oddzielone spacją"
 
-#~ msgid "Copy to Clipboard"
-#~ msgstr "Kopiuj do schowka"
+#: src/View/TextPane.vala:48
+msgid "Copy to Clipboard"
+msgstr "Kopiuj do schowka"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

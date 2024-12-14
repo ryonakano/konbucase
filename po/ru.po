@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-14 23:12+0900\n"
+"POT-Creation-Date: 2024-12-14 23:16+0900\n"
 "PO-Revision-Date: 2024-05-08 13:49+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -160,11 +160,13 @@ msgstr "Конвертировать в:"
 msgid "Text copied!"
 msgstr "Текст скопирован!"
 
-#~ msgid "Space separated"
-#~ msgstr "Разделённые пробелом"
+#: src/View/TextPane.vala:29
+msgid "Space separated"
+msgstr "Разделённые пробелом"
 
-#~ msgid "Copy to Clipboard"
-#~ msgstr "Копировать"
+#: src/View/TextPane.vala:48
+msgid "Copy to Clipboard"
+msgstr "Копировать"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
