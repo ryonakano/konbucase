@@ -4,3 +4,4 @@ data/konbucase.metainfo.xml.in.in
 src/Application.vala
 src/Model/TextPaneModel.vala
 src/View/MainWindow.vala
+src/View/TextPane.vala
