@@ -4,15 +4,15 @@ runtime-version: '8'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.konbucase.Devel
 finish-args:
-  - '--share=ipc'
-  - '--socket=wayland'
-  - '--socket=fallback-x11'
-  - '--device=dri'
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
 modules:
   - name: blueprint-compiler
     buildsystem: meson
     cleanup:
-      - "*"
+      - '*'
     sources:
       - type: archive
         url: https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.12.0/blueprint-compiler-v0.12.0.tar.gz
@@ -28,9 +28,9 @@ modules:
   - name: konbucase
     buildsystem: meson
     config-opts:
-      - '-Duse_submodule=false'
-      - '-Dgranite=enabled'
-      - '-Ddevelopment=true'
+      - -Duse_submodule=false
+      - -Dgranite=enabled
+      - -Ddevelopment=true
     sources:
       - type: dir
         path: ../../
