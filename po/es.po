@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-14 23:16+0900\n"
-"PO-Revision-Date: 2024-05-08 13:49+0000\n"
+"PO-Revision-Date: 2024-12-18 10:07+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/konbucase/"
 "es/>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.4-rc\n"
+"X-Generator: Weblate 5.9.2-dev\n"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Métodos abreviados del teclado"
 
 #: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Salir"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -78,11 +78,11 @@ msgstr ""
 
 #: data/konbucase.metainfo.xml.in.in:25
 msgid "App window in the light mode"
-msgstr "Ventana de la aplicación en modo claro."
+msgstr "Ventana de la aplicación en modo claro"
 
 #: data/konbucase.metainfo.xml.in.in:30
 msgid "App window in the dark mode"
-msgstr "Ventana de la aplicación en modo oscuro."
+msgstr "Ventana de la aplicación en modo oscuro"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -92,7 +92,7 @@ msgstr "Ventana de la aplicación en modo oscuro."
 #. John Doe https://example.com
 #: src/Application.vala:131
 msgid "translator-credits"
-msgstr ""
+msgstr "Óscar Fernández Díaz <oscfdezdz@tuta.io>"
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
@@ -137,7 +137,7 @@ msgstr "_Estilo"
 
 #: src/View/MainWindow.vala:29
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Teclas de acceso rápido"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: src/View/MainWindow.vala:33
