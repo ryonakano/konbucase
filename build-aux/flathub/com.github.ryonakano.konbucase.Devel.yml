@@ -14,16 +14,18 @@ modules:
     cleanup:
       - '*'
     sources:
-      - type: archive
-        url: https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.12.0/blueprint-compiler-v0.12.0.tar.gz
-        sha256: 6dbb4ea851cec164030abded5949ea77ff92032e23527e1c0597d7efe0c36a81
+      - type: git
+        url: https://gitlab.gnome.org/jwestman/blueprint-compiler.git
+        tag: v0.12.0
+        commit: 66b43c36cf1017c878762007373964a096b3d2a5
 
   - name: chcase
     buildsystem: meson
     sources:
-      - type: archive
-        url: https://github.com/ryonakano/chcase/archive/refs/tags/2.3.0.tar.gz
-        sha256: c1bdc394bdf8f782882d311f3c66a1ed768c7f1345eabc049e548ff9ae69ad37
+      - type: git
+        url: https://github.com/ryonakano/chcase.git
+        tag: 2.3.0
+        commit: e1c664fdd8bded036fa1ce60747e1f92f889c2c4
 
   - name: konbucase
     buildsystem: meson
