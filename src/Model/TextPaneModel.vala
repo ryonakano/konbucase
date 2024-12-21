@@ -92,12 +92,11 @@ public class TextPaneModel : Object {
             "gtk-application-prefer-dark-theme",
             buffer, "style-scheme",
             BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-            (binding, from_value, ref to_value) => {
-                var prefer_dark = (bool) from_value;
-                if (prefer_dark) {
-                    to_value.set_object (style_scheme_manager.get_scheme ("solarized-dark"));
+            (binding, prefer_dark, ref style_scheme) => {
+                if ((bool) prefer_dark) {
+                    style_scheme = style_scheme_manager.get_scheme ("solarized-dark");
                 } else {
-                    to_value.set_object (style_scheme_manager.get_scheme ("solarized-light"));
+                    style_scheme = style_scheme_manager.get_scheme ("solarized-light");
                 }
 
                 return true;

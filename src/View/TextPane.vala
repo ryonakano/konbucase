@@ -83,14 +83,13 @@ public class TextPane : Gtk.Box {
             copy_button_clicked ();
         });
 
-        // Make copy button insensitive when text is blank
+        // Make copy button only sensitive when there are texts to copy
         model.bind_property (
             "text",
             copy_clipboard_button, "sensitive",
             BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-            (binding, from_value, ref to_value) => {
-                var text = (string) from_value;
-                to_value.set_boolean (text != "");
+            (binding, text, ref sensitive) => {
+                sensitive = ((string) text).length > 0;
                 return true;
             }
         );
