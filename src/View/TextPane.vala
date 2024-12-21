@@ -32,7 +32,6 @@ public class TextPane : Gtk.Box {
         var case_dropdown = new Gtk.DropDown (model.case_listmodel, model.l10n_case_expression) {
             list_factory = case_list_factory
         };
-        case_dropdown.selected = model.case_type;
 
         var case_label = new Gtk.Label (header_label) {
             use_underline = true,
@@ -68,9 +67,15 @@ public class TextPane : Gtk.Box {
         append (toolbar);
         append (scrolled);
 
-        case_dropdown.notify["selected"].connect (() => {
-            model.case_type = (Define.CaseType) case_dropdown.selected;
+        model.bind_property (
+            "case-type",
+            case_dropdown, "selected",
+            BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
+            case_to_selected,
+            selected_to_case
+        );
 
+        case_dropdown.notify["selected"].connect (() => {
             dropdown_changed ();
         });
 
@@ -108,5 +113,40 @@ public class TextPane : Gtk.Box {
 
         row.title.label = _(model.name);
         row.description.label = _(model.description);
+    }
+
+    private bool case_to_selected (Binding binding, Value case_type, ref Value selected) {
+        uint pos;
+
+        bool found = model.case_listmodel.find_with_equal_func (
+            // Find with case type
+            new CaseListItemModel ((Define.CaseType) case_type, "", ""),
+            (a, b) => {
+                return ((CaseListItemModel) a).case_type == ((CaseListItemModel) b).case_type;
+            },
+            out pos
+        );
+
+        if (!found) {
+            return false;
+        }
+
+        selected.set_uint (pos);
+        return true;
+    }
+
+    private bool selected_to_case (Binding binding, Value selected, ref Value case_type) {
+        // No item is selected
+        if (selected == Gtk.INVALID_LIST_POSITION) {
+            return false;
+        }
+
+        var selected_item = model.case_listmodel.get_item ((uint) selected) as CaseListItemModel;
+        if (selected_item == null) {
+            return false;
+        }
+
+        case_type.set_enum (selected_item.case_type);
+        return true;
     }
 }
