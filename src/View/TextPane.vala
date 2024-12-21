@@ -29,7 +29,7 @@ public class TextPane : Gtk.Box {
         case_list_factory.bind.connect (case_list_factory_bind);
         case_list_factory.setup.connect (case_list_factory_setup);
 
-        var case_dropdown = new Gtk.DropDown (model.case_model, model.l10n_case_expression) {
+        var case_dropdown = new Gtk.DropDown (model.case_listmodel, model.l10n_case_expression) {
             list_factory = case_list_factory
         };
         case_dropdown.selected = model.case_type;
@@ -94,32 +94,6 @@ public class TextPane : Gtk.Box {
         source_view.grab_focus ();
     }
 
-    private class DropDownRow : Gtk.Box {
-        public Gtk.Label title { get; set; }
-        public Gtk.Label description { get; set; }
-
-        public DropDownRow () {
-        }
-
-        construct {
-            orientation = Gtk.Orientation.VERTICAL;
-            spacing = 2;
-
-            title = new Gtk.Label (null) {
-                halign = Gtk.Align.START
-            };
-            title.add_css_class ("heading");
-
-            description = new Gtk.Label (null) {
-                halign = Gtk.Align.START
-            };
-            description.add_css_class ("dim-label");
-
-            append (title);
-            append (description);
-        }
-    }
-
     private void case_list_factory_setup (Object object) {
         var item = object as Gtk.ListItem;
 
@@ -129,7 +103,7 @@ public class TextPane : Gtk.Box {
 
     private void case_list_factory_bind (Object object) {
         var item = object as Gtk.ListItem;
-        var model = item.item as CaseModel;
+        var model = item.item as CaseListItemModel;
         var row = item.child as DropDownRow;
 
         row.title.label = _(model.name);

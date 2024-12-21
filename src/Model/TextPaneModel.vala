@@ -3,22 +3,8 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class CaseModel : Object {
-    public string case_type { get; construct; }
-    public string name { get; construct; }
-    public string description { get; construct; }
-
-    public CaseModel (string case_type, string name, string description) {
-        Object (
-            case_type: case_type,
-            name: name,
-            description: description
-        );
-    }
-}
-
 public class TextPaneModel : Object {
-    public ListStore case_model { get; private set; }
+    public ListStore case_listmodel { get; private set; }
     public Gtk.CClosureExpression l10n_case_expression { get; private set; }
 
     public Define.TextType text_type { get; construct; }
@@ -85,14 +71,14 @@ public class TextPaneModel : Object {
     }
 
     construct {
-        case_model = new ListStore (typeof (CaseModel));
+        case_listmodel = new ListStore (typeof (CaseListItemModel));
         foreach (unowned var type in CASE_TYPE_DATA_TBL) {
-            var item = new CaseModel (type.case_type.to_string (), type.name, type.description);
-            case_model.append (item);
+            var item = new CaseListItemModel (type.case_type.to_string (), type.name, type.description);
+            case_listmodel.append (item);
         }
 
         var case_expression = new Gtk.PropertyExpression (
-            typeof (CaseModel), null, "name"
+            typeof (CaseListItemModel), null, "name"
         );
         l10n_case_expression = new Gtk.CClosureExpression (typeof (string), null, { case_expression },
             (Callback) localize_str,
