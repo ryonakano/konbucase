@@ -32,10 +32,12 @@ else
 endif
 
 sources = files(
+    'Model/CaseListItemModel.vala',
     'Model/MainWindowModel.vala',
     'Model/TextPaneModel.vala',
     'View/MainWindow.vala',
     'View/TextPane.vala',
+    'Widget/DropDownRow.vala',
     'Application.vala',
     'Define.vala',
     'Util.vala',

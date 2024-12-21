@@ -6,7 +6,8 @@
 public class TextPaneModel : Object {
     public Define.TextType text_type { get; construct; }
     public Define.CaseType case_type { get; set; }
-    public string case_description { get; set; }
+    public ListStore case_listmodel { get; construct; }
+    public Gtk.CClosureExpression l10n_case_expression { get; construct; }
     public GtkSource.Buffer buffer { get; private set; }
     public string text { get; set; }
 
@@ -24,18 +25,6 @@ public class TextPaneModel : Object {
         { "result-case-type", "result-text" }, // Define.TextType.RESULT
     };
 
-    private struct CaseTypeData {
-        string description;
-    }
-    private const CaseTypeData[] CASE_TYPE_DATA_TBL = {
-        { N_("Each word is separated by a space") }, // Define.CaseType.SPACE_SEPARATED
-        { N_("The first character of compound words is in lowercase") }, // Define.CaseType.CAMEL
-        { N_("The first character of compound words is in uppercase") }, // Define.CaseType.PASCAL
-        { N_("Each word is separated by an underscore") }, // Define.CaseType.SNAKE
-        { N_("Each word is separated by a hyphen") }, // Define.CaseType.KEBAB
-        { N_("The first character of the first word in the sentence is in uppercase") }, // Define.CaseType.SENTENCE
-    };
-
     public TextPaneModel (Define.TextType text_type) {
         Object (
             text_type: text_type
@@ -44,6 +33,47 @@ public class TextPaneModel : Object {
 
     construct {
         case_type = (Define.CaseType) Application.settings.get_enum (TEXT_TYPE_DATA_TABLE[text_type].key_case_type);
+
+        case_listmodel = new ListStore (typeof (CaseListItemModel));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.SPACE_SEPARATED,
+            N_("Space separated"),
+            N_("Each word is separated by a space")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.CAMEL,
+            "camelCase",
+            N_("The first character of compound words is in lowercase")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.PASCAL,
+            "PascalCase",
+            N_("The first character of compound words is in uppercase")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.SNAKE,
+            "snake_case",
+            N_("Each word is separated by an underscore")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.KEBAB,
+            "kebab-case",
+            N_("Each word is separated by a hyphen")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.SENTENCE,
+            "Sentence case",
+            N_("The first character of the first word in the sentence is in uppercase")
+        ));
+
+        var case_expression = new Gtk.PropertyExpression (
+            typeof (CaseListItemModel), null, "name"
+        );
+        l10n_case_expression = new Gtk.CClosureExpression (
+            typeof (string), null, { case_expression },
+            (Callback) localize_str,
+            null, null
+        );
 
         buffer = new GtkSource.Buffer (null);
 
@@ -71,18 +101,12 @@ public class TextPaneModel : Object {
 
         Application.settings.bind (TEXT_TYPE_DATA_TABLE[text_type].key_text, this, "text", SettingsBindFlags.DEFAULT);
 
-        bind_property (
-            "case-type", this, "case-description",
-            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-            (binding, from_value, ref to_value) => {
-                var case_type = (Define.CaseType) from_value;
-                to_value.set_string (_(CASE_TYPE_DATA_TBL[case_type].description));
-                return true;
-            }
-        );
-
         notify["case-type"].connect (() => {
             Application.settings.set_enum (TEXT_TYPE_DATA_TABLE[text_type].key_case_type, case_type);
         });
+    }
+
+    private string localize_str (string str) {
+        return _(str);
     }
 }
