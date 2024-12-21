@@ -27,38 +27,38 @@ public class TextPaneModel : Object {
     };
 
     private struct CaseTypeData {
-        ChCase.Case case_type;
+        Define.CaseType case_type;
         string name;
         string description;
     }
     private const CaseTypeData[] CASE_TYPE_DATA_TBL = {
         {
-            ChCase.Case.SPACE_SEPARATED,
+            Define.CaseType.SPACE_SEPARATED,
             N_("Space separated"),
             N_("Each word is separated by a space")
         },
         {
-            ChCase.Case.CAMEL,
+            Define.CaseType.CAMEL,
             "camelCase",
             N_("The first character of compound words is in lowercase")
         },
         {
-            ChCase.Case.PASCAL,
+            Define.CaseType.PASCAL,
             "PascalCase",
             N_("The first character of compound words is in uppercase")
         },
         {
-            ChCase.Case.SNAKE,
+            Define.CaseType.SNAKE,
             "snake_case",
             N_("Each word is separated by an underscore")
         },
         {
-            ChCase.Case.KEBAB,
+            Define.CaseType.KEBAB,
             "kebab-case",
             N_("Each word is separated by a hyphen")
         },
         {
-            ChCase.Case.SENTENCE,
+            Define.CaseType.SENTENCE,
             "Sentence case",
             N_("The first character of the first word in the sentence is in uppercase")
         },
@@ -73,7 +73,7 @@ public class TextPaneModel : Object {
     construct {
         case_listmodel = new ListStore (typeof (CaseListItemModel));
         foreach (unowned var type in CASE_TYPE_DATA_TBL) {
-            var item = new CaseListItemModel (type.case_type.to_string (), type.name, type.description);
+            var item = new CaseListItemModel (type.case_type, type.name, type.description);
             case_listmodel.append (item);
         }
 
