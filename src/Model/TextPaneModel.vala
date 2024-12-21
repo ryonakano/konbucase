@@ -19,7 +19,7 @@ public class CaseModel : Object {
 
 public class TextPaneModel : Object {
     public ListStore case_model { get; private set; }
-    public Gtk.PropertyExpression case_expression { get; private set; }
+    public Gtk.CClosureExpression l10n_case_expression { get; private set; }
 
     public Define.TextType text_type { get; construct; }
     public Define.CaseType case_type { get; set; }
@@ -92,8 +92,12 @@ public class TextPaneModel : Object {
             case_model.append (item);
         }
 
-        case_expression = new Gtk.PropertyExpression (
-            typeof (CaseModel), null, "case-type"
+        var case_expression = new Gtk.PropertyExpression (
+            typeof (CaseModel), null, "name"
+        );
+        l10n_case_expression = new Gtk.CClosureExpression (typeof (string), null, { case_expression },
+            (Callback) localize_str,
+            null, null
         );
 
         case_type = (Define.CaseType) Application.settings.get_enum (TEXT_TYPE_DATA_TABLE[text_type].key_case_type);
@@ -137,5 +141,9 @@ public class TextPaneModel : Object {
         notify["case-type"].connect (() => {
             Application.settings.set_enum (TEXT_TYPE_DATA_TABLE[text_type].key_case_type, case_type);
         });
+    }
+
+    private string localize_str (string str) {
+        return _(str);
     }
 }
