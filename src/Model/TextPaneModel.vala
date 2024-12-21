@@ -3,7 +3,24 @@
  * SPDX-FileCopyrightText: 2020-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+public class CaseModel : Object {
+    public string case_type { get; construct; }
+    public string name { get; construct; }
+    public string description { get; construct; }
+
+    public CaseModel (string case_type, string name, string description) {
+        Object (
+            case_type: case_type,
+            name: name,
+            description: description
+        );
+    }
+}
+
 public class TextPaneModel : Object {
+    public ListStore case_model { get; private set; }
+    public Gtk.PropertyExpression case_expression { get; private set; }
+
     public Define.TextType text_type { get; construct; }
     public Define.CaseType case_type { get; set; }
     public string case_description { get; set; }
@@ -25,15 +42,41 @@ public class TextPaneModel : Object {
     };
 
     private struct CaseTypeData {
+        ChCase.Case case_type;
+        string name;
         string description;
     }
     private const CaseTypeData[] CASE_TYPE_DATA_TBL = {
-        { N_("Each word is separated by a space") }, // Define.CaseType.SPACE_SEPARATED
-        { N_("The first character of compound words is in lowercase") }, // Define.CaseType.CAMEL
-        { N_("The first character of compound words is in uppercase") }, // Define.CaseType.PASCAL
-        { N_("Each word is separated by an underscore") }, // Define.CaseType.SNAKE
-        { N_("Each word is separated by a hyphen") }, // Define.CaseType.KEBAB
-        { N_("The first character of the first word in the sentence is in uppercase") }, // Define.CaseType.SENTENCE
+        {
+            ChCase.Case.SPACE_SEPARATED,
+            N_("Space separated"),
+            N_("Each word is separated by a space")
+        },
+        {
+            ChCase.Case.CAMEL,
+            "camelCase",
+            N_("The first character of compound words is in lowercase")
+        },
+        {
+            ChCase.Case.PASCAL,
+            "PascalCase",
+            N_("The first character of compound words is in uppercase")
+        },
+        {
+            ChCase.Case.SNAKE,
+            "snake_case",
+            N_("Each word is separated by an underscore")
+        },
+        {
+            ChCase.Case.KEBAB,
+            "kebab-case",
+            N_("Each word is separated by a hyphen")
+        },
+        {
+            ChCase.Case.SENTENCE,
+            "Sentence case",
+            N_("The first character of the first word in the sentence is in uppercase")
+        },
     };
 
     public TextPaneModel (Define.TextType text_type) {
@@ -43,6 +86,16 @@ public class TextPaneModel : Object {
     }
 
     construct {
+        case_model = new ListStore (typeof (CaseModel));
+        foreach (unowned var type in CASE_TYPE_DATA_TBL) {
+            var item = new CaseModel (type.case_type.to_string (), type.name, type.description);
+            case_model.append (item);
+        }
+
+        case_expression = new Gtk.PropertyExpression (
+            typeof (CaseModel), null, "case-type"
+        );
+
         case_type = (Define.CaseType) Application.settings.get_enum (TEXT_TYPE_DATA_TABLE[text_type].key_case_type);
 
         buffer = new GtkSource.Buffer (null);

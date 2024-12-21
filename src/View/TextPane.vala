@@ -25,14 +25,7 @@ public class TextPane : Gtk.Box {
         orientation = Gtk.Orientation.VERTICAL;
         spacing = 0;
 
-        var case_dropdown = new Gtk.DropDown.from_strings ({
-            _("Space separated"),
-            "camelCase",
-            "PascalCase",
-            "snake_case",
-            "kebab-case",
-            "Sentence case",
-        });
+        var case_dropdown = new Gtk.DropDown (model.case_model, model.case_expression);
         case_dropdown.selected = model.case_type;
 
         var case_label = new Gtk.Label (header_label) {
