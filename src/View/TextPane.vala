@@ -39,10 +39,6 @@ public class TextPane : Gtk.Box {
             mnemonic_widget = case_dropdown
         };
 
-        var case_info_button_icon = new Gtk.Image.from_icon_name ("dialog-information-symbolic") {
-            tooltip_text = model.case_description
-        };
-
         var copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
             tooltip_text = _("Copy to Clipboard")
         };
@@ -56,7 +52,6 @@ public class TextPane : Gtk.Box {
         };
         toolbar.append (case_label);
         toolbar.append (case_dropdown);
-        toolbar.append (case_info_button_icon);
         toolbar.append (copy_clipboard_button);
 
         source_view = new GtkSource.View.with_buffer (model.buffer) {

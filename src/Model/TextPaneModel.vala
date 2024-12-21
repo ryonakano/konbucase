@@ -23,7 +23,6 @@ public class TextPaneModel : Object {
 
     public Define.TextType text_type { get; construct; }
     public Define.CaseType case_type { get; set; }
-    public string case_description { get; set; }
     public GtkSource.Buffer buffer { get; private set; }
     public string text { get; set; }
 
@@ -127,16 +126,6 @@ public class TextPaneModel : Object {
         );
 
         Application.settings.bind (TEXT_TYPE_DATA_TABLE[text_type].key_text, this, "text", SettingsBindFlags.DEFAULT);
-
-        bind_property (
-            "case-type", this, "case-description",
-            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-            (binding, from_value, ref to_value) => {
-                var case_type = (Define.CaseType) from_value;
-                to_value.set_string (_(CASE_TYPE_DATA_TBL[case_type].description));
-                return true;
-            }
-        );
 
         notify["case-type"].connect (() => {
             Application.settings.set_enum (TEXT_TYPE_DATA_TABLE[text_type].key_case_type, case_type);
