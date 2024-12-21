@@ -26,44 +26,6 @@ public class TextPaneModel : Object {
         { "result-case-type", "result-text" }, // Define.TextType.RESULT
     };
 
-    private struct CaseTypeData {
-        Define.CaseType case_type;
-        string name;
-        string description;
-    }
-    private const CaseTypeData[] CASE_TYPE_DATA_TBL = {
-        {
-            Define.CaseType.SPACE_SEPARATED,
-            N_("Space separated"),
-            N_("Each word is separated by a space")
-        },
-        {
-            Define.CaseType.CAMEL,
-            "camelCase",
-            N_("The first character of compound words is in lowercase")
-        },
-        {
-            Define.CaseType.PASCAL,
-            "PascalCase",
-            N_("The first character of compound words is in uppercase")
-        },
-        {
-            Define.CaseType.SNAKE,
-            "snake_case",
-            N_("Each word is separated by an underscore")
-        },
-        {
-            Define.CaseType.KEBAB,
-            "kebab-case",
-            N_("Each word is separated by a hyphen")
-        },
-        {
-            Define.CaseType.SENTENCE,
-            "Sentence case",
-            N_("The first character of the first word in the sentence is in uppercase")
-        },
-    };
-
     public TextPaneModel (Define.TextType text_type) {
         Object (
             text_type: text_type
@@ -72,10 +34,36 @@ public class TextPaneModel : Object {
 
     construct {
         case_listmodel = new ListStore (typeof (CaseListItemModel));
-        foreach (unowned var type in CASE_TYPE_DATA_TBL) {
-            var item = new CaseListItemModel (type.case_type, type.name, type.description);
-            case_listmodel.append (item);
-        }
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.SPACE_SEPARATED,
+            N_("Space separated"),
+            N_("Each word is separated by a space")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.CAMEL,
+            "camelCase",
+            N_("The first character of compound words is in lowercase")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.PASCAL,
+            "PascalCase",
+            N_("The first character of compound words is in uppercase")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.SNAKE,
+            "snake_case",
+            N_("Each word is separated by an underscore")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.KEBAB,
+            "kebab-case",
+            N_("Each word is separated by a hyphen")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.SENTENCE,
+            "Sentence case",
+            N_("The first character of the first word in the sentence is in uppercase")
+        ));
 
         var case_expression = new Gtk.PropertyExpression (
             typeof (CaseListItemModel), null, "name"
