@@ -8,7 +8,7 @@ public class TextPaneModel : Object {
     public Define.CaseType case_type { get; set; }
     public ListStore case_listmodel { get; construct; }
     public Gtk.CClosureExpression l10n_case_expression { get; construct; }
-    public GtkSource.Buffer buffer { get; private set; }
+    public GtkSource.Buffer buffer { get; construct; }
     public string text { get; set; }
 
     private GtkSource.StyleSchemeManager style_scheme_manager;
@@ -81,11 +81,16 @@ public class TextPaneModel : Object {
         gtk_settings = Gtk.Settings.get_default ();
 
         // Sync with buffer text
-        buffer.bind_property ("text", this, "text", BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE);
+        buffer.bind_property (
+            "text",
+            this, "text",
+            BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE
+        );
 
         // Apply theme changes to the source view
         gtk_settings.bind_property (
-            "gtk-application-prefer-dark-theme", buffer, "style-scheme",
+            "gtk-application-prefer-dark-theme",
+            buffer, "style-scheme",
             BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
             (binding, from_value, ref to_value) => {
                 var prefer_dark = (bool) from_value;
