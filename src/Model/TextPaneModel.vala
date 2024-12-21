@@ -4,11 +4,10 @@
  */
 
 public class TextPaneModel : Object {
-    public ListStore case_listmodel { get; private set; }
-    public Gtk.CClosureExpression l10n_case_expression { get; private set; }
-
     public Define.TextType text_type { get; construct; }
     public Define.CaseType case_type { get; set; }
+    public ListStore case_listmodel { get; construct; }
+    public Gtk.CClosureExpression l10n_case_expression { get; construct; }
     public GtkSource.Buffer buffer { get; private set; }
     public string text { get; set; }
 
@@ -33,6 +32,8 @@ public class TextPaneModel : Object {
     }
 
     construct {
+        case_type = (Define.CaseType) Application.settings.get_enum (TEXT_TYPE_DATA_TABLE[text_type].key_case_type);
+
         case_listmodel = new ListStore (typeof (CaseListItemModel));
         case_listmodel.append (new CaseListItemModel (
             Define.CaseType.SPACE_SEPARATED,
@@ -68,12 +69,11 @@ public class TextPaneModel : Object {
         var case_expression = new Gtk.PropertyExpression (
             typeof (CaseListItemModel), null, "name"
         );
-        l10n_case_expression = new Gtk.CClosureExpression (typeof (string), null, { case_expression },
+        l10n_case_expression = new Gtk.CClosureExpression (
+            typeof (string), null, { case_expression },
             (Callback) localize_str,
             null, null
         );
-
-        case_type = (Define.CaseType) Application.settings.get_enum (TEXT_TYPE_DATA_TABLE[text_type].key_case_type);
 
         buffer = new GtkSource.Buffer (null);
 
