@@ -35,15 +35,37 @@ public class Application : Adw.Application {
             "color-scheme", VariantType.STRING, new Variant.string (Define.ColorScheme.DEFAULT)
         );
         style_action.bind_property (
-            "state", style_manager, "color-scheme",
+            "state",
+            style_manager, "color-scheme",
             BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
-            Util.style_action_transform_to_cb,
-            Util.style_action_transform_from_cb
+            (binding, state_scheme, ref adw_scheme) => {
+                Variant? state_scheme_dup = state_scheme.dup_variant ();
+                if (state_scheme_dup == null) {
+                    warning ("Failed to Variant.dup_variant");
+                    return false;
+                }
+
+                adw_scheme = Util.to_adw_scheme ((string) state_scheme_dup);
+                return true;
+            },
+            (binding, adw_scheme, ref state_scheme) => {
+                string str_scheme = Util.to_str_scheme ((Adw.ColorScheme) adw_scheme);
+                state_scheme = new Variant.string (str_scheme);
+                return true;
+            }
         );
         settings.bind_with_mapping (
-            "color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
-            Util.color_scheme_get_mapping_cb,
-            Util.color_scheme_set_mapping_cb,
+            "color-scheme",
+            style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
+            (adw_scheme, gschema_scheme, user_data) => {
+                adw_scheme = Util.to_adw_scheme ((string) gschema_scheme);
+                return true;
+            },
+            (adw_scheme, expected_type, user_data) => {
+                string str_scheme = Util.to_str_scheme ((Adw.ColorScheme) adw_scheme);
+                Variant gschema_scheme = new Variant.string (str_scheme);
+                return gschema_scheme;
+            },
             null, null
         );
         add_action (style_action);
