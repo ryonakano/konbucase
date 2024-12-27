@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-14 23:16+0900\n"
-"PO-Revision-Date: 2024-05-07 01:07+0000\n"
+"PO-Revision-Date: 2024-12-28 15:00+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase/"
 "tr/>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.4-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Genel"
 
 #: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Klavye Kısayolları"
 
 #: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Çık"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -139,7 +139,7 @@ msgstr "_Biçem"
 
 #: src/View/MainWindow.vala:29
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klavye Kısayolları"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: src/View/MainWindow.vala:33
