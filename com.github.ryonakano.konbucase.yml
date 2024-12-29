@@ -1,4 +1,4 @@
-app-id: com.github.ryonakano.konbucase
+id: com.github.ryonakano.konbucase
 runtime: io.elementary.Platform
 runtime-version: '8'
 sdk: io.elementary.Sdk

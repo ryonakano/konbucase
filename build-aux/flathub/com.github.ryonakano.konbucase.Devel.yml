@@ -1,4 +1,4 @@
-app-id: com.github.ryonakano.konbucase.Devel
+id: com.github.ryonakano.konbucase.Devel
 runtime: org.gnome.Platform
 runtime-version: '47'
 sdk: org.gnome.Sdk
