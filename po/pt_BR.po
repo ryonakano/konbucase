@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-14 23:16+0900\n"
-"PO-Revision-Date: 2025-01-12 21:26+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2025-01-12 21:41+0000\n"
+"Last-Translator: John Peter Sa <johnppetersa@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
 "konbucase/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -22,17 +22,17 @@ msgstr ""
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Geral"
 
 #: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Atalhos de teclado"
 
 #: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Desistir"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -40,43 +40,49 @@ msgstr "@APP_NAME@"
 
 #: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
-msgstr ""
+msgstr "Aplicativo de conversão de casos"
 
 #: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
-msgstr ""
+msgstr "Converter maiúsculas e minúsculas em seu texto"
 
 #: data/konbucase.desktop.in.in:11
 msgid "Text;"
-msgstr ""
+msgstr "Texto;"
 
 #: data/konbucase.metainfo.xml.in.in:13
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
+"Um pequeno aplicativo de ferramenta de texto que permite converter "
+"maiúsculas e minúsculas em seu texto."
 
 #: data/konbucase.metainfo.xml.in.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "Os recursos incluem:"
 
 #: data/konbucase.metainfo.xml.in.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
+"Clique no botão \"Copiar para a área de transferência\" para copiar todos os "
+"textos na visualização de texto sem selecioná-los"
 
 #: data/konbucase.metainfo.xml.in.in:19
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
+"Converta seu texto entre camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case e separados por espaço"
 
 #: data/konbucase.metainfo.xml.in.in:25
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Janela do aplicativo no modo claro"
 
 #: data/konbucase.metainfo.xml.in.in:30
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Janela do aplicativo no modo escuro"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -86,77 +92,77 @@ msgstr ""
 #. John Doe https://example.com
 #: src/Application.vala:131
 msgid "translator-credits"
-msgstr ""
+msgstr "créditos do tradutor \"johnpetersa <johnppetersa@gmail.com>\""
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
-msgstr ""
+msgstr "Cada palavra é separada por um espaço"
 
 #: src/Model/TextPaneModel.vala:32
 msgid "The first character of compound words is in lowercase"
-msgstr ""
+msgstr "O primeiro personagem das palavras compostas está em minúsculas"
 
 #: src/Model/TextPaneModel.vala:33
 msgid "The first character of compound words is in uppercase"
-msgstr ""
+msgstr "O primeiro personagem das palavras compostas está em maiúsculas"
 
 #: src/Model/TextPaneModel.vala:34
 msgid "Each word is separated by an underscore"
-msgstr ""
+msgstr "Cada palavra é separada por um sublinhado"
 
 #: src/Model/TextPaneModel.vala:35
 msgid "Each word is separated by a hyphen"
-msgstr ""
+msgstr "Cada palavra é separada por um hífen"
 
 #: src/Model/TextPaneModel.vala:36
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr ""
+msgstr "O primeiro personagem da primeira palavra na frase está em maiúsculas"
 
 #: src/View/MainWindow.vala:23
 msgid "S_ystem"
-msgstr ""
+msgstr "Sistema"
 
 #: src/View/MainWindow.vala:24
 msgid "_Light"
-msgstr ""
+msgstr "_Claro"
 
 #: src/View/MainWindow.vala:25
 msgid "_Dark"
-msgstr ""
+msgstr "_Escuro"
 
 #: src/View/MainWindow.vala:28
 msgid "_Style"
-msgstr ""
+msgstr "_Estilo"
 
 #: src/View/MainWindow.vala:29
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Keyboard Atalhos"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: src/View/MainWindow.vala:33
 msgid "_About KonbuCase"
-msgstr ""
+msgstr "_Sobre o KonbuCase"
 
 #: src/View/MainWindow.vala:37
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu Principal"
 
 #: src/View/MainWindow.vala:52
 msgid "Convert _From:"
-msgstr ""
+msgstr "Converter _De:"
 
 #: src/View/MainWindow.vala:62
 msgid "Convert _To:"
-msgstr ""
+msgstr "Converter _Para:"
 
 #: src/View/MainWindow.vala:114
 msgid "Text copied!"
-msgstr ""
+msgstr "Texto copiado!"
 
 #: src/View/TextPane.vala:29
 msgid "Space separated"
-msgstr ""
+msgstr "Espaço separado"
 
 #: src/View/TextPane.vala:48
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Copiar para área de transferência"
