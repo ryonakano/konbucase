@@ -5,13 +5,14 @@
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2022.
 # ssantos <ssantos@web.de>, 2022.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+# John Peter Sa <johnppetersa@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-14 23:16+0900\n"
-"PO-Revision-Date: 2024-05-01 09:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2025-01-13 22:00+0000\n"
+"Last-Translator: John Peter Sa <johnppetersa@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
 "konbucase/pt/>\n"
 "Language: pt\n"
@@ -19,22 +20,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Geral"
 
 #: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Atalhos de teclado"
 
 #: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Desistir"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -121,58 +122,45 @@ msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "O primeiro carácter da primeira palavra da frase está em maiúsculas"
 
 #: src/View/MainWindow.vala:23
-#, fuzzy
-#| msgid "System"
 msgid "S_ystem"
 msgstr "Sistema"
 
 #: src/View/MainWindow.vala:24
-#, fuzzy
-#| msgid "Light"
 msgid "_Light"
-msgstr "Claro"
+msgstr "_Claro"
 
 #: src/View/MainWindow.vala:25
-#, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
-msgstr "Escuro"
+msgstr "_Escuro"
 
 #: src/View/MainWindow.vala:28
-#, fuzzy
 msgid "_Style"
-msgstr "Estilo:"
+msgstr "_Estilo"
 
 #: src/View/MainWindow.vala:29
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Keyboard Atalhos"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: src/View/MainWindow.vala:33
-#, fuzzy
-#| msgid "KonbuCase"
 msgid "_About KonbuCase"
-msgstr "KonbuCase"
+msgstr "_Sobre o KonbuCase"
 
 #: src/View/MainWindow.vala:37
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu Principal"
 
 #: src/View/MainWindow.vala:52
-#, fuzzy
-#| msgid "Convert from:"
 msgid "Convert _From:"
 msgstr "Converter de:"
 
 #: src/View/MainWindow.vala:62
-#, fuzzy
-#| msgid "Convert to:"
 msgid "Convert _To:"
 msgstr "Converter para:"
 
 #: src/View/MainWindow.vala:114
 msgid "Text copied!"
-msgstr ""
+msgstr "Texto copiado!"
 
 #: src/View/TextPane.vala:29
 msgid "Space separated"
