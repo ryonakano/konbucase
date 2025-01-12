@@ -1,7 +1,7 @@
 # Ukrainian translations for com.github.ryonakano.konbucase.
 # Copyright (C) 2020-2024 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
-# Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023, 2024.
+# Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023, 2024, 2025.
 # Artem <artem@molotov.work>, 2022.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-14 23:16+0900\n"
-"PO-Revision-Date: 2024-07-07 20:09+0000\n"
+"PO-Revision-Date: 2025-01-13 22:00+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "uk/>\n"
@@ -19,22 +19,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Загальне"
 
 #: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Комбінації клавіш"
 
 #: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Вихід"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -136,7 +136,7 @@ msgstr "_Стиль"
 
 #: src/View/MainWindow.vala:29
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Комбінації клавіш"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: src/View/MainWindow.vala:33
