@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2023, 2024.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+# Ricky Tigg <ricky.tigg@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-14 23:16+0900\n"
-"PO-Revision-Date: 2024-05-01 09:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2025-02-01 16:02+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/konbucase/"
 "fi/>\n"
 "Language: fi\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -86,7 +87,7 @@ msgstr ""
 #. John Doe https://example.com
 #: src/Application.vala:131
 msgid "translator-credits"
-msgstr ""
+msgstr "kääntäjien ansiot"
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
