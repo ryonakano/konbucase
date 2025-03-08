@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-14 23:16+0900\n"
+"POT-Creation-Date: 2025-03-08 23:07+0900\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/konbucase/sk/"
@@ -93,31 +93,35 @@ msgstr "Okno aplikácie v tmavom režime"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:131
+#: src/Application.vala:153
 msgid "translator-credits"
 msgstr ""
 
-#: src/Model/TextPaneModel.vala:31
+#: src/Model/TextPaneModel.vala:40
+msgid "Space separated"
+msgstr "Oddelený medzerami"
+
+#: src/Model/TextPaneModel.vala:41
 msgid "Each word is separated by a space"
 msgstr "Každé slovo je oddelené medzerou"
 
-#: src/Model/TextPaneModel.vala:32
+#: src/Model/TextPaneModel.vala:46
 msgid "The first character of compound words is in lowercase"
 msgstr "Prvý znak zo zhluku slov je napísaný malým písmenom"
 
-#: src/Model/TextPaneModel.vala:33
+#: src/Model/TextPaneModel.vala:51
 msgid "The first character of compound words is in uppercase"
 msgstr "Prvý znak zo zhluku slov je napísaný veľkým písmenom"
 
-#: src/Model/TextPaneModel.vala:34
+#: src/Model/TextPaneModel.vala:56
 msgid "Each word is separated by an underscore"
 msgstr "Každé slovo je oddelené podčiarkovníkom"
 
-#: src/Model/TextPaneModel.vala:35
+#: src/Model/TextPaneModel.vala:61
 msgid "Each word is separated by a hyphen"
 msgstr "Každé slovo je oddelené spojovníkom"
 
-#: src/Model/TextPaneModel.vala:36
+#: src/Model/TextPaneModel.vala:66
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Prvý znak prvého slova vo vete je napísaný veľkým písmenom"
 
@@ -148,11 +152,11 @@ msgstr "Štýl:"
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
-#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#. TRANSLATORS: %s will be replaced by the app name
 #: src/View/MainWindow.vala:33
-#, fuzzy
+#, fuzzy, c-format
 #| msgid "KonbuCase"
-msgid "_About KonbuCase"
+msgid "_About %s"
 msgstr "KonbuCase"
 
 #: src/View/MainWindow.vala:37
@@ -175,11 +179,7 @@ msgstr "Previesť na:"
 msgid "Text copied!"
 msgstr "Text skopírovaný!"
 
-#: src/View/TextPane.vala:29
-msgid "Space separated"
-msgstr "Oddelený medzerami"
-
-#: src/View/TextPane.vala:48
+#: src/View/TextPane.vala:42
 msgid "Copy to Clipboard"
 msgstr "Kopírovať do schránky"
 

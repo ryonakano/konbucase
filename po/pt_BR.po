@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-14 23:16+0900\n"
+"POT-Creation-Date: 2025-03-08 23:07+0900\n"
 "PO-Revision-Date: 2025-01-12 21:41+0000\n"
 "Last-Translator: John Peter Sa <johnppetersa@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
@@ -90,31 +90,35 @@ msgstr "Janela do aplicativo no modo escuro"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:131
+#: src/Application.vala:153
 msgid "translator-credits"
 msgstr "créditos do tradutor \"johnpetersa <johnppetersa@gmail.com>\""
 
-#: src/Model/TextPaneModel.vala:31
+#: src/Model/TextPaneModel.vala:40
+msgid "Space separated"
+msgstr "Espaço separado"
+
+#: src/Model/TextPaneModel.vala:41
 msgid "Each word is separated by a space"
 msgstr "Cada palavra é separada por um espaço"
 
-#: src/Model/TextPaneModel.vala:32
+#: src/Model/TextPaneModel.vala:46
 msgid "The first character of compound words is in lowercase"
 msgstr "O primeiro personagem das palavras compostas está em minúsculas"
 
-#: src/Model/TextPaneModel.vala:33
+#: src/Model/TextPaneModel.vala:51
 msgid "The first character of compound words is in uppercase"
 msgstr "O primeiro personagem das palavras compostas está em maiúsculas"
 
-#: src/Model/TextPaneModel.vala:34
+#: src/Model/TextPaneModel.vala:56
 msgid "Each word is separated by an underscore"
 msgstr "Cada palavra é separada por um sublinhado"
 
-#: src/Model/TextPaneModel.vala:35
+#: src/Model/TextPaneModel.vala:61
 msgid "Each word is separated by a hyphen"
 msgstr "Cada palavra é separada por um hífen"
 
-#: src/Model/TextPaneModel.vala:36
+#: src/Model/TextPaneModel.vala:66
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "O primeiro personagem da primeira palavra na frase está em maiúsculas"
 
@@ -138,9 +142,11 @@ msgstr "_Estilo"
 msgid "_Keyboard Shortcuts"
 msgstr "_Keyboard Atalhos"
 
-#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#. TRANSLATORS: %s will be replaced by the app name
 #: src/View/MainWindow.vala:33
-msgid "_About KonbuCase"
+#, fuzzy, c-format
+#| msgid "_About KonbuCase"
+msgid "_About %s"
 msgstr "_Sobre o KonbuCase"
 
 #: src/View/MainWindow.vala:37
@@ -159,10 +165,6 @@ msgstr "Converter _Para:"
 msgid "Text copied!"
 msgstr "Texto copiado!"
 
-#: src/View/TextPane.vala:29
-msgid "Space separated"
-msgstr "Espaço separado"
-
-#: src/View/TextPane.vala:48
+#: src/View/TextPane.vala:42
 msgid "Copy to Clipboard"
 msgstr "Copiar para área de transferência"
