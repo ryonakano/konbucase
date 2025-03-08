@@ -29,8 +29,8 @@ public class MainWindow : Adw.ApplicationWindow {
         main_menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
         // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
         if (!Application.IS_ON_PANTHEON) {
-            ///TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
-            main_menu.append (_("_About KonbuCase"), "app.about");
+            ///TRANSLATORS: %s will be replaced by the app name
+            main_menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
         }
 
         var menu_button = new Gtk.MenuButton () {
