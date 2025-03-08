@@ -8,6 +8,8 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
+build-options:
+  libdir: /app/lib
 modules:
   - name: blueprint-compiler
     buildsystem: meson
