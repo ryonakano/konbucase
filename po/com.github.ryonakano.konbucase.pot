@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-14 23:16+0900\n"
+"POT-Creation-Date: 2025-03-08 23:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,31 +82,35 @@ msgstr ""
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:131
+#: src/Application.vala:153
 msgid "translator-credits"
 msgstr ""
 
-#: src/Model/TextPaneModel.vala:31
+#: src/Model/TextPaneModel.vala:40
+msgid "Space separated"
+msgstr ""
+
+#: src/Model/TextPaneModel.vala:41
 msgid "Each word is separated by a space"
 msgstr ""
 
-#: src/Model/TextPaneModel.vala:32
+#: src/Model/TextPaneModel.vala:46
 msgid "The first character of compound words is in lowercase"
 msgstr ""
 
-#: src/Model/TextPaneModel.vala:33
+#: src/Model/TextPaneModel.vala:51
 msgid "The first character of compound words is in uppercase"
 msgstr ""
 
-#: src/Model/TextPaneModel.vala:34
+#: src/Model/TextPaneModel.vala:56
 msgid "Each word is separated by an underscore"
 msgstr ""
 
-#: src/Model/TextPaneModel.vala:35
+#: src/Model/TextPaneModel.vala:61
 msgid "Each word is separated by a hyphen"
 msgstr ""
 
-#: src/Model/TextPaneModel.vala:36
+#: src/Model/TextPaneModel.vala:66
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr ""
 
@@ -130,9 +134,10 @@ msgstr ""
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
-#. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
+#. TRANSLATORS: %s will be replaced by the app name
 #: src/View/MainWindow.vala:33
-msgid "_About KonbuCase"
+#, c-format
+msgid "_About %s"
 msgstr ""
 
 #: src/View/MainWindow.vala:37
@@ -151,10 +156,6 @@ msgstr ""
 msgid "Text copied!"
 msgstr ""
 
-#: src/View/TextPane.vala:29
-msgid "Space separated"
-msgstr ""
-
-#: src/View/TextPane.vala:48
+#: src/View/TextPane.vala:42
 msgid "Copy to Clipboard"
 msgstr ""
