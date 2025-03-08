@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-14 23:16+0900\n"
-"PO-Revision-Date: 2025-02-17 04:42+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2025-03-02 06:40+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/konbucase/ta/>"
 "\n"
 "Language: ta\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "பொது"
 
 #: data/resources/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #: data/resources/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "வெளியேறு"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -40,43 +40,47 @@ msgstr "@APP_NAME@"
 
 #: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
-msgstr ""
+msgstr "வழக்கு மாற்றும் பயன்பாடு"
 
 #: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
-msgstr ""
+msgstr "உங்கள் உரையில் வழக்கை மாற்றவும்"
 
 #: data/konbucase.desktop.in.in:11
 msgid "Text;"
-msgstr ""
+msgstr "உரை;"
 
 #: data/konbucase.metainfo.xml.in.in:13
 msgid "A small text tool app that allows you convert case in your text."
-msgstr ""
+msgstr "உங்கள் உரையில் வழக்கை மாற்ற அனுமதிக்கும் ஒரு சிறிய உரை கருவி பயன்பாடு."
 
 #: data/konbucase.metainfo.xml.in.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "நற்பொருத்தங்கள் பின்வருமாறு:"
 
 #: data/konbucase.metainfo.xml.in.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
+"அனைத்து நூல்களையும் உரை காட்சியில் நகலெடுக்க \"இடைநிலைப்பலகைக்கு நகலெடு\" பொத்தானைக் "
+"சொடுக்கு செய்க"
 
 #: data/konbucase.metainfo.xml.in.in:19
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
+"உங்கள் உரையை ஒட்டக, பாச்கால்கேச், வாக்கிய வழக்கு, பாம்பு_கேச், கபாப்-வழக்கு மற்றும் "
+"விண்வெளி-பிரிக்கப்பட்ட இடையே மாற்றவும்"
 
 #: data/konbucase.metainfo.xml.in.in:25
 msgid "App window in the light mode"
-msgstr ""
+msgstr "ஒளி பயன்முறையில் பயன்பாட்டு சாளரம்"
 
 #: data/konbucase.metainfo.xml.in.in:30
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "இருண்ட பயன்முறையில் பயன்பாட்டு சாளரம்"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -86,77 +90,77 @@ msgstr ""
 #. John Doe https://example.com
 #: src/Application.vala:131
 msgid "translator-credits"
-msgstr ""
+msgstr "மொழிபெயர்ப்பாளர்-வரவு"
 
 #: src/Model/TextPaneModel.vala:31
 msgid "Each word is separated by a space"
-msgstr ""
+msgstr "ஒவ்வொரு வார்த்தையும் ஒரு இடத்தால் பிரிக்கப்படுகின்றன"
 
 #: src/Model/TextPaneModel.vala:32
 msgid "The first character of compound words is in lowercase"
-msgstr ""
+msgstr "கூட்டு சொற்களின் முதல் எழுத்து சிறிய எழுத்தில் உள்ளது"
 
 #: src/Model/TextPaneModel.vala:33
 msgid "The first character of compound words is in uppercase"
-msgstr ""
+msgstr "கூட்டு சொற்களின் முதல் எழுத்து பெரிய எழுத்தில் உள்ளது"
 
 #: src/Model/TextPaneModel.vala:34
 msgid "Each word is separated by an underscore"
-msgstr ""
+msgstr "ஒவ்வொரு வார்த்தையும் அடிக்கோடிட்டுக் காட்டுகிறது"
 
 #: src/Model/TextPaneModel.vala:35
 msgid "Each word is separated by a hyphen"
-msgstr ""
+msgstr "ஒவ்வொரு வார்த்தையும் ஒரு ஐபனால் பிரிக்கப்படுகிறது"
 
 #: src/Model/TextPaneModel.vala:36
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr ""
+msgstr "வாக்கியத்தின் முதல் வார்த்தையின் முதல் எழுத்து பெரிய எழுத்தில் உள்ளது"
 
 #: src/View/MainWindow.vala:23
 msgid "S_ystem"
-msgstr ""
+msgstr "எச்_ச்டம்"
 
 #: src/View/MainWindow.vala:24
 msgid "_Light"
-msgstr ""
+msgstr "_ விளக்கு"
 
 #: src/View/MainWindow.vala:25
 msgid "_Dark"
-msgstr ""
+msgstr "_ டார்க்"
 
 #: src/View/MainWindow.vala:28
 msgid "_Style"
-msgstr ""
+msgstr "_ பாணி"
 
 #: src/View/MainWindow.vala:29
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #. TRANSLATORS: Do NOT translate the phrase "KonbuCase"; it's the name of the app which is a proper noun.
 #: src/View/MainWindow.vala:33
 msgid "_About KonbuCase"
-msgstr ""
+msgstr "_அபவுட் கொன்புகேச்"
 
 #: src/View/MainWindow.vala:37
 msgid "Main Menu"
-msgstr ""
+msgstr "பட்டியல் விளையாடுங்கள்"
 
 #: src/View/MainWindow.vala:52
 msgid "Convert _From:"
-msgstr ""
+msgstr "_ இலிருந்து மாற்றவும்:"
 
 #: src/View/MainWindow.vala:62
 msgid "Convert _To:"
-msgstr ""
+msgstr "மாற்றவும் _to:"
 
 #: src/View/MainWindow.vala:114
 msgid "Text copied!"
-msgstr ""
+msgstr "உரை நகலெடுக்கப்பட்டது!"
 
 #: src/View/TextPane.vala:29
 msgid "Space separated"
-msgstr ""
+msgstr "இடம் பிரிக்கப்பட்டது"
 
 #: src/View/TextPane.vala:48
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"
