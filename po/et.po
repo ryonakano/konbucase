@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
-# Priit Jõerüüt <hwlate@joeruut.com>, 2024.
+# Priit Jõerüüt <hwlate@joeruut.com>, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-08 23:07+0900\n"
-"PO-Revision-Date: 2024-12-15 03:08+0000\n"
+"PO-Revision-Date: 2025-03-11 13:02+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "et/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9-rc\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: data/resources/gtk/help-overlay.blp:10
 msgctxt "shortcut window"
@@ -145,10 +145,9 @@ msgstr "_Klaviatuuri kiirklahvid"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/View/MainWindow.vala:33
-#, fuzzy, c-format
-#| msgid "_About KonbuCase"
+#, c-format
 msgid "_About %s"
-msgstr "_KonbuCase'i teave"
+msgstr "%s'i te_ave"
 
 #: src/View/MainWindow.vala:37
 msgid "Main Menu"
