@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-08 23:07+0900\n"
+"POT-Creation-Date: 2025-03-16 19:25+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/resources/gtk/help-overlay.blp:10
+#: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
 msgstr ""
 
-#: data/resources/gtk/help-overlay.blp:14
+#: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: data/resources/gtk/help-overlay.blp:19
+#: data/ui/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr ""
