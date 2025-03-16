@@ -16,20 +16,13 @@ if granite_dep.found()
 endif
 
 dependencies = [
+    dependency('chcase', allow_fallback: get_option('use_submodule')),
     dependency('glib-2.0', version: '>= 2.74'),
     granite_dep,
     dependency('gtk4'),
     dependency('gtksourceview-5'),
     dependency('libadwaita-1', version: '>= 1.5'),
 ]
-
-if get_option('use_submodule')
-    chcase_subproject = subproject('chcase')
-    chcase_deps = chcase_subproject.get_variable('libchcase')
-    dependencies += chcase_deps
-else
-    dependencies += dependency('chcase')
-endif
 
 sources = files(
     'Model/CaseListItemModel.vala',
