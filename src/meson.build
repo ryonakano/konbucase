@@ -48,12 +48,6 @@ executable(
     asresources,
     config_file,
     sources,
-    # Workaround for a bug in meson < 1.4.0
-    # https://gitlab.gnome.org/jwestman/blueprint-compiler/-/issues/18
-    # https://github.com/mesonbuild/meson/commit/ae857e841b0a6b9b595583e74f5e21676bb83f9d
-    vala_args: [
-        '--gresourcesdir=data/resources'
-    ],
     dependencies: dependencies,
     install: true
 )
