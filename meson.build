@@ -1,4 +1,5 @@
-project('com.github.ryonakano.konbucase',
+project(
+    'com.github.ryonakano.konbucase',
     'vala', 'c',
     version: '4.3.1',
     meson_version: '>=0.58.0'
@@ -21,8 +22,8 @@ if get_option('development')
     app_version += version_suffix
 endif
 
-i18n = import('i18n')
 gnome = import('gnome')
+i18n = import('i18n')
 
 add_project_arguments(
     '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
