@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-08 23:07+0900\n"
+"POT-Creation-Date: 2025-03-16 19:25+0900\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/konbucase/pl/"
@@ -20,17 +20,17 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5.3-dev\n"
 
-#: data/resources/gtk/help-overlay.blp:10
+#: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
 msgstr ""
 
-#: data/resources/gtk/help-overlay.blp:14
+#: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: data/resources/gtk/help-overlay.blp:19
+#: data/ui/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr ""
