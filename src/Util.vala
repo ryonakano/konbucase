@@ -4,6 +4,13 @@
  */
 
 namespace Util {
+    /**
+     * Whether the app is running on Pantheon desktop environment.
+     */
+    public static bool is_on_pantheon () {
+        return Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
+    }
+
     public static Define.CaseType to_case_type (ChCase.Case chcase_case) {
         switch (chcase_case) {
             case ChCase.Case.SPACE_SEPARATED:
