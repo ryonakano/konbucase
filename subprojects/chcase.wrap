@@ -2,3 +2,6 @@
 url = https://github.com/ryonakano/chcase.git
 revision = 2.3.0
 depth = 1
+
+[provide]
+chcase = libchcase
