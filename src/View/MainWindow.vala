@@ -8,8 +8,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
     public MainWindow (Application app) {
         Object (
-            application: app,
-            title: Define.APP_NAME
+            application: app
         );
     }
 
@@ -80,6 +79,7 @@ public class MainWindow : Adw.ApplicationWindow {
         content = toolbar_view;
         width_request = 700;
         height_request = 500;
+        title = Define.APP_NAME;
 
         // The action users most frequently take is to input the source text.
         // So, forcus to the source view by default.
