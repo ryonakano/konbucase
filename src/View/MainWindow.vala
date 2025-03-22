@@ -9,7 +9,7 @@ public class MainWindow : Adw.ApplicationWindow {
     public MainWindow (Application app) {
         Object (
             application: app,
-            title: "KonbuCase"
+            title: Define.APP_NAME
         );
     }
 
