@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:25+0900\n"
-"PO-Revision-Date: 2025-03-17 23:25+0000\n"
+"PO-Revision-Date: 2025-03-23 06:44+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "et/>\n"
@@ -93,7 +93,7 @@ msgstr "Tumedas kujunduses rakenduse aken"
 #. John Doe https://example.com
 #: src/Application.vala:153
 msgid "translator-credits"
-msgstr "Priit Jõerüüt 2024"
+msgstr "Priit Jõerüüt 2024-2025"
 
 #: src/Model/TextPaneModel.vala:40
 msgid "Space separated"
