@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Report Issues in Case Conversion
+  - name: Report issues in the case conversion
     url: https://github.com/ryonakano/chcase/issues/new
-    about: For reporting a problem in the case conversion or ask for additional conversion option (e.g. an unexpected conversion result, support converting to/from another case, etc.)
-  - name: Report Issues in App Itself
+    about: Choose this when you are reporting a problem related to the case conversion e.g. an unexpected conversion result, or ask for additional conversion option e.g. support converting to/from another case.
+  - name: Report issues in the app itself
     url: https://github.com/ryonakano/konbucase/issues/new
-    about: For reporting a problem in the UI or new features of the app itself (e.g. broken UI, add another button to do something, etc.)
+    about: Choose this when you are reporting a problem in the UI e.g. broken UI, or requesting new features of the app itself e.g. add a new button to do something.
