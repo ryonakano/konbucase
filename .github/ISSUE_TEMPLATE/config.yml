@@ -1,4 +1,4 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
   - name: Report Issues in Case Conversion
     url: https://github.com/ryonakano/chcase/issues/new
