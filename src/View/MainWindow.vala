@@ -84,13 +84,13 @@ public class MainWindow : Adw.ApplicationWindow {
         //  * case type of the result text is changed
         //  * the source text is changed
         source_pane.dropdown_changed.connect (() => {
-            do_convert ();
+            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
         });
         result_pane.dropdown_changed.connect (() => {
-            do_convert ();
+            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
         });
         source_pane.notify["text"].connect (() => {
-            do_convert ();
+            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
         });
 
         source_pane.copy_button_clicked.connect (() => {
@@ -110,30 +110,21 @@ public class MainWindow : Adw.ApplicationWindow {
 
     /**
      * Perform conversion of {@link source_pane.text} and set the result to {@link result_pane.text}.
-     */
-    public void do_convert () {
-        set_case_type (source_pane.case_type, result_pane.case_type);
-        result_pane.text = convert_case (source_pane.text);
-    }
-
-    /**
-     * Set case type of source and result texts.
      *
      * @param source_case case type of source text
-     * @param result_case case type of result text
-     */
-    private void set_case_type (Define.CaseType source_case, Define.CaseType result_case) {
-        converter.source_case = Util.to_chcase_case (source_case);
-        converter.result_case = Util.to_chcase_case (result_case);
-    }
-
-    /**
-     * Convert case of source_text to the case set with {@link set_case_type}.
-     *
      * @param source_text text that is converted
+     * @param result_case case type of result text
+     *
      * @return text after conversion
      */
-    private string convert_case (string source_text) {
-        return converter.convert_case (source_text);
+    private string do_convert (Define.CaseType source_case, string source_text, Define.CaseType result_case) {
+        string result_text;
+
+        converter.source_case = Util.to_chcase_case (source_case);
+        converter.result_case = Util.to_chcase_case (result_case);
+
+        result_text = converter.convert_case (source_text);
+
+        return result_text;
     }
 }
