@@ -14,12 +14,17 @@ namespace Util {
     public static Define.CaseType to_case_type (ChCase.Case chcase_case) {
         switch (chcase_case) {
             case ChCase.Case.SPACE_SEPARATED:
+                return Define.CaseType.SPACE_SEPARATED;
             case ChCase.Case.CAMEL:
+                return Define.CaseType.CAMEL;
             case ChCase.Case.PASCAL:
+                return Define.CaseType.PASCAL;
             case ChCase.Case.SNAKE:
+                return Define.CaseType.SNAKE;
             case ChCase.Case.KEBAB:
+                return Define.CaseType.KEBAB;
             case ChCase.Case.SENTENCE:
-                return (Define.CaseType) chcase_case;
+                return Define.CaseType.SENTENCE;
             default:
                 warning ("Invalid ChCase.Case: %d", chcase_case);
                 return Define.CaseType.SPACE_SEPARATED;
@@ -29,12 +34,17 @@ namespace Util {
     public static ChCase.Case to_chcase_case (Define.CaseType case_type) {
         switch (case_type) {
             case Define.CaseType.SPACE_SEPARATED:
+                return ChCase.Case.SPACE_SEPARATED;
             case Define.CaseType.CAMEL:
+                return ChCase.Case.CAMEL;
             case Define.CaseType.PASCAL:
+                return ChCase.Case.PASCAL;
             case Define.CaseType.SNAKE:
+                return ChCase.Case.SNAKE;
             case Define.CaseType.KEBAB:
+                return ChCase.Case.KEBAB;
             case Define.CaseType.SENTENCE:
-                return (ChCase.Case) case_type;
+                return ChCase.Case.SENTENCE;
             default:
                 warning ("Invalid Define.CaseType: %d", case_type);
                 return ChCase.Case.SPACE_SEPARATED;
