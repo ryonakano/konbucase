@@ -9,15 +9,11 @@ public class BasePane : Gtk.Box {
 
     public string header_label { get; construct; }
     public bool editable { get; construct; }
-
     public Define.CaseType case_type { get; set; }
     public string text { get; set; }
 
     private ListStore case_listmodel;
-    private GtkSource.Buffer buffer;
     private GtkSource.View source_view;
-    private GtkSource.StyleSchemeManager style_scheme_manager;
-    private Gtk.Settings gtk_settings;
 
     protected BasePane () {
     }
@@ -95,9 +91,9 @@ public class BasePane : Gtk.Box {
         toolbar.append (case_dropdown);
         toolbar.append (copy_clipboard_button);
 
-        buffer = new GtkSource.Buffer (null);
-        style_scheme_manager = new GtkSource.StyleSchemeManager ();
-        gtk_settings = Gtk.Settings.get_default ();
+        var buffer = new GtkSource.Buffer (null);
+        var style_scheme_manager = new GtkSource.StyleSchemeManager ();
+        var gtk_settings = Gtk.Settings.get_default ();
 
         source_view = new GtkSource.View.with_buffer (buffer) {
             wrap_mode = Gtk.WrapMode.WORD_CHAR,
