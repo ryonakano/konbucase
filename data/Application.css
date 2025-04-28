@@ -1,0 +1,7 @@
+/* Styles only applied for Pantheon */
+
+/* Inspired from elementary stylesheet */
+.toolbar {
+    border-spacing: 0.5rem;
+    padding: 0.5rem;
+}
