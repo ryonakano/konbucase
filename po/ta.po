@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:25+0900\n"
+"POT-Creation-Date: 2025-04-28 15:56+0900\n"
 "PO-Revision-Date: 2025-04-20 23:37+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
-"Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/konbucase/ta/>"
-"\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/konbucase/ta/"
+">\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,19 +34,19 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "வெளியேறு"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:4
+#: data/konbucase.desktop.in.in:3
 msgid "Case Converting App"
 msgstr "வழக்கு மாற்றும் பயன்பாடு"
 
-#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "உங்கள் உரையில் வழக்கை மாற்றவும்"
 
-#: data/konbucase.desktop.in.in:11
+#: data/konbucase.desktop.in.in:10
 msgid "Text;"
 msgstr "உரை;"
 
@@ -82,86 +82,86 @@ msgstr "ஒளி பயன்முறையில் பயன்பாட்�
 msgid "App window in the dark mode"
 msgstr "இருண்ட பயன்முறையில் பயன்பாட்டு சாளரம்"
 
+#: src/View/Pane/ResultPane.vala:9
+msgid "Convert _To:"
+msgstr "மாற்றவும் _to:"
+
+#: src/View/Pane/SourcePane.vala:9
+msgid "Convert _From:"
+msgstr "_ இலிருந்து மாற்றவும்:"
+
+#: src/View/BasePane.vala:29
+msgid "Space separated"
+msgstr "இடம் பிரிக்கப்பட்டது"
+
+#: src/View/BasePane.vala:30
+msgid "Each word is separated by a space"
+msgstr "ஒவ்வொரு வார்த்தையும் ஒரு இடத்தால் பிரிக்கப்படுகின்றன"
+
+#: src/View/BasePane.vala:35
+msgid "The first character of compound words is in lowercase"
+msgstr "கூட்டு சொற்களின் முதல் எழுத்து சிறிய எழுத்தில் உள்ளது"
+
+#: src/View/BasePane.vala:40
+msgid "The first character of compound words is in uppercase"
+msgstr "கூட்டு சொற்களின் முதல் எழுத்து பெரிய எழுத்தில் உள்ளது"
+
+#: src/View/BasePane.vala:45
+msgid "Each word is separated by an underscore"
+msgstr "ஒவ்வொரு வார்த்தையும் அடிக்கோடிட்டுக் காட்டுகிறது"
+
+#: src/View/BasePane.vala:50
+msgid "Each word is separated by a hyphen"
+msgstr "ஒவ்வொரு வார்த்தையும் ஒரு ஐபனால் பிரிக்கப்படுகிறது"
+
+#: src/View/BasePane.vala:55
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "வாக்கியத்தின் முதல் வார்த்தையின் முதல் எழுத்து பெரிய எழுத்தில் உள்ளது"
+
+#: src/View/BasePane.vala:77
+msgid "Copy to Clipboard"
+msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"
+
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:153
+#: src/Application.vala:147
 msgid "translator-credits"
 msgstr "மொழிபெயர்ப்பாளர்-வரவு"
 
-#: src/Model/TextPaneModel.vala:40
-msgid "Space separated"
-msgstr "இடம் பிரிக்கப்பட்டது"
-
-#: src/Model/TextPaneModel.vala:41
-msgid "Each word is separated by a space"
-msgstr "ஒவ்வொரு வார்த்தையும் ஒரு இடத்தால் பிரிக்கப்படுகின்றன"
-
-#: src/Model/TextPaneModel.vala:46
-msgid "The first character of compound words is in lowercase"
-msgstr "கூட்டு சொற்களின் முதல் எழுத்து சிறிய எழுத்தில் உள்ளது"
-
-#: src/Model/TextPaneModel.vala:51
-msgid "The first character of compound words is in uppercase"
-msgstr "கூட்டு சொற்களின் முதல் எழுத்து பெரிய எழுத்தில் உள்ளது"
-
-#: src/Model/TextPaneModel.vala:56
-msgid "Each word is separated by an underscore"
-msgstr "ஒவ்வொரு வார்த்தையும் அடிக்கோடிட்டுக் காட்டுகிறது"
-
-#: src/Model/TextPaneModel.vala:61
-msgid "Each word is separated by a hyphen"
-msgstr "ஒவ்வொரு வார்த்தையும் ஒரு ஐபனால் பிரிக்கப்படுகிறது"
-
-#: src/Model/TextPaneModel.vala:66
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "வாக்கியத்தின் முதல் வார்த்தையின் முதல் எழுத்து பெரிய எழுத்தில் உள்ளது"
-
-#: src/View/MainWindow.vala:23
+#: src/MainWindow.vala:26
 msgid "S_ystem"
 msgstr "முறைமை"
 
-#: src/View/MainWindow.vala:24
+#: src/MainWindow.vala:27
 msgid "_Light"
 msgstr "விளக்கு"
 
-#: src/View/MainWindow.vala:25
+#: src/MainWindow.vala:28
 msgid "_Dark"
 msgstr "_ டார்க்"
 
-#: src/View/MainWindow.vala:28
+#: src/MainWindow.vala:31
 msgid "_Style"
 msgstr "பாணி"
 
-#: src/View/MainWindow.vala:29
+#: src/MainWindow.vala:32
 msgid "_Keyboard Shortcuts"
 msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/View/MainWindow.vala:33
+#: src/MainWindow.vala:36
 #, c-format
 msgid "_About %s"
 msgstr "%s பற்றி"
 
-#: src/View/MainWindow.vala:37
+#: src/MainWindow.vala:40
 msgid "Main Menu"
 msgstr "பட்டியல் விளையாடுங்கள்"
 
-#: src/View/MainWindow.vala:52
-msgid "Convert _From:"
-msgstr "_ இலிருந்து மாற்றவும்:"
-
-#: src/View/MainWindow.vala:62
-msgid "Convert _To:"
-msgstr "மாற்றவும் _to:"
-
-#: src/View/MainWindow.vala:114
+#: src/MainWindow.vala:109
 msgid "Text copied!"
 msgstr "உரை நகலெடுக்கப்பட்டது!"
-
-#: src/View/TextPane.vala:42
-msgid "Copy to Clipboard"
-msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"

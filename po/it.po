@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:25+0900\n"
+"POT-Creation-Date: 2025-04-28 15:56+0900\n"
 "PO-Revision-Date: 2025-03-31 04:19+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -38,19 +38,19 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Esci"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:4
+#: data/konbucase.desktop.in.in:3
 msgid "Case Converting App"
 msgstr "Applicazione per la conversione delle maiuscole"
 
-#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "Converti le maiuscole nel tuo testo"
 
-#: data/konbucase.desktop.in.in:11
+#: data/konbucase.desktop.in.in:10
 msgid "Text;"
 msgstr "Testo;"
 
@@ -88,89 +88,89 @@ msgstr "Finestra dell'app in modalità chiara"
 msgid "App window in the dark mode"
 msgstr "Finestra dell'app in modalità scura"
 
+#: src/View/Pane/ResultPane.vala:9
+msgid "Convert _To:"
+msgstr "Converti _in:"
+
+#: src/View/Pane/SourcePane.vala:9
+msgid "Convert _From:"
+msgstr "Converti _da:"
+
+#: src/View/BasePane.vala:29
+msgid "Space separated"
+msgstr "Spazi separati"
+
+#: src/View/BasePane.vala:30
+msgid "Each word is separated by a space"
+msgstr "Ogni parola è separata da uno spazio"
+
+#: src/View/BasePane.vala:35
+msgid "The first character of compound words is in lowercase"
+msgstr "Il primo carattere delle parole composte è minuscolo"
+
+#: src/View/BasePane.vala:40
+msgid "The first character of compound words is in uppercase"
+msgstr "Il primo carattere delle parole composte è maiuscolo"
+
+#: src/View/BasePane.vala:45
+msgid "Each word is separated by an underscore"
+msgstr "Ogni parola è separata da un underscore (trattino basso)"
+
+#: src/View/BasePane.vala:50
+msgid "Each word is separated by a hyphen"
+msgstr "Ogni parola è separata da un hyphen (trattino alto)"
+
+#: src/View/BasePane.vala:55
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
+
+#: src/View/BasePane.vala:77
+msgid "Copy to Clipboard"
+msgstr "Copia negli appunti"
+
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:153
+#: src/Application.vala:147
 msgid "translator-credits"
 msgstr "Albano Battistella <albanobattistella@gmail.com>"
 
-#: src/Model/TextPaneModel.vala:40
-msgid "Space separated"
-msgstr "Spazi separati"
-
-#: src/Model/TextPaneModel.vala:41
-msgid "Each word is separated by a space"
-msgstr "Ogni parola è separata da uno spazio"
-
-#: src/Model/TextPaneModel.vala:46
-msgid "The first character of compound words is in lowercase"
-msgstr "Il primo carattere delle parole composte è minuscolo"
-
-#: src/Model/TextPaneModel.vala:51
-msgid "The first character of compound words is in uppercase"
-msgstr "Il primo carattere delle parole composte è maiuscolo"
-
-#: src/Model/TextPaneModel.vala:56
-msgid "Each word is separated by an underscore"
-msgstr "Ogni parola è separata da un underscore (trattino basso)"
-
-#: src/Model/TextPaneModel.vala:61
-msgid "Each word is separated by a hyphen"
-msgstr "Ogni parola è separata da un hyphen (trattino alto)"
-
-#: src/Model/TextPaneModel.vala:66
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
-
-#: src/View/MainWindow.vala:23
+#: src/MainWindow.vala:26
 msgid "S_ystem"
 msgstr "S_istema"
 
-#: src/View/MainWindow.vala:24
+#: src/MainWindow.vala:27
 msgid "_Light"
 msgstr "_Chiaro"
 
-#: src/View/MainWindow.vala:25
+#: src/MainWindow.vala:28
 msgid "_Dark"
 msgstr "_Scuro"
 
-#: src/View/MainWindow.vala:28
+#: src/MainWindow.vala:31
 msgid "_Style"
 msgstr "_Stile"
 
-#: src/View/MainWindow.vala:29
+#: src/MainWindow.vala:32
 msgid "_Keyboard Shortcuts"
 msgstr "_Scorciatoie da tastiera"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/View/MainWindow.vala:33
+#: src/MainWindow.vala:36
 #, c-format
 msgid "_About %s"
 msgstr "_Informazioni su %s"
 
-#: src/View/MainWindow.vala:37
+#: src/MainWindow.vala:40
 msgid "Main Menu"
 msgstr "Menù principale"
 
-#: src/View/MainWindow.vala:52
-msgid "Convert _From:"
-msgstr "Converti _da:"
-
-#: src/View/MainWindow.vala:62
-msgid "Convert _To:"
-msgstr "Converti _in:"
-
-#: src/View/MainWindow.vala:114
+#: src/MainWindow.vala:109
 msgid "Text copied!"
 msgstr "Testo copiato!"
-
-#: src/View/TextPane.vala:42
-msgid "Copy to Clipboard"
-msgstr "Copia negli appunti"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

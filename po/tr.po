@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:25+0900\n"
+"POT-Creation-Date: 2025-04-28 15:56+0900\n"
 "PO-Revision-Date: 2024-12-28 15:00+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -37,19 +37,19 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Çık"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:4
+#: data/konbucase.desktop.in.in:3
 msgid "Case Converting App"
 msgstr "Metin Dönüştürme Uygulaması"
 
-#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "Metinlerdeki büyük küçük harfleri düzenleyin"
 
-#: data/konbucase.desktop.in.in:11
+#: data/konbucase.desktop.in.in:10
 msgid "Text;"
 msgstr "Metin;"
 
@@ -87,90 +87,90 @@ msgstr "Uygulama penceresi açık kipte"
 msgid "App window in the dark mode"
 msgstr "Uygulama penceresi koyu kipte"
 
+#: src/View/Pane/ResultPane.vala:9
+msgid "Convert _To:"
+msgstr "_Dönüştür:"
+
+#: src/View/Pane/SourcePane.vala:9
+msgid "Convert _From:"
+msgstr "Şundan _Dönüştür:"
+
+#: src/View/BasePane.vala:29
+msgid "Space separated"
+msgstr "Boşlukla ayrılmış"
+
+#: src/View/BasePane.vala:30
+msgid "Each word is separated by a space"
+msgstr "Her kelime boşlukla ayrılmış"
+
+#: src/View/BasePane.vala:35
+msgid "The first character of compound words is in lowercase"
+msgstr "Birleşik kelimelerin ilk karakteri küçük harfli"
+
+#: src/View/BasePane.vala:40
+msgid "The first character of compound words is in uppercase"
+msgstr "Birleşik kelimelerin ilk karakteri büyük harfli"
+
+#: src/View/BasePane.vala:45
+msgid "Each word is separated by an underscore"
+msgstr "Her kelime alt çizgiyle ayrılmış"
+
+#: src/View/BasePane.vala:50
+msgid "Each word is separated by a hyphen"
+msgstr "Her kelime tire ile ayrılmış"
+
+#: src/View/BasePane.vala:55
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Cümledeki ilk kelimenin ilk karakteri büyük harfli"
+
+#: src/View/BasePane.vala:77
+msgid "Copy to Clipboard"
+msgstr "Panoya Kopyala"
+
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:153
+#: src/Application.vala:147
 msgid "translator-credits"
 msgstr "Sabri Ünal <yakushabb@gmail.com>"
 
-#: src/Model/TextPaneModel.vala:40
-msgid "Space separated"
-msgstr "Boşlukla ayrılmış"
-
-#: src/Model/TextPaneModel.vala:41
-msgid "Each word is separated by a space"
-msgstr "Her kelime boşlukla ayrılmış"
-
-#: src/Model/TextPaneModel.vala:46
-msgid "The first character of compound words is in lowercase"
-msgstr "Birleşik kelimelerin ilk karakteri küçük harfli"
-
-#: src/Model/TextPaneModel.vala:51
-msgid "The first character of compound words is in uppercase"
-msgstr "Birleşik kelimelerin ilk karakteri büyük harfli"
-
-#: src/Model/TextPaneModel.vala:56
-msgid "Each word is separated by an underscore"
-msgstr "Her kelime alt çizgiyle ayrılmış"
-
-#: src/Model/TextPaneModel.vala:61
-msgid "Each word is separated by a hyphen"
-msgstr "Her kelime tire ile ayrılmış"
-
-#: src/Model/TextPaneModel.vala:66
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Cümledeki ilk kelimenin ilk karakteri büyük harfli"
-
-#: src/View/MainWindow.vala:23
+#: src/MainWindow.vala:26
 msgid "S_ystem"
 msgstr "_Sistem"
 
-#: src/View/MainWindow.vala:24
+#: src/MainWindow.vala:27
 msgid "_Light"
 msgstr "_Açık"
 
-#: src/View/MainWindow.vala:25
+#: src/MainWindow.vala:28
 msgid "_Dark"
 msgstr "_Koyu"
 
-#: src/View/MainWindow.vala:28
+#: src/MainWindow.vala:31
 msgid "_Style"
 msgstr "_Biçem"
 
-#: src/View/MainWindow.vala:29
+#: src/MainWindow.vala:32
 msgid "_Keyboard Shortcuts"
 msgstr "_Klavye Kısayolları"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/View/MainWindow.vala:33
+#: src/MainWindow.vala:36
 #, fuzzy, c-format
 #| msgid "_About KonbuCase"
 msgid "_About %s"
 msgstr "KonbuCase _Hakkında"
 
-#: src/View/MainWindow.vala:37
+#: src/MainWindow.vala:40
 msgid "Main Menu"
 msgstr "Ana Menü"
 
-#: src/View/MainWindow.vala:52
-msgid "Convert _From:"
-msgstr "Şundan _Dönüştür:"
-
-#: src/View/MainWindow.vala:62
-msgid "Convert _To:"
-msgstr "_Dönüştür:"
-
-#: src/View/MainWindow.vala:114
+#: src/MainWindow.vala:109
 msgid "Text copied!"
 msgstr "Metin kopyalandı!"
-
-#: src/View/TextPane.vala:42
-msgid "Copy to Clipboard"
-msgstr "Panoya Kopyala"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

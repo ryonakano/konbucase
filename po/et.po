@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:25+0900\n"
+"POT-Creation-Date: 2025-04-28 15:56+0900\n"
 "PO-Revision-Date: 2025-03-23 06:44+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -34,20 +34,20 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Välju"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:4
+#: data/konbucase.desktop.in.in:3
 msgid "Case Converting App"
 msgstr "Suur- ja väiketähtede konverteerija"
 
-#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr ""
 "Konverteeri suur- ja väiketähti ning tühikuid ja kriipse soovitud tekstis"
 
-#: data/konbucase.desktop.in.in:11
+#: data/konbucase.desktop.in.in:10
 msgid "Text;"
 msgstr ""
 "tekst;suurtäht;suurtähed;väiketäht;väiketähed;konverteerija;konverteerimine;"
@@ -85,86 +85,86 @@ msgstr "Heledas kujunduses rakenduse aken"
 msgid "App window in the dark mode"
 msgstr "Tumedas kujunduses rakenduse aken"
 
+#: src/View/Pane/ResultPane.vala:9
+msgid "Convert _To:"
+msgstr "_Sihtvorming:"
+
+#: src/View/Pane/SourcePane.vala:9
+msgid "Convert _From:"
+msgstr "_Lähtevorming:"
+
+#: src/View/BasePane.vala:29
+msgid "Space separated"
+msgstr "Tühikutega eraldatud"
+
+#: src/View/BasePane.vala:30
+msgid "Each word is separated by a space"
+msgstr "Sõnu eraldavad tühikud"
+
+#: src/View/BasePane.vala:35
+msgid "The first character of compound words is in lowercase"
+msgstr "Liitsõna esimene sõna algab väiketähega"
+
+#: src/View/BasePane.vala:40
+msgid "The first character of compound words is in uppercase"
+msgstr "Liitsõna esimene sõna algab suurtähega"
+
+#: src/View/BasePane.vala:45
+msgid "Each word is separated by an underscore"
+msgstr "Sõnu eraldavad alakriipsud"
+
+#: src/View/BasePane.vala:50
+msgid "Each word is separated by a hyphen"
+msgstr "Sõnu eraldavad sidekriipsud"
+
+#: src/View/BasePane.vala:55
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Lause iga sõna esimene täht on suurtäht"
+
+#: src/View/BasePane.vala:77
+msgid "Copy to Clipboard"
+msgstr "Kopeeri lõikelauale"
+
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:153
+#: src/Application.vala:147
 msgid "translator-credits"
 msgstr "Priit Jõerüüt 2024-2025"
 
-#: src/Model/TextPaneModel.vala:40
-msgid "Space separated"
-msgstr "Tühikutega eraldatud"
-
-#: src/Model/TextPaneModel.vala:41
-msgid "Each word is separated by a space"
-msgstr "Sõnu eraldavad tühikud"
-
-#: src/Model/TextPaneModel.vala:46
-msgid "The first character of compound words is in lowercase"
-msgstr "Liitsõna esimene sõna algab väiketähega"
-
-#: src/Model/TextPaneModel.vala:51
-msgid "The first character of compound words is in uppercase"
-msgstr "Liitsõna esimene sõna algab suurtähega"
-
-#: src/Model/TextPaneModel.vala:56
-msgid "Each word is separated by an underscore"
-msgstr "Sõnu eraldavad alakriipsud"
-
-#: src/Model/TextPaneModel.vala:61
-msgid "Each word is separated by a hyphen"
-msgstr "Sõnu eraldavad sidekriipsud"
-
-#: src/Model/TextPaneModel.vala:66
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Lause iga sõna esimene täht on suurtäht"
-
-#: src/View/MainWindow.vala:23
+#: src/MainWindow.vala:26
 msgid "S_ystem"
 msgstr "S_üsteemi kujundus"
 
-#: src/View/MainWindow.vala:24
+#: src/MainWindow.vala:27
 msgid "_Light"
 msgstr "_Hele kujundus"
 
-#: src/View/MainWindow.vala:25
+#: src/MainWindow.vala:28
 msgid "_Dark"
 msgstr "_Tume kujundus"
 
-#: src/View/MainWindow.vala:28
+#: src/MainWindow.vala:31
 msgid "_Style"
 msgstr "_Kujundus"
 
-#: src/View/MainWindow.vala:29
+#: src/MainWindow.vala:32
 msgid "_Keyboard Shortcuts"
 msgstr "_Klaviatuuri kiirklahvid"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/View/MainWindow.vala:33
+#: src/MainWindow.vala:36
 #, c-format
 msgid "_About %s"
 msgstr "R_akenduse teave: %s"
 
-#: src/View/MainWindow.vala:37
+#: src/MainWindow.vala:40
 msgid "Main Menu"
 msgstr "Põhimenüü"
 
-#: src/View/MainWindow.vala:52
-msgid "Convert _From:"
-msgstr "_Lähtevorming:"
-
-#: src/View/MainWindow.vala:62
-msgid "Convert _To:"
-msgstr "_Sihtvorming:"
-
-#: src/View/MainWindow.vala:114
+#: src/MainWindow.vala:109
 msgid "Text copied!"
 msgstr "Tekst on kopeeritud!"
-
-#: src/View/TextPane.vala:42
-msgid "Copy to Clipboard"
-msgstr "Kopeeri lõikelauale"

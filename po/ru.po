@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:25+0900\n"
+"POT-Creation-Date: 2025-04-28 15:56+0900\n"
 "PO-Revision-Date: 2024-05-08 13:49+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -35,19 +35,19 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr ""
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:4
+#: data/konbucase.desktop.in.in:3
 msgid "Case Converting App"
 msgstr "Приложение для конвертации регистра"
 
-#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "Конвертируйте регистр вашего текста"
 
-#: data/konbucase.desktop.in.in:11
+#: data/konbucase.desktop.in.in:10
 msgid "Text;"
 msgstr "Текст;"
 
@@ -85,90 +85,90 @@ msgstr "Окно приложения в светлом режиме"
 msgid "App window in the dark mode"
 msgstr "Окно приложения в тёмном режиме"
 
+#: src/View/Pane/ResultPane.vala:9
+msgid "Convert _To:"
+msgstr "Конвертировать в:"
+
+#: src/View/Pane/SourcePane.vala:9
+msgid "Convert _From:"
+msgstr "Конвертировать из:"
+
+#: src/View/BasePane.vala:29
+msgid "Space separated"
+msgstr "Разделённые пробелом"
+
+#: src/View/BasePane.vala:30
+msgid "Each word is separated by a space"
+msgstr "Каждое слово разделено пробелом"
+
+#: src/View/BasePane.vala:35
+msgid "The first character of compound words is in lowercase"
+msgstr "Первый символ совмещённых слов пишется с маленькой буквы"
+
+#: src/View/BasePane.vala:40
+msgid "The first character of compound words is in uppercase"
+msgstr "Первый символ совмещённых слов пишется с заглавной буквы"
+
+#: src/View/BasePane.vala:45
+msgid "Each word is separated by an underscore"
+msgstr "Каждое слово отделяется нижним подчёркиванием"
+
+#: src/View/BasePane.vala:50
+msgid "Each word is separated by a hyphen"
+msgstr "Каждое слово отделяется дефисом"
+
+#: src/View/BasePane.vala:55
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Первый символ первого слова в предложении пишется с заглавной буквы"
+
+#: src/View/BasePane.vala:77
+msgid "Copy to Clipboard"
+msgstr "Копировать"
+
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
 #. e.g.:
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:153
+#: src/Application.vala:147
 msgid "translator-credits"
 msgstr "lenemter"
 
-#: src/Model/TextPaneModel.vala:40
-msgid "Space separated"
-msgstr "Разделённые пробелом"
-
-#: src/Model/TextPaneModel.vala:41
-msgid "Each word is separated by a space"
-msgstr "Каждое слово разделено пробелом"
-
-#: src/Model/TextPaneModel.vala:46
-msgid "The first character of compound words is in lowercase"
-msgstr "Первый символ совмещённых слов пишется с маленькой буквы"
-
-#: src/Model/TextPaneModel.vala:51
-msgid "The first character of compound words is in uppercase"
-msgstr "Первый символ совмещённых слов пишется с заглавной буквы"
-
-#: src/Model/TextPaneModel.vala:56
-msgid "Each word is separated by an underscore"
-msgstr "Каждое слово отделяется нижним подчёркиванием"
-
-#: src/Model/TextPaneModel.vala:61
-msgid "Each word is separated by a hyphen"
-msgstr "Каждое слово отделяется дефисом"
-
-#: src/Model/TextPaneModel.vala:66
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Первый символ первого слова в предложении пишется с заглавной буквы"
-
-#: src/View/MainWindow.vala:23
+#: src/MainWindow.vala:26
 msgid "S_ystem"
 msgstr "Система"
 
-#: src/View/MainWindow.vala:24
+#: src/MainWindow.vala:27
 msgid "_Light"
 msgstr "Светлый"
 
-#: src/View/MainWindow.vala:25
+#: src/MainWindow.vala:28
 msgid "_Dark"
 msgstr "Тёмный"
 
-#: src/View/MainWindow.vala:28
+#: src/MainWindow.vala:31
 msgid "_Style"
 msgstr "Стиль"
 
-#: src/View/MainWindow.vala:29
+#: src/MainWindow.vala:32
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/View/MainWindow.vala:33
+#: src/MainWindow.vala:36
 #, fuzzy, c-format
 #| msgid "_About KonbuCase"
 msgid "_About %s"
 msgstr "О KonbuCase"
 
-#: src/View/MainWindow.vala:37
+#: src/MainWindow.vala:40
 msgid "Main Menu"
 msgstr "Главное меню"
 
-#: src/View/MainWindow.vala:52
-msgid "Convert _From:"
-msgstr "Конвертировать из:"
-
-#: src/View/MainWindow.vala:62
-msgid "Convert _To:"
-msgstr "Конвертировать в:"
-
-#: src/View/MainWindow.vala:114
+#: src/MainWindow.vala:109
 msgid "Text copied!"
 msgstr "Текст скопирован!"
-
-#: src/View/TextPane.vala:42
-msgid "Copy to Clipboard"
-msgstr "Копировать"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
