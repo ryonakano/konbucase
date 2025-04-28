@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class SourcePane : BasePane {
+public class View.Pane.SourcePane : BasePane {
     public SourcePane () {
         Object (
             header_label: _("Convert _From:"),

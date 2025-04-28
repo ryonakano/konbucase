@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class DropDownRow : Gtk.Box {
+public class Widget.DropDownRow : Gtk.Box {
     public Gtk.Label title { get; set; }
     public Gtk.Label description { get; set; }
 
