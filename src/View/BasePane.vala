@@ -3,22 +3,19 @@
  * SPDX-FileCopyrightText: 2020-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class TextPane : Gtk.Box {
+public class BasePane : Gtk.Box {
     public signal void dropdown_changed ();
     public signal void copy_button_clicked ();
 
-    public TextPaneModel model { get; construct; }
     public string header_label { get; construct; }
     public bool editable { get; construct; }
+    public Define.CaseType case_type { get; set; }
+    public string text { get; set; }
 
+    private ListStore case_listmodel;
     private GtkSource.View source_view;
 
-    public TextPane (TextPaneModel model, string header_label, bool editable) {
-        Object (
-            model: model,
-            header_label: header_label,
-            editable: editable
-        );
+    protected BasePane () {
     }
 
     construct {
@@ -29,7 +26,48 @@ public class TextPane : Gtk.Box {
         case_list_factory.bind.connect (case_list_factory_bind);
         case_list_factory.setup.connect (case_list_factory_setup);
 
-        var case_dropdown = new Gtk.DropDown (model.case_listmodel, model.l10n_case_expression) {
+        case_listmodel = new ListStore (typeof (CaseListItemModel));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.SPACE_SEPARATED,
+            N_("Space separated"),
+            N_("Each word is separated by a space")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.CAMEL,
+            "camelCase",
+            N_("The first character of compound words is in lowercase")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.PASCAL,
+            "PascalCase",
+            N_("The first character of compound words is in uppercase")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.SNAKE,
+            "snake_case",
+            N_("Each word is separated by an underscore")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.KEBAB,
+            "kebab-case",
+            N_("Each word is separated by a hyphen")
+        ));
+        case_listmodel.append (new CaseListItemModel (
+            Define.CaseType.SENTENCE,
+            "Sentence case",
+            N_("The first character of the first word in the sentence is in uppercase")
+        ));
+
+        var case_expression = new Gtk.PropertyExpression (
+            typeof (CaseListItemModel), null, "name"
+        );
+        var l10n_case_expression = new Gtk.CClosureExpression (
+            typeof (string), null, { case_expression },
+            (Callback) localize_str,
+            null, null
+        );
+
+        var case_dropdown = new Gtk.DropDown (case_listmodel, l10n_case_expression) {
             list_factory = case_list_factory
         };
 
@@ -53,7 +91,11 @@ public class TextPane : Gtk.Box {
         toolbar.append (case_dropdown);
         toolbar.append (copy_clipboard_button);
 
-        source_view = new GtkSource.View.with_buffer (model.buffer) {
+        var buffer = new GtkSource.Buffer (null);
+        var style_scheme_manager = new GtkSource.StyleSchemeManager ();
+        var gtk_settings = Gtk.Settings.get_default ();
+
+        source_view = new GtkSource.View.with_buffer (buffer) {
             wrap_mode = Gtk.WrapMode.WORD_CHAR,
             hexpand = true,
             vexpand = true,
@@ -67,7 +109,7 @@ public class TextPane : Gtk.Box {
         append (toolbar);
         append (scrolled);
 
-        model.bind_property (
+        this.bind_property (
             "case-type",
             case_dropdown, "selected",
             BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
@@ -83,13 +125,36 @@ public class TextPane : Gtk.Box {
             copy_button_clicked ();
         });
 
+        // Sync with buffer text
+        buffer.bind_property (
+            "text",
+            this, "text",
+            BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE
+        );
+
         // Make copy button only sensitive when there are texts to copy
-        model.bind_property (
+        this.bind_property (
             "text",
             copy_clipboard_button, "sensitive",
             BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
             (binding, text, ref sensitive) => {
                 sensitive = ((string) text).length > 0;
+                return true;
+            }
+        );
+
+        // Apply theme changes to the source view
+        gtk_settings.bind_property (
+            "gtk-application-prefer-dark-theme",
+            buffer, "style-scheme",
+            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+            (binding, prefer_dark, ref style_scheme) => {
+                if ((bool) prefer_dark) {
+                    style_scheme = style_scheme_manager.get_scheme ("solarized-dark");
+                } else {
+                    style_scheme = style_scheme_manager.get_scheme ("solarized-light");
+                }
+
                 return true;
             }
         );
@@ -118,7 +183,7 @@ public class TextPane : Gtk.Box {
     private bool case_to_selected (Binding binding, Value case_type, ref Value selected) {
         uint pos;
 
-        bool found = model.case_listmodel.find_with_equal_func (
+        bool found = case_listmodel.find_with_equal_func (
             // Find with case type
             new CaseListItemModel ((Define.CaseType) case_type, "", ""),
             (a, b) => {
@@ -141,12 +206,16 @@ public class TextPane : Gtk.Box {
             return false;
         }
 
-        var selected_item = model.case_listmodel.get_item ((uint) selected) as CaseListItemModel;
+        var selected_item = case_listmodel.get_item ((uint) selected) as CaseListItemModel;
         if (selected_item == null) {
             return false;
         }
 
         case_type.set_enum (selected_item.case_type);
         return true;
+    }
+
+    private string localize_str (string str) {
+        return _(str);
     }
 }

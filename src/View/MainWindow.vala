@@ -5,6 +5,10 @@
 
 public class MainWindow : Adw.ApplicationWindow {
     private Adw.ToastOverlay overlay;
+    private SourcePane source_pane;
+    private ResultPane result_pane;
+
+    private ChCase.Converter converter;
 
     public MainWindow (Application app) {
         Object (
@@ -42,26 +46,13 @@ public class MainWindow : Adw.ApplicationWindow {
         var header = new Adw.HeaderBar ();
         header.pack_end (menu_button);
 
-        var source_model = new TextPaneModel (Define.TextType.SOURCE);
-        var result_model = new TextPaneModel (Define.TextType.RESULT);
-        var window_model = new MainWindowModel (source_model, result_model);
-
-        var source_pane = new TextPane (
-            source_model,
-            _("Convert _From:"),
-            true
-        );
+        source_pane = new SourcePane ();
 
         var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL) {
             vexpand = true
         };
 
-        var result_pane = new TextPane (
-            result_model,
-            _("Convert _To:"),
-            // Make the text view uneditable, otherwise the app freezes
-            false
-        );
+        result_pane = new ResultPane ();
 
         var content_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         content_box.append (source_pane);
@@ -81,6 +72,8 @@ public class MainWindow : Adw.ApplicationWindow {
         height_request = 500;
         title = Define.APP_NAME;
 
+        converter = new ChCase.Converter ();
+
         // The action users most frequently take is to input the source text.
         // So, forcus to the source view by default.
         source_pane.focus_source_view ();
@@ -91,21 +84,21 @@ public class MainWindow : Adw.ApplicationWindow {
         //  * case type of the result text is changed
         //  * the source text is changed
         source_pane.dropdown_changed.connect (() => {
-            window_model.do_convert ();
+            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
         });
         result_pane.dropdown_changed.connect (() => {
-            window_model.do_convert ();
+            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
         });
-        source_model.notify["text"].connect (() => {
-            window_model.do_convert ();
+        source_pane.notify["text"].connect (() => {
+            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
         });
 
         source_pane.copy_button_clicked.connect (() => {
-            get_clipboard ().set_text (source_model.text);
+            get_clipboard ().set_text (source_pane.text);
             show_toast ();
         });
         result_pane.copy_button_clicked.connect (() => {
-            get_clipboard ().set_text (result_model.text);
+            get_clipboard ().set_text (result_pane.text);
             show_toast ();
         });
     }
@@ -113,5 +106,25 @@ public class MainWindow : Adw.ApplicationWindow {
     private void show_toast () {
         var toast = new Adw.Toast (_("Text copied!"));
         overlay.add_toast (toast);
+    }
+
+    /**
+     * Perform conversion of {@link source_text} and return result text.
+     *
+     * @param source_case case type of source text
+     * @param source_text text that is converted
+     * @param result_case case type of result text
+     *
+     * @return text after conversion
+     */
+    private string do_convert (Define.CaseType source_case, string source_text, Define.CaseType result_case) {
+        string result_text;
+
+        converter.source_case = Util.to_chcase_case (source_case);
+        converter.result_case = Util.to_chcase_case (result_case);
+
+        result_text = converter.convert_case (source_text);
+
+        return result_text;
     }
 }

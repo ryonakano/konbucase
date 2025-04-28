@@ -2,6 +2,7 @@ data/ui/help-overlay.blp
 data/konbucase.desktop.in.in
 data/konbucase.metainfo.xml.in.in
 src/Application.vala
-src/Model/TextPaneModel.vala
 src/View/MainWindow.vala
-src/View/TextPane.vala
+src/View/ResultPane.vala
+src/View/SourcePane.vala
+src/View/BasePane.vala
