@@ -16,11 +16,6 @@
       <summary>Source text</summary>
       <description>The last saved source text</description>
     </key>
-    <key name="result-text" type="s">
-      <default>''</default>
-      <summary>Result text</summary>
-      <description>The last save result text</description>
-    </key>
     <key name="source-case-type" enum="case-type">
       <default>'space_separated'</default>
       <summary>Source case</summary>

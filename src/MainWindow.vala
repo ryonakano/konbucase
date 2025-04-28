@@ -83,6 +83,7 @@ public class MainWindow : Adw.ApplicationWindow {
         //  * case type of the source text is changed
         //  * case type of the result text is changed
         //  * the source text is changed
+        //  * the window is initialized
         source_pane.dropdown_changed.connect (() => {
             result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
         });
@@ -92,6 +93,7 @@ public class MainWindow : Adw.ApplicationWindow {
         source_pane.notify["text"].connect (() => {
             result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
         });
+        result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
 
         source_pane.copy_button_clicked.connect (() => {
             get_clipboard ().set_text (source_pane.text);
