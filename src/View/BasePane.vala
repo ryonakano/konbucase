@@ -9,7 +9,6 @@ public class BasePane : Gtk.Box {
 
     public string header_label { get; construct; }
     public bool editable { get; construct; }
-    public Define.TextType text_type { get; construct; }
 
     public Define.CaseType case_type { get; set; }
     public string text { get; set; }

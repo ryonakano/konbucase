@@ -26,16 +26,6 @@ namespace Define {
     }
 
     /**
-     * Type of the text.
-     */
-    public enum TextType {
-        /** Text that is converted. */
-        SOURCE,
-        /** Text after conversion. */
-        RESULT,
-    }
-
-    /**
      * Type of the case of the text.
      *
      * Note: Make sure to match with case-type enum in the gschema

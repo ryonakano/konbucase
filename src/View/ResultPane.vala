@@ -8,8 +8,7 @@ public class ResultPane : BasePane {
         Object (
             header_label: _("Convert _To:"),
             // Make the text view uneditable, otherwise the app freezes
-            editable: false,
-            text_type: Define.TextType.RESULT
+            editable: false
         );
     }
 

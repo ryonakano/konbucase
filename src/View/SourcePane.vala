@@ -7,8 +7,7 @@ public class SourcePane : BasePane {
     public SourcePane () {
         Object (
             header_label: _("Convert _From:"),
-            editable: true,
-            text_type: Define.TextType.SOURCE
+            editable: true
         );
     }
 
