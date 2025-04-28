@@ -31,11 +31,11 @@ namespace Define {
      * Note: Make sure to match with case-type enum in the gschema
      */
     public enum CaseType {
-        SPACE_SEPARATED = ChCase.Case.SPACE_SEPARATED,
-        CAMEL = ChCase.Case.CAMEL,
-        PASCAL = ChCase.Case.PASCAL,
-        SNAKE = ChCase.Case.SNAKE,
-        KEBAB = ChCase.Case.KEBAB,
-        SENTENCE = ChCase.Case.SENTENCE,
+        SPACE_SEPARATED,
+        CAMEL,
+        PASCAL,
+        SNAKE,
+        KEBAB,
+        SENTENCE,
     }
 }
