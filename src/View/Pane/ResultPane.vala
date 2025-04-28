@@ -18,7 +18,5 @@ public class View.Pane.ResultPane : BasePane {
         notify["case-type"].connect (() => {
             Application.settings.set_enum ("result-case-type", case_type);
         });
-
-        Application.settings.bind ("result-text", this, "text", SettingsBindFlags.DEFAULT);
     }
 }
