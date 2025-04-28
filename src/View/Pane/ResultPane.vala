@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class ResultPane : BasePane {
+public class View.Pane.ResultPane : BasePane {
     public ResultPane () {
         Object (
             header_label: _("Convert _To:"),

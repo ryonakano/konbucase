@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class CaseListItemModel : Object {
+public class Model.CaseListItemModel : Object {
     public Define.CaseType case_type { get; construct; }
     public string name { get; construct; }
     public string description { get; construct; }

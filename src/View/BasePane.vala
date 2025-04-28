@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class BasePane : Gtk.Box {
+public class View.BasePane : Gtk.Box {
     public signal void dropdown_changed ();
     public signal void copy_button_clicked ();
 
@@ -26,40 +26,40 @@ public class BasePane : Gtk.Box {
         case_list_factory.bind.connect (case_list_factory_bind);
         case_list_factory.setup.connect (case_list_factory_setup);
 
-        case_listmodel = new ListStore (typeof (CaseListItemModel));
-        case_listmodel.append (new CaseListItemModel (
+        case_listmodel = new ListStore (typeof (Model.CaseListItemModel));
+        case_listmodel.append (new Model.CaseListItemModel (
             Define.CaseType.SPACE_SEPARATED,
             N_("Space separated"),
             N_("Each word is separated by a space")
         ));
-        case_listmodel.append (new CaseListItemModel (
+        case_listmodel.append (new Model.CaseListItemModel (
             Define.CaseType.CAMEL,
             "camelCase",
             N_("The first character of compound words is in lowercase")
         ));
-        case_listmodel.append (new CaseListItemModel (
+        case_listmodel.append (new Model.CaseListItemModel (
             Define.CaseType.PASCAL,
             "PascalCase",
             N_("The first character of compound words is in uppercase")
         ));
-        case_listmodel.append (new CaseListItemModel (
+        case_listmodel.append (new Model.CaseListItemModel (
             Define.CaseType.SNAKE,
             "snake_case",
             N_("Each word is separated by an underscore")
         ));
-        case_listmodel.append (new CaseListItemModel (
+        case_listmodel.append (new Model.CaseListItemModel (
             Define.CaseType.KEBAB,
             "kebab-case",
             N_("Each word is separated by a hyphen")
         ));
-        case_listmodel.append (new CaseListItemModel (
+        case_listmodel.append (new Model.CaseListItemModel (
             Define.CaseType.SENTENCE,
             "Sentence case",
             N_("The first character of the first word in the sentence is in uppercase")
         ));
 
         var case_expression = new Gtk.PropertyExpression (
-            typeof (CaseListItemModel), null, "name"
+            typeof (Model.CaseListItemModel), null, "name"
         );
         var l10n_case_expression = new Gtk.CClosureExpression (
             typeof (string), null, { case_expression },
@@ -167,14 +167,14 @@ public class BasePane : Gtk.Box {
     private void case_list_factory_setup (Object object) {
         var item = object as Gtk.ListItem;
 
-        var row = new DropDownRow ();
+        var row = new Widget.DropDownRow ();
         item.child = row;
     }
 
     private void case_list_factory_bind (Object object) {
         var item = object as Gtk.ListItem;
-        var model = item.item as CaseListItemModel;
-        var row = item.child as DropDownRow;
+        var model = item.item as Model.CaseListItemModel;
+        var row = item.child as Widget.DropDownRow;
 
         row.title.label = _(model.name);
         row.description.label = _(model.description);
@@ -185,9 +185,9 @@ public class BasePane : Gtk.Box {
 
         bool found = case_listmodel.find_with_equal_func (
             // Find with case type
-            new CaseListItemModel ((Define.CaseType) case_type, "", ""),
+            new Model.CaseListItemModel ((Define.CaseType) case_type, "", ""),
             (a, b) => {
-                return ((CaseListItemModel) a).case_type == ((CaseListItemModel) b).case_type;
+                return ((Model.CaseListItemModel) a).case_type == ((Model.CaseListItemModel) b).case_type;
             },
             out pos
         );
@@ -206,7 +206,7 @@ public class BasePane : Gtk.Box {
             return false;
         }
 
-        var selected_item = case_listmodel.get_item ((uint) selected) as CaseListItemModel;
+        var selected_item = case_listmodel.get_item ((uint) selected) as Model.CaseListItemModel;
         if (selected_item == null) {
             return false;
         }

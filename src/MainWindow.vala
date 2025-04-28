@@ -5,8 +5,8 @@
 
 public class MainWindow : Adw.ApplicationWindow {
     private Adw.ToastOverlay overlay;
-    private SourcePane source_pane;
-    private ResultPane result_pane;
+    private View.Pane.SourcePane source_pane;
+    private View.Pane.ResultPane result_pane;
 
     private ChCase.Converter converter;
 
@@ -46,13 +46,13 @@ public class MainWindow : Adw.ApplicationWindow {
         var header = new Adw.HeaderBar ();
         header.pack_end (menu_button);
 
-        source_pane = new SourcePane ();
+        source_pane = new View.Pane.SourcePane ();
 
         var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL) {
             vexpand = true
         };
 
-        result_pane = new ResultPane ();
+        result_pane = new View.Pane.ResultPane ();
 
         var content_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         content_box.append (source_pane);
