@@ -77,7 +77,7 @@ public class View.BasePane : Adw.Bin {
             tooltip_text = _("Copy to Clipboard")
         };
 
-        var toolbar = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
+        var toolbar = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
             valign = Gtk.Align.CENTER
         };
         toolbar.add_css_class ("toolbar");
