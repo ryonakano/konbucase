@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class View.BasePane : Gtk.Box {
+public class View.BasePane : Adw.Bin {
     public signal void dropdown_changed ();
     public signal void copy_button_clicked ();
 
@@ -19,9 +19,6 @@ public class View.BasePane : Gtk.Box {
     }
 
     construct {
-        orientation = Gtk.Orientation.VERTICAL;
-        spacing = 0;
-
         var case_list_factory = new Gtk.SignalListItemFactory ();
         case_list_factory.bind.connect (case_list_factory_bind);
         case_list_factory.setup.connect (case_list_factory_setup);
@@ -81,12 +78,9 @@ public class View.BasePane : Gtk.Box {
         };
 
         var toolbar = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
-            valign = Gtk.Align.CENTER,
-            margin_top = 6,
-            margin_bottom = 6,
-            margin_start = 6,
-            margin_end = 6
+            valign = Gtk.Align.CENTER
         };
+        toolbar.add_css_class ("toolbar");
         toolbar.append (case_label);
         toolbar.append (case_dropdown);
         toolbar.append (copy_clipboard_button);
@@ -106,8 +100,13 @@ public class View.BasePane : Gtk.Box {
             child = source_view
         };
 
-        append (toolbar);
-        append (scrolled);
+        var toolbar_view = new Adw.ToolbarView () {
+            top_bar_style = Adw.ToolbarStyle.RAISED,
+            content = scrolled
+        };
+        toolbar_view.add_top_bar (toolbar);
+
+        child = toolbar_view;
 
         this.bind_property (
             "case-type",
