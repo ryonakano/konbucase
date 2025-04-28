@@ -1,0 +1,9 @@
+/* Styles only applied when building with Granite */
+/* Granite.init() automatically applies stylesheet named "Application.css" */
+
+/* Inspired from https://github.com/elementary/granite/pull/853 */
+/* TODO Remove this class when elementary SDK bundles a new release of Granite that includes the above fix */
+.toolbar {
+    border-spacing: 0.5rem;
+    padding: 0.5rem;
+}
