@@ -1,4 +1,5 @@
-/* Styles only applied for Pantheon */
+/* Styles only applied when building with Granite */
+/* Granite.init() automatically applies stylesheet named "Application.css" */
 
 /* Inspired from https://github.com/elementary/granite/pull/853 */
 /* TODO Remove this class when Granite is released with the above fix */
