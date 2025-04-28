@@ -109,7 +109,7 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     /**
-     * Perform conversion of {@link source_pane.text} and set the result to {@link result_pane.text}.
+     * Perform conversion of {@link source_text} and return result text.
      *
      * @param source_case case type of source text
      * @param source_text text that is converted

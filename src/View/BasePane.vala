@@ -9,17 +9,12 @@ public class BasePane : Gtk.Box {
 
     public string header_label { get; construct; }
     public bool editable { get; construct; }
-
     public Define.TextType text_type { get; construct; }
+
     public Define.CaseType case_type { get; set; }
-    /** GSettings key name that stores last case type. */
-    public string key_case_type { get; construct; }
-    /** GSettings key name that stores last text. */
-    public string key_text { get; construct; }
     public string text { get; set; }
 
     private ListStore case_listmodel;
-
     private GtkSource.Buffer buffer;
     private GtkSource.View source_view;
     private GtkSource.StyleSchemeManager style_scheme_manager;
@@ -119,12 +114,6 @@ public class BasePane : Gtk.Box {
         append (toolbar);
         append (scrolled);
 
-        case_type = (Define.CaseType) Application.settings.get_enum (key_case_type);
-
-        notify["case-type"].connect (() => {
-            Application.settings.set_enum (key_case_type, case_type);
-        });
-
         this.bind_property (
             "case-type",
             case_dropdown, "selected",
@@ -174,8 +163,6 @@ public class BasePane : Gtk.Box {
                 return true;
             }
         );
-
-        Application.settings.bind (key_text, buffer, "text", SettingsBindFlags.DEFAULT);
     }
 
     public void focus_source_view () {

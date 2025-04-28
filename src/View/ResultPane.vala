@@ -9,9 +9,17 @@ public class ResultPane : BasePane {
             header_label: _("Convert _To:"),
             // Make the text view uneditable, otherwise the app freezes
             editable: false,
-            text_type: Define.TextType.RESULT,
-            key_case_type: "result-case-type",
-            key_text: "result-text"
+            text_type: Define.TextType.RESULT
         );
+    }
+
+    construct {
+        case_type = (Define.CaseType) Application.settings.get_enum ("result-case-type");
+
+        notify["case-type"].connect (() => {
+            Application.settings.set_enum ("result-case-type", case_type);
+        });
+
+        Application.settings.bind ("result-text", this, "text", SettingsBindFlags.DEFAULT);
     }
 }
