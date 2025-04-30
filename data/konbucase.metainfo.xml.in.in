@@ -57,6 +57,21 @@
   </developer>
 
   <releases>
+    <release version="4.4.0" date="2025-04-30" urgency="medium">
+      <description translate="no">
+        <ul>
+          <li>Add Keyboard Shortcuts window</li>
+          <li>Put description of case into dropdown</li>
+          <li>Add shadow under the toolbar</li>
+          <li>Perform conversion instead of recovering last result on startup</li>
+          <li>Flatpak: Update elementary runtime to 8.1</li>
+          <li>Flatpak: Update GNOME runtime to 48</li>
+          <li>Update translations</li>
+          <li>…and so many refactoring under the hood!</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="4.3.1" date="2024-08-12" urgency="low">
       <description translate="no">
         <ul>
