@@ -7,3 +7,10 @@
     border-spacing: 0.5rem;
     padding: 0.5rem;
 }
+
+/* Workaround for a bug that the heading label is not aligned along with the description label in a popover */
+/* Upstream issue: https://github.com/elementary/stylesheet/issues/1244 */
+/* TODO Remove this class when elementary SDK bundles a new release of stylesheet that includes an actual fix */
+popover.background > contents label.heading {
+    margin: 0;
+}
