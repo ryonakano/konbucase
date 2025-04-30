@@ -62,6 +62,7 @@
         <ul>
           <li>Add Keyboard Shortcuts window</li>
           <li>Put description of case into dropdown</li>
+          <li>Add shadow under the toolbar</li>
           <li>Perform conversion instead of recovering last result on startup</li>
           <li>Flatpak: Update elementary runtime to 8.1</li>
           <li>Flatpak: Update GNOME runtime to 48</li>
