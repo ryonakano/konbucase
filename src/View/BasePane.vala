@@ -200,12 +200,14 @@ public class View.BasePane : Adw.Bin {
     }
 
     private bool selected_to_case (Binding binding, Value selected, ref Value case_type) {
+        uint pos = (uint) selected;
+
         // No item is selected
-        if (selected == Gtk.INVALID_LIST_POSITION) {
+        if (pos == Gtk.INVALID_LIST_POSITION) {
             return false;
         }
 
-        var selected_item = case_listmodel.get_item ((uint) selected) as Model.CaseListItemModel;
+        var selected_item = case_listmodel.get_item (pos) as Model.CaseListItemModel;
         if (selected_item == null) {
             return false;
         }
