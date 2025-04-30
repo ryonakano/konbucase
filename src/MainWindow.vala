@@ -97,16 +97,20 @@ public class MainWindow : Adw.ApplicationWindow {
 
         source_pane.copy_button_clicked.connect (() => {
             get_clipboard ().set_text (source_pane.text);
-            show_toast ();
+            toast_copied ();
         });
         result_pane.copy_button_clicked.connect (() => {
             get_clipboard ().set_text (result_pane.text);
-            show_toast ();
+            toast_copied ();
         });
     }
 
-    private void show_toast () {
-        var toast = new Adw.Toast (_("Text copied!"));
+    private void toast_copied () {
+        show_toast (N_("Text copied!"));
+    }
+
+    private void show_toast (string text) {
+        var toast = new Adw.Toast (_(text));
         overlay.add_toast (toast);
     }
 
