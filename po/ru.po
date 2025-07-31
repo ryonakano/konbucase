@@ -1,14 +1,14 @@
 # Russian translations for com.github.ryonakano.konbucase.
 # Copyright (C) 2020-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
-# lenemter <lenemter@gmail.com>, 2022, 2023, 2024.
+# lenemter <lenemter@gmail.com>, 2022, 2023, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-28 15:56+0900\n"
-"PO-Revision-Date: 2024-05-08 13:49+0000\n"
+"PO-Revision-Date: 2025-08-01 16:02+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "ru/>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5.4-rc\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Основные"
 
 #: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Сочетания клавиш"
 
 #: data/ui/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Выйти"
 
 #: data/konbucase.desktop.in.in:2
 msgid "@APP_NAME@"
@@ -133,7 +133,7 @@ msgstr "Копировать"
 #. John Doe https://example.com
 #: src/Application.vala:147
 msgid "translator-credits"
-msgstr "lenemter"
+msgstr "Leo \"lenemter\" <lenemter@gmail.com>"
 
 #: src/MainWindow.vala:26
 msgid "S_ystem"
@@ -153,14 +153,13 @@ msgstr "Стиль"
 
 #: src/MainWindow.vala:32
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "Сочетания клавиш"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/MainWindow.vala:36
-#, fuzzy, c-format
-#| msgid "_About KonbuCase"
+#, c-format
 msgid "_About %s"
-msgstr "О KonbuCase"
+msgstr "О %s"
 
 #: src/MainWindow.vala:40
 msgid "Main Menu"
