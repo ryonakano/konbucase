@@ -14,7 +14,7 @@ Features include:
 ### From Flathub or AppCenter (Recommended)
 You can install KonbuCase from Flathub:
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/com.github.ryonakano.konbucase)
+[![Get it on Flathub](https://flathub.org/api/badge?locale=en)](https://flathub.org/apps/com.github.ryonakano.konbucase)
 
 You should install KonbuCase from AppCenter if you're on elementary OS. This build is optimized for elementary OS:
 
