@@ -1,6 +1,6 @@
 data/konbucase.desktop.in.in
 data/konbucase.metainfo.xml.in.in
-data/ui/help-overlay.blp
+data/ui/shortcuts-dialog.blp
 src/Application.vala
 src/MainWindow.vala
 src/View/BasePane.vala
