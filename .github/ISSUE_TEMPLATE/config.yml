@@ -3,6 +3,3 @@ contact_links:
   - name: Report issues in the case conversion
     url: https://github.com/ryonakano/chcase/issues/new
     about: Choose this when you are reporting a problem related to the case conversion e.g. an unexpected conversion result, or ask for additional conversion option e.g. support converting to/from another case.
-  - name: Report issues in the app itself
-    url: https://github.com/ryonakano/konbucase/issues/new
-    about: Choose this when you are reporting a problem in the UI e.g. broken UI, or requesting new features of the app itself e.g. add a new button to do something.
