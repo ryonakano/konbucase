@@ -1,2 +1,7 @@
 name: Report issues in the app itself
 description: Choose this when you are reporting a problem in the UI e.g. broken UI, or requesting new features of the app itself e.g. add a new button to do something.
+body:
+- type: textarea
+  attributes:
+    label: Add a description
+    placeholder: Type your description here…
