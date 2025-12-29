@@ -28,13 +28,15 @@ modules:
   - name: chcase
     buildsystem: meson
     sources:
-      - type: git
-        url: https://github.com/ryonakano/chcase.git
-        tag: 2.3.0
-        commit: e1c664fdd8bded036fa1ce60747e1f92f889c2c4
+      - type: archive
+        url: https://github.com/ryonakano/chcase/archive/2.3.0.tar.gz
+        sha256: c1bdc394bdf8f782882d311f3c66a1ed768c7f1345eabc049e548ff9ae69ad37
         x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
+          type: json
+          url: https://api.github.com/repos/ryonakano/chcase/releases/latest
+          version-query: .tag_name
+          url-query: '"https://github.com/ryonakano/chcase/archive/" + .tag_name + ".tar.gz"'
+          timestamp-query: .published_at
 
   - name: konbucase
     buildsystem: meson
