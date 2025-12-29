@@ -101,11 +101,11 @@ endif
 appstreamcli = find_program('appstreamcli', required: false, disabler: true)
 test('Validate appstream file',
   appstreamcli,
-  args: ['validate', '--no-net', '--explain', appstream_file]
+  args: ['validate', '--no-net', '--explain', appstream_file],
 )
 
 compile_schemas = find_program('glib-compile-schemas', required: false, disabler: true)
 test('Validate schema file',
   compile_schemas,
-  args: ['--strict', '--dry-run', meson.current_source_dir()]
+  args: ['--strict', '--dry-run', meson.current_source_dir()],
 )
