@@ -20,8 +20,8 @@ public class View.Pane.SourcePane : BasePane {
             tooltip_text = _("Clear")
         };
 
-        unowned var toolbar_custom_box = get_toolbar_custom_box ();
-        toolbar_custom_box.append (clear_button);
+        unowned var toolbar_custom_area = get_toolbar_custom_area ();
+        toolbar_custom_area.append (clear_button);
 
         clear_button.clicked.connect (() => {
             clear_button_clicked ();

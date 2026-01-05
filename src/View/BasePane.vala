@@ -13,7 +13,7 @@ public class View.BasePane : Adw.Bin {
     public string text { get; set; }
 
     private ListStore case_listmodel;
-    private Gtk.Box toolbar_custom_box;
+    private Gtk.Box toolbar_custom_area;
     private GtkSource.View source_view;
 
     protected BasePane () {
@@ -78,7 +78,7 @@ public class View.BasePane : Adw.Bin {
             tooltip_text = _("Copy to Clipboard")
         };
 
-        toolbar_custom_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+        toolbar_custom_area = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
             valign = Gtk.Align.CENTER,
             hexpand = true
         };
@@ -90,7 +90,7 @@ public class View.BasePane : Adw.Bin {
         toolbar.append (case_label);
         toolbar.append (case_dropdown);
         toolbar.append (copy_clipboard_button);
-        toolbar.append (toolbar_custom_box);
+        toolbar.append (toolbar_custom_area);
 
         var buffer = new GtkSource.Buffer (null);
         var style_scheme_manager = new GtkSource.StyleSchemeManager ();
@@ -170,8 +170,8 @@ public class View.BasePane : Adw.Bin {
         source_view.grab_focus ();
     }
 
-    protected unowned Gtk.Box get_toolbar_custom_box () {
-        return toolbar_custom_box;
+    protected unowned Gtk.Box get_toolbar_custom_area () {
+        return toolbar_custom_area;
     }
 
     private void case_list_factory_setup (Object object) {
