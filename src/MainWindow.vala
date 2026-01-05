@@ -103,6 +103,10 @@ public class MainWindow : Adw.ApplicationWindow {
             get_clipboard ().set_text (result_pane.text);
             toast_copied ();
         });
+
+        source_pane.clear_button_clicked.connect (() => {
+            source_pane.text = "";
+        });
     }
 
     private void toast_copied () {
