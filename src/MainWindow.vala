@@ -105,6 +105,8 @@ public class MainWindow : Adw.ApplicationWindow {
         });
 
         source_pane.clear_button_clicked.connect (() => {
+            // Clear text in the source pane
+            // Text in the result pane is also cleared accordingly
             source_pane.text = "";
         });
     }
