@@ -32,8 +32,8 @@ public class View.Pane.SourcePane : BasePane {
             "text",
             clear_button, "sensitive",
             BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-            (binding, text, ref sensitive) => {
-                sensitive = ((string) text).length > 0;
+            (binding, _text, ref _sensitive) => {
+                _sensitive = ((string) _text).length > 0;
                 return true;
             }
         );
