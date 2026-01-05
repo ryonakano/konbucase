@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-28 15:56+0900\n"
+"POT-Creation-Date: 2026-01-05 08:50+0000\n"
 "PO-Revision-Date: 2025-08-01 16:02+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -20,34 +20,19 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.13-dev\n"
 
-#: data/ui/help-overlay.blp:10
-msgctxt "shortcut window"
-msgid "General"
-msgstr "Основные"
-
-#: data/ui/help-overlay.blp:14
-msgctxt "shortcut window"
-msgid "Keyboard Shortcuts"
-msgstr "Сочетания клавиш"
-
-#: data/ui/help-overlay.blp:19
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "Выйти"
-
-#: data/konbucase.desktop.in.in:2
+#: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
 msgstr "Приложение для конвертации регистра"
 
-#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "Конвертируйте регистр вашего текста"
 
-#: data/konbucase.desktop.in.in:10
+#: data/konbucase.desktop.in.in:11
 msgid "Text;"
 msgstr "Текст;"
 
@@ -85,45 +70,20 @@ msgstr "Окно приложения в светлом режиме"
 msgid "App window in the dark mode"
 msgstr "Окно приложения в тёмном режиме"
 
-#: src/View/Pane/ResultPane.vala:9
-msgid "Convert _To:"
-msgstr "Конвертировать в:"
+#: data/ui/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Основные"
 
-#: src/View/Pane/SourcePane.vala:9
-msgid "Convert _From:"
-msgstr "Конвертировать из:"
+#: data/ui/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr "Сочетания клавиш"
 
-#: src/View/BasePane.vala:29
-msgid "Space separated"
-msgstr "Разделённые пробелом"
-
-#: src/View/BasePane.vala:30
-msgid "Each word is separated by a space"
-msgstr "Каждое слово разделено пробелом"
-
-#: src/View/BasePane.vala:35
-msgid "The first character of compound words is in lowercase"
-msgstr "Первый символ совмещённых слов пишется с маленькой буквы"
-
-#: src/View/BasePane.vala:40
-msgid "The first character of compound words is in uppercase"
-msgstr "Первый символ совмещённых слов пишется с заглавной буквы"
-
-#: src/View/BasePane.vala:45
-msgid "Each word is separated by an underscore"
-msgstr "Каждое слово отделяется нижним подчёркиванием"
-
-#: src/View/BasePane.vala:50
-msgid "Each word is separated by a hyphen"
-msgstr "Каждое слово отделяется дефисом"
-
-#: src/View/BasePane.vala:55
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Первый символ первого слова в предложении пишется с заглавной буквы"
-
-#: src/View/BasePane.vala:77
-msgid "Copy to Clipboard"
-msgstr "Копировать"
+#: data/ui/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Выйти"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -165,9 +125,53 @@ msgstr "О %s"
 msgid "Main Menu"
 msgstr "Главное меню"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:115
 msgid "Text copied!"
 msgstr "Текст скопирован!"
+
+#: src/View/BasePane.vala:30
+msgid "Space separated"
+msgstr "Разделённые пробелом"
+
+#: src/View/BasePane.vala:31
+msgid "Each word is separated by a space"
+msgstr "Каждое слово разделено пробелом"
+
+#: src/View/BasePane.vala:36
+msgid "The first character of compound words is in lowercase"
+msgstr "Первый символ совмещённых слов пишется с маленькой буквы"
+
+#: src/View/BasePane.vala:41
+msgid "The first character of compound words is in uppercase"
+msgstr "Первый символ совмещённых слов пишется с заглавной буквы"
+
+#: src/View/BasePane.vala:46
+msgid "Each word is separated by an underscore"
+msgstr "Каждое слово отделяется нижним подчёркиванием"
+
+#: src/View/BasePane.vala:51
+msgid "Each word is separated by a hyphen"
+msgstr "Каждое слово отделяется дефисом"
+
+#: src/View/BasePane.vala:56
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Первый символ первого слова в предложении пишется с заглавной буквы"
+
+#: src/View/BasePane.vala:78
+msgid "Copy to Clipboard"
+msgstr "Копировать"
+
+#: src/View/Pane/ResultPane.vala:9
+msgid "Convert _To:"
+msgstr "Конвертировать в:"
+
+#: src/View/Pane/SourcePane.vala:11
+msgid "Convert _From:"
+msgstr "Конвертировать из:"
+
+#: src/View/Pane/SourcePane.vala:20
+msgid "Clear"
+msgstr ""
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-28 15:56+0900\n"
+"POT-Creation-Date: 2026-01-05 08:50+0000\n"
 "PO-Revision-Date: 2025-03-21 22:44+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
@@ -22,34 +22,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.11-dev\n"
 
-#: data/ui/help-overlay.blp:10
-msgctxt "shortcut window"
-msgid "General"
-msgstr "Geral"
-
-#: data/ui/help-overlay.blp:14
-msgctxt "shortcut window"
-msgid "Keyboard Shortcuts"
-msgstr "Teclas de atalho"
-
-#: data/ui/help-overlay.blp:19
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "Sair"
-
-#: data/konbucase.desktop.in.in:2
+#: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
 msgstr "Aplicação de Conversão de Palavras em Caixa Alta e Baixa"
 
-#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "Converta palavras em caixa alta ou baixa"
 
-#: data/konbucase.desktop.in.in:10
+#: data/konbucase.desktop.in.in:11
 msgid "Text;"
 msgstr "Texto;"
 
@@ -87,45 +72,20 @@ msgstr "Janela da app no modo leve"
 msgid "App window in the dark mode"
 msgstr "Janela da app no modo escuro"
 
-#: src/View/Pane/ResultPane.vala:9
-msgid "Convert _To:"
-msgstr "Converter para:"
+#: data/ui/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Geral"
 
-#: src/View/Pane/SourcePane.vala:9
-msgid "Convert _From:"
-msgstr "Converter de:"
+#: data/ui/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr "Teclas de atalho"
 
-#: src/View/BasePane.vala:29
-msgid "Space separated"
-msgstr "Espaço separado"
-
-#: src/View/BasePane.vala:30
-msgid "Each word is separated by a space"
-msgstr "Cada palavra está separada por um espaço"
-
-#: src/View/BasePane.vala:35
-msgid "The first character of compound words is in lowercase"
-msgstr "O primeiro carácter de palavras compostas está em minúsculas"
-
-#: src/View/BasePane.vala:40
-msgid "The first character of compound words is in uppercase"
-msgstr "O primeiro carácter de palavras compostas está em maiúsculas"
-
-#: src/View/BasePane.vala:45
-msgid "Each word is separated by an underscore"
-msgstr "Cada palavra está separada por um sublinhado"
-
-#: src/View/BasePane.vala:50
-msgid "Each word is separated by a hyphen"
-msgstr "Cada palavra está separada por um hífen"
-
-#: src/View/BasePane.vala:55
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "O primeiro carácter da primeira palavra da frase está em maiúsculas"
-
-#: src/View/BasePane.vala:77
-msgid "Copy to Clipboard"
-msgstr "Copiar para a Área de transferência"
+#: data/ui/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Sair"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -168,9 +128,53 @@ msgstr "_Sobre o KonbuCase"
 msgid "Main Menu"
 msgstr "Menu Principal"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:115
 msgid "Text copied!"
 msgstr "Texto copiado!"
+
+#: src/View/BasePane.vala:30
+msgid "Space separated"
+msgstr "Espaço separado"
+
+#: src/View/BasePane.vala:31
+msgid "Each word is separated by a space"
+msgstr "Cada palavra está separada por um espaço"
+
+#: src/View/BasePane.vala:36
+msgid "The first character of compound words is in lowercase"
+msgstr "O primeiro carácter de palavras compostas está em minúsculas"
+
+#: src/View/BasePane.vala:41
+msgid "The first character of compound words is in uppercase"
+msgstr "O primeiro carácter de palavras compostas está em maiúsculas"
+
+#: src/View/BasePane.vala:46
+msgid "Each word is separated by an underscore"
+msgstr "Cada palavra está separada por um sublinhado"
+
+#: src/View/BasePane.vala:51
+msgid "Each word is separated by a hyphen"
+msgstr "Cada palavra está separada por um hífen"
+
+#: src/View/BasePane.vala:56
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "O primeiro carácter da primeira palavra da frase está em maiúsculas"
+
+#: src/View/BasePane.vala:78
+msgid "Copy to Clipboard"
+msgstr "Copiar para a Área de transferência"
+
+#: src/View/Pane/ResultPane.vala:9
+msgid "Convert _To:"
+msgstr "Converter para:"
+
+#: src/View/Pane/SourcePane.vala:11
+msgid "Convert _From:"
+msgstr "Converter de:"
+
+#: src/View/Pane/SourcePane.vala:20
+msgid "Clear"
+msgstr ""
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

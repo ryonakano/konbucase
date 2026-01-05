@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-28 15:56+0900\n"
+"POT-Creation-Date: 2026-01-05 08:50+0000\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/konbucase/nl/"
@@ -20,34 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5.3-dev\n"
 
-#: data/ui/help-overlay.blp:10
-msgctxt "shortcut window"
-msgid "General"
-msgstr ""
-
-#: data/ui/help-overlay.blp:14
-msgctxt "shortcut window"
-msgid "Keyboard Shortcuts"
-msgstr ""
-
-#: data/ui/help-overlay.blp:19
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr ""
-
-#: data/konbucase.desktop.in.in:2
+#: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
 msgstr "Lettergrootte-omzettoepassing"
 
-#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "Zet tekst met verschillende lettergroottes om naar normale tekst"
 
-#: data/konbucase.desktop.in.in:10
+#: data/konbucase.desktop.in.in:11
 msgid "Text;"
 msgstr "Tekst;Grootte;Letter;"
 
@@ -83,49 +68,20 @@ msgstr "Venster met licht thema"
 msgid "App window in the dark mode"
 msgstr "Venster met donker thema"
 
-#: src/View/Pane/ResultPane.vala:9
-#, fuzzy
-#| msgid "Convert to:"
-msgid "Convert _To:"
-msgstr "Omzetten naar:"
+#: data/ui/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
 
-#: src/View/Pane/SourcePane.vala:9
-#, fuzzy
-#| msgid "Convert from:"
-msgid "Convert _From:"
-msgstr "Omzetten van:"
+#: data/ui/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
 
-#: src/View/BasePane.vala:29
-msgid "Space separated"
-msgstr "Spatiegescheiden"
-
-#: src/View/BasePane.vala:30
-msgid "Each word is separated by a space"
-msgstr "Elk woord wordt gescheiden door een komma"
-
-#: src/View/BasePane.vala:35
-msgid "The first character of compound words is in lowercase"
-msgstr "De eerste letter van samengestelde woorden is een kleine letter"
-
-#: src/View/BasePane.vala:40
-msgid "The first character of compound words is in uppercase"
-msgstr "De eerste letter van samengestelde woorden is een hoofdletter"
-
-#: src/View/BasePane.vala:45
-msgid "Each word is separated by an underscore"
-msgstr "Elk woord wordt gescheiden door een onderliggend streepje"
-
-#: src/View/BasePane.vala:50
-msgid "Each word is separated by a hyphen"
-msgstr "Elk woord wordt gescheiden door een streepje"
-
-#: src/View/BasePane.vala:55
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "De eerste letter van het eerste woord in de zin is een hoofdletter"
-
-#: src/View/BasePane.vala:77
-msgid "Copy to Clipboard"
-msgstr "Kopiëren naar klembord"
+#: data/ui/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -175,8 +131,56 @@ msgstr "KonbuCase"
 msgid "Main Menu"
 msgstr ""
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:115
 msgid "Text copied!"
+msgstr ""
+
+#: src/View/BasePane.vala:30
+msgid "Space separated"
+msgstr "Spatiegescheiden"
+
+#: src/View/BasePane.vala:31
+msgid "Each word is separated by a space"
+msgstr "Elk woord wordt gescheiden door een komma"
+
+#: src/View/BasePane.vala:36
+msgid "The first character of compound words is in lowercase"
+msgstr "De eerste letter van samengestelde woorden is een kleine letter"
+
+#: src/View/BasePane.vala:41
+msgid "The first character of compound words is in uppercase"
+msgstr "De eerste letter van samengestelde woorden is een hoofdletter"
+
+#: src/View/BasePane.vala:46
+msgid "Each word is separated by an underscore"
+msgstr "Elk woord wordt gescheiden door een onderliggend streepje"
+
+#: src/View/BasePane.vala:51
+msgid "Each word is separated by a hyphen"
+msgstr "Elk woord wordt gescheiden door een streepje"
+
+#: src/View/BasePane.vala:56
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "De eerste letter van het eerste woord in de zin is een hoofdletter"
+
+#: src/View/BasePane.vala:78
+msgid "Copy to Clipboard"
+msgstr "Kopiëren naar klembord"
+
+#: src/View/Pane/ResultPane.vala:9
+#, fuzzy
+#| msgid "Convert to:"
+msgid "Convert _To:"
+msgstr "Omzetten naar:"
+
+#: src/View/Pane/SourcePane.vala:11
+#, fuzzy
+#| msgid "Convert from:"
+msgid "Convert _From:"
+msgstr "Omzetten van:"
+
+#: src/View/Pane/SourcePane.vala:20
+msgid "Clear"
 msgstr ""
 
 #~ msgid "Ryo Nakano"

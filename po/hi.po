@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-28 15:56+0900\n"
+"POT-Creation-Date: 2026-01-05 08:50+0000\n"
 "PO-Revision-Date: 2024-05-16 15:01+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/konbucase/hi/"
@@ -19,34 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
-#: data/ui/help-overlay.blp:10
-msgctxt "shortcut window"
-msgid "General"
-msgstr ""
-
-#: data/ui/help-overlay.blp:14
-msgctxt "shortcut window"
-msgid "Keyboard Shortcuts"
-msgstr ""
-
-#: data/ui/help-overlay.blp:19
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr ""
-
-#: data/konbucase.desktop.in.in:2
+#: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
 msgstr "अक्षर परिवर्तन ऐप"
 
-#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "अपने पाठ में अक्षर को परिवर्तित करें"
 
-#: data/konbucase.desktop.in.in:10
+#: data/konbucase.desktop.in.in:11
 msgid "Text;"
 msgstr "पाठ;"
 
@@ -82,45 +67,20 @@ msgstr "ऐप खिड़की हल्के मोड में"
 msgid "App window in the dark mode"
 msgstr "ऐप खिड़की गहरे मोड में"
 
-#: src/View/Pane/ResultPane.vala:9
-msgid "Convert _To:"
-msgstr "इसमें परिवर्तित (_T):"
+#: data/ui/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
 
-#: src/View/Pane/SourcePane.vala:9
-msgid "Convert _From:"
-msgstr "इससे परिवर्तित (_F):"
+#: data/ui/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
 
-#: src/View/BasePane.vala:29
-msgid "Space separated"
-msgstr "रिक्ति से अलग"
-
-#: src/View/BasePane.vala:30
-msgid "Each word is separated by a space"
-msgstr "प्रत्येक शब्द को एक रिक्त स्थान द्वारा अलग किया गया है"
-
-#: src/View/BasePane.vala:35
-msgid "The first character of compound words is in lowercase"
-msgstr "संयुक्त शब्दों का पहला अक्षर छोटे अक्षरों में होता है"
-
-#: src/View/BasePane.vala:40
-msgid "The first character of compound words is in uppercase"
-msgstr "संयुक्त शब्दों का पहला अक्षर बड़े अक्षरों में होता है"
-
-#: src/View/BasePane.vala:45
-msgid "Each word is separated by an underscore"
-msgstr "प्रत्येक शब्द को एक अधोरेखा द्वारा अलग किया गया है"
-
-#: src/View/BasePane.vala:50
-msgid "Each word is separated by a hyphen"
-msgstr "प्रत्येक शब्द को समास-चिह्न द्वारा अलग किया गया है"
-
-#: src/View/BasePane.vala:55
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "वाक्य में पहले शब्द का पहला अक्षर बड़े अक्षरों में है"
-
-#: src/View/BasePane.vala:77
-msgid "Copy to Clipboard"
-msgstr "क्लिपबोर्ड पर कॉपी करें"
+#: data/ui/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -163,6 +123,50 @@ msgstr "KonbuCase के बारे में (_A)"
 msgid "Main Menu"
 msgstr "मुख्य मेनू"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:115
 msgid "Text copied!"
 msgstr "पाठ कॉपी किया गया!"
+
+#: src/View/BasePane.vala:30
+msgid "Space separated"
+msgstr "रिक्ति से अलग"
+
+#: src/View/BasePane.vala:31
+msgid "Each word is separated by a space"
+msgstr "प्रत्येक शब्द को एक रिक्त स्थान द्वारा अलग किया गया है"
+
+#: src/View/BasePane.vala:36
+msgid "The first character of compound words is in lowercase"
+msgstr "संयुक्त शब्दों का पहला अक्षर छोटे अक्षरों में होता है"
+
+#: src/View/BasePane.vala:41
+msgid "The first character of compound words is in uppercase"
+msgstr "संयुक्त शब्दों का पहला अक्षर बड़े अक्षरों में होता है"
+
+#: src/View/BasePane.vala:46
+msgid "Each word is separated by an underscore"
+msgstr "प्रत्येक शब्द को एक अधोरेखा द्वारा अलग किया गया है"
+
+#: src/View/BasePane.vala:51
+msgid "Each word is separated by a hyphen"
+msgstr "प्रत्येक शब्द को समास-चिह्न द्वारा अलग किया गया है"
+
+#: src/View/BasePane.vala:56
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "वाक्य में पहले शब्द का पहला अक्षर बड़े अक्षरों में है"
+
+#: src/View/BasePane.vala:78
+msgid "Copy to Clipboard"
+msgstr "क्लिपबोर्ड पर कॉपी करें"
+
+#: src/View/Pane/ResultPane.vala:9
+msgid "Convert _To:"
+msgstr "इसमें परिवर्तित (_T):"
+
+#: src/View/Pane/SourcePane.vala:11
+msgid "Convert _From:"
+msgstr "इससे परिवर्तित (_F):"
+
+#: src/View/Pane/SourcePane.vala:20
+msgid "Clear"
+msgstr ""

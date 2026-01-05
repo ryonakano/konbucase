@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-28 15:56+0900\n"
+"POT-Creation-Date: 2026-01-05 08:50+0000\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/konbucase/pl/"
@@ -20,34 +20,19 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5.3-dev\n"
 
-#: data/ui/help-overlay.blp:10
-msgctxt "shortcut window"
-msgid "General"
-msgstr ""
-
-#: data/ui/help-overlay.blp:14
-msgctxt "shortcut window"
-msgid "Keyboard Shortcuts"
-msgstr ""
-
-#: data/ui/help-overlay.blp:19
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr ""
-
-#: data/konbucase.desktop.in.in:2
+#: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
 msgstr ""
 
-#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr ""
 
-#: data/konbucase.desktop.in.in:10
+#: data/konbucase.desktop.in.in:11
 msgid "Text;"
 msgstr ""
 
@@ -79,49 +64,20 @@ msgstr ""
 msgid "App window in the dark mode"
 msgstr ""
 
-#: src/View/Pane/ResultPane.vala:9
-#, fuzzy
-#| msgid "Convert to:"
-msgid "Convert _To:"
-msgstr "Konwertuj do:"
+#: data/ui/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
 
-#: src/View/Pane/SourcePane.vala:9
-#, fuzzy
-#| msgid "Convert from:"
-msgid "Convert _From:"
-msgstr "Konwertuj z:"
+#: data/ui/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
 
-#: src/View/BasePane.vala:29
-msgid "Space separated"
-msgstr "Oddzielone spacją"
-
-#: src/View/BasePane.vala:30
-msgid "Each word is separated by a space"
-msgstr "Każde słowo jest oddzielone spacją"
-
-#: src/View/BasePane.vala:35
-msgid "The first character of compound words is in lowercase"
-msgstr "Pierwszy znak słów złożonych jest pisany małą literą"
-
-#: src/View/BasePane.vala:40
-msgid "The first character of compound words is in uppercase"
-msgstr "Pierwszy znak słów złożonych jest pisany wielką literą"
-
-#: src/View/BasePane.vala:45
-msgid "Each word is separated by an underscore"
-msgstr "Każde słowo jest oddzielone podkreśleniem"
-
-#: src/View/BasePane.vala:50
-msgid "Each word is separated by a hyphen"
-msgstr "Każde słowo jest oddzielone myślnikiem"
-
-#: src/View/BasePane.vala:55
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Pierwszy znak pierwszego słowa w zdaniu jest pisany wielką literą"
-
-#: src/View/BasePane.vala:77
-msgid "Copy to Clipboard"
-msgstr "Kopiuj do schowka"
+#: data/ui/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -171,9 +127,57 @@ msgstr "KonbuCase"
 msgid "Main Menu"
 msgstr ""
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:115
 msgid "Text copied!"
 msgstr "Skopiowano tekst!"
+
+#: src/View/BasePane.vala:30
+msgid "Space separated"
+msgstr "Oddzielone spacją"
+
+#: src/View/BasePane.vala:31
+msgid "Each word is separated by a space"
+msgstr "Każde słowo jest oddzielone spacją"
+
+#: src/View/BasePane.vala:36
+msgid "The first character of compound words is in lowercase"
+msgstr "Pierwszy znak słów złożonych jest pisany małą literą"
+
+#: src/View/BasePane.vala:41
+msgid "The first character of compound words is in uppercase"
+msgstr "Pierwszy znak słów złożonych jest pisany wielką literą"
+
+#: src/View/BasePane.vala:46
+msgid "Each word is separated by an underscore"
+msgstr "Każde słowo jest oddzielone podkreśleniem"
+
+#: src/View/BasePane.vala:51
+msgid "Each word is separated by a hyphen"
+msgstr "Każde słowo jest oddzielone myślnikiem"
+
+#: src/View/BasePane.vala:56
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Pierwszy znak pierwszego słowa w zdaniu jest pisany wielką literą"
+
+#: src/View/BasePane.vala:78
+msgid "Copy to Clipboard"
+msgstr "Kopiuj do schowka"
+
+#: src/View/Pane/ResultPane.vala:9
+#, fuzzy
+#| msgid "Convert to:"
+msgid "Convert _To:"
+msgstr "Konwertuj do:"
+
+#: src/View/Pane/SourcePane.vala:11
+#, fuzzy
+#| msgid "Convert from:"
+msgid "Convert _From:"
+msgstr "Konwertuj z:"
+
+#: src/View/Pane/SourcePane.vala:20
+msgid "Clear"
+msgstr ""
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
