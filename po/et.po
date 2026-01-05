@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Priit Jõerüüt <hwlate@joeruut.com>, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+# Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-05 08:50+0000\n"
-"PO-Revision-Date: 2025-03-23 06:44+0000\n"
-"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
+"PO-Revision-Date: 2026-01-06 11:01+0000\n"
+"Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "et/>\n"
 "Language: et\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -170,4 +171,4 @@ msgstr "_Lähtevorming:"
 
 #: src/View/Pane/SourcePane.vala:20
 msgid "Clear"
-msgstr ""
+msgstr "Tühjenda"
