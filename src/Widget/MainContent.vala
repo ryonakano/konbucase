@@ -60,7 +60,7 @@ public class Widget.MainContent : Adw.Bin {
         converter = new ChCase.Converter ();
 
         // The action users most frequently take is to input the source text.
-        // So, forcus to the source view by default.
+        // So, forcus to the source text area by default.
         source_textarea.grab_focus ();
 
         // Make copy button only sensitive when there are texts to copy
