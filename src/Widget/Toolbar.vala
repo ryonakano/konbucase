@@ -3,20 +3,21 @@
  * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class View.BasePane : Adw.Bin {
+public class Widget.Toolbar : Adw.Bin {
     public signal void dropdown_changed ();
     public signal void copy_button_clicked ();
 
     public string header_label { get; construct; }
-    public bool editable { get; construct; }
     public Define.CaseType case_type { get; set; }
-    public string text { get; set; }
+    public Gtk.Button copy_clipboard_button { get; private set; }
 
     private ListStore case_listmodel;
     private Gtk.Box toolbar_custom_area;
-    private GtkSource.View source_view;
 
-    protected BasePane () {
+    public Toolbar (string header_label) {
+        Object (
+            header_label: header_label
+        );
     }
 
     construct {
@@ -74,7 +75,7 @@ public class View.BasePane : Adw.Bin {
             mnemonic_widget = case_dropdown
         };
 
-        var copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
+        copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
             tooltip_text = _("Copy to Clipboard")
         };
 
@@ -92,28 +93,7 @@ public class View.BasePane : Adw.Bin {
         toolbar.append (copy_clipboard_button);
         toolbar.append (toolbar_custom_area);
 
-        var buffer = new GtkSource.Buffer (null);
-        var style_scheme_manager = new GtkSource.StyleSchemeManager ();
-        var gtk_settings = Gtk.Settings.get_default ();
-
-        source_view = new GtkSource.View.with_buffer (buffer) {
-            wrap_mode = Gtk.WrapMode.WORD_CHAR,
-            hexpand = true,
-            vexpand = true,
-            editable = editable
-        };
-
-        var scrolled = new Gtk.ScrolledWindow () {
-            child = source_view
-        };
-
-        var toolbar_view = new Adw.ToolbarView () {
-            top_bar_style = Adw.ToolbarStyle.RAISED,
-            content = scrolled
-        };
-        toolbar_view.add_top_bar (toolbar);
-
-        child = toolbar_view;
+        child = toolbar;
 
         this.bind_property (
             "case-type",
@@ -130,48 +110,10 @@ public class View.BasePane : Adw.Bin {
         copy_clipboard_button.clicked.connect (() => {
             copy_button_clicked ();
         });
-
-        // Sync with buffer text
-        buffer.bind_property (
-            "text",
-            this, "text",
-            BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE
-        );
-
-        // Make copy button only sensitive when there are texts to copy
-        this.bind_property (
-            "text",
-            copy_clipboard_button, "sensitive",
-            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-            (binding, text, ref sensitive) => {
-                sensitive = ((string) text).length > 0;
-                return true;
-            }
-        );
-
-        // Apply theme changes to the source view
-        gtk_settings.bind_property (
-            "gtk-application-prefer-dark-theme",
-            buffer, "style-scheme",
-            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-            (binding, prefer_dark, ref style_scheme) => {
-                if ((bool) prefer_dark) {
-                    style_scheme = style_scheme_manager.get_scheme ("solarized-dark");
-                } else {
-                    style_scheme = style_scheme_manager.get_scheme ("solarized-light");
-                }
-
-                return true;
-            }
-        );
     }
 
-    public void focus_source_view () {
-        source_view.grab_focus ();
-    }
-
-    protected unowned Gtk.Box get_toolbar_custom_area () {
-        return toolbar_custom_area;
+    public void append (Gtk.Widget widget) {
+        toolbar_custom_area.append (widget);
     }
 
     private void case_list_factory_setup (Object object) {
