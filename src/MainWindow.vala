@@ -42,9 +42,10 @@ public class MainWindow : Adw.ApplicationWindow {
 
         var main_content = new Widget.MainContent ();
 
-        var toolbar_view = new Adw.ToolbarView ();
+        var toolbar_view = new Adw.ToolbarView () {
+            content = main_content
+        };
         toolbar_view.add_top_bar (header);
-        toolbar_view.set_content (main_content);
 
         content = toolbar_view;
         width_request = 700;

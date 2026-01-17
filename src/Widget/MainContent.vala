@@ -13,7 +13,7 @@ public class Widget.MainContent : Adw.Bin {
 
     construct {
         /*************************************************/
-        /* Source Widgets                                */
+        /* Source Pane                                   */
         /*************************************************/
         var clear_button = new Gtk.Button.from_icon_name ("edit-clear") {
             tooltip_text = _("Clear")
@@ -28,13 +28,12 @@ public class Widget.MainContent : Adw.Bin {
         var source_textarea = new Widget.TextArea (true);
 
         /*************************************************/
-        /* Separators                                    */
+        /* Separator                                     */
         /*************************************************/
-        var separator_toolbar = new Gtk.Separator (Gtk.Orientation.VERTICAL);
-        var separator_textarea = new Gtk.Separator (Gtk.Orientation.VERTICAL);
+        var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL);
 
         /*************************************************/
-        /* Result Widgets                                */
+        /* Result Pane                                   */
         /*************************************************/
         var result_toolbar = new Widget.Toolbar (_("Convert _To:")) {
             valign = Gtk.Align.START,
@@ -48,8 +47,7 @@ public class Widget.MainContent : Adw.Bin {
         };
         content_grid.attach (source_toolbar, 0, 0);
         content_grid.attach (source_textarea, 0, 1);
-        content_grid.attach (separator_toolbar, 1, 0);
-        content_grid.attach (separator_textarea, 1, 1);
+        content_grid.attach (separator, 1, 0, 1, 2);
         content_grid.attach (result_toolbar, 2, 0);
         content_grid.attach (result_textarea, 2, 1);
 
