@@ -27,6 +27,7 @@ dependencies = [
 sources = files(
   'Model/CaseListItemModel.vala',
   'Widget/DropDownRow.vala',
+  'Widget/MainContent.vala',
   'Widget/TextArea.vala',
   'Widget/Toolbar.vala',
   'Application.vala',
