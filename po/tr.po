@@ -1,5 +1,5 @@
 # Turkish translations for com.github.ryonakano.konbucase.
-# Copyright (C) 2020-2025 Ryo Nakano
+# Copyright (C) 2020-2026 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Safak <bjksafak45@gmail.com>, 2020.
 # Sabri Ünal <libreajans@gmail.com>, 2022, 2023.
