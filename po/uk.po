@@ -1,5 +1,5 @@
 # Ukrainian translations for com.github.ryonakano.konbucase.
-# Copyright (C) 2020-2025 Ryo Nakano
+# Copyright (C) 2020-2026 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
 # Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023, 2024, 2025.
 # Artem <artem@molotov.work>, 2022.
