@@ -5,8 +5,6 @@
 
 public class MainWindow : Adw.ApplicationWindow {
     private Adw.ToastOverlay overlay;
-    private View.Pane.SourcePane source_pane;
-    private View.Pane.ResultPane result_pane;
 
     private ChCase.Converter converter;
 
@@ -46,21 +44,49 @@ public class MainWindow : Adw.ApplicationWindow {
         var header = new Adw.HeaderBar ();
         header.pack_end (menu_button);
 
-        source_pane = new View.Pane.SourcePane ();
-
-        var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL) {
-            vexpand = true
+        /*************************************************/
+        /* Source Widgets                                */
+        /*************************************************/
+        var clear_button = new Gtk.Button.from_icon_name ("edit-clear") {
+            tooltip_text = _("Clear")
         };
 
-        result_pane = new View.Pane.ResultPane ();
+        var source_toolbar = new Widget.Toolbar (_("Convert _From:")) {
+            valign = Gtk.Align.START,
+            case_type = (Define.CaseType) Application.settings.get_enum ("source-case-type")
+        };
+        source_toolbar.append (clear_button);
 
-        var content_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        content_box.append (source_pane);
-        content_box.append (separator);
-        content_box.append (result_pane);
+        var source_textarea = new Widget.TextArea (true);
+
+        /*************************************************/
+        /* Separators                                    */
+        /*************************************************/
+        var separator_toolbar = new Gtk.Separator (Gtk.Orientation.VERTICAL);
+        var separator_textarea = new Gtk.Separator (Gtk.Orientation.VERTICAL);
+
+        /*************************************************/
+        /* Result Widgets                                */
+        /*************************************************/
+        var result_toolbar = new Widget.Toolbar (_("Convert _To:")) {
+            valign = Gtk.Align.START,
+            case_type = (Define.CaseType) Application.settings.get_enum ("result-case-type")
+        };
+        // Make the text view uneditable, otherwise the app freezes
+        var result_textarea = new Widget.TextArea (false);
+
+        var content_grid = new Gtk.Grid () {
+            column_homogeneous = false
+        };
+        content_grid.attach (source_toolbar, 0, 0);
+        content_grid.attach (source_textarea, 0, 1);
+        content_grid.attach (separator_toolbar, 1, 0);
+        content_grid.attach (separator_textarea, 1, 1);
+        content_grid.attach (result_toolbar, 2, 0);
+        content_grid.attach (result_textarea, 2, 1);
 
         overlay = new Adw.ToastOverlay () {
-            child = content_box
+            child = content_grid
         };
 
         var toolbar_view = new Adw.ToolbarView ();
@@ -76,7 +102,47 @@ public class MainWindow : Adw.ApplicationWindow {
 
         // The action users most frequently take is to input the source text.
         // So, forcus to the source view by default.
-        source_pane.focus_source_view ();
+        source_textarea.grab_focus ();
+
+        // Make copy button only sensitive when there are texts to copy
+        source_textarea.bind_property (
+            "text",
+            source_toolbar.copy_clipboard_button, "sensitive",
+            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+            (binding, text, ref sensitive) => {
+                sensitive = ((string) text).length > 0;
+                return true;
+            }
+        );
+        result_textarea.bind_property (
+            "text",
+            result_toolbar.copy_clipboard_button, "sensitive",
+            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+            (binding, text, ref sensitive) => {
+                sensitive = ((string) text).length > 0;
+                return true;
+            }
+        );
+
+        // Make clear button only sensitive when there are texts to clear
+        source_textarea.bind_property (
+            "text",
+            clear_button, "sensitive",
+            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+            (binding, _text, ref _sensitive) => {
+                _sensitive = ((string) _text).length > 0;
+                return true;
+            }
+        );
+
+        source_toolbar.notify["case-type"].connect (() => {
+            Application.settings.set_enum ("source-case-type", source_toolbar.case_type);
+        });
+        result_toolbar.notify["case-type"].connect (() => {
+            Application.settings.set_enum ("result-case-type", result_toolbar.case_type);
+        });
+
+        Application.settings.bind ("source-text", source_textarea, "text", SettingsBindFlags.DEFAULT);
 
         // Perform conversion when:
         //
@@ -84,30 +150,30 @@ public class MainWindow : Adw.ApplicationWindow {
         //  * case type of the result text is changed
         //  * the source text is changed
         //  * the window is initialized
-        source_pane.dropdown_changed.connect (() => {
-            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
+        source_toolbar.dropdown_changed.connect (() => {
+            result_textarea.text = do_convert (source_toolbar.case_type, source_textarea.text, result_toolbar.case_type);
         });
-        result_pane.dropdown_changed.connect (() => {
-            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
+        result_toolbar.dropdown_changed.connect (() => {
+            result_textarea.text = do_convert (source_toolbar.case_type, source_textarea.text, result_toolbar.case_type);
         });
-        source_pane.notify["text"].connect (() => {
-            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
+        source_textarea.notify["text"].connect (() => {
+            result_textarea.text = do_convert (source_toolbar.case_type, source_textarea.text, result_toolbar.case_type);
         });
-        result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
+        result_textarea.text = do_convert (source_toolbar.case_type, source_textarea.text, result_toolbar.case_type);
 
-        source_pane.copy_button_clicked.connect (() => {
-            get_clipboard ().set_text (source_pane.text);
+        source_toolbar.copy_button_clicked.connect (() => {
+            get_clipboard ().set_text (source_textarea.text);
             toast_copied ();
         });
-        result_pane.copy_button_clicked.connect (() => {
-            get_clipboard ().set_text (result_pane.text);
+        result_toolbar.copy_button_clicked.connect (() => {
+            get_clipboard ().set_text (result_textarea.text);
             toast_copied ();
         });
 
-        source_pane.clear_button_clicked.connect (() => {
-            // Clear text in the source pane
-            // Text in the result pane is also cleared accordingly
-            source_pane.text = "";
+        clear_button.clicked.connect (() => {
+            // Clear text in the source textarea
+            // Text in the result textarea is also cleared accordingly
+            source_textarea.text = "";
         });
     }
 
