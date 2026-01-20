@@ -27,6 +27,12 @@ public class Widget.MainContent : Adw.Bin {
 
         var source_textarea = new Widget.TextArea (true);
 
+        var source_pane = new Adw.ToolbarView () {
+            top_bar_style = Adw.ToolbarStyle.RAISED,
+            content = source_textarea
+        };
+        source_pane.add_top_bar (source_toolbar);
+
         /*************************************************/
         /* Separator                                     */
         /*************************************************/
@@ -42,17 +48,19 @@ public class Widget.MainContent : Adw.Bin {
         // Make the text view uneditable, otherwise the app freezes
         var result_textarea = new Widget.TextArea (false);
 
-        var content_grid = new Gtk.Grid () {
-            column_homogeneous = false
+        var result_pane = new Adw.ToolbarView () {
+            top_bar_style = Adw.ToolbarStyle.RAISED,
+            content = result_textarea
         };
-        content_grid.attach (source_toolbar, 0, 0);
-        content_grid.attach (source_textarea, 0, 1);
-        content_grid.attach (separator, 1, 0, 1, 2);
-        content_grid.attach (result_toolbar, 2, 0);
-        content_grid.attach (result_textarea, 2, 1);
+        result_pane.add_top_bar (result_toolbar);
+
+        var content_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        content_box.append (source_pane);
+        content_box.append (separator);
+        content_box.append (result_pane);
 
         overlay = new Adw.ToastOverlay () {
-            child = content_grid
+            child = content_box
         };
 
         child = overlay;
