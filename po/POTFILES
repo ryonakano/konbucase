@@ -3,6 +3,5 @@ data/konbucase.metainfo.xml.in.in
 data/ui/help-overlay.blp
 src/Application.vala
 src/MainWindow.vala
-src/View/BasePane.vala
-src/View/Pane/ResultPane.vala
-src/View/Pane/SourcePane.vala
+src/Widget/MainContent.vala
+src/Widget/Toolbar.vala

@@ -4,12 +4,6 @@
  */
 
 public class MainWindow : Adw.ApplicationWindow {
-    private Adw.ToastOverlay overlay;
-    private View.Pane.SourcePane source_pane;
-    private View.Pane.ResultPane result_pane;
-
-    private ChCase.Converter converter;
-
     public MainWindow (Application app) {
         Object (
             application: app
@@ -46,97 +40,16 @@ public class MainWindow : Adw.ApplicationWindow {
         var header = new Adw.HeaderBar ();
         header.pack_end (menu_button);
 
-        source_pane = new View.Pane.SourcePane ();
+        var main_content = new Widget.MainContent ();
 
-        var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL) {
-            vexpand = true
+        var toolbar_view = new Adw.ToolbarView () {
+            content = main_content
         };
-
-        result_pane = new View.Pane.ResultPane ();
-
-        var content_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        content_box.append (source_pane);
-        content_box.append (separator);
-        content_box.append (result_pane);
-
-        overlay = new Adw.ToastOverlay () {
-            child = content_box
-        };
-
-        var toolbar_view = new Adw.ToolbarView ();
         toolbar_view.add_top_bar (header);
-        toolbar_view.set_content (overlay);
 
         content = toolbar_view;
         width_request = 700;
         height_request = 500;
         title = Define.APP_NAME;
-
-        converter = new ChCase.Converter ();
-
-        // The action users most frequently take is to input the source text.
-        // So, forcus to the source view by default.
-        source_pane.focus_source_view ();
-
-        // Perform conversion when:
-        //
-        //  * case type of the source text is changed
-        //  * case type of the result text is changed
-        //  * the source text is changed
-        //  * the window is initialized
-        source_pane.dropdown_changed.connect (() => {
-            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
-        });
-        result_pane.dropdown_changed.connect (() => {
-            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
-        });
-        source_pane.notify["text"].connect (() => {
-            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
-        });
-        result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
-
-        source_pane.copy_button_clicked.connect (() => {
-            get_clipboard ().set_text (source_pane.text);
-            toast_copied ();
-        });
-        result_pane.copy_button_clicked.connect (() => {
-            get_clipboard ().set_text (result_pane.text);
-            toast_copied ();
-        });
-
-        source_pane.clear_button_clicked.connect (() => {
-            // Clear text in the source pane
-            // Text in the result pane is also cleared accordingly
-            source_pane.text = "";
-        });
-    }
-
-    private void toast_copied () {
-        show_toast (N_("Text copied!"));
-    }
-
-    private void show_toast (string text) {
-        var toast = new Adw.Toast (_(text));
-        overlay.add_toast (toast);
-    }
-
-    /**
-     * Perform conversion of {@link source_text} and return result text.
-     *
-     * @param source_case case type of source text
-     * @param source_text text that is converted
-     * @param result_case case type of result text
-     *
-     * @return text after conversion
-     */
-    private string do_convert (Define.CaseType source_case, string source_text, Define.CaseType result_case) {
-        string result_text;
-
-        converter.source_case = Util.to_chcase_case (source_case);
-        converter.result_case = Util.to_chcase_case (result_case);
-
-        result_text = converter.convert_case (source_text);
-
-        return result_text;
     }
 }
