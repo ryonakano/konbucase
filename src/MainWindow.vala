@@ -30,6 +30,11 @@ public class MainWindow : Adw.ApplicationWindow {
             main_menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
         }
 
+        // TODO: Icon
+        var swap_button = new Gtk.Button.from_icon_name ("mail-send-receive") {
+            tooltip_text = _("Swap case and text")
+        };
+
         var menu_button = new Gtk.MenuButton () {
             tooltip_text = _("Main Menu"),
             icon_name = "open-menu",
@@ -38,6 +43,7 @@ public class MainWindow : Adw.ApplicationWindow {
         };
 
         var header = new Adw.HeaderBar ();
+        header.pack_start (swap_button);
         header.pack_end (menu_button);
 
         var main_content = new Widget.MainContent ();
@@ -51,5 +57,9 @@ public class MainWindow : Adw.ApplicationWindow {
         width_request = 700;
         height_request = 500;
         title = Define.APP_NAME;
+
+        swap_button.clicked.connect (() => {
+            main_content.swap ();
+        });
     }
 }
