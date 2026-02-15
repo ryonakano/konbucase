@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-05 08:50+0000\n"
+"POT-Creation-Date: 2026-02-15 09:13+0000\n"
 "PO-Revision-Date: 2025-03-31 04:19+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -98,83 +98,83 @@ msgstr "Esci"
 msgid "translator-credits"
 msgstr "Albano Battistella <albanobattistella@gmail.com>"
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:20
 msgid "S_ystem"
 msgstr "S_istema"
 
-#: src/MainWindow.vala:27
+#: src/MainWindow.vala:21
 msgid "_Light"
 msgstr "_Chiaro"
 
-#: src/MainWindow.vala:28
+#: src/MainWindow.vala:22
 msgid "_Dark"
 msgstr "_Scuro"
 
-#: src/MainWindow.vala:31
+#: src/MainWindow.vala:25
 msgid "_Style"
 msgstr "_Stile"
 
-#: src/MainWindow.vala:32
+#: src/MainWindow.vala:26
 msgid "_Keyboard Shortcuts"
 msgstr "_Scorciatoie da tastiera"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:36
+#: src/MainWindow.vala:30
 #, c-format
 msgid "_About %s"
 msgstr "_Informazioni su %s"
 
-#: src/MainWindow.vala:40
+#: src/MainWindow.vala:34
 msgid "Main Menu"
 msgstr "Menù principale"
 
-#: src/MainWindow.vala:115
-msgid "Text copied!"
-msgstr "Testo copiato!"
+#: src/Widget/MainContent.vala:19
+msgid "Clear"
+msgstr ""
 
-#: src/View/BasePane.vala:30
-msgid "Space separated"
-msgstr "Spazi separati"
-
-#: src/View/BasePane.vala:31
-msgid "Each word is separated by a space"
-msgstr "Ogni parola è separata da uno spazio"
-
-#: src/View/BasePane.vala:36
-msgid "The first character of compound words is in lowercase"
-msgstr "Il primo carattere delle parole composte è minuscolo"
-
-#: src/View/BasePane.vala:41
-msgid "The first character of compound words is in uppercase"
-msgstr "Il primo carattere delle parole composte è maiuscolo"
-
-#: src/View/BasePane.vala:46
-msgid "Each word is separated by an underscore"
-msgstr "Ogni parola è separata da un underscore (trattino basso)"
-
-#: src/View/BasePane.vala:51
-msgid "Each word is separated by a hyphen"
-msgstr "Ogni parola è separata da un hyphen (trattino alto)"
-
-#: src/View/BasePane.vala:56
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
-
-#: src/View/BasePane.vala:78
-msgid "Copy to Clipboard"
-msgstr "Copia negli appunti"
-
-#: src/View/Pane/ResultPane.vala:9
-msgid "Convert _To:"
-msgstr "Converti _in:"
-
-#: src/View/Pane/SourcePane.vala:11
+#: src/Widget/MainContent.vala:22
 msgid "Convert _From:"
 msgstr "Converti _da:"
 
-#: src/View/Pane/SourcePane.vala:20
-msgid "Clear"
-msgstr ""
+#: src/Widget/MainContent.vala:44
+msgid "Convert _To:"
+msgstr "Converti _in:"
+
+#: src/Widget/MainContent.vala:148
+msgid "Text copied!"
+msgstr "Testo copiato!"
+
+#: src/Widget/Toolbar.vala:31
+msgid "Space separated"
+msgstr "Spazi separati"
+
+#: src/Widget/Toolbar.vala:32
+msgid "Each word is separated by a space"
+msgstr "Ogni parola è separata da uno spazio"
+
+#: src/Widget/Toolbar.vala:37
+msgid "The first character of compound words is in lowercase"
+msgstr "Il primo carattere delle parole composte è minuscolo"
+
+#: src/Widget/Toolbar.vala:42
+msgid "The first character of compound words is in uppercase"
+msgstr "Il primo carattere delle parole composte è maiuscolo"
+
+#: src/Widget/Toolbar.vala:47
+msgid "Each word is separated by an underscore"
+msgstr "Ogni parola è separata da un underscore (trattino basso)"
+
+#: src/Widget/Toolbar.vala:52
+msgid "Each word is separated by a hyphen"
+msgstr "Ogni parola è separata da un hyphen (trattino alto)"
+
+#: src/Widget/Toolbar.vala:57
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
+
+#: src/Widget/Toolbar.vala:79
+msgid "Copy to Clipboard"
+msgstr "Copia negli appunti"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

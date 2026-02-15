@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-05 08:50+0000\n"
+"POT-Creation-Date: 2026-02-15 09:13+0000\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -94,95 +94,95 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:20
 #, fuzzy
 #| msgid "System"
 msgid "S_ystem"
 msgstr "System"
 
-#: src/MainWindow.vala:27
+#: src/MainWindow.vala:21
 #, fuzzy
 #| msgid "Light"
 msgid "_Light"
 msgstr "Lys"
 
-#: src/MainWindow.vala:28
+#: src/MainWindow.vala:22
 #, fuzzy
 #| msgid "Dark"
 msgid "_Dark"
 msgstr "Mørk"
 
-#: src/MainWindow.vala:31
+#: src/MainWindow.vala:25
 #, fuzzy
 msgid "_Style"
 msgstr "Drakt"
 
-#: src/MainWindow.vala:32
+#: src/MainWindow.vala:26
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:36
+#: src/MainWindow.vala:30
 #, fuzzy, c-format
 #| msgid "KonbuCase"
 msgid "_About %s"
 msgstr "KonbuCase"
 
-#: src/MainWindow.vala:40
+#: src/MainWindow.vala:34
 msgid "Main Menu"
 msgstr "Hovedmeny"
 
-#: src/MainWindow.vala:115
-msgid "Text copied!"
-msgstr "Tekst kopiert"
+#: src/Widget/MainContent.vala:19
+msgid "Clear"
+msgstr ""
 
-#: src/View/BasePane.vala:30
-msgid "Space separated"
-msgstr "Mellomromsinndelt"
-
-#: src/View/BasePane.vala:31
-msgid "Each word is separated by a space"
-msgstr "Hvert ord inndeles av mellomrom"
-
-#: src/View/BasePane.vala:36
-msgid "The first character of compound words is in lowercase"
-msgstr "Første tegn i et flerdelt ord har liten forbokstav"
-
-#: src/View/BasePane.vala:41
-msgid "The first character of compound words is in uppercase"
-msgstr "Første tegn i et flerdelt ord har stor forbokstav"
-
-#: src/View/BasePane.vala:46
-msgid "Each word is separated by an underscore"
-msgstr "Hvert ord inndeles av understrek"
-
-#: src/View/BasePane.vala:51
-msgid "Each word is separated by a hyphen"
-msgstr "Hvert ord inndeles av bindestrek"
-
-#: src/View/BasePane.vala:56
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Første tegn i første ord i setningen har stor forbokstav"
-
-#: src/View/BasePane.vala:78
-msgid "Copy to Clipboard"
-msgstr "Kopier til utklippstavlen"
-
-#: src/View/Pane/ResultPane.vala:9
-#, fuzzy
-#| msgid "Convert to:"
-msgid "Convert _To:"
-msgstr "Konverter til:"
-
-#: src/View/Pane/SourcePane.vala:11
+#: src/Widget/MainContent.vala:22
 #, fuzzy
 #| msgid "Convert from:"
 msgid "Convert _From:"
 msgstr "Konverter fra:"
 
-#: src/View/Pane/SourcePane.vala:20
-msgid "Clear"
-msgstr ""
+#: src/Widget/MainContent.vala:44
+#, fuzzy
+#| msgid "Convert to:"
+msgid "Convert _To:"
+msgstr "Konverter til:"
+
+#: src/Widget/MainContent.vala:148
+msgid "Text copied!"
+msgstr "Tekst kopiert"
+
+#: src/Widget/Toolbar.vala:31
+msgid "Space separated"
+msgstr "Mellomromsinndelt"
+
+#: src/Widget/Toolbar.vala:32
+msgid "Each word is separated by a space"
+msgstr "Hvert ord inndeles av mellomrom"
+
+#: src/Widget/Toolbar.vala:37
+msgid "The first character of compound words is in lowercase"
+msgstr "Første tegn i et flerdelt ord har liten forbokstav"
+
+#: src/Widget/Toolbar.vala:42
+msgid "The first character of compound words is in uppercase"
+msgstr "Første tegn i et flerdelt ord har stor forbokstav"
+
+#: src/Widget/Toolbar.vala:47
+msgid "Each word is separated by an underscore"
+msgstr "Hvert ord inndeles av understrek"
+
+#: src/Widget/Toolbar.vala:52
+msgid "Each word is separated by a hyphen"
+msgstr "Hvert ord inndeles av bindestrek"
+
+#: src/Widget/Toolbar.vala:57
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Første tegn i første ord i setningen har stor forbokstav"
+
+#: src/Widget/Toolbar.vala:79
+msgid "Copy to Clipboard"
+msgstr "Kopier til utklippstavlen"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

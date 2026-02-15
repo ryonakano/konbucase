@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-05 08:50+0000\n"
+"POT-Creation-Date: 2026-02-15 09:13+0000\n"
 "PO-Revision-Date: 2026-01-06 11:01+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -95,80 +95,80 @@ msgstr "Välju"
 msgid "translator-credits"
 msgstr "Priit Jõerüüt 2024-2025"
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:20
 msgid "S_ystem"
 msgstr "S_üsteemi kujundus"
 
-#: src/MainWindow.vala:27
+#: src/MainWindow.vala:21
 msgid "_Light"
 msgstr "_Hele kujundus"
 
-#: src/MainWindow.vala:28
+#: src/MainWindow.vala:22
 msgid "_Dark"
 msgstr "_Tume kujundus"
 
-#: src/MainWindow.vala:31
+#: src/MainWindow.vala:25
 msgid "_Style"
 msgstr "_Kujundus"
 
-#: src/MainWindow.vala:32
+#: src/MainWindow.vala:26
 msgid "_Keyboard Shortcuts"
 msgstr "_Klaviatuuri kiirklahvid"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:36
+#: src/MainWindow.vala:30
 #, c-format
 msgid "_About %s"
 msgstr "R_akenduse teave: %s"
 
-#: src/MainWindow.vala:40
+#: src/MainWindow.vala:34
 msgid "Main Menu"
 msgstr "Põhimenüü"
 
-#: src/MainWindow.vala:115
-msgid "Text copied!"
-msgstr "Tekst on kopeeritud!"
+#: src/Widget/MainContent.vala:19
+msgid "Clear"
+msgstr "Tühjenda"
 
-#: src/View/BasePane.vala:30
-msgid "Space separated"
-msgstr "Tühikutega eraldatud"
-
-#: src/View/BasePane.vala:31
-msgid "Each word is separated by a space"
-msgstr "Sõnu eraldavad tühikud"
-
-#: src/View/BasePane.vala:36
-msgid "The first character of compound words is in lowercase"
-msgstr "Liitsõna esimene sõna algab väiketähega"
-
-#: src/View/BasePane.vala:41
-msgid "The first character of compound words is in uppercase"
-msgstr "Liitsõna esimene sõna algab suurtähega"
-
-#: src/View/BasePane.vala:46
-msgid "Each word is separated by an underscore"
-msgstr "Sõnu eraldavad alakriipsud"
-
-#: src/View/BasePane.vala:51
-msgid "Each word is separated by a hyphen"
-msgstr "Sõnu eraldavad sidekriipsud"
-
-#: src/View/BasePane.vala:56
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Lause iga sõna esimene täht on suurtäht"
-
-#: src/View/BasePane.vala:78
-msgid "Copy to Clipboard"
-msgstr "Kopeeri lõikelauale"
-
-#: src/View/Pane/ResultPane.vala:9
-msgid "Convert _To:"
-msgstr "_Sihtvorming:"
-
-#: src/View/Pane/SourcePane.vala:11
+#: src/Widget/MainContent.vala:22
 msgid "Convert _From:"
 msgstr "_Lähtevorming:"
 
-#: src/View/Pane/SourcePane.vala:20
-msgid "Clear"
-msgstr "Tühjenda"
+#: src/Widget/MainContent.vala:44
+msgid "Convert _To:"
+msgstr "_Sihtvorming:"
+
+#: src/Widget/MainContent.vala:148
+msgid "Text copied!"
+msgstr "Tekst on kopeeritud!"
+
+#: src/Widget/Toolbar.vala:31
+msgid "Space separated"
+msgstr "Tühikutega eraldatud"
+
+#: src/Widget/Toolbar.vala:32
+msgid "Each word is separated by a space"
+msgstr "Sõnu eraldavad tühikud"
+
+#: src/Widget/Toolbar.vala:37
+msgid "The first character of compound words is in lowercase"
+msgstr "Liitsõna esimene sõna algab väiketähega"
+
+#: src/Widget/Toolbar.vala:42
+msgid "The first character of compound words is in uppercase"
+msgstr "Liitsõna esimene sõna algab suurtähega"
+
+#: src/Widget/Toolbar.vala:47
+msgid "Each word is separated by an underscore"
+msgstr "Sõnu eraldavad alakriipsud"
+
+#: src/Widget/Toolbar.vala:52
+msgid "Each word is separated by a hyphen"
+msgstr "Sõnu eraldavad sidekriipsud"
+
+#: src/Widget/Toolbar.vala:57
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Lause iga sõna esimene täht on suurtäht"
+
+#: src/Widget/Toolbar.vala:79
+msgid "Copy to Clipboard"
+msgstr "Kopeeri lõikelauale"
