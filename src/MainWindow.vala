@@ -30,8 +30,7 @@ public class MainWindow : Adw.ApplicationWindow {
             main_menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
         }
 
-        // TODO: Icon
-        var swap_button = new Gtk.Button.from_icon_name ("mail-send-receive") {
+        var swap_button = new Gtk.Button.from_icon_name ("media-playlist-repeat") {
             tooltip_text = _("Swap case and text")
         };
 

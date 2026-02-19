@@ -153,6 +153,9 @@ public class Widget.MainContent : Adw.Bin {
     }
 
     public void swap () {
+        // Changing value of source_toolbar.case_type, result_toolbar.case_type, and source_textarea.text causes
+        // value of result_textarea.text being changed, which is unexpected convert.
+        // So, disable corresponding signal handlers during swap.
         SignalHandler.block (source_toolbar, source_case_handler);
         SignalHandler.block (result_toolbar, result_case_handler);
         SignalHandler.block (source_textarea, source_text_handler);
