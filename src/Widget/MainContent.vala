@@ -4,7 +4,15 @@
  */
 
 public class Widget.MainContent : Adw.Bin {
+    private Widget.Toolbar source_toolbar;
+    private Widget.TextArea source_textarea;
+    private Widget.Toolbar result_toolbar;
+    private Widget.TextArea result_textarea;
     private Adw.ToastOverlay overlay;
+
+    private ulong source_case_handler;
+    private ulong result_case_handler;
+    private ulong source_text_handler;
 
     private ChCase.Converter converter;
 
@@ -19,13 +27,13 @@ public class Widget.MainContent : Adw.Bin {
             tooltip_text = _("Clear")
         };
 
-        var source_toolbar = new Widget.Toolbar (_("Convert _From:")) {
+        source_toolbar = new Widget.Toolbar (_("Convert _From:")) {
             valign = Gtk.Align.START,
             case_type = (Define.CaseType) Application.settings.get_enum ("source-case-type")
         };
         source_toolbar.append (clear_button);
 
-        var source_textarea = new Widget.TextArea (true);
+        source_textarea = new Widget.TextArea (true);
 
         var source_pane = new Adw.ToolbarView () {
             top_bar_style = Adw.ToolbarStyle.RAISED,
@@ -41,12 +49,12 @@ public class Widget.MainContent : Adw.Bin {
         /*************************************************/
         /* Result Pane                                   */
         /*************************************************/
-        var result_toolbar = new Widget.Toolbar (_("Convert _To:")) {
+        result_toolbar = new Widget.Toolbar (_("Convert _To:")) {
             valign = Gtk.Align.START,
             case_type = (Define.CaseType) Application.settings.get_enum ("result-case-type")
         };
         // Make the text view uneditable, otherwise the app freezes
-        var result_textarea = new Widget.TextArea (false);
+        result_textarea = new Widget.TextArea (false);
 
         var result_pane = new Adw.ToolbarView () {
             top_bar_style = Adw.ToolbarStyle.RAISED,
@@ -117,13 +125,13 @@ public class Widget.MainContent : Adw.Bin {
         //  * case type of the result text is changed
         //  * the source text is changed
         //  * the window is initialized
-        source_toolbar.dropdown_changed.connect (() => {
+        source_case_handler = source_toolbar.dropdown_changed.connect (() => {
             result_textarea.text = do_convert (source_toolbar.case_type, source_textarea.text, result_toolbar.case_type);
         });
-        result_toolbar.dropdown_changed.connect (() => {
+        result_case_handler = result_toolbar.dropdown_changed.connect (() => {
             result_textarea.text = do_convert (source_toolbar.case_type, source_textarea.text, result_toolbar.case_type);
         });
-        source_textarea.notify["text"].connect (() => {
+        source_text_handler = source_textarea.notify["text"].connect (() => {
             result_textarea.text = do_convert (source_toolbar.case_type, source_textarea.text, result_toolbar.case_type);
         });
         result_textarea.text = do_convert (source_toolbar.case_type, source_textarea.text, result_toolbar.case_type);
@@ -142,6 +150,27 @@ public class Widget.MainContent : Adw.Bin {
             // Text in the result textarea is also cleared accordingly
             source_textarea.text = "";
         });
+    }
+
+    public void swap () {
+        // Changing value of source_toolbar.case_type, result_toolbar.case_type, and source_textarea.text causes
+        // value of result_textarea.text being changed, which is unexpected convert.
+        // So, disable corresponding signal handlers during swap.
+        SignalHandler.block (source_toolbar, source_case_handler);
+        SignalHandler.block (result_toolbar, result_case_handler);
+        SignalHandler.block (source_textarea, source_text_handler);
+
+        Define.CaseType tmp_case = source_toolbar.case_type;
+        source_toolbar.case_type = result_toolbar.case_type;
+        result_toolbar.case_type = tmp_case;
+
+        string tmp_text = source_textarea.text;
+        source_textarea.text = result_textarea.text;
+        result_textarea.text = tmp_text;
+
+        SignalHandler.unblock (source_toolbar, source_case_handler);
+        SignalHandler.unblock (result_toolbar, result_case_handler);
+        SignalHandler.unblock (source_textarea, source_text_handler);
     }
 
     private void toast_copied () {
