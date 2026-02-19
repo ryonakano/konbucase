@@ -24,11 +24,11 @@ public class Widget.TextArea : Adw.Bin {
             wrap_mode = Gtk.WrapMode.WORD_CHAR,
             hexpand = true,
             vexpand = true,
-            editable = editable
+            editable = editable,
         };
 
         var scrolled = new Gtk.ScrolledWindow () {
-            child = source_view
+            child = source_view,
         };
 
         child = scrolled;
