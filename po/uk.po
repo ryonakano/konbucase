@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-05 08:50+0000\n"
+"POT-Creation-Date: 2026-02-15 09:13+0000\n"
 "PO-Revision-Date: 2025-03-25 00:04+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -94,83 +94,83 @@ msgstr "Вихід"
 msgid "translator-credits"
 msgstr "Ihor Hordiichuk"
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:20
 msgid "S_ystem"
 msgstr "С_истемний"
 
-#: src/MainWindow.vala:27
+#: src/MainWindow.vala:21
 msgid "_Light"
 msgstr "_Світлий"
 
-#: src/MainWindow.vala:28
+#: src/MainWindow.vala:22
 msgid "_Dark"
 msgstr "_Темний"
 
-#: src/MainWindow.vala:31
+#: src/MainWindow.vala:25
 msgid "_Style"
 msgstr "_Стиль"
 
-#: src/MainWindow.vala:32
+#: src/MainWindow.vala:26
 msgid "_Keyboard Shortcuts"
 msgstr "_Комбінації клавіш"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:36
+#: src/MainWindow.vala:30
 #, c-format
 msgid "_About %s"
 msgstr "_Про %s"
 
-#: src/MainWindow.vala:40
+#: src/MainWindow.vala:34
 msgid "Main Menu"
 msgstr "Головне меню"
 
-#: src/MainWindow.vala:115
-msgid "Text copied!"
-msgstr "Текст скопійовано!"
+#: src/Widget/MainContent.vala:19
+msgid "Clear"
+msgstr ""
 
-#: src/View/BasePane.vala:30
-msgid "Space separated"
-msgstr "Розділено пробілами"
-
-#: src/View/BasePane.vala:31
-msgid "Each word is separated by a space"
-msgstr "Кожне слово відокремлено пробілом"
-
-#: src/View/BasePane.vala:36
-msgid "The first character of compound words is in lowercase"
-msgstr "Перший символ сполучених слів пишеться з маленької букви"
-
-#: src/View/BasePane.vala:41
-msgid "The first character of compound words is in uppercase"
-msgstr "Перший символ сполучених слів пишеться з великої букви"
-
-#: src/View/BasePane.vala:46
-msgid "Each word is separated by an underscore"
-msgstr "Кожне слово розділене символом підкреслення"
-
-#: src/View/BasePane.vala:51
-msgid "Each word is separated by a hyphen"
-msgstr "Кожне слово розділяється дефісом"
-
-#: src/View/BasePane.vala:56
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "Перший символ першого слова в реченні пишеться з великої букви"
-
-#: src/View/BasePane.vala:78
-msgid "Copy to Clipboard"
-msgstr "Копіювати до буфера обміну"
-
-#: src/View/Pane/ResultPane.vala:9
-msgid "Convert _To:"
-msgstr "Конвертувати _в:"
-
-#: src/View/Pane/SourcePane.vala:11
+#: src/Widget/MainContent.vala:22
 msgid "Convert _From:"
 msgstr "Конвертувати _з:"
 
-#: src/View/Pane/SourcePane.vala:20
-msgid "Clear"
-msgstr ""
+#: src/Widget/MainContent.vala:44
+msgid "Convert _To:"
+msgstr "Конвертувати _в:"
+
+#: src/Widget/MainContent.vala:148
+msgid "Text copied!"
+msgstr "Текст скопійовано!"
+
+#: src/Widget/Toolbar.vala:31
+msgid "Space separated"
+msgstr "Розділено пробілами"
+
+#: src/Widget/Toolbar.vala:32
+msgid "Each word is separated by a space"
+msgstr "Кожне слово відокремлено пробілом"
+
+#: src/Widget/Toolbar.vala:37
+msgid "The first character of compound words is in lowercase"
+msgstr "Перший символ сполучених слів пишеться з маленької букви"
+
+#: src/Widget/Toolbar.vala:42
+msgid "The first character of compound words is in uppercase"
+msgstr "Перший символ сполучених слів пишеться з великої букви"
+
+#: src/Widget/Toolbar.vala:47
+msgid "Each word is separated by an underscore"
+msgstr "Кожне слово розділене символом підкреслення"
+
+#: src/Widget/Toolbar.vala:52
+msgid "Each word is separated by a hyphen"
+msgstr "Кожне слово розділяється дефісом"
+
+#: src/Widget/Toolbar.vala:57
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "Перший символ першого слова в реченні пишеться з великої букви"
+
+#: src/Widget/Toolbar.vala:79
+msgid "Copy to Clipboard"
+msgstr "Копіювати до буфера обміну"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

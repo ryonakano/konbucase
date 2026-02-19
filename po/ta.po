@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-05 08:50+0000\n"
+"POT-Creation-Date: 2026-02-15 09:13+0000\n"
 "PO-Revision-Date: 2025-07-04 15:01+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/konbucase/ta/"
@@ -92,80 +92,80 @@ msgstr "வெளியேறு"
 msgid "translator-credits"
 msgstr "தமிழ்நேரம் (TamilNeram.github.io)"
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:20
 msgid "S_ystem"
 msgstr "முறைமை"
 
-#: src/MainWindow.vala:27
+#: src/MainWindow.vala:21
 msgid "_Light"
 msgstr "விளக்கு"
 
-#: src/MainWindow.vala:28
+#: src/MainWindow.vala:22
 msgid "_Dark"
 msgstr "இருண்ட"
 
-#: src/MainWindow.vala:31
+#: src/MainWindow.vala:25
 msgid "_Style"
 msgstr "பாணி"
 
-#: src/MainWindow.vala:32
+#: src/MainWindow.vala:26
 msgid "_Keyboard Shortcuts"
 msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:36
+#: src/MainWindow.vala:30
 #, c-format
 msgid "_About %s"
 msgstr "%s பற்றி"
 
-#: src/MainWindow.vala:40
+#: src/MainWindow.vala:34
 msgid "Main Menu"
 msgstr "பட்டியல் விளையாடுங்கள்"
 
-#: src/MainWindow.vala:115
-msgid "Text copied!"
-msgstr "உரை நகலெடுக்கப்பட்டது!"
+#: src/Widget/MainContent.vala:19
+msgid "Clear"
+msgstr ""
 
-#: src/View/BasePane.vala:30
-msgid "Space separated"
-msgstr "இடம் பிரிக்கப்பட்டது"
-
-#: src/View/BasePane.vala:31
-msgid "Each word is separated by a space"
-msgstr "ஒவ்வொரு வார்த்தையும் ஒரு இடத்தால் பிரிக்கப்படுகின்றன"
-
-#: src/View/BasePane.vala:36
-msgid "The first character of compound words is in lowercase"
-msgstr "கூட்டு சொற்களின் முதல் எழுத்து சிறிய எழுத்தில் உள்ளது"
-
-#: src/View/BasePane.vala:41
-msgid "The first character of compound words is in uppercase"
-msgstr "கூட்டு சொற்களின் முதல் எழுத்து பெரிய எழுத்தில் உள்ளது"
-
-#: src/View/BasePane.vala:46
-msgid "Each word is separated by an underscore"
-msgstr "ஒவ்வொரு வார்த்தையும் அடிக்கோடிட்டுக் காட்டுகிறது"
-
-#: src/View/BasePane.vala:51
-msgid "Each word is separated by a hyphen"
-msgstr "ஒவ்வொரு வார்த்தையும் ஒரு ஐபனால் பிரிக்கப்படுகிறது"
-
-#: src/View/BasePane.vala:56
-msgid "The first character of the first word in the sentence is in uppercase"
-msgstr "வாக்கியத்தின் முதல் வார்த்தையின் முதல் எழுத்து பெரிய எழுத்தில் உள்ளது"
-
-#: src/View/BasePane.vala:78
-msgid "Copy to Clipboard"
-msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"
-
-#: src/View/Pane/ResultPane.vala:9
-msgid "Convert _To:"
-msgstr "மாற்றவும் _to:"
-
-#: src/View/Pane/SourcePane.vala:11
+#: src/Widget/MainContent.vala:22
 msgid "Convert _From:"
 msgstr "_ இலிருந்து மாற்றவும்:"
 
-#: src/View/Pane/SourcePane.vala:20
-msgid "Clear"
-msgstr ""
+#: src/Widget/MainContent.vala:44
+msgid "Convert _To:"
+msgstr "மாற்றவும் _to:"
+
+#: src/Widget/MainContent.vala:148
+msgid "Text copied!"
+msgstr "உரை நகலெடுக்கப்பட்டது!"
+
+#: src/Widget/Toolbar.vala:31
+msgid "Space separated"
+msgstr "இடம் பிரிக்கப்பட்டது"
+
+#: src/Widget/Toolbar.vala:32
+msgid "Each word is separated by a space"
+msgstr "ஒவ்வொரு வார்த்தையும் ஒரு இடத்தால் பிரிக்கப்படுகின்றன"
+
+#: src/Widget/Toolbar.vala:37
+msgid "The first character of compound words is in lowercase"
+msgstr "கூட்டு சொற்களின் முதல் எழுத்து சிறிய எழுத்தில் உள்ளது"
+
+#: src/Widget/Toolbar.vala:42
+msgid "The first character of compound words is in uppercase"
+msgstr "கூட்டு சொற்களின் முதல் எழுத்து பெரிய எழுத்தில் உள்ளது"
+
+#: src/Widget/Toolbar.vala:47
+msgid "Each word is separated by an underscore"
+msgstr "ஒவ்வொரு வார்த்தையும் அடிக்கோடிட்டுக் காட்டுகிறது"
+
+#: src/Widget/Toolbar.vala:52
+msgid "Each word is separated by a hyphen"
+msgstr "ஒவ்வொரு வார்த்தையும் ஒரு ஐபனால் பிரிக்கப்படுகிறது"
+
+#: src/Widget/Toolbar.vala:57
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr "வாக்கியத்தின் முதல் வார்த்தையின் முதல் எழுத்து பெரிய எழுத்தில் உள்ளது"
+
+#: src/Widget/Toolbar.vala:79
+msgid "Copy to Clipboard"
+msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"
