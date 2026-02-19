@@ -1,15 +1,20 @@
 valadoc = find_program('valadoc')
 
+valadoc_pkgs = []
+foreach dep : dependencies
+  if not dep.found()
+    continue
+  endif
+
+  valadoc_pkgs += '--pkg=@0@'.format(dep.name())
+endforeach
+
 valadoc_output_dir = 'valadoc'
 valadoc_target = custom_target(
   'valadoc',
   command: [
     valadoc,
-    '--pkg=chcase',
-    '--pkg=glib-2.0',
-    '--pkg=gtk4',
-    '--pkg=gtksourceview-5',
-    '--pkg=libadwaita-1',
+    valadoc_pkgs,
     sources,
     config_file,
     '--package-name=' + meson.project_name(),
