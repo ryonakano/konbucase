@@ -40,6 +40,10 @@ subdir('data')
 subdir('po')
 subdir('src')
 
+if get_option('doc')
+  subdir('docs')
+endif
+
 gnome.post_install(
   glib_compile_schemas: true,
   gtk_update_icon_cache: true,
