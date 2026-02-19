@@ -24,12 +24,12 @@ public class Widget.MainContent : Adw.Bin {
         /* Source Pane                                   */
         /*************************************************/
         var clear_button = new Gtk.Button.from_icon_name ("edit-clear") {
-            tooltip_text = _("Clear")
+            tooltip_text = _("Clear"),
         };
 
         source_toolbar = new Widget.Toolbar (_("Convert _From:")) {
             valign = Gtk.Align.START,
-            case_type = (Define.CaseType) Application.settings.get_enum ("source-case-type")
+            case_type = (Define.CaseType) Application.settings.get_enum ("source-case-type"),
         };
         source_toolbar.append (clear_button);
 
@@ -37,7 +37,7 @@ public class Widget.MainContent : Adw.Bin {
 
         var source_pane = new Adw.ToolbarView () {
             top_bar_style = Adw.ToolbarStyle.RAISED,
-            content = source_textarea
+            content = source_textarea,
         };
         source_pane.add_top_bar (source_toolbar);
 
@@ -51,14 +51,14 @@ public class Widget.MainContent : Adw.Bin {
         /*************************************************/
         result_toolbar = new Widget.Toolbar (_("Convert _To:")) {
             valign = Gtk.Align.START,
-            case_type = (Define.CaseType) Application.settings.get_enum ("result-case-type")
+            case_type = (Define.CaseType) Application.settings.get_enum ("result-case-type"),
         };
         // Make the text view uneditable, otherwise the app freezes
         result_textarea = new Widget.TextArea (false);
 
         var result_pane = new Adw.ToolbarView () {
             top_bar_style = Adw.ToolbarStyle.RAISED,
-            content = result_textarea
+            content = result_textarea,
         };
         result_pane.add_top_bar (result_toolbar);
 
@@ -75,7 +75,7 @@ public class Widget.MainContent : Adw.Bin {
         size_group.add_widget (result_pane);
 
         overlay = new Adw.ToastOverlay () {
-            child = content_box
+            child = content_box,
         };
 
         child = overlay;

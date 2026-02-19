@@ -31,14 +31,14 @@ public class MainWindow : Adw.ApplicationWindow {
         }
 
         var swap_button = new Gtk.Button.from_icon_name ("media-playlist-repeat") {
-            tooltip_text = _("Swap case and text")
+            tooltip_text = _("Swap case and text"),
         };
 
         var menu_button = new Gtk.MenuButton () {
             tooltip_text = _("Main Menu"),
             icon_name = "open-menu",
             menu_model = main_menu,
-            primary = true
+            primary = true,
         };
 
         var header = new Adw.HeaderBar ();
@@ -48,7 +48,7 @@ public class MainWindow : Adw.ApplicationWindow {
         var main_content = new Widget.MainContent ();
 
         var toolbar_view = new Adw.ToolbarView () {
-            content = main_content
+            content = main_content,
         };
         toolbar_view.add_top_bar (header);
 

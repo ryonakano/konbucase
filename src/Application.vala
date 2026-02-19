@@ -144,7 +144,7 @@ public class Application : Adw.Application {
             ///John Doe
             ///John Doe <john-doe@example.com>
             ///John Doe https://example.com
-            translator_credits = _("translator-credits")
+            translator_credits = _("translator-credits"),
         };
         about_dialog.present (get_active_window ());
     }

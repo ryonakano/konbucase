@@ -67,25 +67,25 @@ public class Widget.Toolbar : Adw.Bin {
         );
 
         var case_dropdown = new Gtk.DropDown (case_listmodel, l10n_case_expression) {
-            list_factory = case_list_factory
+            list_factory = case_list_factory,
         };
 
         var case_label = new Gtk.Label (header_label) {
             use_underline = true,
-            mnemonic_widget = case_dropdown
+            mnemonic_widget = case_dropdown,
         };
 
         copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
-            tooltip_text = _("Copy to Clipboard")
+            tooltip_text = _("Copy to Clipboard"),
         };
 
         toolbar_custom_area = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
             valign = Gtk.Align.CENTER,
-            hexpand = true
+            hexpand = true,
         };
 
         var toolbar = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
-            valign = Gtk.Align.CENTER
+            valign = Gtk.Align.CENTER,
         };
         toolbar.add_css_class ("toolbar");
         toolbar.append (case_label);
