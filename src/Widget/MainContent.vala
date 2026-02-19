@@ -67,6 +67,13 @@ public class Widget.MainContent : Adw.Bin {
         content_box.append (separator);
         content_box.append (result_pane);
 
+        // Use SizeGroup to keep the same size between source_pane and result_pane
+        // because separator, which is not intended to be the same size with them, is also appended to content_box
+        // and thus we can't set content_box.homogeneous to true.
+        var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+        size_group.add_widget (source_pane);
+        size_group.add_widget (result_pane);
+
         overlay = new Adw.ToastOverlay () {
             child = content_box
         };
