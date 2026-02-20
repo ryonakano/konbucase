@@ -60,7 +60,9 @@
     <release version="4.5.0" date="2026-02-22" urgency="medium">
       <description translate="no">
         <ul>
+          <li>Add clear button</li>
           <li>Add quick swap button to swap case and text</li>
+          <li>Keep the same size between panes</li>
           <li>Flatpak: Update GNOME runtime to 49</li>
           <li>Update translations</li>
         </ul>
