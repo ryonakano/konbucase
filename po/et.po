@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-15 09:13+0000\n"
+"POT-Creation-Date: 2026-02-20 12:59+0000\n"
 "PO-Revision-Date: 2026-01-06 11:01+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -122,22 +122,26 @@ msgid "_About %s"
 msgstr "R_akenduse teave: %s"
 
 #: src/MainWindow.vala:34
+msgid "Swap case and text"
+msgstr ""
+
+#: src/MainWindow.vala:38
 msgid "Main Menu"
 msgstr "Põhimenüü"
 
-#: src/Widget/MainContent.vala:19
+#: src/Widget/MainContent.vala:27
 msgid "Clear"
 msgstr "Tühjenda"
 
-#: src/Widget/MainContent.vala:22
+#: src/Widget/MainContent.vala:30
 msgid "Convert _From:"
 msgstr "_Lähtevorming:"
 
-#: src/Widget/MainContent.vala:44
+#: src/Widget/MainContent.vala:52
 msgid "Convert _To:"
 msgstr "_Sihtvorming:"
 
-#: src/Widget/MainContent.vala:148
+#: src/Widget/MainContent.vala:184
 msgid "Text copied!"
 msgstr "Tekst on kopeeritud!"
 

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-15 09:13+0000\n"
+"POT-Creation-Date: 2026-02-20 12:59+0000\n"
 "PO-Revision-Date: 2025-03-31 04:19+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -125,22 +125,26 @@ msgid "_About %s"
 msgstr "_Informazioni su %s"
 
 #: src/MainWindow.vala:34
+msgid "Swap case and text"
+msgstr ""
+
+#: src/MainWindow.vala:38
 msgid "Main Menu"
 msgstr "Menù principale"
 
-#: src/Widget/MainContent.vala:19
+#: src/Widget/MainContent.vala:27
 msgid "Clear"
 msgstr ""
 
-#: src/Widget/MainContent.vala:22
+#: src/Widget/MainContent.vala:30
 msgid "Convert _From:"
 msgstr "Converti _da:"
 
-#: src/Widget/MainContent.vala:44
+#: src/Widget/MainContent.vala:52
 msgid "Convert _To:"
 msgstr "Converti _in:"
 
-#: src/Widget/MainContent.vala:148
+#: src/Widget/MainContent.vala:184
 msgid "Text copied!"
 msgstr "Testo copiato!"
 
