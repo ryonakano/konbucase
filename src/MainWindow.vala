@@ -31,7 +31,8 @@ public class MainWindow : Adw.ApplicationWindow {
         }
 
         var swap_button = new Gtk.Button.from_icon_name ("media-playlist-repeat") {
-            tooltip_text = _("Swap case and text"),
+            ///TRANSLATORS: Tooltip text of a button to swap case and text of input and output
+            tooltip_text = _("Quick Swap"),
         };
 
         var menu_button = new Gtk.MenuButton () {
