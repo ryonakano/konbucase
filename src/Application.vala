@@ -12,6 +12,12 @@ public class Application : Adw.Application {
     };
     private MainWindow window;
 
+    private static Util.SettingsMigrateEntry[] settings_migrate_table = {
+        { "source-text"         , "input-text"          },
+        { "source-case-type"    , "input-case-type"     },
+        { "result-case-type"    , "output-case-type"    },
+    };
+
     public Application () {
         Object (
             application_id: Config.APP_ID,
@@ -88,6 +94,8 @@ public class Application : Adw.Application {
 
         add_action_entries (ACTION_ENTRIES, this);
         set_accels_for_action ("app.quit", { "<Control>q" });
+
+        Util.migrate_settings (Application.settings, Application.settings_migrate_table);
     }
 
     protected override void activate () {

@@ -11,15 +11,30 @@
   </enum>
 
   <schema path="/com/github/ryonakano/konbucase/" id="@APP_ID@">
+    <key name="source-text" type="s">
+      <default>''</default>
+      <summary>Source text</summary>
+      <description>This key is deprecated; use 'input-text' key instead</description>
+    </key>
     <key name="input-text" type="s">
       <default>''</default>
       <summary>Input text</summary>
       <description>The last saved input text</description>
     </key>
+    <key name="source-case-type" enum="case-type">
+      <default>'space_separated'</default>
+      <summary>Source case</summary>
+      <description>This key is deprecated; use 'input-case-type' key instead</description>
+    </key>
     <key name="input-case-type" enum="case-type">
       <default>'space_separated'</default>
       <summary>Input case</summary>
       <description>The last choice of the input case type</description>
+    </key>
+    <key name="result-case-type" enum="case-type">
+      <default>'kebab'</default>
+      <summary>Result case</summary>
+      <description>This key is deprecated; use 'output-case-type' key instead</description>
     </key>
     <key name="output-case-type" enum="case-type">
       <default>'kebab'</default>
