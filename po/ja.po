@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-21 08:14+0000\n"
-"PO-Revision-Date: 2026-02-21 08:14+0000\n"
+"PO-Revision-Date: 2026-02-22 09:09+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
 "ja/>\n"
@@ -54,6 +54,8 @@ msgstr ""
 #: data/konbucase.metainfo.xml.in.in:19
 msgid "Click \"Quick Swap\" button to swap case and text of input and output"
 msgstr ""
+"\"かんたん入れ替え\" ボタンをクリックすると、入力と出力の記法とテキストを入れ"
+"替えできます"
 
 #: data/konbucase.metainfo.xml.in.in:20
 msgid ""
@@ -125,7 +127,7 @@ msgstr "%s について(_A)"
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
 #: src/MainWindow.vala:35
 msgid "Quick Swap"
-msgstr ""
+msgstr "かんたん入れ替え"
 
 #: src/MainWindow.vala:39
 msgid "Main Menu"
