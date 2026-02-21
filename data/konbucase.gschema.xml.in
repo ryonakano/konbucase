@@ -11,20 +11,20 @@
   </enum>
 
   <schema path="/com/github/ryonakano/konbucase/" id="@APP_ID@">
-    <key name="source-text" type="s">
+    <key name="input-text" type="s">
       <default>''</default>
-      <summary>Source text</summary>
-      <description>The last saved source text</description>
+      <summary>Input text</summary>
+      <description>The last saved input text</description>
     </key>
-    <key name="source-case-type" enum="case-type">
+    <key name="input-case-type" enum="case-type">
       <default>'space_separated'</default>
-      <summary>Source case</summary>
-      <description>The last choice of the source case type</description>
+      <summary>Input case</summary>
+      <description>The last choice of the input case type</description>
     </key>
-    <key name="result-case-type" enum="case-type">
+    <key name="output-case-type" enum="case-type">
       <default>'kebab'</default>
-      <summary>Result case</summary>
-      <description>The last choice of the result case type</description>
+      <summary>Output case</summary>
+      <description>The last choice of the output case type</description>
     </key>
     <key name="color-scheme" type="s">
       <choices>
