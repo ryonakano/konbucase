@@ -201,8 +201,8 @@ public class Widget.MainContent : Adw.Bin {
     private string do_convert (Define.CaseType input_case, string input_text, Define.CaseType output_case) {
         string output_text;
 
-        converter.source_case = Util.to_chcase_case (input_case);
-        converter.result_case = Util.to_chcase_case (output_case);
+        converter.input_case = Util.to_chcase_case (input_case);
+        converter.output_case = Util.to_chcase_case (output_case);
 
         output_text = converter.convert_case (input_text);
 
