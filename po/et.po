@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 12:59+0000\n"
-"PO-Revision-Date: 2026-01-06 11:01+0000\n"
+"POT-Creation-Date: 2026-02-21 08:14+0000\n"
+"PO-Revision-Date: 2026-02-21 08:14+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "et/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -31,7 +31,7 @@ msgstr "Suur- ja väiketähtede konverteerija"
 #: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr ""
-"Konverteeri suur- ja väiketähti ning tühikuid ja kriipse soovitud tekstis"
+"Konverteeri soovitud tekstis suur- ja väiketähti ning tühikuid ja kriipse"
 
 #: data/konbucase.desktop.in.in:11
 msgid "Text;"
@@ -54,6 +54,10 @@ msgid ""
 msgstr "Teksti kopeerimine lõikelauale ilma teksti valimata"
 
 #: data/konbucase.metainfo.xml.in.in:19
+msgid "Click \"Quick Swap\" button to swap case and text of input and output"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:20
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
@@ -62,11 +66,11 @@ msgstr ""
 "PascaliTähed (PascalCase), Tavalause (Sentence case), mao_tähed "
 "(snake_case), kebabi-tähed (kebab-case) ja sõnade eraldamine tühikutega"
 
-#: data/konbucase.metainfo.xml.in.in:25
+#: data/konbucase.metainfo.xml.in.in:26
 msgid "App window in the light mode"
 msgstr "Heledas kujunduses rakenduse aken"
 
-#: data/konbucase.metainfo.xml.in.in:30
+#: data/konbucase.metainfo.xml.in.in:31
 msgid "App window in the dark mode"
 msgstr "Tumedas kujunduses rakenduse aken"
 
@@ -93,7 +97,7 @@ msgstr "Välju"
 #. John Doe https://example.com
 #: src/Application.vala:147
 msgid "translator-credits"
-msgstr "Priit Jõerüüt 2024-2025"
+msgstr "Priit Jõerüüt 2024-2026"
 
 #: src/MainWindow.vala:20
 msgid "S_ystem"
@@ -121,11 +125,12 @@ msgstr "_Klaviatuuri kiirklahvid"
 msgid "_About %s"
 msgstr "R_akenduse teave: %s"
 
-#: src/MainWindow.vala:34
-msgid "Swap case and text"
+#. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
+#: src/MainWindow.vala:35
+msgid "Quick Swap"
 msgstr ""
 
-#: src/MainWindow.vala:38
+#: src/MainWindow.vala:39
 msgid "Main Menu"
 msgstr "Põhimenüü"
 
@@ -176,3 +181,6 @@ msgstr "Lause iga sõna esimene täht on suurtäht"
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Kopeeri lõikelauale"
+
+#~ msgid "Swap case and text"
+#~ msgstr "Pööra tähesuurust ja teksti"
