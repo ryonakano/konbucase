@@ -8,6 +8,7 @@ KonbuCase is a small text tool app that allows you convert case in your text.
 Features include:
 
 * Click "Copy to Clipboard" button to copy the all texts in the text view without selecting them
+* Click "Quick Swap" button to swap case and text of input and output
 * Convert your text between camelCase, PascalCase, Sentence case, snake_case, kebab-case, and space-separated
 
 ## Installation
