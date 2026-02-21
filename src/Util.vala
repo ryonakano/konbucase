@@ -5,7 +5,7 @@
 
 namespace Util {
     /**
-     * Data structure to migrate user preferences saved in {@Settings}.
+     * Data structure to migrate user preferences saved in {@link GLib.Settings}.
      */
     public struct SettingsMigrateEntry {
         /**
