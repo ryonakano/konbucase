@@ -13,9 +13,9 @@ public class Application : Adw.Application {
     private MainWindow window;
 
     private static Util.SettingsMigrateEntry[] settings_migrate_table = {
-        { "source-text"         , "input-text"          },
-        { "source-case-type"    , "input-case-type"     },
-        { "result-case-type"    , "output-case-type"    },
+        { "source-text"         , "input-text"          }, // vala-lint=double-spaces
+        { "source-case-type"    , "input-case-type"     }, // vala-lint=double-spaces
+        { "result-case-type"    , "output-case-type"    }, // vala-lint=double-spaces
     };
 
     public Application () {
