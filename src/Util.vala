@@ -5,21 +5,6 @@
 
 namespace Util {
     /**
-     * Data structure to migrate user preferences saved in {@link GLib.Settings}.
-     */
-    public struct SettingsMigrateEntry {
-        /**
-         * Key name before migration.
-         */
-        string old_key;
-
-        /**
-         * Key name after migration.
-         */
-        string new_key;
-    }
-
-    /**
      * Whether the app is running on Pantheon desktop environment.
      */
     public static bool is_on_pantheon () {
@@ -91,29 +76,6 @@ namespace Util {
             default:
                 warning ("Invalid color scheme: %d", adw_scheme);
                 return Define.ColorScheme.DEFAULT;
-        }
-    }
-
-    public static void migrate_settings (Settings settings, SettingsMigrateEntry[] table) {
-        SettingsSchema ss = settings.settings_schema;
-
-        foreach (unowned var entry in table) {
-            if (!ss.has_key (entry.old_key)) {
-                continue;
-            }
-
-            var val = settings.get_value (entry.old_key);
-
-            SettingsSchemaKey ssk = ss.get_key (entry.old_key);
-            var default_val = ssk.get_default_value ();
-            if (val.equal (default_val)) {
-                // No need to migrate
-                continue;
-            }
-
-            settings.set_value (entry.new_key, val);
-
-            settings.reset (entry.old_key);
         }
     }
 }
