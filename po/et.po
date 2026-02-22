@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-21 08:14+0000\n"
-"PO-Revision-Date: 2026-02-21 08:14+0000\n"
+"PO-Revision-Date: 2026-02-23 19:09+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "et/>\n"
@@ -56,6 +56,8 @@ msgstr "Teksti kopeerimine lõikelauale ilma teksti valimata"
 #: data/konbucase.metainfo.xml.in.in:19
 msgid "Click \"Quick Swap\" button to swap case and text of input and output"
 msgstr ""
+"Sisendi ja väljundi suur- ja väiketähtede vahetamiseks klõpsa nuppu „"
+"Kiirvahetus“"
 
 #: data/konbucase.metainfo.xml.in.in:20
 msgid ""
@@ -128,7 +130,7 @@ msgstr "R_akenduse teave: %s"
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
 #: src/MainWindow.vala:35
 msgid "Quick Swap"
-msgstr ""
+msgstr "Kiirvahetus"
 
 #: src/MainWindow.vala:39
 msgid "Main Menu"
