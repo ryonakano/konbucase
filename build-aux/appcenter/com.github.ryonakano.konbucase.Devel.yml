@@ -8,6 +8,10 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/vala
 build-options:
   libdir: /app/lib
 modules:
