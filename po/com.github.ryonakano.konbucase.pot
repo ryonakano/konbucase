@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 12:59+0000\n"
+"POT-Creation-Date: 2026-02-21 08:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,16 +48,20 @@ msgid ""
 msgstr ""
 
 #: data/konbucase.metainfo.xml.in.in:19
+msgid "Click \"Quick Swap\" button to swap case and text of input and output"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:20
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in.in:25
+#: data/konbucase.metainfo.xml.in.in:26
 msgid "App window in the light mode"
 msgstr ""
 
-#: data/konbucase.metainfo.xml.in.in:30
+#: data/konbucase.metainfo.xml.in.in:31
 msgid "App window in the dark mode"
 msgstr ""
 
@@ -112,11 +116,12 @@ msgstr ""
 msgid "_About %s"
 msgstr ""
 
-#: src/MainWindow.vala:34
-msgid "Swap case and text"
+#. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
+#: src/MainWindow.vala:35
+msgid "Quick Swap"
 msgstr ""
 
-#: src/MainWindow.vala:38
+#: src/MainWindow.vala:39
 msgid "Main Menu"
 msgstr ""
 

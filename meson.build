@@ -42,7 +42,7 @@ if granite_dep.found()
 endif
 
 dependencies = [
-  dependency('chcase', allow_fallback: get_option('use_submodule')),
+  dependency('chcase', version: '>= 2.4.0', allow_fallback: get_option('use_submodule')),
   dependency('glib-2.0', version: '>= 2.74'),
   granite_dep,
   dependency('gtk4'),

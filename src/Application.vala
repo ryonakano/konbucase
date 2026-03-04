@@ -88,6 +88,10 @@ public class Application : Adw.Application {
 
         add_action_entries (ACTION_ENTRIES, this);
         set_accels_for_action ("app.quit", { "<Control>q" });
+
+        var settings_migrator = new SettingsMigrator (Application.settings);
+        // Ignore return value because failure just results old user preferences not migrated
+        settings_migrator.migrate ();
     }
 
     protected override void activate () {

@@ -19,6 +19,7 @@ sources = files(
   'Application.vala',
   'Define.vala',
   'MainWindow.vala',
+  'SettingsMigrator.vala',
   'Util.vala',
 )
 

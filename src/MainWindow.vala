@@ -4,6 +4,8 @@
  */
 
 public class MainWindow : Adw.ApplicationWindow {
+    private Adw.ToastOverlay overlay;
+
     public MainWindow (Application app) {
         Object (
             application: app
@@ -31,7 +33,8 @@ public class MainWindow : Adw.ApplicationWindow {
         }
 
         var swap_button = new Gtk.Button.from_icon_name ("media-playlist-repeat") {
-            tooltip_text = _("Swap case and text"),
+            ///TRANSLATORS: Tooltip text of a button to swap case and text of input and output
+            tooltip_text = _("Quick Swap"),
         };
 
         var menu_button = new Gtk.MenuButton () {
@@ -47,18 +50,40 @@ public class MainWindow : Adw.ApplicationWindow {
 
         var main_content = new Widget.MainContent ();
 
+        // Responsive design; change orientation to vertical on smaller window width
+        var content_breakpoint = new Adw.Breakpoint (
+            new Adw.BreakpointCondition.length (Adw.BreakpointConditionLengthType.MAX_WIDTH, 650, Adw.LengthUnit.SP)
+        );
+        content_breakpoint.add_setter (main_content, "orientation", Gtk.Orientation.VERTICAL);
+        add_breakpoint (content_breakpoint);
+
+        overlay = new Adw.ToastOverlay () {
+            child = main_content,
+        };
+
         var toolbar_view = new Adw.ToolbarView () {
-            content = main_content,
+            content = overlay,
         };
         toolbar_view.add_top_bar (header);
 
         content = toolbar_view;
-        width_request = 700;
-        height_request = 500;
+        width_request = 360;
+        height_request = 400;
         title = Define.APP_NAME;
 
         swap_button.clicked.connect (() => {
             main_content.swap ();
         });
+
+        main_content.text_copied.connect (toast_copied);
+    }
+
+    private void toast_copied () {
+        show_toast (N_("Text copied!"));
+    }
+
+    private void show_toast (string text) {
+        var toast = new Adw.Toast (_(text));
+        overlay.add_toast (toast);
     }
 }
