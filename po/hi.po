@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 08:14+0000\n"
+"POT-Creation-Date: 2026-03-04 13:05+0000\n"
 "PO-Revision-Date: 2024-05-16 15:01+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/konbucase/hi/"
@@ -92,61 +92,61 @@ msgstr ""
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:147
+#: src/Application.vala:151
 msgid "translator-credits"
 msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
 
-#: src/MainWindow.vala:20
+#: src/MainWindow.vala:22
 msgid "S_ystem"
 msgstr "सिस्टम (_y)"
 
-#: src/MainWindow.vala:21
+#: src/MainWindow.vala:23
 msgid "_Light"
 msgstr "हल्की (_L)"
 
-#: src/MainWindow.vala:22
+#: src/MainWindow.vala:24
 msgid "_Dark"
 msgstr "गहरी (_D)"
 
-#: src/MainWindow.vala:25
+#: src/MainWindow.vala:27
 msgid "_Style"
 msgstr "शैली (_S)"
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:28
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:30
+#: src/MainWindow.vala:32
 #, fuzzy, c-format
 #| msgid "_About KonbuCase"
 msgid "_About %s"
 msgstr "KonbuCase के बारे में (_A)"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-#: src/MainWindow.vala:35
+#: src/MainWindow.vala:37
 msgid "Quick Swap"
 msgstr ""
 
-#: src/MainWindow.vala:39
+#: src/MainWindow.vala:41
 msgid "Main Menu"
 msgstr "मुख्य मेनू"
 
-#: src/Widget/MainContent.vala:27
+#: src/MainWindow.vala:82
+msgid "Text copied!"
+msgstr "पाठ कॉपी किया गया!"
+
+#: src/Widget/MainContent.vala:28
 msgid "Clear"
 msgstr ""
 
-#: src/Widget/MainContent.vala:30
+#: src/Widget/MainContent.vala:31
 msgid "Convert _From:"
 msgstr "इससे परिवर्तित (_F):"
 
-#: src/Widget/MainContent.vala:52
+#: src/Widget/MainContent.vala:53
 msgid "Convert _To:"
 msgstr "इसमें परिवर्तित (_T):"
-
-#: src/Widget/MainContent.vala:184
-msgid "Text copied!"
-msgstr "पाठ कॉपी किया गया!"
 
 #: src/Widget/Toolbar.vala:31
 msgid "Space separated"

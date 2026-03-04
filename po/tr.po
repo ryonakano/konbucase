@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 08:14+0000\n"
+"POT-Creation-Date: 2026-03-04 13:05+0000\n"
 "PO-Revision-Date: 2025-08-30 16:01+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -97,60 +97,60 @@ msgstr "Çık"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:147
+#: src/Application.vala:151
 msgid "translator-credits"
 msgstr "Sabri Ünal <yakushabb@gmail.com>"
 
-#: src/MainWindow.vala:20
+#: src/MainWindow.vala:22
 msgid "S_ystem"
 msgstr "_Sistem"
 
-#: src/MainWindow.vala:21
+#: src/MainWindow.vala:23
 msgid "_Light"
 msgstr "_Açık"
 
-#: src/MainWindow.vala:22
+#: src/MainWindow.vala:24
 msgid "_Dark"
 msgstr "_Koyu"
 
-#: src/MainWindow.vala:25
+#: src/MainWindow.vala:27
 msgid "_Style"
 msgstr "_Biçem"
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:28
 msgid "_Keyboard Shortcuts"
 msgstr "_Klavye Kısayolları"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:30
+#: src/MainWindow.vala:32
 #, c-format
 msgid "_About %s"
 msgstr "%s _Hakkında"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-#: src/MainWindow.vala:35
+#: src/MainWindow.vala:37
 msgid "Quick Swap"
 msgstr ""
 
-#: src/MainWindow.vala:39
+#: src/MainWindow.vala:41
 msgid "Main Menu"
 msgstr "Ana Menü"
 
-#: src/Widget/MainContent.vala:27
+#: src/MainWindow.vala:82
+msgid "Text copied!"
+msgstr "Metin kopyalandı!"
+
+#: src/Widget/MainContent.vala:28
 msgid "Clear"
 msgstr ""
 
-#: src/Widget/MainContent.vala:30
+#: src/Widget/MainContent.vala:31
 msgid "Convert _From:"
 msgstr "Şundan _Dönüştür:"
 
-#: src/Widget/MainContent.vala:52
+#: src/Widget/MainContent.vala:53
 msgid "Convert _To:"
 msgstr "_Dönüştür:"
-
-#: src/Widget/MainContent.vala:184
-msgid "Text copied!"
-msgstr "Metin kopyalandı!"
 
 #: src/Widget/Toolbar.vala:31
 msgid "Space separated"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 08:14+0000\n"
+"POT-Creation-Date: 2026-03-04 13:05+0000\n"
 "PO-Revision-Date: 2026-02-22 09:09+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -94,60 +94,60 @@ msgstr "終了する"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:147
+#: src/Application.vala:151
 msgid "translator-credits"
 msgstr "Ryo Nakano"
 
-#: src/MainWindow.vala:20
+#: src/MainWindow.vala:22
 msgid "S_ystem"
 msgstr "システム(_Y)"
 
-#: src/MainWindow.vala:21
+#: src/MainWindow.vala:23
 msgid "_Light"
 msgstr "ライト(_L)"
 
-#: src/MainWindow.vala:22
+#: src/MainWindow.vala:24
 msgid "_Dark"
 msgstr "ダーク(_D)"
 
-#: src/MainWindow.vala:25
+#: src/MainWindow.vala:27
 msgid "_Style"
 msgstr "スタイル(_S)"
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:28
 msgid "_Keyboard Shortcuts"
 msgstr "キーボードショートカット(_K)"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:30
+#: src/MainWindow.vala:32
 #, c-format
 msgid "_About %s"
 msgstr "%s について(_A)"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-#: src/MainWindow.vala:35
+#: src/MainWindow.vala:37
 msgid "Quick Swap"
 msgstr "かんたん入れ替え"
 
-#: src/MainWindow.vala:39
+#: src/MainWindow.vala:41
 msgid "Main Menu"
 msgstr "メインメニュー"
 
-#: src/Widget/MainContent.vala:27
+#: src/MainWindow.vala:82
+msgid "Text copied!"
+msgstr "テキストをコピーしました!"
+
+#: src/Widget/MainContent.vala:28
 msgid "Clear"
 msgstr "消去"
 
-#: src/Widget/MainContent.vala:30
+#: src/Widget/MainContent.vala:31
 msgid "Convert _From:"
 msgstr "変換元(_F):"
 
-#: src/Widget/MainContent.vala:52
+#: src/Widget/MainContent.vala:53
 msgid "Convert _To:"
 msgstr "変換先(_T):"
-
-#: src/Widget/MainContent.vala:184
-msgid "Text copied!"
-msgstr "テキストをコピーしました!"
 
 #: src/Widget/Toolbar.vala:31
 msgid "Space separated"

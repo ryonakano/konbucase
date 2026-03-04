@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 08:14+0000\n"
+"POT-Creation-Date: 2026-03-04 13:05+0000\n"
 "PO-Revision-Date: 2026-02-23 19:09+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -56,8 +56,8 @@ msgstr "Teksti kopeerimine lõikelauale ilma teksti valimata"
 #: data/konbucase.metainfo.xml.in.in:19
 msgid "Click \"Quick Swap\" button to swap case and text of input and output"
 msgstr ""
-"Sisendi ja väljundi suur- ja väiketähtede vahetamiseks klõpsa nuppu „"
-"Kiirvahetus“"
+"Sisendi ja väljundi suur- ja väiketähtede vahetamiseks klõpsa nuppu "
+"„Kiirvahetus“"
 
 #: data/konbucase.metainfo.xml.in.in:20
 msgid ""
@@ -97,60 +97,60 @@ msgstr "Välju"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:147
+#: src/Application.vala:151
 msgid "translator-credits"
 msgstr "Priit Jõerüüt 2024-2026"
 
-#: src/MainWindow.vala:20
+#: src/MainWindow.vala:22
 msgid "S_ystem"
 msgstr "S_üsteemi kujundus"
 
-#: src/MainWindow.vala:21
+#: src/MainWindow.vala:23
 msgid "_Light"
 msgstr "_Hele kujundus"
 
-#: src/MainWindow.vala:22
+#: src/MainWindow.vala:24
 msgid "_Dark"
 msgstr "_Tume kujundus"
 
-#: src/MainWindow.vala:25
+#: src/MainWindow.vala:27
 msgid "_Style"
 msgstr "_Kujundus"
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:28
 msgid "_Keyboard Shortcuts"
 msgstr "_Klaviatuuri kiirklahvid"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:30
+#: src/MainWindow.vala:32
 #, c-format
 msgid "_About %s"
 msgstr "R_akenduse teave: %s"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-#: src/MainWindow.vala:35
+#: src/MainWindow.vala:37
 msgid "Quick Swap"
 msgstr "Kiirvahetus"
 
-#: src/MainWindow.vala:39
+#: src/MainWindow.vala:41
 msgid "Main Menu"
 msgstr "Põhimenüü"
 
-#: src/Widget/MainContent.vala:27
+#: src/MainWindow.vala:82
+msgid "Text copied!"
+msgstr "Tekst on kopeeritud!"
+
+#: src/Widget/MainContent.vala:28
 msgid "Clear"
 msgstr "Tühjenda"
 
-#: src/Widget/MainContent.vala:30
+#: src/Widget/MainContent.vala:31
 msgid "Convert _From:"
 msgstr "_Lähtevorming:"
 
-#: src/Widget/MainContent.vala:52
+#: src/Widget/MainContent.vala:53
 msgid "Convert _To:"
 msgstr "_Sihtvorming:"
-
-#: src/Widget/MainContent.vala:184
-msgid "Text copied!"
-msgstr "Tekst on kopeeritud!"
 
 #: src/Widget/Toolbar.vala:31
 msgid "Space separated"
