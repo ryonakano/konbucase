@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 08:14+0000\n"
+"POT-Creation-Date: 2026-03-04 13:05+0000\n"
 "PO-Revision-Date: 2025-01-12 21:41+0000\n"
 "Last-Translator: John Peter Sa <johnppetersa@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
@@ -94,61 +94,61 @@ msgstr "Desistir"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:147
+#: src/Application.vala:151
 msgid "translator-credits"
 msgstr "créditos do tradutor \"johnpetersa <johnppetersa@gmail.com>\""
 
-#: src/MainWindow.vala:20
+#: src/MainWindow.vala:22
 msgid "S_ystem"
 msgstr "Sistema"
 
-#: src/MainWindow.vala:21
+#: src/MainWindow.vala:23
 msgid "_Light"
 msgstr "_Claro"
 
-#: src/MainWindow.vala:22
+#: src/MainWindow.vala:24
 msgid "_Dark"
 msgstr "_Escuro"
 
-#: src/MainWindow.vala:25
+#: src/MainWindow.vala:27
 msgid "_Style"
 msgstr "_Estilo"
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:28
 msgid "_Keyboard Shortcuts"
 msgstr "_Keyboard Atalhos"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:30
+#: src/MainWindow.vala:32
 #, fuzzy, c-format
 #| msgid "_About KonbuCase"
 msgid "_About %s"
 msgstr "_Sobre o KonbuCase"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-#: src/MainWindow.vala:35
+#: src/MainWindow.vala:37
 msgid "Quick Swap"
 msgstr ""
 
-#: src/MainWindow.vala:39
+#: src/MainWindow.vala:41
 msgid "Main Menu"
 msgstr "Menu Principal"
 
-#: src/Widget/MainContent.vala:27
+#: src/MainWindow.vala:82
+msgid "Text copied!"
+msgstr "Texto copiado!"
+
+#: src/Widget/MainContent.vala:28
 msgid "Clear"
 msgstr ""
 
-#: src/Widget/MainContent.vala:30
+#: src/Widget/MainContent.vala:31
 msgid "Convert _From:"
 msgstr "Converter _De:"
 
-#: src/Widget/MainContent.vala:52
+#: src/Widget/MainContent.vala:53
 msgid "Convert _To:"
 msgstr "Converter _Para:"
-
-#: src/Widget/MainContent.vala:184
-msgid "Text copied!"
-msgstr "Texto copiado!"
 
 #: src/Widget/Toolbar.vala:31
 msgid "Space separated"

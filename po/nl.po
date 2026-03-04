@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 08:14+0000\n"
+"POT-Creation-Date: 2026-03-04 13:05+0000\n"
 "PO-Revision-Date: 2024-05-01 09:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/konbucase/nl/"
@@ -93,72 +93,72 @@ msgstr ""
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:147
+#: src/Application.vala:151
 msgid "translator-credits"
 msgstr ""
 
-#: src/MainWindow.vala:20
+#: src/MainWindow.vala:22
 #, fuzzy
 #| msgid "System"
 msgid "S_ystem"
 msgstr "Systeem"
 
-#: src/MainWindow.vala:21
+#: src/MainWindow.vala:23
 #, fuzzy
 #| msgid "Light"
 msgid "_Light"
 msgstr "Licht"
 
-#: src/MainWindow.vala:22
+#: src/MainWindow.vala:24
 #, fuzzy
 #| msgid "Dark"
 msgid "_Dark"
 msgstr "Donker"
 
-#: src/MainWindow.vala:25
+#: src/MainWindow.vala:27
 #, fuzzy
 msgid "_Style"
 msgstr "Thema:"
 
-#: src/MainWindow.vala:26
+#: src/MainWindow.vala:28
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:30
+#: src/MainWindow.vala:32
 #, fuzzy, c-format
 #| msgid "KonbuCase"
 msgid "_About %s"
 msgstr "KonbuCase"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-#: src/MainWindow.vala:35
+#: src/MainWindow.vala:37
 msgid "Quick Swap"
 msgstr ""
 
-#: src/MainWindow.vala:39
+#: src/MainWindow.vala:41
 msgid "Main Menu"
 msgstr ""
 
-#: src/Widget/MainContent.vala:27
+#: src/MainWindow.vala:82
+msgid "Text copied!"
+msgstr ""
+
+#: src/Widget/MainContent.vala:28
 msgid "Clear"
 msgstr ""
 
-#: src/Widget/MainContent.vala:30
+#: src/Widget/MainContent.vala:31
 #, fuzzy
 #| msgid "Convert from:"
 msgid "Convert _From:"
 msgstr "Omzetten van:"
 
-#: src/Widget/MainContent.vala:52
+#: src/Widget/MainContent.vala:53
 #, fuzzy
 #| msgid "Convert to:"
 msgid "Convert _To:"
 msgstr "Omzetten naar:"
-
-#: src/Widget/MainContent.vala:184
-msgid "Text copied!"
-msgstr ""
 
 #: src/Widget/Toolbar.vala:31
 msgid "Space separated"
