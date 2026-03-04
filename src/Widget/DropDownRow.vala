@@ -15,6 +15,7 @@ public class Widget.DropDownRow : Gtk.Box {
         spacing = 2;
 
         title = new Gtk.Label (null) {
+            hexpand = true,
             width_chars = 25,
             wrap = true,
             xalign = 0,
@@ -22,6 +23,7 @@ public class Widget.DropDownRow : Gtk.Box {
         title.add_css_class ("heading");
 
         description = new Gtk.Label (null) {
+            hexpand = true,
             width_chars = 25,
             wrap = true,
             xalign = 0,
