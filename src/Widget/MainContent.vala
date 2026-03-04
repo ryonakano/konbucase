@@ -3,12 +3,13 @@
  * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Widget.MainContent : Adw.Bin {
+public class Widget.MainContent : Gtk.Box {
+    public signal void text_copied ();
+
     private Widget.Toolbar input_toolbar;
     private Widget.TextArea input_textarea;
     private Widget.Toolbar output_toolbar;
     private Widget.TextArea output_textarea;
-    private Adw.ToastOverlay overlay;
 
     private ulong input_case_handler;
     private ulong output_case_handler;
@@ -62,23 +63,18 @@ public class Widget.MainContent : Adw.Bin {
         };
         output_pane.add_top_bar (output_toolbar);
 
-        var content_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        content_box.append (input_pane);
-        content_box.append (separator);
-        content_box.append (output_pane);
+        orientation = Gtk.Orientation.HORIZONTAL;
+        spacing = 0;
+        append (input_pane);
+        append (separator);
+        append (output_pane);
 
         // Use SizeGroup to keep the same size between input_pane and output_pane
         // because separator, which is not intended to be the same size with them, is also appended to content_box
         // and thus we can't set content_box.homogeneous to true.
-        var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+        var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
         size_group.add_widget (input_pane);
         size_group.add_widget (output_pane);
-
-        overlay = new Adw.ToastOverlay () {
-            child = content_box,
-        };
-
-        child = overlay;
 
         converter = new ChCase.Converter ();
 
@@ -145,11 +141,11 @@ public class Widget.MainContent : Adw.Bin {
 
         input_toolbar.copy_button_clicked.connect (() => {
             get_clipboard ().set_text (input_textarea.text);
-            toast_copied ();
+            text_copied ();
         });
         output_toolbar.copy_button_clicked.connect (() => {
             get_clipboard ().set_text (output_textarea.text);
-            toast_copied ();
+            text_copied ();
         });
 
         clear_button.clicked.connect (() => {
@@ -178,15 +174,6 @@ public class Widget.MainContent : Adw.Bin {
         SignalHandler.unblock (input_toolbar, input_case_handler);
         SignalHandler.unblock (output_toolbar, output_case_handler);
         SignalHandler.unblock (input_textarea, input_text_handler);
-    }
-
-    private void toast_copied () {
-        show_toast (N_("Text copied!"));
-    }
-
-    private void show_toast (string text) {
-        var toast = new Adw.Toast (_(text));
-        overlay.add_toast (toast);
     }
 
     /**
