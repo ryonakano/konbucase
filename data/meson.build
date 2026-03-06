@@ -8,6 +8,7 @@ foreach i : icon_sizes
   )
 endforeach
 
+# Install svg icon as scalable to avoid blurry icons on HiDPI displays
 install_data(
   'icons' / '128' / meson.project_name() + '.svg',
   rename: app_id + '.svg',
