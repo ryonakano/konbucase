@@ -10,13 +10,13 @@
  */
 public class Widget.DropDownRow : Gtk.Box {
     /**
-     * The title of the row.
+     * The title text of the row.
      */
-    public Gtk.Label title { get; set; }
+    public string? title_text { get; set; default = null; }
     /**
-     * The description of the row.
+     * The description text of the row.
      */
-    public Gtk.Label description { get; set; }
+    public string? description_text { get; set; default = null; }
 
     /**
      * Creates a new {@link Widget.DropDownRow}.
@@ -30,7 +30,7 @@ public class Widget.DropDownRow : Gtk.Box {
         orientation = Gtk.Orientation.VERTICAL;
         spacing = 2;
 
-        title = new Gtk.Label (null) {
+        var title = new Gtk.Label (title_text) {
             hexpand = true,
             width_chars = 25,
             wrap = true,
@@ -38,13 +38,16 @@ public class Widget.DropDownRow : Gtk.Box {
         };
         title.add_css_class ("heading");
 
-        description = new Gtk.Label (null) {
+        var description = new Gtk.Label (description_text) {
             hexpand = true,
             width_chars = 25,
             wrap = true,
             xalign = 0,
         };
         description.add_css_class ("dim-label");
+
+        this.bind_property ("title_text", title, "label");
+        this.bind_property ("description_text", description, "label");
 
         append (title);
         append (description);

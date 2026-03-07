@@ -218,8 +218,8 @@ public class Widget.Toolbar : Adw.Bin {
         var model = item.item as Model.CaseListItemModel;
         var row = item.child as Widget.DropDownRow;
 
-        row.title.label = _(model.name);
-        row.description.label = _(model.description);
+        row.title_text = _(model.name);
+        row.description_text = _(model.description);
     }
 
     /**
