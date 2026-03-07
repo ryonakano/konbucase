@@ -6,11 +6,20 @@
 namespace Util {
     /**
      * Whether the app is running on Pantheon desktop environment.
+     *
+     * @return  ``true`` if the app is running on Pantheon desktop environment, ``false`` otherwise
      */
     public static bool is_on_pantheon () {
         return Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
     }
 
+    /**
+     * Converts {@link ChCase.Case} to {@link Define.CaseType}.
+     *
+     * @param chcase_case   a {@link ChCase.Case}
+     *
+     * @return              a {@link Define.CaseType}
+     */
     public static Define.CaseType to_case_type (ChCase.Case chcase_case) {
         switch (chcase_case) {
             case ChCase.Case.SPACE_SEPARATED:
@@ -31,6 +40,13 @@ namespace Util {
         }
     }
 
+    /**
+     * Converts {@link Define.CaseType} to {@link ChCase.Case}.
+     *
+     * @param case_type     a {@link Define.CaseType}
+     *
+     * @return              a {@link ChCase.Case}
+     */
     public static ChCase.Case to_chcase_case (Define.CaseType case_type) {
         switch (case_type) {
             case Define.CaseType.SPACE_SEPARATED:
@@ -51,6 +67,13 @@ namespace Util {
         }
     }
 
+    /**
+     * Converts string representation of a color scheme to {@link Adw.ColorScheme}.
+     *
+     * @param str_scheme    string representation of a color scheme
+     *
+     * @return              a {@link Adw.ColorScheme}
+     */
     public static Adw.ColorScheme to_adw_scheme (string str_scheme) {
         switch (str_scheme) {
             case Define.ColorScheme.DEFAULT:
@@ -65,6 +88,13 @@ namespace Util {
         }
     }
 
+    /**
+     * Converts {@link Adw.ColorScheme} to string representation of a color scheme.
+     *
+     * @param adw_scheme    a {@link Adw.ColorScheme}
+     *
+     * @return              string representation of a color scheme
+     */
     public static string to_str_scheme (Adw.ColorScheme adw_scheme) {
         switch (adw_scheme) {
             case Adw.ColorScheme.DEFAULT:

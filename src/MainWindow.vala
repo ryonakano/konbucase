@@ -3,9 +3,22 @@
  * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+/**
+ * The app window.
+ */
 public class MainWindow : Adw.ApplicationWindow {
+    /**
+     * A widget showing in-app notifications above its content.
+     */
     private Adw.ToastOverlay overlay;
 
+    /**
+     * Creates a new {@link MainWindow}.
+     *
+     * @param app   a {@link Application} to be associated with ``this``
+     *
+     * @return      a new {@link MainWindow}
+     */
     public MainWindow (Application app) {
         Object (
             application: app
@@ -80,6 +93,11 @@ public class MainWindow : Adw.ApplicationWindow {
         });
     }
 
+    /**
+     * Presents a toast, an in-app notification.
+     *
+     * @param title     the title of the toast
+     */
     private void show_toast (string title) {
         var toast = new Adw.Toast (_(title));
         overlay.add_toast (toast);

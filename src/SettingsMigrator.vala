@@ -7,13 +7,25 @@
  * A class that handles backward compatibility of app preferences.
  */
 public class SettingsMigrator : Object {
+    /**
+     * The target {@link GLib.Settings} for migration.
+     */
     public unowned Settings settings { get; construct; }
 
+    /**
+     * Migrates an app preference in an old key in ``settings``.
+     *
+     * @param settings  the target {@link GLib.Settings} for migration. The preference should be saved to new key(s)
+     *                  using setters of {@link GLib.Settings} e.g. {@link GLib.Settings.set_value}
+     * @param old_val   an app preference that the old key has
+     *
+     * @return          ``true`` if succeeds, ``false`` otherwise
+     */
     [CCode (has_target = false)]
     private delegate bool SettingsMigrationFunc (Settings settings, Variant old_val);
 
     /**
-     * Data structure to migrate user preferences saved in {@link GLib.Settings}.
+     * Data structure to migrate an app preference saved in a key of {@link GLib.Settings}.
      */
     private struct SettingsMigrationEntry {
         /**
@@ -26,6 +38,9 @@ public class SettingsMigrator : Object {
          */
         unowned SettingsMigrationFunc migrate;
     }
+    /**
+     * Table of data structures used for migration.
+     */
     private static SettingsMigrationEntry[] settings_migration_table = {
         {
             "source-text",
@@ -50,6 +65,13 @@ public class SettingsMigrator : Object {
         },
     };
 
+    /**
+     * Creates a new {@link SettingsMigrator}.
+     *
+     * @param settings      the target {@link GLib.Settings} for migration
+     *
+     * @return              a new {@link SettingsMigrator}
+     */
     public SettingsMigrator (Settings settings) {
         Object (
             settings: settings
@@ -57,9 +79,9 @@ public class SettingsMigrator : Object {
     }
 
     /**
-     * Migrate user preferences of {@link SettingsMigrator.settings} from old (deprecated) keys to new ones.
+     * Migrates app preferences of {@link settings} from old (deprecated) keys to new ones.
      *
-     * @return              true if succeed, false otherwise.
+     * @return              ``true`` if succeeds, ``false`` otherwise
      */
     public bool migrate () {
         SettingsSchema ss = settings.settings_schema;

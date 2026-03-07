@@ -3,17 +3,52 @@
  * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+/**
+ * A widget that contains controls for text input/output.
+ *
+ * {{../docs/images/Widget/Toolbar/example_toolbar.png|example image of Toolbar}}
+ */
 public class Widget.Toolbar : Adw.Bin {
+    /**
+     * Emitted when selection of the {@link Gtk.DropDown} that selects type of letter case is changed.
+     */
     public signal void dropdown_changed ();
+    /**
+     * Emitted when the {@link Gtk.Button} to copy text is clicked.
+     */
     public signal void copy_button_clicked ();
 
+    /**
+     * Text to show alongside the {@link Gtk.DropDown} that selects type of letter case.
+     */
     public string header_label { get; construct; }
+    /**
+     * Type of letter case that currently preferred.
+     */
     public Define.CaseType case_type { get; set; }
+    /**
+     * The {@link Gtk.Button} to copy text.
+     */
     public Gtk.Button copy_clipboard_button { get; private set; }
 
+    /**
+     * A list of {@link Model.CaseListItemModel}.
+     */
     private ListStore case_listmodel;
+    /**
+     * Area for additional widgets.
+     *
+     * Use {@link Widget.Toolbar.append} to add widgets here.
+     */
     private Gtk.Box toolbar_custom_area;
 
+    /**
+     * Creates a new {@link Widget.Toolbar}.
+     *
+     * @param header_label      text to show alongside the {@link Gtk.DropDown} that selects type of letter case
+     *
+     * @return                  a new {@link Widget.Toolbar}
+     */
     public Toolbar (string header_label) {
         Object (
             header_label: header_label
@@ -112,10 +147,22 @@ public class Widget.Toolbar : Adw.Bin {
         });
     }
 
+    /**
+     * Adds an additional widget at the end.
+     *
+     * @param widget    the widget to append
+     */
     public void append (Gtk.Widget widget) {
         toolbar_custom_area.append (widget);
     }
 
+    /**
+     * Prepares a newly created listitem.
+     *
+     * @param object    the newly created listitem
+     *
+     * @see Gtk.SignalListItemFactory.setup
+     */
     private void case_list_factory_setup (Object object) {
         var item = object as Gtk.ListItem;
 
@@ -123,6 +170,13 @@ public class Widget.Toolbar : Adw.Bin {
         item.child = row;
     }
 
+    /**
+     * Sets to populate the listitem with widgets.
+     *
+     * @param object    the listitem to populate
+     *
+     * @see Gtk.SignalListItemFactory.bind
+     */
     private void case_list_factory_bind (Object object) {
         var item = object as Gtk.ListItem;
         var model = item.item as Model.CaseListItemModel;
@@ -132,6 +186,17 @@ public class Widget.Toolbar : Adw.Bin {
         row.description.label = _(model.description);
     }
 
+    /**
+     * Transforms a {@link Define.CaseType} to value of {@link Gtk.DropDown.selected}.
+     *
+     * @see GLib.BindingTransformFunc
+     *
+     * @param binding       a {@link GLib.Binding} (unused)
+     * @param case_type     a {@link Define.CaseType}
+     * @param selected      value of {@link Gtk.DropDown.selected}
+     *
+     * @return              ``true`` if the transformation was successful, and ``false`` otherwise
+     */
     private bool case_to_selected (Binding binding, Value case_type, ref Value selected) {
         uint pos;
 
@@ -152,6 +217,17 @@ public class Widget.Toolbar : Adw.Bin {
         return true;
     }
 
+    /**
+     * Transforms value of {@link Gtk.DropDown.selected} to a {@link Define.CaseType}.
+     *
+     * @see GLib.BindingTransformFunc
+     *
+     * @param binding       a {@link GLib.Binding} (unused)
+     * @param selected      value of {@link Gtk.DropDown.selected}
+     * @param case_type     a {@link Define.CaseType}
+     *
+     * @return              ``true`` if the transformation was successful, and ``false`` otherwise
+     */
     private bool selected_to_case (Binding binding, Value selected, ref Value case_type) {
         uint pos = (uint) selected;
 
@@ -169,6 +245,15 @@ public class Widget.Toolbar : Adw.Bin {
         return true;
     }
 
+    /**
+     * A wrapper of {@link GLib._}.
+     *
+     * This allows it to be used as a {@link GLib.Callback}.
+     *
+     * @param str   the string to translate
+     *
+     * @return      a localized string
+     */
     private string localize_str (string str) {
         return _(str);
     }
