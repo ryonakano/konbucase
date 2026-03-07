@@ -9,17 +9,14 @@
 public class Application : Adw.Application {
     /**
      * The instance of the app preferences.
-     *
-     * Note: See [[https://developer.gnome.org/documentation/tutorials/beginners/getting_started/saving_state.html|GNOME Developer Documentation]]
-     * for details.
      */
     public static Settings settings { get; private set; }
 
     /**
-     * Action names and their callbacks.
+     * Action names and callbacks that belong to ``this``.
      *
-     * Note: See [[https://developer.gnome.org/documentation/tutorials/actions.html|GNOME Developer Documentation]]
-     * for details.
+     * @see on_quit_activate
+     * @see on_about_activate
      */
     private const ActionEntry[] ACTION_ENTRIES = {
         { "quit", on_quit_activate },
@@ -52,6 +49,9 @@ public class Application : Adw.Application {
      * and remembers its preferences to {@link settings}.
      */
     private void setup_style () {
+        // Inspired from Rnote:
+        // https://github.com/flxzt/rnote/blob/v0.9.4/crates/rnote-ui/src/app/appactions.rs#L11-L36
+        // https://github.com/flxzt/rnote/blob/v0.9.4/crates/rnote-ui/src/appwindow/appsettings.rs#L14-L28
         var style_action = new SimpleAction.stateful (
             "color-scheme", VariantType.STRING, new Variant.string (Define.ColorScheme.DEFAULT)
         );
@@ -94,9 +94,6 @@ public class Application : Adw.Application {
 
     /**
      * Sets up localization, app style, and accel keys.
-     *
-     * Note: See [[https://developer.gnome.org/documentation/tutorials/application.html|GNOME Developer Documentation]]
-     * for details the base method.
      */
     protected override void startup () {
 #if USE_GRANITE
@@ -135,9 +132,6 @@ public class Application : Adw.Application {
      *
      * If there is an instance of {@link MainWindow}, shows it and leaves the method.<<BR>>
      * Otherwise, initializes it, shows it, and binds window sizes/states with {@link settings}.
-     *
-     * Note: See [[https://developer.gnome.org/documentation/tutorials/application.html|GNOME Developer Documentation]]
-     * for details the base method.
      */
     protected override void activate () {
         if (window != null) {
