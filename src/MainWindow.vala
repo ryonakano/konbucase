@@ -65,7 +65,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         // Responsive design; change orientation to vertical on smaller window width
         var content_breakpoint = new Adw.Breakpoint (
-            new Adw.BreakpointCondition.length (Adw.BreakpointConditionLengthType.MAX_WIDTH, 650, Adw.LengthUnit.SP)
+            new Adw.BreakpointCondition.length (Adw.BreakpointConditionLengthType.MAX_WIDTH, 750, Adw.LengthUnit.SP)
         );
         content_breakpoint.add_setter (main_content, "orientation", Gtk.Orientation.VERTICAL);
         add_breakpoint (content_breakpoint);
