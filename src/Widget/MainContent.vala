@@ -4,13 +4,21 @@
  */
 
 /**
- * Main content of the app.
+ * The main content of the app window.
+ *
+ * It contains two panes; Input Pane at the start and Output Pane at the end. Both consists of a {@link Widget.Toolbar}
+ * and a {@link Widget.TextArea}.
+ *
+ * Input Pane aims to receive user input to convert, so text in its {@link Widget.TextArea} is editable
+ * and also its {@link Widget.Toolbar} contains a button to clear text in its {@link Widget.TextArea}.<<BR>>
+ * On the other hand, Output Pane aims to print conversion result, so text in its {@link Widget.TextArea}
+ * is not editable.
  *
  * {{../docs/images/Widget/MainContent/example_main_content.png|example image of MainContext}}
  */
 public class Widget.MainContent : Gtk.Box {
     /**
-     * Emitted when text in a textarea is copied to the clipboard.
+     * Emitted when text in a {@link Widget.TextArea} that ``this`` contains is copied to the clipboard.
      */
     public signal void text_copied ();
 
@@ -45,7 +53,9 @@ public class Widget.MainContent : Gtk.Box {
     private ulong input_text_handler;
 
     /**
-     * Handles conversion of text.
+     * A library class that handles conversion of text.
+     *
+     * Note: See [[https://ryonakano.github.io/chcase/]] for the documentation of ChCase.
      */
     private ChCase.Converter converter;
 
@@ -195,7 +205,7 @@ public class Widget.MainContent : Gtk.Box {
     }
 
     /**
-     * Swap value of {@link Widget.Toolbar.case_type} and {@link Widget.TextArea.text} between input and output.
+     * Swaps values of {@link Widget.Toolbar.case_type} and {@link Widget.TextArea.text} between input and output.
      */
     public void swap () {
         // Changing value of input_toolbar.case_type, output_toolbar.case_type, and input_textarea.text causes
@@ -219,7 +229,7 @@ public class Widget.MainContent : Gtk.Box {
     }
 
     /**
-     * Convert case of a piece of text.
+     * Converts case of a piece of text.
      *
      * @param input_case    case type of input text
      * @param input_text    text that is converted

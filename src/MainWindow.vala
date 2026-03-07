@@ -94,7 +94,7 @@ public class MainWindow : Adw.ApplicationWindow {
     }
 
     /**
-     * Present a toast, an in-app notification.
+     * Presents a toast, an in-app notification.
      *
      * @param title     the title of the toast
      */

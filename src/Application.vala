@@ -49,8 +49,8 @@ public class Application : Adw.Application {
     }
 
     /**
-     * Make it possible to change app style with ``app.color-scheme`` action
-     * and remember its preferences to {@link settings}.
+     * Makes it possible to change app style with ``app.color-scheme`` action
+     * and remembers its preferences to {@link settings}.
      */
     private void setup_style () {
         var style_action = new SimpleAction.stateful (
@@ -94,7 +94,7 @@ public class Application : Adw.Application {
     }
 
     /**
-     * Setup localization, app style, and accel keys.
+     * Sets up localization, app style, and accel keys.
      *
      * Note: See [[https://developer.gnome.org/documentation/tutorials/application.html|GNOME Developer Documentation]]
      * for details the base method.
@@ -134,8 +134,8 @@ public class Application : Adw.Application {
     /**
      * Shows {@link MainWindow}.
      *
-     * If there is an instance of {@link MainWindow}, show it and leave the method.<<BR>>
-     * Otherwise, initialize it, show it, and binding window sizes/states.
+     * If there is an instance of {@link MainWindow}, shows it and leaves the method.<<BR>>
+     * Otherwise, initializes it, shows it, and binds window sizes/states with {@link settings}.
      *
      * Note: See [[https://developer.gnome.org/documentation/tutorials/application.html|GNOME Developer Documentation]]
      * for details the base method.

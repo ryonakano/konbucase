@@ -148,7 +148,7 @@ public class Widget.Toolbar : Adw.Bin {
     }
 
     /**
-     * Add additional widgets at the end.
+     * Adds an additional widget at the end.
      *
      * @param widget    the widget to append
      */
@@ -157,7 +157,7 @@ public class Widget.Toolbar : Adw.Bin {
     }
 
     /**
-     * Prepare a newly created listitem.
+     * Prepares a newly created listitem.
      *
      * @param object    the newly created listitem
      *
@@ -171,7 +171,7 @@ public class Widget.Toolbar : Adw.Bin {
     }
 
     /**
-     * Set to populate the listitem with widgets
+     * Sets to populate the listitem with widgets.
      *
      * @param object    the listitem to populate
      *
@@ -187,7 +187,7 @@ public class Widget.Toolbar : Adw.Bin {
     }
 
     /**
-     * Transform a {@link Define.CaseType} to value of {@link Gtk.DropDown.selected}.
+     * Transforms a {@link Define.CaseType} to value of {@link Gtk.DropDown.selected}.
      *
      * @see GLib.BindingTransformFunc
      *
@@ -218,7 +218,7 @@ public class Widget.Toolbar : Adw.Bin {
     }
 
     /**
-     * Transform value of {@link Gtk.DropDown.selected} to a {@link Define.CaseType}.
+     * Transforms value of {@link Gtk.DropDown.selected} to a {@link Define.CaseType}.
      *
      * @see GLib.BindingTransformFunc
      *

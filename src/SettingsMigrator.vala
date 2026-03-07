@@ -79,7 +79,7 @@ public class SettingsMigrator : Object {
     }
 
     /**
-     * Migrate app preferences of {@link settings} from old (deprecated) keys to new ones.
+     * Migrates app preferences of {@link settings} from old (deprecated) keys to new ones.
      *
      * @return              ``true`` if succeeds, ``false`` otherwise
      */

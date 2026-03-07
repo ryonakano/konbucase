@@ -14,7 +14,7 @@ namespace Util {
     }
 
     /**
-     * Convert {@link ChCase.Case} to {@link Define.CaseType}.
+     * Converts {@link ChCase.Case} to {@link Define.CaseType}.
      *
      * @param chcase_case   a {@link ChCase.Case}
      *
@@ -41,7 +41,7 @@ namespace Util {
     }
 
     /**
-     * Convert {@link Define.CaseType} to {@link ChCase.Case}.
+     * Converts {@link Define.CaseType} to {@link ChCase.Case}.
      *
      * @param case_type     a {@link Define.CaseType}
      *
@@ -68,7 +68,7 @@ namespace Util {
     }
 
     /**
-     * Convert string representation of a color scheme to {@link Adw.ColorScheme}.
+     * Converts string representation of a color scheme to {@link Adw.ColorScheme}.
      *
      * @param str_scheme    string representation of a color scheme
      *
@@ -89,7 +89,7 @@ namespace Util {
     }
 
     /**
-     * Convert {@link Adw.ColorScheme} to string representation of a color scheme.
+     * Converts {@link Adw.ColorScheme} to string representation of a color scheme.
      *
      * @param adw_scheme    a {@link Adw.ColorScheme}
      *
