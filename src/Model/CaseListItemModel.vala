@@ -11,12 +11,10 @@ public class Model.CaseListItemModel : Object {
      * Type of the letter case.
      */
     public Define.CaseType case_type { get; construct; }
-
     /**
      * Display name of the letter case.
      */
     public string name { get; construct; }
-
     /**
      * Description of the letter case.
      */

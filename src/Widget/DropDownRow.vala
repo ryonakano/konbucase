@@ -13,7 +13,6 @@ public class Widget.DropDownRow : Gtk.Box {
      * The title of the row.
      */
     public Gtk.Label title { get; set; }
-
     /**
      * The description of the row.
      */

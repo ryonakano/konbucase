@@ -25,7 +25,6 @@ public class Application : Adw.Application {
         { "quit", on_quit_activate },
         { "about", on_about_activate },
     };
-
     /**
      * The instance of the app window.
      */
