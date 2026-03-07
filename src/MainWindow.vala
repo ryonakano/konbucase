@@ -80,8 +80,8 @@ public class MainWindow : Adw.ApplicationWindow {
         });
     }
 
-    private void show_toast (string text) {
-        var toast = new Adw.Toast (_(text));
+    private void show_toast (string title) {
+        var toast = new Adw.Toast (_(title));
         overlay.add_toast (toast);
     }
 }
