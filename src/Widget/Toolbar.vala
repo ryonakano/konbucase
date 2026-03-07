@@ -56,13 +56,13 @@ public class Widget.Toolbar : Adw.Bin {
     }
 
     construct {
-        var case_list_factory = new Gtk.SignalListItemFactory ();
-        case_list_factory.bind.connect (case_list_factory_bind);
-        case_list_factory.setup.connect (case_list_factory_setup);
-
         var case_factory = new Gtk.SignalListItemFactory ();
         case_factory.bind.connect (case_factory_bind);
         case_factory.setup.connect (case_factory_setup);
+
+        var case_list_factory = new Gtk.SignalListItemFactory ();
+        case_list_factory.bind.connect (case_list_factory_bind);
+        case_list_factory.setup.connect (case_list_factory_setup);
 
         case_listmodel = new ListStore (typeof (Model.CaseListItemModel));
         case_listmodel.append (new Model.CaseListItemModel (
@@ -170,6 +170,35 @@ public class Widget.Toolbar : Adw.Bin {
      *
      * @see Gtk.SignalListItemFactory.setup
      */
+    private void case_factory_setup (Object object) {
+        var item = object as Gtk.ListItem;
+
+        var content = new Widget.DropDownButtonContent ();
+        item.child = content;
+    }
+
+    /**
+     * Sets to populate the listitem with widgets.
+     *
+     * @param object    the listitem to populate
+     *
+     * @see Gtk.SignalListItemFactory.bind
+     */
+    private void case_factory_bind (Object object) {
+        var item = object as Gtk.ListItem;
+        var model = item.item as Model.CaseListItemModel;
+        var content = item.child as Widget.DropDownButtonContent;
+
+        content.label_text = _(model.name);
+    }
+
+    /**
+     * Prepares a newly created listitem.
+     *
+     * @param object    the newly created listitem
+     *
+     * @see Gtk.SignalListItemFactory.setup
+     */
     private void case_list_factory_setup (Object object) {
         var item = object as Gtk.ListItem;
 
@@ -191,35 +220,6 @@ public class Widget.Toolbar : Adw.Bin {
 
         row.title.label = _(model.name);
         row.description.label = _(model.description);
-    }
-
-    /**
-     * Prepares a newly created listitem.
-     *
-     * @param object    the newly created listitem
-     *
-     * @see Gtk.SignalListItemFactory.setup
-     */
-    private void case_factory_setup (Object object) {
-        var item = object as Gtk.ListItem;
-
-        var content = new Widget.DropDownButtonContent ();
-        item.child = content;
-    }
-
-    /**
-     * Sets to populate the listitem with widgets.
-     *
-     * @param object    the listitem to populate
-     *
-     * @see Gtk.SignalListItemFactory.bind
-     */
-    private void case_factory_bind (Object object) {
-        var item = object as Gtk.ListItem;
-        var model = item.item as Model.CaseListItemModel;
-        var content = item.child as Widget.DropDownButtonContent;
-
-        content.label_text = _(model.name);
     }
 
     /**
