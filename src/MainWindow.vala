@@ -8,7 +8,7 @@
  */
 public class MainWindow : Adw.ApplicationWindow {
     /**
-     * A widget showing in-app notification above its content.
+     * A widget showing in-app notifications above its content.
      */
     private Adw.ToastOverlay overlay;
 

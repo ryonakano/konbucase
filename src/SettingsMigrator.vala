@@ -13,11 +13,11 @@ public class SettingsMigrator : Object {
     public unowned Settings settings { get; construct; }
 
     /**
-     * Migrate app preference of a old key before migration in ``settings``.
+     * Migrates an app preference in an old key in ``settings``.
      *
-     * @param settings  the target {@link GLib.Settings} for migration. User preference should be saved to a new key
-     *                  using a setter of {@link GLib.Settings} e.g. {@link GLib.Settings.set_value}
-     * @param old_val   app preference that the old key has
+     * @param settings  the target {@link GLib.Settings} for migration. The preference should be saved to new key(s)
+     *                  using setters of {@link GLib.Settings} e.g. {@link GLib.Settings.set_value}
+     * @param old_val   an app preference that the old key has
      *
      * @return          ``true`` if succeeds, ``false`` otherwise
      */
@@ -25,7 +25,7 @@ public class SettingsMigrator : Object {
     private delegate bool SettingsMigrationFunc (Settings settings, Variant old_val);
 
     /**
-     * Data structure to migrate app preferences saved in a key of {@link GLib.Settings}.
+     * Data structure to migrate an app preference saved in a key of {@link GLib.Settings}.
      */
     private struct SettingsMigrationEntry {
         /**

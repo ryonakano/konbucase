@@ -36,7 +36,7 @@ namespace Define {
     /**
      * Type of letter cases in a piece of text.
      */
-    // Note: Keep the same order with ``case-type`` enum definition in the gschema file
+    // Note: Keep the same order with "case-type" enum definition in the gschema file
     public enum CaseType {
         /**
          * Use a space as a word separator, e.g. "foo bar baz".
