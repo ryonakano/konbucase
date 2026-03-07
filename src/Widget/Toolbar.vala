@@ -56,6 +56,10 @@ public class Widget.Toolbar : Adw.Bin {
     }
 
     construct {
+        var case_factory = new Gtk.SignalListItemFactory ();
+        case_factory.bind.connect (case_factory_bind);
+        case_factory.setup.connect (case_factory_setup);
+
         var case_list_factory = new Gtk.SignalListItemFactory ();
         case_list_factory.bind.connect (case_list_factory_bind);
         case_list_factory.setup.connect (case_list_factory_setup);
@@ -102,12 +106,15 @@ public class Widget.Toolbar : Adw.Bin {
         );
 
         var case_dropdown = new Gtk.DropDown (case_listmodel, l10n_case_expression) {
+            factory = case_factory,
             list_factory = case_list_factory,
         };
 
         var case_label = new Gtk.Label (header_label) {
             use_underline = true,
             mnemonic_widget = case_dropdown,
+            wrap = true,
+            ellipsize = Pango.EllipsizeMode.END,
         };
 
         copy_clipboard_button = new Gtk.Button.from_icon_name ("edit-copy") {
@@ -154,6 +161,35 @@ public class Widget.Toolbar : Adw.Bin {
      */
     public void append (Gtk.Widget widget) {
         toolbar_custom_area.append (widget);
+    }
+
+    /**
+     * Prepares a newly created listitem.
+     *
+     * @param object    the newly created listitem
+     *
+     * @see Gtk.SignalListItemFactory.setup
+     */
+    private void case_factory_setup (Object object) {
+        var item = object as Gtk.ListItem;
+
+        var content = new Widget.DropDownButtonContent ();
+        item.child = content;
+    }
+
+    /**
+     * Sets to populate the listitem with widgets.
+     *
+     * @param object    the listitem to populate
+     *
+     * @see Gtk.SignalListItemFactory.bind
+     */
+    private void case_factory_bind (Object object) {
+        var item = object as Gtk.ListItem;
+        var model = item.item as Model.CaseListItemModel;
+        var content = item.child as Widget.DropDownButtonContent;
+
+        content.label_text = _(model.name);
     }
 
     /**
