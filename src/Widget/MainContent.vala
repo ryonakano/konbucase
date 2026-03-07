@@ -3,20 +3,57 @@
  * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+/**
+ * Main content of the app.
+ *
+ * {{../docs/images/Widget/MainContent/example_main_content.png|example image of MainContext}}
+ */
 public class Widget.MainContent : Gtk.Box {
+    /**
+     * Emitted when text in a textarea is copied to the clipboard.
+     */
     public signal void text_copied ();
 
+    /**
+     * The toolbar for input text.
+     */
     private Widget.Toolbar input_toolbar;
+    /**
+     * The textarea for input text.
+     */
     private Widget.TextArea input_textarea;
+    /**
+     * The toolbar for output text.
+     */
     private Widget.Toolbar output_toolbar;
+    /**
+     * The textarea for output text.
+     */
     private Widget.TextArea output_textarea;
 
+    /**
+     * ID of the lambda that handles change of case type of input text.
+     */
     private ulong input_case_handler;
+    /**
+     * ID of the lambda that handles change of case type of output text.
+     */
     private ulong output_case_handler;
+    /**
+     * ID of the lambda that handles change of input text.
+     */
     private ulong input_text_handler;
 
+    /**
+     * Handles conversion of text.
+     */
     private ChCase.Converter converter;
 
+    /**
+     * Creates a new {@link Widget.MainContent}.
+     *
+     * @return  a new {@link Widget.MainContent}
+     */
     public MainContent () {
     }
 
@@ -157,6 +194,9 @@ public class Widget.MainContent : Gtk.Box {
         });
     }
 
+    /**
+     * Swap value of {@link Widget.Toolbar.case_type} and {@link Widget.TextArea.text} between input and output.
+     */
     public void swap () {
         // Changing value of input_toolbar.case_type, output_toolbar.case_type, and input_textarea.text causes
         // value of output_textarea.text being changed, which is unexpected convert.
@@ -179,13 +219,13 @@ public class Widget.MainContent : Gtk.Box {
     }
 
     /**
-     * Perform conversion of {@link input_text} and return output text.
+     * Convert case of a piece of text.
      *
-     * @param input_case case type of input text
-     * @param input_text text that is converted
-     * @param output_case case type of output text
+     * @param input_case    case type of input text
+     * @param input_text    text that is converted
+     * @param output_case   case type of output text
      *
-     * @return text after conversion
+     * @return              text after conversion
      */
     private string do_convert (Define.CaseType input_case, string input_text, Define.CaseType output_case) {
         string output_text;
