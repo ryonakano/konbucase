@@ -219,7 +219,7 @@ public class Widget.Toolbar : Adw.Bin {
         var model = item.item as Model.CaseListItemModel;
         var content = item.child as Widget.DropDownButtonContent;
 
-        content.label.label = _(model.name);
+        content.label_text = _(model.name);
     }
 
     /**
