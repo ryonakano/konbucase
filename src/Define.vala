@@ -19,14 +19,12 @@ namespace Define {
          * @see Adw.ColorScheme.DEFAULT
          */
         public const string DEFAULT = "default";
-
         /**
          * Always use light appearance.
          *
          * @see Adw.ColorScheme.FORCE_LIGHT
          */
         public const string FORCE_LIGHT = "force-light";
-
         /**
          * Always use dark appearance.
          *
@@ -44,27 +42,22 @@ namespace Define {
          * Use a space as a word separator, e.g. "foo bar baz".
          */
         SPACE_SEPARATED,
-
         /**
          * Camel Case, e.g. "fooBarBaz".
          */
         CAMEL,
-
         /**
          * Pascal Case, e.g. "FooBarBaz".
          */
         PASCAL,
-
         /**
          * Snake Case, e.g. "foo_bar_baz".
          */
         SNAKE,
-
         /**
          * Kebab Case, e.g. "foo-bar-baz".
          */
         KEBAB,
-
         /**
          * Sentence Case, e.g. "Foo bar baz".
          */
