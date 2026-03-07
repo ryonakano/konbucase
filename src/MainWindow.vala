@@ -75,11 +75,9 @@ public class MainWindow : Adw.ApplicationWindow {
             main_content.swap ();
         });
 
-        main_content.text_copied.connect (toast_copied);
-    }
-
-    private void toast_copied () {
-        show_toast (N_("Text copied!"));
+        main_content.text_copied.connect (() => {
+            show_toast (N_("Text copied!"));
+        });
     }
 
     private void show_toast (string text) {
