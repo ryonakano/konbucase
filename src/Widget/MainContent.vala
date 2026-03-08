@@ -117,8 +117,8 @@ public class Widget.MainContent : Gtk.Box {
         append (output_pane);
 
         // Use SizeGroup to keep the same size between input_pane and output_pane
-        // because separator, which is not intended to be the same size with them, is also appended to content_box
-        // and thus we can't set content_box.homogeneous to true.
+        // because separator, which is not intended to be the same size with them, is also appended to ``this``
+        // and thus we can't set this.homogeneous to true.
         var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
         size_group.add_widget (input_pane);
         size_group.add_widget (output_pane);
