@@ -149,6 +149,28 @@ public class Widget.MainContent : Gtk.Box {
             }
         );
 
+        this.bind_property ("orientation",
+            separator, "orientation",
+            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+            (binding, _this_orient, ref _sep_orient) => {
+                var orient = (Gtk.Orientation) _this_orient;
+
+                switch (orient) {
+                    case Gtk.Orientation.HORIZONTAL:
+                        _sep_orient = Gtk.Orientation.VERTICAL;
+                        break;
+                    case Gtk.Orientation.VERTICAL:
+                        _sep_orient = Gtk.Orientation.HORIZONTAL;
+                        break;
+                    default:
+                        critical ("Unknown Gtk.Orientation %d", orient);
+                        return false;
+                }
+
+                return true;
+            }
+        );
+
         // Make clear button only sensitive when there are texts to clear
         input_textarea.bind_property (
             "text",
