@@ -3,10 +3,26 @@
  * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+/**
+ * A row of a dropdown with a title and description text.
+ *
+ * {{../docs/images/Widget/DropDownRow/example_drop_down_row.png|example image of DropDownRow}}
+ */
 public class Widget.DropDownRow : Gtk.Box {
-    public Gtk.Label title { get; set; }
-    public Gtk.Label description { get; set; }
+    /**
+     * The title text of the row.
+     */
+    public string? title_text { get; set; default = null; }
+    /**
+     * The description text of the row.
+     */
+    public string? description_text { get; set; default = null; }
 
+    /**
+     * Creates a new {@link Widget.DropDownRow}.
+     *
+     * @return  a new {@link Widget.DropDownRow}
+     */
     public DropDownRow () {
     }
 
@@ -14,7 +30,7 @@ public class Widget.DropDownRow : Gtk.Box {
         orientation = Gtk.Orientation.VERTICAL;
         spacing = 2;
 
-        title = new Gtk.Label (null) {
+        var title = new Gtk.Label (title_text) {
             hexpand = true,
             width_chars = 25,
             wrap = true,
@@ -22,13 +38,16 @@ public class Widget.DropDownRow : Gtk.Box {
         };
         title.add_css_class ("heading");
 
-        description = new Gtk.Label (null) {
+        var description = new Gtk.Label (description_text) {
             hexpand = true,
             width_chars = 25,
             wrap = true,
             xalign = 0,
         };
         description.add_css_class ("dim-label");
+
+        this.bind_property ("title_text", title, "label");
+        this.bind_property ("description_text", description, "label");
 
         append (title);
         append (description);

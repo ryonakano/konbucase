@@ -3,20 +3,67 @@
  * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+/**
+ * The main content of the app window.
+ *
+ * It contains two panes; Input Pane at the start and Output Pane at the end. Both consists of a {@link Widget.Toolbar}
+ * and a {@link Widget.TextArea}.
+ *
+ * Input Pane aims to receive user input to convert, so text in its {@link Widget.TextArea} is editable
+ * and also its {@link Widget.Toolbar} contains a button to clear text in its {@link Widget.TextArea}.<<BR>>
+ * On the other hand, Output Pane aims to print conversion result, so text in its {@link Widget.TextArea}
+ * is not editable.
+ *
+ * {{../docs/images/Widget/MainContent/example_main_content.png|example image of MainContext}}
+ */
 public class Widget.MainContent : Gtk.Box {
+    /**
+     * Emitted when text in a {@link Widget.TextArea} that ``this`` contains is copied to the clipboard.
+     */
     public signal void text_copied ();
 
+    /**
+     * The toolbar for input text.
+     */
     private Widget.Toolbar input_toolbar;
+    /**
+     * The textarea for input text.
+     */
     private Widget.TextArea input_textarea;
+    /**
+     * The toolbar for output text.
+     */
     private Widget.Toolbar output_toolbar;
+    /**
+     * The textarea for output text.
+     */
     private Widget.TextArea output_textarea;
 
+    /**
+     * ID of the lambda that handles change of case type of input text.
+     */
     private ulong input_case_handler;
+    /**
+     * ID of the lambda that handles change of case type of output text.
+     */
     private ulong output_case_handler;
+    /**
+     * ID of the lambda that handles change of input text.
+     */
     private ulong input_text_handler;
 
+    /**
+     * A library class that handles conversion of text.
+     *
+     * Note: See [[https://ryonakano.github.io/chcase/]] for the documentation of ChCase.
+     */
     private ChCase.Converter converter;
 
+    /**
+     * Creates a new {@link Widget.MainContent}.
+     *
+     * @return  a new {@link Widget.MainContent}
+     */
     public MainContent () {
     }
 
@@ -70,8 +117,8 @@ public class Widget.MainContent : Gtk.Box {
         append (output_pane);
 
         // Use SizeGroup to keep the same size between input_pane and output_pane
-        // because separator, which is not intended to be the same size with them, is also appended to content_box
-        // and thus we can't set content_box.homogeneous to true.
+        // because separator, which is not intended to be the same size with them, is also appended to ``this``
+        // and thus we can't set this.homogeneous to true.
         var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
         size_group.add_widget (input_pane);
         size_group.add_widget (output_pane);
@@ -102,7 +149,27 @@ public class Widget.MainContent : Gtk.Box {
             }
         );
 
-        this.bind_property ("orientation", separator, "orientation", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
+        this.bind_property ("orientation",
+            separator, "orientation",
+            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+            (binding, _this_orient, ref _sep_orient) => {
+                var orient = (Gtk.Orientation) _this_orient;
+
+                switch (orient) {
+                    case Gtk.Orientation.HORIZONTAL:
+                        _sep_orient = Gtk.Orientation.VERTICAL;
+                        break;
+                    case Gtk.Orientation.VERTICAL:
+                        _sep_orient = Gtk.Orientation.HORIZONTAL;
+                        break;
+                    default:
+                        critical ("Unknown Gtk.Orientation %d", orient);
+                        return false;
+                }
+
+                return true;
+            }
+        );
 
         // Make clear button only sensitive when there are texts to clear
         input_textarea.bind_property (
@@ -157,6 +224,9 @@ public class Widget.MainContent : Gtk.Box {
         });
     }
 
+    /**
+     * Swaps values of {@link Widget.Toolbar.case_type} and {@link Widget.TextArea.text} between input and output.
+     */
     public void swap () {
         // Changing value of input_toolbar.case_type, output_toolbar.case_type, and input_textarea.text causes
         // value of output_textarea.text being changed, which is unexpected convert.
@@ -179,19 +249,19 @@ public class Widget.MainContent : Gtk.Box {
     }
 
     /**
-     * Perform conversion of {@link input_text} and return output text.
+     * Converts case of a piece of text.
      *
-     * @param input_case case type of input text
-     * @param input_text text that is converted
-     * @param output_case case type of output text
+     * @param input_case    case type of input text
+     * @param input_text    text that is converted
+     * @param output_case   case type of output text
      *
-     * @return text after conversion
+     * @return              text after conversion
      */
     private string do_convert (Define.CaseType input_case, string input_text, Define.CaseType output_case) {
         string output_text;
 
-        converter.input_case = Util.to_chcase_case (input_case);
-        converter.output_case = Util.to_chcase_case (output_case);
+        converter.input_case = Util.Convert.to_chcase_case (input_case);
+        converter.output_case = Util.Convert.to_chcase_case (output_case);
 
         output_text = converter.convert_case (input_text);
 

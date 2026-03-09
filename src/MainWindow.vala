@@ -3,9 +3,22 @@
  * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+/**
+ * The app window.
+ */
 public class MainWindow : Adw.ApplicationWindow {
+    /**
+     * A widget showing in-app notifications above its content.
+     */
     private Adw.ToastOverlay overlay;
 
+    /**
+     * Creates a new {@link MainWindow}.
+     *
+     * @param app   a {@link Application} to be associated with ``this``
+     *
+     * @return      a new {@link MainWindow}
+     */
     public MainWindow (Application app) {
         Object (
             application: app
@@ -29,7 +42,7 @@ public class MainWindow : Adw.ApplicationWindow {
         // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
         if (!Util.is_on_pantheon ()) {
             ///TRANSLATORS: %s will be replaced by the app name
-            main_menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
+            main_menu.append (_("_About %s").printf (Config.APP_NAME), "app.about");
         }
 
         var swap_button = new Gtk.Button.from_icon_name ("media-playlist-repeat") {
@@ -52,7 +65,7 @@ public class MainWindow : Adw.ApplicationWindow {
 
         // Responsive design; change orientation to vertical on smaller window width
         var content_breakpoint = new Adw.Breakpoint (
-            new Adw.BreakpointCondition.length (Adw.BreakpointConditionLengthType.MAX_WIDTH, 650, Adw.LengthUnit.SP)
+            new Adw.BreakpointCondition.length (Adw.BreakpointConditionLengthType.MAX_WIDTH, 750, Adw.LengthUnit.SP)
         );
         content_breakpoint.add_setter (main_content, "orientation", Gtk.Orientation.VERTICAL);
         add_breakpoint (content_breakpoint);
@@ -69,21 +82,24 @@ public class MainWindow : Adw.ApplicationWindow {
         content = toolbar_view;
         width_request = 360;
         height_request = 400;
-        title = Define.APP_NAME;
+        title = Config.APP_NAME;
 
         swap_button.clicked.connect (() => {
             main_content.swap ();
         });
 
-        main_content.text_copied.connect (toast_copied);
+        main_content.text_copied.connect (() => {
+            show_toast (N_("Text copied!"));
+        });
     }
 
-    private void toast_copied () {
-        show_toast (N_("Text copied!"));
-    }
-
-    private void show_toast (string text) {
-        var toast = new Adw.Toast (_(text));
+    /**
+     * Presents a toast, an in-app notification.
+     *
+     * @param title     the title of the toast
+     */
+    private void show_toast (string title) {
+        var toast = new Adw.Toast (_(title));
         overlay.add_toast (toast);
     }
 }

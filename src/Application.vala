@@ -3,15 +3,62 @@
  * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+/**
+ * The foundation class to manage the app and its window.
+ */
 public class Application : Adw.Application {
+    /**
+     * The instance of the app preferences.
+     */
     public static Settings settings { get; private set; }
 
+    /**
+     * Table of data structures used for migration.
+     */
+    private static Util.SettingsMigration.SettingsMigrationEntry[] settings_migration_table = {
+        {
+            "source-text",
+            ((settings, old_val) => {
+                settings.set_value ("input-text", old_val);
+                return true;
+            }),
+        },
+        {
+            "source-case-type",
+            ((settings, old_val) => {
+                settings.set_value ("input-case-type", old_val);
+                return true;
+            }),
+        },
+        {
+            "result-case-type",
+            ((settings, old_val) => {
+                settings.set_value ("output-case-type", old_val);
+                return true;
+            }),
+        },
+    };
+
+    /**
+     * Action names and callbacks that belong to ``this``.
+     *
+     * @see on_quit_activate
+     * @see on_about_activate
+     */
     private const ActionEntry[] ACTION_ENTRIES = {
         { "quit", on_quit_activate },
         { "about", on_about_activate },
     };
+    /**
+     * The instance of the app window.
+     */
     private MainWindow window;
 
+    /**
+     * Creates a new {@link Application}.
+     *
+     * @return  a new {@link Application}
+     */
     public Application () {
         Object (
             application_id: Config.APP_ID,
@@ -24,7 +71,14 @@ public class Application : Adw.Application {
         settings = new Settings (Config.APP_ID);
     }
 
+    /**
+     * Makes it possible to change app style with ``app.color-scheme`` action
+     * and remembers its preferences to {@link settings}.
+     */
     private void setup_style () {
+        // Inspired from Rnote:
+        // https://github.com/flxzt/rnote/blob/v0.9.4/crates/rnote-ui/src/app/appactions.rs#L11-L36
+        // https://github.com/flxzt/rnote/blob/v0.9.4/crates/rnote-ui/src/appwindow/appsettings.rs#L14-L28
         var style_action = new SimpleAction.stateful (
             "color-scheme", VariantType.STRING, new Variant.string (Define.ColorScheme.DEFAULT)
         );
@@ -39,11 +93,11 @@ public class Application : Adw.Application {
                     return false;
                 }
 
-                adw_scheme = Util.to_adw_scheme ((string) state_scheme_dup);
+                adw_scheme = Util.Convert.to_adw_scheme ((string) state_scheme_dup);
                 return true;
             },
             (binding, adw_scheme, ref state_scheme) => {
-                string str_scheme = Util.to_str_scheme ((Adw.ColorScheme) adw_scheme);
+                string str_scheme = Util.Convert.to_str_scheme ((Adw.ColorScheme) adw_scheme);
                 state_scheme = new Variant.string (str_scheme);
                 return true;
             }
@@ -52,11 +106,11 @@ public class Application : Adw.Application {
             "color-scheme",
             style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
             (adw_scheme, gschema_scheme, user_data) => {
-                adw_scheme = Util.to_adw_scheme ((string) gschema_scheme);
+                adw_scheme = Util.Convert.to_adw_scheme ((string) gschema_scheme);
                 return true;
             },
             (adw_scheme, expected_type, user_data) => {
-                string str_scheme = Util.to_str_scheme ((Adw.ColorScheme) adw_scheme);
+                string str_scheme = Util.Convert.to_str_scheme ((Adw.ColorScheme) adw_scheme);
                 Variant gschema_scheme = new Variant.string (str_scheme);
                 return gschema_scheme;
             },
@@ -65,6 +119,9 @@ public class Application : Adw.Application {
         add_action (style_action);
     }
 
+    /**
+     * Sets up localization, app style, and accel keys.
+     */
     protected override void startup () {
 #if USE_GRANITE
         // Use both compile-time and runtime conditions to:
@@ -79,6 +136,8 @@ public class Application : Adw.Application {
 
         base.startup ();
 
+        // Make sure the app is shown in the user's language
+        // https://docs.gtk.org/glib/i18n.html#internationalization
         Intl.setlocale (LocaleCategory.ALL, "");
         Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
         Intl.bind_textdomain_codeset (Config.GETTEXT_PACKAGE, "UTF-8");
@@ -89,11 +148,17 @@ public class Application : Adw.Application {
         add_action_entries (ACTION_ENTRIES, this);
         set_accels_for_action ("app.quit", { "<Control>q" });
 
-        var settings_migrator = new SettingsMigrator (Application.settings);
-        // Ignore return value because failure just results old user preferences not migrated
-        settings_migrator.migrate ();
+        // Migrate app preferences from old versions
+        // Ignore return value because failure just results old app preferences not migrated
+        Util.SettingsMigration.migrate (Application.settings, Application.settings_migration_table);
     }
 
+    /**
+     * Shows {@link MainWindow}.
+     *
+     * If there is an instance of {@link MainWindow}, shows it and leaves the method.<<BR>>
+     * Otherwise, initializes it, shows it, and binds window sizes/states with {@link settings}.
+     */
     protected override void activate () {
         if (window != null) {
             window.present ();
@@ -107,8 +172,8 @@ public class Application : Adw.Application {
         settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
         settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
 
-        // Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
-        // So we use the prepared binding only for setting.
+        // Binding window-maximized with SettingsBindFlags.DEFAULT flag results the window
+        // getting bigger and bigger every time it opens. So we bind() only for SET and call get_boolean() manually
         if (Application.settings.get_boolean ("window-maximized")) {
             window.maximize ();
         }
@@ -116,12 +181,22 @@ public class Application : Adw.Application {
         settings.bind ("window-maximized", window, "maximized", SettingsBindFlags.SET);
     }
 
+    /**
+     * The callback for "app.quit" action.
+     *
+     * Destories a instance of {@link MainWindow}, resulting the app quits.
+     */
     private void on_quit_activate () {
         if (window != null) {
             window.destroy ();
         }
     }
 
+    /**
+     * The callback for "app.about" action.
+     *
+     * Shows the about dialog.
+     */
     private void on_about_activate () {
         // List of maintainers
         const string[] DEVELOPERS = {

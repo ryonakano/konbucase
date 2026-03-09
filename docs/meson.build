@@ -22,6 +22,7 @@ custom_target(
     '--verbose',
     '--force',
     '--use-svg-images',
+    '--private',
     '-o', valadoc_output_dir,
   ],
 
