@@ -24,7 +24,7 @@ We follow [the coding style by elementary](https://docs.elementary.io/develop/wr
 ### Documentation
 We use documentation comments for clarifying interfaces (so-called "Black Box").
 
-Generated documentations are available at https://ryonakano.github.io/konbucase/, which is updated per release of the app.
+Generated documentations are available on [GitHub Pages](https://ryonakano.github.io/konbucase/), which is updated per release of the app.
 You can also generate documentation locally with the mentioned steps below.
 
 You can refer to them to help your coding and you should edit them if you change the internal behavior
