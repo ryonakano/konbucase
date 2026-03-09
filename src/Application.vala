@@ -13,6 +13,33 @@ public class Application : Adw.Application {
     public static Settings settings { get; private set; }
 
     /**
+     * Table of data structures used for migration.
+     */
+    private static Util.SettingsMigration.SettingsMigrationEntry[] settings_migration_table = {
+        {
+            "source-text",
+            ((settings, old_val) => {
+                settings.set_value ("input-text", old_val);
+                return true;
+            }),
+        },
+        {
+            "source-case-type",
+            ((settings, old_val) => {
+                settings.set_value ("input-case-type", old_val);
+                return true;
+            }),
+        },
+        {
+            "result-case-type",
+            ((settings, old_val) => {
+                settings.set_value ("output-case-type", old_val);
+                return true;
+            }),
+        },
+    };
+
+    /**
      * Action names and callbacks that belong to ``this``.
      *
      * @see on_quit_activate
@@ -66,11 +93,11 @@ public class Application : Adw.Application {
                     return false;
                 }
 
-                adw_scheme = Util.to_adw_scheme ((string) state_scheme_dup);
+                adw_scheme = Util.Convert.to_adw_scheme ((string) state_scheme_dup);
                 return true;
             },
             (binding, adw_scheme, ref state_scheme) => {
-                string str_scheme = Util.to_str_scheme ((Adw.ColorScheme) adw_scheme);
+                string str_scheme = Util.Convert.to_str_scheme ((Adw.ColorScheme) adw_scheme);
                 state_scheme = new Variant.string (str_scheme);
                 return true;
             }
@@ -79,11 +106,11 @@ public class Application : Adw.Application {
             "color-scheme",
             style_manager, "color-scheme", SettingsBindFlags.DEFAULT,
             (adw_scheme, gschema_scheme, user_data) => {
-                adw_scheme = Util.to_adw_scheme ((string) gschema_scheme);
+                adw_scheme = Util.Convert.to_adw_scheme ((string) gschema_scheme);
                 return true;
             },
             (adw_scheme, expected_type, user_data) => {
-                string str_scheme = Util.to_str_scheme ((Adw.ColorScheme) adw_scheme);
+                string str_scheme = Util.Convert.to_str_scheme ((Adw.ColorScheme) adw_scheme);
                 Variant gschema_scheme = new Variant.string (str_scheme);
                 return gschema_scheme;
             },
@@ -122,9 +149,8 @@ public class Application : Adw.Application {
         set_accels_for_action ("app.quit", { "<Control>q" });
 
         // Migrate app preferences from old versions
-        var settings_migrator = new SettingsMigrator (Application.settings);
         // Ignore return value because failure just results old app preferences not migrated
-        settings_migrator.migrate ();
+        Util.SettingsMigration.migrate (Application.settings, Application.settings_migration_table);
     }
 
     /**

@@ -4,14 +4,9 @@
  */
 
 /**
- * A class that handles backward compatibility of app preferences.
+ * Handles backward compatibility of app preferences.
  */
-public class SettingsMigrator : Object {
-    /**
-     * The target {@link GLib.Settings} for migration.
-     */
-    public unowned Settings settings { get; construct; }
-
+namespace Util.SettingsMigration {
     /**
      * Migrates an app preference in an old key in ``settings``.
      *
@@ -22,12 +17,12 @@ public class SettingsMigrator : Object {
      * @return          ``true`` if succeeds, ``false`` otherwise
      */
     [CCode (has_target = false)]
-    private delegate bool SettingsMigrationFunc (Settings settings, Variant old_val);
+    public delegate bool SettingsMigrationFunc (Settings settings, Variant old_val);
 
     /**
      * Data structure to migrate an app preference saved in a key of {@link GLib.Settings}.
      */
-    private struct SettingsMigrationEntry {
+    public struct SettingsMigrationEntry {
         /**
          * Key name before migration.
          */
@@ -38,55 +33,19 @@ public class SettingsMigrator : Object {
          */
         unowned SettingsMigrationFunc migrate;
     }
-    /**
-     * Table of data structures used for migration.
-     */
-    private static SettingsMigrationEntry[] settings_migration_table = {
-        {
-            "source-text",
-            ((settings, old_val) => {
-                settings.set_value ("input-text", old_val);
-                return true;
-            }),
-        },
-        {
-            "source-case-type",
-            ((settings, old_val) => {
-                settings.set_value ("input-case-type", old_val);
-                return true;
-            }),
-        },
-        {
-            "result-case-type",
-            ((settings, old_val) => {
-                settings.set_value ("output-case-type", old_val);
-                return true;
-            }),
-        },
-    };
-
-    /**
-     * Creates a new {@link SettingsMigrator}.
-     *
-     * @param settings      the target {@link GLib.Settings} for migration
-     *
-     * @return              a new {@link SettingsMigrator}
-     */
-    public SettingsMigrator (Settings settings) {
-        Object (
-            settings: settings
-        );
-    }
 
     /**
      * Migrates app preferences of {@link settings} from old (deprecated) keys to new ones.
      *
-     * @return              ``true`` if succeeds, ``false`` otherwise
+     * @param settings          the target {@link GLib.Settings} for migration
+     * @param migration_table   table of data structures used for migration
+     *
+     * @return                  ``true`` if succeeds, ``false`` otherwise
      */
-    public bool migrate () {
+    public static bool migrate (Settings settings, SettingsMigrationEntry[] migration_table) {
         SettingsSchema ss = settings.settings_schema;
 
-        foreach (unowned var entry in settings_migration_table) {
+        foreach (unowned var entry in migration_table) {
             if (!ss.has_key (entry.old_key)) {
                 continue;
             }
