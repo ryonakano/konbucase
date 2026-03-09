@@ -149,8 +149,6 @@ public class Widget.MainContent : Gtk.Box {
             }
         );
 
-        this.bind_property ("orientation", separator, "orientation", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
-
         // Make clear button only sensitive when there are texts to clear
         input_textarea.bind_property (
             "text",
