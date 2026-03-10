@@ -13,9 +13,9 @@ config_file = configure_file(
 
 sources = files(
   'Model/CaseListItemModel.vala',
+  'View/MainView.vala',
   'Widget/DropDownButtonContent.vala',
   'Widget/DropDownRow.vala',
-  'Widget/MainContent.vala',
   'Widget/TextArea.vala',
   'Widget/Toolbar.vala',
   'Application.vala',
