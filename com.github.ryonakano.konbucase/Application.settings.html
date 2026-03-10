@@ -23,18 +23,28 @@
         </ul>
         <hr class="navi_hr"/>
         <ul class="navi_main">
+          <li class="constant"><a href="Application.ACTION_ENTRIES.html">ACTION_ENTRIES</a></li>
           <li class="property">settings</li>
           <li class="static_method"><a href="Application.main.html">main</a></li>
           <li class="creation_method"><a href="Application.Application.html">Application</a></li>
           <li class="virtual_method"><a href="Application.activate.html">activate</a></li>
+          <li class="method"><a href="Application.on_about_activate.html">on_about_activate</a></li>
+          <li class="method"><a href="Application.on_quit_activate.html">on_quit_activate</a></li>
+          <li class="method"><a href="Application.setup_style.html">setup_style</a></li>
           <li class="virtual_method"><a href="Application.startup.html">startup</a></li>
+          <li class="field"><a href="Application._settings.html">_settings</a></li>
+          <li class="field"><a href="Application.settings_migration_table.html">settings_migration_table</a></li>
+          <li class="field"><a href="Application.window.html">window</a></li>
         </ul>
       </div>
       <div class="site_content">
         <h1 class="main_title">settings</h1>
         <hr class="main_hr"/>
         <h2 class="main_title">Description:</h2>
-        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Settings</span></span> <b><span class="property">settings</span></b> { <span class="main_keyword">get</span>; }
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Settings</span></span> <b><span class="property">settings</span></b> { <span class="main_keyword">get</span>; <span class="main_keyword">private</span> <span class="main_keyword">set</span>; }
+        </div>
+        <div class="description">
+          <p>The instance of the app preferences.</p>
         </div>
       </div>
     </div><br/>

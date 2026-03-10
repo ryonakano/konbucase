@@ -27,9 +27,11 @@
         </ul>
         <hr class="navi_hr"/>
         <ul class="navi_main">
-          <li class="property"><a href="Widget.DropDownRow.description.html">description</a></li>
-          <li class="property"><a href="Widget.DropDownRow.title.html">title</a></li>
+          <li class="property"><a href="Widget.DropDownRow.description_text.html">description_text</a></li>
+          <li class="property"><a href="Widget.DropDownRow.title_text.html">title_text</a></li>
           <li class="creation_method"><a href="Widget.DropDownRow.DropDownRow.html">DropDownRow</a></li>
+          <li class="field"><a href="Widget.DropDownRow._description_text.html">_description_text</a></li>
+          <li class="field"><a href="Widget.DropDownRow._title_text.html">_title_text</a></li>
         </ul>
       </div>
       <div class="site_content">
@@ -39,6 +41,11 @@
         <img class="main_diagram" usemap="#Widget.DropDownRow" alt="Object hierarchy for DropDownRow" src="img/Widget.DropDownRow.svg"/>
         <h2 class="main_title">Description:</h2>
         <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">DropDownRow</span></b> : <span class="main_type"><span class="class">Box</span></span>
+        </div>
+        <div class="description">
+          <p>A row of a dropdown with a title and description text.</p>
+          <p>
+            <img src="img/example_drop_down_row.png" alt="example image of DropDownRow"/></p>
         </div><br/>
         <div class="namespace_note"><b>Namespace:</b> <a href="Widget.html">Widget</a>
         </div>
@@ -47,26 +54,37 @@
         <h2 class="main_title">Content:</h2>
         <h3 class="main_title">Properties:</h3>
         <ul class="navi_inline">
-          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Label</span></span> <b><a href="Widget.DropDownRow.description.html" class="property">description</a></b> { <span class="main_keyword">get</span>; <span class="main_keyword">set</span>; }
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span>? <b><a href="Widget.DropDownRow.description_text.html" class="property">description_text</a></b> { <span class="main_keyword">get</span>; <span class="main_keyword">set</span>; }
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">The description text of the row.</span>
             </div></li>
-          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Label</span></span> <b><a href="Widget.DropDownRow.title.html" class="property">title</a></b> { <span class="main_keyword">get</span>; <span class="main_keyword">set</span>; }
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span>? <b><a href="Widget.DropDownRow.title_text.html" class="property">title_text</a></b> { <span class="main_keyword">get</span>; <span class="main_keyword">set</span>; }
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">The title text of the row.</span>
             </div></li>
         </ul>
         <h3 class="main_title">Creation methods:</h3>
         <ul class="navi_inline">
           <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="Widget.DropDownRow.DropDownRow.html" class="creation_method">DropDownRow</a></b> ()
             </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Widget.DropDownRow</span>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Fields:</h3>
+        <ul class="navi_inline">
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="class">string</span></span>? <b><a href="Widget.DropDownRow._description_text.html" class="field">_description_text</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="class">string</span></span>? <b><a href="Widget.DropDownRow._title_text.html" class="field">_title_text</a></b>
+            </span>
             <div class="leaf_brief_description">
             </div></li>
         </ul>
         <h3 class="main_title">Inherited Members:</h3>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-19')">All known members inherited from class Gtk.Box</div>
-          <div class="content" id="box-content-19">
+          <div class="headline" onclick="toggle_box (this, 'box-content-30')">All known members inherited from class Gtk.Box</div>
+          <div class="content" id="box-content-30">
             <div class="column">
               <ul class="navi_inline">
                 <li class="method">append</li>
@@ -99,8 +117,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-20')">All known members inherited from class Gtk.Widget</div>
-          <div class="content" id="box-content-20">
+          <div class="headline" onclick="toggle_box (this, 'box-content-31')">All known members inherited from class Gtk.Widget</div>
+          <div class="content" id="box-content-31">
             <div class="column">
               <ul class="navi_inline">
                 <li class="method">action_set_enabled</li>
@@ -343,8 +361,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-21')">All known members inherited from class GLib.Object</div>
-          <div class="content" id="box-content-21">
+          <div class="headline" onclick="toggle_box (this, 'box-content-32')">All known members inherited from class GLib.Object</div>
+          <div class="content" id="box-content-32">
             <div class="column">
               <ul class="navi_inline">
                 <li class="method">@get</li>
@@ -410,8 +428,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-22')">All known members inherited from interface Gtk.Accessible</div>
-          <div class="content" id="box-content-22">
+          <div class="headline" onclick="toggle_box (this, 'box-content-33')">All known members inherited from interface Gtk.Accessible</div>
+          <div class="content" id="box-content-33">
             <div class="column">
               <ul class="navi_inline">
                 <li class="abstract_property">accessible_role</li>
@@ -447,8 +465,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-23')">All known members inherited from interface Gtk.Buildable</div>
-          <div class="content" id="box-content-23">
+          <div class="headline" onclick="toggle_box (this, 'box-content-34')">All known members inherited from interface Gtk.Buildable</div>
+          <div class="content" id="box-content-34">
             <div class="column">
               <ul class="navi_inline">
                 <li class="abstract_method">add_child</li>
@@ -474,8 +492,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-24')">All known members inherited from interface Gtk.Orientable</div>
-          <div class="content" id="box-content-24">
+          <div class="headline" onclick="toggle_box (this, 'box-content-35')">All known members inherited from interface Gtk.Orientable</div>
+          <div class="content" id="box-content-35">
             <div class="column">
               <ul class="navi_inline">
                 <li class="method">get_orientation</li>

@@ -28,7 +28,17 @@
         <hr class="navi_hr"/>
         <ul class="navi_main">
           <li class="creation_method"><a href="Widget.MainContent.MainContent.html">MainContent</a></li>
+          <li class="method"><a href="Widget.MainContent.do_convert.html">do_convert</a></li>
           <li class="method"><a href="Widget.MainContent.swap.html">swap</a></li>
+          <li class="signal"><a href="Widget.MainContent.text_copied.html">text_copied</a></li>
+          <li class="field"><a href="Widget.MainContent.converter.html">converter</a></li>
+          <li class="field"><a href="Widget.MainContent.input_case_handler.html">input_case_handler</a></li>
+          <li class="field"><a href="Widget.MainContent.input_text_handler.html">input_text_handler</a></li>
+          <li class="field"><a href="Widget.MainContent.input_textarea.html">input_textarea</a></li>
+          <li class="field"><a href="Widget.MainContent.input_toolbar.html">input_toolbar</a></li>
+          <li class="field"><a href="Widget.MainContent.output_case_handler.html">output_case_handler</a></li>
+          <li class="field"><a href="Widget.MainContent.output_textarea.html">output_textarea</a></li>
+          <li class="field"><a href="Widget.MainContent.output_toolbar.html">output_toolbar</a></li>
         </ul>
       </div>
       <div class="site_content">
@@ -37,7 +47,18 @@
         <h2 class="main_title">Object Hierarchy:</h2>
         <img class="main_diagram" usemap="#Widget.MainContent" alt="Object hierarchy for MainContent" src="img/Widget.MainContent.svg"/>
         <h2 class="main_title">Description:</h2>
-        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">MainContent</span></b> : <span class="main_type"><span class="class">Bin</span></span>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">MainContent</span></b> : <span class="main_type"><span class="class">Box</span></span>
+        </div>
+        <div class="description">
+          <p>The main content of the app window.</p>
+          <p>It contains two panes; Input Pane at the start and Output Pane at the end. Both consists of a 
+            <a href="Widget.Toolbar.html" class="class">Widget.Toolbar</a> and a <a href="Widget.TextArea.html" class="class">Widget.TextArea</a>.</p>
+          <p>Input Pane aims to receive user input to convert, so text in its <a href="Widget.TextArea.html" class="class">Widget.TextArea</a> is 
+            editable and also its <a href="Widget.Toolbar.html" class="class">Widget.Toolbar</a> contains a button to clear text in its 
+            <a href="Widget.TextArea.html" class="class">Widget.TextArea</a>.<br/> On the other hand, Output Pane aims to print conversion result, so 
+            text in its <a href="Widget.TextArea.html" class="class">Widget.TextArea</a> is not editable.</p>
+          <p>
+            <img src="img/example_main_content.png" alt="example image of MainContext"/></p>
         </div><br/>
         <div class="namespace_note"><b>Namespace:</b> <a href="Widget.html">Widget</a>
         </div>
@@ -48,40 +69,105 @@
         <ul class="navi_inline">
           <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="Widget.MainContent.MainContent.html" class="creation_method">MainContent</a></b> ()
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Widget.MainContent</span>.</span>
             </div></li>
         </ul>
         <h3 class="main_title">Methods:</h3>
         <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Widget.MainContent.do_convert.html" class="method">do_convert</a></b> (<span class="main_type"><a href="Define.CaseType.html" class="enum">CaseType</a></span> input_case, <span class="main_basic_type"><span class="class">string</span></span> input_text, <span class="main_type"><a href="Define.CaseType.html" class="enum">CaseType</a></span> output_case)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Converts case of a piece of text.</span>
+            </div></li>
           <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Widget.MainContent.swap.html" class="method">swap</a></b> ()
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">Swaps values of 
+                <a href="Widget.Toolbar.case_type.html" class="property">Widget.Toolbar.case_type</a> and 
+                <a href="Widget.TextArea.text.html" class="property">Widget.TextArea.text</a> between input and output.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Signals:</h3>
+        <ul class="navi_inline">
+          <li class="signal"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">signal</span> <span class="main_keyword">void</span> <b><a href="Widget.MainContent.text_copied.html" class="signal">text_copied</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Emitted when text in a <a href="Widget.TextArea.html" class="class">
+                  Widget.TextArea</a> that <code>this</code> contains is copied to the clipboard.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Fields:</h3>
+        <ul class="navi_inline">
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><span class="class">Converter</span></span> <b><a href="Widget.MainContent.converter.html" class="field">converter</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A library class that handles conversion of text.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="struct">ulong</span></span> <b><a href="Widget.MainContent.input_case_handler.html" class="field">input_case_handler</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">ID of the lambda that handles change of case type of input text.
+              </span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="struct">ulong</span></span> <b><a href="Widget.MainContent.input_text_handler.html" class="field">input_text_handler</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">ID of the lambda that handles change of input text.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><a href="Widget.TextArea.html" class="class">TextArea</a></span> <b><a href="Widget.MainContent.input_textarea.html" class="field">input_textarea</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The textarea for input text.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><a href="Widget.Toolbar.html" class="class">Toolbar</a></span> <b><a href="Widget.MainContent.input_toolbar.html" class="field">input_toolbar</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The toolbar for input text.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="struct">ulong</span></span> <b><a href="Widget.MainContent.output_case_handler.html" class="field">output_case_handler</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">ID of the lambda that handles change of case type of output text.
+              </span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><a href="Widget.TextArea.html" class="class">TextArea</a></span> <b><a href="Widget.MainContent.output_textarea.html" class="field">output_textarea</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The textarea for output text.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><a href="Widget.Toolbar.html" class="class">Toolbar</a></span> <b><a href="Widget.MainContent.output_toolbar.html" class="field">output_toolbar</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The toolbar for output text.</span>
             </div></li>
         </ul>
         <h3 class="main_title">Inherited Members:</h3>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-25')">All known members inherited from class Adw.Bin</div>
-          <div class="content" id="box-content-25">
+          <div class="headline" onclick="toggle_box (this, 'box-content-30')">All known members inherited from class Gtk.Box</div>
+          <div class="content" id="box-content-30">
             <div class="column">
               <ul class="navi_inline">
-                <li class="property">child</li>
+                <li class="method">append</li>
+                <li class="property">baseline_child</li>
+                <li class="property">baseline_position</li>
+                <li class="method">get_baseline_child</li>
+                <li class="method">get_baseline_position</li>
+                <li class="method">get_homogeneous</li>
               </ul>
             </div>
             <div class="column">
               <ul class="navi_inline">
-                <li class="method">get_child</li>
+                <li class="method">get_spacing</li>
+                <li class="property">homogeneous</li>
+                <li class="method">insert_child_after</li>
+                <li class="method">prepend</li>
+                <li class="method">remove</li>
+                <li class="method">reorder_child_after</li>
               </ul>
             </div>
             <div class="column">
               <ul class="navi_inline">
-                <li class="method">set_child</li>
+                <li class="method">set_baseline_child</li>
+                <li class="method">set_baseline_position</li>
+                <li class="method">set_homogeneous</li>
+                <li class="method">set_spacing</li>
+                <li class="property">spacing</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-26')">All known members inherited from class Gtk.Widget</div>
-          <div class="content" id="box-content-26">
+          <div class="headline" onclick="toggle_box (this, 'box-content-31')">All known members inherited from class Gtk.Widget</div>
+          <div class="content" id="box-content-31">
             <div class="column">
               <ul class="navi_inline">
                 <li class="method">action_set_enabled</li>
@@ -324,8 +410,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-27')">All known members inherited from class GLib.Object</div>
-          <div class="content" id="box-content-27">
+          <div class="headline" onclick="toggle_box (this, 'box-content-32')">All known members inherited from class GLib.Object</div>
+          <div class="content" id="box-content-32">
             <div class="column">
               <ul class="navi_inline">
                 <li class="method">@get</li>
@@ -391,8 +477,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-28')">All known members inherited from interface Gtk.Accessible</div>
-          <div class="content" id="box-content-28">
+          <div class="headline" onclick="toggle_box (this, 'box-content-33')">All known members inherited from interface Gtk.Accessible</div>
+          <div class="content" id="box-content-33">
             <div class="column">
               <ul class="navi_inline">
                 <li class="abstract_property">accessible_role</li>
@@ -428,8 +514,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-29')">All known members inherited from interface Gtk.Buildable</div>
-          <div class="content" id="box-content-29">
+          <div class="headline" onclick="toggle_box (this, 'box-content-34')">All known members inherited from interface Gtk.Buildable</div>
+          <div class="content" id="box-content-34">
             <div class="column">
               <ul class="navi_inline">
                 <li class="abstract_method">add_child</li>
@@ -450,6 +536,26 @@
                 <li class="abstract_method">parser_finished</li>
                 <li class="abstract_method">set_buildable_property</li>
                 <li class="abstract_method">set_id</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="headline" onclick="toggle_box (this, 'box-content-35')">All known members inherited from interface Gtk.Orientable</div>
+          <div class="content" id="box-content-35">
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="method">get_orientation</li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="abstract_property">orientation</li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="method">set_orientation</li>
               </ul>
             </div>
           </div>

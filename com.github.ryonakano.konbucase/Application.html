@@ -23,11 +23,18 @@
         </ul>
         <hr class="navi_hr"/>
         <ul class="navi_main">
+          <li class="constant"><a href="Application.ACTION_ENTRIES.html">ACTION_ENTRIES</a></li>
           <li class="property"><a href="Application.settings.html">settings</a></li>
           <li class="static_method"><a href="Application.main.html">main</a></li>
           <li class="creation_method"><a href="Application.Application.html">Application</a></li>
           <li class="virtual_method"><a href="Application.activate.html">activate</a></li>
+          <li class="method"><a href="Application.on_about_activate.html">on_about_activate</a></li>
+          <li class="method"><a href="Application.on_quit_activate.html">on_quit_activate</a></li>
+          <li class="method"><a href="Application.setup_style.html">setup_style</a></li>
           <li class="virtual_method"><a href="Application.startup.html">startup</a></li>
+          <li class="field"><a href="Application._settings.html">_settings</a></li>
+          <li class="field"><a href="Application.settings_migration_table.html">settings_migration_table</a></li>
+          <li class="field"><a href="Application.window.html">window</a></li>
         </ul>
       </div>
       <div class="site_content">
@@ -37,15 +44,25 @@
         <img class="main_diagram" usemap="#Application" alt="Object hierarchy for Application" src="img/Application.svg"/>
         <h2 class="main_title">Description:</h2>
         <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Application</span></b> : <span class="main_type"><span class="class">Application</span></span>
+        </div>
+        <div class="description">
+          <p>The foundation class to manage the app and its window.</p>
         </div><br/>
         <div class="package_note"><b>Package:</b> <a href="index.htm">com.github.ryonakano.konbucase</a>
         </div>
         <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Constants:</h3>
+        <ul class="navi_inline">
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">const</span> <span class="main_type"><span class="struct">ActionEntry</span></span>[] <b><a href="Application.ACTION_ENTRIES.html" class="constant">ACTION_ENTRIES</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Action names and callbacks that belong to <code>this</code>.</span>
+            </div></li>
+        </ul>
         <h3 class="main_title">Properties:</h3>
         <ul class="navi_inline">
-          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Settings</span></span> <b><a href="Application.settings.html" class="property">settings</a></b> { <span class="main_keyword">get</span>; }
+          <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="class">Settings</span></span> <b><a href="Application.settings.html" class="property">settings</a></b> { <span class="main_keyword">get</span>; <span class="main_keyword">private</span> <span class="main_keyword">set</span>; }
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">The instance of the app preferences.</span>
             </div></li>
         </ul>
         <h3 class="main_title">Static methods:</h3>
@@ -59,18 +76,46 @@
         <ul class="navi_inline">
           <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="Application.Application.html" class="creation_method">Application</a></b> ()
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="creation_method">Application</span>.</span>
             </div></li>
         </ul>
         <h3 class="main_title">Methods:</h3>
         <ul class="navi_inline">
           <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">protected</span> <span class="main_keyword">override</span> <span class="main_keyword">void</span> <b><a href="Application.activate.html" class="virtual_method">activate</a></b> ()
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">Shows <a href="MainWindow.html" class="class">MainWindow</a>.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="Application.on_about_activate.html" class="method">on_about_activate</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The callback for "app.about" action.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="Application.on_quit_activate.html" class="method">on_quit_activate</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The callback for "app.quit" action.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="Application.setup_style.html" class="method">setup_style</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Makes it possible to change app style with <code>app.color-scheme
+                </code> action and remembers its preferences to <a href="Application.settings.html" class="property">settings</a>.</span>
             </div></li>
           <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">protected</span> <span class="main_keyword">override</span> <span class="main_keyword">void</span> <b><a href="Application.startup.html" class="virtual_method">startup</a></b> ()
             </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets up localization, app style, and accel keys.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Fields:</h3>
+        <ul class="navi_inline">
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">Settings</span></span> <b><a href="Application._settings.html" class="field">_settings</a></b>
+            </span>
             <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">static</span> <span class="main_type"><a href="Util.SettingsMigration.SettingsMigrationEntry.html" class="struct">SettingsMigrationEntry</a></span>[] <b><a href="Application.settings_migration_table.html" class="field">settings_migration_table</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Table of data structures used for migration.</span>
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><a href="MainWindow.html" class="class">MainWindow</a></span> <b><a href="Application.window.html" class="field">window</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The instance of the app window.</span>
             </div></li>
         </ul>
         <h3 class="main_title">Inherited Members:</h3>

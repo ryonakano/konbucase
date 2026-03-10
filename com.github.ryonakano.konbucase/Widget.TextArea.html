@@ -31,6 +31,9 @@
           <li class="property"><a href="Widget.TextArea.text.html">text</a></li>
           <li class="creation_method"><a href="Widget.TextArea.TextArea.html">TextArea</a></li>
           <li class="method"><a href="Widget.TextArea.grab_focus.html">grab_focus</a></li>
+          <li class="field"><a href="Widget.TextArea._editable.html">_editable</a></li>
+          <li class="field"><a href="Widget.TextArea._text.html">_text</a></li>
+          <li class="field"><a href="Widget.TextArea.source_view.html">source_view</a></li>
         </ul>
       </div>
       <div class="site_content">
@@ -40,6 +43,11 @@
         <img class="main_diagram" usemap="#Widget.TextArea" alt="Object hierarchy for TextArea" src="img/Widget.TextArea.svg"/>
         <h2 class="main_title">Description:</h2>
         <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">TextArea</span></b> : <span class="main_type"><span class="class">Bin</span></span>
+        </div>
+        <div class="description">
+          <p>A widget that wraps a <span class="class">GtkSource.View</span>.</p>
+          <p>
+            <img src="img/example_text_area.png" alt="example image of TextArea"/></p>
         </div><br/>
         <div class="namespace_note"><b>Namespace:</b> <a href="Widget.html">Widget</a>
         </div>
@@ -50,31 +58,50 @@
         <ul class="navi_inline">
           <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Widget.TextArea.editable.html" class="property">editable</a></b> { <span class="main_keyword">get</span>; <span class="main_keyword">construct</span>; }
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">Whether it's possible to modify text in the <span class="class">
+                  GtkSource.View</span> that <code>this</code> wraps.</span>
             </div></li>
           <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Widget.TextArea.text.html" class="property">text</a></b> { <span class="main_keyword">get</span>; <span class="main_keyword">set</span>; }
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">Text in the <span class="class">GtkSource.View</span> that <code>this
+                </code> wraps.</span>
             </div></li>
         </ul>
         <h3 class="main_title">Creation methods:</h3>
         <ul class="navi_inline">
           <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="Widget.TextArea.TextArea.html" class="creation_method">TextArea</a></b> (<span class="main_basic_type"><span class="struct">bool</span></span> editable)
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="class">Widget.TextArea</span>.</span>
             </div></li>
         </ul>
         <h3 class="main_title">Methods:</h3>
         <ul class="navi_inline">
           <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Widget.TextArea.grab_focus.html" class="method">grab_focus</a></b> ()
             </span>
+            <div class="leaf_brief_description"><span class="brief_description">Causes the <span class="class">GtkSource.View</span> that <code>this
+                </code> wraps to have the keyboard focus for the app window.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Fields:</h3>
+        <ul class="navi_inline">
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Widget.TextArea._editable.html" class="field">_editable</a></b>
+            </span>
             <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Widget.TextArea._text.html" class="field">_text</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><span class="class">View</span></span> <b><a href="Widget.TextArea.source_view.html" class="field">source_view</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The <span class="class">GtkSource.View</span> that <code>this</code> 
+                wraps.</span>
             </div></li>
         </ul>
         <h3 class="main_title">Inherited Members:</h3>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-30')">All known members inherited from class Adw.Bin</div>
-          <div class="content" id="box-content-30">
+          <div class="headline" onclick="toggle_box (this, 'box-content-36')">All known members inherited from class Adw.Bin</div>
+          <div class="content" id="box-content-36">
             <div class="column">
               <ul class="navi_inline">
                 <li class="property">child</li>
@@ -93,8 +120,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-31')">All known members inherited from class Gtk.Widget</div>
-          <div class="content" id="box-content-31">
+          <div class="headline" onclick="toggle_box (this, 'box-content-37')">All known members inherited from class Gtk.Widget</div>
+          <div class="content" id="box-content-37">
             <div class="column">
               <ul class="navi_inline">
                 <li class="method">action_set_enabled</li>
@@ -337,8 +364,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-32')">All known members inherited from class GLib.Object</div>
-          <div class="content" id="box-content-32">
+          <div class="headline" onclick="toggle_box (this, 'box-content-38')">All known members inherited from class GLib.Object</div>
+          <div class="content" id="box-content-38">
             <div class="column">
               <ul class="navi_inline">
                 <li class="method">@get</li>
@@ -404,8 +431,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-33')">All known members inherited from interface Gtk.Accessible</div>
-          <div class="content" id="box-content-33">
+          <div class="headline" onclick="toggle_box (this, 'box-content-39')">All known members inherited from interface Gtk.Accessible</div>
+          <div class="content" id="box-content-39">
             <div class="column">
               <ul class="navi_inline">
                 <li class="abstract_property">accessible_role</li>
@@ -441,8 +468,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-34')">All known members inherited from interface Gtk.Buildable</div>
-          <div class="content" id="box-content-34">
+          <div class="headline" onclick="toggle_box (this, 'box-content-40')">All known members inherited from interface Gtk.Buildable</div>
+          <div class="content" id="box-content-40">
             <div class="column">
               <ul class="navi_inline">
                 <li class="abstract_method">add_child</li>

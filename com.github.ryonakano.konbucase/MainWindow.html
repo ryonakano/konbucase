@@ -24,6 +24,8 @@
         <hr class="navi_hr"/>
         <ul class="navi_main">
           <li class="creation_method"><a href="MainWindow.MainWindow.html">MainWindow</a></li>
+          <li class="method"><a href="MainWindow.show_toast.html">show_toast</a></li>
+          <li class="field"><a href="MainWindow.overlay.html">overlay</a></li>
         </ul>
       </div>
       <div class="site_content">
@@ -33,6 +35,9 @@
         <img class="main_diagram" usemap="#MainWindow" alt="Object hierarchy for MainWindow" src="img/MainWindow.svg"/>
         <h2 class="main_title">Description:</h2>
         <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">MainWindow</span></b> : <span class="main_type"><span class="class">ApplicationWindow</span></span>
+        </div>
+        <div class="description">
+          <p>The app window.</p>
         </div><br/>
         <div class="package_note"><b>Package:</b> <a href="index.htm">com.github.ryonakano.konbucase</a>
         </div>
@@ -41,7 +46,21 @@
         <ul class="navi_inline">
           <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="MainWindow.MainWindow.html" class="creation_method">MainWindow</a></b> (<span class="main_type"><a href="Application.html" class="class">Application</a></span> app)
             </span>
-            <div class="leaf_brief_description">
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new <span class="creation_method">MainWindow</span>.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_keyword">void</span> <b><a href="MainWindow.show_toast.html" class="method">show_toast</a></b> (<span class="main_basic_type"><span class="class">string</span></span> title)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Presents a toast, an in-app notification.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Fields:</h3>
+        <ul class="navi_inline">
+          <li class="field"><span class="leaf_code_definition"><span class="main_keyword">private</span> <span class="main_type"><span class="class">ToastOverlay</span></span> <b><a href="MainWindow.overlay.html" class="field">overlay</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A widget showing in-app notifications above its content.</span>
             </div></li>
         </ul>
         <h3 class="main_title">Inherited Members:</h3>

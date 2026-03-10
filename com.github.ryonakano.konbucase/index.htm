@@ -24,6 +24,9 @@
           <li class="namespace"><a href="Define.ColorScheme.html">Define.ColorScheme</a></li>
           <li class="namespace"><a href="Model.html">Model</a></li>
           <li class="namespace"><a href="Util.html">Util</a></li>
+          <li class="namespace"><a href="Util.Convert.html">Util.Convert</a></li>
+          <li class="namespace"><a href="Util.SettingsMigration.html">Util.SettingsMigration</a></li>
+          <li class="namespace"><a href="View.html">View</a></li>
           <li class="namespace"><a href="Widget.html">Widget</a></li>
           <li class="class"><a href="Application.html">Application</a></li>
           <li class="class"><a href="MainWindow.html">MainWindow</a></li>
@@ -40,6 +43,10 @@
           <h3 class="main_title">Constants:</h3>
           <ul class="navi_inline">
             <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Config.APP_ID.html" class="constant">APP_ID</a></b>
+              </span>
+              <div class="leaf_brief_description">
+              </div></li>
+            <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Config.APP_NAME.html" class="constant">APP_NAME</a></b>
               </span>
               <div class="leaf_brief_description">
               </div></li>
@@ -63,14 +70,8 @@
           <li class="namespace"><a href="Define.html">Define</a></li>
           <h3 class="main_title">Enums:</h3>
           <ul class="navi_inline">
-            <li class="enum"><a href="Define.CaseType.html">CaseType</a> - <span class="brief_description">Type of the case of the text.</span></li>
-          </ul>
-          <h3 class="main_title">Constants:</h3>
-          <ul class="navi_inline">
-            <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Define.APP_NAME.html" class="constant">APP_NAME</a></b>
-              </span>
-              <div class="leaf_brief_description"><span class="brief_description">The name of the application.</span>
-              </div></li>
+            <li class="enum"><a href="Define.CaseType.html">CaseType</a> - <span class="brief_description">Type of letter cases in a piece of text.
+              </span></li>
           </ul>
           <li class="namespace"><a href="Define.ColorScheme.html">ColorScheme</a> - <span class="brief_description">String representation of 
               Adw.ColorScheme.</span></li>
@@ -92,7 +93,8 @@
           <li class="namespace"><a href="Model.html">Model</a></li>
           <h3 class="main_title">Classes:</h3>
           <ul class="navi_inline">
-            <li class="class"><a href="Model.CaseListItemModel.html">CaseListItemModel</a></li>
+            <li class="class"><a href="Model.CaseListItemModel.html">CaseListItemModel</a> - <span class="brief_description">A list model that has 
+                information about a letter case.</span></li>
           </ul>
           <li class="namespace"><a href="Util.html">Util</a></li>
           <h3 class="main_title">Methods:</h3>
@@ -101,36 +103,79 @@
               </span>
               <div class="leaf_brief_description"><span class="brief_description">Whether the app is running on Pantheon desktop environment.</span>
               </div></li>
-            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="enum">ColorScheme</span></span> <b><a href="Util.to_adw_scheme.html" class="method">to_adw_scheme</a></b> (<span class="main_basic_type"><span class="class">string</span></span> str_scheme)
+          </ul>
+          <li class="namespace"><a href="Util.Convert.html">Convert</a> - <span class="brief_description">Converts data types.</span></li>
+          <h3 class="main_title">Methods:</h3>
+          <ul class="navi_inline">
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="enum">ColorScheme</span></span> <b><a href="Util.Convert.to_adw_scheme.html" class="method">to_adw_scheme</a></b> (<span class="main_basic_type"><span class="class">string</span></span> str_scheme)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">Converts string representation of a color scheme to 
+                  <span class="enum">Adw.ColorScheme</span>.</span>
               </div></li>
-            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="Define.CaseType.html" class="enum">CaseType</a></span> <b><a href="Util.to_case_type.html" class="method">to_case_type</a></b> (<span class="main_type"><span class="enum">Case</span></span> chcase_case)
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="Define.CaseType.html" class="enum">CaseType</a></span> <b><a href="Util.Convert.to_case_type.html" class="method">to_case_type</a></b> (<span class="main_type"><span class="enum">Case</span></span> chcase_case)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">Converts <span class="enum">ChCase.Case</span> to 
+                  <a href="Define.CaseType.html" class="enum">Define.CaseType</a>.</span>
               </div></li>
-            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="enum">Case</span></span> <b><a href="Util.to_chcase_case.html" class="method">to_chcase_case</a></b> (<span class="main_type"><a href="Define.CaseType.html" class="enum">CaseType</a></span> case_type)
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="enum">Case</span></span> <b><a href="Util.Convert.to_chcase_case.html" class="method">to_chcase_case</a></b> (<span class="main_type"><a href="Define.CaseType.html" class="enum">CaseType</a></span> case_type)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">Converts <a href="Define.CaseType.html" class="enum">Define.CaseType
+                  </a> to <span class="enum">ChCase.Case</span>.</span>
               </div></li>
-            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Util.to_str_scheme.html" class="method">to_str_scheme</a></b> (<span class="main_type"><span class="enum">ColorScheme</span></span> adw_scheme)
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Util.Convert.to_str_scheme.html" class="method">to_str_scheme</a></b> (<span class="main_type"><span class="enum">ColorScheme</span></span> adw_scheme)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">Converts <span class="enum">Adw.ColorScheme</span> to string 
+                  representation of a color scheme.</span>
               </div></li>
+          </ul>
+          <li class="namespace"><a href="Util.SettingsMigration.html">SettingsMigration</a> - <span class="brief_description">Handles backward 
+              compatibility of app preferences.</span></li>
+          <h3 class="main_title">Structs:</h3>
+          <ul class="navi_inline">
+            <li class="struct"><a href="Util.SettingsMigration.SettingsMigrationEntry.html">SettingsMigrationEntry</a> - 
+              <span class="brief_description">Data structure to migrate an app preference saved in a key of <span class="class">GLib.Settings</span>.
+              </span></li>
+          </ul>
+          <h3 class="main_title">Delegates:</h3>
+          <ul class="navi_inline">
+            <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Util.SettingsMigration.SettingsMigrationFunc.html" class="delegate">SettingsMigrationFunc</a></b> (<span class="main_type"><span class="class">Settings</span></span> settings, <span class="main_type"><span class="class">Variant</span></span> old_val)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Migrates an app preference in an old key in <code>settings</code>.
+                </span>
+              </div></li>
+          </ul>
+          <h3 class="main_title">Methods:</h3>
+          <ul class="navi_inline">
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Util.SettingsMigration.migrate.html" class="method">migrate</a></b> (<span class="main_type"><span class="class">Settings</span></span> settings, <span class="main_type"><a href="Util.SettingsMigration.SettingsMigrationEntry.html" class="struct">SettingsMigrationEntry</a></span>[] migration_table)
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Migrates app preferences of 
+                  <a href="Util.SettingsMigration.migrate.settings.html">settings</a> from old (deprecated) keys to new ones.</span>
+              </div></li>
+          </ul>
+          <li class="namespace"><a href="View.html">View</a></li>
+          <h3 class="main_title">Classes:</h3>
+          <ul class="navi_inline">
+            <li class="class"><a href="View.MainView.html">MainView</a> - <span class="brief_description">The main content of the app window.</span>
+            </li>
           </ul>
           <li class="namespace"><a href="Widget.html">Widget</a></li>
           <h3 class="main_title">Classes:</h3>
           <ul class="navi_inline">
-            <li class="class"><a href="Widget.DropDownRow.html">DropDownRow</a></li>
-            <li class="class"><a href="Widget.MainContent.html">MainContent</a></li>
-            <li class="class"><a href="Widget.TextArea.html">TextArea</a></li>
-            <li class="class"><a href="Widget.Toolbar.html">Toolbar</a></li>
+            <li class="class"><a href="Widget.DropDownButtonContent.html">DropDownButtonContent</a> - <span class="brief_description">The item in the 
+                button of a dropdown.</span></li>
+            <li class="class"><a href="Widget.DropDownRow.html">DropDownRow</a> - <span class="brief_description">A row of a dropdown with a title and
+                description text.</span></li>
+            <li class="class"><a href="Widget.TextArea.html">TextArea</a> - <span class="brief_description">A widget that wraps a <span class="class">
+                  GtkSource.View</span>.</span></li>
+            <li class="class"><a href="Widget.Toolbar.html">Toolbar</a> - <span class="brief_description">A widget that contains controls for text 
+                input/output.</span></li>
           </ul>
         </ul>
         <h3 class="main_title">Classes:</h3>
         <ul class="navi_inline">
-          <li class="class"><a href="Application.html">Application</a></li>
-          <li class="class"><a href="MainWindow.html">MainWindow</a></li>
+          <li class="class"><a href="Application.html">Application</a> - <span class="brief_description">The foundation class to manage the app and 
+              its window.</span></li>
+          <li class="class"><a href="MainWindow.html">MainWindow</a> - <span class="brief_description">The app window.</span></li>
         </ul>
       </div>
     </div><br/>
