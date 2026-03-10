@@ -35,7 +35,7 @@ namespace Util.SettingsMigration {
     }
 
     /**
-     * Migrates app preferences of {@link settings} from old (deprecated) keys to new ones.
+     * Migrates app preferences of ``settings`` from old (deprecated) keys to new ones.
      *
      * @param settings          the target {@link GLib.Settings} for migration
      * @param migration_table   table of data structures used for migration
