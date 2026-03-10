@@ -13,6 +13,8 @@ config_file = configure_file(
 
 sources = files(
   'Model/CaseListItemModel.vala',
+  'Util/Convert.vala',
+  'Util/SettingsMigration.vala',
   'View/MainView.vala',
   'Widget/DropDownButtonContent.vala',
   'Widget/DropDownRow.vala',
@@ -21,8 +23,6 @@ sources = files(
   'Application.vala',
   'Define.vala',
   'MainWindow.vala',
-  'Util/SettingsMigration.vala',
-  'Util/Convert.vala',
   'Util.vala',
 )
 
