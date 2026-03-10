@@ -61,17 +61,17 @@ public class MainWindow : Adw.ApplicationWindow {
         header.pack_start (swap_button);
         header.pack_end (menu_button);
 
-        var main_content = new Widget.MainContent ();
+        var main_view = new View.MainView ();
 
         // Responsive design; change orientation to vertical on smaller window width
         var content_breakpoint = new Adw.Breakpoint (
             new Adw.BreakpointCondition.length (Adw.BreakpointConditionLengthType.MAX_WIDTH, 750, Adw.LengthUnit.SP)
         );
-        content_breakpoint.add_setter (main_content, "orientation", Gtk.Orientation.VERTICAL);
+        content_breakpoint.add_setter (main_view, "orientation", Gtk.Orientation.VERTICAL);
         add_breakpoint (content_breakpoint);
 
         overlay = new Adw.ToastOverlay () {
-            child = main_content,
+            child = main_view,
         };
 
         var toolbar_view = new Adw.ToolbarView () {
@@ -85,10 +85,10 @@ public class MainWindow : Adw.ApplicationWindow {
         title = Config.APP_NAME;
 
         swap_button.clicked.connect (() => {
-            main_content.swap ();
+            main_view.swap ();
         });
 
-        main_content.text_copied.connect (() => {
+        main_view.text_copied.connect (() => {
             show_toast (N_("Text copied!"));
         });
     }

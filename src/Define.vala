@@ -9,8 +9,8 @@ namespace Define {
      *
      * Note: Only defines necessary strings for the app.
      *
-     * @see Util.to_str_scheme
-     * @see Util.to_adw_scheme
+     * @see Util.Convert.to_str_scheme
+     * @see Util.Convert.to_adw_scheme
      */
     namespace ColorScheme {
         /**

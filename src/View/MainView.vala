@@ -14,9 +14,9 @@
  * On the other hand, Output Pane aims to print conversion result, so text in its {@link Widget.TextArea}
  * is not editable.
  *
- * {{../docs/images/Widget/MainContent/example_main_content.png|example image of MainContext}}
+ * {{../docs/images/View/MainView/example_main_view.png|example image of MainView}}
  */
-public class Widget.MainContent : Gtk.Box {
+public class View.MainView : Gtk.Box {
     /**
      * Emitted when text in a {@link Widget.TextArea} that ``this`` contains is copied to the clipboard.
      */
@@ -60,11 +60,11 @@ public class Widget.MainContent : Gtk.Box {
     private ChCase.Converter converter;
 
     /**
-     * Creates a new {@link Widget.MainContent}.
+     * Creates a new {@link View.MainView}.
      *
-     * @return  a new {@link Widget.MainContent}
+     * @return  a new {@link View.MainView}
      */
-    public MainContent () {
+    public MainView () {
     }
 
     construct {
