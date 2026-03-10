@@ -73,7 +73,6 @@
           <li>Add quick swap button to swap case and text</li>
           <li>Support mobile devices</li>
           <li>Keep the same size between panes</li>
-          <li>Flatpak: Update GNOME runtime to 49</li>
           <li>Update translations</li>
         </ul>
       </description>
