@@ -1,6 +1,6 @@
 id: com.github.ryonakano.konbucase.Devel
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 command: com.github.ryonakano.konbucase.Devel
 finish-args:
