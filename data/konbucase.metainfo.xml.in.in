@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2020-2025 Ryo Nakano -->
+<!-- Copyright 2020-2026 Ryo Nakano -->
 <component type="desktop-application">
   <id>@APP_ID@</id>
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
@@ -7,7 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <name translate="no">KonbuCase</name>
+  <name translate="no">@APP_NAME@</name>
   <summary>Convert case in your text</summary>
   <description>
     <p>
@@ -16,6 +16,7 @@
     <p>Features include:</p>
     <ul>
       <li>Click "Copy to Clipboard" button to copy the all texts in the text view without selecting them</li>
+      <li>Click "Quick Swap" button to swap case and text of input and output</li>
       <li>Convert your text between camelCase, PascalCase, Sentence case, snake_case, kebab-case, and space-separated</li>
     </ul>
   </description>
@@ -23,12 +24,12 @@
   <screenshots>
     <screenshot type="default" environment="@DE@">
       <caption>App window in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/@VERSION@/data/screenshots/@DE@/screenshot-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/@APP_REVISION@/data/screenshots/@DE@/screenshot-light.png</image>
     </screenshot>
 
     <screenshot environment="@DE@:dark">
       <caption>App window in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/@VERSION@/data/screenshots/@DE@/screenshot-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/@APP_REVISION@/data/screenshots/@DE@/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -42,7 +43,15 @@
   <supports>
     <control>pointing</control>
     <control>keyboard</control>
+    <control>touch</control>
   </supports>
+
+  <requires>
+    <!-- taken from MainWindow.width_request -->
+    <display_length side="shortest" compare="ge">360</display_length>
+    <!-- taken from MainWindow.height_request -->
+    <display_length side="longest" compare="ge">400</display_length>
+  </requires>
 
   <url type="homepage">https://github.com/ryonakano/konbucase</url>
   <url type="bugtracker">https://github.com/ryonakano/konbucase/issues</url>
@@ -56,7 +65,24 @@
     <name translate="no">Ryo Nakano</name>
   </developer>
 
+  <!--
+    We intentionally don't support translation for the descriptions in release notes
+    because only a few past release notes would be often shown in the app store
+    even if translators translated all of them, which is not worthy.
+  -->
   <releases>
+    <release version="4.5.0" date="2026-03-10" urgency="medium">
+      <description translate="no">
+        <ul>
+          <li>Add clear button</li>
+          <li>Add quick swap button to swap case and text</li>
+          <li>Support mobile devices</li>
+          <li>Keep the same size between panes</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="4.4.0" date="2025-04-30" urgency="medium">
       <description translate="no">
         <ul>

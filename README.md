@@ -8,13 +8,14 @@ KonbuCase is a small text tool app that allows you convert case in your text.
 Features include:
 
 * Click "Copy to Clipboard" button to copy the all texts in the text view without selecting them
+* Click "Quick Swap" button to swap case and text of input and output
 * Convert your text between camelCase, PascalCase, Sentence case, snake_case, kebab-case, and space-separated
 
 ## Installation
 ### From Flathub or AppCenter (Recommended)
 You can install KonbuCase from Flathub:
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/com.github.ryonakano.konbucase)
+[![Get it on Flathub](https://flathub.org/api/badge?locale=en)](https://flathub.org/apps/com.github.ryonakano.konbucase)
 
 You should install KonbuCase from AppCenter if you're on elementary OS. This build is optimized for elementary OS:
 
@@ -45,7 +46,7 @@ flatpak run com.github.ryonakano.konbucase.Devel
 You'll need the following dependencies:
 
 * blueprint-compiler
-* [libchcase](https://github.com/ryonakano/chcase)
+* [libchcase](https://github.com/ryonakano/chcase) (>= 2.4.0)
 * libadwaita-1-dev (>= 1.8)
 * libglib2.0-dev (>= 2.74)
 * libgranite-7-dev (>= 7.2.0, required only when you build with `granite` feature enabled)

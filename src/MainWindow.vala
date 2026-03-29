@@ -1,15 +1,24 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2020-2025 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+/**
+ * The app window.
+ */
 public class MainWindow : Adw.ApplicationWindow {
+    /**
+     * A widget showing in-app notifications above its content.
+     */
     private Adw.ToastOverlay overlay;
-    private View.Pane.SourcePane source_pane;
-    private View.Pane.ResultPane result_pane;
 
-    private ChCase.Converter converter;
-
+    /**
+     * Creates a new {@link MainWindow}.
+     *
+     * @param app   a {@link Application} to be associated with ``this``
+     *
+     * @return      a new {@link MainWindow}
+     */
     public MainWindow (Application app) {
         Object (
             application: app
@@ -33,104 +42,64 @@ public class MainWindow : Adw.ApplicationWindow {
         // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
         if (!Util.is_on_pantheon ()) {
             ///TRANSLATORS: %s will be replaced by the app name
-            main_menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
+            main_menu.append (_("_About %s").printf (Config.APP_NAME), "app.about");
         }
+
+        var swap_button = new Gtk.Button.from_icon_name ("media-playlist-repeat") {
+            ///TRANSLATORS: Tooltip text of a button to swap case and text of input and output
+            tooltip_text = _("Quick Swap"),
+        };
 
         var menu_button = new Gtk.MenuButton () {
             tooltip_text = _("Main Menu"),
             icon_name = "open-menu",
             menu_model = main_menu,
-            primary = true
+            primary = true,
         };
 
         var header = new Adw.HeaderBar ();
+        header.pack_start (swap_button);
         header.pack_end (menu_button);
 
-        source_pane = new View.Pane.SourcePane ();
+        var main_view = new View.MainView ();
 
-        var separator = new Gtk.Separator (Gtk.Orientation.VERTICAL) {
-            vexpand = true
-        };
-
-        result_pane = new View.Pane.ResultPane ();
-
-        var content_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        content_box.append (source_pane);
-        content_box.append (separator);
-        content_box.append (result_pane);
+        // Responsive design; change orientation to vertical on smaller window width
+        var content_breakpoint = new Adw.Breakpoint (
+            new Adw.BreakpointCondition.length (Adw.BreakpointConditionLengthType.MAX_WIDTH, 750, Adw.LengthUnit.SP)
+        );
+        content_breakpoint.add_setter (main_view, "orientation", Gtk.Orientation.VERTICAL);
+        add_breakpoint (content_breakpoint);
 
         overlay = new Adw.ToastOverlay () {
-            child = content_box
+            child = main_view,
         };
 
-        var toolbar_view = new Adw.ToolbarView ();
+        var toolbar_view = new Adw.ToolbarView () {
+            content = overlay,
+        };
         toolbar_view.add_top_bar (header);
-        toolbar_view.set_content (overlay);
 
         content = toolbar_view;
-        width_request = 700;
-        height_request = 500;
-        title = Define.APP_NAME;
+        width_request = 360;
+        height_request = 400;
+        title = Config.APP_NAME;
 
-        converter = new ChCase.Converter ();
-
-        // The action users most frequently take is to input the source text.
-        // So, forcus to the source view by default.
-        source_pane.focus_source_view ();
-
-        // Perform conversion when:
-        //
-        //  * case type of the source text is changed
-        //  * case type of the result text is changed
-        //  * the source text is changed
-        //  * the window is initialized
-        source_pane.dropdown_changed.connect (() => {
-            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
+        swap_button.clicked.connect (() => {
+            main_view.swap ();
         });
-        result_pane.dropdown_changed.connect (() => {
-            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
-        });
-        source_pane.notify["text"].connect (() => {
-            result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
-        });
-        result_pane.text = do_convert (source_pane.case_type, source_pane.text, result_pane.case_type);
 
-        source_pane.copy_button_clicked.connect (() => {
-            get_clipboard ().set_text (source_pane.text);
-            toast_copied ();
+        main_view.text_copied.connect (() => {
+            show_toast (N_("Text copied!"));
         });
-        result_pane.copy_button_clicked.connect (() => {
-            get_clipboard ().set_text (result_pane.text);
-            toast_copied ();
-        });
-    }
-
-    private void toast_copied () {
-        show_toast (N_("Text copied!"));
-    }
-
-    private void show_toast (string text) {
-        var toast = new Adw.Toast (_(text));
-        overlay.add_toast (toast);
     }
 
     /**
-     * Perform conversion of {@link source_text} and return result text.
+     * Presents a toast, an in-app notification.
      *
-     * @param source_case case type of source text
-     * @param source_text text that is converted
-     * @param result_case case type of result text
-     *
-     * @return text after conversion
+     * @param title     the title of the toast
      */
-    private string do_convert (Define.CaseType source_case, string source_text, Define.CaseType result_case) {
-        string result_text;
-
-        converter.source_case = Util.to_chcase_case (source_case);
-        converter.result_case = Util.to_chcase_case (result_case);
-
-        result_text = converter.convert_case (source_text);
-
-        return result_text;
+    private void show_toast (string title) {
+        var toast = new Adw.Toast (_(title));
+        overlay.add_toast (toast);
     }
 }

@@ -9,6 +9,10 @@ finish-args:
   - --socket=fallback-x11
   - --device=dri
   - --metadata=X-DConf=migrate-path=/com/github/ryonakano/konbucase/
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/vala
 build-options:
   libdir: /app/lib
 modules:
@@ -19,8 +23,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/blueprint-compiler.git
-        tag: 0.18.0
-        commit: 07c9c9df9cd1b6b4454ecba21ee58211e9144a4b
+        tag: 0.19.0
+        commit: de8e15f7791bd6243279cef1efc27edf4cb93674
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
@@ -28,13 +32,15 @@ modules:
   - name: chcase
     buildsystem: meson
     sources:
-      - type: git
-        url: https://github.com/ryonakano/chcase.git
-        tag: 2.3.0
-        commit: e1c664fdd8bded036fa1ce60747e1f92f889c2c4
+      - type: archive
+        url: https://github.com/ryonakano/chcase/archive/2.4.0.tar.gz
+        sha256: 73718fba76e67f7374b3573fc58e785c7ca3e9482ad1de9d29046c837fe76cac
         x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
+          type: json
+          url: https://api.github.com/repos/ryonakano/chcase/releases/latest
+          version-query: .tag_name
+          url-query: '"https://github.com/ryonakano/chcase/archive/" + .tag_name + ".tar.gz"'
+          timestamp-query: .published_at
 
   - name: konbucase
     buildsystem: meson
