@@ -187,6 +187,3 @@ msgstr "Pierwszy znak pierwszego słowa w zdaniu jest pisany wielką literą"
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Kopiuj do schowka"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"

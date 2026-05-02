@@ -182,6 +182,3 @@ msgstr ""
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Copiar al portapapeles"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"
