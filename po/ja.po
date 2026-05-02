@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-04 13:05+0000\n"
-"PO-Revision-Date: 2026-04-04 15:09+0000\n"
+"PO-Revision-Date: 2026-04-27 13:09+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/konbucase/"
 "ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -54,7 +54,7 @@ msgstr ""
 #: data/konbucase.metainfo.xml.in.in:19
 msgid "Click \"Quick Swap\" button to swap case and text of input and output"
 msgstr ""
-"\"かんたん入れ替え\" ボタンをクリックすると、入力と出力の記法とテキストを入れ"
+"\"クイック入れ替え\" ボタンをクリックすると、入力と出力の記法とテキストを入れ"
 "替えできます"
 
 #: data/konbucase.metainfo.xml.in.in:20
@@ -96,7 +96,7 @@ msgstr "終了する"
 #. John Doe https://example.com
 #: src/Application.vala:151
 msgid "translator-credits"
-msgstr "Ryo Nakano <ryonakaknock3@gmail.com>"
+msgstr "Ryo Nakano https://github.com/ryonakano"
 
 #: src/MainWindow.vala:22
 msgid "S_ystem"
@@ -127,7 +127,7 @@ msgstr "%s について(_A)"
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
 #: src/MainWindow.vala:37
 msgid "Quick Swap"
-msgstr "かんたん入れ替え"
+msgstr "クイック入れ替え"
 
 #: src/MainWindow.vala:41
 msgid "Main Menu"
