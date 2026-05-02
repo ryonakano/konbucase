@@ -184,6 +184,3 @@ msgstr "O primeiro carácter da primeira palavra da frase está em maiúsculas"
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Copiar para a Área de transferência"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"

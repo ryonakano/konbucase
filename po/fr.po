@@ -185,6 +185,3 @@ msgstr "Le premier caractère du premier mot de la phrase est en majuscule"
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Copier dans le presse-papiers"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"

@@ -180,6 +180,3 @@ msgstr "Перший символ першого слова в реченні п
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Копіювати до буфера обміну"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"

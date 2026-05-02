@@ -187,6 +187,3 @@ msgstr "Jokaisen lauseen sanan ensimmäinen sana on isolla"
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Kopioi leikepöydälle"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"

@@ -183,6 +183,3 @@ msgstr "Cümledeki ilk kelimenin ilk karakteri büyük harfli"
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Panoya Kopyala"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"

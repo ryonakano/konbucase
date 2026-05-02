@@ -195,6 +195,3 @@ msgstr "Prvý znak prvého slova vo vete je napísaný veľkým písmenom"
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Kopírovať do schránky"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"

@@ -191,6 +191,3 @@ msgstr "De eerste letter van het eerste woord in de zin is een hoofdletter"
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Kopiëren naar klembord"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"

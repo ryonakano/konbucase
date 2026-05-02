@@ -194,6 +194,3 @@ msgstr "Sakinyje pirmojo žodžio pirmasis rašmuo yra iš didžiosios raidės"
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
 msgstr "Išsaugoti į Iškarpinę"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"
