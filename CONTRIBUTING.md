@@ -48,9 +48,9 @@ xdg-open builddir/valadoc/index.html
 #### Edit Documentation Comments
 You should edit documentation comments if you:
 
-- change internal behavior of existing methods
-- change interface (parameters, the return value, etc.) of existing methods
-- add new methods, classes, structs, etc.
+* change internal behavior of existing methods
+* change interface (parameters, the return value, etc.) of existing methods
+* add new methods, classes, structs, etc.
 
 You should clarify the behavior, parameters, and the return value in case of methods. Here is an example:
 
