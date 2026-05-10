@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.konbucase package.
+# Milo Ivir <mail@milotype.de>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.konbucase\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-04 13:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: data/konbucase.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr ""
+
+#: data/konbucase.desktop.in.in:4
+msgid "Case Converting App"
+msgstr ""
+
+#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+msgid "Convert case in your text"
+msgstr ""
+
+#: data/konbucase.desktop.in.in:11
+msgid "Text;"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:13
+msgid "A small text tool app that allows you convert case in your text."
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:16
+msgid "Features include:"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:18
+msgid ""
+"Click \"Copy to Clipboard\" button to copy the all texts in the text view "
+"without selecting them"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:19
+msgid "Click \"Quick Swap\" button to swap case and text of input and output"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:20
+msgid ""
+"Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case, and space-separated"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:26
+msgid "App window in the light mode"
+msgstr ""
+
+#: data/konbucase.metainfo.xml.in.in:31
+msgid "App window in the dark mode"
+msgstr ""
+
+#: data/ui/help-overlay.blp:10
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: data/ui/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/ui/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:151
+msgid "translator-credits"
+msgstr ""
+
+#: src/MainWindow.vala:22
+msgid "S_ystem"
+msgstr ""
+
+#: src/MainWindow.vala:23
+msgid "_Light"
+msgstr ""
+
+#: src/MainWindow.vala:24
+msgid "_Dark"
+msgstr ""
+
+#: src/MainWindow.vala:27
+msgid "_Style"
+msgstr ""
+
+#: src/MainWindow.vala:28
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the app name
+#: src/MainWindow.vala:32
+#, c-format
+msgid "_About %s"
+msgstr ""
+
+#. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
+#: src/MainWindow.vala:37
+msgid "Quick Swap"
+msgstr ""
+
+#: src/MainWindow.vala:41
+msgid "Main Menu"
+msgstr ""
+
+#: src/MainWindow.vala:82
+msgid "Text copied!"
+msgstr ""
+
+#: src/Widget/MainContent.vala:28
+msgid "Clear"
+msgstr ""
+
+#: src/Widget/MainContent.vala:31
+msgid "Convert _From:"
+msgstr ""
+
+#: src/Widget/MainContent.vala:53
+msgid "Convert _To:"
+msgstr ""
+
+#: src/Widget/Toolbar.vala:31
+msgid "Space separated"
+msgstr ""
+
+#: src/Widget/Toolbar.vala:32
+msgid "Each word is separated by a space"
+msgstr ""
+
+#: src/Widget/Toolbar.vala:37
+msgid "The first character of compound words is in lowercase"
+msgstr ""
+
+#: src/Widget/Toolbar.vala:42
+msgid "The first character of compound words is in uppercase"
+msgstr ""
+
+#: src/Widget/Toolbar.vala:47
+msgid "Each word is separated by an underscore"
+msgstr ""
+
+#: src/Widget/Toolbar.vala:52
+msgid "Each word is separated by a hyphen"
+msgstr ""
+
+#: src/Widget/Toolbar.vala:57
+msgid "The first character of the first word in the sentence is in uppercase"
+msgstr ""
+
+#: src/Widget/Toolbar.vala:79
+msgid "Copy to Clipboard"
+msgstr ""
