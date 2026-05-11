@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-04 13:05+0000\n"
-"PO-Revision-Date: 2026-05-10 20:10+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2026-05-12 11:11+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "hr/>\n"
 "Language: hr\n"
@@ -26,62 +26,70 @@ msgstr "@APP_NAME@"
 
 #: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
-msgstr ""
+msgstr "Aplikacija za pretvaranje veličine slova"
 
 #: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
-msgstr ""
+msgstr "Pretvori veličinu slova u tekstu"
 
 #: data/konbucase.desktop.in.in:11
 msgid "Text;"
-msgstr ""
+msgstr "Text;"
 
 #: data/konbucase.metainfo.xml.in.in:13
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
+"Mala tekstualna aplikacija koja omogućuje pretvaranje veličine slova u "
+"tekstu."
 
 #: data/konbucase.metainfo.xml.in.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "Funkcije ukljućuju:"
 
 #: data/konbucase.metainfo.xml.in.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
+"Klikni na gumb „Kopiraj u međuspremnik” i kopiraj sve tekstove u tekstualnom "
+"prikazu bez potrebe za odabiranjem"
 
 #: data/konbucase.metainfo.xml.in.in:19
 msgid "Click \"Quick Swap\" button to swap case and text of input and output"
 msgstr ""
+"Klikni na gumb „Brza zamjena” za mijenjanje veličina slova i teksta unosa i "
+"rezultata"
 
 #: data/konbucase.metainfo.xml.in.in:20
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
+"Odaberi način mijenjanja velične slova teksta: camelCase, PascalCase, "
+"Sentencecase, snake_case, kebab-case i space-separated"
 
 #: data/konbucase.metainfo.xml.in.in:26
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Prozor aplikacije u svijetlom modusu"
 
 #: data/konbucase.metainfo.xml.in.in:31
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Prozor aplikacije u tamnom modusu"
 
 #: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Opće"
 
 #: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Tipkovni prečaci"
 
 #: data/ui/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Zatvori aplikaciju"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -91,87 +99,87 @@ msgstr ""
 #. John Doe https://example.com
 #: src/Application.vala:151
 msgid "translator-credits"
-msgstr ""
+msgstr "Milo Ivir <mail@milotype.de>"
 
 #: src/MainWindow.vala:22
 msgid "S_ystem"
-msgstr ""
+msgstr "S_ustav"
 
 #: src/MainWindow.vala:23
 msgid "_Light"
-msgstr ""
+msgstr "S_vijetla"
 
 #: src/MainWindow.vala:24
 msgid "_Dark"
-msgstr ""
+msgstr "_Tamna"
 
 #: src/MainWindow.vala:27
 msgid "_Style"
-msgstr ""
+msgstr "_Stil"
 
 #: src/MainWindow.vala:28
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Tipkovni prečaci"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/MainWindow.vala:32
 #, c-format
 msgid "_About %s"
-msgstr ""
+msgstr "_O aplikaciji %s"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
 #: src/MainWindow.vala:37
 msgid "Quick Swap"
-msgstr ""
+msgstr "Brza zamjena"
 
 #: src/MainWindow.vala:41
 msgid "Main Menu"
-msgstr ""
+msgstr "Glavni izbornik"
 
 #: src/MainWindow.vala:82
 msgid "Text copied!"
-msgstr ""
+msgstr "Tekst je kopiran!"
 
 #: src/Widget/MainContent.vala:28
 msgid "Clear"
-msgstr ""
+msgstr "Izbriši"
 
 #: src/Widget/MainContent.vala:31
 msgid "Convert _From:"
-msgstr ""
+msgstr "Pretvori _iz:"
 
 #: src/Widget/MainContent.vala:53
 msgid "Convert _To:"
-msgstr ""
+msgstr "Pretvori _u:"
 
 #: src/Widget/Toolbar.vala:31
 msgid "Space separated"
-msgstr ""
+msgstr "Odvojeno razmakom"
 
 #: src/Widget/Toolbar.vala:32
 msgid "Each word is separated by a space"
-msgstr ""
+msgstr "Svaka riječ je odvojena razmakom"
 
 #: src/Widget/Toolbar.vala:37
 msgid "The first character of compound words is in lowercase"
-msgstr ""
+msgstr "Prvi znak složenica se piše malim slovima"
 
 #: src/Widget/Toolbar.vala:42
 msgid "The first character of compound words is in uppercase"
-msgstr ""
+msgstr "Prvi znak složenica se piše velikim slovima"
 
 #: src/Widget/Toolbar.vala:47
 msgid "Each word is separated by an underscore"
-msgstr ""
+msgstr "Svaka riječ je odvojena podcrtom"
 
 #: src/Widget/Toolbar.vala:52
 msgid "Each word is separated by a hyphen"
-msgstr ""
+msgstr "Svaka riječ je odvojena crticom"
 
 #: src/Widget/Toolbar.vala:57
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr ""
+msgstr "Prvi znak prve riječi u rečenici se piše velikim slovima"
 
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopiraj u međuspremnik"
