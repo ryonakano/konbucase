@@ -46,6 +46,7 @@ flatpak run com.github.ryonakano.konbucase.Devel
 You'll need the following dependencies:
 
 * blueprint-compiler
+* gcc or its compatible C compiler
 * [libchcase](https://github.com/ryonakano/chcase) (>= 2.4.0)
 * libadwaita-1-dev (>= 1.5)
 * libglib2.0-dev (>= 2.74)
@@ -53,7 +54,6 @@ You'll need the following dependencies:
 * libgtk4-dev
 * libgtksourceview-5-dev
 * meson (>= 0.58.0)
-* valac
 
 Run `meson setup` to configure the build environment and run `meson compile` to build:
 

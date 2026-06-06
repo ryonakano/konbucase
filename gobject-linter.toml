@@ -1,0 +1,9 @@
+# See https://github.com/bilelmoussaoui/gobject-linter/blob/main/CONFIG.md for configuration
+
+# Requires to either adopt suggestions by the linter or add per-rule ignores or inline ignore directives
+default_level = "error"
+
+[rules.type_style]
+# Do not enforce consistent use of GLib or C standard type aliases
+# because we use both of them propertly
+level = "ignore"

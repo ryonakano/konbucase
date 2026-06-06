@@ -57,11 +57,11 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: valalang/lint
+      image: ghcr.io/bilelmoussaoui/gobject-linter:latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
       - name: Lint
-        run: io.elementary.vala-lint -d .
+        run: gobject-linter

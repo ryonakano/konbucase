@@ -16,10 +16,13 @@
     * Bump `version` in `meson.build`  
     ```meson
     project(
-        'com.github.ryonakano.konbucase',
-        'vala', 'c',
-        version: '4.3.1',
-        meson_version: '>=0.58.0'
+      'com.github.ryonakano.konbucase',
+      'vala', 'c',
+      version: '4.5.1',
+      meson_version: '>= 0.58.0',
+      default_options: [
+        'warning_level=2',
+      ],
     )
     ```
 * [Create a new release on GitHub](https://github.com/ryonakano/konbucase/releases/new)
