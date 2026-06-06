@@ -11,7 +11,7 @@ config_file = configure_file(
   configuration: config_data,
 )
 
-sources = files(
+vala_sources = files(
   'Model/CaseListItemModel.vala',
   'Util/Convert.vala',
   'Util/SettingsMigration.vala',
@@ -26,11 +26,27 @@ sources = files(
   'Util.vala',
 )
 
+includes = [
+  include_directories('.'),
+]
+
+sources = files(
+  'main.c',
+)
+
+sources += gnome.mkenums_simple('kc-enums',
+  sources: 'kc-types.h',
+)
+
+subdir('model')
+
 executable(
   app_id,
   asresources,
   config_file,
+  #vala_sources,
   sources,
   dependencies: dependencies,
+  include_directories: includes,
   install: true,
 )
