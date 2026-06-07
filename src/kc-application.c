@@ -15,6 +15,7 @@
 
 #include "kc-common.h"
 #include "kc-convert.h"
+#include "kc-settings-migration.h"
 #include "kc-util.h"
 
 struct _KcApplication {
@@ -247,8 +248,7 @@ kc_application_startup (GApplication *application)
 
     // Migrate app preferences from old versions
     // Ignore return value because failure just results old app preferences not migrated
-    // TODO
-    //kc_util_migrate_settings (self->settings, settings_migration_table);
+    kc_util_migrate_settings (self->settings);
 }
 
 static void

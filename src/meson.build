@@ -32,7 +32,6 @@ includes = [
 sources = files(
   'main.c',
   'kc-application.c',
-  'kc-convert.c',
   'kc-util.c',
 )
 
@@ -41,6 +40,7 @@ sources += gnome.mkenums_simple('kc-enums',
 )
 
 subdir('model')
+subdir('util')
 
 executable(
   app_id,
