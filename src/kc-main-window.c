@@ -9,8 +9,9 @@
 
 #include "kc-main-window.h"
 
-#include "kc-util.h"
 #include "kc-common.h"
+#include "kc-main-view.h"
+#include "kc-util.h"
 
 struct _KcMainWindow {
     AdwApplicationWindow         parent_instance;
@@ -58,12 +59,10 @@ kc_main_window_init (KcMainWindow *self)
     GtkWidget *swap_button;
     GtkWidget *menu_button;
     GtkWidget *header;
-#if 0
     KcMainView *main_view;
-    g_autoptr (AdwBreakpointCondition) content_bpcond = NULL;
-    g_autoptr (AdwBreakpoint) content_breakpoint = NULL;
-    g_auto(GValue) orientation;
-#endif
+    AdwBreakpointCondition *content_bpcond;
+    AdwBreakpoint *content_breakpoint;
+    GValue orientation = G_VALUE_INIT;
     GtkWidget *overlay;
     GtkWidget *toolbar_view;
 
@@ -101,25 +100,25 @@ kc_main_window_init (KcMainWindow *self)
     adw_header_bar_pack_start (ADW_HEADER_BAR (header), swap_button);
     adw_header_bar_pack_end (ADW_HEADER_BAR (header), menu_button);
 
-#if 0
     main_view = kc_main_view_new ();
 
     // Responsive design; change orientation to vertical on smaller window width
     content_bpcond = adw_breakpoint_condition_new_length (ADW_BREAKPOINT_CONDITION_MAX_WIDTH, 750, ADW_LENGTH_UNIT_SP);
     content_breakpoint = adw_breakpoint_new (content_bpcond);
 
-    g_value_init (&orientation, G_TYPE_ENUM);
-    g_value_set_enum (&orientation, GTK_ORIENTATION_VERTICAL);
+    g_value_init (&orientation, G_TYPE_INT);
+    g_value_set_int (&orientation, GTK_ORIENTATION_VERTICAL);
     adw_breakpoint_add_setter (content_breakpoint, G_OBJECT (main_view), "orientation", &orientation);
+    g_value_unset (&orientation);
 
     adw_application_window_add_breakpoint (ADW_APPLICATION_WINDOW (self), content_breakpoint);
 
     overlay = adw_toast_overlay_new ();
-    adw_toast_overlay_set_child (ADW_TOAST_OVERLAY (overlay), main_view);
-#endif
+    adw_toast_overlay_set_child (ADW_TOAST_OVERLAY (overlay), GTK_WIDGET (main_view));
 
     toolbar_view = adw_toolbar_view_new ();
     adw_toolbar_view_add_top_bar (ADW_TOOLBAR_VIEW (toolbar_view), header);
+    adw_toolbar_view_set_content (ADW_TOOLBAR_VIEW (toolbar_view), overlay);
 
     gtk_widget_set_size_request (GTK_WIDGET (self), 360, 400);
     gtk_window_set_title (GTK_WINDOW (self), APP_NAME);
