@@ -95,7 +95,7 @@ static const KcSettingsMigrationEntry settings_migration_table[] = {
 gboolean
 kc_util_migrate_settings (GSettings *settings)
 {
-    g_autoptr(GSettingsSchema) ss;
+    g_autoptr(GSettingsSchema) ss = NULL;
     const KcSettingsMigrationEntry *entry;
     gboolean has_key;
     GVariant *old_val;

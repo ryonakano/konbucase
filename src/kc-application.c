@@ -15,15 +15,15 @@
 
 #include "kc-common.h"
 #include "kc-convert.h"
+#include "kc-main-window.h"
 #include "kc-settings-migration.h"
 #include "kc-util.h"
 
 struct _KcApplication {
-    AdwApplication           parent_instance;
+    AdwApplication       parent_instance;
 
-    // TODO: Port MainWindow
-    GtkWidget               *window;
-    GSettings               *settings;
+    KcMainWindow        *window;
+    GSettings           *settings;
 };
 
 G_DEFINE_FINAL_TYPE (KcApplication, kc_application, ADW_TYPE_APPLICATION)
@@ -102,10 +102,11 @@ kc_application_activate (GApplication *application)
         return;
     }
 
-    self->window = adw_application_window_new (GTK_APPLICATION (self));
+    self->window = kc_main_window_new ();
     g_settings_bind (self->settings, "window-height", self->window, "default-height", G_SETTINGS_BIND_DEFAULT);
     g_settings_bind (self->settings, "window-width", self->window, "default-width", G_SETTINGS_BIND_DEFAULT);
     g_settings_bind (self->settings, "window-maximized", self->window, "maximized", G_SETTINGS_BIND_DEFAULT);
+    gtk_window_set_application (GTK_WINDOW (self->window), GTK_APPLICATION (application));
     gtk_window_present (GTK_WINDOW (self->window));
 }
 
@@ -115,7 +116,7 @@ gaction_state_to_adw_scheme (GBinding      *binding,
                              GValue        *adw_scheme,
                              gpointer       user_data)
 {
-    g_autoptr(GVariant) gaction_state_variant;
+    g_autoptr(GVariant) gaction_state_variant = NULL;
     const gchar *gaction_state_str;
     AdwColorScheme adw_scheme_enum;
 
@@ -199,7 +200,7 @@ static void
 setup_style (KcApplication *self)
 {
     AdwStyleManager *style_manager;
-    g_autoptr(GSimpleAction) style_action;
+    g_autoptr(GSimpleAction) style_action = NULL;
 
     style_manager = adw_application_get_style_manager (ADW_APPLICATION (self));
 

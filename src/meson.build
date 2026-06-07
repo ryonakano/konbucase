@@ -10,21 +10,6 @@ config_file = configure_file(
   configuration: config_data,
 )
 
-vala_sources = files(
-  'Model/CaseListItemModel.vala',
-  'Util/Convert.vala',
-  'Util/SettingsMigration.vala',
-  'View/MainView.vala',
-  'Widget/DropDownButtonContent.vala',
-  'Widget/DropDownRow.vala',
-  'Widget/TextArea.vala',
-  'Widget/Toolbar.vala',
-  'Application.vala',
-  'Define.vala',
-  'MainWindow.vala',
-  'Util.vala',
-)
-
 includes = [
   include_directories('.'),
 ]
@@ -32,6 +17,7 @@ includes = [
 sources = files(
   'main.c',
   'kc-application.c',
+  'kc-main-window.c',
   'kc-util.c',
 )
 
@@ -46,7 +32,6 @@ executable(
   app_id,
   asresources,
   config_file,
-  #vala_sources,
   sources,
   dependencies: dependencies,
   include_directories: includes,
