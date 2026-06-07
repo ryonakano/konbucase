@@ -38,10 +38,11 @@ add_project_arguments(
 
 project_c_args = []
 c_args = [
+  # TODO: Remove
+  '-Wpedantic',
   '-Wcast-align',
   '-Wdeclaration-after-statement',
-  # TODO: Comment in when Vala source code is vanished
-  #'-Werror=address',
+  '-Werror=address',
   '-Werror=array-bounds',
   '-Werror=empty-body',
   '-Werror=implicit',
@@ -105,11 +106,11 @@ add_project_arguments(project_c_args, language: 'c')
 
 granite_dep = dependency('granite-7', version: '>= 7.2.0', required: get_option('granite'))
 if granite_dep.found()
-  add_project_arguments('--define=USE_GRANITE', language: 'vala')
+  add_project_arguments('-DUSE_GRANITE', language: 'c')
 endif
 
 dependencies = [
-  dependency('chcase', version: '>= 2.4.0', allow_fallback: get_option('use_submodule')),
+  #dependency('chcase', version: '>= 2.4.0', allow_fallback: get_option('use_submodule')),
   dependency('glib-2.0', version: '>= 2.74'),
   granite_dep,
   dependency('gtk4'),

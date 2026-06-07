@@ -7,8 +7,8 @@
 
 #include <glib-object.h>
 
-#include "kc-types.h"
 #include "kc-enums.h"
+#include "kc-types.h"
 
 G_BEGIN_DECLS
 

@@ -7,3 +7,8 @@ default_level = "error"
 # Do not enforce consistent use of GLib or C standard type aliases
 # because we use both of them propertly
 level = "ignore"
+
+[rules.property_enum_convention]
+# This rule fixes the GParamSpec array definition to something like `static GParamSpec *props[PROP_LAST_ELEMENT + 1]`,
+# which I think not good because we make sure to modify the number of elements whenever adding or removing properties.
+level = "ignore"

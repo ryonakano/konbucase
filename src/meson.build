@@ -6,8 +6,7 @@ config_data.set_quoted('APP_ID', app_id)
 config_data.set_quoted('APP_VERSION', app_version)
 config_data.set_quoted('RESOURCE_PREFIX', '/' + meson.project_name().replace('.', '/'))
 config_file = configure_file(
-  input: 'Config.vala.in',
-  output: '@BASENAME@',
+  output: 'config.h',
   configuration: config_data,
 )
 
@@ -32,6 +31,9 @@ includes = [
 
 sources = files(
   'main.c',
+  'kc-application.c',
+  'kc-convert.c',
+  'kc-util.c',
 )
 
 sources += gnome.mkenums_simple('kc-enums',

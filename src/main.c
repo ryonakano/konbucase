@@ -3,43 +3,30 @@
  * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-#include "kc-types.h"
-#include "kc-enums.h"
+#include "config.h"
 
-#include "kc-case-list-item.h"
+#include <locale.h>
+
+#include <glib/gi18n.h>
+
+#include "kc-application.h"
+#include "kc-enums.h"
+#include "kc-types.h"
 
 int
 main (int   argc,
       char *argv[])
 {
-    g_autoptr(KcCaseListItem) item;
-    KcCaseType case_type;
-    gchar *name;
-    gchar *description;
+    g_autoptr(KcApplication) app;
+    int ret;
 
-    item = kc_case_list_item_new (KC_CASE_TYPE_SPACE_SEPARATED, "name", "desc");
+    setlocale (LC_ALL, "");
+    bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+    bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+    textdomain (GETTEXT_PACKAGE);
 
-    g_object_get (item,
-                  "case-type", &case_type,
-                  "name", &name,
-                  "description", &description,
-                  NULL);
+    app = kc_application_new ();
+    ret = g_application_run (G_APPLICATION (app), argc, argv);
 
-    g_print ("%d, %s, %s\n", case_type, name, description);
-
-    g_object_set (item,
-                  "case-type", KC_CASE_TYPE_SNAKE,
-                  "name", g_strdup ("eman"),
-                  "description", g_strdup ("csed"),
-                  NULL);
-
-    g_object_get (item,
-                  "case-type", &case_type,
-                  "name", &name,
-                  "description", &description,
-                  NULL);
-
-    g_print ("%d, %s, %s\n", case_type, name, description);
-
-    return 0;
+    return ret;
 }
