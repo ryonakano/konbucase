@@ -5,9 +5,9 @@
 
 #include "config.h"
 
-#include <glib/gi18n.h>
-
 #include "kc-main-window.h"
+
+#include <glib/gi18n.h>
 
 #include "kc-common.h"
 #include "kc-main-view.h"
