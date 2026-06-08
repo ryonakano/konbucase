@@ -20,6 +20,8 @@ kc_dropdown_button_content_dispose (GObject *object)
 
     // Unparent and also result to unbind label-text property with the label
     adw_bin_set_child (ADW_BIN (self), NULL);
+
+    G_OBJECT_CLASS (kc_dropdown_button_content_parent_class)->dispose (object);
 }
 
 static void
