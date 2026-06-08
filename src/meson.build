@@ -28,6 +28,7 @@ sources += gnome.mkenums_simple('kc-enums',
 subdir('model')
 subdir('util')
 subdir('view')
+subdir('widget')
 
 executable(
   app_id,
