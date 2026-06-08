@@ -1,0 +1,14 @@
+# See https://github.com/bilelmoussaoui/gobject-linter/blob/main/CONFIG.md for configuration
+
+# Requires to either adopt suggestions by the linter or add per-rule ignores or inline ignore directives
+default_level = "error"
+
+[rules.type_style]
+# Do not enforce consistent use of GLib or C standard type aliases
+# because we use both of them propertly
+level = "ignore"
+
+[rules.property_enum_convention]
+# This rule fixes the GParamSpec array definition to something like `static GParamSpec *props[PROP_LAST_ELEMENT + 1]`,
+# which I think not good because we make sure to modify the number of elements whenever adding or removing properties.
+level = "ignore"
