@@ -104,6 +104,8 @@ kc_util_migrate_settings (GSettings *settings)
     gboolean equals;
     gboolean ret;
 
+    g_return_val_if_fail (G_IS_SETTINGS (settings), FALSE);
+
     g_object_get (G_OBJECT (settings),
                   "settings-schema", &ss,
                   NULL);
