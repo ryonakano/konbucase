@@ -9,7 +9,7 @@
 
 G_BEGIN_DECLS
 
-#define KC_TYPE_MAIN_VIEW       (kc_main_view_get_type ())
+#define KC_TYPE_MAIN_VIEW (kc_main_view_get_type ())
 G_DECLARE_FINAL_TYPE (KcMainView, kc_main_view, KC, MAIN_VIEW, GtkBox)
 
 extern KcMainView *kc_main_view_new (void);

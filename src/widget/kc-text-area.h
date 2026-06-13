@@ -9,7 +9,7 @@
 
 G_BEGIN_DECLS
 
-#define KC_TYPE_TEXT_AREA         (kc_text_area_get_type ())
+#define KC_TYPE_TEXT_AREA (kc_text_area_get_type ())
 G_DECLARE_FINAL_TYPE (KcTextArea, kc_text_area, KC, TEXT_AREA, AdwBin)
 
 extern void kc_text_area_grab_focus (KcTextArea *self);

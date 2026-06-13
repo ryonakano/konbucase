@@ -9,7 +9,7 @@
 
 G_BEGIN_DECLS
 
-#define KC_TYPE_APPLICATION         (kc_application_get_type ())
+#define KC_TYPE_APPLICATION (kc_application_get_type ())
 G_DECLARE_FINAL_TYPE (KcApplication, kc_application, KC, APPLICATION, AdwApplication)
 
 extern KcApplication *kc_application_new (void);

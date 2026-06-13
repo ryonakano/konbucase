@@ -9,7 +9,7 @@
 
 G_BEGIN_DECLS
 
-#define KC_TYPE_DROPDOWN_BUTTON_CONTENT         (kc_dropdown_button_content_get_type ())
+#define KC_TYPE_DROPDOWN_BUTTON_CONTENT (kc_dropdown_button_content_get_type ())
 G_DECLARE_FINAL_TYPE (KcDropDownButtonContent, kc_dropdown_button_content, KC, DROPDOWN_BUTTON_CONTENT, AdwBin)
 
 extern KcDropDownButtonContent *kc_dropdown_button_content_new (void);

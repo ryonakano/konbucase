@@ -12,7 +12,7 @@
 
 G_BEGIN_DECLS
 
-#define KC_TYPE_CASE_LIST_ITEM          (kc_case_list_item_get_type ())
+#define KC_TYPE_CASE_LIST_ITEM (kc_case_list_item_get_type ())
 G_DECLARE_FINAL_TYPE (KcCaseListItem, kc_case_list_item, KC, CASE_LIST_ITEM, GObject)
 
 extern KcCaseListItem *kc_case_list_item_new (KcCaseType case_type, const gchar *name, const gchar *description);
