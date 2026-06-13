@@ -36,9 +36,7 @@ G_DEFINE_FINAL_TYPE (KcCaseListItem, kc_case_list_item, G_TYPE_OBJECT)
 static void
 kc_case_list_item_dispose (GObject *object)
 {
-    KcCaseListItem *self;
-
-    self = KC_CASE_LIST_ITEM (object);
+    KcCaseListItem *self = KC_CASE_LIST_ITEM (object);
 
     g_clear_pointer (&(self->name), g_free);
     g_clear_pointer (&(self->description), g_free);
@@ -52,9 +50,7 @@ kc_case_list_item_get_property (GObject        *object,
                                 GValue         *value,
                                 GParamSpec     *pspec)
 {
-    KcCaseListItem *self;
-
-    self = KC_CASE_LIST_ITEM (object);
+    KcCaseListItem *self = KC_CASE_LIST_ITEM (object);
 
     switch (prop_id) {
     case PROP_CASE_TYPE:
@@ -78,26 +74,18 @@ kc_case_list_item_set_property (GObject        *object,
                                 const GValue   *value,
                                 GParamSpec     *pspec)
 {
-    KcCaseListItem *self;
-
-    self = KC_CASE_LIST_ITEM (object);
+    KcCaseListItem *self = KC_CASE_LIST_ITEM (object);
 
     switch (prop_id) {
     case PROP_CASE_TYPE:
         self->case_type = g_value_get_enum (value);
         break;
     case PROP_NAME:
-        if (self->name) {
-            g_free (self->name);
-        }
-
+        g_clear_pointer (&(self->name), g_free);
         self->name = g_strdup(g_value_get_string (value));
         break;
     case PROP_DESCRIPTION:
-        if (self->description) {
-            g_free (self->description);
-        }
-
+        g_clear_pointer (&(self->description), g_free);
         self->description = g_strdup(g_value_get_string (value));
         break;
     default:
@@ -113,9 +101,9 @@ kc_case_list_item_class_init (KcCaseListItemClass *klass)
 
     object_class = G_OBJECT_CLASS (klass);
 
+    object_class->dispose = kc_case_list_item_dispose;
     object_class->get_property = kc_case_list_item_get_property;
     object_class->set_property = kc_case_list_item_set_property;
-    object_class->dispose = kc_case_list_item_dispose;
 
     /**
      * KcCaseListItem:case-type:

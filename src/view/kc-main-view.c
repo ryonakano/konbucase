@@ -5,6 +5,8 @@
 
 #include "kc-main-view.h"
 
+#include "kc-text-area.h"
+
 struct _KcMainView {
     GtkBox              parent_instance;
 };
@@ -28,7 +30,7 @@ kc_main_view_class_init (KcMainViewClass *class)
 static void
 kc_main_view_init (KcMainView *self)
 {
-    gtk_box_append (GTK_BOX (self), gtk_label_new ("Label 1"));
+    gtk_box_append (GTK_BOX (self), GTK_WIDGET (kc_text_area_new (TRUE)));
     gtk_box_append (GTK_BOX (self), gtk_label_new ("Label 2"));
 }
 
