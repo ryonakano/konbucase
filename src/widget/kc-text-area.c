@@ -117,9 +117,9 @@ kc_text_area_dispose (GObject *object)
 }
 
 static void
-kc_text_area_class_init (KcTextAreaClass *class)
+kc_text_area_class_init (KcTextAreaClass *klass)
 {
-    GObjectClass *object_class = G_OBJECT_CLASS (class);
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     object_class->get_property = kc_text_area_get_property;
     object_class->set_property = kc_text_area_set_property;

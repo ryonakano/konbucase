@@ -74,9 +74,9 @@ kc_dropdown_button_content_dispose (GObject *object)
 }
 
 static void
-kc_dropdown_button_content_class_init (KcDropDownButtonContentClass *class)
+kc_dropdown_button_content_class_init (KcDropDownButtonContentClass *klass)
 {
-    GObjectClass *object_class = G_OBJECT_CLASS (class);
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     object_class->get_property = kc_dropdown_button_content_get_property;
     object_class->set_property = kc_dropdown_button_content_set_property;

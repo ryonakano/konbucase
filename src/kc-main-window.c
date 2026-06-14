@@ -43,9 +43,9 @@ kc_main_window_dispose (GObject *object)
 }
 
 static void
-kc_main_window_class_init (KcMainWindowClass *class)
+kc_main_window_class_init (KcMainWindowClass *klass)
 {
-    GObjectClass *object_class = G_OBJECT_CLASS (class);
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     object_class->dispose = kc_main_window_dispose;
 }

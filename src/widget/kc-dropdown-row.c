@@ -25,9 +25,9 @@ kc_dropdown_row_dispose (GObject *object)
 }
 
 static void
-kc_dropdown_row_class_init (KcDropDownRowClass *class)
+kc_dropdown_row_class_init (KcDropDownRowClass *klass)
 {
-    GObjectClass *object_class = G_OBJECT_CLASS (class);
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     object_class->dispose = kc_dropdown_row_dispose;
 }

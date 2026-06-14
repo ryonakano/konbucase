@@ -20,9 +20,9 @@ kc_main_view_dispose (GObject *object)
 }
 
 static void
-kc_main_view_class_init (KcMainViewClass *class)
+kc_main_view_class_init (KcMainViewClass *klass)
 {
-    GObjectClass *object_class = G_OBJECT_CLASS (class);
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     object_class->dispose = kc_main_view_dispose;
 }
