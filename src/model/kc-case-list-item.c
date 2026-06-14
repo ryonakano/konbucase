@@ -123,7 +123,7 @@ kc_case_list_item_class_init (KcCaseListItemClass *klass)
      */
     props[PROP_NAME] =
         g_param_spec_string ("name", NULL, NULL,
-                             "",
+                             NULL,
                              G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS);
 
     /**
@@ -133,7 +133,7 @@ kc_case_list_item_class_init (KcCaseListItemClass *klass)
      */
     props[PROP_DESCRIPTION] =
         g_param_spec_string ("description", NULL, NULL,
-                             "",
+                             NULL,
                              G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS);
 
     g_object_class_install_properties (object_class, N_PROPS, props);
@@ -142,7 +142,72 @@ kc_case_list_item_class_init (KcCaseListItemClass *klass)
 static void
 kc_case_list_item_init (KcCaseListItem *self)
 {
-    (void) self;
+    self->case_type = KC_CASE_TYPE_SPACE_SEPARATED;
+    self->name = NULL;
+    self->description = NULL;
+}
+
+KcCaseType
+kc_case_list_item_get_case_type (KcCaseListItem *self)
+{
+    g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), KC_CASE_TYPE_SPACE_SEPARATED);
+
+    return self->case_type;
+}
+
+void
+kc_case_list_item_set_case_type (KcCaseListItem *self,
+                                 KcCaseType      case_type)
+{
+    g_return_if_fail (KC_IS_CASE_LIST_ITEM (self));
+
+    if (self->case_type == case_type) {
+        return;
+    }
+
+    self->case_type = case_type;
+}
+
+const gchar *
+kc_case_list_item_get_name (KcCaseListItem *self)
+{
+    g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), NULL);
+
+    return self->name;
+}
+
+void
+kc_case_list_item_set_name (KcCaseListItem  *self,
+                            const gchar     *name)
+{
+    g_return_if_fail (KC_IS_CASE_LIST_ITEM (self));
+
+    if (g_strcmp0 (self->name, name) == 0) {
+        return;
+    }
+
+    self->name = g_strdup (name);
+}
+
+const gchar *
+kc_case_list_item_get_description (KcCaseListItem *self)
+{
+    g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), NULL);
+
+    return self->description;
+}
+
+void
+kc_case_list_item_set_description (KcCaseListItem   *self,
+                                   const gchar      *description)
+{
+    g_return_if_fail (KC_IS_CASE_LIST_ITEM (self));
+
+    if (g_strcmp0 (self->description, description) == 0) {
+        return;
+    }
+
+    self->description = g_strdup (description);
 }
 
 /**
@@ -160,7 +225,7 @@ kc_case_list_item_new (KcCaseType case_type, const gchar *name, const gchar *des
 {
     return g_object_new (KC_TYPE_CASE_LIST_ITEM,
                          "case-type", case_type,
-                         "name", name,
-                         "description", description,
+                         "name", g_strdup (name),
+                         "description", g_strdup (description),
                          NULL);
 }

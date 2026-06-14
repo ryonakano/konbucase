@@ -86,6 +86,8 @@ kc_dropdown_button_content_class_init (KcDropDownButtonContentClass *klass)
         g_param_spec_string ("label-text", NULL, NULL,
                              NULL,
                              G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+
+    g_object_class_install_properties (object_class, N_PROPS, props);
 }
 
 static void
