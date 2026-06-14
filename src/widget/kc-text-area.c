@@ -108,10 +108,10 @@ kc_text_area_dispose (GObject *object)
 {
     KcTextArea *self = KC_TEXT_AREA (object);
 
-    adw_bin_set_child (ADW_BIN (self), NULL);
-
     gtk_text_view_set_buffer (GTK_TEXT_VIEW (self->source_view), NULL);
-    g_object_unref (self->buffer);
+    g_clear_object (&(self->buffer));
+
+    adw_bin_set_child (ADW_BIN (self), NULL);
 
     G_OBJECT_CLASS (kc_text_area_parent_class)->dispose (object);
 }
@@ -176,6 +176,33 @@ kc_text_area_init (KcTextArea *self)
                                  NULL,
                                  style_scheme_manager,
                                  NULL);
+}
+
+const char *
+kc_text_area_get_text (KcTextArea *self)
+{
+    g_return_val_if_fail (KC_IS_TEXT_AREA (self), NULL);
+
+    return self->text;
+}
+
+void
+kc_text_area_set_text (KcTextArea *self,
+                       const char *text)
+{
+    g_return_if_fail (KC_IS_TEXT_AREA (self));
+
+    if (g_strcmp0 (self->text, text) == 0) {
+        return;
+    }
+
+    self->text = text;
+}
+
+void
+kc_text_area_clear_text (KcTextArea *self)
+{
+    kc_text_area_set_text (self, "");
 }
 
 void

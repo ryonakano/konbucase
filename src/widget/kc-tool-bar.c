@@ -12,14 +12,20 @@
 #include "kc-dropdown-button-content.h"
 #include "kc-dropdown-row.h"
 
-#include "kc-types.h"
-#include "kc-enums.h"
-
 enum {
     L10N_CASE_EXP_PARAM_STR,
 
     N_L10N_CASE_EXP_PARAMS
 };
+
+enum {
+    SIGNAL_DROPDOWN_CHANGED,
+    SIGNAL_COPY_BUTTON_CLICKED,
+
+    N_SIGNALS
+};
+
+static guint signals[N_SIGNALS];
 
 enum {
     PROP_0,
@@ -38,7 +44,7 @@ struct _KcToolBar {
     gchar          *header_label;
     GtkWidget      *case_label;
     KcCaseType      case_type;
-    GtkWidget      *copy_clipboard_button;
+    GtkWidget      *copy_button;
 
     GtkWidget      *toolbar_custom_area;
 };
@@ -49,92 +55,6 @@ static const char *
 localize_str (const char *str)
 {
     return _(str);
-}
-
-static void
-kc_tool_bar_get_property (GObject      *object,
-                          uint          prop_id,
-                          GValue       *value,
-                          GParamSpec   *pspec)
-{
-    KcToolBar *self = KC_TOOL_BAR (object);
-
-    switch (prop_id) {
-    case PROP_HEADER_LABEL:
-        g_value_set_string (value, self->header_label);
-        break;
-    case PROP_CASE_TYPE:
-        g_value_set_enum (value, self->case_type);
-        break;
-    default:
-        G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
-        break;
-    }
-}
-
-static void
-kc_tool_bar_set_property (GObject      *object,
-                          uint          prop_id,
-                          const GValue *value,
-                          GParamSpec   *pspec)
-{
-    KcToolBar *self = KC_TOOL_BAR (object);
-
-    switch (prop_id) {
-    case PROP_HEADER_LABEL:
-        self->header_label = g_strdup (g_value_get_string (value));
-        break;
-    case PROP_CASE_TYPE:
-        self->case_type = g_value_get_enum (value);
-        break;
-    default:
-        G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
-        break;
-    }
-}
-
-static void
-kc_tool_bar_constructed (GObject *object)
-{
-    KcToolBar *self = KC_TOOL_BAR (object);
-
-    gtk_label_set_label (GTK_LABEL (self->case_label), self->header_label);
-
-    G_OBJECT_CLASS (kc_tool_bar_parent_class)->constructed (object);
-}
-
-static void
-kc_tool_bar_dispose (GObject *object)
-{
-    KcToolBar *self = KC_TOOL_BAR (object);
-
-    // TODO
-
-    G_OBJECT_CLASS (kc_tool_bar_parent_class)->dispose (object);
-}
-
-static void
-kc_tool_bar_class_init (KcToolBarClass *klass)
-{
-    GObjectClass *object_class = G_OBJECT_CLASS (klass);
-
-    object_class->get_property = kc_tool_bar_get_property;
-    object_class->set_property = kc_tool_bar_set_property;
-    object_class->constructed = kc_tool_bar_constructed;
-    object_class->dispose = kc_tool_bar_dispose;
-
-    props[PROP_HEADER_LABEL] = 
-        g_param_spec_string ("header-label", NULL, NULL,
-                             NULL,
-                             G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS);
-
-    props[PROP_CASE_TYPE] = 
-        g_param_spec_enum ("case-type", NULL, NULL,
-                           KC_TYPE_CASE_TYPE,
-                           KC_CASE_TYPE_SPACE_SEPARATED,
-                           G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
-
-    g_object_class_install_properties (object_class, N_PROPS, props);
 }
 
 static void
@@ -209,6 +129,123 @@ case_list_factory_bind (GtkSignalListItemFactory    *factory,
 }
 
 static void
+emit_copy_button_clicked (KcToolBar   *self,
+                          gpointer    user_data)
+{
+    (void) user_data;
+
+    g_signal_emit (self, signals[SIGNAL_COPY_BUTTON_CLICKED], 0);
+}
+
+static void
+kc_tool_bar_get_property (GObject      *object,
+                          uint          prop_id,
+                          GValue       *value,
+                          GParamSpec   *pspec)
+{
+    KcToolBar *self = KC_TOOL_BAR (object);
+
+    switch (prop_id) {
+    case PROP_HEADER_LABEL:
+        g_value_set_string (value, self->header_label);
+        break;
+    case PROP_CASE_TYPE:
+        g_value_set_enum (value, self->case_type);
+        break;
+    default:
+        G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+        break;
+    }
+}
+
+static void
+kc_tool_bar_set_property (GObject      *object,
+                          uint          prop_id,
+                          const GValue *value,
+                          GParamSpec   *pspec)
+{
+    KcToolBar *self = KC_TOOL_BAR (object);
+
+    switch (prop_id) {
+    case PROP_HEADER_LABEL:
+        self->header_label = g_strdup (g_value_get_string (value));
+        break;
+    case PROP_CASE_TYPE:
+        self->case_type = g_value_get_enum (value);
+        break;
+    default:
+        G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+        break;
+    }
+}
+
+static void
+kc_tool_bar_constructed (GObject *object)
+{
+    KcToolBar *self = KC_TOOL_BAR (object);
+
+    gtk_label_set_label (GTK_LABEL (self->case_label), self->header_label);
+
+    G_OBJECT_CLASS (kc_tool_bar_parent_class)->constructed (object);
+}
+
+static void
+kc_tool_bar_dispose (GObject *object)
+{
+    KcToolBar *self = KC_TOOL_BAR (object);
+
+    // TODO
+
+    G_OBJECT_CLASS (kc_tool_bar_parent_class)->dispose (object);
+}
+
+static void
+kc_tool_bar_class_init (KcToolBarClass *klass)
+{
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
+
+    object_class->get_property = kc_tool_bar_get_property;
+    object_class->set_property = kc_tool_bar_set_property;
+    object_class->constructed = kc_tool_bar_constructed;
+    object_class->dispose = kc_tool_bar_dispose;
+
+    signals[SIGNAL_DROPDOWN_CHANGED] =
+        g_signal_new ("dropdown-changed",
+                      G_TYPE_FROM_CLASS (klass),
+                      G_SIGNAL_RUN_LAST,
+                      0,
+                      NULL,
+                      NULL,
+                      NULL,
+                      G_TYPE_NONE,
+                      0);
+
+    signals[SIGNAL_COPY_BUTTON_CLICKED] =
+        g_signal_new ("copy-button-clicked",
+                      G_TYPE_FROM_CLASS (klass),
+                      G_SIGNAL_RUN_LAST,
+                      0,
+                      NULL,
+                      NULL,
+                      NULL,
+                      G_TYPE_NONE,
+                      0);
+
+    props[PROP_HEADER_LABEL] = 
+        g_param_spec_string ("header-label", NULL, NULL,
+                             NULL,
+                             G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS);
+
+    props[PROP_CASE_TYPE] = 
+        g_param_spec_enum ("case-type", NULL, NULL,
+                           KC_TYPE_CASE_TYPE,
+                           KC_CASE_TYPE_SPACE_SEPARATED,
+                           G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+
+    g_object_class_install_properties (object_class, N_PROPS, props);
+}
+
+static void
 kc_tool_bar_init (KcToolBar *self)
 {
     g_autoptr (GtkListItemFactory) case_factory;
@@ -275,8 +312,8 @@ kc_tool_bar_init (KcToolBar *self)
     gtk_label_set_wrap (GTK_LABEL (self->case_label), TRUE);
     gtk_label_set_wrap (GTK_LABEL (self->case_label), PANGO_ELLIPSIZE_END);
 
-    self->copy_clipboard_button = gtk_button_new_from_icon_name ("edit-copy");
-    gtk_widget_set_tooltip_text (self->copy_clipboard_button, _("Copy to Clipboard"));
+    self->copy_button = gtk_button_new_from_icon_name ("edit-copy");
+    gtk_widget_set_tooltip_text (self->copy_button, _("Copy to Clipboard"));
 
     self->toolbar_custom_area = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_widget_set_valign (self->toolbar_custom_area, GTK_ALIGN_CENTER);
@@ -287,7 +324,7 @@ kc_tool_bar_init (KcToolBar *self)
     gtk_widget_add_css_class (toolbar, "toolbar");
     gtk_box_append (GTK_BOX (toolbar), self->case_label);
     gtk_box_append (GTK_BOX (toolbar), case_dropdown);
-    gtk_box_append (GTK_BOX (toolbar), self->copy_clipboard_button);
+    gtk_box_append (GTK_BOX (toolbar), self->copy_button);
     gtk_box_append (GTK_BOX (toolbar), self->toolbar_custom_area);
 
     adw_bin_set_child (ADW_BIN (self), toolbar);
@@ -304,11 +341,38 @@ kc_tool_bar_init (KcToolBar *self)
     case_dropdown.notify["selected"].connect (() => {
         dropdown_changed ();
     });
-
-    copy_clipboard_button.clicked.connect (() => {
-        copy_button_clicked ();
-    });
 #endif
+
+    g_signal_connect_swapped (self->copy_button, "clicked", G_CALLBACK (emit_copy_button_clicked), self);
+}
+
+KcCaseType
+kc_tool_bar_get_case_type (KcToolBar *self)
+{
+    g_return_val_if_fail (KC_IS_TOOL_BAR (self), KC_CASE_TYPE_SPACE_SEPARATED);
+
+    return self->case_type;
+}
+
+void
+kc_tool_bar_set_case_type (KcToolBar   *self,
+                           KcCaseType   case_type)
+{
+    g_return_if_fail (KC_IS_TOOL_BAR (self));
+
+    if (self->case_type == case_type) {
+        return;
+    }
+
+    self->case_type = case_type;
+}
+
+GtkWidget *
+kc_tool_bar_get_copy_clipboard_button (KcToolBar *self)
+{
+    g_return_val_if_fail (KC_IS_TOOL_BAR (self), NULL);
+
+    return g_object_ref (self->copy_button);
 }
 
 void

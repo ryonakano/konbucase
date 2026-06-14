@@ -51,8 +51,7 @@ kc_dropdown_button_content_set_property (GObject       *object,
 
     switch (prop_id) {
     case PROP_LABEL_TEXT:
-        g_clear_pointer (&(self->label_text), g_free);
-        self->label_text = g_strdup (g_value_get_string (value));
+        g_set_str (&(self->label_text), g_value_get_string (value));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);

@@ -27,12 +27,11 @@ G_DEFINE_FINAL_TYPE (KcMainWindow, kc_main_window, ADW_TYPE_APPLICATION_WINDOW)
  * Presents a toast, an in-app notification.
  */
 static void
-kc_main_window_show_toast (AdwToastOverlay  *overlay,
-                           const gchar      *title)
+kc_main_window_show_toast (AdwToastOverlay *overlay)
 {
-    g_autoptr(AdwToast) toast;
+    AdwToast *toast;
 
-    toast = adw_toast_new (_(title));
+    toast = adw_toast_new (_("Text copied!"));
     adw_toast_overlay_add_toast (overlay, toast);
 }
 
@@ -124,16 +123,9 @@ kc_main_window_init (KcMainWindow *self)
     gtk_window_set_title (GTK_WINDOW (self), APP_NAME);
     adw_application_window_set_content (ADW_APPLICATION_WINDOW (self), toolbar_view);
 
-    // TODO
-#if 0
-        swap_button.clicked.connect (() => {
-            main_view.swap ();
-        });
+    g_signal_connect (swap_button, "clicked", G_CALLBACK (kc_main_view_swap), main_view);
 
-        main_view.text_copied.connect (() => {
-            show_toast (N_("Text copied!"));
-        });
-#endif
+    g_signal_connect_swapped (main_view, "text-copied", G_CALLBACK (kc_main_window_show_toast), overlay);
 }
 
 KcMainWindow *

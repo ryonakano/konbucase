@@ -81,12 +81,10 @@ kc_case_list_item_set_property (GObject        *object,
         self->case_type = g_value_get_enum (value);
         break;
     case PROP_NAME:
-        g_clear_pointer (&(self->name), g_free);
-        self->name = g_strdup(g_value_get_string (value));
+        g_set_str (&(self->name), g_value_get_string (value));
         break;
     case PROP_DESCRIPTION:
-        g_clear_pointer (&(self->description), g_free);
-        self->description = g_strdup(g_value_get_string (value));
+        g_set_str (&(self->description), g_value_get_string (value));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
