@@ -208,8 +208,8 @@ setup_style (KcApplication *self)
                                                  G_VARIANT_TYPE_STRING,
                                                  g_variant_new_string (KC_COLOR_SCHEME_DEFAULT));
 
-    g_object_bind_property_full (style_action, "state",
-                                 style_manager, "color-scheme",
+    g_object_bind_property_full (G_OBJECT (style_action), "state",
+                                 G_OBJECT (style_manager), "color-scheme",
                                  G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE,
                                  gaction_state_to_adw_scheme,
                                  adw_scheme_to_gaction_state,
@@ -217,7 +217,7 @@ setup_style (KcApplication *self)
                                  NULL);
 
     g_settings_bind_with_mapping (self->settings, "color-scheme",
-                                  style_manager, "color-scheme",
+                                  G_OBJECT (style_manager), "color-scheme",
                                   G_SETTINGS_BIND_DEFAULT,
                                   settings_color_scheme_get_mapping,
                                   settings_color_scheme_set_mapping,

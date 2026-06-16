@@ -168,7 +168,7 @@ kc_tool_bar_set_property (GObject      *object,
 
     switch (prop_id) {
     case PROP_HEADER_LABEL:
-        self->header_label = g_strdup (g_value_get_string (value));
+        g_set_str (&(self->header_label), g_value_get_string (value));
         break;
     case PROP_CASE_TYPE:
         self->case_type = g_value_get_enum (value);
@@ -195,6 +195,8 @@ kc_tool_bar_dispose (GObject *object)
     KcToolBar *self = KC_TOOL_BAR (object);
 
     // TODO
+
+    g_clear_pointer (&(self->header_label), g_free);
 
     G_OBJECT_CLASS (kc_tool_bar_parent_class)->dispose (object);
 }
@@ -255,6 +257,9 @@ kc_tool_bar_init (KcToolBar *self)
     GtkExpression *l10n_case_exp;
     GtkWidget *case_dropdown;
     GtkWidget *toolbar;
+
+    self->header_label = NULL;
+    self->case_type = KC_CASE_TYPE_SPACE_SEPARATED;
 
     case_factory = gtk_signal_list_item_factory_new ();
     g_signal_connect (case_factory, "setup", G_CALLBACK (case_factory_setup), NULL);
@@ -365,6 +370,8 @@ kc_tool_bar_set_case_type (KcToolBar   *self,
     }
 
     self->case_type = case_type;
+
+    g_object_notify_by_pspec (G_OBJECT (self), props[PROP_CASE_TYPE]);
 }
 
 GtkWidget *
@@ -389,6 +396,6 @@ KcToolBar *
 kc_tool_bar_new (const gchar *header_label)
 {
     return g_object_new (KC_TYPE_TOOL_BAR,
-                         "header-label", header_label,
+                         "header-label", g_strdup (header_label),
                          NULL);
 }

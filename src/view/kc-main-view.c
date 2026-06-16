@@ -29,6 +29,8 @@ static guint signals[N_SIGNALS];
 struct _KcMainView {
     GtkBox              parent_instance;
 
+    GSettings          *settings;
+
     KcToolBar          *input_toolbar;
     KcTextArea         *input_textarea;
     KcToolBar          *output_toolbar;
@@ -124,8 +126,32 @@ copy_and_notify_output (KcMainView *self)
 }
 
 static void
+save_input_case_type (KcMainView *self)
+{
+    KcCaseType case_type;
+
+    case_type = kc_tool_bar_get_case_type (self->input_toolbar);
+    g_settings_set_enum (self->settings, "input-case-type", case_type);
+}
+
+static void
+save_output_case_type (KcMainView *self)
+{
+    KcCaseType case_type;
+
+    case_type = kc_tool_bar_get_case_type (self->output_toolbar);
+    g_settings_set_enum (self->settings, "output-case-type", case_type);
+}
+
+static void
 kc_main_view_dispose (GObject *object)
 {
+    KcMainView *self = KC_MAIN_VIEW (object);
+
+    g_clear_object (&(self->settings));
+
+    // TODO
+
     G_OBJECT_CLASS (kc_main_view_parent_class)->dispose (object);
 }
 
@@ -151,8 +177,6 @@ kc_main_view_class_init (KcMainViewClass *klass)
 static void
 kc_main_view_init (KcMainView *self)
 {
-    g_autoptr (GSettings) settings;
-
     GtkWidget *clear_button;
     KcCaseType input_case_type;
     GtkWidget *input_pane;
@@ -167,7 +191,7 @@ kc_main_view_init (KcMainView *self)
     g_autoptr (GtkWidget) input_clip_button;
     g_autoptr (GtkWidget) output_clip_button;
 
-    settings = g_settings_new (APP_ID);
+    self->settings = g_settings_new (APP_ID);
 
     /*************************************************/
     /* Input Pane                                    */
@@ -177,7 +201,7 @@ kc_main_view_init (KcMainView *self)
 
     self->input_toolbar = kc_tool_bar_new (_("Convert _From:"));
     gtk_widget_set_valign (GTK_WIDGET (self->input_toolbar), GTK_ALIGN_START);
-    input_case_type = g_settings_get_enum (settings, "input-case-type");
+    input_case_type = g_settings_get_enum (self->settings, "input-case-type");
     kc_tool_bar_set_case_type (self->input_toolbar, input_case_type);
     kc_tool_bar_append (self->input_toolbar, clear_button);
 
@@ -198,7 +222,7 @@ kc_main_view_init (KcMainView *self)
     /*************************************************/
     self->output_toolbar = kc_tool_bar_new (_("Convert _To:"));
     gtk_widget_set_valign (GTK_WIDGET (self->output_toolbar), GTK_ALIGN_START);
-    output_case_type = g_settings_get_enum (settings, "output-case-type");
+    output_case_type = g_settings_get_enum (self->settings, "output-case-type");
     kc_tool_bar_set_case_type (self->output_toolbar, output_case_type);
 
     // Make the text view uneditable, otherwise the app freezes
@@ -228,24 +252,24 @@ kc_main_view_init (KcMainView *self)
 
     // Make copy button only sensitive when there are texts to copy
     input_clip_button = kc_tool_bar_get_copy_clipboard_button (self->input_toolbar);
-    g_object_bind_property_full (self->input_textarea, "text",
-                                 input_clip_button, "sensitive",
+    g_object_bind_property_full (G_OBJECT (self->input_textarea), "text",
+                                 G_OBJECT (input_clip_button), "sensitive",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  text_area_text_to_widget_sensitive,
                                  NULL,
                                  NULL,
                                  NULL);
     output_clip_button = kc_tool_bar_get_copy_clipboard_button (self->output_toolbar);
-    g_object_bind_property_full (self->output_textarea, "text",
-                                 output_clip_button, "sensitive",
+    g_object_bind_property_full (G_OBJECT (self->output_textarea), "text",
+                                 G_OBJECT (output_clip_button), "sensitive",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  text_area_text_to_widget_sensitive,
                                  NULL,
                                  NULL,
                                  NULL);
 
-    g_object_bind_property_full (self, "orientation",
-                                 separator, "orientation",
+    g_object_bind_property_full (G_OBJECT (self), "orientation",
+                                 G_OBJECT (separator), "orientation",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  self_orient_to_sep_orient,
                                  NULL,
@@ -253,8 +277,8 @@ kc_main_view_init (KcMainView *self)
                                  NULL);
 
     // Make clear button only sensitive when there are texts to clear
-    g_object_bind_property_full (self->input_textarea, "text",
-                                 clear_button, "sensitive",
+    g_object_bind_property_full (G_OBJECT (self->input_textarea), "text",
+                                 G_OBJECT (clear_button), "sensitive",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  text_area_text_to_widget_sensitive,
                                  NULL,
@@ -268,16 +292,12 @@ kc_main_view_init (KcMainView *self)
     // Text in the output textarea is also cleared accordingly
     g_signal_connect_swapped (clear_button, "clicked", G_CALLBACK (kc_text_area_clear_text), self->input_textarea);
 
+    g_signal_connect_swapped (self->input_toolbar, "notify::case-type", G_CALLBACK (save_input_case_type), self);
+    g_signal_connect_swapped (self->output_toolbar, "notify::case-type", G_CALLBACK (save_output_case_type), self);
+
+    g_settings_bind (self->settings, "input-text", self->input_textarea, "text", G_SETTINGS_BIND_DEFAULT);
+
 #if 0
-        input_toolbar.notify["case-type"].connect (() => {
-            Application.settings.set_enum ("input-case-type", input_toolbar.case_type);
-        });
-        output_toolbar.notify["case-type"].connect (() => {
-            Application.settings.set_enum ("output-case-type", output_toolbar.case_type);
-        });
-
-        Application.settings.bind ("input-text", input_textarea, "text", SettingsBindFlags.DEFAULT);
-
         // Perform conversion when:
         //
         //  * case type of the input text is changed

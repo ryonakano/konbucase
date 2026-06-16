@@ -12,7 +12,7 @@ G_BEGIN_DECLS
 #define KC_TYPE_TEXT_AREA (kc_text_area_get_type ())
 G_DECLARE_FINAL_TYPE (KcTextArea, kc_text_area, KC, TEXT_AREA, AdwBin)
 
-extern const char * kc_text_area_get_text (KcTextArea *self);
+extern const char *kc_text_area_get_text (KcTextArea *self);
 extern void kc_text_area_set_text (KcTextArea *self, const char *text);
 extern void kc_text_area_clear_text (KcTextArea *self);
 

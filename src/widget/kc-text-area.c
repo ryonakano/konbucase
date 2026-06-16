@@ -23,7 +23,7 @@ struct _KcTextArea {
 
     gboolean            editable;
     GtkSourceBuffer    *buffer;
-    const char         *text;
+    char               *text;
     GtkWidget          *source_view;
 };
 
@@ -85,7 +85,7 @@ kc_text_area_set_property (GObject        *object,
         self->editable = g_value_get_boolean (value);
         break;
     case PROP_TEXT:
-        self->text = g_value_get_string (value);
+        g_set_str (&(self->text), g_value_get_string (value));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -112,6 +112,8 @@ kc_text_area_dispose (GObject *object)
     g_clear_object (&(self->buffer));
 
     adw_bin_set_child (ADW_BIN (self), NULL);
+
+    g_clear_pointer (&(self->text), g_free);
 
     G_OBJECT_CLASS (kc_text_area_parent_class)->dispose (object);
 }
@@ -164,13 +166,13 @@ kc_text_area_init (KcTextArea *self)
     adw_bin_set_child (ADW_BIN (self), scrolled);
 
     // Sync with buffer text
-    g_object_bind_property (self->buffer, "text",
-                            self, "text",
+    g_object_bind_property (G_OBJECT (self->buffer), "text",
+                            G_OBJECT (self), "text",
                             G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
 
     // Apply theme changes to the source view
-    g_object_bind_property_full (gtk_settings, "gtk-application-prefer-dark-theme",
-                                 self->buffer, "style-scheme",
+    g_object_bind_property_full (G_OBJECT (gtk_settings), "gtk-application-prefer-dark-theme",
+                                 G_OBJECT (self->buffer), "style-scheme",
                                  G_BINDING_SYNC_CREATE | G_BINDING_SYNC_CREATE,
                                  prefer_dark_to_style_scheme,
                                  NULL,
@@ -196,7 +198,9 @@ kc_text_area_set_text (KcTextArea *self,
         return;
     }
 
-    self->text = text;
+    self->text = g_strdup (text);
+
+    g_object_notify_by_pspec (G_OBJECT (self), props[PROP_TEXT]);
 }
 
 void
