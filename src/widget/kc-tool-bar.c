@@ -59,13 +59,12 @@ localize_str (const char *str)
 
 static void
 case_factory_setup (GtkSignalListItemFactory   *factory,
-                    GObject                    *object,
-                    gpointer                    user_data)
+                    GObject                    *object)
 {
     GtkListItem *item = GTK_LIST_ITEM (object);
     KcDropDownButtonContent *content;
 
-    (void) user_data;
+    (void) factory;
 
     content = kc_dropdown_button_content_new ();
     gtk_list_item_set_child (item, GTK_WIDGET (content));
@@ -73,15 +72,14 @@ case_factory_setup (GtkSignalListItemFactory   *factory,
 
 static void
 case_factory_bind (GtkSignalListItemFactory    *factory,
-                   GObject                     *object,
-                   gpointer                     user_data)
+                   GObject                     *object)
 {
     GtkListItem *item = GTK_LIST_ITEM (object);
     KcDropDownButtonContent *content;
     KcCaseListItem *model;
     const char *name;
 
-    (void) user_data;
+    (void) factory;
 
     content = KC_DROPDOWN_BUTTON_CONTENT (gtk_list_item_get_child (item));
     model = KC_CASE_LIST_ITEM (gtk_list_item_get_item (item));
@@ -93,13 +91,12 @@ case_factory_bind (GtkSignalListItemFactory    *factory,
 
 static void
 case_list_factory_setup (GtkSignalListItemFactory   *factory,
-                         GObject                    *object,
-                         gpointer                    user_data)
+                         GObject                    *object)
 {
     GtkListItem *item = GTK_LIST_ITEM (object);
     KcDropDownRow *row;
 
-    (void) user_data;
+    (void) factory;
 
     row = kc_dropdown_row_new ();
     gtk_list_item_set_child (item, GTK_WIDGET (row));
@@ -107,8 +104,7 @@ case_list_factory_setup (GtkSignalListItemFactory   *factory,
 
 static void
 case_list_factory_bind (GtkSignalListItemFactory    *factory,
-                        GObject                     *object,
-                        gpointer                     user_data)
+                        GObject                     *object)
 {
     GtkListItem *item = GTK_LIST_ITEM (object);
     KcDropDownRow *row;
@@ -116,7 +112,7 @@ case_list_factory_bind (GtkSignalListItemFactory    *factory,
     const char *name;
     const char *description;
 
-    (void) user_data;
+    (void) factory;
 
     row = KC_DROPDOWN_ROW (gtk_list_item_get_child (item));
     model = KC_CASE_LIST_ITEM (gtk_list_item_get_item (item));

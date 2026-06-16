@@ -164,6 +164,8 @@ kc_case_list_item_set_case_type (KcCaseListItem *self,
     }
 
     self->case_type = case_type;
+
+    g_object_notify_by_pspec (G_OBJECT (self), props[PROP_CASE_TYPE]);
 }
 
 const gchar *
@@ -185,6 +187,8 @@ kc_case_list_item_set_name (KcCaseListItem  *self,
     }
 
     self->name = g_strdup (name);
+
+    g_object_notify_by_pspec (G_OBJECT (self), props[PROP_NAME]);
 }
 
 const gchar *
@@ -206,6 +210,8 @@ kc_case_list_item_set_description (KcCaseListItem   *self,
     }
 
     self->description = g_strdup (description);
+
+    g_object_notify_by_pspec (G_OBJECT (self), props[PROP_DESCRIPTION]);
 }
 
 /**

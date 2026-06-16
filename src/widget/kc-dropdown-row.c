@@ -35,31 +35,25 @@ kc_dropdown_row_class_init (KcDropDownRowClass *klass)
 static void
 kc_dropdown_row_init (KcDropDownRow *self)
 {
-    GtkWidget *title;
-    GtkWidget *description;
-
     gtk_orientable_set_orientation (GTK_ORIENTABLE (self), GTK_ORIENTATION_VERTICAL);
     gtk_box_set_spacing (GTK_BOX (self), 2);
 
-    title = gtk_label_new (NULL);
-    gtk_widget_set_hexpand (title, TRUE);
-    gtk_widget_add_css_class (title, "heading");
-    gtk_label_set_width_chars (GTK_LABEL (title), 25);
-    gtk_label_set_wrap (GTK_LABEL (title), TRUE);
-    gtk_label_set_xalign (GTK_LABEL (title), 0);
+    self->title = gtk_label_new (NULL);
+    gtk_widget_set_hexpand (self->title, TRUE);
+    gtk_widget_add_css_class (self->title, "heading");
+    gtk_label_set_width_chars (GTK_LABEL (self->title), 25);
+    gtk_label_set_wrap (GTK_LABEL (self->title), TRUE);
+    gtk_label_set_xalign (GTK_LABEL (self->title), 0);
 
-    description = gtk_label_new (NULL);
-    gtk_widget_set_hexpand (description, TRUE);
-    gtk_widget_add_css_class (description, "dim-label");
-    gtk_label_set_width_chars (GTK_LABEL (description), 25);
-    gtk_label_set_wrap (GTK_LABEL (description), TRUE);
-    gtk_label_set_xalign (GTK_LABEL (description), 0);
+    self->description = gtk_label_new (NULL);
+    gtk_widget_set_hexpand (self->description, TRUE);
+    gtk_widget_add_css_class (self->description, "dim-label");
+    gtk_label_set_width_chars (GTK_LABEL (self->description), 25);
+    gtk_label_set_wrap (GTK_LABEL (self->description), TRUE);
+    gtk_label_set_xalign (GTK_LABEL (self->description), 0);
 
-    gtk_box_append (GTK_BOX (self), title);
-    self->title = title;
-
-    gtk_box_append (GTK_BOX (self), description);
-    self->description = description;
+    gtk_box_append (GTK_BOX (self), self->title);
+    gtk_box_append (GTK_BOX (self), self->description);
 }
 
 void
