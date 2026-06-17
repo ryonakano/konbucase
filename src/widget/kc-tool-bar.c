@@ -51,10 +51,10 @@ struct _KcToolBar {
 
 G_DEFINE_FINAL_TYPE (KcToolBar, kc_tool_bar, ADW_TYPE_BIN)
 
-static const char *
-localize_str (const char *str)
+static gchar *
+localize_str (const gchar *str)
 {
-    return _(str);
+    return g_strdup (_(str));
 }
 
 static void
