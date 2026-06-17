@@ -124,6 +124,62 @@ case_list_factory_bind (GtkSignalListItemFactory    *factory,
     kc_dropdown_row_set_description (row, _(description));
 }
 
+static gboolean
+case_type_to_selected (GBinding        *binding,
+                       const GValue    *case_type,
+                       GValue          *selected,
+                       gpointer         user_data)
+{
+    GListStore *case_listmodel = G_LIST_STORE (user_data);
+    KcCaseType _case_type;
+    guint pos;
+    gboolean found;
+
+    _case_type = g_value_get_enum (case_type);
+
+    found = g_list_store_find_with_equal_func (case_listmodel,
+                                               // Find with case type
+                                               kc_case_list_item_new (_case_type, "", ""),
+                                               (GEqualFunc) kc_case_list_item_equals,
+                                               &pos);
+    if (!found) {
+        return FALSE;
+    }
+
+    g_value_set_uint (selected, pos);
+
+    return TRUE;
+}
+
+static gboolean
+selected_to_case_type (GBinding        *binding,
+                       const GValue    *selected,
+                       GValue          *case_type,
+                       gpointer         user_data)
+{
+    GListStore *case_listmodel = G_LIST_STORE (user_data);
+    guint pos;
+    KcCaseListItem *selected_item;
+    KcCaseType _case_type;
+
+    pos = g_value_get_uint (selected);
+
+    if (pos == GTK_INVALID_LIST_POSITION) {
+        // No item is selected
+        return FALSE;
+    }
+
+    selected_item = KC_CASE_LIST_ITEM (g_list_model_get_item (G_LIST_MODEL (case_listmodel), pos));
+    if (!selected_item) {
+        return FALSE;
+    }
+
+    _case_type = kc_case_list_item_get_case_type (selected_item);
+    g_value_set_enum (case_type, _case_type);
+
+    return true;
+}
+
 static void
 notify_dropdown_changed (KcToolBar *self)
 {
@@ -333,27 +389,13 @@ kc_tool_bar_init (KcToolBar *self)
 
     adw_bin_set_child (ADW_BIN (self), toolbar);
 
-#if 0
     g_object_bind_property_full (G_OBJECT (self), "case-type",
                                  G_OBJECT (case_dropdown), "selected",
-                                 G_BIND_BIDIRECTIONAL | G_BIND_SYNC_CREATE,
+                                 G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE,
                                  case_type_to_selected,
                                  selected_to_case_type,
-                                 NULL,
-                                 NULL);
-
-    this.bind_property (
-        "case-type",
-        case_dropdown, "selected",
-        BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
-        case_to_selected,
-        selected_to_case
-    );
-
-    case_dropdown.notify["selected"].connect (() => {
-        dropdown_changed ();
-    });
-#endif
+                                 g_object_ref (case_listmodel),
+                                 g_object_unref);
 
     g_signal_connect_swapped (case_dropdown, "notify::selected", G_CALLBACK (notify_dropdown_changed), self);
     g_signal_connect_swapped (self->copy_button, "clicked", G_CALLBACK (emit_copy_button_clicked), self);

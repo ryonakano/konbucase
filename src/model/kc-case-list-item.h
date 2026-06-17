@@ -24,6 +24,7 @@ extern void kc_case_list_item_set_name (KcCaseListItem *self, const gchar *name)
 extern const gchar * kc_case_list_item_get_description (KcCaseListItem *self);
 extern void kc_case_list_item_set_description (KcCaseListItem *self, const gchar *description);
 
+extern gboolean kc_case_list_item_equals (KcCaseListItem *a, KcCaseListItem *b);
 extern KcCaseListItem *kc_case_list_item_new (KcCaseType case_type, const gchar *name, const gchar *description);
 
 G_END_DECLS

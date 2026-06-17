@@ -214,6 +214,16 @@ kc_case_list_item_set_description (KcCaseListItem   *self,
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_DESCRIPTION]);
 }
 
+gboolean
+kc_case_list_item_equals (KcCaseListItem *self, KcCaseListItem *other)
+{
+    g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), FALSE);
+    g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (other), FALSE);
+
+    // Case type won't be duplicated, so it's enough to compare only with it
+    return self->case_type == other->case_type;
+}
+
 /**
  * kc_case_list_item_new:
  * @case_type: type of the letter case
