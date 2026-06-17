@@ -29,12 +29,6 @@ gnome = import('gnome')
 i18n = import('i18n')
 cc = meson.get_compiler('c')
 
-# TODO: Remove when porting to C completed
-add_project_arguments(
-  '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
-  language: 'c',
-)
-
 project_c_args = []
 c_args = [
   # TODO: Remove

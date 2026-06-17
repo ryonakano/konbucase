@@ -1,7 +1,7 @@
 data/konbucase.desktop.in.in
 data/konbucase.metainfo.xml.in.in
 data/ui/help-overlay.blp
-src/Application.vala
-src/MainWindow.vala
-src/View/MainView.vala
-src/Widget/Toolbar.vala
+src/kc-application.c
+src/kc-main-window.c
+src/view/kc-main-view.c
+src/widget/kc-tool-bar.c

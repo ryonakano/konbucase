@@ -144,13 +144,29 @@ save_output_case_type (KcMainView *self)
 }
 
 static void
+do_convert (KcMainView *self)
+{
+    KcCaseType input_case;
+    const char *input_text;
+    KcCaseType output_case;
+    char *result;
+
+    input_case = kc_tool_bar_get_case_type (self->input_toolbar);
+    input_text = kc_text_area_get_text (self->input_textarea);
+    output_case = kc_tool_bar_get_case_type (self->output_toolbar);
+
+    result = kc_case_convert_do_convert (self->converter, input_case, input_text, output_case);
+
+    kc_text_area_set_text (self->output_textarea, result);
+}
+
+static void
 kc_main_view_dispose (GObject *object)
 {
     KcMainView *self = KC_MAIN_VIEW (object);
 
     g_clear_object (&(self->settings));
-
-    // TODO
+    g_clear_object (&(self->converter));
 
     G_OBJECT_CLASS (kc_main_view_parent_class)->dispose (object);
 }
@@ -297,24 +313,25 @@ kc_main_view_init (KcMainView *self)
 
     g_settings_bind (self->settings, "input-text", self->input_textarea, "text", G_SETTINGS_BIND_DEFAULT);
 
-#if 0
-        // Perform conversion when:
-        //
-        //  * case type of the input text is changed
-        //  * case type of the output text is changed
-        //  * the input text is changed
-        //  * the window is initialized
-        input_case_handler = input_toolbar.dropdown_changed.connect (() => {
-            output_textarea.text = do_convert (input_toolbar.case_type, input_textarea.text, output_toolbar.case_type);
-        });
-        output_case_handler = output_toolbar.dropdown_changed.connect (() => {
-            output_textarea.text = do_convert (input_toolbar.case_type, input_textarea.text, output_toolbar.case_type);
-        });
-        input_text_handler = input_textarea.notify["text"].connect (() => {
-            output_textarea.text = do_convert (input_toolbar.case_type, input_textarea.text, output_toolbar.case_type);
-        });
-        output_textarea.text = do_convert (input_toolbar.case_type, input_textarea.text, output_toolbar.case_type);
-#endif
+    // Perform conversion when:
+    //
+    //  * case type of the input text is changed
+    //  * case type of the output text is changed
+    //  * the input text is changed
+    //  * the window is initialized
+    self->input_case_handler = g_signal_connect_swapped (self->input_toolbar,
+                                                         "dropdown-changed",
+                                                         G_CALLBACK (do_convert),
+                                                         self);
+    self->output_case_handler = g_signal_connect_swapped (self->output_toolbar,
+                                                          "dropdown-changed",
+                                                          G_CALLBACK (do_convert),
+                                                          self);
+    self->input_text_handler = g_signal_connect_swapped (self->input_textarea,
+                                                         "notify::text",
+                                                         G_CALLBACK (do_convert),
+                                                         self);
+    do_convert (self);
 }
 
 void
