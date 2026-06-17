@@ -375,7 +375,7 @@ kc_tool_bar_get_copy_clipboard_button (KcToolBar *self)
 {
     g_return_val_if_fail (KC_IS_TOOL_BAR (self), NULL);
 
-    return g_object_ref (self->copy_button);
+    return self->copy_button;
 }
 
 void

@@ -188,8 +188,8 @@ kc_main_view_init (KcMainView *self)
 
     g_autoptr (GtkSizeGroup) size_group;
 
-    g_autoptr (GtkWidget) input_clip_button;
-    g_autoptr (GtkWidget) output_clip_button;
+    GtkWidget *input_clip_button;
+    GtkWidget *output_clip_button;
 
     self->settings = g_settings_new (APP_ID);
 
