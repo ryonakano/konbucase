@@ -125,11 +125,14 @@ case_list_factory_bind (GtkSignalListItemFactory    *factory,
 }
 
 static void
-emit_copy_button_clicked (KcToolBar   *self,
-                          gpointer    user_data)
+notify_dropdown_changed (KcToolBar *self)
 {
-    (void) user_data;
+    g_signal_emit (self, signals[SIGNAL_DROPDOWN_CHANGED], 0);
+}
 
+static void
+emit_copy_button_clicked (KcToolBar *self)
+{
     g_signal_emit (self, signals[SIGNAL_COPY_BUTTON_CLICKED], 0);
 }
 
@@ -190,7 +193,7 @@ kc_tool_bar_dispose (GObject *object)
 {
     KcToolBar *self = KC_TOOL_BAR (object);
 
-    // TODO
+    adw_bin_set_child (ADW_BIN (self), NULL);
 
     g_clear_pointer (&(self->header_label), g_free);
 
@@ -331,6 +334,14 @@ kc_tool_bar_init (KcToolBar *self)
     adw_bin_set_child (ADW_BIN (self), toolbar);
 
 #if 0
+    g_object_bind_property_full (G_OBJECT (self), "case-type",
+                                 G_OBJECT (case_dropdown), "selected",
+                                 G_BIND_BIDIRECTIONAL | G_BIND_SYNC_CREATE,
+                                 case_type_to_selected,
+                                 selected_to_case_type,
+                                 NULL,
+                                 NULL);
+
     this.bind_property (
         "case-type",
         case_dropdown, "selected",
@@ -344,6 +355,7 @@ kc_tool_bar_init (KcToolBar *self)
     });
 #endif
 
+    g_signal_connect_swapped (case_dropdown, "notify::selected", G_CALLBACK (notify_dropdown_changed), self);
     g_signal_connect_swapped (self->copy_button, "clicked", G_CALLBACK (emit_copy_button_clicked), self);
 }
 
