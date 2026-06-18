@@ -260,7 +260,7 @@ kc_main_view_init (KcMainView *self)
     gtk_size_group_add_widget (size_group, GTK_WIDGET (input_pane));
     gtk_size_group_add_widget (size_group, GTK_WIDGET (output_pane));
 
-    self->converter = ch_case_converter_new ();
+    self->converter = chcase_converter_new ();
 
     // The action users most frequently take is to input the input text.
     // So, forcus to the input text area by default.
