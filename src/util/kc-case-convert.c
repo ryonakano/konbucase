@@ -22,7 +22,7 @@ kc_case_convert_to_case_type (ChCaseCase chcase_case)
     case CHCASE_CASE_SENTENCE:
         return KC_CASE_TYPE_SENTENCE;
     default:
-        g_warning ("Invalid ChCase.Case: %d", chcase_case);
+        g_warning ("Invalid ChCase.Case: %u", chcase_case);
         return KC_CASE_TYPE_SPACE_SEPARATED;
     }
 }
@@ -44,7 +44,7 @@ kc_case_convert_to_chcase_case (KcCaseType case_type)
     case KC_CASE_TYPE_SENTENCE:
         return CHCASE_CASE_SENTENCE;
     default:
-        g_warning ("Invalid KcCaseType: %d", case_type);
+        g_warning ("Invalid KcCaseType: %u", case_type);
         return CHCASE_CASE_SPACE_SEPARATED;
     }
 }

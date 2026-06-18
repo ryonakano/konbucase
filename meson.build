@@ -60,6 +60,7 @@ c_args = [
   '-Werror=undef',
   '-Werror=write-strings',
   '-Wformat-nonliteral',
+  '-Wformat-signedness',
   '-Wignored-qualifiers',
   '-Wimplicit-function-declaration',
   '-Wlogical-op',

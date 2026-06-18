@@ -38,8 +38,10 @@ kc_convert_to_str_scheme (AdwColorScheme adw_scheme)
         return KC_COLOR_SCHEME_FORCE_LIGHT;
     case ADW_COLOR_SCHEME_FORCE_DARK:
         return KC_COLOR_SCHEME_FORCE_DARK;
+    case ADW_COLOR_SCHEME_PREFER_LIGHT:
+    case ADW_COLOR_SCHEME_PREFER_DARK:
     default:
-        g_warning ("Unsupported color scheme: %d", adw_scheme);
+        g_warning ("Unsupported color scheme: %u", adw_scheme);
         return KC_COLOR_SCHEME_DEFAULT;
     }
 }
