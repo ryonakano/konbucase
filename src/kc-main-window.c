@@ -123,7 +123,7 @@ kc_main_window_init (KcMainWindow *self)
     gtk_window_set_title (GTK_WINDOW (self), APP_NAME);
     adw_application_window_set_content (ADW_APPLICATION_WINDOW (self), toolbar_view);
 
-    g_signal_connect (swap_button, "clicked", G_CALLBACK (kc_main_view_swap), main_view);
+    g_signal_connect_swapped (swap_button, "clicked", G_CALLBACK (kc_main_view_swap), main_view);
 
     g_signal_connect_swapped (main_view, "text-copied", G_CALLBACK (kc_main_window_show_toast), overlay);
 }

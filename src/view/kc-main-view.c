@@ -340,6 +340,8 @@ kc_main_view_swap (KcMainView *self)
     KcCaseType old_input_case;
     KcCaseType old_output_case;
 
+    g_return_if_fail (KC_IS_MAIN_VIEW (self));
+
     // Changing value of input_toolbar.case_type, output_toolbar.case_type, and input_textarea.text causes
     // value of output_textarea.text being changed, which is unexpected convert.
     // So, disable corresponding signal handlers during swap.
