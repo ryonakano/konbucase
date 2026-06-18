@@ -339,6 +339,8 @@ kc_main_view_swap (KcMainView *self)
 {
     KcCaseType old_input_case;
     KcCaseType old_output_case;
+    const char *old_input_text;
+    const char *old_output_text;
 
     g_return_if_fail (KC_IS_MAIN_VIEW (self));
 
@@ -354,6 +356,11 @@ kc_main_view_swap (KcMainView *self)
 
     kc_tool_bar_set_case_type (self->input_toolbar, old_output_case);
     kc_tool_bar_set_case_type (self->output_toolbar, old_input_case);
+
+    old_input_text = kc_text_area_get_text (self->input_textarea);
+    old_output_text = kc_text_area_get_text (self->output_textarea);
+    kc_text_area_set_text (self->input_textarea, old_output_text);
+    kc_text_area_set_text (self->output_textarea, old_input_text);
 
     g_signal_handler_unblock (self->input_toolbar, self->input_case_handler);
     g_signal_handler_unblock (self->output_toolbar, self->output_case_handler);
