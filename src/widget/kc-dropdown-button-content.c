@@ -114,7 +114,7 @@ kc_dropdown_button_content_set_label_text (KcDropDownButtonContent *self, const 
         return;
     }
 
-    self->label_text = g_strdup (label_text);
+    g_set_str (&(self->label_text), label_text);
 
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_LABEL_TEXT]);
 }

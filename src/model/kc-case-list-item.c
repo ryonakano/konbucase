@@ -186,7 +186,7 @@ kc_case_list_item_set_name (KcCaseListItem  *self,
         return;
     }
 
-    self->name = g_strdup (name);
+    g_set_str (&(self->name), name);
 
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_NAME]);
 }
@@ -209,7 +209,7 @@ kc_case_list_item_set_description (KcCaseListItem   *self,
         return;
     }
 
-    self->description = g_strdup (description);
+    g_set_str (&(self->description),description);
 
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_DESCRIPTION]);
 }

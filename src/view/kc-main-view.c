@@ -101,10 +101,10 @@ static void
 copy_and_notify_input (KcMainView *self)
 {
     GdkClipboard *clipboard;
-    const char *text;
+    g_autofree char *text;
 
     clipboard = gtk_widget_get_clipboard (GTK_WIDGET (self));
-    text = kc_text_area_get_text (self->input_textarea);
+    text = kc_text_area_dup_text (self->input_textarea);
 
     gdk_clipboard_set_text (clipboard, text);
 
@@ -115,10 +115,10 @@ static void
 copy_and_notify_output (KcMainView *self)
 {
     GdkClipboard *clipboard;
-    const char *text;
+    g_autofree char *text;
 
     clipboard = gtk_widget_get_clipboard (GTK_WIDGET (self));
-    text = kc_text_area_get_text (self->output_textarea);
+    text = kc_text_area_dup_text (self->output_textarea);
 
     gdk_clipboard_set_text (clipboard, text);
 
@@ -147,12 +147,12 @@ static void
 do_convert (KcMainView *self)
 {
     KcCaseType input_case;
-    const char *input_text;
+    g_autofree char *input_text;
     KcCaseType output_case;
-    char *result;
+    g_autofree char *result;
 
     input_case = kc_tool_bar_get_case_type (self->input_toolbar);
-    input_text = kc_text_area_get_text (self->input_textarea);
+    input_text = kc_text_area_dup_text (self->input_textarea);
     output_case = kc_tool_bar_get_case_type (self->output_toolbar);
 
     result = kc_case_convert_do_convert (self->converter, input_case, input_text, output_case);
@@ -339,8 +339,8 @@ kc_main_view_swap (KcMainView *self)
 {
     KcCaseType old_input_case;
     KcCaseType old_output_case;
-    const char *old_input_text;
-    const char *old_output_text;
+    g_autofree char *old_input_text;
+    g_autofree char *old_output_text;
 
     g_return_if_fail (KC_IS_MAIN_VIEW (self));
 
@@ -357,8 +357,8 @@ kc_main_view_swap (KcMainView *self)
     kc_tool_bar_set_case_type (self->input_toolbar, old_output_case);
     kc_tool_bar_set_case_type (self->output_toolbar, old_input_case);
 
-    old_input_text = kc_text_area_get_text (self->input_textarea);
-    old_output_text = kc_text_area_get_text (self->output_textarea);
+    old_input_text = kc_text_area_dup_text (self->input_textarea);
+    old_output_text = kc_text_area_dup_text (self->output_textarea);
     kc_text_area_set_text (self->input_textarea, old_output_text);
     kc_text_area_set_text (self->output_textarea, old_input_text);
 

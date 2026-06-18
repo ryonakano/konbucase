@@ -180,12 +180,12 @@ kc_text_area_init (KcTextArea *self)
                                  NULL);
 }
 
-const char *
-kc_text_area_get_text (KcTextArea *self)
+char *
+kc_text_area_dup_text (KcTextArea *self)
 {
     g_return_val_if_fail (KC_IS_TEXT_AREA (self), NULL);
 
-    return self->text;
+    return g_strdup (self->text);
 }
 
 void
@@ -198,7 +198,7 @@ kc_text_area_set_text (KcTextArea *self,
         return;
     }
 
-    self->text = g_strdup (text);
+    g_set_str (&(self->text), text);
 
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_TEXT]);
 }
