@@ -31,8 +31,6 @@ cc = meson.get_compiler('c')
 
 project_c_args = []
 c_args = [
-  # TODO: Remove
-  '-Wpedantic',
   '-Wcast-align',
   '-Wdeclaration-after-statement',
   '-Werror=address',
