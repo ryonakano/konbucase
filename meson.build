@@ -4,7 +4,7 @@ project(
   version: '4.5.1',
   meson_version: '>= 0.58.0',
   default_options: [
-    'warning_level=2',
+    'warning_level=2', # i.e. -Wall -Wextra
   ],
 )
 
