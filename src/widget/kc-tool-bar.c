@@ -305,8 +305,8 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
 static void
 kc_tool_bar_init (KcToolBar *self)
 {
-    g_autoptr (GtkListItemFactory) case_factory;
-    g_autoptr (GtkListItemFactory) case_list_factory;
+    g_autoptr (GtkListItemFactory) case_factory = NULL;
+    g_autoptr (GtkListItemFactory) case_list_factory = NULL;
     GListStore *case_listmodel;
     GtkExpression *l10n_case_exp_params[N_L10N_CASE_EXP_PARAMS];
     GtkExpression *l10n_case_exp;

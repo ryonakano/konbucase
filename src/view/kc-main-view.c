@@ -101,7 +101,7 @@ static void
 copy_and_notify_input (KcMainView *self)
 {
     GdkClipboard *clipboard;
-    g_autofree char *text;
+    g_autofree char *text = NULL;
 
     clipboard = gtk_widget_get_clipboard (GTK_WIDGET (self));
     text = kc_text_area_dup_text (self->input_textarea);
@@ -115,7 +115,7 @@ static void
 copy_and_notify_output (KcMainView *self)
 {
     GdkClipboard *clipboard;
-    g_autofree char *text;
+    g_autofree char *text = NULL;
 
     clipboard = gtk_widget_get_clipboard (GTK_WIDGET (self));
     text = kc_text_area_dup_text (self->output_textarea);
@@ -147,9 +147,9 @@ static void
 do_convert (KcMainView *self)
 {
     KcCaseType input_case;
-    g_autofree char *input_text;
+    g_autofree char *input_text = NULL;
     KcCaseType output_case;
-    g_autofree char *result;
+    g_autofree char *result = NULL;
 
     input_case = kc_tool_bar_get_case_type (self->input_toolbar);
     input_text = kc_text_area_dup_text (self->input_textarea);
@@ -202,7 +202,7 @@ kc_main_view_init (KcMainView *self)
     KcCaseType output_case_type;
     GtkWidget *output_pane;
 
-    g_autoptr (GtkSizeGroup) size_group;
+    g_autoptr (GtkSizeGroup) size_group = NULL;
 
     GtkWidget *input_clip_button;
     GtkWidget *output_clip_button;
@@ -339,8 +339,8 @@ kc_main_view_swap (KcMainView *self)
 {
     KcCaseType old_input_case;
     KcCaseType old_output_case;
-    g_autofree char *old_input_text;
-    g_autofree char *old_output_text;
+    g_autofree char *old_input_text = NULL;
+    g_autofree char *old_output_text = NULL;
 
     g_return_if_fail (KC_IS_MAIN_VIEW (self));
 
