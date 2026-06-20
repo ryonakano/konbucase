@@ -12,4 +12,5 @@
 
 extern KcCaseType kc_case_convert_to_case_type (ChCaseCase chcase_case);
 extern ChCaseCase kc_case_convert_to_chcase_case (KcCaseType case_type);
+
 extern char *kc_case_convert_do_convert (ChCaseConverter *converter, KcCaseType input_case, const char *input_text, KcCaseType output_case);

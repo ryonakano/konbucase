@@ -46,19 +46,16 @@ struct _KcMainView {
 G_DEFINE_FINAL_TYPE (KcMainView, kc_main_view, GTK_TYPE_BOX)
 
 static gboolean
-text_area_text_to_widget_sensitive (GBinding       *binding,
-                                    const GValue   *text,
-                                    GValue         *sensitive,
-                                    gpointer        user_data)
+text_area_text_to_widget_sensitive (GBinding     *binding,
+                                    const GValue *text,
+                                    GValue       *sensitive,
+                                    gpointer      user_data)
 {
-    const char *_text;
+    const gchar *_text;
     size_t len;
 
-    (void) binding;
-    (void) user_data;
-
     _text = g_value_get_string (text);
-    if (!_text) {
+    if (G_UNLIKELY (!_text)) {
         g_value_set_boolean (sensitive, FALSE);
 
         return TRUE;
@@ -71,10 +68,10 @@ text_area_text_to_widget_sensitive (GBinding       *binding,
 }
 
 static gboolean
-self_orient_to_sep_orient (GBinding       *binding,
-                           const GValue   *self_orient,
-                           GValue         *sep_orient,
-                           gpointer        user_data)
+self_orient_to_sep_orient (GBinding     *binding,
+                           const GValue *self_orient,
+                           GValue       *sep_orient,
+                           gpointer      user_data)
 {
     gint _self_orient;
     gint _sep_orient;
@@ -165,8 +162,8 @@ kc_main_view_dispose (GObject *object)
 {
     KcMainView *self = KC_MAIN_VIEW (object);
 
-    g_clear_object (&(self->settings));
-    g_clear_object (&(self->converter));
+    g_clear_object (&self->settings);
+    g_clear_object (&self->converter);
 
     G_OBJECT_CLASS (kc_main_view_parent_class)->dispose (object);
 }
@@ -319,18 +316,12 @@ kc_main_view_init (KcMainView *self)
     //  * case type of the output text is changed
     //  * the input text is changed
     //  * the window is initialized
-    self->input_case_handler = g_signal_connect_swapped (self->input_toolbar,
-                                                         "dropdown-changed",
-                                                         G_CALLBACK (do_convert),
-                                                         self);
-    self->output_case_handler = g_signal_connect_swapped (self->output_toolbar,
-                                                          "dropdown-changed",
-                                                          G_CALLBACK (do_convert),
-                                                          self);
-    self->input_text_handler = g_signal_connect_swapped (self->input_textarea,
-                                                         "notify::text",
-                                                         G_CALLBACK (do_convert),
-                                                         self);
+    self->input_case_handler = g_signal_connect_swapped (self->input_toolbar, "dropdown-changed",
+                                                         G_CALLBACK (do_convert), self);
+    self->output_case_handler = g_signal_connect_swapped (self->output_toolbar, "dropdown-changed",
+                                                         G_CALLBACK (do_convert), self);
+    self->input_text_handler = g_signal_connect_swapped (self->input_textarea, "notify::text",
+                                                         G_CALLBACK (do_convert), self);
     do_convert (self);
 }
 

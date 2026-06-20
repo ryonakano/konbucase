@@ -7,5 +7,5 @@
 
 #include <adwaita.h>
 
-extern AdwColorScheme kc_convert_to_adw_scheme (const gchar *str_scheme);
-extern const gchar *kc_convert_to_str_scheme (AdwColorScheme adw_scheme);
+extern AdwColorScheme kc_convert_to_adw_scheme (const char *str_scheme);
+extern const char *kc_convert_to_str_scheme (AdwColorScheme adw_scheme);

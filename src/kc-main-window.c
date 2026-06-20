@@ -35,12 +35,14 @@ kc_main_window_show_toast (AdwToastOverlay *overlay)
     adw_toast_overlay_add_toast (overlay, toast);
 }
 
+// TODO: Remove?
 static void
 kc_main_window_dispose (GObject *object)
 {
     G_OBJECT_CLASS (kc_main_window_parent_class)->dispose (object);
 }
 
+// TODO: Remove?
 static void
 kc_main_window_class_init (KcMainWindowClass *klass)
 {
@@ -54,7 +56,7 @@ kc_main_window_init (KcMainWindow *self)
 {
     g_autoptr(GMenu) style_submenu = NULL;
     g_autoptr(GMenu) main_menu = NULL;
-    g_autofree char *about_label = NULL;
+    g_autofree gchar *about_label = NULL;
     GtkWidget *swap_button;
     GtkWidget *menu_button;
     GtkWidget *header;

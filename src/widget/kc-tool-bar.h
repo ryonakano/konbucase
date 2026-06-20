@@ -21,6 +21,7 @@ extern void kc_tool_bar_set_case_type (KcToolBar *self, KcCaseType case_type);
 extern GtkWidget *kc_tool_bar_get_copy_clipboard_button (KcToolBar *self);
 
 extern void kc_tool_bar_append (KcToolBar *self, GtkWidget *widget);
-extern KcToolBar *kc_tool_bar_new (const gchar *header_label);
+
+extern KcToolBar *kc_tool_bar_new (const char *header_label);
 
 G_END_DECLS

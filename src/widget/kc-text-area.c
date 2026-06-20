@@ -30,10 +30,10 @@ struct _KcTextArea {
 G_DEFINE_FINAL_TYPE (KcTextArea, kc_text_area, ADW_TYPE_BIN)
 
 static gboolean
-prefer_dark_to_style_scheme (GBinding      *binding,
-                             const GValue  *prefer_dark,
-                             GValue        *style_scheme,
-                             gpointer       user_data)
+prefer_dark_to_style_scheme (GBinding     *binding,
+                             const GValue *prefer_dark,
+                             GValue       *style_scheme,
+                             gpointer      user_data)
 {
     gboolean _prefer_dark;
     GtkSourceStyleScheme *_style_scheme;
@@ -52,10 +52,10 @@ prefer_dark_to_style_scheme (GBinding      *binding,
 }
 
 static void
-kc_text_area_get_property (GObject        *object,
-                           guint           prop_id,
-                           GValue         *value,
-                           GParamSpec     *pspec)
+kc_text_area_get_property (GObject    *object,
+                           guint       prop_id,
+                           GValue     *value,
+                           GParamSpec *pspec)
 {
     KcTextArea *self = KC_TEXT_AREA (object);
 
@@ -73,10 +73,10 @@ kc_text_area_get_property (GObject        *object,
 }
 
 static void
-kc_text_area_set_property (GObject        *object,
-                           guint           prop_id,
-                           const GValue   *value,
-                           GParamSpec     *pspec)
+kc_text_area_set_property (GObject      *object,
+                           guint         prop_id,
+                           const GValue *value,
+                           GParamSpec   *pspec)
 {
     KcTextArea *self = KC_TEXT_AREA (object);
 
@@ -85,7 +85,7 @@ kc_text_area_set_property (GObject        *object,
         self->editable = g_value_get_boolean (value);
         break;
     case PROP_TEXT:
-        g_set_str (&(self->text), g_value_get_string (value));
+        g_set_str (&self->text, g_value_get_string (value));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -109,11 +109,11 @@ kc_text_area_dispose (GObject *object)
     KcTextArea *self = KC_TEXT_AREA (object);
 
     gtk_text_view_set_buffer (GTK_TEXT_VIEW (self->source_view), NULL);
-    g_clear_object (&(self->buffer));
+    g_clear_object (&self->buffer);
 
     adw_bin_set_child (ADW_BIN (self), NULL);
 
-    g_clear_pointer (&(self->text), g_free);
+    g_clear_pointer (&self->text, g_free);
 
     G_OBJECT_CLASS (kc_text_area_parent_class)->dispose (object);
 }
@@ -131,12 +131,12 @@ kc_text_area_class_init (KcTextAreaClass *klass)
     props[PROP_EDITABLE] =
         g_param_spec_boolean ("editable", NULL, NULL,
                               FALSE,
-                              G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS);
+                              G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     props[PROP_TEXT] =
         g_param_spec_string ("text", NULL, NULL,
                              NULL,
-                             G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+                             G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     g_object_class_install_properties (object_class, N_PROPS, props);
 }
@@ -198,7 +198,7 @@ kc_text_area_set_text (KcTextArea *self,
         return;
     }
 
-    g_set_str (&(self->text), text);
+    g_set_str (&self->text, text);
 
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_TEXT]);
 }

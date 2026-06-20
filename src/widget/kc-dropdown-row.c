@@ -57,8 +57,8 @@ kc_dropdown_row_init (KcDropDownRow *self)
 }
 
 void
-kc_dropdown_row_set_title (KcDropDownRow   *self,
-                           const char      *str)
+kc_dropdown_row_set_title (KcDropDownRow *self,
+                           const char    *str)
 {
     g_return_if_fail (KC_IS_DROPDOWN_ROW (self));
 
@@ -66,7 +66,7 @@ kc_dropdown_row_set_title (KcDropDownRow   *self,
 }
 
 const char *
-kc_dropdown_row_get_title (KcDropDownRow   *self)
+kc_dropdown_row_get_title (KcDropDownRow *self)
 {
     g_return_val_if_fail (KC_IS_DROPDOWN_ROW (self), NULL);
 
@@ -74,8 +74,8 @@ kc_dropdown_row_get_title (KcDropDownRow   *self)
 }
 
 void
-kc_dropdown_row_set_description (KcDropDownRow   *self,
-                                 const char      *str)
+kc_dropdown_row_set_description (KcDropDownRow *self,
+                                 const char    *str)
 {
     g_return_if_fail (KC_IS_DROPDOWN_ROW (self));
 
@@ -83,7 +83,7 @@ kc_dropdown_row_set_description (KcDropDownRow   *self,
 }
 
 const char *
-kc_dropdown_row_get_description (KcDropDownRow   *self)
+kc_dropdown_row_get_description (KcDropDownRow *self)
 {
     g_return_val_if_fail (KC_IS_DROPDOWN_ROW (self), NULL);
 

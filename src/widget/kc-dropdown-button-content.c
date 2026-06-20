@@ -16,18 +16,18 @@ enum {
 static GParamSpec *props[N_PROPS];
 
 struct _KcDropDownButtonContent {
-    AdwBin           parent_instance;
+    AdwBin      parent_instance;
 
-    char            *label_text;
+    gchar      *label_text;
 };
 
 G_DEFINE_FINAL_TYPE (KcDropDownButtonContent, kc_dropdown_button_content, ADW_TYPE_BIN)
 
 static void
-kc_dropdown_button_content_get_property (GObject       *object,
-                                         guint          prop_id,
-                                         GValue        *value,
-                                         GParamSpec    *pspec)
+kc_dropdown_button_content_get_property (GObject    *object,
+                                         guint       prop_id,
+                                         GValue     *value,
+                                         GParamSpec *pspec)
 {
     KcDropDownButtonContent *self = KC_DROPDOWN_BUTTON_CONTENT (object);
 
@@ -42,16 +42,16 @@ kc_dropdown_button_content_get_property (GObject       *object,
 }
 
 static void
-kc_dropdown_button_content_set_property (GObject       *object,
-                                         guint          prop_id,
-                                         const GValue  *value,
-                                         GParamSpec    *pspec)
+kc_dropdown_button_content_set_property (GObject      *object,
+                                         guint         prop_id,
+                                         const GValue *value,
+                                         GParamSpec   *pspec)
 {
     KcDropDownButtonContent *self = KC_DROPDOWN_BUTTON_CONTENT (object);
 
     switch (prop_id) {
     case PROP_LABEL_TEXT:
-        g_set_str (&(self->label_text), g_value_get_string (value));
+        g_set_str (&self->label_text, g_value_get_string (value));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -64,10 +64,9 @@ kc_dropdown_button_content_dispose (GObject *object)
 {
     KcDropDownButtonContent *self = KC_DROPDOWN_BUTTON_CONTENT (object);
 
-    // Unparent and also result to unbind label-text property with the label
     adw_bin_set_child (ADW_BIN (self), NULL);
 
-    g_clear_pointer (&(self->label_text), g_free);
+    g_clear_pointer (&self->label_text, g_free);
 
     G_OBJECT_CLASS (kc_dropdown_button_content_parent_class)->dispose (object);
 }
@@ -84,7 +83,7 @@ kc_dropdown_button_content_class_init (KcDropDownButtonContentClass *klass)
     props[PROP_LABEL_TEXT] =
         g_param_spec_string ("label-text", NULL, NULL,
                              NULL,
-                             G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+                             G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     g_object_class_install_properties (object_class, N_PROPS, props);
 }
@@ -106,7 +105,8 @@ kc_dropdown_button_content_init (KcDropDownButtonContent *self)
 }
 
 void
-kc_dropdown_button_content_set_label_text (KcDropDownButtonContent *self, const char *label_text)
+kc_dropdown_button_content_set_label_text (KcDropDownButtonContent *self,
+                                           const gchar             *label_text)
 {
     g_return_if_fail (KC_IS_DROPDOWN_BUTTON_CONTENT (self));
 
@@ -114,7 +114,7 @@ kc_dropdown_button_content_set_label_text (KcDropDownButtonContent *self, const 
         return;
     }
 
-    g_set_str (&(self->label_text), label_text);
+    g_set_str (&self->label_text, label_text);
 
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_LABEL_TEXT]);
 }

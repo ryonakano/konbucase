@@ -17,6 +17,7 @@ extern void kc_text_area_set_text (KcTextArea *self, const char *text);
 extern void kc_text_area_clear_text (KcTextArea *self);
 
 extern void kc_text_area_grab_focus (KcTextArea *self);
+
 extern KcTextArea *kc_text_area_new (gboolean editable);
 
 G_END_DECLS

@@ -29,17 +29,17 @@ typedef struct {
     /**
      * Key name before migration.
      */
-    const gchar             *old_key;
+    const gchar                *old_key;
 
     /**
      * Migration procedure.
      */
-    KcSettingsMigrationFunc  migrate;
+    KcSettingsMigrationFunc     migrate;
 } KcSettingsMigrationEntry;
 
 static gboolean
-migrate_source_text (GSettings  *settings,
-                     GVariant   *old_val)
+migrate_source_text (GSettings *settings,
+                     GVariant  *old_val)
 {
     g_settings_set_value (settings, "input-text", old_val);
 

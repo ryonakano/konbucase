@@ -29,9 +29,9 @@ struct _KcApplication {
 G_DEFINE_FINAL_TYPE (KcApplication, kc_application, ADW_TYPE_APPLICATION)
 
 static void
-on_about_activate (GSimpleAction         *action,
-                   GVariant              *parameter,
-                   gpointer               user_data)
+on_about_activate (GSimpleAction *action,
+                   GVariant      *parameter,
+                   gpointer       user_data)
 {
     KcApplication *self = KC_APPLICATION (user_data);
     AdwDialog *about_dialog;
@@ -47,9 +47,6 @@ on_about_activate (GSimpleAction         *action,
         "Leo https://github.com/lenemter",
         NULL
     };
-
-    (void) action;
-    (void) parameter;
 
     about_dialog = adw_about_dialog_new_from_appdata (RESOURCE_PREFIX "/" APP_ID ".metainfo.xml", NULL);
     adw_about_dialog_set_version (ADW_ABOUT_DIALOG (about_dialog), APP_VERSION);
@@ -67,14 +64,11 @@ on_about_activate (GSimpleAction         *action,
 }
 
 static void
-on_quit_activate (GSimpleAction         *action,
-                  GVariant              *parameter,
-                  gpointer               user_data)
+on_quit_activate (GSimpleAction *action,
+                  GVariant      *parameter,
+                  gpointer       user_data)
 {
     KcApplication *self = KC_APPLICATION (user_data);
-
-    (void) action;
-    (void) parameter;
 
     if (self->window) {
         gtk_window_destroy (GTK_WINDOW (self->window));
@@ -111,17 +105,14 @@ kc_application_activate (GApplication *application)
 }
 
 static gboolean
-gaction_state_to_adw_scheme (GBinding      *binding,
-                             const GValue  *gaction_state,
-                             GValue        *adw_scheme,
-                             gpointer       user_data)
+gaction_state_to_adw_scheme (GBinding     *binding,
+                             const GValue *gaction_state,
+                             GValue       *adw_scheme,
+                             gpointer      user_data)
 {
     g_autoptr(GVariant) gaction_state_variant = NULL;
     const gchar *gaction_state_str;
     AdwColorScheme adw_scheme_enum;
-
-    (void) binding;
-    (void) user_data;
 
     gaction_state_variant = g_value_dup_variant (gaction_state);
     if (!gaction_state_variant) {
@@ -137,16 +128,13 @@ gaction_state_to_adw_scheme (GBinding      *binding,
 }
 
 static gboolean
-adw_scheme_to_gaction_state (GBinding      *binding,
-                             const GValue  *adw_scheme,
-                             GValue        *gaction_state,
-                             gpointer       user_data)
+adw_scheme_to_gaction_state (GBinding     *binding,
+                             const GValue *adw_scheme,
+                             GValue       *gaction_state,
+                             gpointer      user_data)
 {
     AdwColorScheme adw_scheme_enum;
     const gchar *gaction_state_str;
-
-    (void) binding;
-    (void) user_data;
 
     adw_scheme_enum = g_value_get_enum (adw_scheme);
     gaction_state_str = kc_convert_to_str_scheme (adw_scheme_enum);
@@ -163,8 +151,6 @@ settings_color_scheme_get_mapping (GValue   *adw_scheme,
     const gchar *gschema_scheme_str;
     AdwColorScheme adw_scheme_enum;
 
-    (void) user_data;
-
     gschema_scheme_str = g_variant_get_string (gschema_scheme, NULL);
     adw_scheme_enum = kc_convert_to_adw_scheme (gschema_scheme_str);
     g_value_set_enum (adw_scheme, adw_scheme_enum);
@@ -173,16 +159,13 @@ settings_color_scheme_get_mapping (GValue   *adw_scheme,
 }
 
 static GVariant *
-settings_color_scheme_set_mapping (const GValue         *adw_scheme,
-                                   const GVariantType   *expected_type,
-                                   gpointer              user_data)
+settings_color_scheme_set_mapping (const GValue       *adw_scheme,
+                                   const GVariantType *expected_type,
+                                   gpointer            user_data)
 {
     AdwColorScheme adw_scheme_enum;
     const gchar *gschema_scheme_str;
     GVariant *gschema_scheme_variant;
-
-    (void) expected_type;
-    (void) user_data;
 
     adw_scheme_enum = g_value_get_enum (adw_scheme);
     gschema_scheme_str = kc_convert_to_str_scheme (adw_scheme_enum);
@@ -259,7 +242,7 @@ kc_application_dispose (GObject *object)
 
     // self->window should be already freed
 
-    g_clear_object (&(self->settings));
+    g_clear_object (&self->settings);
 
     G_OBJECT_CLASS (kc_application_parent_class)->dispose (object);
 }

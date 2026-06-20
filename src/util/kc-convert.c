@@ -8,7 +8,7 @@
 #include "kc-common.h"
 
 AdwColorScheme
-kc_convert_to_adw_scheme (const gchar *str_scheme)
+kc_convert_to_adw_scheme (const char *str_scheme)
 {
     g_return_val_if_fail (str_scheme != NULL, ADW_COLOR_SCHEME_DEFAULT);
 
@@ -28,7 +28,7 @@ kc_convert_to_adw_scheme (const gchar *str_scheme)
     return ADW_COLOR_SCHEME_DEFAULT;
 }
 
-const gchar *
+const char *
 kc_convert_to_str_scheme (AdwColorScheme adw_scheme)
 {
     switch (adw_scheme) {
@@ -38,8 +38,6 @@ kc_convert_to_str_scheme (AdwColorScheme adw_scheme)
         return KC_COLOR_SCHEME_FORCE_LIGHT;
     case ADW_COLOR_SCHEME_FORCE_DARK:
         return KC_COLOR_SCHEME_FORCE_DARK;
-    case ADW_COLOR_SCHEME_PREFER_LIGHT:
-    case ADW_COLOR_SCHEME_PREFER_DARK:
     default:
         g_warning ("Unsupported color scheme: %u", adw_scheme);
         return KC_COLOR_SCHEME_DEFAULT;

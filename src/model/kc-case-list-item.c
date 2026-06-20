@@ -27,8 +27,8 @@ struct _KcCaseListItem {
     GObject         parent_instance;
 
     KcCaseType      case_type;
-    gchar           *name;
-    gchar           *description;
+    char           *name;
+    char           *description;
 };
 
 G_DEFINE_FINAL_TYPE (KcCaseListItem, kc_case_list_item, G_TYPE_OBJECT)
@@ -38,17 +38,17 @@ kc_case_list_item_dispose (GObject *object)
 {
     KcCaseListItem *self = KC_CASE_LIST_ITEM (object);
 
-    g_clear_pointer (&(self->name), g_free);
-    g_clear_pointer (&(self->description), g_free);
+    g_clear_pointer (&self->name, g_free);
+    g_clear_pointer (&self->description, g_free);
 
     G_OBJECT_CLASS (kc_case_list_item_parent_class)->dispose (object);
 }
 
 static void
-kc_case_list_item_get_property (GObject        *object,
-                                guint           prop_id,
-                                GValue         *value,
-                                GParamSpec     *pspec)
+kc_case_list_item_get_property (GObject    *object,
+                                guint       prop_id,
+                                GValue     *value,
+                                GParamSpec *pspec)
 {
     KcCaseListItem *self = KC_CASE_LIST_ITEM (object);
 
@@ -69,10 +69,10 @@ kc_case_list_item_get_property (GObject        *object,
 }
 
 static void
-kc_case_list_item_set_property (GObject        *object,
-                                guint           prop_id,
-                                const GValue   *value,
-                                GParamSpec     *pspec)
+kc_case_list_item_set_property (GObject      *object,
+                                guint         prop_id,
+                                const GValue *value,
+                                GParamSpec   *pspec)
 {
     KcCaseListItem *self = KC_CASE_LIST_ITEM (object);
 
@@ -81,10 +81,10 @@ kc_case_list_item_set_property (GObject        *object,
         self->case_type = g_value_get_enum (value);
         break;
     case PROP_NAME:
-        g_set_str (&(self->name), g_value_get_string (value));
+        g_set_str (&self->name, g_value_get_string (value));
         break;
     case PROP_DESCRIPTION:
-        g_set_str (&(self->description), g_value_get_string (value));
+        g_set_str (&self->description, g_value_get_string (value));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -95,9 +95,7 @@ kc_case_list_item_set_property (GObject        *object,
 static void
 kc_case_list_item_class_init (KcCaseListItemClass *klass)
 {
-    GObjectClass *object_class;
-
-    object_class = G_OBJECT_CLASS (klass);
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     object_class->dispose = kc_case_list_item_dispose;
     object_class->get_property = kc_case_list_item_get_property;
@@ -112,7 +110,7 @@ kc_case_list_item_class_init (KcCaseListItemClass *klass)
         g_param_spec_enum ("case-type", NULL, NULL,
                            KC_TYPE_CASE_TYPE,
                            KC_CASE_TYPE_SPACE_SEPARATED,
-                           G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS);
+                           G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     /**
      * KcCaseListItem:name:
@@ -122,7 +120,7 @@ kc_case_list_item_class_init (KcCaseListItemClass *klass)
     props[PROP_NAME] =
         g_param_spec_string ("name", NULL, NULL,
                              NULL,
-                             G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS);
+                             G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     /**
      * KcCaseListItem:description:
@@ -132,7 +130,7 @@ kc_case_list_item_class_init (KcCaseListItemClass *klass)
     props[PROP_DESCRIPTION] =
         g_param_spec_string ("description", NULL, NULL,
                              NULL,
-                             G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS);
+                             G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     g_object_class_install_properties (object_class, N_PROPS, props);
 }
@@ -168,7 +166,7 @@ kc_case_list_item_set_case_type (KcCaseListItem *self,
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_CASE_TYPE]);
 }
 
-const gchar *
+const char *
 kc_case_list_item_get_name (KcCaseListItem *self)
 {
     g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), NULL);
@@ -177,8 +175,8 @@ kc_case_list_item_get_name (KcCaseListItem *self)
 }
 
 void
-kc_case_list_item_set_name (KcCaseListItem  *self,
-                            const gchar     *name)
+kc_case_list_item_set_name (KcCaseListItem *self,
+                            const char     *name)
 {
     g_return_if_fail (KC_IS_CASE_LIST_ITEM (self));
 
@@ -186,12 +184,12 @@ kc_case_list_item_set_name (KcCaseListItem  *self,
         return;
     }
 
-    g_set_str (&(self->name), name);
+    g_set_str (&self->name, name);
 
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_NAME]);
 }
 
-const gchar *
+const char *
 kc_case_list_item_get_description (KcCaseListItem *self)
 {
     g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), NULL);
@@ -200,8 +198,8 @@ kc_case_list_item_get_description (KcCaseListItem *self)
 }
 
 void
-kc_case_list_item_set_description (KcCaseListItem   *self,
-                                   const gchar      *description)
+kc_case_list_item_set_description (KcCaseListItem *self,
+                                   const char     *description)
 {
     g_return_if_fail (KC_IS_CASE_LIST_ITEM (self));
 
@@ -209,13 +207,14 @@ kc_case_list_item_set_description (KcCaseListItem   *self,
         return;
     }
 
-    g_set_str (&(self->description),description);
+    g_set_str (&self->description,description);
 
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_DESCRIPTION]);
 }
 
 gboolean
-kc_case_list_item_equals (KcCaseListItem *self, KcCaseListItem *other)
+kc_case_list_item_equal (KcCaseListItem *self,
+                         KcCaseListItem *other)
 {
     g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), FALSE);
     g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (other), FALSE);
@@ -235,7 +234,9 @@ kc_case_list_item_equals (KcCaseListItem *self, KcCaseListItem *other)
  * Returns: (transfer full): a new `KcCaseListItem`
  */
 KcCaseListItem *
-kc_case_list_item_new (KcCaseType case_type, const gchar *name, const gchar *description)
+kc_case_list_item_new (KcCaseType  case_type,
+                       const char *name,
+                       const char *description)
 {
     return g_object_new (KC_TYPE_CASE_LIST_ITEM,
                          "case-type", case_type,

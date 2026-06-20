@@ -13,6 +13,7 @@ G_BEGIN_DECLS
 G_DECLARE_FINAL_TYPE (KcMainView, kc_main_view, KC, MAIN_VIEW, GtkBox)
 
 extern void kc_main_view_swap (KcMainView *self);
+
 extern KcMainView *kc_main_view_new (void);
 
 G_END_DECLS

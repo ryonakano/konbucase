@@ -50,10 +50,10 @@ kc_case_convert_to_chcase_case (KcCaseType case_type)
 }
 
 char *
-kc_case_convert_do_convert (ChCaseConverter    *converter,
-                            KcCaseType          input_case,
-                            const char         *input_text,
-                            KcCaseType          output_case)
+kc_case_convert_do_convert (ChCaseConverter *converter,
+                            KcCaseType       input_case,
+                            const char      *input_text,
+                            KcCaseType       output_case)
 {
     char *output_text;
 
