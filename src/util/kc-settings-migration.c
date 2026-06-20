@@ -120,14 +120,19 @@ kc_util_migrate_settings (GSettings *settings)
 
         ssk = g_settings_schema_get_key (ss, entry->old_key);
         default_val = g_settings_schema_key_get_default_value (ssk);
+        g_settings_schema_key_unref (ssk);
 
         equals = g_variant_equal (old_val, default_val);
+        g_variant_unref (default_val);
         if (equals) {
+            g_variant_unref (old_val);
+
             // No need to migrate
             continue;
         }
 
         ret = entry->migrate (settings, old_val);
+        g_variant_unref (old_val);
         if (!ret) {
             g_warning ("Failed to migrate settings. key=\"%s\"", entry->old_key);
             return FALSE;

@@ -42,10 +42,10 @@ struct _KcToolBar {
     AdwBin          parent_instance;
 
     char           *header_label;
-    GtkWidget      *case_label;
     KcCaseType      case_type;
-    GtkWidget      *copy_button;
 
+    GtkWidget      *case_label;
+    GtkWidget      *copy_button;
     GtkWidget      *toolbar_custom_area;
 };
 
@@ -122,16 +122,18 @@ case_type_to_selected (GBinding     *binding,
                        GValue       *selected,
                        gpointer      user_data)
 {
-    GListStore *case_listmodel = G_LIST_STORE (user_data);
+    GListStore *case_liststore = G_LIST_STORE (user_data);
     KcCaseType _case_type;
+    g_autoptr(KcCaseListItem) lookup_item;
     guint pos;
     gboolean found;
 
     _case_type = g_value_get_enum (case_type);
+    // Find with case type
+    lookup_item = kc_case_list_item_new (_case_type, "", "");
 
-    found = g_list_store_find_with_equal_func (case_listmodel,
-                                               // Find with case type
-                                               kc_case_list_item_new (_case_type, "", ""),
+    found = g_list_store_find_with_equal_func (case_liststore,
+                                               lookup_item,
                                                (GEqualFunc) kc_case_list_item_equal,
                                                &pos);
     if (G_UNLIKELY (!found)) {
@@ -149,7 +151,7 @@ selected_to_case_type (GBinding     *binding,
                        GValue       *case_type,
                        gpointer      user_data)
 {
-    GListStore *case_listmodel = G_LIST_STORE (user_data);
+    GListStore *case_liststore = G_LIST_STORE (user_data);
     guint pos;
     KcCaseListItem *selected_item;
     KcCaseType _case_type;
@@ -160,7 +162,7 @@ selected_to_case_type (GBinding     *binding,
         return FALSE;
     }
 
-    selected_item = KC_CASE_LIST_ITEM (g_list_model_get_item (G_LIST_MODEL (case_listmodel), pos));
+    selected_item = KC_CASE_LIST_ITEM (g_list_model_get_item (G_LIST_MODEL (case_liststore), pos));
     if (G_UNLIKELY (!selected_item)) {
         return FALSE;
     }
@@ -296,9 +298,11 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
 static void
 kc_tool_bar_init (KcToolBar *self)
 {
-    g_autoptr (GtkListItemFactory) case_factory = NULL;
-    g_autoptr (GtkListItemFactory) case_list_factory = NULL;
-    GListStore *case_listmodel;
+    g_autoptr(GtkListItemFactory) case_factory = NULL;
+    g_autoptr(GtkListItemFactory) case_list_factory = NULL;
+    KcCaseListItem *case_listitems[N_KC_CASE_TYPE];
+    GListStore *case_liststore;
+    int i;
     GtkExpression *l10n_case_exp_params[N_L10N_CASE_EXP_PARAMS];
     GtkExpression *l10n_case_exp;
     GtkWidget *case_dropdown;
@@ -315,37 +319,36 @@ kc_tool_bar_init (KcToolBar *self)
     g_signal_connect (case_list_factory, "setup", G_CALLBACK (case_list_factory_setup), NULL);
     g_signal_connect (case_list_factory, "bind", G_CALLBACK (case_list_factory_bind), NULL);
 
-    case_listmodel = g_list_store_new (KC_TYPE_CASE_LIST_ITEM);
-    g_list_store_append (case_listmodel, kc_case_list_item_new (
-        KC_CASE_TYPE_SPACE_SEPARATED,
-        N_("Space separated"),
-        N_("Each word is separated by a space")
-    ));
-    g_list_store_append (case_listmodel, kc_case_list_item_new (
-        KC_CASE_TYPE_CAMEL,
-        "camelCase",
-        N_("The first character of compound words is in lowercase")
-    ));
-    g_list_store_append (case_listmodel, kc_case_list_item_new (
-        KC_CASE_TYPE_PASCAL,
-        "PascalCase",
-        N_("The first character of compound words is in uppercase")
-    ));
-    g_list_store_append (case_listmodel, kc_case_list_item_new (
-        KC_CASE_TYPE_SNAKE,
-        "snake_case",
-        N_("Each word is separated by an underscore")
-    ));
-    g_list_store_append (case_listmodel, kc_case_list_item_new (
-        KC_CASE_TYPE_KEBAB,
-        "kebab-case",
-        N_("Each word is separated by a hyphen")
-    ));
-    g_list_store_append (case_listmodel, kc_case_list_item_new (
-        KC_CASE_TYPE_SENTENCE,
-        "Sentence case",
-        N_("The first character of the first word in the sentence is in uppercase")
-    ));
+    case_listitems[KC_CASE_TYPE_SPACE_SEPARATED] =
+        kc_case_list_item_new (KC_CASE_TYPE_SPACE_SEPARATED,
+                               N_("Space separated"),
+                               N_("Each word is separated by a space"));
+    case_listitems[KC_CASE_TYPE_CAMEL] =
+        kc_case_list_item_new (KC_CASE_TYPE_CAMEL,
+                               "camelCase",
+                               N_("The first character of compound words is in lowercase"));
+    case_listitems[KC_CASE_TYPE_PASCAL] =
+        kc_case_list_item_new (KC_CASE_TYPE_PASCAL,
+                               "PascalCase",
+                               N_("The first character of compound words is in uppercase"));
+    case_listitems[KC_CASE_TYPE_SNAKE] =
+        kc_case_list_item_new (KC_CASE_TYPE_SNAKE,
+                               "snake_case",
+                               N_("Each word is separated by an underscore"));
+    case_listitems[KC_CASE_TYPE_KEBAB] =
+        kc_case_list_item_new (KC_CASE_TYPE_KEBAB,
+                               "kebab-case",
+                               N_("Each word is separated by a hyphen"));
+    case_listitems[KC_CASE_TYPE_SENTENCE] =
+        kc_case_list_item_new (KC_CASE_TYPE_SENTENCE,
+                               "Sentence case",
+                               N_("The first character of the first word in the sentence is in uppercase"));
+
+    case_liststore = g_list_store_new (KC_TYPE_CASE_LIST_ITEM);
+    g_list_store_splice (case_liststore, 0, 0, (gpointer *) &case_listitems, G_N_ELEMENTS (case_listitems));
+    for (i = 0; i < G_N_ELEMENTS (case_listitems); i++) {
+        g_object_unref (case_listitems[i]);
+    }
 
     l10n_case_exp_params[L10N_CASE_EXP_PARAM_STR] = gtk_property_expression_new (KC_TYPE_CASE_LIST_ITEM, NULL, "name");
     l10n_case_exp = gtk_cclosure_expression_new (
@@ -353,7 +356,7 @@ kc_tool_bar_init (KcToolBar *self)
         G_CALLBACK (localize_str), NULL, NULL
     );
 
-    case_dropdown = gtk_drop_down_new (G_LIST_MODEL (case_listmodel), l10n_case_exp);
+    case_dropdown = gtk_drop_down_new (G_LIST_MODEL (case_liststore), l10n_case_exp);
     gtk_drop_down_set_factory (GTK_DROP_DOWN (case_dropdown), case_factory);
     gtk_drop_down_set_list_factory (GTK_DROP_DOWN (case_dropdown), case_list_factory);
 
@@ -385,7 +388,7 @@ kc_tool_bar_init (KcToolBar *self)
                                  G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE,
                                  case_type_to_selected,
                                  selected_to_case_type,
-                                 g_object_ref (case_listmodel),
+                                 g_object_ref (case_liststore),
                                  g_object_unref);
 
     g_signal_connect_swapped (case_dropdown, "notify::selected", G_CALLBACK (notify_dropdown_changed), self);
@@ -438,6 +441,6 @@ KcToolBar *
 kc_tool_bar_new (const char *header_label)
 {
     return g_object_new (KC_TYPE_TOOL_BAR,
-                         "header-label", g_strdup (header_label),
+                         "header-label", header_label,
                          NULL);
 }

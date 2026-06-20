@@ -240,7 +240,7 @@ kc_case_list_item_new (KcCaseType  case_type,
 {
     return g_object_new (KC_TYPE_CASE_LIST_ITEM,
                          "case-type", case_type,
-                         "name", g_strdup (name),
-                         "description", g_strdup (description),
+                         "name", name,
+                         "description", description,
                          NULL);
 }

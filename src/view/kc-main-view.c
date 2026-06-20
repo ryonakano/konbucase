@@ -199,7 +199,7 @@ kc_main_view_init (KcMainView *self)
     KcCaseType output_case_type;
     GtkWidget *output_pane;
 
-    g_autoptr (GtkSizeGroup) size_group = NULL;
+    g_autoptr(GtkSizeGroup) size_group = NULL;
 
     GtkWidget *input_clip_button;
     GtkWidget *output_clip_button;
