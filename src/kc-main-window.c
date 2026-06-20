@@ -37,18 +37,9 @@ kc_main_window_show_toast (AdwToastOverlay *overlay)
 
 // TODO: Remove?
 static void
-kc_main_window_dispose (GObject *object)
-{
-    G_OBJECT_CLASS (kc_main_window_parent_class)->dispose (object);
-}
-
-// TODO: Remove?
-static void
 kc_main_window_class_init (KcMainWindowClass *klass)
 {
-    GObjectClass *object_class = G_OBJECT_CLASS (klass);
-
-    object_class->dispose = kc_main_window_dispose;
+    // NOP
 }
 
 static void
