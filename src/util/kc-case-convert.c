@@ -67,4 +67,3 @@ kc_case_convert_do_convert (ChCaseConverter *converter,
 
     return output_text;
 }
-
