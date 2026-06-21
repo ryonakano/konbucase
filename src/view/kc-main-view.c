@@ -9,7 +9,7 @@
 
 #include <string.h>
 
-#include <chcase/chcase.h>
+#include <chcase.h>
 #include <glib/gi18n.h>
 
 #include "kc-case-convert.h"

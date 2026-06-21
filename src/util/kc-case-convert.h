@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <chcase/chcase.h>
+#include <chcase.h>
 
 #include "kc-enums.h"
 #include "kc-types.h"
