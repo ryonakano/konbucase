@@ -17,8 +17,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/ryonakano/chcase/archive/3.0.0-alpha.3.tar.gz
-        sha256: 0c165ca41c17a41f6993ca5233d5b0f9abe367e799a68759fc59469598f37c13
+        url: https://github.com/ryonakano/chcase/archive/3.0.0-alpha.4.tar.gz
+        sha256: bac3d03e4a8ba607a97d087680c350076fd31e7e667db583322dcfc110590f47
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ryonakano/chcase/releases/latest
