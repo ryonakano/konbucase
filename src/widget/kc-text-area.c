@@ -107,12 +107,16 @@ kc_text_area_dispose (GObject *object)
 {
     KcTextArea *self = KC_TEXT_AREA (object);
 
+    g_warning ("before: %u", G_OBJECT (self->buffer)->ref_count);
     gtk_text_view_set_buffer (GTK_TEXT_VIEW (self->source_view), NULL);
-    g_clear_object (&self->buffer);
+    g_warning ("after: %u", G_OBJECT (self->buffer)->ref_count);
+    g_object_unref (self->buffer);
 
     adw_bin_set_child (ADW_BIN (self), NULL);
 
+    g_warning ("after2: %u", G_OBJECT (self->buffer)->ref_count);
     g_clear_pointer (&self->text, g_free);
+    g_warning ("after3: %u", G_OBJECT (self->buffer)->ref_count);
 
     G_OBJECT_CLASS (kc_text_area_parent_class)->dispose (object);
 }
