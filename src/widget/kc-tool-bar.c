@@ -131,7 +131,7 @@ case_type_to_selected (GBinding     *binding,
 {
     GListStore *case_liststore = G_LIST_STORE (user_data);
     KcCaseType _case_type;
-    g_autoptr(KcCaseListItem) lookup_item;
+    g_autoptr(KcCaseListItem) lookup_item = NULL;
     guint pos;
     gboolean found;
 
@@ -160,7 +160,7 @@ selected_to_case_type (GBinding     *binding,
 {
     GListStore *case_liststore = G_LIST_STORE (user_data);
     guint pos;
-    g_autoptr(KcCaseListItem) selected_item;
+    g_autoptr(KcCaseListItem) selected_item = NULL;
     KcCaseType _case_type;
 
     pos = g_value_get_uint (selected);
