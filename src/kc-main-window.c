@@ -57,7 +57,7 @@ kc_main_window_init (KcMainWindow *self)
     GtkWidget *toolbar_view;
 
     // Distinct development build visually
-    if (g_str_has_prefix (APP_ID, ".Devel")) {
+    if (g_str_has_suffix (APP_ID, ".Devel")) {
         gtk_widget_add_css_class (GTK_WIDGET (self), "devel");
     }
 
