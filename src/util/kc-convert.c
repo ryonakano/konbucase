@@ -7,6 +7,20 @@
 
 #include "kc-common.h"
 
+/**
+ * KcConvert:
+ *
+ * Converts data types.
+ */
+
+/**
+ * kc_convert_to_adw_scheme:
+ * @str_scheme: (transfer none): string representation of a color scheme
+ *
+ * Converts string representation of a color scheme to `AdwColorScheme`.
+ *
+ * Returns: a `AdwColorScheme`
+ */
 AdwColorScheme
 kc_convert_to_adw_scheme (const char *str_scheme)
 {
@@ -28,6 +42,14 @@ kc_convert_to_adw_scheme (const char *str_scheme)
     return ADW_COLOR_SCHEME_DEFAULT;
 }
 
+/**
+ * kc_convert_to_str_scheme:
+ * @adw_scheme: a `AdwColorScheme`
+ *
+ * Converts `AdwColorScheme` to string representation of a color scheme.
+ *
+ * Returns: (transfer none): string representation of a color scheme
+ */
 const char *
 kc_convert_to_str_scheme (AdwColorScheme adw_scheme)
 {

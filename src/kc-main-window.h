@@ -7,11 +7,13 @@
 
 #include <adwaita.h>
 
+#include "kc-application.h"
+
 G_BEGIN_DECLS
 
 #define KC_TYPE_MAIN_WINDOW (kc_main_window_get_type ())
 G_DECLARE_FINAL_TYPE (KcMainWindow, kc_main_window, KC, MAIN_WINDOW, AdwApplicationWindow)
 
-extern KcMainWindow *kc_main_window_new (void);
+extern KcMainWindow *kc_main_window_new (KcApplication *app);
 
 G_END_DECLS

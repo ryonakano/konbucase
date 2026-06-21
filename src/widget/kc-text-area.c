@@ -7,6 +7,16 @@
 
 #include <gtksourceview/gtksource.h>
 
+/**
+ * KcTextArea:
+ *
+ * A widget that wraps a #GtkSourceView.
+ *
+ * <picture>
+ *   <img src="example_text_area.png" alt="example image of TextArea">
+ * </picture>
+ */
+
 enum {
     PROP_0,
 
@@ -21,7 +31,6 @@ static GParamSpec *props[N_PROPS];
 struct _KcTextArea {
     AdwBin              parent_instance;
 
-    gboolean            editable;
     GtkSourceBuffer    *buffer;
     char               *text;
     GtkWidget          *source_view;
@@ -61,10 +70,10 @@ kc_text_area_get_property (GObject    *object,
 
     switch (prop_id) {
     case PROP_EDITABLE:
-        g_value_set_boolean (value, self->editable);
+        g_value_set_boolean (value, kc_text_area_get_editable (self));
         break;
     case PROP_TEXT:
-        g_value_set_string (value, self->text);
+        g_value_take_string (value, kc_text_area_dup_text (self));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -82,25 +91,15 @@ kc_text_area_set_property (GObject      *object,
 
     switch (prop_id) {
     case PROP_EDITABLE:
-        self->editable = g_value_get_boolean (value);
+        kc_text_area_set_editable (self, g_value_get_boolean (value));
         break;
     case PROP_TEXT:
-        g_set_str (&self->text, g_value_get_string (value));
+        kc_text_area_set_text (self, g_value_get_string (value));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
         break;
     }
-}
-
-static void
-kc_text_area_constructed (GObject *object)
-{
-    KcTextArea *self = KC_TEXT_AREA (object);
-
-    gtk_text_view_set_editable (GTK_TEXT_VIEW (self->source_view), self->editable);
-
-    G_OBJECT_CLASS (kc_text_area_parent_class)->constructed (object);
 }
 
 static void
@@ -125,14 +124,23 @@ kc_text_area_class_init (KcTextAreaClass *klass)
 
     object_class->get_property = kc_text_area_get_property;
     object_class->set_property = kc_text_area_set_property;
-    object_class->constructed = kc_text_area_constructed;
     object_class->dispose = kc_text_area_dispose;
 
+    /**
+     * KcTextArea:editable:
+     *
+     * Whether it's possible to modify text in the #GtkSourceView that `KcTextArea` wraps.
+     */
     props[PROP_EDITABLE] =
         g_param_spec_boolean ("editable", NULL, NULL,
                               FALSE,
                               G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
+    /**
+     * KcTextArea:text:
+     *
+     * Text in the #GtkSourceView that `KcTextArea` wraps.
+     */
     props[PROP_TEXT] =
         g_param_spec_string ("text", NULL, NULL,
                              NULL,
@@ -148,7 +156,6 @@ kc_text_area_init (KcTextArea *self)
     GtkSettings *gtk_settings;
     GtkWidget *scrolled;
 
-    self->editable = FALSE;
     self->text = NULL;
 
     self->buffer = gtk_source_buffer_new (NULL);
@@ -173,13 +180,62 @@ kc_text_area_init (KcTextArea *self)
     // Apply theme changes to the source view
     g_object_bind_property_full (G_OBJECT (gtk_settings), "gtk-application-prefer-dark-theme",
                                  G_OBJECT (self->buffer), "style-scheme",
-                                 G_BINDING_SYNC_CREATE | G_BINDING_SYNC_CREATE,
+                                 G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  prefer_dark_to_style_scheme,
                                  NULL,
                                  style_scheme_manager,
                                  NULL);
 }
 
+/**
+ * kc_text_area_get_editable:
+ * @self: a `KcCaseListItem`
+ *
+ * Gets whether it's possible to modify text in the #GtkSourceView that @self wraps.
+ *
+ * Returns: Whether it's possible to modify text in the #GtkSourceView that @self wraps
+ */
+gboolean
+kc_text_area_get_editable (KcTextArea *self)
+{
+    g_return_val_if_fail (KC_IS_TEXT_AREA (self), FALSE);
+
+    return gtk_text_view_get_editable (GTK_TEXT_VIEW (self->source_view));
+}
+
+/**
+ * kc_text_area_set_editable:
+ * @self: a `KcTextArea`
+ * @editable: whether it's possible to modify text in the #GtkSourceView that @self wraps
+ *
+ * Sets whether it's possible to modify text in the #GtkSourceView that @self wraps.
+ */
+void
+kc_text_area_set_editable (KcTextArea *self,
+                           gboolean editable)
+{
+    gboolean _editable;
+
+    g_return_if_fail (KC_IS_TEXT_AREA (self));
+
+    _editable = kc_text_area_get_editable (self);
+    if (_editable == editable) {
+        return;
+    }
+
+    gtk_text_view_set_editable (GTK_TEXT_VIEW (self->source_view), editable);
+
+    g_object_notify_by_pspec (G_OBJECT (self), props[PROP_EDITABLE]);
+}
+
+/**
+ * kc_text_area_dup_text:
+ * @self: a `KcCaseListItem`
+ *
+ * Gets a copy of text in the #GtkSourceView that @self wraps.
+ *
+ * Returns: (nullable) (transfer none): text in the #GtkSourceView that @self wraps
+ */
 char *
 kc_text_area_dup_text (KcTextArea *self)
 {
@@ -188,6 +244,13 @@ kc_text_area_dup_text (KcTextArea *self)
     return g_strdup (self->text);
 }
 
+/**
+ * kc_text_area_set_text:
+ * @self: a `KcTextArea`
+ * @name: (nullable) (transfer none): text in the #GtkSourceView that @self wraps
+ *
+ * Sets text in the #GtkSourceView that @self wraps.
+ */
 void
 kc_text_area_set_text (KcTextArea *self,
                        const char *text)
@@ -203,12 +266,24 @@ kc_text_area_set_text (KcTextArea *self,
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_TEXT]);
 }
 
+/**
+ * kc_text_area_clear_text:
+ * @self: a `KcTextArea`
+ *
+ * Clears text in the #GtkSourceView that @self wraps.
+ */
 void
 kc_text_area_clear_text (KcTextArea *self)
 {
     kc_text_area_set_text (self, "");
 }
 
+/**
+ * kc_text_area_grab_focus:
+ * @self: a `KcTextArea`
+ *
+ * Causes the #GtkSourceView that @self wraps to have the keyboard focus for the app window.
+ */
 void
 kc_text_area_grab_focus (KcTextArea *self)
 {
@@ -217,6 +292,14 @@ kc_text_area_grab_focus (KcTextArea *self)
     gtk_widget_grab_focus (GTK_WIDGET (self->source_view));
 }
 
+/**
+ * kc_text_area_new:
+ * @editable: whether it's possible to modify text in the #GtkSourceView that `KcTextArea` wraps
+ *
+ * Creates a new `KcTextArea`.
+ *
+ * Returns: (transfer full): the newly created `KcTextArea`
+ */
 KcTextArea *
 kc_text_area_new (gboolean editable)
 {

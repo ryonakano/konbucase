@@ -5,6 +5,19 @@
 
 #include "kc-dropdown-button-content.h"
 
+/**
+ * KcDropDownButtonContent:
+ *
+ * The item in the button of a dropdown.
+ *
+ * The most significant difference with the default button content of a #Gtk.DropDown
+ * is that the label in the item is ellipsized if its text is too long.
+ *
+ * <picture>
+ *   <img src="example_drop_down_button_content.png" alt="example image of DropDownButtonContent">
+ * </picture>
+ */
+
 enum {
     PROP_0,
 
@@ -33,7 +46,7 @@ kc_dropdown_button_content_get_property (GObject    *object,
 
     switch (prop_id) {
     case PROP_LABEL_TEXT:
-        g_value_set_string (value, self->label_text);
+        g_value_set_string (value, kc_dropdown_button_content_get_label_text (self));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -51,7 +64,7 @@ kc_dropdown_button_content_set_property (GObject      *object,
 
     switch (prop_id) {
     case PROP_LABEL_TEXT:
-        g_set_str (&self->label_text, g_value_get_string (value));
+        kc_dropdown_button_content_set_label_text (self, g_value_get_string (value));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -80,6 +93,11 @@ kc_dropdown_button_content_class_init (KcDropDownButtonContentClass *klass)
     object_class->set_property = kc_dropdown_button_content_set_property;
     object_class->dispose = kc_dropdown_button_content_dispose;
 
+    /**
+     * KcDropDownButtonContent:label-text:
+     *
+     * The label text of the item.
+     */
     props[PROP_LABEL_TEXT] =
         g_param_spec_string ("label-text", NULL, NULL,
                              NULL,
@@ -104,6 +122,29 @@ kc_dropdown_button_content_init (KcDropDownButtonContent *self)
     adw_bin_set_child (ADW_BIN (self), label);
 }
 
+/**
+ * kc_dropdown_button_content_get_label_text:
+ * @self: a `KcDropDownButtonContent`
+ *
+ * Gets the label text of the item for @self.
+ *
+ * Returns: (nullable) (transfer none): the label text of the item
+ */
+const char *
+kc_dropdown_button_content_get_label_text (KcDropDownButtonContent *self)
+{
+    g_return_val_if_fail (KC_IS_DROPDOWN_BUTTON_CONTENT (self), NULL);
+
+    return self->label_text;
+}
+
+/**
+ * kc_dropdown_button_content_set_label_text:
+ * @self: a `KcDropDownButtonContent`
+ * @label_text: (nullable) (transfer none): the label text of the item
+ *
+ * Sets the label text of the item for @self.
+ */
 void
 kc_dropdown_button_content_set_label_text (KcDropDownButtonContent *self,
                                            const gchar             *label_text)
@@ -119,6 +160,13 @@ kc_dropdown_button_content_set_label_text (KcDropDownButtonContent *self,
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_LABEL_TEXT]);
 }
 
+/**
+ * kc_dropdown_button_content_new:
+ *
+ * Creates a new `KcDropDownButtonContent`.
+ *
+ * Returns: (transfer full): the newly created `KcDropDownButtonContent`
+ */
 KcDropDownButtonContent *
 kc_dropdown_button_content_new (void)
 {

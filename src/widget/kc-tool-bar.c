@@ -12,6 +12,14 @@
 #include "kc-dropdown-button-content.h"
 #include "kc-dropdown-row.h"
 
+/**
+ * A widget that contains controls for text input/output.
+ *
+ * <picture>
+ *   <img src="example_toolbar.png" alt="example image of ToolBar">
+ * </picture>
+ */
+
 enum {
     L10N_CASE_EXP_PARAM_STR,
 
@@ -30,7 +38,7 @@ static guint signals[N_SIGNALS];
 enum {
     PROP_0,
 
-    PROP_HEADER_LABEL,
+    PROP_HEADER_TEXT,
     PROP_CASE_TYPE,
 
     N_PROPS
@@ -41,10 +49,9 @@ static GParamSpec *props[N_PROPS];
 struct _KcToolBar {
     AdwBin          parent_instance;
 
-    char           *header_label;
     KcCaseType      case_type;
 
-    GtkWidget      *case_label;
+    GtkWidget      *header_label;
     GtkWidget      *copy_button;
     GtkWidget      *toolbar_custom_area;
 };
@@ -153,7 +160,7 @@ selected_to_case_type (GBinding     *binding,
 {
     GListStore *case_liststore = G_LIST_STORE (user_data);
     guint pos;
-    KcCaseListItem *selected_item;
+    g_autoptr(KcCaseListItem) selected_item;
     KcCaseType _case_type;
 
     pos = g_value_get_uint (selected);
@@ -194,11 +201,11 @@ kc_tool_bar_get_property (GObject    *object,
     KcToolBar *self = KC_TOOL_BAR (object);
 
     switch (prop_id) {
-    case PROP_HEADER_LABEL:
-        g_value_set_string (value, self->header_label);
+    case PROP_HEADER_TEXT:
+        g_value_set_string (value, kc_tool_bar_get_header_text (self));
         break;
     case PROP_CASE_TYPE:
-        g_value_set_enum (value, self->case_type);
+        g_value_set_enum (value, kc_tool_bar_get_case_type (self));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -215,11 +222,11 @@ kc_tool_bar_set_property (GObject      *object,
     KcToolBar *self = KC_TOOL_BAR (object);
 
     switch (prop_id) {
-    case PROP_HEADER_LABEL:
-        g_set_str (&self->header_label, g_value_get_string (value));
+    case PROP_HEADER_TEXT:
+        kc_tool_bar_set_header_text (self, g_value_get_string (value));
         break;
     case PROP_CASE_TYPE:
-        self->case_type = g_value_get_enum (value);
+        kc_tool_bar_set_case_type (self, g_value_get_enum (value));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -228,23 +235,11 @@ kc_tool_bar_set_property (GObject      *object,
 }
 
 static void
-kc_tool_bar_constructed (GObject *object)
-{
-    KcToolBar *self = KC_TOOL_BAR (object);
-
-    gtk_label_set_label (GTK_LABEL (self->case_label), self->header_label);
-
-    G_OBJECT_CLASS (kc_tool_bar_parent_class)->constructed (object);
-}
-
-static void
 kc_tool_bar_dispose (GObject *object)
 {
     KcToolBar *self = KC_TOOL_BAR (object);
 
     adw_bin_set_child (ADW_BIN (self), NULL);
-
-    g_clear_pointer (&self->header_label, g_free);
 
     G_OBJECT_CLASS (kc_tool_bar_parent_class)->dispose (object);
 }
@@ -256,9 +251,13 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
 
     object_class->get_property = kc_tool_bar_get_property;
     object_class->set_property = kc_tool_bar_set_property;
-    object_class->constructed = kc_tool_bar_constructed;
     object_class->dispose = kc_tool_bar_dispose;
 
+    /**
+     * KcToolBar::dropdown-changed:
+     *
+     * Emitted when selection of the #GtkDropDown that selects type of letter case is changed.
+     */
     signals[SIGNAL_DROPDOWN_CHANGED] =
         g_signal_new ("dropdown-changed",
                       G_TYPE_FROM_CLASS (klass),
@@ -270,6 +269,11 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
                       G_TYPE_NONE,
                       0);
 
+    /**
+     * KcToolBar::copy-button-clicked:
+     *
+     * Emitted when the #GtkButton to copy text is clicked.
+     */
     signals[SIGNAL_COPY_BUTTON_CLICKED] =
         g_signal_new ("copy-button-clicked",
                       G_TYPE_FROM_CLASS (klass),
@@ -281,12 +285,22 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
                       G_TYPE_NONE,
                       0);
 
-    props[PROP_HEADER_LABEL] = 
-        g_param_spec_string ("header-label", NULL, NULL,
+    /**
+     * KcToolBar:header-text:
+     *
+     * Text to show alongside the #GtkDropDown that selects type of letter case.
+     */
+    props[PROP_HEADER_TEXT] =
+        g_param_spec_string ("header-text", NULL, NULL,
                              NULL,
                              G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
-    props[PROP_CASE_TYPE] = 
+    /**
+     * KcToolBar:case-type:
+     *
+     * Type of letter case that currently preferred.
+     */
+    props[PROP_CASE_TYPE] =
         g_param_spec_enum ("case-type", NULL, NULL,
                            KC_TYPE_CASE_TYPE,
                            KC_CASE_TYPE_SPACE_SEPARATED,
@@ -308,7 +322,6 @@ kc_tool_bar_init (KcToolBar *self)
     GtkWidget *case_dropdown;
     GtkWidget *toolbar;
 
-    self->header_label = NULL;
     self->case_type = KC_CASE_TYPE_SPACE_SEPARATED;
 
     case_factory = gtk_signal_list_item_factory_new ();
@@ -360,11 +373,11 @@ kc_tool_bar_init (KcToolBar *self)
     gtk_drop_down_set_factory (GTK_DROP_DOWN (case_dropdown), case_factory);
     gtk_drop_down_set_list_factory (GTK_DROP_DOWN (case_dropdown), case_list_factory);
 
-    self->case_label = gtk_label_new (NULL);
-    gtk_label_set_use_underline (GTK_LABEL (self->case_label), TRUE);
-    gtk_label_set_mnemonic_widget (GTK_LABEL (self->case_label), case_dropdown);
-    gtk_label_set_wrap (GTK_LABEL (self->case_label), TRUE);
-    gtk_label_set_wrap (GTK_LABEL (self->case_label), PANGO_ELLIPSIZE_END);
+    self->header_label = gtk_label_new (NULL);
+    gtk_label_set_use_underline (GTK_LABEL (self->header_label), TRUE);
+    gtk_label_set_mnemonic_widget (GTK_LABEL (self->header_label), case_dropdown);
+    gtk_label_set_wrap (GTK_LABEL (self->header_label), TRUE);
+    gtk_label_set_wrap (GTK_LABEL (self->header_label), PANGO_ELLIPSIZE_END);
 
     self->copy_button = gtk_button_new_from_icon_name ("edit-copy");
     gtk_widget_set_tooltip_text (self->copy_button, _("Copy to Clipboard"));
@@ -376,7 +389,7 @@ kc_tool_bar_init (KcToolBar *self)
     toolbar = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_widget_set_valign (toolbar, GTK_ALIGN_CENTER);
     gtk_widget_add_css_class (toolbar, "toolbar");
-    gtk_box_append (GTK_BOX (toolbar), self->case_label);
+    gtk_box_append (GTK_BOX (toolbar), self->header_label);
     gtk_box_append (GTK_BOX (toolbar), case_dropdown);
     gtk_box_append (GTK_BOX (toolbar), self->copy_button);
     gtk_box_append (GTK_BOX (toolbar), self->toolbar_custom_area);
@@ -388,14 +401,56 @@ kc_tool_bar_init (KcToolBar *self)
                                  G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE,
                                  case_type_to_selected,
                                  selected_to_case_type,
-                                 g_object_ref (case_liststore),
-                                 g_object_unref);
+                                 case_liststore,
+                                 NULL);
 
     g_signal_connect_swapped (case_dropdown, "notify::selected", G_CALLBACK (notify_dropdown_changed), self);
 
     g_signal_connect_swapped (self->copy_button, "clicked", G_CALLBACK (emit_copy_button_clicked), self);
 }
 
+/**
+ * kc_tool_bar_get_header_text:
+ * @self: a `KcCaseListItem`
+ *
+ * Gets text to show alongside the #GtkDropDown that selects type of letter case for @self.
+ *
+ * Returns: (nullable) (transfer none): text to show alongside the #GtkDropDown that selects type of letter case
+ */
+const char *
+kc_tool_bar_get_header_text (KcToolBar *self)
+{
+    g_return_val_if_fail (KC_IS_TOOL_BAR (self), NULL);
+
+    return gtk_label_get_label (GTK_LABEL (self->header_label));
+}
+
+/**
+ * kc_tool_bar_set_header_text:
+ * @self: a `KcToolBar`
+ * @text: (nullable) (transfer none): text to show alongside the #GtkDropDown that selects type of letter case
+ *
+ * Sets text to show alongside the #GtkDropDown that selects type of letter case for @self.
+ */
+void
+kc_tool_bar_set_header_text (KcToolBar  *self,
+                             const char *text)
+{
+    g_return_if_fail (KC_IS_TOOL_BAR (self));
+
+    gtk_label_set_label (GTK_LABEL (self->header_label), text);
+
+    g_object_notify_by_pspec (G_OBJECT (self), props[PROP_HEADER_TEXT]);
+}
+
+/**
+ * kc_tool_bar_get_case_type:
+ * @self: a `KcToolBar`
+ *
+ * Gets type of letter case that currently preferred for @self.
+ *
+ * Returns: type of letter case that currently preferred
+ */
 KcCaseType
 kc_tool_bar_get_case_type (KcToolBar *self)
 {
@@ -404,6 +459,13 @@ kc_tool_bar_get_case_type (KcToolBar *self)
     return self->case_type;
 }
 
+/**
+ * kc_tool_bar_set_case_type:
+ * @self: a `KcToolBar`
+ * @case_type: type of letter case that currently preferred
+ *
+ * Sets type of letter case that currently preferred for @self.
+ */
 void
 kc_tool_bar_set_case_type (KcToolBar  *self,
                            KcCaseType  case_type)
@@ -419,6 +481,14 @@ kc_tool_bar_set_case_type (KcToolBar  *self,
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_CASE_TYPE]);
 }
 
+/**
+ * kc_tool_bar_get_copy_clipboard_button:
+ * @self: a `KcToolBar`
+ *
+ * Gets the #GtkButton to copy text for @self.
+ *
+ * Returns: (transfer none): the #GtkButton to copy text
+ */
 GtkWidget *
 kc_tool_bar_get_copy_clipboard_button (KcToolBar *self)
 {
@@ -427,6 +497,13 @@ kc_tool_bar_get_copy_clipboard_button (KcToolBar *self)
     return self->copy_button;
 }
 
+/**
+ * kc_tool_bar_append:
+ * @self: a `KcToolBar`
+ * @widget: (transfer floating): the widget to append
+ *
+ * Adds an additional widget at the end.
+ */
 void
 kc_tool_bar_append (KcToolBar *self,
                     GtkWidget *widget)
@@ -437,10 +514,18 @@ kc_tool_bar_append (KcToolBar *self,
     gtk_box_append (GTK_BOX (self->toolbar_custom_area), widget);
 }
 
+/**
+ * kc_tool_bar_new:
+ * @header_text: text to show alongside the #GtkDropDown that selects type of letter case
+ *
+ * Creates a new `KcToolbar`.
+ *
+ * Returns: (transfer full): the newly created `KcToolbar`
+ */
 KcToolBar *
-kc_tool_bar_new (const char *header_label)
+kc_tool_bar_new (const char *header_text)
 {
     return g_object_new (KC_TYPE_TOOL_BAR,
-                         "header-label", header_label,
+                         "header-text", header_text,
                          NULL);
 }

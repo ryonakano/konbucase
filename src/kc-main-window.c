@@ -13,19 +13,18 @@
 #include "kc-main-view.h"
 #include "kc-util.h"
 
+/**
+ * KcMainWindow:
+ *
+ * The app window.
+ */
+
 struct _KcMainWindow {
     AdwApplicationWindow         parent_instance;
 };
 
 G_DEFINE_FINAL_TYPE (KcMainWindow, kc_main_window, ADW_TYPE_APPLICATION_WINDOW)
 
-/**
- * kc_main_window_show_toast:
- * @overlay: (transfer none): a #AdwToastOverlay to show a toast on
- * @title: (transfer none): the title of the toast
- *
- * Presents a toast, an in-app notification.
- */
 static void
 kc_main_window_show_toast (AdwToastOverlay *overlay)
 {
@@ -35,7 +34,6 @@ kc_main_window_show_toast (AdwToastOverlay *overlay)
     adw_toast_overlay_add_toast (overlay, toast);
 }
 
-// TODO: Remove?
 static void
 kc_main_window_class_init (KcMainWindowClass *klass)
 {
@@ -121,9 +119,18 @@ kc_main_window_init (KcMainWindow *self)
     g_signal_connect_swapped (main_view, "text-copied", G_CALLBACK (kc_main_window_show_toast), overlay);
 }
 
+/**
+ * kc_main_window_new:
+ * @app: a #KcApplication to be associated with `KcMainWindow`
+ *
+ * Creates a new `KcMainWindow`.
+ *
+ * Returns: (transfer full): the newly created `KcMainWindow`
+ */
 KcMainWindow *
-kc_main_window_new (void)
+kc_main_window_new (KcApplication *app)
 {
     return g_object_new (KC_TYPE_MAIN_WINDOW,
+                         "application", G_APPLICATION (app),
                          NULL);
 }

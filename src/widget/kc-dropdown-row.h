@@ -12,11 +12,11 @@ G_BEGIN_DECLS
 #define KC_TYPE_DROPDOWN_ROW (kc_dropdown_row_get_type ())
 G_DECLARE_FINAL_TYPE (KcDropDownRow, kc_dropdown_row, KC, DROPDOWN_ROW, GtkBox)
 
-extern void kc_dropdown_row_set_title (KcDropDownRow *self, const char *str);
 extern const char *kc_dropdown_row_get_title (KcDropDownRow *self);
+extern void kc_dropdown_row_set_title (KcDropDownRow *self, const char *title);
 
-extern void kc_dropdown_row_set_description (KcDropDownRow *self, const char *str);
 extern const char *kc_dropdown_row_get_description (KcDropDownRow *self);
+extern void kc_dropdown_row_set_description (KcDropDownRow *self, const char *description);
 
 extern KcDropDownRow *kc_dropdown_row_new (void);
 

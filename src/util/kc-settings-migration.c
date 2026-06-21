@@ -6,6 +6,8 @@
 #include "kc-settings-migration.h"
 
 /**
+ * KcSettingsMigration:
+ *
  * Handles backward compatibility of app preferences.
  */
 
@@ -23,17 +25,13 @@ typedef gboolean (*KcSettingsMigrationFunc) (GSettings *settings, GVariant *old_
 
 /**
  * KcSettingsMigrationEntry:
+ * @old_key: Key name before migration.
+ * @migrate: Migration procedure.
+ *
  * Data structure to migrate an app preference saved in a key of #GSettings.
  */
 typedef struct {
-    /**
-     * Key name before migration.
-     */
     const gchar                *old_key;
-
-    /**
-     * Migration procedure.
-     */
     KcSettingsMigrationFunc     migrate;
 } KcSettingsMigrationEntry;
 
@@ -64,29 +62,17 @@ migrate_result_case_type (GSettings *settings,
     return TRUE;
 }
 
-/**
- * Table of data structures used for migration.
- */
 static const KcSettingsMigrationEntry settings_migration_table[] = {
-    {
-        .old_key = "source-text",
-        .migrate = migrate_source_text,
-    },
-    {
-        .old_key = "source-case-type",
-        .migrate = migrate_source_case_type,
-    },
-    {
-        .old_key = "result-case-type",
-        .migrate = migrate_result_case_type,
-    },
+    { "source-text"         , migrate_source_text      },
+    { "source-case-type"    , migrate_source_case_type },
+    { "result-case-type"    , migrate_result_case_type },
+
     { NULL }
 };
 
 /**
  * kc_util_migrate_settings:
  * @settings: the target #GSettings for migration
- * @migration_table: table of data structures used for migration
  *
  * Migrates app preferences of @settings from old (deprecated) keys to new ones.
  *

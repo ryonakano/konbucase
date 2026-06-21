@@ -5,12 +5,23 @@
 
 #include "kc-dropdown-row.h"
 
+/**
+ * KcDropDownRow:
+ *
+ * A row of a dropdown with a title and description text.
+ *
+ * <picture>
+ *   <img src="example_drop_down_row.png" alt="example image of DropDownRow">
+ * </picture>
+ */
+
 struct _KcDropDownRow {
     GtkBox          parent_instance;
 
     GtkWidget       *title;
     GtkWidget       *description;
 };
+
 G_DEFINE_FINAL_TYPE (KcDropDownRow, kc_dropdown_row, GTK_TYPE_BOX)
 
 static void
@@ -56,15 +67,14 @@ kc_dropdown_row_init (KcDropDownRow *self)
     gtk_box_append (GTK_BOX (self), self->description);
 }
 
-void
-kc_dropdown_row_set_title (KcDropDownRow *self,
-                           const char    *str)
-{
-    g_return_if_fail (KC_IS_DROPDOWN_ROW (self));
-
-    gtk_label_set_label (GTK_LABEL (self->title), str);
-}
-
+/**
+ * kc_dropdown_row_get_title:
+ * @self: a `KcDropDownRow`
+ *
+ * Gets title text of the row for @self.
+ *
+ * Returns: (nullable) (transfer none): title text of the row
+ */
 const char *
 kc_dropdown_row_get_title (KcDropDownRow *self)
 {
@@ -73,15 +83,30 @@ kc_dropdown_row_get_title (KcDropDownRow *self)
     return gtk_label_get_label (GTK_LABEL (self->title));
 }
 
+/**
+ * kc_dropdown_row_set_title:
+ * @self: a `KcDropDownRow`
+ * @title: (nullable) (transfer none): title text of the row
+ *
+ * Sets title text of the row for @self.
+ */
 void
-kc_dropdown_row_set_description (KcDropDownRow *self,
-                                 const char    *str)
+kc_dropdown_row_set_title (KcDropDownRow *self,
+                           const char    *title)
 {
     g_return_if_fail (KC_IS_DROPDOWN_ROW (self));
 
-    gtk_label_set_label (GTK_LABEL (self->description), str);
+    gtk_label_set_label (GTK_LABEL (self->title), title);
 }
 
+/**
+ * kc_dropdown_row_get_description:
+ * @self: a `KcDropDownRow`
+ *
+ * Gets description text of the row for @self.
+ *
+ * Returns: (nullable) (transfer none): description text of the row
+ */
 const char *
 kc_dropdown_row_get_description (KcDropDownRow *self)
 {
@@ -90,6 +115,29 @@ kc_dropdown_row_get_description (KcDropDownRow *self)
     return gtk_label_get_label (GTK_LABEL (self->description));
 }
 
+/**
+ * kc_dropdown_row_set_description:
+ * @self: a `KcDropDownRow`
+ * @description: (nullable) (transfer none): description text of the row
+ *
+ * Sets description text of the row for @self.
+ */
+void
+kc_dropdown_row_set_description (KcDropDownRow *self,
+                                 const char    *description)
+{
+    g_return_if_fail (KC_IS_DROPDOWN_ROW (self));
+
+    gtk_label_set_label (GTK_LABEL (self->description), description);
+}
+
+/**
+ * kc_dropdown_row_new:
+ *
+ * Creates a new `KcDropDownRow`.
+ *
+ * Returns: (transfer full): the newly created `KcDropDownRow`
+ */
 KcDropDownRow *
 kc_dropdown_row_new (void)
 {

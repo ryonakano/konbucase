@@ -5,6 +5,20 @@
 
 #include "kc-case-convert.h"
 
+/**
+ * KcCaseConvert:
+ *
+ * Converts data types related to case conversion and do case conversion itself.
+ */
+
+/**
+ * kc_case_convert_to_case_type:
+ * @chcase_case: a `ChCaseCase`
+ *
+ * Converts `ChCaseCase` to `KcCaseType`.
+ *
+ * Returns: a `KcCaseType`
+ */
 KcCaseType
 kc_case_convert_to_case_type (ChCaseCase chcase_case)
 {
@@ -27,6 +41,14 @@ kc_case_convert_to_case_type (ChCaseCase chcase_case)
     }
 }
 
+/**
+ * kc_case_convert_to_chcase_case:
+ * @case_type: a `KcCaseType`
+ *
+ * Converts `KcCaseType` to `ChCaseCase`.
+ *
+ * Returns: a `ChCaseCase`
+ */
 ChCaseCase
 kc_case_convert_to_chcase_case (KcCaseType case_type)
 {
@@ -49,6 +71,17 @@ kc_case_convert_to_chcase_case (KcCaseType case_type)
     }
 }
 
+/**
+ * kc_case_convert_do_convert:
+ * @converter: (transfer none): a case converter
+ * @input_case: case type of input text
+ * @input_text: (transfer none): text that is converted
+ * @output_case: case type of output text
+ *
+ * Converts case of a piece of text.
+ *
+ * Returns: (transfer full): text after conversion
+ */
 char *
 kc_case_convert_do_convert (ChCaseConverter *converter,
                             KcCaseType       input_case,

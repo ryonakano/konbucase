@@ -5,6 +5,12 @@
 
 #include "kc-case-list-item.h"
 
+/**
+ * KcCaseListItem:
+ *
+ * A list model that has information about a letter case.
+ */
+
 enum {
     PROP_0,
 
@@ -17,13 +23,7 @@ enum {
 
 static GParamSpec *props[N_PROPS];
 
-/**
- * KcCaseListItem:
- *
- * A list model that has information about a letter case.
- */
 struct _KcCaseListItem {
-    /*< private >*/
     GObject         parent_instance;
 
     KcCaseType      case_type;
@@ -54,13 +54,13 @@ kc_case_list_item_get_property (GObject    *object,
 
     switch (prop_id) {
     case PROP_CASE_TYPE:
-        g_value_set_enum (value, self->case_type);
+        g_value_set_enum (value, kc_case_list_item_get_case_type (self));
         break;
     case PROP_NAME:
-        g_value_set_string (value, self->name);
+        g_value_set_string (value, kc_case_list_item_get_name (self));
         break;
     case PROP_DESCRIPTION:
-        g_value_set_string (value, self->description);
+        g_value_set_string (value, kc_case_list_item_get_description (self));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -78,13 +78,13 @@ kc_case_list_item_set_property (GObject      *object,
 
     switch (prop_id) {
     case PROP_CASE_TYPE:
-        self->case_type = g_value_get_enum (value);
+        kc_case_list_item_set_case_type (self, g_value_get_enum (value));
         break;
     case PROP_NAME:
-        g_set_str (&self->name, g_value_get_string (value));
+        kc_case_list_item_set_name (self, g_value_get_string (value));
         break;
     case PROP_DESCRIPTION:
-        g_set_str (&self->description, g_value_get_string (value));
+        kc_case_list_item_set_description (self, g_value_get_string (value));
         break;
     default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -143,6 +143,14 @@ kc_case_list_item_init (KcCaseListItem *self)
     self->description = NULL;
 }
 
+/**
+ * kc_case_list_item_get_case_type:
+ * @self: a `KcCaseListItem`
+ *
+ * Gets type of the letter case for @self.
+ *
+ * Returns: type of the letter case
+ */
 KcCaseType
 kc_case_list_item_get_case_type (KcCaseListItem *self)
 {
@@ -151,6 +159,13 @@ kc_case_list_item_get_case_type (KcCaseListItem *self)
     return self->case_type;
 }
 
+/**
+ * kc_case_list_item_set_case_type:
+ * @self: a `KcCaseListItem`
+ * @case_type: type of the letter case
+ *
+ * Sets type of the letter case for @self.
+ */
 void
 kc_case_list_item_set_case_type (KcCaseListItem *self,
                                  KcCaseType      case_type)
@@ -166,6 +181,14 @@ kc_case_list_item_set_case_type (KcCaseListItem *self,
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_CASE_TYPE]);
 }
 
+/**
+ * kc_case_list_item_get_name:
+ * @self: a `KcCaseListItem`
+ *
+ * Gets display name of the letter case for @self.
+ *
+ * Returns: (nullable) (transfer none): display name of the letter case
+ */
 const char *
 kc_case_list_item_get_name (KcCaseListItem *self)
 {
@@ -174,6 +197,13 @@ kc_case_list_item_get_name (KcCaseListItem *self)
     return self->name;
 }
 
+/**
+ * kc_case_list_item_set_name:
+ * @self: a `KcCaseListItem`
+ * @name: (nullable) (transfer none): display name of the letter case
+ *
+ * Sets display name of the letter case for @self.
+ */
 void
 kc_case_list_item_set_name (KcCaseListItem *self,
                             const char     *name)
@@ -189,6 +219,14 @@ kc_case_list_item_set_name (KcCaseListItem *self,
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_NAME]);
 }
 
+/**
+ * kc_case_list_item_get_description:
+ * @self: a `KcCaseListItem`
+ *
+ * Gets description of the letter case for @self.
+ *
+ * Returns: (nullable) (transfer none): description of the letter case
+ */
 const char *
 kc_case_list_item_get_description (KcCaseListItem *self)
 {
@@ -197,6 +235,13 @@ kc_case_list_item_get_description (KcCaseListItem *self)
     return self->description;
 }
 
+/**
+ * kc_case_list_item_set_description:
+ * @self: a `KcCaseListItem`
+ * @description: (nullable) (transfer none): description of the letter case
+ *
+ * Sets description of the letter case for @self.
+ */
 void
 kc_case_list_item_set_description (KcCaseListItem *self,
                                    const char     *description)
@@ -207,11 +252,20 @@ kc_case_list_item_set_description (KcCaseListItem *self,
         return;
     }
 
-    g_set_str (&self->description,description);
+    g_set_str (&self->description, description);
 
     g_object_notify_by_pspec (G_OBJECT (self), props[PROP_DESCRIPTION]);
 }
 
+/**
+ * kc_case_list_item_equal:
+ * @self: a `KcCaseListItem`
+ * @other: (transfer none): another `KcCaseListItem`
+ *
+ * Checks if @self and @other represent the same case.
+ *
+ * Returns: `TRUE` if @self and @other represent the same case
+ */
 gboolean
 kc_case_list_item_equal (KcCaseListItem *self,
                          KcCaseListItem *other)
@@ -226,12 +280,12 @@ kc_case_list_item_equal (KcCaseListItem *self,
 /**
  * kc_case_list_item_new:
  * @case_type: type of the letter case
- * @name: (transfer none): display name of the letter case
- * @description: (transfer none): description of the letter case
+ * @name: (nullable) (transfer none): display name of the letter case
+ * @description: (nullable) (transfer none): description of the letter case
  *
  * Creates a new `KcCaseListItem`.
  *
- * Returns: (transfer full): a new `KcCaseListItem`
+ * Returns: (transfer full): the newly created `KcCaseListItem`
  */
 KcCaseListItem *
 kc_case_list_item_new (KcCaseType  case_type,

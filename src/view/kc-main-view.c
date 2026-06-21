@@ -18,6 +18,23 @@
 #include "kc-tool-bar.h"
 #include "kc-types.h"
 
+/**
+ * KcMainView:
+ *
+ * The main content of the app window.
+ *
+ * It contains two panes; Input Pane at the start and Output Pane at the end. Both consists of a #KcToolBar
+ * and a #KcTextArea.
+ *
+ * Input Pane aims to receive user input to convert, so text in its #KcTextArea is editable
+ * and also its #KcToolBar contains a button to clear text in its #KcTextArea.
+ * On the other hand, Output Pane aims to print conversion result, so text in its #KcTextArea is not editable.
+ *
+ * <picture>
+ *   <img src="example_main_view.png" alt="example image of MainView">
+ * </picture>
+ */
+
 enum {
     SIGNAL_TEXT_COPIED,
 
@@ -175,6 +192,11 @@ kc_main_view_class_init (KcMainViewClass *klass)
 
     object_class->dispose = kc_main_view_dispose;
 
+    /**
+     * KcMainView::text-copied:
+     *
+     * Emitted when text in a #KcTextArea is copied to the clipboard.
+     */
     signals[SIGNAL_TEXT_COPIED] =
         g_signal_new ("text-copied",
                       G_TYPE_FROM_CLASS (klass),
@@ -298,13 +320,6 @@ kc_main_view_init (KcMainView *self)
                                  NULL,
                                  NULL);
 
-    g_signal_connect_swapped (self->input_toolbar, "copy-button-clicked", G_CALLBACK (copy_and_notify_input), self);
-    g_signal_connect_swapped (self->output_toolbar, "copy-button-clicked", G_CALLBACK (copy_and_notify_output), self);
-
-    // Clear text in the input textarea
-    // Text in the output textarea is also cleared accordingly
-    g_signal_connect_swapped (clear_button, "clicked", G_CALLBACK (kc_text_area_clear_text), self->input_textarea);
-
     g_signal_connect_swapped (self->input_toolbar, "notify::case-type", G_CALLBACK (save_input_case_type), self);
     g_signal_connect_swapped (self->output_toolbar, "notify::case-type", G_CALLBACK (save_output_case_type), self);
 
@@ -323,8 +338,21 @@ kc_main_view_init (KcMainView *self)
     self->input_text_handler = g_signal_connect_swapped (self->input_textarea, "notify::text",
                                                          G_CALLBACK (do_convert), self);
     do_convert (self);
+
+    g_signal_connect_swapped (self->input_toolbar, "copy-button-clicked", G_CALLBACK (copy_and_notify_input), self);
+    g_signal_connect_swapped (self->output_toolbar, "copy-button-clicked", G_CALLBACK (copy_and_notify_output), self);
+
+    // Clear text in the input textarea
+    // Text in the output textarea is also cleared accordingly
+    g_signal_connect_swapped (clear_button, "clicked", G_CALLBACK (kc_text_area_clear_text), self->input_textarea);
 }
 
+/**
+ * kc_main_view_swap:
+ * @self: a `KcMainView
+ *
+ * Swaps values of [property@KcToolBar:case_type] and [property@KcTextArea:text] between input and output.
+ */
 void
 kc_main_view_swap (KcMainView *self)
 {
@@ -358,6 +386,14 @@ kc_main_view_swap (KcMainView *self)
     g_signal_handler_unblock (self->input_textarea, self->input_text_handler);
 }
 
+
+/**
+ * kc_main_view_new:
+ *
+ * Creates a new `KcMainView`.
+ *
+ * Returns: (transfer full): the newly created `KcMainView`
+ */
 KcMainView *
 kc_main_view_new (void)
 {

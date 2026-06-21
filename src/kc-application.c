@@ -19,6 +19,12 @@
 #include "kc-settings-migration.h"
 #include "kc-util.h"
 
+/**
+ * KcApplication:
+ *
+ * The foundation class to manage the app and its window.
+ */
+
 struct _KcApplication {
     AdwApplication       parent_instance;
 
@@ -96,11 +102,10 @@ kc_application_activate (GApplication *application)
         return;
     }
 
-    self->window = kc_main_window_new ();
+    self->window = kc_main_window_new (self);
     g_settings_bind (self->settings, "window-height", self->window, "default-height", G_SETTINGS_BIND_DEFAULT);
     g_settings_bind (self->settings, "window-width", self->window, "default-width", G_SETTINGS_BIND_DEFAULT);
     g_settings_bind (self->settings, "window-maximized", self->window, "maximized", G_SETTINGS_BIND_DEFAULT);
-    gtk_window_set_application (GTK_WINDOW (self->window), GTK_APPLICATION (application));
     gtk_window_present (GTK_WINDOW (self->window));
 }
 
@@ -175,6 +180,9 @@ settings_color_scheme_set_mapping (const GValue       *adw_scheme,
 }
 
 /*
+ * Makes it possible to change app style with `app.color-scheme` action
+ * and remembers its preferences to app settings.
+ *
  * Inspired from Rnote:
  * https://github.com/flxzt/rnote/blob/v0.9.4/crates/rnote-ui/src/app/appactions.rs#L11-L36
  * https://github.com/flxzt/rnote/blob/v0.9.4/crates/rnote-ui/src/appwindow/appsettings.rs#L14-L28
@@ -239,8 +247,19 @@ static void
 kc_application_dispose (GObject *object)
 {
     KcApplication *self = KC_APPLICATION (object);
+    AdwStyleManager *style_manager;
 
     // self->window should be already freed
+
+    /*
+     * g_settings_bind() and its families takes a ref of the object that bind with the settings
+     * and the lifecycle of the binding is tied to the object.
+     * Here, however, the object (AdwApplication:style-manager) is unowned reference, thus it won't be released
+     * during lifetime of the Application instance.
+     * So, remove the binding manually when finalizing Application to unref the object.
+     */
+    style_manager = adw_application_get_style_manager (ADW_APPLICATION (self));
+    g_settings_unbind (style_manager, "color-scheme");
 
     g_clear_object (&self->settings);
 
@@ -274,6 +293,13 @@ kc_application_init (KcApplication *self)
     gtk_application_set_accels_for_action (GTK_APPLICATION (self), "app.quit", app_quit_accels);
 }
 
+/**
+ * kc_application_new:
+ *
+ * Creates a new `KcApplication`.
+ *
+ * Returns: the newly created `KcApplication`
+ */
 KcApplication *
 kc_application_new (void)
 {
