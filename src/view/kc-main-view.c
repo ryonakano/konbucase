@@ -331,9 +331,9 @@ kc_main_view_init (KcMainView *self)
     //  * case type of the output text is changed
     //  * the input text is changed
     //  * the window is initialized
-    self->input_case_handler = g_signal_connect_swapped (self->input_toolbar, "dropdown-changed",
+    self->input_case_handler = g_signal_connect_swapped (self->input_toolbar, "drop-down-changed",
                                                          G_CALLBACK (do_convert), self);
-    self->output_case_handler = g_signal_connect_swapped (self->output_toolbar, "dropdown-changed",
+    self->output_case_handler = g_signal_connect_swapped (self->output_toolbar, "drop-down-changed",
                                                          G_CALLBACK (do_convert), self);
     self->input_text_handler = g_signal_connect_swapped (self->input_textarea, "notify::text",
                                                          G_CALLBACK (do_convert), self);

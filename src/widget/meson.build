@@ -1,8 +1,8 @@
 includes += include_directories('.')
 
 sources += files(
-  'kc-dropdown-button-content.c',
-  'kc-dropdown-row.c',
+  'kc-drop-down-button-content.c',
+  'kc-drop-down-row.c',
   'kc-text-area.c',
   'kc-tool-bar.c',
 )

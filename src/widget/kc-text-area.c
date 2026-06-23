@@ -31,8 +31,8 @@ static GParamSpec *props[N_PROPS];
 struct _KcTextArea {
     AdwBin              parent_instance;
 
-    GtkSourceBuffer    *buffer;
     char               *text;
+    GtkSourceBuffer    *buffer;
     GtkWidget          *source_view;
 };
 

@@ -7,10 +7,11 @@
 
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
+#include <pango/pango.h>
 
 #include "kc-case-list-item.h"
-#include "kc-dropdown-button-content.h"
-#include "kc-dropdown-row.h"
+#include "kc-drop-down-button-content.h"
+#include "kc-drop-down-row.h"
 
 /**
  * A widget that contains controls for text input/output.
@@ -27,7 +28,7 @@ enum {
 };
 
 enum {
-    SIGNAL_DROPDOWN_CHANGED,
+    SIGNAL_DROP_DOWN_CHANGED,
     SIGNAL_COPY_BUTTON_CLICKED,
 
     N_SIGNALS
@@ -71,7 +72,7 @@ case_factory_setup (GtkSignalListItemFactory *factory,
     GtkListItem *item = GTK_LIST_ITEM (object);
     KcDropDownButtonContent *content;
 
-    content = kc_dropdown_button_content_new ();
+    content = kc_drop_down_button_content_new ();
     gtk_list_item_set_child (item, GTK_WIDGET (content));
 }
 
@@ -84,12 +85,12 @@ case_factory_bind (GtkSignalListItemFactory *factory,
     KcCaseListItem *model;
     const char *name;
 
-    content = KC_DROPDOWN_BUTTON_CONTENT (gtk_list_item_get_child (item));
+    content = KC_DROP_DOWN_BUTTON_CONTENT (gtk_list_item_get_child (item));
     model = KC_CASE_LIST_ITEM (gtk_list_item_get_item (item));
 
     name = kc_case_list_item_get_name (model);
 
-    kc_dropdown_button_content_set_label_text (content, _(name));
+    kc_drop_down_button_content_set_label_text (content, _(name));
 }
 
 static void
@@ -99,7 +100,7 @@ case_list_factory_setup (GtkSignalListItemFactory *factory,
     GtkListItem *item = GTK_LIST_ITEM (object);
     KcDropDownRow *row;
 
-    row = kc_dropdown_row_new ();
+    row = kc_drop_down_row_new ();
     gtk_list_item_set_child (item, GTK_WIDGET (row));
 }
 
@@ -113,14 +114,14 @@ case_list_factory_bind (GtkSignalListItemFactory *factory,
     const char *name;
     const char *description;
 
-    row = KC_DROPDOWN_ROW (gtk_list_item_get_child (item));
+    row = KC_DROP_DOWN_ROW (gtk_list_item_get_child (item));
     model = KC_CASE_LIST_ITEM (gtk_list_item_get_item (item));
 
     name = kc_case_list_item_get_name (model);
     description = kc_case_list_item_get_description (model);
 
-    kc_dropdown_row_set_title (row, _(name));
-    kc_dropdown_row_set_description (row, _(description));
+    kc_drop_down_row_set_title (row, _(name));
+    kc_drop_down_row_set_description (row, _(description));
 }
 
 static gboolean
@@ -181,9 +182,9 @@ selected_to_case_type (GBinding     *binding,
 }
 
 static void
-notify_dropdown_changed (KcToolBar *self)
+notify_drop_down_changed (KcToolBar *self)
 {
-    g_signal_emit (self, signals[SIGNAL_DROPDOWN_CHANGED], 0);
+    g_signal_emit (self, signals[SIGNAL_DROP_DOWN_CHANGED], 0);
 }
 
 static void
@@ -254,12 +255,12 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
     object_class->dispose = kc_tool_bar_dispose;
 
     /**
-     * KcToolBar::dropdown-changed:
+     * KcToolBar::drop-down-changed:
      *
      * Emitted when selection of the #GtkDropDown that selects type of letter case is changed.
      */
-    signals[SIGNAL_DROPDOWN_CHANGED] =
-        g_signal_new ("dropdown-changed",
+    signals[SIGNAL_DROP_DOWN_CHANGED] =
+        g_signal_new ("drop-down-changed",
                       G_TYPE_FROM_CLASS (klass),
                       G_SIGNAL_RUN_LAST,
                       0,
@@ -319,7 +320,7 @@ kc_tool_bar_init (KcToolBar *self)
     int i;
     GtkExpression *l10n_case_exp_params[N_L10N_CASE_EXP_PARAMS];
     GtkExpression *l10n_case_exp;
-    GtkWidget *case_dropdown;
+    GtkWidget *case_drop_down;
     GtkWidget *toolbar;
 
     self->case_type = KC_CASE_TYPE_SPACE_SEPARATED;
@@ -369,13 +370,13 @@ kc_tool_bar_init (KcToolBar *self)
         G_CALLBACK (localize_str), NULL, NULL
     );
 
-    case_dropdown = gtk_drop_down_new (G_LIST_MODEL (case_liststore), l10n_case_exp);
-    gtk_drop_down_set_factory (GTK_DROP_DOWN (case_dropdown), case_factory);
-    gtk_drop_down_set_list_factory (GTK_DROP_DOWN (case_dropdown), case_list_factory);
+    case_drop_down = gtk_drop_down_new (G_LIST_MODEL (case_liststore), l10n_case_exp);
+    gtk_drop_down_set_factory (GTK_DROP_DOWN (case_drop_down), case_factory);
+    gtk_drop_down_set_list_factory (GTK_DROP_DOWN (case_drop_down), case_list_factory);
 
     self->header_label = gtk_label_new (NULL);
     gtk_label_set_use_underline (GTK_LABEL (self->header_label), TRUE);
-    gtk_label_set_mnemonic_widget (GTK_LABEL (self->header_label), case_dropdown);
+    gtk_label_set_mnemonic_widget (GTK_LABEL (self->header_label), case_drop_down);
     gtk_label_set_wrap (GTK_LABEL (self->header_label), TRUE);
     gtk_label_set_wrap (GTK_LABEL (self->header_label), PANGO_ELLIPSIZE_END);
 
@@ -390,21 +391,21 @@ kc_tool_bar_init (KcToolBar *self)
     gtk_widget_set_valign (toolbar, GTK_ALIGN_CENTER);
     gtk_widget_add_css_class (toolbar, "toolbar");
     gtk_box_append (GTK_BOX (toolbar), self->header_label);
-    gtk_box_append (GTK_BOX (toolbar), case_dropdown);
+    gtk_box_append (GTK_BOX (toolbar), case_drop_down);
     gtk_box_append (GTK_BOX (toolbar), self->copy_button);
     gtk_box_append (GTK_BOX (toolbar), self->toolbar_custom_area);
 
     adw_bin_set_child (ADW_BIN (self), toolbar);
 
     g_object_bind_property_full (G_OBJECT (self), "case-type",
-                                 G_OBJECT (case_dropdown), "selected",
+                                 G_OBJECT (case_drop_down), "selected",
                                  G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE,
                                  case_type_to_selected,
                                  selected_to_case_type,
                                  case_liststore,
                                  NULL);
 
-    g_signal_connect_swapped (case_dropdown, "notify::selected", G_CALLBACK (notify_dropdown_changed), self);
+    g_signal_connect_swapped (case_drop_down, "notify::selected", G_CALLBACK (notify_drop_down_changed), self);
 
     g_signal_connect_swapped (self->copy_button, "clicked", G_CALLBACK (emit_copy_button_clicked), self);
 }
