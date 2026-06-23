@@ -25,5 +25,5 @@ typedef enum {
     KC_CASE_TYPE_KEBAB,
     KC_CASE_TYPE_SENTENCE,
 
-    N_KC_CASE_TYPE
+    KC_N_CASE_TYPE
 } KcCaseType;

@@ -315,7 +315,7 @@ kc_tool_bar_init (KcToolBar *self)
 {
     g_autoptr(GtkListItemFactory) case_factory = NULL;
     g_autoptr(GtkListItemFactory) case_list_factory = NULL;
-    KcCaseListItem *case_listitems[N_KC_CASE_TYPE];
+    KcCaseListItem *case_listitems[KC_N_CASE_TYPE];
     GListStore *case_liststore;
     int i;
     GtkExpression *l10n_case_exp_params[N_L10N_CASE_EXP_PARAMS];
