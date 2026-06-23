@@ -223,8 +223,8 @@ kc_main_view_init (KcMainView *self)
 
     g_autoptr(GtkSizeGroup) size_group = NULL;
 
-    GtkWidget *input_clip_button;
-    GtkWidget *output_clip_button;
+    GtkWidget *input_copy_button;
+    GtkWidget *output_copy_button;
 
     self->settings = g_settings_new (APP_ID);
 
@@ -286,17 +286,17 @@ kc_main_view_init (KcMainView *self)
     gtk_widget_grab_focus (GTK_WIDGET (self->input_textarea));
 
     // Make copy button only sensitive when there are texts to copy
-    input_clip_button = kc_tool_bar_get_copy_clipboard_button (self->input_toolbar);
+    input_copy_button = kc_tool_bar_get_copy_button (self->input_toolbar);
     g_object_bind_property_full (G_OBJECT (self->input_textarea), "text",
-                                 G_OBJECT (input_clip_button), "sensitive",
+                                 G_OBJECT (input_copy_button), "sensitive",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  text_area_text_to_widget_sensitive,
                                  NULL,
                                  NULL,
                                  NULL);
-    output_clip_button = kc_tool_bar_get_copy_clipboard_button (self->output_toolbar);
+    output_copy_button = kc_tool_bar_get_copy_button (self->output_toolbar);
     g_object_bind_property_full (G_OBJECT (self->output_textarea), "text",
-                                 G_OBJECT (output_clip_button), "sensitive",
+                                 G_OBJECT (output_copy_button), "sensitive",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  text_area_text_to_widget_sensitive,
                                  NULL,

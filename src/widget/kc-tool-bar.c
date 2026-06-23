@@ -182,7 +182,7 @@ selected_to_case_type (GBinding     *binding,
 }
 
 static void
-notify_drop_down_changed (KcToolBar *self)
+emit_drop_down_changed (KcToolBar *self)
 {
     g_signal_emit (self, signals[SIGNAL_DROP_DOWN_CHANGED], 0);
 }
@@ -405,14 +405,14 @@ kc_tool_bar_init (KcToolBar *self)
                                  case_liststore,
                                  NULL);
 
-    g_signal_connect_swapped (case_drop_down, "notify::selected", G_CALLBACK (notify_drop_down_changed), self);
+    g_signal_connect_swapped (case_drop_down, "notify::selected", G_CALLBACK (emit_drop_down_changed), self);
 
     g_signal_connect_swapped (self->copy_button, "clicked", G_CALLBACK (emit_copy_button_clicked), self);
 }
 
 /**
  * kc_tool_bar_get_header_text:
- * @self: a `KcCaseListItem`
+ * @self: a `KcToolBar`
  *
  * Gets text to show alongside the #GtkDropDown that selects type of letter case for @self.
  *
@@ -483,7 +483,7 @@ kc_tool_bar_set_case_type (KcToolBar  *self,
 }
 
 /**
- * kc_tool_bar_get_copy_clipboard_button:
+ * kc_tool_bar_get_copy_button:
  * @self: a `KcToolBar`
  *
  * Gets the #GtkButton to copy text for @self.
@@ -491,7 +491,7 @@ kc_tool_bar_set_case_type (KcToolBar  *self,
  * Returns: (transfer none): the #GtkButton to copy text
  */
 GtkWidget *
-kc_tool_bar_get_copy_clipboard_button (KcToolBar *self)
+kc_tool_bar_get_copy_button (KcToolBar *self)
 {
     g_return_val_if_fail (KC_IS_TOOL_BAR (self), NULL);
 
@@ -519,9 +519,9 @@ kc_tool_bar_append (KcToolBar *self,
  * kc_tool_bar_new:
  * @header_text: text to show alongside the #GtkDropDown that selects type of letter case
  *
- * Creates a new `KcToolbar`.
+ * Creates a new `KcToolBar`.
  *
- * Returns: (transfer full): the newly created `KcToolbar`
+ * Returns: (transfer full): the newly created `KcToolBar`
  */
 KcToolBar *
 kc_tool_bar_new (const char *header_text)
