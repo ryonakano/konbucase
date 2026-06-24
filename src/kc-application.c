@@ -26,10 +26,11 @@
  */
 
 struct _KcApplication {
-    AdwApplication       parent_instance;
+    AdwApplication          parent_instance;
 
-    KcMainWindow        *window;
-    GSettings           *settings;
+    KcMainWindow           *window;
+    GSettings              *settings;
+    AdwStyleManager        *style_manager;
 };
 
 G_DEFINE_FINAL_TYPE (KcApplication, kc_application, ADW_TYPE_APPLICATION)
@@ -190,17 +191,16 @@ settings_color_scheme_set_mapping (const GValue       *adw_scheme,
 static void
 setup_style (KcApplication *self)
 {
-    AdwStyleManager *style_manager;
     g_autoptr(GSimpleAction) style_action = NULL;
 
-    style_manager = adw_application_get_style_manager (ADW_APPLICATION (self));
+    self->style_manager = adw_application_get_style_manager (ADW_APPLICATION (self));
 
     style_action = g_simple_action_new_stateful ("color-scheme",
                                                  G_VARIANT_TYPE_STRING,
                                                  g_variant_new_string (KC_COLOR_SCHEME_DEFAULT));
 
     g_object_bind_property_full (G_OBJECT (style_action), "state",
-                                 G_OBJECT (style_manager), "color-scheme",
+                                 G_OBJECT (self->style_manager), "color-scheme",
                                  G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE,
                                  gaction_state_to_adw_scheme,
                                  adw_scheme_to_gaction_state,
@@ -208,7 +208,7 @@ setup_style (KcApplication *self)
                                  NULL);
 
     g_settings_bind_with_mapping (self->settings, "color-scheme",
-                                  G_OBJECT (style_manager), "color-scheme",
+                                  G_OBJECT (self->style_manager), "color-scheme",
                                   G_SETTINGS_BIND_DEFAULT,
                                   settings_color_scheme_get_mapping,
                                   settings_color_scheme_set_mapping,
@@ -247,19 +247,20 @@ static void
 kc_application_dispose (GObject *object)
 {
     KcApplication *self = KC_APPLICATION (object);
-    AdwStyleManager *style_manager;
 
     // self->window should be already freed
 
-    /*
-     * g_settings_bind() and its families takes a ref of the object that bind with the settings
-     * and the lifecycle of the binding is tied to the object.
-     * Here, however, the object (AdwApplication:style-manager) is unowned reference, thus it won't be released
-     * during lifetime of the Application instance.
-     * So, remove the binding manually when finalizing Application to unref the object.
-     */
-    style_manager = adw_application_get_style_manager (ADW_APPLICATION (self));
-    g_settings_unbind (style_manager, "color-scheme");
+    if (self->style_manager) {
+        /*
+         * g_settings_bind() and its families takes a ref of the object that bind with the settings
+         * and the lifecycle of the binding is tied to the object.
+         * Here, however, the object (AdwApplication:style-manager) is unowned reference, thus it won't be released
+         * during lifetime of the Application instance.
+         * So, remove the binding manually when finalizing Application to unref the object.
+         */
+        g_settings_unbind (self->style_manager, "color-scheme");
+        self->style_manager = NULL;
+    }
 
     g_clear_object (&self->settings);
 
@@ -288,6 +289,7 @@ kc_application_init (KcApplication *self)
 
     self->settings = g_settings_new (APP_ID);
     self->window = NULL;
+    self->style_manager = NULL;
 
     g_action_map_add_action_entries (G_ACTION_MAP (self), action_entries, G_N_ELEMENTS (action_entries), self);
     gtk_application_set_accels_for_action (GTK_APPLICATION (self), "app.quit", app_quit_accels);
