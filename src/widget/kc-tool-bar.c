@@ -14,6 +14,7 @@
 #include "kc-drop-down-row.h"
 
 /**
+ * KcToolBar:
  * A widget that contains controls for text input/output.
  *
  * <picture>
