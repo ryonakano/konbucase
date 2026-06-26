@@ -273,8 +273,8 @@ kc_main_view_init (KcMainView *self)
     gtk_box_append (GTK_BOX (self), GTK_WIDGET (output_pane));
 
     // Use SizeGroup to keep the same size between input_pane and output_pane
-    // because separator, which is not intended to be the same size with them, is also appended to ``this``
-    // and thus we can't set this.homogeneous to true.
+    // because separator, which is not intended to be the same size with them, is also appended to @self
+    // and thus we can't set homogeneous of @self to TRUE.
     size_group = gtk_size_group_new (GTK_SIZE_GROUP_BOTH);
     gtk_size_group_add_widget (size_group, GTK_WIDGET (input_pane));
     gtk_size_group_add_widget (size_group, GTK_WIDGET (output_pane));

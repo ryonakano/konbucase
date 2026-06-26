@@ -179,7 +179,7 @@ selected_to_case_type (GBinding     *binding,
     _case_type = kc_case_list_item_get_case_type (selected_item);
     g_value_set_enum (case_type, _case_type);
 
-    return true;
+    return TRUE;
 }
 
 static void
