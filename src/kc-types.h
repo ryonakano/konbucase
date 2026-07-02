@@ -13,6 +13,7 @@
  * @KC_CASE_TYPE_SNAKE: Snake Case, e.g. "foo_bar_baz".
  * @KC_CASE_TYPE_KEBAB: Kebab Case, e.g. "foo-bar-baz".
  * @KC_CASE_TYPE_SENTENCE: Sentence Case, e.g. "Foo bar baz".
+ * @KC_N_CASE_TYPE: Number of KcCaseType values
  *
  * Type of letter cases in a piece of text.
  */

@@ -247,7 +247,7 @@ kc_text_area_dup_text (KcTextArea *self)
 /**
  * kc_text_area_set_text:
  * @self: a `KcTextArea`
- * @name: (nullable) (transfer none): text in the #GtkSourceView that @self wraps
+ * @text: (nullable) (transfer none): text in the #GtkSourceView that @self wraps
  *
  * Sets text in the #GtkSourceView that @self wraps.
  */
