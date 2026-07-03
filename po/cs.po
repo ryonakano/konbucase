@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-04 13:05+0000\n"
-"PO-Revision-Date: 2026-07-01 12:10+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2026-07-04 20:01+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/rosp/konbucase/cs/>"
 "\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -25,62 +25,70 @@ msgstr "@APP_NAME@"
 
 #: data/konbucase.desktop.in.in:4
 msgid "Case Converting App"
-msgstr ""
+msgstr "Aplikace pro převádění mezi VELKÝMI a malými písmeny"
 
 #: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
-msgstr ""
+msgstr "Převádějte VELKÁ a malá písmena ve svém textu"
 
 #: data/konbucase.desktop.in.in:11
 msgid "Text;"
-msgstr ""
+msgstr "Text;"
 
 #: data/konbucase.metainfo.xml.in.in:13
 msgid "A small text tool app that allows you convert case in your text."
 msgstr ""
+"Malá aplikace-nástroj pro text která umožňuje převádět VELKÁ a malá písmena "
+"ve vašem textu."
 
 #: data/konbucase.metainfo.xml.in.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "Mezi funkce patří:"
 
 #: data/konbucase.metainfo.xml.in.in:18
 msgid ""
 "Click \"Copy to Clipboard\" button to copy the all texts in the text view "
 "without selecting them"
 msgstr ""
+"Klikněte na tlačítko „Zkopírovat do schránky“ pro zkopírování všech textů v "
+"zobrazení textu aniž by bylo třeba je vybírat"
 
 #: data/konbucase.metainfo.xml.in.in:19
 msgid "Click \"Quick Swap\" button to swap case and text of input and output"
 msgstr ""
+"Klikněte na tlačítko „Rychlé prohození“ pro prohození VELKÝCH-malých písmen "
+"a textu vstupu a výstupu"
 
 #: data/konbucase.metainfo.xml.in.in:20
 msgid ""
 "Convert your text between camelCase, PascalCase, Sentence case, snake_case, "
 "kebab-case, and space-separated"
 msgstr ""
+"Převádějte svůj text mezi camelCase, PascalCase, Sentence case, snake_case, "
+"kebab-case a mezerou oddělovaným"
 
 #: data/konbucase.metainfo.xml.in.in:26
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Okno aplikace ve světlém zobrazení"
 
 #: data/konbucase.metainfo.xml.in.in:31
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Okno aplikace v tmavém zobrazení"
 
 #: data/ui/help-overlay.blp:10
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Obecné"
 
 #: data/ui/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Klávesové zkratky"
 
 #: data/ui/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Ukončit"
 
 #. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
 #. You can optionally add your name if you want, plus you may add your email address or website.
@@ -94,29 +102,29 @@ msgstr ""
 
 #: src/MainWindow.vala:22
 msgid "S_ystem"
-msgstr ""
+msgstr "S_ystém"
 
 #: src/MainWindow.vala:23
 msgid "_Light"
-msgstr ""
+msgstr "Svět_lý"
 
 #: src/MainWindow.vala:24
 msgid "_Dark"
-msgstr ""
+msgstr "_Tmavý"
 
 #: src/MainWindow.vala:27
 msgid "_Style"
-msgstr ""
+msgstr "_Motiv"
 
 #: src/MainWindow.vala:28
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klávesové zkratky"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/MainWindow.vala:32
 #, c-format
 msgid "_About %s"
-msgstr ""
+msgstr "O _aplikaci %s"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
 #: src/MainWindow.vala:37
@@ -125,7 +133,7 @@ msgstr ""
 
 #: src/MainWindow.vala:41
 msgid "Main Menu"
-msgstr ""
+msgstr "Hlavní nabídka"
 
 #: src/MainWindow.vala:82
 msgid "Text copied!"
@@ -165,12 +173,12 @@ msgstr ""
 
 #: src/Widget/Toolbar.vala:52
 msgid "Each word is separated by a hyphen"
-msgstr ""
+msgstr "Každé slovo je odděleno pomlčkou"
 
 #: src/Widget/Toolbar.vala:57
 msgid "The first character of the first word in the sentence is in uppercase"
-msgstr ""
+msgstr "První znak prvního slova v souvětí je velkým písmenem"
 
 #: src/Widget/Toolbar.vala:79
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Zkopírovat do schránky"
