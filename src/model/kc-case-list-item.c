@@ -45,10 +45,10 @@ kc_case_list_item_dispose (GObject *object)
 }
 
 static void
-kc_case_list_item_get_property (GObject    *object,
-                                guint       prop_id,
-                                GValue     *value,
-                                GParamSpec *pspec)
+kc_case_list_item_get_property (GObject      *object,
+                                unsigned int  prop_id,
+                                GValue       *value,
+                                GParamSpec   *pspec)
 {
     KcCaseListItem *self = KC_CASE_LIST_ITEM (object);
 
@@ -70,7 +70,7 @@ kc_case_list_item_get_property (GObject    *object,
 
 static void
 kc_case_list_item_set_property (GObject      *object,
-                                guint         prop_id,
+                                unsigned int  prop_id,
                                 const GValue *value,
                                 GParamSpec   *pspec)
 {
@@ -107,7 +107,7 @@ kc_case_list_item_class_init (KcCaseListItemClass *klass)
      * Type of the letter case.
      */
     props[PROP_CASE_TYPE] =
-        g_param_spec_enum ("case-type", NULL, NULL,
+        g_param_spec_enum ("case-type", nullptr, nullptr,
                            KC_TYPE_CASE_TYPE,
                            KC_CASE_TYPE_SPACE_SEPARATED,
                            G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
@@ -118,8 +118,8 @@ kc_case_list_item_class_init (KcCaseListItemClass *klass)
      * Display name of the letter case.
      */
     props[PROP_NAME] =
-        g_param_spec_string ("name", NULL, NULL,
-                             NULL,
+        g_param_spec_string ("name", nullptr, nullptr,
+                             nullptr,
                              G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     /**
@@ -128,8 +128,8 @@ kc_case_list_item_class_init (KcCaseListItemClass *klass)
      * Description of the letter case.
      */
     props[PROP_DESCRIPTION] =
-        g_param_spec_string ("description", NULL, NULL,
-                             NULL,
+        g_param_spec_string ("description", nullptr, nullptr,
+                             nullptr,
                              G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     g_object_class_install_properties (object_class, N_PROPS, props);
@@ -139,8 +139,8 @@ static void
 kc_case_list_item_init (KcCaseListItem *self)
 {
     self->case_type = KC_CASE_TYPE_SPACE_SEPARATED;
-    self->name = NULL;
-    self->description = NULL;
+    self->name = nullptr;
+    self->description = nullptr;
 }
 
 /**
@@ -192,7 +192,7 @@ kc_case_list_item_set_case_type (KcCaseListItem *self,
 const char *
 kc_case_list_item_get_name (KcCaseListItem *self)
 {
-    g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), NULL);
+    g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), nullptr);
 
     return self->name;
 }
@@ -230,7 +230,7 @@ kc_case_list_item_set_name (KcCaseListItem *self,
 const char *
 kc_case_list_item_get_description (KcCaseListItem *self)
 {
-    g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), NULL);
+    g_return_val_if_fail (KC_IS_CASE_LIST_ITEM (self), nullptr);
 
     return self->description;
 }
@@ -296,5 +296,5 @@ kc_case_list_item_new (KcCaseType  case_type,
                          "case-type", case_type,
                          "name", name,
                          "description", description,
-                         NULL);
+                         nullptr);
 }

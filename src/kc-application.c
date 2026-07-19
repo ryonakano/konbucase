@@ -38,24 +38,24 @@ G_DEFINE_FINAL_TYPE (KcApplication, kc_application, ADW_TYPE_APPLICATION)
 static void
 on_about_activate (GSimpleAction *action,
                    GVariant      *parameter,
-                   gpointer       user_data)
+                   void          *user_data)
 {
     KcApplication *self = KC_APPLICATION (user_data);
     AdwDialog *about_dialog;
     // List of maintainers
     const char *developers[] = {
         "Ryo Nakano <ryonakaknock3@gmail.com>",
-        NULL
+        nullptr
     };
     // List of icon authors
     const char *artists[] = {
         "Ryo Nakano <ryonakaknock3@gmail.com>",
         "Nararyans R.I. https://github.com/Fatih20",
         "Leo https://github.com/lenemter",
-        NULL
+        nullptr
     };
 
-    about_dialog = adw_about_dialog_new_from_appdata (RESOURCE_PREFIX "/" APP_ID ".metainfo.xml", NULL);
+    about_dialog = adw_about_dialog_new_from_appdata (RESOURCE_PREFIX "/" APP_ID ".metainfo.xml", nullptr);
     adw_about_dialog_set_version (ADW_ABOUT_DIALOG (about_dialog), APP_VERSION);
     adw_about_dialog_set_copyright (ADW_ABOUT_DIALOG (about_dialog), "© 2020-2026 Ryo Nakano");
     adw_about_dialog_set_developers (ADW_ABOUT_DIALOG (about_dialog), developers);
@@ -73,7 +73,7 @@ on_about_activate (GSimpleAction *action,
 static void
 on_quit_activate (GSimpleAction *action,
                   GVariant      *parameter,
-                  gpointer       user_data)
+                  void          *user_data)
 {
     KcApplication *self = KC_APPLICATION (user_data);
 
@@ -114,10 +114,10 @@ static gboolean
 gaction_state_to_adw_scheme (GBinding     *binding,
                              const GValue *gaction_state,
                              GValue       *adw_scheme,
-                             gpointer      user_data)
+                             void         *user_data)
 {
-    g_autoptr(GVariant) gaction_state_variant = NULL;
-    const gchar *gaction_state_str;
+    g_autoptr(GVariant) gaction_state_variant = nullptr;
+    const char *gaction_state_str;
     AdwColorScheme adw_scheme_enum;
 
     gaction_state_variant = g_value_dup_variant (gaction_state);
@@ -126,7 +126,7 @@ gaction_state_to_adw_scheme (GBinding     *binding,
         return FALSE;
     }
 
-    gaction_state_str = g_variant_get_string (gaction_state_variant, NULL);
+    gaction_state_str = g_variant_get_string (gaction_state_variant, nullptr);
     adw_scheme_enum = kc_convert_to_adw_scheme (gaction_state_str);
     g_value_set_enum (adw_scheme, adw_scheme_enum);
 
@@ -137,10 +137,10 @@ static gboolean
 adw_scheme_to_gaction_state (GBinding     *binding,
                              const GValue *adw_scheme,
                              GValue       *gaction_state,
-                             gpointer      user_data)
+                             void         *user_data)
 {
     AdwColorScheme adw_scheme_enum;
-    const gchar *gaction_state_str;
+    const char *gaction_state_str;
 
     adw_scheme_enum = g_value_get_enum (adw_scheme);
     gaction_state_str = kc_convert_to_str_scheme (adw_scheme_enum);
@@ -152,12 +152,12 @@ adw_scheme_to_gaction_state (GBinding     *binding,
 static gboolean
 settings_color_scheme_get_mapping (GValue   *adw_scheme,
                                    GVariant *gschema_scheme,
-                                   gpointer  user_data)
+                                   void     *user_data)
 {
-    const gchar *gschema_scheme_str;
+    const char *gschema_scheme_str;
     AdwColorScheme adw_scheme_enum;
 
-    gschema_scheme_str = g_variant_get_string (gschema_scheme, NULL);
+    gschema_scheme_str = g_variant_get_string (gschema_scheme, nullptr);
     adw_scheme_enum = kc_convert_to_adw_scheme (gschema_scheme_str);
     g_value_set_enum (adw_scheme, adw_scheme_enum);
 
@@ -167,10 +167,10 @@ settings_color_scheme_get_mapping (GValue   *adw_scheme,
 static GVariant *
 settings_color_scheme_set_mapping (const GValue       *adw_scheme,
                                    const GVariantType *expected_type,
-                                   gpointer            user_data)
+                                   void               *user_data)
 {
     AdwColorScheme adw_scheme_enum;
-    const gchar *gschema_scheme_str;
+    const char *gschema_scheme_str;
     GVariant *gschema_scheme_variant;
 
     adw_scheme_enum = g_value_get_enum (adw_scheme);
@@ -191,7 +191,7 @@ settings_color_scheme_set_mapping (const GValue       *adw_scheme,
 static void
 setup_style (KcApplication *self)
 {
-    g_autoptr(GSimpleAction) style_action = NULL;
+    g_autoptr(GSimpleAction) style_action = nullptr;
 
     self->style_manager = adw_application_get_style_manager (ADW_APPLICATION (self));
 
@@ -204,16 +204,16 @@ setup_style (KcApplication *self)
                                  G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE,
                                  gaction_state_to_adw_scheme,
                                  adw_scheme_to_gaction_state,
-                                 NULL,
-                                 NULL);
+                                 nullptr,
+                                 nullptr);
 
     g_settings_bind_with_mapping (self->settings, "color-scheme",
                                   G_OBJECT (self->style_manager), "color-scheme",
                                   G_SETTINGS_BIND_DEFAULT,
                                   settings_color_scheme_get_mapping,
                                   settings_color_scheme_set_mapping,
-                                  NULL,
-                                  NULL);
+                                  nullptr,
+                                  nullptr);
 
     g_action_map_add_action (G_ACTION_MAP (self), G_ACTION (style_action));
 }
@@ -259,7 +259,7 @@ kc_application_dispose (GObject *object)
          * So, remove the binding manually when finalizing Application to unref the object.
          */
         g_settings_unbind (self->style_manager, "color-scheme");
-        self->style_manager = NULL;
+        self->style_manager = nullptr;
     }
 
     g_clear_object (&self->settings);
@@ -284,12 +284,12 @@ kc_application_init (KcApplication *self)
 {
     const char * const app_quit_accels[] = {
         "<Control>q",
-        NULL
+        nullptr
     };
 
     self->settings = g_settings_new (APP_ID);
-    self->window = NULL;
-    self->style_manager = NULL;
+    self->window = nullptr;
+    self->style_manager = nullptr;
 
     g_action_map_add_action_entries (G_ACTION_MAP (self), action_entries, G_N_ELEMENTS (action_entries), self);
     gtk_application_set_accels_for_action (GTK_APPLICATION (self), "app.quit", app_quit_accels);
@@ -309,5 +309,5 @@ kc_application_new (void)
                          "application-id", APP_ID,
                          "flags", G_APPLICATION_DEFAULT_FLAGS,
                          "resource-base-path", RESOURCE_PREFIX,
-                         NULL);
+                         nullptr);
 }

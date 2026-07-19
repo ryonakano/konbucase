@@ -35,7 +35,7 @@ enum {
     N_SIGNALS
 };
 
-static guint signals[N_SIGNALS];
+static unsigned int signals[N_SIGNALS];
 
 enum {
     PROP_0,
@@ -129,12 +129,12 @@ static gboolean
 case_type_to_selected (GBinding     *binding,
                        const GValue *case_type,
                        GValue       *selected,
-                       gpointer      user_data)
+                       void         *user_data)
 {
     GListStore *case_liststore = G_LIST_STORE (user_data);
     KcCaseType _case_type;
-    g_autoptr(KcCaseListItem) lookup_item = NULL;
-    guint pos;
+    g_autoptr(KcCaseListItem) lookup_item = nullptr;
+    unsigned int pos;
     gboolean found;
 
     _case_type = g_value_get_enum (case_type);
@@ -158,11 +158,11 @@ static gboolean
 selected_to_case_type (GBinding     *binding,
                        const GValue *selected,
                        GValue       *case_type,
-                       gpointer      user_data)
+                       void         *user_data)
 {
     GListStore *case_liststore = G_LIST_STORE (user_data);
-    guint pos;
-    g_autoptr(KcCaseListItem) selected_item = NULL;
+    unsigned int pos;
+    g_autoptr(KcCaseListItem) selected_item = nullptr;
     KcCaseType _case_type;
 
     pos = g_value_get_uint (selected);
@@ -195,10 +195,10 @@ emit_copy_button_clicked (KcToolBar *self)
 }
 
 static void
-kc_tool_bar_get_property (GObject    *object,
-                          uint        prop_id,
-                          GValue     *value,
-                          GParamSpec *pspec)
+kc_tool_bar_get_property (GObject      *object,
+                          unsigned int  prop_id,
+                          GValue       *value,
+                          GParamSpec   *pspec)
 {
     KcToolBar *self = KC_TOOL_BAR (object);
 
@@ -217,7 +217,7 @@ kc_tool_bar_get_property (GObject    *object,
 
 static void
 kc_tool_bar_set_property (GObject      *object,
-                          uint          prop_id,
+                          unsigned int  prop_id,
                           const GValue *value,
                           GParamSpec   *pspec)
 {
@@ -241,7 +241,7 @@ kc_tool_bar_dispose (GObject *object)
 {
     KcToolBar *self = KC_TOOL_BAR (object);
 
-    adw_bin_set_child (ADW_BIN (self), NULL);
+    adw_bin_set_child (ADW_BIN (self), nullptr);
 
     G_OBJECT_CLASS (kc_tool_bar_parent_class)->dispose (object);
 }
@@ -265,9 +265,9 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
                       G_TYPE_FROM_CLASS (klass),
                       G_SIGNAL_RUN_LAST,
                       0,
-                      NULL,
-                      NULL,
-                      NULL,
+                      nullptr,
+                      nullptr,
+                      nullptr,
                       G_TYPE_NONE,
                       0);
 
@@ -281,9 +281,9 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
                       G_TYPE_FROM_CLASS (klass),
                       G_SIGNAL_RUN_LAST,
                       0,
-                      NULL,
-                      NULL,
-                      NULL,
+                      nullptr,
+                      nullptr,
+                      nullptr,
                       G_TYPE_NONE,
                       0);
 
@@ -293,8 +293,8 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
      * Text to show alongside the #GtkDropDown that selects type of letter case.
      */
     props[PROP_HEADER_TEXT] =
-        g_param_spec_string ("header-text", NULL, NULL,
-                             NULL,
+        g_param_spec_string ("header-text", nullptr, nullptr,
+                             nullptr,
                              G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     /**
@@ -303,7 +303,7 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
      * Type of letter case that currently preferred.
      */
     props[PROP_CASE_TYPE] =
-        g_param_spec_enum ("case-type", NULL, NULL,
+        g_param_spec_enum ("case-type", nullptr, nullptr,
                            KC_TYPE_CASE_TYPE,
                            KC_CASE_TYPE_SPACE_SEPARATED,
                            G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
@@ -314,8 +314,8 @@ kc_tool_bar_class_init (KcToolBarClass *klass)
 static void
 kc_tool_bar_init (KcToolBar *self)
 {
-    g_autoptr(GtkListItemFactory) case_factory = NULL;
-    g_autoptr(GtkListItemFactory) case_list_factory = NULL;
+    g_autoptr(GtkListItemFactory) case_factory = nullptr;
+    g_autoptr(GtkListItemFactory) case_list_factory = nullptr;
     KcCaseListItem *case_listitems[KC_N_CASE_TYPE];
     GListStore *case_liststore;
     int i;
@@ -327,12 +327,12 @@ kc_tool_bar_init (KcToolBar *self)
     self->case_type = KC_CASE_TYPE_SPACE_SEPARATED;
 
     case_factory = gtk_signal_list_item_factory_new ();
-    g_signal_connect (case_factory, "setup", G_CALLBACK (case_factory_setup), NULL);
-    g_signal_connect (case_factory, "bind", G_CALLBACK (case_factory_bind), NULL);
+    g_signal_connect (case_factory, "setup", G_CALLBACK (case_factory_setup), nullptr);
+    g_signal_connect (case_factory, "bind", G_CALLBACK (case_factory_bind), nullptr);
 
     case_list_factory = gtk_signal_list_item_factory_new ();
-    g_signal_connect (case_list_factory, "setup", G_CALLBACK (case_list_factory_setup), NULL);
-    g_signal_connect (case_list_factory, "bind", G_CALLBACK (case_list_factory_bind), NULL);
+    g_signal_connect (case_list_factory, "setup", G_CALLBACK (case_list_factory_setup), nullptr);
+    g_signal_connect (case_list_factory, "bind", G_CALLBACK (case_list_factory_bind), nullptr);
 
     case_listitems[KC_CASE_TYPE_SPACE_SEPARATED] =
         kc_case_list_item_new (KC_CASE_TYPE_SPACE_SEPARATED,
@@ -360,22 +360,22 @@ kc_tool_bar_init (KcToolBar *self)
                                N_("The first character of the first word in the sentence is in uppercase"));
 
     case_liststore = g_list_store_new (KC_TYPE_CASE_LIST_ITEM);
-    g_list_store_splice (case_liststore, 0, 0, (gpointer *) &case_listitems, G_N_ELEMENTS (case_listitems));
+    g_list_store_splice (case_liststore, 0, 0, (void *) &case_listitems, G_N_ELEMENTS (case_listitems));
     for (i = 0; i < G_N_ELEMENTS (case_listitems); i++) {
         g_object_unref (case_listitems[i]);
     }
 
-    l10n_case_exp_params[L10N_CASE_EXP_PARAM_STR] = gtk_property_expression_new (KC_TYPE_CASE_LIST_ITEM, NULL, "name");
+    l10n_case_exp_params[L10N_CASE_EXP_PARAM_STR] = gtk_property_expression_new (KC_TYPE_CASE_LIST_ITEM, nullptr, "name");
     l10n_case_exp = gtk_cclosure_expression_new (
-        G_TYPE_STRING, NULL, G_N_ELEMENTS (l10n_case_exp_params), l10n_case_exp_params,
-        G_CALLBACK (localize_str), NULL, NULL
+        G_TYPE_STRING, nullptr, G_N_ELEMENTS (l10n_case_exp_params), l10n_case_exp_params,
+        G_CALLBACK (localize_str), nullptr, nullptr
     );
 
     case_drop_down = gtk_drop_down_new (G_LIST_MODEL (case_liststore), l10n_case_exp);
     gtk_drop_down_set_factory (GTK_DROP_DOWN (case_drop_down), case_factory);
     gtk_drop_down_set_list_factory (GTK_DROP_DOWN (case_drop_down), case_list_factory);
 
-    self->header_label = gtk_label_new (NULL);
+    self->header_label = gtk_label_new (nullptr);
     gtk_label_set_use_underline (GTK_LABEL (self->header_label), TRUE);
     gtk_label_set_mnemonic_widget (GTK_LABEL (self->header_label), case_drop_down);
     gtk_label_set_wrap (GTK_LABEL (self->header_label), TRUE);
@@ -404,7 +404,7 @@ kc_tool_bar_init (KcToolBar *self)
                                  case_type_to_selected,
                                  selected_to_case_type,
                                  case_liststore,
-                                 NULL);
+                                 nullptr);
 
     g_signal_connect_swapped (case_drop_down, "notify::selected", G_CALLBACK (emit_drop_down_changed), self);
 
@@ -422,7 +422,7 @@ kc_tool_bar_init (KcToolBar *self)
 const char *
 kc_tool_bar_get_header_text (KcToolBar *self)
 {
-    g_return_val_if_fail (KC_IS_TOOL_BAR (self), NULL);
+    g_return_val_if_fail (KC_IS_TOOL_BAR (self), nullptr);
 
     return gtk_label_get_label (GTK_LABEL (self->header_label));
 }
@@ -494,7 +494,7 @@ kc_tool_bar_set_case_type (KcToolBar  *self,
 GtkWidget *
 kc_tool_bar_get_copy_button (KcToolBar *self)
 {
-    g_return_val_if_fail (KC_IS_TOOL_BAR (self), NULL);
+    g_return_val_if_fail (KC_IS_TOOL_BAR (self), nullptr);
 
     return self->copy_button;
 }
@@ -529,5 +529,5 @@ kc_tool_bar_new (const char *header_text)
 {
     return g_object_new (KC_TYPE_TOOL_BAR,
                          "header-text", header_text,
-                         NULL);
+                         nullptr);
 }

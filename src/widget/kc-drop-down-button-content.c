@@ -33,16 +33,16 @@ static GParamSpec *props[N_PROPS];
 struct _KcDropDownButtonContent {
     AdwBin      parent_instance;
 
-    gchar      *label_text;
+    char       *label_text;
 };
 
 G_DEFINE_FINAL_TYPE (KcDropDownButtonContent, kc_drop_down_button_content, ADW_TYPE_BIN)
 
 static void
-kc_drop_down_button_content_get_property (GObject    *object,
-                                          guint       prop_id,
-                                          GValue     *value,
-                                          GParamSpec *pspec)
+kc_drop_down_button_content_get_property (GObject      *object,
+                                          unsigned int  prop_id,
+                                          GValue       *value,
+                                          GParamSpec   *pspec)
 {
     KcDropDownButtonContent *self = KC_DROP_DOWN_BUTTON_CONTENT (object);
 
@@ -58,7 +58,7 @@ kc_drop_down_button_content_get_property (GObject    *object,
 
 static void
 kc_drop_down_button_content_set_property (GObject      *object,
-                                          guint         prop_id,
+                                          unsigned int  prop_id,
                                           const GValue *value,
                                           GParamSpec   *pspec)
 {
@@ -79,7 +79,7 @@ kc_drop_down_button_content_dispose (GObject *object)
 {
     KcDropDownButtonContent *self = KC_DROP_DOWN_BUTTON_CONTENT (object);
 
-    adw_bin_set_child (ADW_BIN (self), NULL);
+    adw_bin_set_child (ADW_BIN (self), nullptr);
 
     g_clear_pointer (&self->label_text, g_free);
 
@@ -101,8 +101,8 @@ kc_drop_down_button_content_class_init (KcDropDownButtonContentClass *klass)
      * The label text of the item.
      */
     props[PROP_LABEL_TEXT] =
-        g_param_spec_string ("label-text", NULL, NULL,
-                             NULL,
+        g_param_spec_string ("label-text", nullptr, nullptr,
+                             nullptr,
                              G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     g_object_class_install_properties (object_class, N_PROPS, props);
@@ -113,7 +113,7 @@ kc_drop_down_button_content_init (KcDropDownButtonContent *self)
 {
     GtkWidget *label;
 
-    self->label_text = NULL;
+    self->label_text = nullptr;
 
     label = gtk_label_new (self->label_text);
     gtk_label_set_xalign (GTK_LABEL (label), 0);
@@ -135,7 +135,7 @@ kc_drop_down_button_content_init (KcDropDownButtonContent *self)
 const char *
 kc_drop_down_button_content_get_label_text (KcDropDownButtonContent *self)
 {
-    g_return_val_if_fail (KC_IS_DROP_DOWN_BUTTON_CONTENT (self), NULL);
+    g_return_val_if_fail (KC_IS_DROP_DOWN_BUTTON_CONTENT (self), nullptr);
 
     return self->label_text;
 }
@@ -149,7 +149,7 @@ kc_drop_down_button_content_get_label_text (KcDropDownButtonContent *self)
  */
 void
 kc_drop_down_button_content_set_label_text (KcDropDownButtonContent *self,
-                                            const gchar             *label_text)
+                                            const char              *label_text)
 {
     g_return_if_fail (KC_IS_DROP_DOWN_BUTTON_CONTENT (self));
 
@@ -173,5 +173,5 @@ KcDropDownButtonContent *
 kc_drop_down_button_content_new (void)
 {
     return g_object_new (KC_TYPE_DROP_DOWN_BUTTON_CONTENT,
-                         NULL);
+                         nullptr);
 }

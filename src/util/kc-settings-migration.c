@@ -31,7 +31,7 @@ typedef gboolean (*KcSettingsMigrationFunc) (GSettings *settings, GVariant *old_
  * Data structure to migrate an app preference saved in a key of #GSettings.
  */
 typedef struct {
-    const gchar                *old_key;
+    const char                 *old_key;
     KcSettingsMigrationFunc     migrate;
 } KcSettingsMigrationEntry;
 
@@ -67,7 +67,7 @@ static const KcSettingsMigrationEntry settings_migration_table[] = {
     { "source-case-type"    , migrate_source_case_type },
     { "result-case-type"    , migrate_result_case_type },
 
-    { NULL }
+    { nullptr }
 };
 
 /**
@@ -81,7 +81,7 @@ static const KcSettingsMigrationEntry settings_migration_table[] = {
 gboolean
 kc_util_migrate_settings (GSettings *settings)
 {
-    g_autoptr(GSettingsSchema) ss = NULL;
+    g_autoptr(GSettingsSchema) ss = nullptr;
     const KcSettingsMigrationEntry *entry;
     gboolean has_key;
     GVariant *old_val;
@@ -94,9 +94,9 @@ kc_util_migrate_settings (GSettings *settings)
 
     g_object_get (G_OBJECT (settings),
                   "settings-schema", &ss,
-                  NULL);
+                  nullptr);
 
-    for (entry = settings_migration_table; entry->old_key != NULL; entry++) {
+    for (entry = settings_migration_table; entry->old_key != nullptr; entry++) {
         has_key = g_settings_schema_has_key (ss, entry->old_key);
         if (!has_key) {
             continue;

@@ -24,7 +24,7 @@
 AdwColorScheme
 kc_convert_to_adw_scheme (const char *str_scheme)
 {
-    g_return_val_if_fail (str_scheme != NULL, ADW_COLOR_SCHEME_DEFAULT);
+    g_return_val_if_fail (str_scheme != nullptr, ADW_COLOR_SCHEME_DEFAULT);
 
     if (g_strcmp0 (str_scheme, KC_COLOR_SCHEME_DEFAULT) == 0) {
         return ADW_COLOR_SCHEME_DEFAULT;

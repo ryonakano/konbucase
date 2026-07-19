@@ -6,6 +6,6 @@
 #pragma once
 
 // String representation of AdwColorScheme
-#define KC_COLOR_SCHEME_DEFAULT         "default"
-#define KC_COLOR_SCHEME_FORCE_LIGHT     "force-light"
-#define KC_COLOR_SCHEME_FORCE_DARK      "force-dark"
+static const char KC_COLOR_SCHEME_DEFAULT[] = "default";
+static const char KC_COLOR_SCHEME_FORCE_LIGHT[] = "force-light";
+static const char KC_COLOR_SCHEME_FORCE_DARK[] = "force-dark";

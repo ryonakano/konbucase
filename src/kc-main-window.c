@@ -43,9 +43,9 @@ kc_main_window_class_init (KcMainWindowClass *klass)
 static void
 kc_main_window_init (KcMainWindow *self)
 {
-    g_autoptr(GMenu) style_submenu = NULL;
-    g_autoptr(GMenu) main_menu = NULL;
-    g_autofree gchar *about_label = NULL;
+    g_autoptr(GMenu) style_submenu = nullptr;
+    g_autoptr(GMenu) main_menu = nullptr;
+    g_autofree char *about_label = nullptr;
     GtkWidget *swap_button;
     GtkWidget *menu_button;
     GtkWidget *header;
@@ -62,9 +62,9 @@ kc_main_window_init (KcMainWindow *self)
     }
 
     style_submenu = g_menu_new ();
-    g_menu_append (style_submenu, _("S_ystem"), "app.color-scheme('" KC_COLOR_SCHEME_DEFAULT "')");
-    g_menu_append (style_submenu, _("_Light"), "app.color-scheme('" KC_COLOR_SCHEME_FORCE_LIGHT "')");
-    g_menu_append (style_submenu, _("_Dark"), "app.color-scheme('" KC_COLOR_SCHEME_FORCE_DARK "')");
+    g_menu_append (style_submenu, _("S_ystem"), g_strdup_printf ("app.color-scheme('%s')", KC_COLOR_SCHEME_DEFAULT));
+    g_menu_append (style_submenu, _("_Light"), g_strdup_printf ("app.color-scheme('%s')", KC_COLOR_SCHEME_FORCE_LIGHT));
+    g_menu_append (style_submenu, _("_Dark"), g_strdup_printf ("app.color-scheme('%s')", KC_COLOR_SCHEME_FORCE_DARK));
 
     main_menu = g_menu_new ();
     g_menu_append_submenu (main_menu, _("_Style"), G_MENU_MODEL (style_submenu));
@@ -132,5 +132,5 @@ kc_main_window_new (KcApplication *app)
 {
     return g_object_new (KC_TYPE_MAIN_WINDOW,
                          "application", G_APPLICATION (app),
-                         NULL);
+                         nullptr);
 }

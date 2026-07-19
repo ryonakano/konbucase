@@ -15,7 +15,7 @@
 gboolean
 kc_util_is_pantheon (void)
 {
-    const gchar *current_destkop;
+    const char *current_destkop;
 
     current_destkop = g_getenv ("XDG_CURRENT_DESKTOP");
     if (!current_destkop) {

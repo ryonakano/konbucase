@@ -13,7 +13,7 @@ G_BEGIN_DECLS
 G_DECLARE_FINAL_TYPE (KcDropDownButtonContent, kc_drop_down_button_content, KC, DROP_DOWN_BUTTON_CONTENT, AdwBin)
 
 extern const char *kc_drop_down_button_content_get_label_text (KcDropDownButtonContent *self);
-extern void kc_drop_down_button_content_set_label_text (KcDropDownButtonContent *self, const gchar *label_text);
+extern void kc_drop_down_button_content_set_label_text (KcDropDownButtonContent *self, const char *label_text);
 
 extern KcDropDownButtonContent *kc_drop_down_button_content_new (void);
 

@@ -17,7 +17,7 @@ int
 main (int   argc,
       char *argv[])
 {
-    g_autoptr(KcApplication) app = NULL;
+    g_autoptr(KcApplication) app = nullptr;
     int ret;
 
     setlocale (LC_ALL, "");

@@ -41,7 +41,7 @@ enum {
     N_SIGNALS
 };
 
-static guint signals[N_SIGNALS];
+static unsigned int signals[N_SIGNALS];
 
 struct _KcMainView {
     GtkBox              parent_instance;
@@ -53,9 +53,9 @@ struct _KcMainView {
     KcToolBar          *output_toolbar;
     KcTextArea         *output_textarea;
 
-    gulong              input_case_handler;
-    gulong              output_case_handler;
-    gulong              input_text_handler;
+    unsigned long       input_case_handler;
+    unsigned long       output_case_handler;
+    unsigned long       input_text_handler;
 
     ChCaseConverter    *converter;
 };
@@ -66,9 +66,9 @@ static gboolean
 text_area_text_to_widget_sensitive (GBinding     *binding,
                                     const GValue *text,
                                     GValue       *sensitive,
-                                    gpointer      user_data)
+                                    void         *user_data)
 {
-    const gchar *_text;
+    const char *_text;
     size_t len;
 
     _text = g_value_get_string (text);
@@ -88,10 +88,10 @@ static gboolean
 self_orient_to_sep_orient (GBinding     *binding,
                            const GValue *self_orient,
                            GValue       *sep_orient,
-                           gpointer      user_data)
+                           void         *user_data)
 {
-    gint _self_orient;
-    gint _sep_orient;
+    int _self_orient;
+    int _sep_orient;
 
     _self_orient = g_value_get_enum (self_orient);
     switch (_self_orient) {
@@ -115,7 +115,7 @@ static void
 copy_and_notify_input (KcMainView *self)
 {
     GdkClipboard *clipboard;
-    g_autofree char *text = NULL;
+    g_autofree char *text = nullptr;
 
     clipboard = gtk_widget_get_clipboard (GTK_WIDGET (self));
     text = kc_text_area_dup_text (self->input_textarea);
@@ -129,7 +129,7 @@ static void
 copy_and_notify_output (KcMainView *self)
 {
     GdkClipboard *clipboard;
-    g_autofree char *text = NULL;
+    g_autofree char *text = nullptr;
 
     clipboard = gtk_widget_get_clipboard (GTK_WIDGET (self));
     text = kc_text_area_dup_text (self->output_textarea);
@@ -161,9 +161,9 @@ static void
 do_convert (KcMainView *self)
 {
     KcCaseType input_case;
-    g_autofree char *input_text = NULL;
+    g_autofree char *input_text = nullptr;
     KcCaseType output_case;
-    g_autofree char *result = NULL;
+    g_autofree char *result = nullptr;
 
     input_case = kc_tool_bar_get_case_type (self->input_toolbar);
     input_text = kc_text_area_dup_text (self->input_textarea);
@@ -202,9 +202,9 @@ kc_main_view_class_init (KcMainViewClass *klass)
                       G_TYPE_FROM_CLASS (klass),
                       G_SIGNAL_RUN_LAST,
                       0,
-                      NULL,
-                      NULL,
-                      NULL,
+                      nullptr,
+                      nullptr,
+                      nullptr,
                       G_TYPE_NONE,
                       0);
 }
@@ -221,7 +221,7 @@ kc_main_view_init (KcMainView *self)
     KcCaseType output_case_type;
     GtkWidget *output_pane;
 
-    g_autoptr(GtkSizeGroup) size_group = NULL;
+    g_autoptr(GtkSizeGroup) size_group = nullptr;
 
     GtkWidget *input_copy_button;
     GtkWidget *output_copy_button;
@@ -291,34 +291,34 @@ kc_main_view_init (KcMainView *self)
                                  G_OBJECT (input_copy_button), "sensitive",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  text_area_text_to_widget_sensitive,
-                                 NULL,
-                                 NULL,
-                                 NULL);
+                                 nullptr,
+                                 nullptr,
+                                 nullptr);
     output_copy_button = kc_tool_bar_get_copy_button (self->output_toolbar);
     g_object_bind_property_full (G_OBJECT (self->output_textarea), "text",
                                  G_OBJECT (output_copy_button), "sensitive",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  text_area_text_to_widget_sensitive,
-                                 NULL,
-                                 NULL,
-                                 NULL);
+                                 nullptr,
+                                 nullptr,
+                                 nullptr);
 
     g_object_bind_property_full (G_OBJECT (self), "orientation",
                                  G_OBJECT (separator), "orientation",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  self_orient_to_sep_orient,
-                                 NULL,
-                                 NULL,
-                                 NULL);
+                                 nullptr,
+                                 nullptr,
+                                 nullptr);
 
     // Make clear button only sensitive when there are texts to clear
     g_object_bind_property_full (G_OBJECT (self->input_textarea), "text",
                                  G_OBJECT (clear_button), "sensitive",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  text_area_text_to_widget_sensitive,
-                                 NULL,
-                                 NULL,
-                                 NULL);
+                                 nullptr,
+                                 nullptr,
+                                 nullptr);
 
     g_signal_connect_swapped (self->input_toolbar, "notify::case-type", G_CALLBACK (save_input_case_type), self);
     g_signal_connect_swapped (self->output_toolbar, "notify::case-type", G_CALLBACK (save_output_case_type), self);
@@ -358,8 +358,8 @@ kc_main_view_swap (KcMainView *self)
 {
     KcCaseType old_input_case;
     KcCaseType old_output_case;
-    g_autofree char *old_input_text = NULL;
-    g_autofree char *old_output_text = NULL;
+    g_autofree char *old_input_text = nullptr;
+    g_autofree char *old_output_text = nullptr;
 
     g_return_if_fail (KC_IS_MAIN_VIEW (self));
 
@@ -400,5 +400,5 @@ kc_main_view_new (void)
     return g_object_new (KC_TYPE_MAIN_VIEW,
                          "orientation", GTK_ORIENTATION_HORIZONTAL,
                          "spacing", 0,
-                         NULL);
+                         nullptr);
 }

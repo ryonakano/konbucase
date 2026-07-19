@@ -49,14 +49,14 @@ kc_drop_down_row_init (KcDropDownRow *self)
     gtk_orientable_set_orientation (GTK_ORIENTABLE (self), GTK_ORIENTATION_VERTICAL);
     gtk_box_set_spacing (GTK_BOX (self), 2);
 
-    self->title = gtk_label_new (NULL);
+    self->title = gtk_label_new (nullptr);
     gtk_widget_set_hexpand (self->title, TRUE);
     gtk_widget_add_css_class (self->title, "heading");
     gtk_label_set_width_chars (GTK_LABEL (self->title), 25);
     gtk_label_set_wrap (GTK_LABEL (self->title), TRUE);
     gtk_label_set_xalign (GTK_LABEL (self->title), 0);
 
-    self->description = gtk_label_new (NULL);
+    self->description = gtk_label_new (nullptr);
     gtk_widget_set_hexpand (self->description, TRUE);
     gtk_widget_add_css_class (self->description, "dim-label");
     gtk_label_set_width_chars (GTK_LABEL (self->description), 25);
@@ -78,7 +78,7 @@ kc_drop_down_row_init (KcDropDownRow *self)
 const char *
 kc_drop_down_row_get_title (KcDropDownRow *self)
 {
-    g_return_val_if_fail (KC_IS_DROP_DOWN_ROW (self), NULL);
+    g_return_val_if_fail (KC_IS_DROP_DOWN_ROW (self), nullptr);
 
     return gtk_label_get_label (GTK_LABEL (self->title));
 }
@@ -110,7 +110,7 @@ kc_drop_down_row_set_title (KcDropDownRow *self,
 const char *
 kc_drop_down_row_get_description (KcDropDownRow *self)
 {
-    g_return_val_if_fail (KC_IS_DROP_DOWN_ROW (self), NULL);
+    g_return_val_if_fail (KC_IS_DROP_DOWN_ROW (self), nullptr);
 
     return gtk_label_get_label (GTK_LABEL (self->description));
 }
@@ -142,5 +142,5 @@ KcDropDownRow *
 kc_drop_down_row_new (void)
 {
     return g_object_new (KC_TYPE_DROP_DOWN_ROW,
-                         NULL);
+                         nullptr);
 }

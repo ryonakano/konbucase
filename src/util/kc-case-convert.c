@@ -90,8 +90,8 @@ kc_case_convert_do_convert (ChCaseConverter *converter,
 {
     char *output_text;
 
-    g_return_val_if_fail (CHCASE_IS_CONVERTER (converter), NULL);
-    g_return_val_if_fail (input_text != NULL, NULL);
+    g_return_val_if_fail (CHCASE_IS_CONVERTER (converter), nullptr);
+    g_return_val_if_fail (input_text != nullptr, nullptr);
 
     chcase_converter_set_input_case (converter, kc_case_convert_to_chcase_case (input_case));
     chcase_converter_set_output_case (converter, kc_case_convert_to_chcase_case (output_case));

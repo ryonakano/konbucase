@@ -42,7 +42,7 @@ static gboolean
 prefer_dark_to_style_scheme (GBinding     *binding,
                              const GValue *prefer_dark,
                              GValue       *style_scheme,
-                             gpointer      user_data)
+                             void         *user_data)
 {
     gboolean _prefer_dark;
     GtkSourceStyleScheme *_style_scheme;
@@ -61,10 +61,10 @@ prefer_dark_to_style_scheme (GBinding     *binding,
 }
 
 static void
-kc_text_area_get_property (GObject    *object,
-                           guint       prop_id,
-                           GValue     *value,
-                           GParamSpec *pspec)
+kc_text_area_get_property (GObject      *object,
+                           unsigned int  prop_id,
+                           GValue       *value,
+                           GParamSpec   *pspec)
 {
     KcTextArea *self = KC_TEXT_AREA (object);
 
@@ -83,7 +83,7 @@ kc_text_area_get_property (GObject    *object,
 
 static void
 kc_text_area_set_property (GObject      *object,
-                           guint         prop_id,
+                           unsigned int  prop_id,
                            const GValue *value,
                            GParamSpec   *pspec)
 {
@@ -107,10 +107,10 @@ kc_text_area_dispose (GObject *object)
 {
     KcTextArea *self = KC_TEXT_AREA (object);
 
-    gtk_text_view_set_buffer (GTK_TEXT_VIEW (self->source_view), NULL);
+    gtk_text_view_set_buffer (GTK_TEXT_VIEW (self->source_view), nullptr);
     g_clear_object (&self->buffer);
 
-    adw_bin_set_child (ADW_BIN (self), NULL);
+    adw_bin_set_child (ADW_BIN (self), nullptr);
 
     g_clear_pointer (&self->text, g_free);
 
@@ -132,7 +132,7 @@ kc_text_area_class_init (KcTextAreaClass *klass)
      * Whether it's possible to modify text in the #GtkSourceView that `KcTextArea` wraps.
      */
     props[PROP_EDITABLE] =
-        g_param_spec_boolean ("editable", NULL, NULL,
+        g_param_spec_boolean ("editable", nullptr, nullptr,
                               FALSE,
                               G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
@@ -142,8 +142,8 @@ kc_text_area_class_init (KcTextAreaClass *klass)
      * Text in the #GtkSourceView that `KcTextArea` wraps.
      */
     props[PROP_TEXT] =
-        g_param_spec_string ("text", NULL, NULL,
-                             NULL,
+        g_param_spec_string ("text", nullptr, nullptr,
+                             nullptr,
                              G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS | G_PARAM_EXPLICIT_NOTIFY);
 
     g_object_class_install_properties (object_class, N_PROPS, props);
@@ -156,9 +156,9 @@ kc_text_area_init (KcTextArea *self)
     GtkSettings *gtk_settings;
     GtkWidget *scrolled;
 
-    self->text = NULL;
+    self->text = nullptr;
 
-    self->buffer = gtk_source_buffer_new (NULL);
+    self->buffer = gtk_source_buffer_new (nullptr);
     style_scheme_manager = gtk_source_style_scheme_manager_get_default ();
     gtk_settings = gtk_settings_get_default ();
 
@@ -182,9 +182,9 @@ kc_text_area_init (KcTextArea *self)
                                  G_OBJECT (self->buffer), "style-scheme",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
                                  prefer_dark_to_style_scheme,
-                                 NULL,
+                                 nullptr,
                                  style_scheme_manager,
-                                 NULL);
+                                 nullptr);
 }
 
 /**
@@ -239,7 +239,7 @@ kc_text_area_set_editable (KcTextArea *self,
 char *
 kc_text_area_dup_text (KcTextArea *self)
 {
-    g_return_val_if_fail (KC_IS_TEXT_AREA (self), NULL);
+    g_return_val_if_fail (KC_IS_TEXT_AREA (self), nullptr);
 
     return g_strdup (self->text);
 }
@@ -305,5 +305,5 @@ kc_text_area_new (gboolean editable)
 {
     return g_object_new (KC_TYPE_TEXT_AREA,
                          "editable", editable,
-                         NULL);
+                         nullptr);
 }
