@@ -66,7 +66,6 @@ static const KcSettingsMigrationEntry settings_migration_table[] = {
     { "source-text"         , migrate_source_text      },
     { "source-case-type"    , migrate_source_case_type },
     { "result-case-type"    , migrate_result_case_type },
-
     { nullptr }
 };
 
