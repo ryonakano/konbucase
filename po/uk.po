@@ -1,7 +1,7 @@
 # Ukrainian translations for com.github.ryonakano.konbucase.
 # Copyright (C) 2020-2026 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.konbucase package.
-# Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023, 2024, 2025.
+# Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023, 2024, 2025, 2026.
 # Artem <artem@molotov.work>, 2022.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 # Димко <Dymkovych@proton.me>, 2026.
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-04 13:05+0000\n"
-"PO-Revision-Date: 2026-06-16 10:01+0000\n"
-"Last-Translator: Димко <Dymkovych@proton.me>\n"
+"PO-Revision-Date: 2026-08-13 12:51+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/konbucase/"
 "uk/>\n"
 "Language: uk\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #: data/konbucase.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -57,6 +57,8 @@ msgstr ""
 #: data/konbucase.metainfo.xml.in.in:19
 msgid "Click \"Quick Swap\" button to swap case and text of input and output"
 msgstr ""
+"Натисніть кнопку «Швидка заміна», щоб поміняти місцями регістр і текст у "
+"полях введення та виведення"
 
 #: data/konbucase.metainfo.xml.in.in:20
 msgid ""
@@ -128,7 +130,7 @@ msgstr "_Про %s"
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
 #: src/MainWindow.vala:37
 msgid "Quick Swap"
-msgstr ""
+msgstr "Швидка заміна"
 
 #: src/MainWindow.vala:41
 msgid "Main Menu"
