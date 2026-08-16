@@ -18,7 +18,7 @@
     project(
       'com.github.ryonakano.konbucase',
       'c',
-      version: '4.5.1',
+      version: '5.0.0',
     ```
 * [Create a new release on GitHub](https://github.com/ryonakano/konbucase/releases/new)
     * Create a new tag named `X.Y.Z`
