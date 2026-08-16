@@ -12,9 +12,7 @@
  *
  * A widget that wraps a #GtkSourceView.
  *
- * <picture>
- *   <img src="example_text_area.png" alt="example image of TextArea">
- * </picture>
+ * ![example image of TextArea](example_text_area.png)
  */
 
 enum {
@@ -129,7 +127,7 @@ kc_text_area_class_init (KcTextAreaClass *klass)
     /**
      * KcTextArea:editable:
      *
-     * Whether it's possible to modify text in the #GtkSourceView that `KcTextArea` wraps.
+     * Whether it's possible to modify text in the #GtkSourceView that #KcTextArea wraps.
      */
     props[PROP_EDITABLE] =
         g_param_spec_boolean ("editable", nullptr, nullptr,
@@ -139,7 +137,7 @@ kc_text_area_class_init (KcTextAreaClass *klass)
     /**
      * KcTextArea:text:
      *
-     * Text in the #GtkSourceView that `KcTextArea` wraps.
+     * Text in the #GtkSourceView that #KcTextArea wraps.
      */
     props[PROP_TEXT] =
         g_param_spec_string ("text", nullptr, nullptr,
@@ -189,7 +187,7 @@ kc_text_area_init (KcTextArea *self)
 
 /**
  * kc_text_area_get_editable:
- * @self: a `KcCaseListItem`
+ * @self: a #KcTextArea
  *
  * Gets whether it's possible to modify text in the #GtkSourceView that @self wraps.
  *
@@ -205,7 +203,7 @@ kc_text_area_get_editable (KcTextArea *self)
 
 /**
  * kc_text_area_set_editable:
- * @self: a `KcTextArea`
+ * @self: a #KcTextArea
  * @editable: whether it's possible to modify text in the #GtkSourceView that @self wraps
  *
  * Sets whether it's possible to modify text in the #GtkSourceView that @self wraps.
@@ -230,7 +228,7 @@ kc_text_area_set_editable (KcTextArea *self,
 
 /**
  * kc_text_area_dup_text:
- * @self: a `KcCaseListItem`
+ * @self: a #KcTextArea
  *
  * Gets a copy of text in the #GtkSourceView that @self wraps.
  *
@@ -246,7 +244,7 @@ kc_text_area_dup_text (KcTextArea *self)
 
 /**
  * kc_text_area_set_text:
- * @self: a `KcTextArea`
+ * @self: a #KcTextArea
  * @text: (nullable) (transfer none): text in the #GtkSourceView that @self wraps
  *
  * Sets text in the #GtkSourceView that @self wraps.
@@ -268,7 +266,7 @@ kc_text_area_set_text (KcTextArea *self,
 
 /**
  * kc_text_area_clear_text:
- * @self: a `KcTextArea`
+ * @self: a #KcTextArea
  *
  * Clears text in the #GtkSourceView that @self wraps.
  */
@@ -280,7 +278,7 @@ kc_text_area_clear_text (KcTextArea *self)
 
 /**
  * kc_text_area_grab_focus:
- * @self: a `KcTextArea`
+ * @self: a #KcTextArea
  *
  * Causes the #GtkSourceView that @self wraps to have the keyboard focus for the app window.
  */
@@ -294,11 +292,11 @@ kc_text_area_grab_focus (KcTextArea *self)
 
 /**
  * kc_text_area_new:
- * @editable: whether it's possible to modify text in the #GtkSourceView that `KcTextArea` wraps
+ * @editable: whether it's possible to modify text in the #GtkSourceView that #KcTextArea wraps
  *
- * Creates a new `KcTextArea`.
+ * Creates a new #KcTextArea.
  *
- * Returns: (transfer full): the newly created `KcTextArea`
+ * Returns: (transfer full): the newly created #KcTextArea
  */
 KcTextArea *
 kc_text_area_new (gboolean editable)

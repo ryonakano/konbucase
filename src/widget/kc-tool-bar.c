@@ -15,11 +15,10 @@
 
 /**
  * KcToolBar:
+ *
  * A widget that contains controls for text input/output.
  *
- * <picture>
- *   <img src="example_toolbar.png" alt="example image of ToolBar">
- * </picture>
+ * ![example image of ToolBar"](example_toolbar.png)
  */
 
 enum {
@@ -413,7 +412,7 @@ kc_tool_bar_init (KcToolBar *self)
 
 /**
  * kc_tool_bar_get_header_text:
- * @self: a `KcToolBar`
+ * @self: a #KcToolBar
  *
  * Gets text to show alongside the #GtkDropDown that selects type of letter case for @self.
  *
@@ -429,7 +428,7 @@ kc_tool_bar_get_header_text (KcToolBar *self)
 
 /**
  * kc_tool_bar_set_header_text:
- * @self: a `KcToolBar`
+ * @self: a #KcToolBar
  * @text: (nullable) (transfer none): text to show alongside the #GtkDropDown that selects type of letter case
  *
  * Sets text to show alongside the #GtkDropDown that selects type of letter case for @self.
@@ -447,7 +446,7 @@ kc_tool_bar_set_header_text (KcToolBar  *self,
 
 /**
  * kc_tool_bar_get_case_type:
- * @self: a `KcToolBar`
+ * @self: a #KcToolBar
  *
  * Gets type of letter case that currently preferred for @self.
  *
@@ -463,7 +462,7 @@ kc_tool_bar_get_case_type (KcToolBar *self)
 
 /**
  * kc_tool_bar_set_case_type:
- * @self: a `KcToolBar`
+ * @self: a #KcToolBar
  * @case_type: type of letter case that currently preferred
  *
  * Sets type of letter case that currently preferred for @self.
@@ -485,7 +484,7 @@ kc_tool_bar_set_case_type (KcToolBar  *self,
 
 /**
  * kc_tool_bar_get_copy_button:
- * @self: a `KcToolBar`
+ * @self: a #KcToolBar
  *
  * Gets the #GtkButton to copy text for @self.
  *
@@ -501,7 +500,7 @@ kc_tool_bar_get_copy_button (KcToolBar *self)
 
 /**
  * kc_tool_bar_append:
- * @self: a `KcToolBar`
+ * @self: a #KcToolBar
  * @widget: (transfer floating): the widget to append
  *
  * Adds an additional widget at the end.
@@ -520,9 +519,9 @@ kc_tool_bar_append (KcToolBar *self,
  * kc_tool_bar_new:
  * @header_text: text to show alongside the #GtkDropDown that selects type of letter case
  *
- * Creates a new `KcToolBar`.
+ * Creates a new #KcToolBar.
  *
- * Returns: (transfer full): the newly created `KcToolBar`
+ * Returns: (transfer full): the newly created #KcToolBar
  */
 KcToolBar *
 kc_tool_bar_new (const char *header_text)

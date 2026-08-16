@@ -10,9 +10,7 @@
  *
  * A row of a dropdown with a title and description text.
  *
- * <picture>
- *   <img src="example_drop_down_row.png" alt="example image of DropDownRow">
- * </picture>
+ * ![example image of DropDownRow](example_drop_down_row.png)
  */
 
 struct _KcDropDownRow {
@@ -69,7 +67,7 @@ kc_drop_down_row_init (KcDropDownRow *self)
 
 /**
  * kc_drop_down_row_get_title:
- * @self: a `KcDropDownRow`
+ * @self: a #KcDropDownRow
  *
  * Gets title text of the row for @self.
  *
@@ -85,7 +83,7 @@ kc_drop_down_row_get_title (KcDropDownRow *self)
 
 /**
  * kc_drop_down_row_set_title:
- * @self: a `KcDropDownRow`
+ * @self: a #KcDropDownRow
  * @title: (nullable) (transfer none): title text of the row
  *
  * Sets title text of the row for @self.
@@ -101,7 +99,7 @@ kc_drop_down_row_set_title (KcDropDownRow *self,
 
 /**
  * kc_drop_down_row_get_description:
- * @self: a `KcDropDownRow`
+ * @self: a #KcDropDownRow
  *
  * Gets description text of the row for @self.
  *
@@ -117,7 +115,7 @@ kc_drop_down_row_get_description (KcDropDownRow *self)
 
 /**
  * kc_drop_down_row_set_description:
- * @self: a `KcDropDownRow`
+ * @self: a #KcDropDownRow
  * @description: (nullable) (transfer none): description text of the row
  *
  * Sets description text of the row for @self.
@@ -134,9 +132,9 @@ kc_drop_down_row_set_description (KcDropDownRow *self,
 /**
  * kc_drop_down_row_new:
  *
- * Creates a new `KcDropDownRow`.
+ * Creates a new #KcDropDownRow.
  *
- * Returns: (transfer full): the newly created `KcDropDownRow`
+ * Returns: (transfer full): the newly created #KcDropDownRow
  */
 KcDropDownRow *
 kc_drop_down_row_new (void)

@@ -13,11 +13,11 @@
 
 /**
  * kc_case_convert_to_case_type:
- * @chcase_case: a `ChCaseCase`
+ * @chcase_case: a #ChCaseCase
  *
- * Converts `ChCaseCase` to `KcCaseType`.
+ * Converts #ChCaseCase to #KcCaseType.
  *
- * Returns: a `KcCaseType`
+ * Returns: a #KcCaseType
  */
 KcCaseType
 kc_case_convert_to_case_type (ChCaseCase chcase_case)
@@ -43,11 +43,11 @@ kc_case_convert_to_case_type (ChCaseCase chcase_case)
 
 /**
  * kc_case_convert_to_chcase_case:
- * @case_type: a `KcCaseType`
+ * @case_type: a #KcCaseType
  *
- * Converts `KcCaseType` to `ChCaseCase`.
+ * Converts #KcCaseType to #ChCaseCase.
  *
- * Returns: a `ChCaseCase`
+ * Returns: a #ChCaseCase
  */
 ChCaseCase
 kc_case_convert_to_chcase_case (KcCaseType case_type)

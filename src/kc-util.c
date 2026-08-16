@@ -6,7 +6,7 @@
 #include "kc-util.h"
 
 /**
- * util_is_pantheon:
+ * kc_util_is_pantheon:
  *
  * Whether the app is running on Pantheon desktop environment.
  *

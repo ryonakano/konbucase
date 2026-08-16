@@ -145,7 +145,7 @@ kc_case_list_item_init (KcCaseListItem *self)
 
 /**
  * kc_case_list_item_get_case_type:
- * @self: a `KcCaseListItem`
+ * @self: a #KcCaseListItem
  *
  * Gets type of the letter case for @self.
  *
@@ -161,7 +161,7 @@ kc_case_list_item_get_case_type (KcCaseListItem *self)
 
 /**
  * kc_case_list_item_set_case_type:
- * @self: a `KcCaseListItem`
+ * @self: a #KcCaseListItem
  * @case_type: type of the letter case
  *
  * Sets type of the letter case for @self.
@@ -183,7 +183,7 @@ kc_case_list_item_set_case_type (KcCaseListItem *self,
 
 /**
  * kc_case_list_item_get_name:
- * @self: a `KcCaseListItem`
+ * @self: a #KcCaseListItem
  *
  * Gets display name of the letter case for @self.
  *
@@ -199,7 +199,7 @@ kc_case_list_item_get_name (KcCaseListItem *self)
 
 /**
  * kc_case_list_item_set_name:
- * @self: a `KcCaseListItem`
+ * @self: a #KcCaseListItem
  * @name: (nullable) (transfer none): display name of the letter case
  *
  * Sets display name of the letter case for @self.
@@ -221,7 +221,7 @@ kc_case_list_item_set_name (KcCaseListItem *self,
 
 /**
  * kc_case_list_item_get_description:
- * @self: a `KcCaseListItem`
+ * @self: a #KcCaseListItem
  *
  * Gets description of the letter case for @self.
  *
@@ -237,7 +237,7 @@ kc_case_list_item_get_description (KcCaseListItem *self)
 
 /**
  * kc_case_list_item_set_description:
- * @self: a `KcCaseListItem`
+ * @self: a #KcCaseListItem
  * @description: (nullable) (transfer none): description of the letter case
  *
  * Sets description of the letter case for @self.
@@ -259,8 +259,8 @@ kc_case_list_item_set_description (KcCaseListItem *self,
 
 /**
  * kc_case_list_item_equal:
- * @self: a `KcCaseListItem`
- * @other: (transfer none): another `KcCaseListItem`
+ * @self: a #KcCaseListItem
+ * @other: (transfer none): another #KcCaseListItem
  *
  * Checks if @self and @other represent the same case.
  *
@@ -283,9 +283,9 @@ kc_case_list_item_equal (KcCaseListItem *self,
  * @name: (nullable) (transfer none): display name of the letter case
  * @description: (nullable) (transfer none): description of the letter case
  *
- * Creates a new `KcCaseListItem`.
+ * Creates a new #KcCaseListItem.
  *
- * Returns: (transfer full): the newly created `KcCaseListItem`
+ * Returns: (transfer full): the newly created #KcCaseListItem
  */
 KcCaseListItem *
 kc_case_list_item_new (KcCaseType  case_type,

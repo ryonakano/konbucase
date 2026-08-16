@@ -121,11 +121,11 @@ kc_main_window_init (KcMainWindow *self)
 
 /**
  * kc_main_window_new:
- * @app: a #KcApplication to be associated with `KcMainWindow`
+ * @app: a #KcApplication to be associated with #KcMainWindow
  *
- * Creates a new `KcMainWindow`.
+ * Creates a new #KcMainWindow.
  *
- * Returns: (transfer full): the newly created `KcMainWindow`
+ * Returns: (transfer full): the newly created #KcMainWindow
  */
 KcMainWindow *
 kc_main_window_new (KcApplication *app)

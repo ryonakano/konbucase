@@ -30,9 +30,7 @@
  * and also its #KcToolBar contains a button to clear text in its #KcTextArea.
  * On the other hand, Output Pane aims to print conversion result, so text in its #KcTextArea is not editable.
  *
- * <picture>
- *   <img src="example_main_view.png" alt="example image of MainView">
- * </picture>
+ * ![example image of MainView](example_main_view.png)
  */
 
 enum {
@@ -349,9 +347,9 @@ kc_main_view_init (KcMainView *self)
 
 /**
  * kc_main_view_swap:
- * @self: a `KcMainView
+ * @self: a #KcMainView
  *
- * Swaps values of [property@KcToolBar:case_type] and [property@KcTextArea:text] between input and output.
+ * Swaps values of #KcToolBar:case-type and #KcTextArea:text between input and output.
  */
 void
 kc_main_view_swap (KcMainView *self)
@@ -390,9 +388,9 @@ kc_main_view_swap (KcMainView *self)
 /**
  * kc_main_view_new:
  *
- * Creates a new `KcMainView`.
+ * Creates a new #KcMainView.
  *
- * Returns: (transfer full): the newly created `KcMainView`
+ * Returns: (transfer full): the newly created #KcMainView
  */
 KcMainView *
 kc_main_view_new (void)

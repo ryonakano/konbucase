@@ -15,9 +15,7 @@
  * The most significant difference with the default button content of a #GtkDropDown
  * is that the label in the item is ellipsized if its text is too long.
  *
- * <picture>
- *   <img src="example_drop_down_button_content.png" alt="example image of DropDownButtonContent">
- * </picture>
+ * ![example image of DropDownButtonContent](example_drop_down_button_content.png)
  */
 
 enum {
@@ -126,7 +124,7 @@ kc_drop_down_button_content_init (KcDropDownButtonContent *self)
 
 /**
  * kc_drop_down_button_content_get_label_text:
- * @self: a `KcDropDownButtonContent`
+ * @self: a #KcDropDownButtonContent
  *
  * Gets the label text of the item for @self.
  *
@@ -142,7 +140,7 @@ kc_drop_down_button_content_get_label_text (KcDropDownButtonContent *self)
 
 /**
  * kc_drop_down_button_content_set_label_text:
- * @self: a `KcDropDownButtonContent`
+ * @self: a #KcDropDownButtonContent
  * @label_text: (nullable) (transfer none): the label text of the item
  *
  * Sets the label text of the item for @self.
@@ -165,9 +163,9 @@ kc_drop_down_button_content_set_label_text (KcDropDownButtonContent *self,
 /**
  * kc_drop_down_button_content_new:
  *
- * Creates a new `KcDropDownButtonContent`.
+ * Creates a new #KcDropDownButtonContent.
  *
- * Returns: (transfer full): the newly created `KcDropDownButtonContent`
+ * Returns: (transfer full): the newly created #KcDropDownButtonContent
  */
 KcDropDownButtonContent *
 kc_drop_down_button_content_new (void)

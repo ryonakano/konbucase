@@ -298,9 +298,9 @@ kc_application_init (KcApplication *self)
 /**
  * kc_application_new:
  *
- * Creates a new `KcApplication`.
+ * Creates a new #KcApplication.
  *
- * Returns: the newly created `KcApplication`
+ * Returns: the newly created #KcApplication
  */
 KcApplication *
 kc_application_new (void)
