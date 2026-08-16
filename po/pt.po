@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-04 13:05+0000\n"
+"POT-Creation-Date: 2026-08-16 12:19+0900\n"
 "PO-Revision-Date: 2026-06-11 20:01+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
@@ -22,19 +22,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2026.7.dev0\n"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:4
+#: data/konbucase.desktop.in.in:3
 msgid "Case Converting App"
 msgstr "Aplicação de Conversão de Palavras em Caixa Alta e Baixa"
 
-#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "Converta palavras em caixa alta ou baixa"
 
-#: data/konbucase.desktop.in.in:11
+#: data/konbucase.desktop.in.in:10
 msgid "Text;"
 msgstr "Texto;"
 
@@ -97,89 +97,89 @@ msgstr "Sair"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:151
+#: src/kc-application.c:69
 msgid "translator-credits"
 msgstr ""
 
-#: src/MainWindow.vala:22
+#: src/kc-main-window.c:33
+msgid "Text copied!"
+msgstr "Texto copiado!"
+
+#: src/kc-main-window.c:65
 msgid "S_ystem"
 msgstr "S_istema"
 
-#: src/MainWindow.vala:23
+#: src/kc-main-window.c:66
 msgid "_Light"
 msgstr "_Claro"
 
-#: src/MainWindow.vala:24
+#: src/kc-main-window.c:67
 msgid "_Dark"
 msgstr "_Escuro"
 
-#: src/MainWindow.vala:27
+#: src/kc-main-window.c:70
 msgid "_Style"
 msgstr "_Estilo"
 
-#: src/MainWindow.vala:28
+#: src/kc-main-window.c:71
 msgid "_Keyboard Shortcuts"
 msgstr "_Atalhos de teclado"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:32
+#: src/kc-main-window.c:75
 #, c-format
 msgid "_About %s"
 msgstr "_Sobre %s"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-#: src/MainWindow.vala:37
+#: src/kc-main-window.c:81
 msgid "Quick Swap"
 msgstr ""
 
-#: src/MainWindow.vala:41
+#: src/kc-main-window.c:84
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: src/MainWindow.vala:82
-msgid "Text copied!"
-msgstr "Texto copiado!"
-
-#: src/Widget/MainContent.vala:28
+#: src/view/kc-main-view.c:233
 msgid "Clear"
 msgstr ""
 
-#: src/Widget/MainContent.vala:31
+#: src/view/kc-main-view.c:235
 msgid "Convert _From:"
 msgstr "Converter de:"
 
-#: src/Widget/MainContent.vala:53
+#: src/view/kc-main-view.c:256
 msgid "Convert _To:"
 msgstr "Converter para:"
 
-#: src/Widget/Toolbar.vala:31
+#: src/widget/kc-tool-bar.c:338
 msgid "Space separated"
 msgstr "Espaço separado"
 
-#: src/Widget/Toolbar.vala:32
+#: src/widget/kc-tool-bar.c:339
 msgid "Each word is separated by a space"
 msgstr "Cada palavra está separada por um espaço"
 
-#: src/Widget/Toolbar.vala:37
+#: src/widget/kc-tool-bar.c:343
 msgid "The first character of compound words is in lowercase"
 msgstr "O primeiro carácter de palavras compostas está em minúsculas"
 
-#: src/Widget/Toolbar.vala:42
+#: src/widget/kc-tool-bar.c:347
 msgid "The first character of compound words is in uppercase"
 msgstr "O primeiro carácter de palavras compostas está em maiúsculas"
 
-#: src/Widget/Toolbar.vala:47
+#: src/widget/kc-tool-bar.c:351
 msgid "Each word is separated by an underscore"
 msgstr "Cada palavra está separada por um sublinhado"
 
-#: src/Widget/Toolbar.vala:52
+#: src/widget/kc-tool-bar.c:355
 msgid "Each word is separated by a hyphen"
 msgstr "Cada palavra está separada por um hífen"
 
-#: src/Widget/Toolbar.vala:57
+#: src/widget/kc-tool-bar.c:359
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "O primeiro carácter da primeira palavra da frase está em maiúsculas"
 
-#: src/Widget/Toolbar.vala:79
+#: src/widget/kc-tool-bar.c:384
 msgid "Copy to Clipboard"
 msgstr "Copiar para a Área de transferência"

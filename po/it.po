@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-04 13:05+0000\n"
+"POT-Creation-Date: 2026-08-16 12:19+0900\n"
 "PO-Revision-Date: 2025-03-31 04:19+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -23,19 +23,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.11-dev\n"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:4
+#: data/konbucase.desktop.in.in:3
 msgid "Case Converting App"
 msgstr "Applicazione per la conversione delle maiuscole"
 
-#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "Converti le maiuscole nel tuo testo"
 
-#: data/konbucase.desktop.in.in:11
+#: data/konbucase.desktop.in.in:10
 msgid "Text;"
 msgstr "Testo;"
 
@@ -98,89 +98,89 @@ msgstr "Esci"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:151
+#: src/kc-application.c:69
 msgid "translator-credits"
 msgstr "Albano Battistella <albanobattistella@gmail.com>"
 
-#: src/MainWindow.vala:22
+#: src/kc-main-window.c:33
+msgid "Text copied!"
+msgstr "Testo copiato!"
+
+#: src/kc-main-window.c:65
 msgid "S_ystem"
 msgstr "S_istema"
 
-#: src/MainWindow.vala:23
+#: src/kc-main-window.c:66
 msgid "_Light"
 msgstr "_Chiaro"
 
-#: src/MainWindow.vala:24
+#: src/kc-main-window.c:67
 msgid "_Dark"
 msgstr "_Scuro"
 
-#: src/MainWindow.vala:27
+#: src/kc-main-window.c:70
 msgid "_Style"
 msgstr "_Stile"
 
-#: src/MainWindow.vala:28
+#: src/kc-main-window.c:71
 msgid "_Keyboard Shortcuts"
 msgstr "_Scorciatoie da tastiera"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:32
+#: src/kc-main-window.c:75
 #, c-format
 msgid "_About %s"
 msgstr "_Informazioni su %s"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-#: src/MainWindow.vala:37
+#: src/kc-main-window.c:81
 msgid "Quick Swap"
 msgstr ""
 
-#: src/MainWindow.vala:41
+#: src/kc-main-window.c:84
 msgid "Main Menu"
 msgstr "Menù principale"
 
-#: src/MainWindow.vala:82
-msgid "Text copied!"
-msgstr "Testo copiato!"
-
-#: src/Widget/MainContent.vala:28
+#: src/view/kc-main-view.c:233
 msgid "Clear"
 msgstr ""
 
-#: src/Widget/MainContent.vala:31
+#: src/view/kc-main-view.c:235
 msgid "Convert _From:"
 msgstr "Converti _da:"
 
-#: src/Widget/MainContent.vala:53
+#: src/view/kc-main-view.c:256
 msgid "Convert _To:"
 msgstr "Converti _in:"
 
-#: src/Widget/Toolbar.vala:31
+#: src/widget/kc-tool-bar.c:338
 msgid "Space separated"
 msgstr "Spazi separati"
 
-#: src/Widget/Toolbar.vala:32
+#: src/widget/kc-tool-bar.c:339
 msgid "Each word is separated by a space"
 msgstr "Ogni parola è separata da uno spazio"
 
-#: src/Widget/Toolbar.vala:37
+#: src/widget/kc-tool-bar.c:343
 msgid "The first character of compound words is in lowercase"
 msgstr "Il primo carattere delle parole composte è minuscolo"
 
-#: src/Widget/Toolbar.vala:42
+#: src/widget/kc-tool-bar.c:347
 msgid "The first character of compound words is in uppercase"
 msgstr "Il primo carattere delle parole composte è maiuscolo"
 
-#: src/Widget/Toolbar.vala:47
+#: src/widget/kc-tool-bar.c:351
 msgid "Each word is separated by an underscore"
 msgstr "Ogni parola è separata da un underscore (trattino basso)"
 
-#: src/Widget/Toolbar.vala:52
+#: src/widget/kc-tool-bar.c:355
 msgid "Each word is separated by a hyphen"
 msgstr "Ogni parola è separata da un hyphen (trattino alto)"
 
-#: src/Widget/Toolbar.vala:57
+#: src/widget/kc-tool-bar.c:359
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Il primo carattere della prima parola della frase è in maiuscolo"
 
-#: src/Widget/Toolbar.vala:79
+#: src/widget/kc-tool-bar.c:384
 msgid "Copy to Clipboard"
 msgstr "Copia negli appunti"

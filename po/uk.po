@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-04 13:05+0000\n"
+"POT-Creation-Date: 2026-08-16 12:19+0900\n"
 "PO-Revision-Date: 2026-08-13 12:51+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -22,19 +22,19 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 2026.9.dev0\n"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:4
+#: data/konbucase.desktop.in.in:3
 msgid "Case Converting App"
 msgstr "Застосунок для перетворення регістрів"
 
-#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr "Перетворення регістру вашого тексту"
 
-#: data/konbucase.desktop.in.in:11
+#: data/konbucase.desktop.in.in:10
 msgid "Text;"
 msgstr "Текст;Text;"
 
@@ -97,89 +97,89 @@ msgstr "Вихід"
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:151
+#: src/kc-application.c:69
 msgid "translator-credits"
 msgstr "Ihor Hordiichuk"
 
-#: src/MainWindow.vala:22
+#: src/kc-main-window.c:33
+msgid "Text copied!"
+msgstr "Текст скопійовано!"
+
+#: src/kc-main-window.c:65
 msgid "S_ystem"
 msgstr "С_истемний"
 
-#: src/MainWindow.vala:23
+#: src/kc-main-window.c:66
 msgid "_Light"
 msgstr "_Світлий"
 
-#: src/MainWindow.vala:24
+#: src/kc-main-window.c:67
 msgid "_Dark"
 msgstr "_Темний"
 
-#: src/MainWindow.vala:27
+#: src/kc-main-window.c:70
 msgid "_Style"
 msgstr "_Стиль"
 
-#: src/MainWindow.vala:28
+#: src/kc-main-window.c:71
 msgid "_Keyboard Shortcuts"
 msgstr "_Комбінації клавіш"
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:32
+#: src/kc-main-window.c:75
 #, c-format
 msgid "_About %s"
 msgstr "_Про %s"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-#: src/MainWindow.vala:37
+#: src/kc-main-window.c:81
 msgid "Quick Swap"
 msgstr "Швидка заміна"
 
-#: src/MainWindow.vala:41
+#: src/kc-main-window.c:84
 msgid "Main Menu"
 msgstr "Головне меню"
 
-#: src/MainWindow.vala:82
-msgid "Text copied!"
-msgstr "Текст скопійовано!"
-
-#: src/Widget/MainContent.vala:28
+#: src/view/kc-main-view.c:233
 msgid "Clear"
 msgstr "Очистити"
 
-#: src/Widget/MainContent.vala:31
+#: src/view/kc-main-view.c:235
 msgid "Convert _From:"
 msgstr "Конвертувати _з:"
 
-#: src/Widget/MainContent.vala:53
+#: src/view/kc-main-view.c:256
 msgid "Convert _To:"
 msgstr "Конвертувати _в:"
 
-#: src/Widget/Toolbar.vala:31
+#: src/widget/kc-tool-bar.c:338
 msgid "Space separated"
 msgstr "Розділено пробілами"
 
-#: src/Widget/Toolbar.vala:32
+#: src/widget/kc-tool-bar.c:339
 msgid "Each word is separated by a space"
 msgstr "Кожне слово відокремлено пробілом"
 
-#: src/Widget/Toolbar.vala:37
+#: src/widget/kc-tool-bar.c:343
 msgid "The first character of compound words is in lowercase"
 msgstr "Перший символ сполучених слів пишеться з маленької букви"
 
-#: src/Widget/Toolbar.vala:42
+#: src/widget/kc-tool-bar.c:347
 msgid "The first character of compound words is in uppercase"
 msgstr "Перший символ сполучених слів пишеться з великої букви"
 
-#: src/Widget/Toolbar.vala:47
+#: src/widget/kc-tool-bar.c:351
 msgid "Each word is separated by an underscore"
 msgstr "Кожне слово розділене символом підкреслення"
 
-#: src/Widget/Toolbar.vala:52
+#: src/widget/kc-tool-bar.c:355
 msgid "Each word is separated by a hyphen"
 msgstr "Кожне слово розділяється дефісом"
 
-#: src/Widget/Toolbar.vala:57
+#: src/widget/kc-tool-bar.c:359
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Перший символ першого слова в реченні пишеться з великої букви"
 
-#: src/Widget/Toolbar.vala:79
+#: src/widget/kc-tool-bar.c:384
 msgid "Copy to Clipboard"
 msgstr "Копіювати до буфера обміну"

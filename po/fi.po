@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-04 13:05+0000\n"
+"POT-Creation-Date: 2026-08-16 12:19+0900\n"
 "PO-Revision-Date: 2025-02-04 13:02+0000\n"
 "Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/konbucase/"
@@ -20,19 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.10-dev\n"
 
-#: data/konbucase.desktop.in.in:3
+#: data/konbucase.desktop.in.in:2
 msgid "@APP_NAME@"
 msgstr "@APP_NAME@"
 
-#: data/konbucase.desktop.in.in:4
+#: data/konbucase.desktop.in.in:3
 msgid "Case Converting App"
 msgstr ""
 
-#: data/konbucase.desktop.in.in:5 data/konbucase.metainfo.xml.in.in:11
+#: data/konbucase.desktop.in.in:4 data/konbucase.metainfo.xml.in.in:11
 msgid "Convert case in your text"
 msgstr ""
 
-#: data/konbucase.desktop.in.in:11
+#: data/konbucase.desktop.in.in:10
 msgid "Text;"
 msgstr ""
 
@@ -89,101 +89,95 @@ msgstr ""
 #. John Doe
 #. John Doe <john-doe@example.com>
 #. John Doe https://example.com
-#: src/Application.vala:151
+#: src/kc-application.c:69
 msgid "translator-credits"
 msgstr ""
 
-#: src/MainWindow.vala:22
+#: src/kc-main-window.c:33
+msgid "Text copied!"
+msgstr "Teksti kopioitu!"
+
+#: src/kc-main-window.c:65
 #, fuzzy
-#| msgid "System"
 msgid "S_ystem"
 msgstr "Järjestelmä"
 
-#: src/MainWindow.vala:23
+#: src/kc-main-window.c:66
 #, fuzzy
-#| msgid "Light"
 msgid "_Light"
 msgstr "Vaalea"
 
-#: src/MainWindow.vala:24
+#: src/kc-main-window.c:67
 #, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
 msgstr "Tumma"
 
-#: src/MainWindow.vala:27
+#: src/kc-main-window.c:70
 #, fuzzy
 msgid "_Style"
 msgstr "Tyyli:"
 
-#: src/MainWindow.vala:28
+#: src/kc-main-window.c:71
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:32
+#: src/kc-main-window.c:75
 #, fuzzy, c-format
-#| msgid "KonbuCase"
 msgid "_About %s"
 msgstr "KonbuCase"
 
 #. TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-#: src/MainWindow.vala:37
+#: src/kc-main-window.c:81
 msgid "Quick Swap"
 msgstr ""
 
-#: src/MainWindow.vala:41
+#: src/kc-main-window.c:84
 msgid "Main Menu"
 msgstr ""
 
-#: src/MainWindow.vala:82
-msgid "Text copied!"
-msgstr "Teksti kopioitu!"
-
-#: src/Widget/MainContent.vala:28
+#: src/view/kc-main-view.c:233
 msgid "Clear"
 msgstr ""
 
-#: src/Widget/MainContent.vala:31
+#: src/view/kc-main-view.c:235
 #, fuzzy
-#| msgid "Convert from:"
 msgid "Convert _From:"
 msgstr "Muunna muodosta:"
 
-#: src/Widget/MainContent.vala:53
+#: src/view/kc-main-view.c:256
 #, fuzzy
-#| msgid "Convert to:"
 msgid "Convert _To:"
 msgstr "Muunna muotoon:"
 
-#: src/Widget/Toolbar.vala:31
+#: src/widget/kc-tool-bar.c:338
 msgid "Space separated"
 msgstr "Välilyönnein erotettu"
 
-#: src/Widget/Toolbar.vala:32
+#: src/widget/kc-tool-bar.c:339
 msgid "Each word is separated by a space"
 msgstr "Jokainen sana on erotettu välilyönnillä"
 
-#: src/Widget/Toolbar.vala:37
+#: src/widget/kc-tool-bar.c:343
 msgid "The first character of compound words is in lowercase"
 msgstr "Yhdyssanojen ensimmäinen merkki on pienellä"
 
-#: src/Widget/Toolbar.vala:42
+#: src/widget/kc-tool-bar.c:347
 msgid "The first character of compound words is in uppercase"
 msgstr "Yhdyssanojen ensimmäinen merkki on isolla"
 
-#: src/Widget/Toolbar.vala:47
+#: src/widget/kc-tool-bar.c:351
 msgid "Each word is separated by an underscore"
 msgstr "Jokaisen sanan erottaa alaviiva"
 
-#: src/Widget/Toolbar.vala:52
+#: src/widget/kc-tool-bar.c:355
 msgid "Each word is separated by a hyphen"
 msgstr "Jokaisen sanan erottaa tavuviiva"
 
-#: src/Widget/Toolbar.vala:57
+#: src/widget/kc-tool-bar.c:359
 msgid "The first character of the first word in the sentence is in uppercase"
 msgstr "Jokaisen lauseen sanan ensimmäinen sana on isolla"
 
-#: src/Widget/Toolbar.vala:79
+#: src/widget/kc-tool-bar.c:384
 msgid "Copy to Clipboard"
 msgstr "Kopioi leikepöydälle"
