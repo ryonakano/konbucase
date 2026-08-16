@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="KonbuCase Reference Manual" link="index.html" author="" name="konbucase" version="2" language="c">
+  <chapters>
+    <sub name="General" link="general.html">
+      <sub name="kc-application" link="konbucase-kc-application.html"/>
+      <sub name="kc-main-window" link="konbucase-kc-main-window.html"/>
+      <sub name="kc-types" link="konbucase-kc-types.html"/>
+      <sub name="kc-util" link="konbucase-kc-util.html"/>
+    </sub>
+    <sub name="Model" link="model.html">
+      <sub name="kc-case-list-item" link="konbucase-kc-case-list-item.html"/>
+    </sub>
+    <sub name="Util" link="util.html">
+      <sub name="kc-case-convert" link="konbucase-kc-case-convert.html"/>
+      <sub name="kc-convert" link="konbucase-kc-convert.html"/>
+      <sub name="kc-settings-migration" link="konbucase-kc-settings-migration.html"/>
+    </sub>
+    <sub name="View" link="view.html">
+      <sub name="kc-main-view" link="konbucase-kc-main-view.html"/>
+    </sub>
+    <sub name="Widget" link="widget.html">
+      <sub name="kc-drop-down-button-content" link="konbucase-kc-drop-down-button-content.html"/>
+      <sub name="kc-drop-down-row" link="konbucase-kc-drop-down-row.html"/>
+      <sub name="kc-text-area" link="konbucase-kc-text-area.html"/>
+      <sub name="kc-tool-bar" link="konbucase-kc-tool-bar.html"/>
+    </sub>
+    <sub name="Index of all symbols" link="api-index-full.html"/>
+    <sub name="Index of new symbols in 5.0.0" link="ix02.html"/>
+    <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
+    <sub name="Annotation glossary" link="annotation-glossary.html">
+      <sub name="Annotation Glossary" link="annotation-glossary.html#annotation-glossary"/>
+    </sub>
+  </chapters>
+  <functions>
+    <keyword type="function" name="kc_application_new ()" link="konbucase-kc-application.html#kc-application-new"/>
+    <keyword type="macro" name="KC_TYPE_APPLICATION" link="konbucase-kc-application.html#KC-TYPE-APPLICATION:CAPS"/>
+    <keyword type="struct" name="KcApplication" link="konbucase-kc-application.html#KcApplication"/>
+    <keyword type="function" name="kc_main_window_new ()" link="konbucase-kc-main-window.html#kc-main-window-new"/>
+    <keyword type="macro" name="KC_TYPE_MAIN_WINDOW" link="konbucase-kc-main-window.html#KC-TYPE-MAIN-WINDOW:CAPS"/>
+    <keyword type="struct" name="KcMainWindow" link="konbucase-kc-main-window.html#KcMainWindow"/>
+    <keyword type="enum" name="enum KcCaseType" link="konbucase-kc-types.html#KcCaseType"/>
+    <keyword type="function" name="kc_util_is_pantheon ()" link="konbucase-kc-util.html#kc-util-is-pantheon"/>
+    <keyword type="function" name="kc_case_list_item_get_case_type ()" link="konbucase-kc-case-list-item.html#kc-case-list-item-get-case-type"/>
+    <keyword type="function" name="kc_case_list_item_set_case_type ()" link="konbucase-kc-case-list-item.html#kc-case-list-item-set-case-type"/>
+    <keyword type="function" name="kc_case_list_item_get_name ()" link="konbucase-kc-case-list-item.html#kc-case-list-item-get-name"/>
+    <keyword type="function" name="kc_case_list_item_set_name ()" link="konbucase-kc-case-list-item.html#kc-case-list-item-set-name"/>
+    <keyword type="function" name="kc_case_list_item_get_description ()" link="konbucase-kc-case-list-item.html#kc-case-list-item-get-description"/>
+    <keyword type="function" name="kc_case_list_item_set_description ()" link="konbucase-kc-case-list-item.html#kc-case-list-item-set-description"/>
+    <keyword type="function" name="kc_case_list_item_equal ()" link="konbucase-kc-case-list-item.html#kc-case-list-item-equal"/>
+    <keyword type="function" name="kc_case_list_item_new ()" link="konbucase-kc-case-list-item.html#kc-case-list-item-new"/>
+    <keyword type="macro" name="KC_TYPE_CASE_LIST_ITEM" link="konbucase-kc-case-list-item.html#KC-TYPE-CASE-LIST-ITEM:CAPS"/>
+    <keyword type="struct" name="KcCaseListItem" link="konbucase-kc-case-list-item.html#KcCaseListItem"/>
+    <keyword type="function" name="kc_case_convert_to_case_type ()" link="konbucase-kc-case-convert.html#kc-case-convert-to-case-type"/>
+    <keyword type="function" name="kc_case_convert_to_chcase_case ()" link="konbucase-kc-case-convert.html#kc-case-convert-to-chcase-case"/>
+    <keyword type="function" name="kc_case_convert_do_convert ()" link="konbucase-kc-case-convert.html#kc-case-convert-do-convert"/>
+    <keyword type="function" name="kc_convert_to_adw_scheme ()" link="konbucase-kc-convert.html#kc-convert-to-adw-scheme"/>
+    <keyword type="function" name="kc_convert_to_str_scheme ()" link="konbucase-kc-convert.html#kc-convert-to-str-scheme"/>
+    <keyword type="function" name="kc_util_migrate_settings ()" link="konbucase-kc-settings-migration.html#kc-util-migrate-settings"/>
+    <keyword type="function" name="kc_main_view_swap ()" link="konbucase-kc-main-view.html#kc-main-view-swap"/>
+    <keyword type="function" name="kc_main_view_new ()" link="konbucase-kc-main-view.html#kc-main-view-new"/>
+    <keyword type="macro" name="KC_TYPE_MAIN_VIEW" link="konbucase-kc-main-view.html#KC-TYPE-MAIN-VIEW:CAPS"/>
+    <keyword type="struct" name="KcMainView" link="konbucase-kc-main-view.html#KcMainView"/>
+    <keyword type="function" name="kc_drop_down_button_content_get_label_text ()" link="konbucase-kc-drop-down-button-content.html#kc-drop-down-button-content-get-label-text"/>
+    <keyword type="function" name="kc_drop_down_button_content_set_label_text ()" link="konbucase-kc-drop-down-button-content.html#kc-drop-down-button-content-set-label-text"/>
+    <keyword type="function" name="kc_drop_down_button_content_new ()" link="konbucase-kc-drop-down-button-content.html#kc-drop-down-button-content-new"/>
+    <keyword type="macro" name="KC_TYPE_DROP_DOWN_BUTTON_CONTENT" link="konbucase-kc-drop-down-button-content.html#KC-TYPE-DROP-DOWN-BUTTON-CONTENT:CAPS"/>
+    <keyword type="struct" name="KcDropDownButtonContent" link="konbucase-kc-drop-down-button-content.html#KcDropDownButtonContent"/>
+    <keyword type="function" name="kc_drop_down_row_get_title ()" link="konbucase-kc-drop-down-row.html#kc-drop-down-row-get-title"/>
+    <keyword type="function" name="kc_drop_down_row_set_title ()" link="konbucase-kc-drop-down-row.html#kc-drop-down-row-set-title"/>
+    <keyword type="function" name="kc_drop_down_row_get_description ()" link="konbucase-kc-drop-down-row.html#kc-drop-down-row-get-description"/>
+    <keyword type="function" name="kc_drop_down_row_set_description ()" link="konbucase-kc-drop-down-row.html#kc-drop-down-row-set-description"/>
+    <keyword type="function" name="kc_drop_down_row_new ()" link="konbucase-kc-drop-down-row.html#kc-drop-down-row-new"/>
+    <keyword type="macro" name="KC_TYPE_DROP_DOWN_ROW" link="konbucase-kc-drop-down-row.html#KC-TYPE-DROP-DOWN-ROW:CAPS"/>
+    <keyword type="struct" name="KcDropDownRow" link="konbucase-kc-drop-down-row.html#KcDropDownRow"/>
+    <keyword type="function" name="kc_text_area_get_editable ()" link="konbucase-kc-text-area.html#kc-text-area-get-editable"/>
+    <keyword type="function" name="kc_text_area_set_editable ()" link="konbucase-kc-text-area.html#kc-text-area-set-editable"/>
+    <keyword type="function" name="kc_text_area_dup_text ()" link="konbucase-kc-text-area.html#kc-text-area-dup-text"/>
+    <keyword type="function" name="kc_text_area_set_text ()" link="konbucase-kc-text-area.html#kc-text-area-set-text"/>
+    <keyword type="function" name="kc_text_area_clear_text ()" link="konbucase-kc-text-area.html#kc-text-area-clear-text"/>
+    <keyword type="function" name="kc_text_area_grab_focus ()" link="konbucase-kc-text-area.html#kc-text-area-grab-focus"/>
+    <keyword type="function" name="kc_text_area_new ()" link="konbucase-kc-text-area.html#kc-text-area-new"/>
+    <keyword type="macro" name="KC_TYPE_TEXT_AREA" link="konbucase-kc-text-area.html#KC-TYPE-TEXT-AREA:CAPS"/>
+    <keyword type="struct" name="KcTextArea" link="konbucase-kc-text-area.html#KcTextArea"/>
+    <keyword type="function" name="kc_tool_bar_get_header_text ()" link="konbucase-kc-tool-bar.html#kc-tool-bar-get-header-text"/>
+    <keyword type="function" name="kc_tool_bar_set_header_text ()" link="konbucase-kc-tool-bar.html#kc-tool-bar-set-header-text"/>
+    <keyword type="function" name="kc_tool_bar_get_case_type ()" link="konbucase-kc-tool-bar.html#kc-tool-bar-get-case-type"/>
+    <keyword type="function" name="kc_tool_bar_set_case_type ()" link="konbucase-kc-tool-bar.html#kc-tool-bar-set-case-type"/>
+    <keyword type="function" name="kc_tool_bar_get_copy_button ()" link="konbucase-kc-tool-bar.html#kc-tool-bar-get-copy-button"/>
+    <keyword type="function" name="kc_tool_bar_append ()" link="konbucase-kc-tool-bar.html#kc-tool-bar-append"/>
+    <keyword type="function" name="kc_tool_bar_new ()" link="konbucase-kc-tool-bar.html#kc-tool-bar-new"/>
+    <keyword type="macro" name="KC_TYPE_TOOL_BAR" link="konbucase-kc-tool-bar.html#KC-TYPE-TOOL-BAR:CAPS"/>
+    <keyword type="struct" name="KcToolBar" link="konbucase-kc-tool-bar.html#KcToolBar"/>
+    <keyword type="constant" name="KC_CASE_TYPE_SPACE_SEPARATED" link="konbucase-kc-types.html#KC-CASE-TYPE-SPACE-SEPARATED:CAPS"/>
+    <keyword type="constant" name="KC_CASE_TYPE_CAMEL" link="konbucase-kc-types.html#KC-CASE-TYPE-CAMEL:CAPS"/>
+    <keyword type="constant" name="KC_CASE_TYPE_PASCAL" link="konbucase-kc-types.html#KC-CASE-TYPE-PASCAL:CAPS"/>
+    <keyword type="constant" name="KC_CASE_TYPE_SNAKE" link="konbucase-kc-types.html#KC-CASE-TYPE-SNAKE:CAPS"/>
+    <keyword type="constant" name="KC_CASE_TYPE_KEBAB" link="konbucase-kc-types.html#KC-CASE-TYPE-KEBAB:CAPS"/>
+    <keyword type="constant" name="KC_CASE_TYPE_SENTENCE" link="konbucase-kc-types.html#KC-CASE-TYPE-SENTENCE:CAPS"/>
+    <keyword type="constant" name="KC_N_CASE_TYPE" link="konbucase-kc-types.html#KC-N-CASE-TYPE:CAPS"/>
+  </functions>
+</book>
