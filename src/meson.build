@@ -25,16 +25,18 @@ sources += gnome.mkenums_simple('kc-enums',
   sources: 'kc-types.h',
 )
 
+blp_sources = files(
+  'help-overlay.blp',
+  'kc-main-window.blp',
+)
+
 subdir('model')
 subdir('util')
 subdir('view')
 subdir('widget')
 
 blueprints = custom_target('blueprints',
-  input: files(
-    'help-overlay.blp',
-    'kc-main-window.blp',
-  ),
+  input: blp_sources,
   output: '.',
   command: [
     find_program('blueprint-compiler'),

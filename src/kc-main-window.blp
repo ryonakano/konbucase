@@ -12,15 +12,18 @@ menu main_menu {
 
         item {
             label: _("S_ystem");
-            action: "app.color-scheme('default')";
+            action: "app.color-scheme";
+            target: "default";
         }
         item {
             label: _("_Light");
-            action: "app.color-scheme('force-light')";
+            action: "app.color-scheme";
+            target: "force-light";
         }
         item {
             label: _("_Dark");
-            action: "app.color-scheme('force-dark')";
+            action: "app.color-scheme";
+            target: "force-dark";
         }
     }
 
@@ -43,14 +46,14 @@ template $KcMainWindow : Adw.ApplicationWindow {
         [top]
         Adw.HeaderBar {
             [start]
-            Button {
+            Gtk.Button {
                 icon-name: "media-playlist-repeat";
                 ///TRANSLATORS: Tooltip text of a button to swap case and text of input and output
                 tooltip-text: _("Quick Swap");
             }
 
             [end]
-            MenuButton {
+            Gtk.MenuButton {
                 tooltip-text: _("Main Menu");
                 icon-name: "open-menu";
                 menu-model: main_menu;
@@ -59,15 +62,7 @@ template $KcMainWindow : Adw.ApplicationWindow {
         }
 
         content: Adw.ToastOverlay overlay {
-            child: Box main_view {
-                Label {
-                    label: "Foo";
-                }
-
-                Label {
-                    label: "Bar";
-                }
-            };
+            child: $KcMainView main_view {};
         };
     };
 

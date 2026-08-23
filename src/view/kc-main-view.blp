@@ -1,0 +1,69 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
+ */
+
+using Gtk 4.0;
+using Adw 1;
+
+template $KcMainView : Gtk.Box {
+    orientation: horizontal;
+    spacing: 0;
+
+    /*************************************************/
+    /* Input Pane                                    */
+    /*************************************************/
+    Adw.ToolbarView input_pane {
+        top-bar-style: raised;
+
+        //[top]
+        //$KcToolBar {
+        //    header-text: _("Convert _From:");
+        //    valign: start;
+        //
+        //    Gtk.Button {
+        //        icon-name: "edit-clear";
+        //        tooltip-text: _("Clear");
+        //    }
+        //}
+
+        //content: $KcTextArea {
+        //    editable: true;
+        //};
+    }
+
+    /*************************************************/
+    /* Separator                                     */
+    /*************************************************/
+    Gtk.Separator {
+        orientation: vertical;
+    }
+
+    /*************************************************/
+    /* Output Pane                                   */
+    /*************************************************/
+    Adw.ToolbarView output_pane {
+        top-bar-style: raised;
+
+        //[top]
+        //$KcToolBar {
+        //    header-text: _("Convert _To:");
+        //    valign: start;
+        //}
+
+        //content: $KcTextArea {
+        //    // Make the text view uneditable, otherwise the app freezes
+        //    editable: false;
+        //};
+    }
+
+    /*
+     * Use Gtk.SizeGroup to keep the same size between input_pane and output_pane
+     * because separator, which is not intended to be the same size with them, is also appended to @self
+     * and thus we can't set homogeneous of @self to TRUE.
+     */
+    Gtk.SizeGroup {
+        mode: both;
+        widgets [ input_pane, output_pane ]
+    }
+}

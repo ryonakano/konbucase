@@ -180,13 +180,20 @@ kc_main_view_dispose (GObject *object)
     g_clear_object (&self->settings);
     g_clear_object (&self->converter);
 
+    gtk_widget_dispose_template (GTK_WIDGET (self), KC_TYPE_MAIN_VIEW);
+
     G_OBJECT_CLASS (kc_main_view_parent_class)->dispose (object);
 }
 
 static void
 kc_main_view_class_init (KcMainViewClass *klass)
 {
+    GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
     GObjectClass *object_class = G_OBJECT_CLASS (klass);
+
+    gtk_widget_class_set_template_from_resource (widget_class, "/com/github/ryonakano/konbucase/view/kc-main-view.ui");
+    //gtk_widget_class_bind_template_child (widget_class, KcMainView, overlay);
+    //gtk_widget_class_bind_template_callback (widget_class, notify_is_active_cb);
 
     object_class->dispose = kc_main_view_dispose;
 
@@ -224,58 +231,22 @@ kc_main_view_init (KcMainView *self)
     GtkWidget *input_copy_button;
     GtkWidget *output_copy_button;
 
+    gtk_widget_init_template (GTK_WIDGET (self));
+
     self->settings = g_settings_new (APP_ID);
 
+#if 0
     /*************************************************/
     /* Input Pane                                    */
     /*************************************************/
-    clear_button = gtk_button_new_from_icon_name ("edit-clear");
-    gtk_widget_set_tooltip_text (clear_button, _("Clear"));
-
-    self->input_toolbar = kc_tool_bar_new (_("Convert _From:"));
-    gtk_widget_set_valign (GTK_WIDGET (self->input_toolbar), GTK_ALIGN_START);
     input_case_type = g_settings_get_enum (self->settings, "input-case-type");
     kc_tool_bar_set_case_type (self->input_toolbar, input_case_type);
-    kc_tool_bar_append (self->input_toolbar, clear_button);
-
-    self->input_textarea = kc_text_area_new (TRUE);
-
-    input_pane = adw_toolbar_view_new ();
-    adw_toolbar_view_set_top_bar_style (ADW_TOOLBAR_VIEW (input_pane), ADW_TOOLBAR_RAISED);
-    adw_toolbar_view_add_top_bar (ADW_TOOLBAR_VIEW (input_pane), GTK_WIDGET (self->input_toolbar));
-    adw_toolbar_view_set_content (ADW_TOOLBAR_VIEW (input_pane), GTK_WIDGET (self->input_textarea));
-
-    /*************************************************/
-    /* Separator                                     */
-    /*************************************************/
-    separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
 
     /*************************************************/
     /* Output Pane                                   */
     /*************************************************/
-    self->output_toolbar = kc_tool_bar_new (_("Convert _To:"));
-    gtk_widget_set_valign (GTK_WIDGET (self->output_toolbar), GTK_ALIGN_START);
     output_case_type = g_settings_get_enum (self->settings, "output-case-type");
     kc_tool_bar_set_case_type (self->output_toolbar, output_case_type);
-
-    // Make the text view uneditable, otherwise the app freezes
-    self->output_textarea = kc_text_area_new (FALSE);
-
-    output_pane = adw_toolbar_view_new ();
-    adw_toolbar_view_set_top_bar_style (ADW_TOOLBAR_VIEW (output_pane), ADW_TOOLBAR_RAISED);
-    adw_toolbar_view_add_top_bar (ADW_TOOLBAR_VIEW (output_pane), GTK_WIDGET (self->output_toolbar));
-    adw_toolbar_view_set_content (ADW_TOOLBAR_VIEW (output_pane), GTK_WIDGET (self->output_textarea));
-
-    gtk_box_append (GTK_BOX (self), GTK_WIDGET (input_pane));
-    gtk_box_append (GTK_BOX (self), separator);
-    gtk_box_append (GTK_BOX (self), GTK_WIDGET (output_pane));
-
-    // Use SizeGroup to keep the same size between input_pane and output_pane
-    // because separator, which is not intended to be the same size with them, is also appended to @self
-    // and thus we can't set homogeneous of @self to TRUE.
-    size_group = gtk_size_group_new (GTK_SIZE_GROUP_BOTH);
-    gtk_size_group_add_widget (size_group, GTK_WIDGET (input_pane));
-    gtk_size_group_add_widget (size_group, GTK_WIDGET (output_pane));
 
     self->converter = chcase_converter_new ();
 
@@ -343,6 +314,7 @@ kc_main_view_init (KcMainView *self)
     // Clear text in the input textarea
     // Text in the output textarea is also cleared accordingly
     g_signal_connect_swapped (clear_button, "clicked", G_CALLBACK (kc_text_area_clear_text), self->input_textarea);
+#endif
 }
 
 /**

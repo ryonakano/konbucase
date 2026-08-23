@@ -22,7 +22,8 @@
 struct _KcMainWindow {
     AdwApplicationWindow         parent_instance;
 
-    GtkWidget                    overlay;
+    AdwToastOverlay             *overlay;
+    KcMainView                  *main_view;
 };
 
 G_DEFINE_FINAL_TYPE (KcMainWindow, kc_main_window, ADW_TYPE_APPLICATION_WINDOW)
@@ -54,6 +55,7 @@ kc_main_window_class_init (KcMainWindowClass *klass)
 
     gtk_widget_class_set_template_from_resource (widget_class, "/com/github/ryonakano/konbucase/kc-main-window.ui");
     gtk_widget_class_bind_template_child (widget_class, KcMainWindow, overlay);
+    gtk_widget_class_bind_template_child (widget_class, KcMainWindow, main_view);
     //gtk_widget_class_bind_template_callback (widget_class, notify_is_active_cb);
 
     object_class->dispose = kc_main_window_dispose;
@@ -64,8 +66,11 @@ kc_main_window_init (KcMainWindow *self)
 {
     GtkWidget *swap_button;
     GtkWidget *menu_button;
-    KcMainView *main_view;
     GtkWidget *toolbar_view;
+
+    // Ensure that the type of the children template classes are known before this template has been initialized
+    // See https://developer.gnome.org/documentation/tutorials/widget-templates.html
+    g_type_ensure (KC_TYPE_MAIN_VIEW);
 
     gtk_widget_init_template (GTK_WIDGET (self));
 
@@ -73,8 +78,6 @@ kc_main_window_init (KcMainWindow *self)
     if (g_str_has_suffix (APP_ID, ".Devel")) {
         gtk_widget_add_css_class (GTK_WIDGET (self), "devel");
     }
-
-    //main_view = kc_main_view_new ();
 
     //g_signal_connect_swapped (swap_button, "clicked", G_CALLBACK (kc_main_view_swap), main_view);
 
