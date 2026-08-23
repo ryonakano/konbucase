@@ -5,6 +5,7 @@
 
     <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">help-overlay.ui</file>
     <file preprocess="xml-stripblanks">view/kc-main-view.ui</file>
+    <file preprocess="xml-stripblanks">widget/kc-drop-down-button-content.ui</file>
     <file preprocess="xml-stripblanks">kc-main-window.ui</file>
 
     <file preprocess="xml-stripblanks" alias="@APP_ID@.metainfo.xml">../data/@APP_ID@.metainfo.xml</file>

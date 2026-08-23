@@ -1,0 +1,14 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
+ */
+
+using Gtk 4.0;
+using Adw 1;
+
+template $KcDropDownButtonContent : Adw.Bin {
+    Gtk.Label label {
+        xalign: 0;
+        ellipsize: end;
+    }
+}

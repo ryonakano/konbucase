@@ -56,14 +56,14 @@ template $KcMainView : Gtk.Box {
         //    editable: false;
         //};
     }
+}
 
-    /*
-     * Use Gtk.SizeGroup to keep the same size between input_pane and output_pane
-     * because separator, which is not intended to be the same size with them, is also appended to @self
-     * and thus we can't set homogeneous of @self to TRUE.
-     */
-    Gtk.SizeGroup {
-        mode: both;
-        widgets [ input_pane, output_pane ]
-    }
+/*
+ * Use Gtk.SizeGroup to keep the same size between input_pane and output_pane
+ * because separator, which is not intended to be the same size with them, is also appended to KcMainView
+ * and thus we can't set homogeneous of KcMainView to true.
+ */
+Gtk.SizeGroup {
+    mode: both;
+    widgets [ input_pane, output_pane ]
 }

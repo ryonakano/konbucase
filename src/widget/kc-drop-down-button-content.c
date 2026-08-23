@@ -32,6 +32,8 @@ struct _KcDropDownButtonContent {
     AdwBin      parent_instance;
 
     char       *label_text;
+
+    GtkLabel   *label;
 };
 
 G_DEFINE_FINAL_TYPE (KcDropDownButtonContent, kc_drop_down_button_content, ADW_TYPE_BIN)
@@ -77,7 +79,7 @@ kc_drop_down_button_content_dispose (GObject *object)
 {
     KcDropDownButtonContent *self = KC_DROP_DOWN_BUTTON_CONTENT (object);
 
-    adw_bin_set_child (ADW_BIN (self), nullptr);
+    gtk_widget_dispose_template (GTK_WIDGET (self), KC_TYPE_DROP_DOWN_BUTTON_CONTENT);
 
     g_clear_pointer (&self->label_text, g_free);
 
@@ -85,13 +87,26 @@ kc_drop_down_button_content_dispose (GObject *object)
 }
 
 static void
+kc_drop_down_button_content_constructed (GObject *object)
+{
+    KcDropDownButtonContent *self = KC_DROP_DOWN_BUTTON_CONTENT (object);
+
+    g_object_bind_property (G_OBJECT (self), "label-text", self->label, "label", G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE);
+}
+
+static void
 kc_drop_down_button_content_class_init (KcDropDownButtonContentClass *klass)
 {
+    GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
     GObjectClass *object_class = G_OBJECT_CLASS (klass);
+
+    gtk_widget_class_set_template_from_resource (widget_class, "/com/github/ryonakano/konbucase/view/kc-main-view.ui");
+    gtk_widget_class_bind_template_child (widget_class, KcDropDownButtonContent, label);
 
     object_class->get_property = kc_drop_down_button_content_get_property;
     object_class->set_property = kc_drop_down_button_content_set_property;
     object_class->dispose = kc_drop_down_button_content_dispose;
+    object_class->constructed = kc_drop_down_button_content_constructed;
 
     /**
      * KcDropDownButtonContent:label-text:
@@ -109,17 +124,9 @@ kc_drop_down_button_content_class_init (KcDropDownButtonContentClass *klass)
 static void
 kc_drop_down_button_content_init (KcDropDownButtonContent *self)
 {
-    GtkWidget *label;
-
     self->label_text = nullptr;
 
-    label = gtk_label_new (self->label_text);
-    gtk_label_set_xalign (GTK_LABEL (label), 0);
-    gtk_label_set_ellipsize (GTK_LABEL (label), PANGO_ELLIPSIZE_END);
-
-    g_object_bind_property (G_OBJECT (self), "label-text", label, "label", G_BINDING_DEFAULT);
-
-    adw_bin_set_child (ADW_BIN (self), label);
+    gtk_widget_init_template (GTK_WIDGET (self));
 }
 
 /**

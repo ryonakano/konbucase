@@ -177,10 +177,10 @@ kc_main_view_dispose (GObject *object)
 {
     KcMainView *self = KC_MAIN_VIEW (object);
 
+    gtk_widget_dispose_template (GTK_WIDGET (self), KC_TYPE_MAIN_VIEW);
+
     g_clear_object (&self->settings);
     g_clear_object (&self->converter);
-
-    gtk_widget_dispose_template (GTK_WIDGET (self), KC_TYPE_MAIN_VIEW);
 
     G_OBJECT_CLASS (kc_main_view_parent_class)->dispose (object);
 }
