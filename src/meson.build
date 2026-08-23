@@ -33,6 +33,7 @@ subdir('widget')
 blueprints = custom_target('blueprints',
   input: files(
     'help-overlay.blp',
+    'kc-main-window.blp',
   ),
   output: '.',
   command: [

@@ -1,0 +1,81 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2020-2026 Ryo Nakano <ryonakaknock3@gmail.com>
+ */
+
+using Gtk 4.0;
+using Adw 1;
+
+menu main_menu {
+    submenu {
+        label: _("_Style");
+
+        item {
+            label: _("S_ystem");
+            action: "app.color-scheme('default')";
+        }
+        item {
+            label: _("_Light");
+            action: "app.color-scheme('force-light')";
+        }
+        item {
+            label: _("_Dark");
+            action: "app.color-scheme('force-dark')";
+        }
+    }
+
+    item {
+        label: _("_Keyboard Shortcuts");
+        action: "win.show-help-overlay";
+    }
+    item {
+        label: _("_About KonbuCase");
+        action: "app.about";
+    }
+}
+
+template $KcMainWindow : Adw.ApplicationWindow {
+    width-request: 360;
+    height-request: 400;
+    title: "KonbuCase";
+
+    content: Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {
+            [start]
+            Button {
+                icon-name: "media-playlist-repeat";
+                ///TRANSLATORS: Tooltip text of a button to swap case and text of input and output
+                tooltip-text: _("Quick Swap");
+            }
+
+            [end]
+            MenuButton {
+                tooltip-text: _("Main Menu");
+                icon-name: "open-menu";
+                menu-model: main_menu;
+                primary: true;
+            }
+        }
+
+        content: Adw.ToastOverlay overlay {
+            child: Box main_view {
+                Label {
+                    label: "Foo";
+                }
+
+                Label {
+                    label: "Bar";
+                }
+            };
+        };
+    };
+
+    // Responsive design; change orientation to vertical on smaller window width
+    Adw.Breakpoint {
+        condition ("max-width: 750sp")
+        setters {
+            main_view.orientation: vertical;
+        }
+    }
+}

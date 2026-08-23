@@ -21,6 +21,8 @@
 
 struct _KcMainWindow {
     AdwApplicationWindow         parent_instance;
+
+    GtkWidget                    overlay;
 };
 
 G_DEFINE_FINAL_TYPE (KcMainWindow, kc_main_window, ADW_TYPE_APPLICATION_WINDOW)
@@ -35,88 +37,48 @@ kc_main_window_show_toast (AdwToastOverlay *overlay)
 }
 
 static void
+kc_main_window_dispose (GObject *object)
+{
+    KcMainWindow *self = KC_MAIN_WINDOW (object);
+
+    gtk_widget_dispose_template (GTK_WIDGET (self), KC_TYPE_MAIN_WINDOW);
+
+    G_OBJECT_CLASS (kc_main_window_parent_class)->dispose (object);
+}
+
+static void
 kc_main_window_class_init (KcMainWindowClass *klass)
 {
-    // NOP
+    GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
+
+    gtk_widget_class_set_template_from_resource (widget_class, "/com/github/ryonakano/konbucase/kc-main-window.ui");
+    gtk_widget_class_bind_template_child (widget_class, KcMainWindow, overlay);
+    //gtk_widget_class_bind_template_callback (widget_class, notify_is_active_cb);
+
+    object_class->dispose = kc_main_window_dispose;
 }
 
 static void
 kc_main_window_init (KcMainWindow *self)
 {
-    g_autoptr(GMenu) style_submenu = nullptr;
-    g_autoptr(GMenu) main_menu = nullptr;
-    g_autofree char *about_label = nullptr;
     GtkWidget *swap_button;
     GtkWidget *menu_button;
-    GtkWidget *header;
     KcMainView *main_view;
-    AdwBreakpointCondition *content_bpcond;
-    AdwBreakpoint *content_breakpoint;
-    GValue orientation = G_VALUE_INIT;
-    GtkWidget *overlay;
     GtkWidget *toolbar_view;
+
+    gtk_widget_init_template (GTK_WIDGET (self));
 
     // Distinct development build visually
     if (g_str_has_suffix (APP_ID, ".Devel")) {
         gtk_widget_add_css_class (GTK_WIDGET (self), "devel");
     }
 
-    style_submenu = g_menu_new ();
-    g_menu_append (style_submenu, _("S_ystem"), g_strdup_printf ("app.color-scheme('%s')", KC_COLOR_SCHEME_DEFAULT));
-    g_menu_append (style_submenu, _("_Light"), g_strdup_printf ("app.color-scheme('%s')", KC_COLOR_SCHEME_FORCE_LIGHT));
-    g_menu_append (style_submenu, _("_Dark"), g_strdup_printf ("app.color-scheme('%s')", KC_COLOR_SCHEME_FORCE_DARK));
+    //main_view = kc_main_view_new ();
 
-    main_menu = g_menu_new ();
-    g_menu_append_submenu (main_menu, _("_Style"), G_MENU_MODEL (style_submenu));
-    g_menu_append (main_menu, _("_Keyboard Shortcuts"), "win.show-help-overlay");
-    // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
-    if (!kc_util_is_pantheon ()) {
-        ///TRANSLATORS: %s will be replaced by the app name
-        about_label = g_strdup_printf (_("_About %s"), APP_NAME);
-        g_menu_append (main_menu, about_label, "app.about");
-    }
+    //g_signal_connect_swapped (swap_button, "clicked", G_CALLBACK (kc_main_view_swap), main_view);
 
-    swap_button = gtk_button_new_from_icon_name ("media-playlist-repeat");
-    ///TRANSLATORS: Tooltip text of a button to swap case and text of input and output
-    gtk_widget_set_tooltip_text (swap_button, _("Quick Swap"));
-
-    menu_button = gtk_menu_button_new ();
-    gtk_widget_set_tooltip_text (menu_button, _("Main Menu"));
-    gtk_menu_button_set_icon_name (GTK_MENU_BUTTON (menu_button), "open-menu");
-    gtk_menu_button_set_menu_model (GTK_MENU_BUTTON (menu_button), G_MENU_MODEL (main_menu));
-    gtk_menu_button_set_primary (GTK_MENU_BUTTON (menu_button), TRUE);
-
-    header = adw_header_bar_new ();
-    adw_header_bar_pack_start (ADW_HEADER_BAR (header), swap_button);
-    adw_header_bar_pack_end (ADW_HEADER_BAR (header), menu_button);
-
-    main_view = kc_main_view_new ();
-
-    // Responsive design; change orientation to vertical on smaller window width
-    content_bpcond = adw_breakpoint_condition_new_length (ADW_BREAKPOINT_CONDITION_MAX_WIDTH, 750, ADW_LENGTH_UNIT_SP);
-    content_breakpoint = adw_breakpoint_new (content_bpcond);
-
-    g_value_init (&orientation, G_TYPE_INT);
-    g_value_set_int (&orientation, GTK_ORIENTATION_VERTICAL);
-    adw_breakpoint_add_setter (content_breakpoint, G_OBJECT (main_view), "orientation", &orientation);
-    g_value_unset (&orientation);
-
-    adw_application_window_add_breakpoint (ADW_APPLICATION_WINDOW (self), content_breakpoint);
-
-    overlay = adw_toast_overlay_new ();
-    adw_toast_overlay_set_child (ADW_TOAST_OVERLAY (overlay), GTK_WIDGET (main_view));
-
-    toolbar_view = adw_toolbar_view_new ();
-    adw_toolbar_view_add_top_bar (ADW_TOOLBAR_VIEW (toolbar_view), header);
-    adw_toolbar_view_set_content (ADW_TOOLBAR_VIEW (toolbar_view), overlay);
-
-    gtk_widget_set_size_request (GTK_WIDGET (self), 360, 400);
-    gtk_window_set_title (GTK_WINDOW (self), APP_NAME);
-    adw_application_window_set_content (ADW_APPLICATION_WINDOW (self), toolbar_view);
-
-    g_signal_connect_swapped (swap_button, "clicked", G_CALLBACK (kc_main_view_swap), main_view);
-
-    g_signal_connect_swapped (main_view, "text-copied", G_CALLBACK (kc_main_window_show_toast), overlay);
+    //g_signal_connect_swapped (main_view, "text-copied", G_CALLBACK (kc_main_window_show_toast), overlay);
 }
 
 /**
