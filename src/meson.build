@@ -6,25 +6,29 @@ config_data.set_quoted('APP_ID', app_id)
 config_data.set_quoted('APP_VERSION', app_version)
 config_data.set_quoted('RESOURCE_PREFIX', '/' + meson.project_name().replace('.', '/'))
 config_file = configure_file(
-  input: 'Config.vala.in',
-  output: '@BASENAME@',
+  output: 'config.h',
   configuration: config_data,
 )
 
+includes = [
+  include_directories('.'),
+]
+
 sources = files(
-  'Model/CaseListItemModel.vala',
-  'Util/Convert.vala',
-  'Util/SettingsMigration.vala',
-  'View/MainView.vala',
-  'Widget/DropDownButtonContent.vala',
-  'Widget/DropDownRow.vala',
-  'Widget/TextArea.vala',
-  'Widget/Toolbar.vala',
-  'Application.vala',
-  'Define.vala',
-  'MainWindow.vala',
-  'Util.vala',
+  'main.c',
+  'kc-application.c',
+  'kc-main-window.c',
+  'kc-util.c',
 )
+
+sources += gnome.mkenums_simple('kc-enums',
+  sources: 'kc-types.h',
+)
+
+subdir('model')
+subdir('util')
+subdir('view')
+subdir('widget')
 
 executable(
   app_id,
@@ -32,5 +36,6 @@ executable(
   config_file,
   sources,
   dependencies: dependencies,
+  include_directories: includes,
   install: true,
 )

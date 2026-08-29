@@ -24,12 +24,12 @@
   <screenshots>
     <screenshot type="default" environment="@DE@">
       <caption>App window in the light mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/@APP_REVISION@/data/screenshots/@DE@/screenshot-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/@VERSION@/data/screenshots/@DE@/screenshot-light.png</image>
     </screenshot>
 
     <screenshot environment="@DE@:dark">
       <caption>App window in the dark mode</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/@APP_REVISION@/data/screenshots/@DE@/screenshot-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/@VERSION@/data/screenshots/@DE@/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -47,9 +47,9 @@
   </supports>
 
   <requires>
-    <!-- taken from MainWindow.width_request -->
+    <!-- taken from width_request of MainWindow -->
     <display_length side="shortest" compare="ge">360</display_length>
-    <!-- taken from MainWindow.height_request -->
+    <!-- taken from height_request of MainWindow -->
     <display_length side="longest" compare="ge">400</display_length>
   </requires>
 
@@ -59,8 +59,6 @@
   <url type="vcs-browser">https://github.com/ryonakano/konbucase</url>
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
-  <!-- developer_name has deprecated since AppStream 1.0 -->
-  <developer_name translate="no">Ryo Nakano</developer_name>
   <developer id="com.github.ryonakano">
     <name translate="no">Ryo Nakano</name>
   </developer>
@@ -71,6 +69,14 @@
     even if translators translated all of them, which is not worthy.
   -->
   <releases>
+    <release version="4.5.1" date="2026-05-03" urgency="low">
+      <description translate="no">
+        <ul>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="4.5.0" date="2026-03-10" urgency="medium">
       <description translate="no">
         <ul>

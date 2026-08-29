@@ -46,14 +46,14 @@ flatpak run com.github.ryonakano.konbucase.Devel
 You'll need the following dependencies:
 
 * blueprint-compiler
-* [libchcase](https://github.com/ryonakano/chcase) (>= 2.4.0)
+* gcc or its compatible C compiler
+* [libchcase](https://github.com/ryonakano/chcase) (>= 3.0.0-alpha.4)
 * libadwaita-1-dev (>= 1.8)
 * libglib2.0-dev (>= 2.74)
 * libgranite-7-dev (>= 7.2.0, required only when you build with `granite` feature enabled)
 * libgtk4-dev
 * libgtksourceview-5-dev
 * meson (>= 0.58.0)
-* valac
 
 Run `meson setup` to configure the build environment and run `meson compile` to build:
 
@@ -72,9 +72,9 @@ com.github.ryonakano.konbucase
 ## Contributing
 Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like to:
 
-- submit bug reports / feature requests
-- propose coding changes
-- translate the project
+* submit bug reports / feature requests
+* propose coding changes
+* translate the project
 
 ## Get Support
 Need help in use of the app? Refer to [the discussions page](https://github.com/ryonakano/konbucase/discussions) to search for existing discussions or [start a new discussion](https://github.com/ryonakano/konbucase/discussions/new/choose) if none is relevant.

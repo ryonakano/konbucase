@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY version SYSTEM "version.xml">
+  <!ENTITY slash "/">
+]>
+<book id="index" xmlns:xi="http://www.w3.org/2003/XInclude">
+  <bookinfo>
+    <title>KonbuCase Reference Manual</title>
+    <releaseinfo>
+      for KonbuCase &version;.
+    </releaseinfo>
+  </bookinfo>
+
+  <chapter id="general">
+    <title>General</title>
+    <xi:include href="xml/kc-application.xml"/>
+    <xi:include href="xml/kc-main-window.xml"/>
+    <xi:include href="xml/kc-types.xml"/>
+    <xi:include href="xml/kc-util.xml"/>
+  </chapter>
+
+  <chapter id="model">
+    <title>Model</title>
+    <xi:include href="xml/kc-case-list-item.xml"/>
+  </chapter>
+
+  <chapter id="util">
+    <title>Util</title>
+    <xi:include href="xml/kc-case-convert.xml"/>
+    <xi:include href="xml/kc-convert.xml"/>
+    <xi:include href="xml/kc-settings-migration.xml"/>
+  </chapter>
+
+  <chapter id="view">
+    <title>View</title>
+    <xi:include href="xml/kc-main-view.xml"/>
+  </chapter>
+
+  <chapter id="widget">
+    <title>Widget</title>
+    <xi:include href="xml/kc-drop-down-button-content.xml"/>
+    <xi:include href="xml/kc-drop-down-row.xml"/>
+    <xi:include href="xml/kc-text-area.xml"/>
+    <xi:include href="xml/kc-tool-bar.xml"/>
+  </chapter>
+
+  <index id="api-index-full">
+    <title>Index of all symbols</title>
+    <xi:include href="xml/api-index-full.xml"><xi:fallback /></xi:include>
+  </index>
+  <index role="5.0.0">
+    <title>Index of new symbols in 5.0.0</title>
+    <xi:include href="xml/api-index-5.0.0.xml"><xi:fallback/></xi:include>
+  </index>
+  <index id="api-index-deprecated" role="deprecated">
+    <title>Index of deprecated symbols</title>
+    <xi:include href="xml/api-index-deprecated.xml"><xi:fallback /></xi:include>
+  </index>
+  <index id="annotation-glossary">
+    <title>Annotation glossary</title>
+    <xi:include href="xml/annotation-glossary.xml"><xi:fallback /></xi:include>
+  </index>
+</book>

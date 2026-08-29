@@ -35,34 +35,40 @@ Building the source code with the option `doc` to `true` will generate HTML docu
 
 You'll need the following extra dependencies to generate documentation:
 
-* valadoc
+* gtk-doc-tools
 
 Assuming that you've already built the project as written in the [README](README.md#from-source-code-native):
 
 ```bash
 meson configure builddir -Ddoc=true
 meson compile -C builddir
-xdg-open builddir/valadoc/index.html
+meson install -C builddir
+xdg-open /usr/share/gtk-doc/html/konbucase/index.html
 ```
 
 #### Edit Documentation Comments
 You should edit documentation comments if you:
 
-- change internal behavior of existing methods
-- change interface (parameters, the return value, etc.) of existing methods
-- add new methods, classes, structs, etc.
+* change internal behavior of existing methods
+* change interface (parameters, the return value, etc.) of existing methods
+* add new methods, classes, structs, etc.
 
 You should clarify the behavior, parameters, and the return value in case of methods. Here is an example:
 
-```vala
+```c
 /**
- * Whether ``this`` and ``other`` contains the same values.
+ * my_object_equal:
+ * @self: a `MyObject`
+ * @other: (transfer none): another `MyObject`
  *
- * @param other     other {@link MyObject}
+ * Checks if @self and @other contains the same values.
  *
- * @return          ``true`` if ``this`` and ``other`` contains the same values
+ * Returns: `TRUE` if @self and @other contains the same values
  */
-public bool equals (MyObject other) {
+gboolean
+my_object_equal (MyObject *self,
+                 MyObject *other)
+{
 ```
 
-Refer to [Valadoc](https://valadoc.org/markup.htm) for available markups.
+Refer to [Documentation of GTK-Doc](https://gitlab.gnome.org/GNOME/gtk-doc#documentation) for available markups.
