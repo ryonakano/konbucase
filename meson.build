@@ -108,7 +108,7 @@ dependencies = [
   granite_dep,
   dependency('gtk4'),
   dependency('gtksourceview-5'),
-  dependency('libadwaita-1', version: '>= 1.5'),
+  dependency('libadwaita-1', version: '>= 1.8'),
 ]
 
 subdir('data')

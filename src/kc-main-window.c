@@ -68,7 +68,7 @@ kc_main_window_init (KcMainWindow *self)
 
     main_menu = g_menu_new ();
     g_menu_append_submenu (main_menu, _("_Style"), G_MENU_MODEL (style_submenu));
-    g_menu_append (main_menu, _("_Keyboard Shortcuts"), "win.show-help-overlay");
+    g_menu_append (main_menu, _("_Keyboard Shortcuts"), "app.shortcuts");
     // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
     if (!kc_util_is_pantheon ()) {
         ///TRANSLATORS: %s will be replaced by the app name

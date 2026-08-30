@@ -1,6 +1,6 @@
 data/konbucase.desktop.in.in
 data/konbucase.metainfo.xml.in.in
-data/ui/help-overlay.blp
+data/ui/shortcuts-dialog.blp
 src/kc-application.c
 src/kc-main-window.c
 src/view/kc-main-view.c
