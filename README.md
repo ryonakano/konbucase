@@ -51,7 +51,7 @@ You'll need the following dependencies:
 * libadwaita-1-dev (>= 1.8)
 * libglib2.0-dev (>= 2.74)
 * libgranite-7-dev (>= 7.2.0, required only when you build with `granite` feature enabled)
-* libgtk4-dev
+* libgtk4-dev (>= 4.20)
 * libgtksourceview-5-dev
 * meson (>= 0.58.0)
 
