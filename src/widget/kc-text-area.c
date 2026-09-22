@@ -37,17 +37,17 @@ struct _KcTextArea {
 G_DEFINE_FINAL_TYPE (KcTextArea, kc_text_area, ADW_TYPE_BIN)
 
 static gboolean
-prefer_dark_to_style_scheme (GBinding     *binding,
-                             const GValue *prefer_dark,
-                             GValue       *style_scheme,
-                             void         *user_data)
+color_scheme_to_style_scheme (GBinding     *binding,
+                              const GValue *color_scheme,
+                              GValue       *style_scheme,
+                              void         *user_data)
 {
-    gboolean _prefer_dark;
+    int _color_scheme;
     GtkSourceStyleScheme *_style_scheme;
     GtkSourceStyleSchemeManager *style_scheme_manager = GTK_SOURCE_STYLE_SCHEME_MANAGER (user_data);
 
-    _prefer_dark = g_value_get_boolean (prefer_dark);
-    if (_prefer_dark) {
+    _color_scheme = g_value_get_enum (color_scheme);
+    if (_color_scheme == GTK_INTERFACE_COLOR_SCHEME_DARK) {
         _style_scheme = gtk_source_style_scheme_manager_get_scheme (style_scheme_manager, "solarized-dark");
     } else {
         _style_scheme = gtk_source_style_scheme_manager_get_scheme (style_scheme_manager, "solarized-light");
@@ -176,10 +176,10 @@ kc_text_area_init (KcTextArea *self)
                             G_BINDING_BIDIRECTIONAL | G_BINDING_SYNC_CREATE);
 
     // Apply theme changes to the source view
-    g_object_bind_property_full (G_OBJECT (gtk_settings), "gtk-application-prefer-dark-theme",
+    g_object_bind_property_full (G_OBJECT (gtk_settings), "gtk-interface-color-scheme",
                                  G_OBJECT (self->buffer), "style-scheme",
                                  G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE,
-                                 prefer_dark_to_style_scheme,
+                                 color_scheme_to_style_scheme,
                                  nullptr,
                                  style_scheme_manager,
                                  nullptr);
