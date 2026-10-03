@@ -10,10 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      max-parallel: 1
       matrix:
         include:
-          # Use --edit-only instead of --update for args other than last matrix
-          # to create single PR that updates all manifests
+          # Create single PR that updates all manifests by using
+          # * --edit-only instead of --update for args other than the last matrix
+          # * --commit-to-current-branch for args other than the fist matrix
           - repository: Flathub
             target: development
             manifest-path: build-aux/flathub/com.github.ryonakano.konbucase.Devel.yml
@@ -21,11 +23,11 @@ jobs:
           - repository: AppCenter
             target: development
             manifest-path: build-aux/appcenter/com.github.ryonakano.konbucase.Devel.yml
-            extra-arg: --edit-only
+            extra-arg: --edit-only --commit-to-current-branch
           - repository: AppCenter
             target: stable
             manifest-path: com.github.ryonakano.konbucase.yml
-            extra-arg: --update
+            extra-arg: --update --commit-to-current-branch
 
     steps:
       - name: Checkout
