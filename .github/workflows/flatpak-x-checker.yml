@@ -12,16 +12,16 @@ jobs:
     strategy:
       matrix:
         include:
-          # Use --commit-only instead of --update for args other than last matrix
+          # Use --edit-only instead of --update for args other than last matrix
           # to create single PR that updates all manifests
           - repository: Flathub
             target: development
             manifest-path: build-aux/flathub/com.github.ryonakano.konbucase.Devel.yml
-            extra-arg: --commit-only
+            extra-arg: --edit-only
           - repository: AppCenter
             target: development
             manifest-path: build-aux/appcenter/com.github.ryonakano.konbucase.Devel.yml
-            extra-arg: --commit-only
+            extra-arg: --edit-only
           - repository: AppCenter
             target: stable
             manifest-path: com.github.ryonakano.konbucase.yml
