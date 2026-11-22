@@ -6,3 +6,7 @@ sources += files(
   'kc-text-area.c',
   'kc-tool-bar.c',
 )
+
+blp_sources += files(
+  'kc-drop-down-button-content.blp',
+)
