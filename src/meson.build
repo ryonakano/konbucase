@@ -26,7 +26,7 @@ sources += gnome.mkenums_simple('kc-enums',
 )
 
 blp_sources = files(
-  'help-overlay.blp',
+  'shortcuts-dialog.blp',
   'kc-main-window.blp',
 )
 

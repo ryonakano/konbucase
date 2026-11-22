@@ -1,7 +1,7 @@
 project(
   'com.github.ryonakano.konbucase',
   'c',
-  version: '5.0.0.rc.1',
+  version: '5.0.0',
   meson_version: '>= 0.58.0',
   default_options: [
     'warning_level=2', # i.e. -Wall -Wextra
@@ -103,12 +103,12 @@ if granite_dep.found()
 endif
 
 dependencies = [
-  dependency('chcase', version: '>= 3.0.0-alpha.4', allow_fallback: get_option('use_submodule')),
+  dependency('chcase', version: '>= 3.0.0', allow_fallback: get_option('use_submodule')),
   dependency('glib-2.0', version: '>= 2.74'),
   granite_dep,
-  dependency('gtk4'),
+  dependency('gtk4', version: '>= 4.20'),
   dependency('gtksourceview-5'),
-  dependency('libadwaita-1', version: '>= 1.5'),
+  dependency('libadwaita-1', version: '>= 1.8'),
 ]
 
 subdir('data')

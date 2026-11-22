@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.konbucase\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-16 12:19+0900\n"
+"POT-Creation-Date: 2026-10-03 17:15+0900\n"
 "PO-Revision-Date: 2025-10-20 04:54+0000\n"
 "Last-Translator: p-sage <p-sage@users.noreply.hosted.weblate.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/konbucase/fr/"
@@ -78,17 +78,17 @@ msgstr "Vue des application en mode clair"
 msgid "App window in the dark mode"
 msgstr "Vue des applications en mode sombre"
 
-#: data/ui/help-overlay.blp:10
+#: data/ui/shortcuts-dialog.blp:11
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Général"
 
-#: data/ui/help-overlay.blp:14
+#: data/ui/shortcuts-dialog.blp:14
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Raccourcis clavier"
 
-#: data/ui/help-overlay.blp:19
+#: data/ui/shortcuts-dialog.blp:19
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Quitter"

@@ -1,6 +1,6 @@
 id: com.github.ryonakano.konbucase
 runtime: io.elementary.Platform
-runtime-version: '8.1'
+runtime-version: '9.1'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.konbucase
 finish-args:
@@ -16,25 +16,12 @@ cleanup:
 build-options:
   libdir: /app/lib
 modules:
-  - name: blueprint-compiler
-    buildsystem: meson
-    cleanup:
-      - '*'
-    sources:
-      - type: git
-        url: https://gitlab.gnome.org/GNOME/blueprint-compiler.git
-        tag: v0.22.2
-        commit: ed35ac74de0c1bb1f5e852410b97edd1f08904c9
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
-
   - name: chcase
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/ryonakano/chcase/archive/3.0.0-alpha.4.tar.gz
-        sha256: bac3d03e4a8ba607a97d087680c350076fd31e7e667db583322dcfc110590f47
+        url: https://github.com/ryonakano/chcase/archive/3.0.0.tar.gz
+        sha256: ad858cf37567505811e7b8bd6300917c82e37de1da9d8642f4fc8f83f512a569
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ryonakano/chcase/releases/latest
